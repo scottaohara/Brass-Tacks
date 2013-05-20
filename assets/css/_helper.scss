@@ -1,0 +1,177 @@
+// ----------------------------------------------------------------
+//		Text Helpers
+// ----------------------------------------------------------------
+// Align Text
+.txt-Center	{text-align:center}
+.txt-Left	{text-align:left}
+.txt-Right	{text-align:right}
+
+// Truncate Text
+.truncate{@include truncate(100%)}
+
+// Applies a degree symbol
+%degree:after{content:"\00BA"}
+
+// Applies >> to a link/btn
+.go:after{content:"\00A0" "\00BB"}
+
+
+// ----------------------------------------------------------------
+//		Floats & Clearing
+// ----------------------------------------------------------------
+.float-Left	  {float:left}
+.float-Right  {float:right}
+.float-None	  {float:none}
+.clear		  {clear:both}
+.clearfix	  {@include clearfix}
+.overflow	  {overflow:hidden}
+
+
+// ----------------------------------------------------------------
+//		Showing & Hiding
+// ----------------------------------------------------------------
+.d-Block, .show{display:block}
+.d-None, .hide, .mobile-Show{display:none} 
+	// change display value for .mobile-Show in the appropriate @media break-point
+
+
+// ----------------------------------------------------------------
+//		List Manipulation
+// ----------------------------------------------------------------
+// Kill list styling - extend into Navigations & for lists that don't require markings
+.kill-List, %kill-List{list-style:none; padding:0}
+// Give numerical values to a semantically unordered list
+.numbered{list-style:decimal}  
+
+
+// ----------------------------------------------------------------
+//		Reoccuring HTML Elements
+// ----------------------------------------------------------------
+// Profile Picture
+.pic, %pic{
+	border:1px solid #fff;
+	@include border-radius(4px);
+	@include box-shadow($bs-5);
+	display:inline-block;
+	overflow:hidden;
+	width:90px;
+	
+	img{display:block; position:relative; z-index:-1}
+		// the position relative/z-index allows for box-shadow inset on the parent container
+}
+
+// Make picture into a circle
+.pic-Rounded{
+	@extend %pic;
+	@include border-radius(100px);
+}
+/* 
+	Code Example
+	--------------------------
+	<a href="#" title="TITLE" class="pic-Rounded">
+		<img src="assets/img/little-V.jpg" alt="" />
+	</a>
+*/
+
+// Media Item
+.media, %media{
+	margin-bottom:$spacing*4;
+	overflow:hidden;
+	position:relative;
+	z-index:2;
+	.media-Text >:last-child{margin-bottom:0}
+	.media-Object{float:left; margin:0 $spacing*4 $spacing*2 0; max-width:30%;}
+}
+
+// Have media element appear on the right hand side
+.media-Reverse, %media-Reverse{
+	@extend %media;
+	.media-Object{float:right; margin:0 0 $spacing*2 $spacing*4; max-width:30%}
+}
+
+.media-No-Wrap{
+	@extend %media;
+	padding-left:100px;
+	.media-Text{float:left; width:100%}
+	.media-Object{margin-left:-100px; margin-right:0}
+}
+
+.media-No-Wrap-Reverse{
+	@extend %media-Reverse;
+	padding-right:100px;
+	.media-Object{margin-right:-100px; margin-left:0}
+}
+/* 
+	Code Example
+	--------------------------
+	<div class="media">
+		<div class="media-Object">
+			<img src="assets/img/little-V.jpg" alt="" />
+		</div>
+		<div class="media-Text">
+			<h1>Title for Meida Element</h1>
+			<p>Paragraph text to go along with media element.</p>
+		</div>
+	</div>
+	
+	-- 	Divs were used in this example, but the media element could be applied to various situations.
+		Ie. could be used for a header or footer area where a logo is placed on the right or left w/text to the side.
+*/
+
+
+
+// Call out boxes
+.callout{
+	background:#fafafa;
+	border:1px solid #ddd;
+	@include border-radius(4px);
+	@include box-shadow($bs-4);
+	margin-bottom:$spacing*4;
+	min-height:50px;
+	padding:$spacing*4;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,88 @@
+// ----------------------------------------------------------------
+//		Branding Helpers - to be defined by variables
+// ----------------------------------------------------------------
+.brand{
+	/* put brand color here */
+	/* put brand font-family here */
+}
+.brand-Color{/* put brand color here */}
+.brand-Font{/* put brand font-family here */}
+
+
+// ----------------------------------------------------------------
+//		Site-Wide Typography Standards
+// ----------------------------------------------------------------
+
+.ultra	{}
+.mega	{}
+.alpha	{}
+.beta	{}
+.gamma	{}
+.delta	{}
+.base	{}
+.tiny	{}
+.mini	{}
+
+
+// ----------------------------------------------------------------
+//		Links
+// ----------------------------------------------------------------
+a{
+	color:$c-Link;
+	&:hover, &:active{}
+	&:visited{}
+}
+// example - :hover{color:darken($c-Link, 15%)}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+    Define basic variables for styling rules
+*/
+
+
+
+/* Font Declarations */
+$base-font:1em;
+
+$ultra: $base-font * 4;
+$mega:  $base-font * 3;
+$alpha: $base-font * 2.3;
+$beta:  $base-font * 1.75;
+$gamma: $base-font * 1.3;
+$delta: $base-font * 1.15;
+$base:  $base-font * 1;
+$tiny:  $base-font * .85;
+$mini:  $base-font * .7;
+
+
+
+
+
+
+/* 
+    Media Query Break Points
+*/
+$break-Mini:    480px;
+$break-Tiny:    500px;
+$break-Small:   600px;
+$break-Medium:  800px;
+$break-Large:   1000px;
+$break-xLarge:  1200px;
+
+
+
+
+
+
+

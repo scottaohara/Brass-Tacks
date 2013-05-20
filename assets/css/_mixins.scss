@@ -1,0 +1,99 @@
+// ----------------------------------------------------------------
+//		Vendor Prefix Mixins
+// ----------------------------------------------------------------
+// All Vendor Prefixes
+@mixin vendor($property, $value...){
+       -moz-#{$property}:$value;
+        -ms-#{$property}:$value;
+         -o-#{$property}:$value;
+    -webkit-#{$property}:$value;
+            #{$property}:$value;
+}
+            
+// Just webkit & moz Prefixes
+@mixin base-vendor($property, $value...){
+       -moz-#{$property}:$value;
+    -webkit-#{$property}:$value;
+       		#{$property}:$value;
+}
+
+// ----------------------------------------------------------------
+//		Useful CSS3 Mixins
+// ----------------------------------------------------------------
+// Box Sizing
+@mixin box-sizing($box-value) {
+	@include base-vendor(box-sizing, $box-value);	
+}
+
+// Border Radius
+@mixin border-radius($br-value){
+	@include base-vendor(border-radius, $br-value);
+	background-clip:padding-box;
+}
+
+// Box Shadow
+@mixin box-shadow($bs-value){
+	@include base-vendor(box-shadow, $bs-value)
+}
+	// See _var.scss to edit & create box-shadow rules
+
+	
+// Transition
+@mixin transition($tran-property, $tran-time, $tran-method, $tran-delay) {
+	@include vendor(transition, $tran-property $tran-time $tran-method $tran-delay);
+}
+	// Example --  @include transition(all 0.35s ease 0;);
+	// transition: property duration timing-function(method) delay;
+	// transition: all 		.35s 	 ease 					 0s;  <-- the s is required regardless of if it's 0 or not
+	
+	
+// ----------------------------------------------------------------
+//		Hidden Elements Mixins
+// ----------------------------------------------------------------
+// Hide text that you don't want visible
+// like on submit buttons that use an icon instead of text
+@mixin hide-text{
+  color:transparent;
+  font:0/0 a;
+  text-shadow:none;
+}
+
+// Hide entire elements that you don't want visible
+// but still need for accesibility / functionality 
+// -- ie. radio buttons for custom styled radio inputs
+@mixin invisible{
+	height:1px!important; left:-999999px!important; overflow:hidden!important; position:absolute!important; width:1px!important;
+}
+
+// Truncate Text
+@mixin truncate($truncation-boundary){
+    max-width:$truncation-boundary;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+	// Example --  @include truncate(100%);
+
+
+// ----------------------------------------------------------------
+//		Clearfix
+// ----------------------------------------------------------------
+@mixin clearfix{
+  *zoom:1;
+  &:before, &:after{content:""; display:table}
+  &:after{clear:both}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

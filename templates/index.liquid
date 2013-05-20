@@ -1,0 +1,324 @@
+{% block content %} 
+	<style>
+		body *{font-family:"Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 200;}
+		.page{margin:0 auto; max-width:700px;
+		}
+	</style>
+	
+<div class="callout">
+	stuff n' things
+</div>
+
+<abbr title="oh, hello there kind sir">oh hai</abbr>
+	
+<h1>Profile Images</h1>
+<a href="#" class="pic">
+	<img src="assets/img/little-V.jpg" alt="" />
+</a>
+
+<a href="#" class="pic-Rounded">
+	<img src="assets/img/little-V.jpg" alt="" />
+</a>	
+
+<h1>Profiles Images inside of media element</h1>
+<div class="media callout">
+	<div class="media-Object">
+		<a href="#" class="pic-Rounded">
+			<img src="assets/img/little-V.jpg" alt="" />
+		</a>
+	</div>
+	<div class="media-Text">
+		<h1 class="gamma">Media Element w/Callout Class</h1>
+		<p>
+			How does it work? The hard part is making sure that the image can be any width, so that the element is reusable. 
+			It means our content area needs to be flexible so that it can fill in all the remaining space available. 
+			We’ll have to create a new formatting context to make a flexible column.
+		</p>
+	</div>
+</div>
+
+<div class="media-Reverse callout">
+	<div class="media-Object">
+		<a href="#" class="pic-Rounded">
+			<img src="assets/img/little-V.jpg" alt="" />
+		</a>
+	</div>
+	<div class="media-Text">
+		<h1 class="gamma">Media Element w/Callout Class</h1>
+		<p>
+			How does it work? The hard part is making sure that the image can be any width, so that the element is reusable. 
+			It means our content area needs to be flexible so that it can fill in all the remaining space available. 
+			We’ll have to create a new formatting context to make a flexible column.
+		</p>
+	</div>
+</div>
+
+<div class="media">
+	<div class="media-Object pic-Rounded">
+			<img src="assets/img/little-V.jpg" alt="" />
+	</div>
+	<div class="media-Text">
+		<h1 class="gamma">Media Element w/out Callout class</h1>
+		<p>
+			How does it work? The hard part is making sure that the image can be any width, so that the element is reusable. 
+			It means our content area needs to be flexible so that it can fill in all the remaining space available. 
+			We’ll have to create a new formatting context to make a flexible column.
+		</p>
+	</div>
+</div>
+
+<div class="media-No-Wrap">
+	<div class="media-Object">
+		<a href="#" class="pic-Rounded">
+			<img src="assets/img/little-V.jpg" alt="" />
+		</a>
+	</div>
+	<div class="media-Text">
+		<h1 class="gamma">Media Element w/no text wrap</h1>
+		<p>
+			How does it work? The hard part is making sure that the image can be any width, so that the element is reusable. 
+			It means our content area needs to be flexible so that it can fill in all the remaining space available. 
+			We’ll have to create a new formatting context to make a flexible column.
+		</p>
+	</div>
+</div>
+
+<div class="media-No-Wrap-Reverse">
+	<div class="media-Object">
+		<a href="#" class="pic-Rounded">
+			<img src="assets/img/little-V.jpg" alt="" />
+		</a>
+	</div>
+	<div class="media-Text">
+		<h1 class="gamma">Media Element w/no text wrap, reversed</h1>
+		<p>
+			How does it work? The hard part is making sure that the image can be any width, so that the element is reusable. 
+			It means our content area needs to be flexible so that it can fill in all the remaining space available. 
+			We’ll have to create a new formatting context to make a flexible column.
+		</p>
+	</div>
+</div>
+
+<hr />
+
+<ul>
+	<li>item</li>
+	<li>item 2</li>
+	<li>item 3</li>
+</ul>
+
+<ol>
+	<li>item</li>
+	<li>item 2</li>
+	<li>item 3</li>
+</ol>
+
+<hr />
+<hr />
+<hr />
+<hr />
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+	
+	<form class="form-Container">
+	   <fieldset class="">
+	       <div class="grouping">
+	           <h2>Text Input Fields</h2>
+	           
+    	       <label for="input-Text" class="text-Label">Input - Normal Text</label>
+    	       <input id="input-Text" class="input-Area" type="text" placeholder="Write Text Here" />
+    	       
+    	       <label for="input-Email" class="text-Label">Input - Email</label>
+    	       <input id="input-Email" class="input-Area" type="email" placeholder="Enter Email" />
+    	       
+    	       <label for="input-Password" class="text-Label">Input - Password</label>
+    	       <input id="input-Password" class="input-Area" type="password" placeholder="Enter Password" />
+    	       
+    	       <label for="input-Url" class="text-Label">Input - Web Address</label>
+    	       <input id="input-Url" class="input-Area" type="url" placeholder="Enter Web Address" />
+    	       
+    	       <label for="input-Search" class="text-Label">Input - Search</label>
+    	       <input id="input-Search" class="input-Area" type="search" placeholder="Search for..." />
+    	       <input type="submit" class="btn btn-action" value="Search" />
+    	       
+    	       <label for="input-TextArea" class="text-Label">Text Area</label>
+    	       <textarea id="input-TextArea" class="text-Area"></textarea>
+    	       
+	       </div>
+	       
+	       <hr />
+	       
+	       <script type="text/javascript">
+	           // jQuery scripts that make the custom check boxes turn on and off
+                $(function() {
+            	   $('.option-Check').click(function() {
+            	       $(this).parent().toggleClass('selected-Check');
+            	   });
+               });
+           </script>
+	       
+	       <div class="grouping checkers">
+	           <h2>Check Boxes</h2>
+	           
+	           <div class="option-Container input-Check">
+	               <label for="check-1" class="option-Label option-Check">
+    	               <span class="btn-Check">
+    	                   <span class="ifChecked">X</span>
+    	               </span>
+    	               Check Box 1
+	               </label>
+	               <input type="checkbox" class="input-Hide" id="check-1" />
+	           </div>
+	           
+	           <div class="option-Container input-Check">
+	               <label for="check-2" class="option-Label option-Check">
+    	               <span class="btn-Check">
+        	               <span class="ifChecked">X</span>
+    	               </span>
+    	               Check Box 2
+	               </label>
+	               
+    	           <input type="checkbox" class="input-Hide" id="check-2" />
+	           </div>
+	           
+	       </div>
+	       
+	       <hr />
+	       
+	       <script type="text/javascript">
+	           // jQuery scripts that make the custom radio buttons turn on and off
+                $(function() {
+            	   $(".input-Radio").click(function() {
+                        $(".selected-Radio").removeClass('selected-Radio');
+                        $(this).addClass('selected-Radio');
+                    });
+               });
+           </script>
+	       
+	       <div class="grouping radios">
+	           <h2>Radio Buttons</h2>
+	           
+	           <div class="option-Container input-Radio">
+	               <label for="radio-1" class="option-Label">Radio Option 1</label>
+	               <span class="btn-Radio"></span>
+    	           <input type="radio" class="input-Hide" id="radio-1" name="radio-Set" />
+	           </div>
+	           
+	           <div class="option-Container input-Radio">
+	               <label for="radio-2" class="option-Label">Radio Option 2</label>
+	               <span class="btn-Radio"></span>
+    	           <input type="radio" class="input-Hide" id="radio-2" name="radio-Set" />
+	           </div>
+	           
+	           <div class="option-Container input-Radio">
+	               <label for="radio-3" class="option-Label">Radio Option 3</label>
+	               <span class="btn-Radio"></span>
+    	           <input type="radio" class="input-Hide" id="radio-3" name="radio-Set" />
+	           </div>
+	           
+	       </div>
+	       
+	       <hr />
+	       
+	       <div class="grouping">
+	           <h2>Selections</h2>
+	           
+	           <label for="base-Select" class="text-Label">Default Select</label>
+	           <div class="select-Container">
+    	           <select id="base-Select" class="input-Select">
+    	               <option>Select an Item...</option>
+    	               <option>First Item</option>
+    	               <option>Second Item</option>
+    	               <option>Third Item</option>
+    	               <option>Fourth Item Fourth Item Fourth Item</option>
+    	           </select>
+	           </div>
+	           
+	           <label for="num-Spin" class="text-Label">Number Spinbox</label>
+	           <input id="num-Spin" type="number" min="0" max="20" step="1" value="5" class="input-Number" />
+	           
+	           <label for="num-Date" class="text-Label">Date: mm/dd/yyy</label>
+	           <input id="num-Date" type="date" class="input-Number" />
+	           
+	           <label for="num-Time" class="text-Label">Time: 12:00 PM</label>
+	           <input id="num-Time" type="time" class="input-Number" />
+	           
+	           <label for="color-Picker" class="text-Label">Hex Color</label>
+	           <input id="color-Picker" type="color" class="input-Color" />
+	       </div>
+	       
+	       <hr />
+	       
+	       <div class="grouping txt-Center">
+	           <h2 class="txt-Left">Submission Buttons</h2>
+	           
+	           <input type="button" class="btn-Disable" value="Disabled" />
+	           <input type="reset" class="btn-Neg" value="Reset" />
+	           <input type="submit" class="btn" value="Submit" />
+	       </div>
+	       
+	       <hr />
+	       <h2>Button Styles</h2>
+
+	       <hr />
+	           	           
+	           <div class="grouping">
+	           <h3>Colors / Actions</h3>
+	               <ul class="kill-List">
+        	           <li>
+            	           <a href="#" title="yeah title" class="btn">Button</a>
+            	           <a href="#" title="yeah title" class="btn-Neg">Negative Action</a>
+            	           <a href="#" title="yeah title" class="btn-Disable">Disabled</a>
+        	           </li>
+        	           <li>
+            	           <a href="#" title="yeah title" class="btn-Action">Positive Action 1</a>
+            	           <a href="#" title="yeah title" class="btn-Action-2">Positive (or negative) Action 2</a>
+            	           <a href="#" title="yeah title" class="btn-Action-3">Positive Action 3</a>
+        	           </li>
+	               </ul>
+	           </div>
+	           
+	           <div class="grouping">
+    	           <h3>Sizes</h3>
+    	           <ul class="kill-List">
+        	           <li>
+            	           <a href="#" title="yeah title" class="btn-Small">Small</a>
+            	           <a href="#" title="yeah title" class="btn">Regular</a>
+            	           <a href="#" title="yeah title" class="btn-Large">Large</a>
+            	           <a href="#" title="yeah title" class="btn-XLarge">Extra Large</a>
+        	           </li>
+        
+        	           <li>
+        	               <a href="#" title="yeah title" class="btn-Small btn-Wide">Small Wide</a>
+        	           </li>
+        	           <li>
+        	               <a href="#" title="yeah title" class="btn-Wide">Normal Wide</a>
+        	           </li>
+        	           <li>
+        	               <a href="#" title="yeah title" class="btn-Large btn-Wide">Large Wide</a>
+        	           </li>
+        	           <li>
+        	               <a href="#" title="yeah title" class="btn-XLarge btn-Wide">X-Large Wide</a>
+        	           </li>
+    	           </ul>
+	           </div>
+	           
+	           <div class="grouping">
+    	           <h3>Additional Styling</h3>
+    	           <ul class="kill-List">
+        	           <li>
+            	           <a href="#" title="yeah title" class="btn">Regular</a> - 3px rounded edges
+        	           </li>
+        	           <li>     
+            	           <a href="#" title="yeah title" class="btn-Square">Squared Edges</a> - 0px rounded edges
+        	           </li>
+        	           <li>
+            	           <a href="#" title="yeah title" class="btn-Round">Rounded Edges</a> - 12px rounded edges
+        	           </li>
+    	           </ul>
+	           </div>	      
+	       
+	   </fieldset>
+	</form>
+	
+{% endblock %}

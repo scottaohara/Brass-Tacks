@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    	<meta charset="UTF-8" />
+	    <meta name="viewport" content="width=device-width, minimum-scale=1.0" />
+        <title>{% block title %}Example Title{% endblock %}</title>
+        
+        <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+        <!-- Styles -->
+        {{ "master.css" | asset_url | stylesheet_tag }}
+        <!-- Style block allowing child pages to inject their own styles -->
+        {% block styles %}{% endblock %}
+        
+        <link rel="shortcut icon" href="icon.png" />
+	    <link rel="apple-touch-icon-precomposed" href="icon.png" />
+	    <meta name="apple-mobile-web-app-title" content="" />
+	    <link type="text/plain" rel="author" href="humans.txt" />
+    </head>
+    <body>
+    
+        <div class="page">
+            <!-- Include -->
+            {% include "header" %}
+            <!-- Content block, child page inject content -->
+            {% block content %}{% endblock %}
+        </div>
+        
+        <!-- Script block allowing child pages to inject their own scripts -->
+        {% block scripts %}{% endblock %}
+        {{ "app.js" | asset_url | script_tag }}
+    </body>
+</html>

@@ -1,0 +1,89 @@
+// Colors
+$c-Dark:#444;
+$c-Darker:#101010;
+$c-Light:#eee;
+$c-Lighter:#f8f8f8;
+
+$c-Btn-1:#35a4f3;
+$c-Btn-2:#f24735;
+$c-Btn-3:#1fbb61;
+
+$c-Required:#f00;
+
+$c-Btn-Neg:#aaa;
+
+/* rename these */
+$btn-disable:#fafafa;
+$btn-radio-check:#fafafa;
+/* end rename */
+
+$bg-color:#f8f8f8;
+$c-Link:#3775B9;
+
+
+// Box Shadow Types  (these are just examples.  Make your own!)
+$bs-1:		0 0 6px rgba(0,0,0,.25);
+$bs-2:		$bs-1 inset;
+$bs-3:		$bs-1, $bs-1 inset;
+$bs-4:		0 8px 8px -8px rgba(0,0,0,.5);
+$bs-5:		$bs-4, 0 0 6px rgba(0,0,0,.75) inset;
+$bs-6:		0 0 6px rgba(255,255,255,.5) inset;
+
+
+// Fonts Families
+$brand:		Arial; // replace this with your main brand font
+$arial:		Arial, "Helvetica Neue", Helvetica, sans-serif;
+$georgia:	Georgia, Cambria, "Times New Roman", Times, serif;
+$helvetica:	"Helvetica Neue", Helvetica, Arial, sans-serif;
+$verdana:	Verdana, Geneva, sans-serif;
+
+
+// Layout
+$spacing:4px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Bring these into the mix....
+
+
+// Font Declarations 
+$base-font:1em;
+
+$ultra: $base-font * 4;
+$mega:  $base-font * 3;
+$alpha: $base-font * 2.3;
+$beta:  $base-font * 1.75;
+$gamma: $base-font * 1.3;
+$delta: $base-font * 1.15;
+$base:  $base-font * 1;
+$tiny:  $base-font * .85;
+$mini:  $base-font * .7;
+
+
+
+/* 
+    Media Query Break Points
+*/
+$break-Mini:    480px;
+$break-Tiny:    500px;
+$break-Small:   600px;
+$break-Medium:  800px;
+$break-Large:   1000px;
+$break-xLarge:  1200px;

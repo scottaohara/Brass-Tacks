@@ -1,0 +1,116 @@
+// ----------------------------------------------------------------
+//		Basic styling for Buttons
+// ----------------------------------------------------------------
+.btn, %btn{
+    background:$c-Dark; 
+    @include border-radius(3px);
+    color:$c-Lighter;
+    cursor:pointer;
+    display:inline-block;
+    font:{family:$arial; size:$base}
+    line-height:1;
+    padding:$spacing*2 $spacing*3; 
+    text-align:center;
+    text-decoration:none;
+    @include transition(all, .25s, ease-in-out, 0s);
+    vertical-align:middle;
+    -webkit-appearance:none;
+    &:hover, &:active{
+        background:$c-Darker; 
+        @include box-shadow($bs-6);
+        color:$c-Lighter
+    }
+}
+
+.btn-Small	{@extend %btn; font-size:$tiny; padding:$spacing $spacing*2}
+.btn-Large	{@extend %btn; font-size:$gamma; padding:$spacing*3}
+.btn-XLarge	{@extend %btn; font-size:$beta; padding:$spacing*3 $spacing*4}
+.btn-Wide	{@extend %btn; display:block}
+
+.btn-Action{@extend %btn; background:$c-Btn-1;
+    &:hover{background:darken($c-Btn-1, 15%)}
+}
+   
+.btn-Action-2{@extend %btn; background:$c-Btn-2;
+    &:hover{background:darken($c-Btn-2, 15%)}
+}
+    
+.btn-Action-3{@extend %btn; background:$c-Btn-3;
+    &:hover{background:darken($c-Btn-3, 15%)}
+}
+
+.btn-Neg, 
+.btn-Neg:hover{@extend %btn; background:$c-Btn-Neg; color:$c-Lighter}
+
+.btn-Disable, 
+.btn-Disable:hover{@extend %btn; background:$btn-disable; border:1px solid #eee; color:$c-Dark; cursor:default}
+
+.btn-Square{@extend %btn; @include border-radius(0)}
+.btn-Round{@extend %btn; @include border-radius(12px)}
+
+// ----------------------------------------------------------------
+//		Basic styling for form elements
+// ----------------------------------------------------------------
+
+.form-Container{background:#fff; border:1px solid $c-Light; @include box-shadow($bs-4); padding:$spacing*2}
+.grouping{padding:$spacing}
+
+/* Text Input Areas & Labels */
+.text-Label{font-family:$arial; display:block; margin-bottom:$spacing}
+
+.input-Area, %input-Area{
+    border:1px solid #ccc; font-family:$arial; line-height:1.25; margin-bottom:$spacing*2; padding:$spacing*2 $spacing; width:50%;
+    &:focus{background:#fffffd; border:1px solid #50B6D5; @include box-shadow($bs-2)}
+}
+
+.text-Area{
+    @extend %input-Area;
+    display:block; min-height:150px; resize:vertical; width:100%
+}
+
+/* Check/Radio Inputs & Labels */
+.option-Container{
+    @extend .text-Label;
+    // background:url() no-repeat left center;       ------     instead of reusing btns for inputs, can put your own sprite here
+    position:relative;
+    &:hover .btn-Radio, 
+    &:hover .btn-Check{border-color:#333}
+}
+.option-Label{cursor:pointer; display:block; padding-left:$spacing*7; position:relative; z-index:2}
+
+.input-Hide{@include invisible;}
+
+.btn-Radio, .btn-Check{
+    @extend %btn;
+    background:$btn-radio-check; border:1px solid #ccc; font:{size:14px; weight:bold}; height:19px; left:0; padding:2px; position:absolute; top:0; width:19px;
+    &:hover{background:$c-Btn-1}
+}
+.btn-Radio{@include border-radius(10px)}
+
+.input-Radio.selected-Radio .btn-Radio{@extend .btn-Radio:hover; border-color:#333}
+.input-Check.selected-Check .btn-Check{@extend .btn-Check:hover; border-color:#333}
+
+.ifChecked{visibility:hidden}
+.selected-Check .ifChecked{visibility:visible}
+
+/* Drop Down Selection Inputs */
+.select-Container{
+    @extend %input-Area;
+    background:url(../img/drop-Arrow.png) no-repeat 99% center; display:inline-block; overflow:hidden;
+}
+.input-Select{background:none; border:0; font-size:$base; padding-right:$spacing*4; width:120%; -webkit-appearance:textarea}
+
+/* Inputs not supported in all browsers */
+.input-Color{ // reusing a lot of input-Area here, but not @extending it because the rules of input-Area 'break' how this should look in chrome/opera
+    border:1px solid #ccc; font-family:$arial; margin-bottom:$spacing*2; padding:0 $spacing; height:45px; width:50%;
+    &:focus{background:#fffffd; border:1px solid #50B6D5; @include box-shadow($bs-2)}
+}
+
+.input-Number{
+    @extend %input-Area;
+    font-size:$base;
+}
+
+/*
+	TODO - creating base styling / HTML structure for file Inputs
+*/
