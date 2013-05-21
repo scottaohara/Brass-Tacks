@@ -1,22 +1,30 @@
-{% block content %} 
+<!doctype html>
+<html lang="en">
+    <head>
+    	<meta charset="UTF-8" />
+	    <meta name="viewport" content="width=device-width, minimum-scale=1.0" />
+        <title>Example Title</title>
+        
+        <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
+        <!-- Styles -->
+        <link href="assets/css/master.min.css" rel="stylesheet" type="text/css" media="all"/>
+        <!-- Style block allowing child pages to inject their own styles -->
+        
+        
+        <link rel="shortcut icon" href="icon.png" />
+	    <link rel="apple-touch-icon-precomposed" href="icon.png" />
+	    <meta name="apple-mobile-web-app-title" content="" />
+	    <link type="text/plain" rel="author" href="humans.txt" />
+    </head>
+    <body>
+    
+        <div class="page">
+            <!-- Include -->
+            
+            <!-- Content block, child page inject content -->
+             
 	
-        <header>
-            <hgroup>
-                <h1>Grouped Heading 1</h1>
-                <h2>Grouped Heading 2</h2>
-            </hgroup>
-            <nav>
-                <ul>
-                    <li><a href="#">navigation item #1</a></li>
-                    <li><a href="#">navigation item #2</a></li>
-                    <li><a href="#">navigation item #3</a></li>
-                </ul>
-            </nav>
-        </header>
-        
-        
-        
-        <section>
+ <section>
             <h1>Section Heading 1</h1>            
             <article>
                 <h4>Article Heading 2</h4>
@@ -103,4 +111,11 @@
         </table>
         
      	
-{% endblock %}
+
+        </div>
+        
+        <!-- Script block allowing child pages to inject their own scripts -->
+        
+        <script src="app.js"></script>
+    </body>
+</html>

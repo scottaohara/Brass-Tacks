@@ -1,0 +1,49 @@
+// ----------------------------------------------------------------
+//		Basic styling for Buttons
+// ----------------------------------------------------------------
+.btn, %btn{
+    background:$c-Dark; 
+    @include border-radius(3px);
+    color:$c-Lighter;
+    cursor:pointer;
+    display:inline-block;
+    font:{family:$arial; size:$base}
+    line-height:1;
+    padding:$spacing*2 $spacing*3; 
+    text-align:center;
+    text-decoration:none;
+    @include transition(all, .25s, ease-in-out, 0s);
+    vertical-align:middle;
+    -webkit-appearance:none;
+    &:hover, &:active{
+        background:$c-Darker; 
+        @include box-shadow($bs-6);
+        color:$c-Lighter
+    }
+}
+
+.btn-Small	{@extend %btn; font-size:$tiny; padding:$spacing $spacing*2}
+.btn-Large	{@extend %btn; font-size:$gamma; padding:$spacing*3}
+.btn-XLarge	{@extend %btn; font-size:$beta; padding:$spacing*3 $spacing*4}
+.btn-Wide	{@extend %btn; display:block}
+
+.btn-Action{@extend %btn; background:$c-Btn-1;
+    &:hover{background:darken($c-Btn-1, 15%)}
+}
+   
+.btn-Action-2{@extend %btn; background:$c-Btn-2;
+    &:hover{background:darken($c-Btn-2, 15%)}
+}
+    
+.btn-Action-3{@extend %btn; background:$c-Btn-3;
+    &:hover{background:darken($c-Btn-3, 15%)}
+}
+
+.btn-Neg, 
+.btn-Neg:hover{@extend %btn; background:$c-Btn-Neg; color:$c-Lighter}
+
+.btn-Disable, 
+.btn-Disable:hover{@extend %btn; background:$btn-disable; border:1px solid #eee; color:$c-Dark; cursor:default}
+
+.btn-Square{@extend %btn; @include border-radius(0)}
+.btn-Round{@extend %btn; @include border-radius(12px)}

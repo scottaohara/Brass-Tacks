@@ -1,0 +1,99 @@
+{% block content %} 
+	
+<h1>Horizontal Navigation</h1>
+<nav class="nav-Container">
+	<ul class="horizontal-Nav">
+   	<li>
+      	<a href="#" class="" title="#">Link 1</a> 
+      </li>
+      <li>
+      	<a href="#" class="selected" title="#">Link 2 (selected)</a> 
+      </li>
+      <li class="drop-Start">
+      	<a href="#" class="" title="#">Link 3 DD</a> 
+         <ul class="drop-Menu">
+         	<li>
+            	<a href="#" class="" title="#">DM Link 1</a>
+            </li>
+            <li>
+            	<a href="#" class="" title="#">DM Link 2 a long link name</a>
+            </li>
+         </ul>
+      </li>
+      <li>
+      	<a href="#" class="" title="#">Link 4</a> 
+      </li>
+   </ul>
+</nav>
+
+<hr />
+
+<h2>Horizontal Navigation (centered)</h2>
+<nav class="nav-Container">
+	<ul class="horizontal-Nav center">
+   		<li>
+      	<a href="#" class="" title="#">Link 1</a> 
+      	</li>
+      	<li>
+	      	<a href="#" class="selected" title="#">Link 2 (selected)</a> 
+	    </li>
+	    <li class="drop-Start">
+	      	<a href="#" class="" title="#">Link 3 DD</a> 
+	        <ul class="drop-Menu">
+	        	<li>
+	            	<a href="#" class="" title="#">DM Link 1</a>
+	            </li>
+	            <li>
+	            	<a href="#" class="" title="#">DM Link 2</a>
+	            </li>
+	         </ul>
+	    </li>
+	    <li>
+	      	<a href="#" class="" title="#">Link 4</a> 
+	    </li>
+   </ul>
+</nav>
+
+<hr />
+
+<h1>Vertical Navigation</h1>
+<i>This nav has an arbitrary max-width 300px / min-width 100px applied to it.</i>
+<nav class="nav-Container" style="max-width:300px; min-width:100px">
+	<ul class="vertical-Nav">
+   	<li>
+      	<a href="#" class="" title="#">Link 1</a> 
+      </li>
+      <li>
+      	<a href="#" class="selected" title="#">Link 2 (selected)</a> 
+      </li>
+      <li class="drop-Start">
+      	<a href="#" class="" title="#">Link 3 (selected)</a> 
+         <ul class="drop-Menu">
+         	<li>
+            	<a href="#" class="" title="#">DM Link 1</a>
+            </li>
+            <li>
+            	<a href="#" class="" title="#">DM Link 2</a>
+            </li>
+         </ul>
+      </li>
+      <li>
+      	<a href="#" class="" title="#">Link 4</a> 
+      </li>
+   </ul>
+</nav>
+
+    	
+{% endblock %}
+
+<!-- 
+	NOTES:
+   Use target="_blank" only when sending visitors off-site to pages related to our website. 
+   example:
+   Our Page > Our Facebook Page = target="_blank"
+   Our Page > Another website = no target declaration set
+   
+   In some instances, it may make sense to use rel="nofollow" when linking to certain external & internal pages.
+-->
+
+

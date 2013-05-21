@@ -1,10 +1,34 @@
-{% block content %} 
+<!doctype html>
+<html lang="en">
+    <head>
+    	<meta charset="UTF-8" />
+	    <meta name="viewport" content="width=device-width, minimum-scale=1.0" />
+        <title>Example Title</title>
+        
+        <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
+        <!-- Styles -->
+        <link href="assets/css/master.min.css" rel="stylesheet" type="text/css" media="all"/>
+        <!-- Style block allowing child pages to inject their own styles -->
+        
+        
+        <link rel="shortcut icon" href="icon.png" />
+	    <link rel="apple-touch-icon-precomposed" href="icon.png" />
+	    <meta name="apple-mobile-web-app-title" content="" />
+	    <link type="text/plain" rel="author" href="humans.txt" />
+    </head>
+    <body>
+    
+        <div class="page">
+            <!-- Include -->
+            
+            <!-- Content block, child page inject content -->
+             
 
 <h1>Heading / Font Sizes</h1>
 
 <h1 class="giga">Giga Heading</h1>
-<h1 class="ultra">Ultra Heading</h1>
-<h1 class="mega">Mega Heading</h1>
+<h2 class="ultra">Ultra Heading</h2>
+<h3 class="mega">Mega Heading</h3>
 <h1>Alpha Heading / h1</h1>
 <h2>Beta Heading / h2</h2>
 <h3>Gamma Heading / h3</h3>
@@ -13,6 +37,8 @@
 <h6>Heading 6</h6>
 
 <p>This is a basic paragraph style.</p>
+<p class="tiny">This is tiny text</p>
+<p class="mini">This is mini text</p>
 
 <h1>Text-level semantics</h1>
 
@@ -110,4 +136,11 @@
     	           </ul>
 	           </div>
 	
-{% endblock %}
+
+        </div>
+        
+        <!-- Script block allowing child pages to inject their own scripts -->
+        
+        <script src="app.js"></script>
+    </body>
+</html>

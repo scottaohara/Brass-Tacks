@@ -132,8 +132,20 @@
 }
 
 
-
-
+// Multi-Columned Text
+.multi{
+	   -moz-column-count:3;
+	-webkit-column-count:3;
+			column-count:3;
+			
+	   -moz-column-gap:$spacing*10;
+	-webkit-column-gap:$spacing*10;
+			column-gap:$spacing*10;
+			
+	   -moz-column-rule:1px outset #eee; 
+	-webkit-column-rule:1px outset #eee;
+			column-rule:1px outset #eee;
+}
 
 
 

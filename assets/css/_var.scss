@@ -31,11 +31,28 @@ $bs-6:		0 0 6px rgba(255,255,255,.5) inset;
 
 
 // Fonts Families
-$brand:		Arial; // replace this with your main brand font
+$brand:		'Open Sans'; // replace this with your main brand font
 $arial:		Arial, "Helvetica Neue", Helvetica, sans-serif;
 $georgia:	Georgia, Cambria, "Times New Roman", Times, serif;
 $helvetica:	"Helvetica Neue", Helvetica, Arial, sans-serif;
 $verdana:	Verdana, Geneva, sans-serif;
+
+// Font Declarations 
+$base-font:1em;
+
+$giga:	$base-font * 6;
+$ultra: $base-font * 5.5;
+$mega:  $base-font * 4.75;
+$alpha: $base-font * 4;
+$beta:  $base-font * 3.5;
+$gamma: $base-font * 3;
+$delta: $base-font * 2.5;
+$eps:	$base-font * 2;
+$zeta:	$base-font * 1.5;
+
+$base:  $base-font * 1;
+$tiny:  $base-font * .85;
+$mini:  $base-font * .7;
 
 
 // Layout
@@ -59,22 +76,10 @@ $spacing:4px;
 
 
 
-
 // Bring these into the mix....
 
 
-// Font Declarations 
-$base-font:1em;
 
-$ultra: $base-font * 4;
-$mega:  $base-font * 3;
-$alpha: $base-font * 2.3;
-$beta:  $base-font * 1.75;
-$gamma: $base-font * 1.3;
-$delta: $base-font * 1.15;
-$base:  $base-font * 1;
-$tiny:  $base-font * .85;
-$mini:  $base-font * .7;
 
 
 
