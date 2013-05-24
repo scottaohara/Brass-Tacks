@@ -39,21 +39,21 @@ $verdana:	Verdana, Geneva, sans-serif;
 
 
 // Font Declarations 
-$base-font:1em;
+$base-font:12px;
 
-$giga:	$base-font * 5;
-$ultra: $base-font * 4.5;
-$mega:  $base-font * 4;
-$alpha: $base-font * 3.5;
-$beta:  $base-font * 3;
-$gamma: $base-font * 2.5;
-$delta: $base-font * 2;
-$eps:	$base-font * 1.75;
-$zeta:	$base-font * 1.25;
+$giga:	$base-font * 5;		  // 60px
+$ultra: $base-font * 4.5;	  // 54px
+$mega:  $base-font * 4;		  // 48px
+$alpha: $base-font * 3.5;	  // 42px
+$beta:  $base-font * 3;		  // 36px
+$gamma: $base-font * 2.5;	  // 30px
+$delta: $base-font * 2;		  // 24px
+$eps:	$base-font * 1.75;	  // 21px
+$zeta:	$base-font * 1.5;	  // 18px
 
-$base:  $base-font * 1;
-$tiny:  $base-font * .85;
-$mini:  $base-font * .7;
+$base:  $base-font * 1.3334;  // 16.0008px
+$tiny:  12px;
+$mini:  10px;
 
 
 // Layout
@@ -77,16 +77,9 @@ $spacing:4px;
 
 
 
-// Bring these into the mix....
-
-
-
-
-
-
-/* 
-    Media Query Break Points
-*/
+// ----------------------------------------------------------------
+//		Media Query Break Points
+// ----------------------------------------------------------------
 $break-Mini:    480px;
 $break-Tiny:    500px;
 $break-Small:   600px;

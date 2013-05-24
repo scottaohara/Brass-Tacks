@@ -170,6 +170,8 @@
 	margin-bottom:$spacing*4;
 	min-height:50px;
 	padding:$spacing*4;
+	
+	& > :last-child{margin-bottom:0}
 }
 
 
