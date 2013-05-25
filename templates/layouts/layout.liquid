@@ -1,7 +1,12 @@
 <!doctype html>
-<html lang="en">
+<!--[if IE 7 ]><html lang="en" class="ieAll ie7"><![endif]-->
+<!--[if IE 8 ]><html lang="en" class="ieAll ie8"><![endif]-->
+<!--[if IE 9 ]><html lang="en" class="ieAll ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en" itemscope itemtype="http://schema.org/Person"><!--<![endif]-->
     <head>
-    	<meta charset="UTF-8" />
+    	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    	<meta name="description" content="" />
+		<meta name="keywords" content="" />
 	    <meta name="viewport" content="width=device-width, minimum-scale=1.0" />
         <title>{% block title %}Example Title{% endblock %}</title>
         
@@ -14,7 +19,18 @@
         <link rel="shortcut icon" href="icon.png" />
 	    <link rel="apple-touch-icon-precomposed" href="icon.png" />
 	    <meta name="apple-mobile-web-app-title" content="" />
+	    <meta name="msapplication-TileImage" content="/images/57x57" />
+	    <meta name="msapplication-TileColor" content="#000000" />
+	    
+	    <link rel="apple-touch-startup-image" href="/images/startup.png">
+	    <meta name="apple-mobile-web-app-capable" content="yes" />
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	    
 	    <link type="text/plain" rel="author" href="humans.txt" />
+	    
+	    <!--[if lt IE 9]> 
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+		<![endif]-->
     </head>
     <body>
     
@@ -26,7 +42,15 @@
         </div>
         
         <!-- Script block allowing child pages to inject their own scripts -->
-        {% block scripts %}{% endblock %}
         {{ "app.js" | asset_url | script_tag }}
+        {{ "app.js" | asset_url | script_tag }}
+        
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src='//www.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
     </body>
 </html>
