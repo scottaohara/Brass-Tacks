@@ -10,8 +10,8 @@ html{overflow-y:scroll; min-height:100%}
 
 body{line-height:1.2}
 
-// Standardize the Standard Tags
-h1, h2, h3, h4, h5, h6, p, blockquote, pre, form, fieldset, img, legend, table, th, td, caption, hr{border:0; margin:0; outline:0; padding:0}
+// Reset the Standard Tags
+body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, form, fieldset, img, legend, table, th, td, caption, hr{border:0; margin:0; outline:0; padding:0}
 
 // Consistent Margins
 ul li, ol li, p, h1, h2, h3, h4, blockquote, form{margin-bottom:$spacing*2}
