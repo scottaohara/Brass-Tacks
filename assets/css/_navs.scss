@@ -3,49 +3,59 @@
 // ----------------------------------------------------------------
 
 // The main navigation class
-.nav-Container{
+.nav{
 	ul{list-style:none; margin:0; padding:0}
 	li{margin:0}
-	a{color:$c-Link; display:block; padding:10px; text-decoration:none;
-		&:hover{background:#ddd}
+	a{text-decoration:underline;
+		&:hover{text-decoration:none}
+		
+		.selected{}
 	}
 }
-.selected{background:#ccc}
-	// if this is too generic 1. rename your classes so you only have one 'selected' class, 
-	// or 2. wrap it into the .nav-Container a{} to make it more specific.
 
-
-// Basic rules for Drop Down Menus (applied to both horizontal & vertical navs)
-// ----------------------------------------------------------------
-.drop-Start{position:relative;
-	&:hover{background:#eee;
-		.drop-Menu{visibility:visible}
-	}
-	a{/* insert styling to indicate this is a link w/a drop down menu */ white-space:nowrap}
-}
-.drop-Menu{background:#eee; border:1px solid #ddd; position:absolute; visibility:hidden; z-index:2}
 
 // ----------------------------------------------------------------
 // Basic rules for Horizontal Navigations
 // ----------------------------------------------------------------
-.horizontal-Nav{@extend .clearfix}
-.horizontal-Nav > li{float:left}
+.h-Nav{
+	@extend .clearfix;
+	& > li{float:left}
+	
+	// Set drop menu location to the bottom of the hovered link
+	.drop-Menu{
+		left:0; top:100%;
+		
+		// don't use floats, but instead use display inline-block and center navigation links
+		&.center{
+		font-size:0; text-align:center;
+			// font-size:0; deletes the white space between the <li>s 
+			// However, the font size inside of the <li>'s must be reset when using this trick.
+			
+			& > li{display:inline-block; float:none; font-size:$base}
+				// Sets links to the base font-size.  Update for your own uses.
+		}
+	}
+}
 
-// Set drop menu location to the bottom of the hovered link
-.horizontal-Nav .drop-Menu{left:0; top:100%}
-
-// don't use floats, but instead use display inline-block and center navigation links
-.horizontal-Nav.center{font-size:0; text-align:center}
-	// font-size:0; deletes the white space between the <li>s 
-	// However, the font size inside of the <li>'s must be reset when using this trick.
-
-.horizontal-Nav.center > li{display:inline-block; float:none; font-size:16px} 
-	// font-size:16 is an arbitrary number.  Update for your own uses.
-
+	
 // ----------------------------------------------------------------
 // Basic rules for Vertical Navigations
 // ----------------------------------------------------------------
-.vertical-Nav{/* really only needs styling applied to it, as vertical nav is default */}
-
-// Set drop menu location to the right of the hovered link
-.vertical-Nav .drop-Menu{left:100%; top:0}
+.v-Nav{
+	/* really only needs styling applied to it, as vertical nav is default */
+	.drop-Menu{left:100%; top:0} // Set drop menu location to the right of the hovered link
+}
+	
+// ----------------------------------------------------------------
+// Basic rules for Drop Down Menus (applied to both horizontal & vertical navs)
+// ----------------------------------------------------------------
+.drop-Start{position:relative;
+	&:hover{
+		background:#eee;
+		.drop-Menu{visibility:visible}
+	}
+	a{
+		white-space:nowrap
+	}
+}
+.drop-Menu{background:#eee; border:1px solid #ddd; position:absolute; visibility:hidden; z-index:2}

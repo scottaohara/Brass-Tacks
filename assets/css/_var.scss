@@ -1,27 +1,12 @@
-// Colors
-$c-Dark:#444;
-$c-Darker:#101010;
-$c-Light:#eee;
-$c-Lighter:#f8f8f8;
-
-$c-Btn-1:#35a4f3;
-$c-Btn-2:#f24735;
-$c-Btn-3:#1fbb61;
-
-$c-Required:#f00;
-
-$c-Btn-Neg:#aaa;
-
-/* rename these */
-$btn-disable:#fafafa;
-$btn-radio-check:#fafafa;
-/* end rename */
-
-$bg-color:#f8f8f8;
-$c-Link:#3775B9;
+// ----------------------------------------------------------------
+// Border Radius Base Default	- t-l  t-r  b-r  b-l
+// ----------------------------------------------------------------
+$radius:	3px;
 
 
+// ----------------------------------------------------------------
 // Box Shadow Types  (these are just examples.  Make your own!)
+// ----------------------------------------------------------------
 $bs-1:		0 0 6px rgba(0,0,0,.25);
 $bs-2:		$bs-1 inset;
 $bs-3:		$bs-1, $bs-1 inset;
@@ -30,7 +15,42 @@ $bs-5:		$bs-4, 0 0 6px rgba(0,0,0,.75) inset;
 $bs-6:		0 0 6px rgba(255,255,255,.5) inset;
 
 
+// ----------------------------------------------------------------
+//	Colors
+// ----------------------------------------------------------------
+$c-Brand-1:#000;
+$c-Brand-2:#111;
+$c-Brand-3:#222;
+
+$c-BG:#f8f8f8;
+
+$c-Link:#3775B9;
+
+// Base Darker Colors for text and headlines
+$c-Dark:#444;
+$c-Darker:#101010;
+// Base Ligher Colors for text on dark backgrounds
+$c-Light:#eee;
+$c-Lighter:#f8f8f8;
+
+// Button Colors
+$c-Btn-1:#35a4f3;
+$c-Btn-2:#f24735;
+$c-Btn-3:#1fbb61;
+
+$c-Btn-Neg:#aaa;
+$c-Disabled:#fafafa;
+
+// Color for Radio/Check box buttons
+$c-btn-RC:#fafafa;
+
+// Required / Error Text Color
+$c-Required:#f00;
+
+
+// ----------------------------------------------------------------
 // Fonts Families
+// ----------------------------------------------------------------
 $brand:		'Open Sans'; // replace this with your main brand font
 $arial:		Arial, "Helvetica Neue", Helvetica, sans-serif;
 $georgia:	Georgia, Cambria, "Times New Roman", Times, serif;
@@ -38,7 +58,9 @@ $helvetica:	"Helvetica Neue", Helvetica, Arial, sans-serif;
 $verdana:	Verdana, Geneva, sans-serif;
 
 
-// Font Declarations 
+// ----------------------------------------------------------------
+// Font Size Declarations 
+// ----------------------------------------------------------------
 $base-font:12px;
 
 $giga:	$base-font * 5;		  // 60px
@@ -51,30 +73,15 @@ $delta: $base-font * 2;		  // 24px
 $eps:	$base-font * 1.75;	  // 21px
 $zeta:	$base-font * 1.5;	  // 18px
 
-$base:  $base-font * 1.3334;  // 16.0008px
+$base:  $base-font * 1.3334 - .0008;  // 16px
 $tiny:  12px;
 $mini:  10px;
 
 
+// ----------------------------------------------------------------
 // Layout
+// ----------------------------------------------------------------
 $spacing:4px;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // ----------------------------------------------------------------
@@ -86,3 +93,4 @@ $break-Small:   600px;
 $break-Medium:  800px;
 $break-Large:   1000px;
 $break-xLarge:  1200px;
+$break-xxLarge: 1600px;

@@ -35,14 +35,19 @@
     <body>
     
         <div class="page">
-            <!-- Include -->
-            {% include "header" %}
-            <!-- Content block, child page inject content -->
-            {% block content %}{% endblock %}
+        	<header class="base-Header">
+            	{% include "header" %}
+        	</header>
+            <main class="base-Content">
+            	{% block content %}{% endblock %}
+            </main>
+            <footer class="base-Footer">
+            	{% include "footer" %}
+            </footer>
         </div>
         
         <!-- Script block allowing child pages to inject their own scripts -->
-        {{ "app.js" | asset_url | script_tag }}
+        {{ "jquery-1.10.0.min.js" | asset_url | script_tag }}
         {{ "app.js" | asset_url | script_tag }}
         
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

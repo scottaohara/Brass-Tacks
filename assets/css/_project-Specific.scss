@@ -11,4 +11,51 @@
 body{background:#fafafa; font-family:$brand; font-weight:300}
 
 // Set margin, widths and padding to the page container (if applicable)
-.page{margin:0 auto; max-width:700px; padding:$spacing*3}
+.page{margin:0 auto; max-width:700px; padding:0 $spacing*3}
+
+// Generic tag to wrap around content within sections if applicable
+.content{}
+
+// ----------------------------------------------------------------
+//	Header Area
+// ----------------------------------------------------------------
+
+// Extend the .nav class to style your header navigation
+.header-Nav{
+	@extend .nav;
+	a{/* add in project styling for header a tags here */
+		&:hover{/* add in project styling for a:hover here */}
+		&.selected{/* add in project styling for a.selected here */}
+	}
+}
+
+// Apply to <header> for styling
+.base-Header{}
+
+
+// ----------------------------------------------------------------
+//	Content Area
+// ----------------------------------------------------------------
+
+// Apply to <main> or top level <section> for styling
+.base-Content{}
+
+
+
+
+
+// ----------------------------------------------------------------
+//	Footer Area
+// ----------------------------------------------------------------
+
+// Apply to <footer> for styling
+.base-Footer{}
+
+// Extend the .nav class to style your footer navigation
+.footer-Nav{
+	@extend .nav;
+	a{/* add in project styling for footer a tags here */
+		&:hover{/* add in project styling for a:hover here */}
+		&.selected{/* add in project styling for a.selected here */}
+	}
+}

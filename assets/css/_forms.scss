@@ -32,10 +32,10 @@
 
 .btn-Radio, .btn-Check{
     @extend %btn;
-    background:$btn-radio-check; border:1px solid #ccc; font:{size:14px; weight:bold}; height:19px; left:0; padding:2px; position:absolute; top:0; width:19px;
+    background:$c-Btn-RC; border:1px solid #ccc; font:{size:14px; weight:bold}; height:19px; left:0; padding:2px; position:absolute; top:0; width:19px;
     &:hover{background:$c-Btn-1}
 }
-.btn-Radio{@include border-radius(10px)}
+.btn-Radio{@include border-radius($radius*5)}
 
 .input-Radio.selected-Radio .btn-Radio{@extend .btn-Radio:hover; border-color:#333}
 .input-Check.selected-Check .btn-Check{@extend .btn-Check:hover; border-color:#333}

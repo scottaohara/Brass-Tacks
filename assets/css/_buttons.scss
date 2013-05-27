@@ -3,7 +3,7 @@
 // ----------------------------------------------------------------
 .btn, %btn{
     background:$c-Dark; 
-    @include border-radius(3px);
+    @include border-radius($radius);
     color:$c-Lighter;
     cursor:pointer;
     display:inline-block;
@@ -43,7 +43,7 @@
 .btn-Neg:hover{@extend %btn; background:$c-Btn-Neg; color:$c-Lighter}
 
 .btn-Disable, 
-.btn-Disable:hover{@extend %btn; background:$btn-disable; border:1px solid #eee; color:$c-Dark; cursor:default}
+.btn-Disable:hover{@extend %btn; background:$c-Disabled; border:1px solid #eee; color:$c-Dark; cursor:default}
 
 .btn-Square{@extend %btn; @include border-radius(0)}
-.btn-Round{@extend %btn; @include border-radius(12px)}
+.btn-Round{@extend %btn; @include border-radius($radius*4)}
