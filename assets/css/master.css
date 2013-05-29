@@ -188,102 +188,6 @@ input:-moz-placeholder {
   .block > :last-child {
     margin-bottom: 0; }
 
-body {
-  background: #fafafa;
-  font-family: "Open Sans";
-  font-weight: 300; }
-
-.page {
-  overflow-x: hidden; }
-
-.content {
-  margin: 0 auto;
-  max-width: 900px;
-  padding: 12px; }
-  .content > :last-child {
-    margin-bottom: 0; }
-
-.header-Nav a {
-  /* add in project styling for header a tags here */ }
-  .header-Nav a:hover {
-    /* add in project styling for a:hover here */ }
-  .header-Nav a.selected {
-    /* add in project styling for a.selected here */ }
-
-.base-Footer {
-  background: #2d2d2d;
-  color: #fff; }
-
-.footer-Nav a {
-  /* add in project styling for footer a tags here */ }
-  .footer-Nav a:hover {
-    /* add in project styling for a:hover here */ }
-  .footer-Nav a.selected {
-    /* add in project styling for a.selected here */ }
-
-.brand {
-  /* put brand color here */
-  font-family: "Open Sans";
-  font-weight: 300; }
-
-.brand-Color {
-  /* put brand color here */ }
-
-.brand-Font {
-  font-family: "Open Sans";
-  font-weight: 300; }
-
-.giga {
-  font-size: 60px;
-  font-weight: 700; }
-
-.ultra {
-  font-size: 54px;
-  font-weight: 600; }
-
-.mega {
-  font-size: 48px;
-  font-weight: 300; }
-
-h1, .alpha {
-  font-size: 42px;
-  font-weight: 400; }
-
-h2, .beta {
-  font-size: 36px;
-  font-weight: 400; }
-
-h3, .gamma {
-  font-size: 30px;
-  font-weight: 400; }
-
-h4, .delta {
-  font-size: 24px;
-  font-weight: 300; }
-
-h5, .eps {
-  font-size: 21px;
-  font-weight: 300; }
-
-h6, .zeta {
-  font-size: 18px;
-  font-weight: 300; }
-
-p, li, li p, .base {
-  font-size: 16.0px;
-  font-weight: 300; }
-
-.tiny {
-  font-size: 12px;
-  font-weight: 300; }
-
-.mini {
-  font-size: 10px;
-  font-weight: 300; }
-
-a {
-  color: #3775b9; }
-
 .nav ul, .header-Nav ul, .footer-Nav ul {
   list-style: none;
   margin: 0;
@@ -291,6 +195,8 @@ a {
 .nav li, .header-Nav li, .footer-Nav li {
   margin: 0; }
 .nav a, .header-Nav a, .footer-Nav a {
+  display: inline-block;
+  padding: 4px 8px;
   text-decoration: underline; }
   .nav a:hover, .header-Nav a:hover, .footer-Nav a:hover {
     text-decoration: none; }
@@ -300,13 +206,13 @@ a {
 .h-Nav .drop-Menu {
   left: 0;
   top: 100%; }
-  .h-Nav .drop-Menu.center {
-    font-size: 0;
-    text-align: center; }
-    .h-Nav .drop-Menu.center > li {
-      display: inline-block;
-      float: none;
-      font-size: 16.0px; }
+.h-Nav.center {
+  font-size: 0;
+  text-align: center; }
+  .h-Nav.center > li {
+    display: inline-block;
+    float: none;
+    font-size: 16.0px; }
 
 .v-Nav {
   /* really only needs styling applied to it, as vertical nav is default */ }
@@ -415,16 +321,8 @@ a {
   border-radius: 12px;
   background-clip: padding-box; }
 
-.form-Container {
-  background: #fff;
-  border: 1px solid #eeeeee;
-  -moz-box-shadow: 0 8px 8px -8px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 0 8px 8px -8px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 8px 8px -8px rgba(0, 0, 0, 0.5);
-  padding: 8px; }
-
 .grouping {
-  padding: 4px; }
+  padding: 4px 0; }
 
 /* Text Input Areas & Labels */
 .text-Label, .option-Container {
@@ -433,6 +331,7 @@ a {
   margin-bottom: 4px; }
 
 .input-Area, .text-Area, .select-Container, .input-Number {
+  background: #fff;
   border: 1px solid #ccc;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   line-height: 1.25;
@@ -473,7 +372,7 @@ a {
   width: 1px !important; }
 
 .btn-Radio, .btn-Check {
-  background: #fafafa;
+  background: #eeeeee;
   border: 1px solid #ccc;
   font-size: 14px;
   font-weight: bold;
@@ -506,7 +405,7 @@ a {
 
 /* Drop Down Selection Inputs */
 .select-Container {
-  background: url(../img/drop-Arrow.png) no-repeat 99% center;
+  background: url(../img/drop-Arrow.png) no-repeat 99% center white;
   display: inline-block;
   overflow: hidden; }
 
@@ -636,16 +535,14 @@ a {
   -webkit-border-radius: 4px;
   border-radius: 4px;
   background-clip: padding-box;
-  -moz-box-shadow: 0 8px 8px -8px rgba(0, 0, 0, 0.5), 0 0 6px rgba(0, 0, 0, 0.75) inset;
-  -webkit-box-shadow: 0 8px 8px -8px rgba(0, 0, 0, 0.5), 0 0 6px rgba(0, 0, 0, 0.75) inset;
-  box-shadow: 0 8px 8px -8px rgba(0, 0, 0, 0.5), 0 0 6px rgba(0, 0, 0, 0.75) inset;
+  -moz-box-shadow: 0 8px 8px -8px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 8px 8px -8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 8px -8px rgba(0, 0, 0, 0.5);
   display: inline-block;
   overflow: hidden;
   width: 90px; }
   .pic img, .pic-Rounded img {
-    display: block;
-    position: relative;
-    z-index: -1; }
+    display: block; }
 
 .pic-Rounded {
   -moz-border-radius: 100px;
@@ -821,3 +718,118 @@ a {
   left: auto;
   right: 0;
   top: 0; }
+
+body {
+  background: #fafafa;
+  font-family: "Open Sans";
+  font-weight: 300; }
+
+.page {
+  overflow-x: hidden; }
+
+.content {
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 20px; }
+  .content > :last-child {
+    margin-bottom: 0; }
+
+.header-Nav {
+  background: #f8f8f8;
+  border-bottom: 1px solid #eee;
+  border-top: 1px solid #eee;
+  margin: 16px auto; }
+  .header-Nav a {
+    padding: 8px 12px;
+    text-decoration: none; }
+    .header-Nav a:hover {
+      background: #eee; }
+    .header-Nav a.selected, .header-Nav a:active {
+      background: #ddd; }
+
+.base-Header {
+  padding-top: 8px; }
+
+.base-Content {
+  min-height: 500px;
+  padding-bottom: 20px; }
+  .base-Content .content {
+    background: #fff;
+    border: 1px solid #eeeeee;
+    -moz-box-shadow: 0 8px 8px -8px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 8px 8px -8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px 8px -8px rgba(0, 0, 0, 0.5); }
+
+.base-Footer {
+  background: #2d2d2d;
+  color: #fff; }
+
+.footer-Nav a {
+  /* add in project styling for footer a tags here */ }
+  .footer-Nav a:hover {
+    /* add in project styling for a:hover here */ }
+  .footer-Nav a.selected {
+    /* add in project styling for a.selected here */ }
+
+.brand {
+  /* put brand color here */
+  font-family: "Open Sans";
+  font-weight: 300; }
+
+.brand-Color {
+  /* put brand color here */ }
+
+.brand-Font {
+  font-family: "Open Sans";
+  font-weight: 300; }
+
+.giga {
+  font-size: 60px;
+  font-weight: 700; }
+
+.ultra {
+  font-size: 54px;
+  font-weight: 600; }
+
+.mega {
+  font-size: 48px;
+  font-weight: 300; }
+
+h1, .alpha {
+  font-size: 42px;
+  font-weight: 400; }
+
+h2, .beta {
+  font-size: 36px;
+  font-weight: 400; }
+
+h3, .gamma {
+  font-size: 30px;
+  font-weight: 400; }
+
+h4, .delta {
+  font-size: 24px;
+  font-weight: 300; }
+
+h5, .eps {
+  font-size: 21px;
+  font-weight: 300; }
+
+h6, .zeta {
+  font-size: 18px;
+  font-weight: 300; }
+
+p, li, li p, .base {
+  font-size: 16.0px;
+  font-weight: 300; }
+
+.tiny {
+  font-size: 12px;
+  font-weight: 300; }
+
+.mini {
+  font-size: 10px;
+  font-weight: 300; }
+
+a {
+  color: #3775b9; }

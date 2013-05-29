@@ -1,8 +1,8 @@
 {% block content %} 
-	
+<section class="content">
 <h1>Horizontal Navigation</h1>
-<nav class="nav-Container">
-	<ul class="horizontal-Nav">
+<nav class="nav">
+	<ul class="h-Nav">
    	<li>
       	<a href="#" class="" title="#">Link 1</a> 
       </li>
@@ -29,8 +29,8 @@
 <hr />
 
 <h2>Horizontal Navigation (centered)</h2>
-<nav class="nav-Container">
-	<ul class="horizontal-Nav center">
+<nav class="nav">
+	<ul class="h-Nav center">
    		<li>
       	<a href="#" class="" title="#">Link 1</a> 
       	</li>
@@ -57,9 +57,9 @@
 <hr />
 
 <h1>Vertical Navigation</h1>
-<p class="highlight">This nav has an arbitrary max-width 300px / min-width 100px applied to it.</p>
-<nav class="nav-Container" style="max-width:300px; min-width:100px">
-	<ul class="vertical-Nav">
+<p class="highlight">This nav has an arbitrary max-width 200px / min-width 100px applied to it.</p>
+<nav class="nav" style="max-width:200px; min-width:100px">
+	<ul class="v-Nav">
    	<li>
       	<a href="#" class="" title="#">Link 1</a> 
       </li>
@@ -83,8 +83,7 @@
    </ul>
 </nav>
 
-    	
-{% endblock %}
+</section> 	
 
 <!-- 
 	NOTES:
@@ -95,5 +94,8 @@
    
    In some instances, it may make sense to use rel="nofollow" when linking to certain external & internal pages.
 -->
+{% endblock %}
+
+
 
 

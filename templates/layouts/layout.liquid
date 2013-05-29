@@ -37,6 +37,7 @@
         <div class="page">
         	<header class="base-Header">
             	{% include "header" %}
+            	{% include "navigation" %}
         	</header>
             <main class="base-Content">
             	{% block content %}{% endblock %}
@@ -49,6 +50,7 @@
         <!-- Script block allowing child pages to inject their own scripts -->
         {{ "jquery-1.10.0.min.js" | asset_url | script_tag }}
         {{ "app.js" | asset_url | script_tag }}
+        {% block js %}{% endblock %}
         
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

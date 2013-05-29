@@ -2,11 +2,11 @@
 //		Basic Setups for Navigation Elements
 // ----------------------------------------------------------------
 
-// The main navigation class
+// The main navigation class to be placed on the <nav>
 .nav{
 	ul{list-style:none; margin:0; padding:0}
 	li{margin:0}
-	a{text-decoration:underline;
+	a{display:inline-block; padding:$spacing $spacing*2; text-decoration:underline;
 		&:hover{text-decoration:none}
 		
 		.selected{}
@@ -17,6 +17,7 @@
 // ----------------------------------------------------------------
 // Basic rules for Horizontal Navigations
 // ----------------------------------------------------------------
+// to be placed on the <ul>
 .h-Nav{
 	@extend .clearfix;
 	& > li{float:left}
@@ -24,16 +25,16 @@
 	// Set drop menu location to the bottom of the hovered link
 	.drop-Menu{
 		left:0; top:100%;
-		
-		// don't use floats, but instead use display inline-block and center navigation links
-		&.center{
+	}	
+	
+	// don't use floats, but instead use display inline-block and center navigation links
+	&.center{
 		font-size:0; text-align:center;
 			// font-size:0; deletes the white space between the <li>s 
 			// However, the font size inside of the <li>'s must be reset when using this trick.
 			
-			& > li{display:inline-block; float:none; font-size:$base}
-				// Sets links to the base font-size.  Update for your own uses.
-		}
+		& > li{display:inline-block; float:none; font-size:$base}
+			// Sets links to the base font-size.  Update for your own uses.
 	}
 }
 
@@ -41,6 +42,7 @@
 // ----------------------------------------------------------------
 // Basic rules for Vertical Navigations
 // ----------------------------------------------------------------
+// to be placed on the <ul>
 .v-Nav{
 	/* really only needs styling applied to it, as vertical nav is default */
 	.drop-Menu{left:100%; top:0} // Set drop menu location to the right of the hovered link
