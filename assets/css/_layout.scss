@@ -11,7 +11,7 @@
 	@extend .clearfix;
 }
 
-// Convert columsn to inline-blocks so we can center them when our row does not add up to 100%
+// Convert columns to inline-blocks so we can center them when our row does not add up to 100%
 .row-noFloat{
 	@extend .row;
 	font-size:0; // **
@@ -50,6 +50,9 @@
 .col-33 {width:33.3333%}
 .col-25 {width:25%}
 .col-20 {width:20%}
+
+.rfl{@include row-fixed-Left(300px)}
+.rfr{@include row-fixed-Right(300px)}
 
 // The block class can be modified or deleted and replaced with other classes (like .media or .callout) 
 // The main purpose of a class like this is to apply to an inner HTML element of the column structure

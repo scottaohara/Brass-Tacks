@@ -102,8 +102,28 @@
 }
 
 
+// ----------------------------------------------------------------
+//		Responsive Row w/fixed width column -- use in combo with .row
+// ----------------------------------------------------------------
+@mixin row-fixed-Left($col-Size){
+	padding-left:$col-Size;
+	
+	.f-Col{
+		float:left;
+		margin-left:-$col-Size + 20px;
+		width:$col-Size - 20px;
+	}
+}
 
-
+@mixin row-fixed-Right($col-Size){
+	padding-right:$col-Size;
+	
+	.f-Col{
+		float:right;
+		margin-right:-$col-Size;
+		width:$col-Size - 20px;
+	}
+}
 
 
 

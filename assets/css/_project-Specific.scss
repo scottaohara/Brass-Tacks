@@ -10,11 +10,18 @@
 // Update HTML/BODY tags with appropriate styling
 body{background:#fafafa; font-family:$brand; font-weight:300}
 
-// Set margin, widths and padding to the page container (if applicable)
-.page{margin:0 auto; max-width:700px; padding:0 $spacing*3}
+// Full container for the entire page.  
+// overflow-x hidden so we don't get any horizontal scroll bars we may not want if 
+// we're using modal boxes or drop down menus that may inch off the side of the page
+// by accident, or on purpose.
+.page{overflow-x:hidden}
 
-// Generic tag to wrap around content within sections if applicable
-.content{}
+// Generic tag to wrap around content within sections to apply a max width to the interior content
+// while allowing for larger sections to expand the whole page for BG purposes
+.content{
+	margin:0 auto; max-width:900px; padding:$spacing*3;
+	& > :last-child{margin-bottom:0}	// kill any extra margin on the last element in the .content div
+}
 
 // ----------------------------------------------------------------
 //	Header Area
@@ -49,7 +56,10 @@ body{background:#fafafa; font-family:$brand; font-weight:300}
 // ----------------------------------------------------------------
 
 // Apply to <footer> for styling
-.base-Footer{}
+.base-Footer{
+	background:#2d2d2d;
+	color:#fff;
+}
 
 // Extend the .nav class to style your footer navigation
 .footer-Nav{
