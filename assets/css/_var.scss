@@ -16,69 +16,6 @@ $bs-6:		0 0 6px rgba(255,255,255,.5) inset;
 
 
 // ----------------------------------------------------------------
-//	Colors
-// ----------------------------------------------------------------
-$c-Brand-1:#000;
-$c-Brand-2:#111;
-$c-Brand-3:#222;
-
-$c-BG:#f8f8f8;
-
-$c-Link:#3775B9;
-
-// Base Darker Colors for text and headlines
-$c-Dark:#444;
-$c-Darker:#101010;
-// Base Ligher Colors for text on dark backgrounds
-$c-Light:#eee;
-$c-Lighter:#f8f8f8;
-
-// Button Colors
-$c-Btn-1:#35a4f3;
-$c-Btn-2:#f24735;
-$c-Btn-3:#1fbb61;
-
-$c-Btn-Neg:#aaa;
-$c-Disabled:#fafafa;
-
-// Color for Radio/Check box buttons
-$c-Btn-RC:#eee;
-
-// Required / Error Text Color
-$c-Required:#f00;
-
-
-// ----------------------------------------------------------------
-// Fonts Families
-// ----------------------------------------------------------------
-$brand:		'Open Sans'; // replace this with your main brand font
-$arial:		Arial, "Helvetica Neue", Helvetica, sans-serif;
-$georgia:	Georgia, Cambria, "Times New Roman", Times, serif;
-$helvetica:	"Helvetica Neue", Helvetica, Arial, sans-serif;
-$verdana:	Verdana, Geneva, sans-serif;
-
-
-// ----------------------------------------------------------------
-// Font Size Declarations 
-// ----------------------------------------------------------------
-$base-font:12px;
-
-$giga:	$base-font * 5;		  // 60px
-$ultra: $base-font * 4.5;	  // 54px
-$mega:  $base-font * 4;		  // 48px
-$alpha: $base-font * 3.5;	  // 42px
-$beta:  $base-font * 3;		  // 36px
-$gamma: $base-font * 2.5;	  // 30px
-$delta: $base-font * 2;		  // 24px
-$eps:	$base-font * 1.75;	  // 21px
-$zeta:	$base-font * 1.5;	  // 18px
-
-$base:  $base-font * 1.3334 - .0008;  // 16px
-$tiny:  12px;
-$mini:  10px;
-
-
-// ----------------------------------------------------------------
 // Layout
 // ----------------------------------------------------------------
 $spacing:4px;

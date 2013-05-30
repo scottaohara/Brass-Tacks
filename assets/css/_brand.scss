@@ -1,13 +1,31 @@
 // ----------------------------------------------------------------
-//		Branding Helpers - to be defined by variables
+// Fonts Families
 // ----------------------------------------------------------------
-.brand{
-	/* put brand color here */
-	font-family:$brand; font-weight:300;
-}
-.brand-Color{/* put brand color here */}
-.brand-Font{font-family:$brand; font-weight:300}
+$brand:		'Open Sans'; // replace this with your main brand font
+$arial:		Arial, "Helvetica Neue", Helvetica, sans-serif;
+$georgia:	Georgia, Cambria, "Times New Roman", Times, serif;
+$helvetica:	"Helvetica Neue", Helvetica, Arial, sans-serif;
+$verdana:	Verdana, Geneva, sans-serif;
 
+
+// ----------------------------------------------------------------
+// Font Size Declarations 
+// ----------------------------------------------------------------
+$base-font:12px;
+
+$giga:	$base-font * 5;		  // 60px
+$ultra: $base-font * 4.5;	  // 54px
+$mega:  $base-font * 4;		  // 48px
+$alpha: $base-font * 3.5;	  // 42px
+$beta:  $base-font * 3;		  // 36px
+$gamma: $base-font * 2.5;	  // 30px
+$delta: $base-font * 2;		  // 24px
+$eps:	$base-font * 1.75;	  // 21px
+$zeta:	$base-font * 1.5;	  // 18px
+
+$base:  $base-font * 1.3334 - .0008;  // 16px
+$tiny:  12px;
+$mini:  10px;
 
 // ----------------------------------------------------------------
 //		Site-Wide Typography Standards
@@ -27,6 +45,56 @@ h6, .zeta			{font:{size:$zeta; 	weight:300;}}
 p, li, li p, .base	{font:{size:$base; 	weight:300;}}
 .tiny				{font:{size:$tiny; 	weight:300;}}
 .mini				{font:{size:$mini; 	weight:300;}}
+
+
+// ----------------------------------------------------------------
+//	Colors
+// ----------------------------------------------------------------
+
+// Base Branding Colors
+$c-Brand-1:		#54a4a3;
+$c-Brand-2:		#d48371;
+$c-Brand-3:		#7e984c;
+
+// Base Darker Colors
+$c-Dark:		#444;
+$c-Darker:		#101010;
+
+// Base Ligher Colors
+$c-Light:		#eee;
+$c-Lighter:		#f8f8f8;
+
+$c-Body-Copy:	$c-Dark;
+$c-Heading:		$c-Darker;
+
+$c-BG:			#f8f8f8;
+
+$c-Link:		$c-Brand-2;
+
+// Button Colors
+$c-Btn-1:		$c-Brand-1;
+$c-Btn-2:		$c-Brand-2;
+$c-Btn-3:		$c-Brand-3;
+
+$c-Btn-Neg:		#aaa;
+$c-Disabled:	#fafafa;
+
+// Color for Radio/Check box buttons
+$c-Btn-RC:		#eee;
+
+// Required / Error Text Color
+$c-Required:	#f00;
+
+
+// ----------------------------------------------------------------
+//		Branding Helpers
+// ----------------------------------------------------------------
+.brand{
+	/* put brand color here */
+	font-family:$brand; font-weight:300;
+}
+.brand-Color{color:$c-Brand-1}
+.brand-Font{font-family:$brand; font-weight:300}
 
 
 // ----------------------------------------------------------------

@@ -1,4 +1,67 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,700italic,600,400italic,300italic,600italic);
+.giga {
+  font-size: 60px;
+  font-weight: 700; }
+
+.ultra {
+  font-size: 54px;
+  font-weight: 600; }
+
+.mega {
+  font-size: 48px;
+  font-weight: 300; }
+
+h1, .alpha {
+  font-size: 42px;
+  font-weight: 400; }
+
+h2, .beta {
+  font-size: 36px;
+  font-weight: 400; }
+
+h3, .gamma {
+  font-size: 30px;
+  font-weight: 400; }
+
+h4, .delta {
+  font-size: 24px;
+  font-weight: 300; }
+
+h5, .eps {
+  font-size: 21px;
+  font-weight: 300; }
+
+h6, .zeta {
+  font-size: 18px;
+  font-weight: 300; }
+
+p, li, li p, .base {
+  font-size: 16.0px;
+  font-weight: 300; }
+
+.tiny {
+  font-size: 12px;
+  font-weight: 300; }
+
+.mini {
+  font-size: 10px;
+  font-weight: 300; }
+
+.brand {
+  /* put brand color here */
+  font-family: "Open Sans";
+  font-weight: 300; }
+
+.brand-Color {
+  color: #54a4a3; }
+
+.brand-Font {
+  font-family: "Open Sans";
+  font-weight: 300; }
+
+a {
+  color: #d48371; }
+
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -11,7 +74,8 @@ html {
 body {
   line-height: 1.2; }
 
-body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, form, fieldset, img, legend, table, th, td, caption, hr {
+body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, form, fieldset, img,
+legend, table, th, td, caption, hr {
   border: 0;
   margin: 0;
   outline: 0;
@@ -283,19 +347,19 @@ input:-moz-placeholder {
   display: block; }
 
 .btn-Action {
-  background: #35a4f3; }
+  background: #54a4a3; }
   .btn-Action:hover {
-    background: #0c7ecf; }
+    background: #3a7171; }
 
 .btn-Action-2 {
-  background: #f24735; }
+  background: #d48371; }
   .btn-Action-2:hover {
-    background: #cd200d; }
+    background: #bf523a; }
 
 .btn-Action-3 {
-  background: #1fbb61; }
+  background: #7e984c; }
   .btn-Action-3:hover {
-    background: #14793f; }
+    background: #546532; }
 
 .btn-Neg,
 .btn-Neg:hover {
@@ -383,7 +447,7 @@ input:-moz-placeholder {
   top: 0;
   width: 19px; }
   .btn-Radio:hover, .input-Radio.selected-Radio .btn-Radio, .btn-Check:hover, .input-Check.selected-Check .btn-Check {
-    background: #35a4f3; }
+    background: #54a4a3; }
 
 .btn-Radio {
   -moz-border-radius: 15px;
@@ -452,9 +516,6 @@ input:-moz-placeholder {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap; }
-
-.go:after {
-  content: "\00A0" "\00BB"; }
 
 .highlight, .slant {
   background: #888;
@@ -770,66 +831,3 @@ body {
     /* add in project styling for a:hover here */ }
   .footer-Nav a.selected {
     /* add in project styling for a.selected here */ }
-
-.brand {
-  /* put brand color here */
-  font-family: "Open Sans";
-  font-weight: 300; }
-
-.brand-Color {
-  /* put brand color here */ }
-
-.brand-Font {
-  font-family: "Open Sans";
-  font-weight: 300; }
-
-.giga {
-  font-size: 60px;
-  font-weight: 700; }
-
-.ultra {
-  font-size: 54px;
-  font-weight: 600; }
-
-.mega {
-  font-size: 48px;
-  font-weight: 300; }
-
-h1, .alpha {
-  font-size: 42px;
-  font-weight: 400; }
-
-h2, .beta {
-  font-size: 36px;
-  font-weight: 400; }
-
-h3, .gamma {
-  font-size: 30px;
-  font-weight: 400; }
-
-h4, .delta {
-  font-size: 24px;
-  font-weight: 300; }
-
-h5, .eps {
-  font-size: 21px;
-  font-weight: 300; }
-
-h6, .zeta {
-  font-size: 18px;
-  font-weight: 300; }
-
-p, li, li p, .base {
-  font-size: 16.0px;
-  font-weight: 300; }
-
-.tiny {
-  font-size: 12px;
-  font-weight: 300; }
-
-.mini {
-  font-size: 10px;
-  font-weight: 300; }
-
-a {
-  color: #3775b9; }

@@ -13,7 +13,14 @@
 %degree:after{content:"\00BA"}
 
 // Applies >> to a link/btn
-.go:after{content:"\00A0" "\00BB"}
+%go:after{content:"\00A0" "\00BB"}
+
+// Word Wraps
+%breakword{word-wrap:break-word}
+
+%normal-wrap{word-wrap:normal}
+
+%auto-wrap{word-wrap:auto}
 
 // Highlight Text
 .highlight, %highlight{
@@ -35,7 +42,7 @@
 }
 
 .text-Correct{
-	display: inline-block;
+	display:inline-block;
 	   -moz-transform:skewX(16deg);
 		 -o-transform:skewX(16deg);
 	-webkit-transform:skewX(16deg);

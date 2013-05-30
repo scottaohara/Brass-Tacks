@@ -1,26 +1,27 @@
 // Import Fonts 
 // @import google font here
 
-// Variables & Mixins
-	@import 'var';
-	@import 'mixins';
+// Brand & Misc. Variables and Mixins
+	@import 'brand';			// colors, fonts, sizes
+	@import 'var';				// misc. layout and additional styling vars
+	@import 'mixins';			// reusable code bases
 
 // Base HTML Values
-	@import 'base';
-	@import 'layout';
+	@import 'base';				// reset, normalize, whatever you want to call it
+	@import 'layout';			// Responsive & fixed layouts
 
 // Interactions
-	@import 'navs';
-	@import 'buttons';
-	@import 'forms';
+	@import 'navs';				// Base navigation rules
+	@import 'buttons';			// Base button rules
+	@import 'forms';			// Base form component rules
 
 // Helper Classes
-	@import 'helper';
+	@import 'helper';			// Classes to extend others.  Mini-modules
 
 // Branding & Typography
-	@import 'project-Specific';
-	@import 'brand';
+	@import 'project-Specific';	// restyle and make classes specific for your project here
+	
 
-// @import 'tidyUp';
+// @import 'tidy';
 // Only import tidyUp if you actually need to make some quick fix hacks that you don't
 // have time to do properly.  Otherwise the file should be empty w/no need for import
