@@ -54,8 +54,6 @@
 		background:#eee;
 		.drop-Menu{visibility:visible}
 	}
-	a{
-		white-space:nowrap
-	}
+	a{white-space:nowrap} // makes it so the dd doesn't get stuck only being as big as the top level button
 }
-.drop-Menu{background:#eee; border:1px solid #ddd; position:absolute; visibility:hidden; z-index:2}
+.drop-Menu{background:#eee; border:1px solid #ddd; position:absolute; visibility:hidden; z-index:5}

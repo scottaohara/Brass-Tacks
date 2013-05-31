@@ -117,7 +117,7 @@
 // Media Item
 .media, %media{
 	margin-bottom:$spacing*4;
-	overflow:hidden;
+	@extend .clearfix;
 	position:relative;
 	z-index:2;
 	.media-Text >:last-child{margin-bottom:0}
