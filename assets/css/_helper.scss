@@ -13,7 +13,14 @@
 %degree:after{content:"\00BA"}
 
 // Applies >> to a link/btn
-.go:after{content:"\00A0" "\00BB"}
+%go:after{content:"\00A0" "\00BB"}
+
+// Word Wraps
+%breakword{word-wrap:break-word}
+
+%normal-wrap{word-wrap:normal}
+
+%auto-wrap{word-wrap:auto}
 
 // Highlight Text
 .highlight, %highlight{
@@ -35,7 +42,7 @@
 }
 
 .text-Correct{
-	display: inline-block;
+	display:inline-block;
 	   -moz-transform:skewX(16deg);
 		 -o-transform:skewX(16deg);
 	-webkit-transform:skewX(16deg);
@@ -92,13 +99,12 @@
 .pic, %pic{
 	border:1px solid #fff;
 	@include border-radius(4px);
-	@include box-shadow($bs-5);
+	@include box-shadow($bs-4);
 	display:inline-block;
 	overflow:hidden;
 	width:90px;
 	
-	img{display:block; position:relative; z-index:-1}
-		// the position relative/z-index allows for box-shadow inset on the parent container
+	img{display:block}
 }
 
 // Make picture into a circle

@@ -19,7 +19,7 @@ body{background:#fafafa; font-family:$brand; font-weight:300}
 // Generic tag to wrap around content within sections to apply a max width to the interior content
 // while allowing for larger sections to expand the whole page for BG purposes
 .content{
-	margin:0 auto; max-width:900px; padding:$spacing*3;
+	margin:0 auto; max-width:900px; padding:$spacing*5;
 	& > :last-child{margin-bottom:0}	// kill any extra margin on the last element in the .content div
 }
 
@@ -30,14 +30,20 @@ body{background:#fafafa; font-family:$brand; font-weight:300}
 // Extend the .nav class to style your header navigation
 .header-Nav{
 	@extend .nav;
-	a{/* add in project styling for header a tags here */
-		&:hover{/* add in project styling for a:hover here */}
-		&.selected{/* add in project styling for a.selected here */}
+	background:#f8f8f8;
+	border-bottom:1px solid #eee;
+	border-top:1px solid #eee;
+	margin:$spacing*4 auto;
+	a{padding:$spacing*2 $spacing*3; text-decoration:none;
+		&:hover{background:#eee;}
+		&.selected, &:active{background:#ddd;}
 	}
 }
 
 // Apply to <header> for styling
-.base-Header{}
+.base-Header{
+	padding-top:$spacing*2;
+}
 
 
 // ----------------------------------------------------------------
@@ -45,9 +51,15 @@ body{background:#fafafa; font-family:$brand; font-weight:300}
 // ----------------------------------------------------------------
 
 // Apply to <main> or top level <section> for styling
-.base-Content{}
-
-
+.base-Content{
+	min-height:500px;
+	padding-bottom:$spacing*5;
+	.content{
+		background:#fff; 
+		border:1px solid $c-Light; 
+		@include box-shadow($bs-4);
+	}
+}
 
 
 

@@ -1,7 +1,6 @@
 {% block content %} 
-
-<script type="text/javascript" src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
-	
+<section class="content">
+	<h1>Basic Form Styling</h1>
 	<form class="form-Container">
 	   <fieldset class="">
 	       <div class="grouping">
@@ -29,15 +28,6 @@
 	       </div>
 	       
 	       <hr />
-	       
-	       <script type="text/javascript">
-	           // jQuery scripts that make the custom check boxes turn on and off
-                $(function() {
-            	   $('.option-Check').click(function() {
-            	       $(this).parent().toggleClass('selected-Check');
-            	   });
-               });
-           </script>
 	       
 	       <div class="grouping checkers">
 	           <h2>Check Boxes</h2>
@@ -67,15 +57,7 @@
 	       
 	       <hr />
 	       
-	       <script type="text/javascript">
-	           // jQuery scripts that make the custom radio buttons turn on and off
-                $(function() {
-            	   $(".input-Radio").click(function() {
-                        $(".selected-Radio").removeClass('selected-Radio');
-                        $(this).addClass('selected-Radio');
-                    });
-               });
-           </script>
+	       
 	       
 	       <div class="grouping radios">
 	           <h2>Radio Buttons</h2>
@@ -141,5 +123,24 @@
 	       
 	       </fieldset>
 	</form>
+</section>
+{% endblock %}
+
+{% block js %}
+<script type="text/javascript">
+	$(document).ready(function(){
+		// jQuery scripts that make the custom check boxes turn on and off
+		$('.option-Check').click(function() {
+			$(this).parent().toggleClass('selected-Check');
+		});
+		
+		// jQuery scripts that make the radios turn on and off
+		$(".input-Radio").click(function() {
+			$(".selected-Radio").removeClass('selected-Radio');
+			$(this).addClass('selected-Radio');
+		});
+	});
+
+</script>
 
 {% endblock %}
