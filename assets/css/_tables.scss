@@ -1,0 +1,31 @@
+// ----------------------------------------------------------------
+// Tables
+// ----------------------------------------------------------------
+
+$table-Border:	1px solid #ccc; // sets consistent boarder styling for table elements
+
+// Removes most of the table spacing issues
+table{border-collapse:collapse; border-spacing:0}
+
+.base-Table{
+	background:#fafafa;
+	border-bottom:$table-Border;
+	border-right:$table-Border;
+	font-size:$base;
+	width:100%; // make tables always take up the entire width of their containing parent.
+	
+	tr{border-top:1px solid #ccc}
+	th, td{border-left:$table-Border; padding:$spacing; text-align:left}
+}
+
+.table-Header{
+	background:#eee;
+}
+
+.table-Body{
+	// style?
+}
+
+.table-Footer{
+	background:#e3e3e3;
+}

@@ -23,30 +23,27 @@ ul, ol{margin:0 0 $spacing*2; padding:0 0 0 $spacing*7;
 	> li:last-child{margin-bottom:0} // Kill double bottom margin
 }
 
-// Removes most of the table spacing issues
-table{border-collapse:collapse; border-spacing:0}
-
 // Make sure these guys don't extend beyond their parent containers
 audio, img, object, embed, video{max-width:100%}
 
 // If an image doesn't load, make the alt text noticable
 img{color:$c-Required; font-style:italic}
 
-// Outlines - get rid of em
-:focus, a:focus, a:active, input[type="submit"]::-moz-focus-inner{outline:none}
-
 // Easy re-styling for <hr /> tags
 hr{border-top:1px solid #ddd; display:block; height:1px; margin:$spacing*2 0}
+
+// Bold these things.  Bold 'em good.
+b, strong{font-weight:bold}
+
+// Italicize these things.  Italicize them gooder.
+i, em, dfn{font-style:italic}
+
+// Outlines - get rid of em
+:focus, a:focus, a:active, input[type="submit"]::-moz-focus-inner{outline:none}
 
 // Highlight Text Selection
 ::-moz-selection{background:#aaa; color:#eee; text-shadow:none}
 ::selection		{background:#aaa; color:#eee; text-shadow:none}
-
-// Bold these things.  Bold 'em good.
-b, strong, .bold{font-weight:bold}
-
-// Italicize these things.  Italicize them gooder.
-i, em, dfn{font-style:italic}
 
 // ----------------------------------------------------------------
 //		HTML5 Elements that need some additional loving
@@ -64,32 +61,4 @@ audio:not([controls]){display:none; height:0}
 
 // Makes hidden actually [hidden] in IE 8/9
 [hidden]{display:none}
-
-
-// ----------------------------------------------------------------
-//		Form Elements Standardization
-// ----------------------------------------------------------------
-// Corrects font-family and size not being inherited in all browsers, inconsistent margins, line-heights and transforms
-button, input, select, textarea{border:0; font:{family:inherit; size:100%}; line-height:normal; margin:0; text-transform:none}
-
-// Makes buttons look like buttons with appropriate cursors
-button, html input[type='button'], input[type='reset'], input[type='submit']{cursor:pointer; -webkit-appearance:button}
-
-// Makes it look like a normal text input, only with a (x) when text has been entered
-input[type='search']{-webkit-appearance:textfield} 
-
-// Removes extra inner padding for webkit
-input[type='search']::-webkit-search-decoration{-webkit-appearance:none} 
-
-// Removes inner padding & border in Firefox 4+
-buton::-moz-focus-inner, input::-moz-focus-inner{border:0; padding:0}
-
-// Makes sure that overflow only shows
-textarea{overflow:auto; vertical-align:top}
-
-// Light Styling to Placeholder text
-:-ms-input-placeholder		{color:#bbb; font-style:italic}
-::-moz-placeholder			{color:#bbb; font-style:italic}
-::-webkit-input-placeholder	{color:#bbb; font-style:italic}
-input:-moz-placeholder		{color:#bbb; font-style:italic}
 

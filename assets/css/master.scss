@@ -8,7 +8,9 @@
 
 // Base HTML Values
 	@import 'base';				// reset, normalize, whatever you want to call it
+	@import 'base2';			// Additional resets for tags that are likely not to be used
 	@import 'layout';			// Responsive & fixed layouts
+	@import 'tables';			// Base styling for tables
 
 // Interactions
 	@import 'navs';				// Base navigation rules
