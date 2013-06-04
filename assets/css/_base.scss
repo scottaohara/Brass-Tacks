@@ -38,6 +38,14 @@ b, strong{font-weight:bold}
 // Italicize these things.  Italicize them gooder.
 i, em, dfn{font-style:italic}
 
+// Blockquote base styling
+blockquote{
+	font:{size:$zeta; style:italic};
+	&:before, &:after{font:{size:$eps; weight:400}; line-height:1; position:relative; top:2px}
+	&:before{content:'"'; left:-1px}
+	&:after{content:'"'; right:-1px}
+}
+
 // Outlines - get rid of em
 :focus, a:focus, a:active, input[type="submit"]::-moz-focus-inner{outline:none}
 

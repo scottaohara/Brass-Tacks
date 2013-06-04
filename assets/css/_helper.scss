@@ -5,6 +5,7 @@
 .txt-Center	{text-align:center}
 .txt-Left	{text-align:left}
 .txt-Right	{text-align:right}
+.txt-Just	{text-align:justify}
 
 // Truncate Text
 .truncate{@include truncate(100%)}
@@ -168,12 +169,15 @@
 
 // Shout Out - blockquote / blockquote like styling for emphasizing text
 .shout-Out{
-	// put shit here yo
+	background:$c-Lighter;
+	border-left:4px solid $c-Dark;
+	padding:$spacing*4;
+	&:before, &:after{display:none}
 }
 
 
 // Call out boxes
-.callout{
+.emph-Block{
 	background:#fafafa;
 	border:1px solid #ddd;
 	@include border-radius(4px);

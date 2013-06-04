@@ -112,6 +112,22 @@ b, strong {
 i, em, dfn {
   font-style: italic; }
 
+blockquote {
+  font-size: 18px;
+  font-style: italic; }
+  blockquote:before, blockquote:after {
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 1;
+    position: relative;
+    top: 2px; }
+  blockquote:before {
+    content: '"';
+    left: -1px; }
+  blockquote:after {
+    content: '"';
+    right: -1px; }
+
 :focus, a:focus, a:active, input[type="submit"]::-moz-focus-inner {
   outline: none; }
 
@@ -415,6 +431,13 @@ button, html input[type='button'], input[type='reset'], input[type='submit'] {
 input[type='search'] {
   -webkit-appearance: textfield; }
 
+input[disabled] {
+  background: #eee;
+  cursor: not-allowed; }
+
+input[readonly] {
+  background: #fafafa; }
+
 input[type='search']::-webkit-search-decoration {
   -webkit-appearance: none; }
 
@@ -425,6 +448,10 @@ buton::-moz-focus-inner, input::-moz-focus-inner {
 textarea {
   overflow: auto;
   vertical-align: top; }
+
+.placeholder {
+  color: #bbb;
+  font-style: italic; }
 
 :-ms-input-placeholder {
   color: #bbb;
@@ -445,11 +472,25 @@ input:-moz-placeholder {
 .grouping {
   padding: 4px 0; }
 
+.fs-Legend {
+  border: 1px solid #ccc;
+  margin-bottom: 8px;
+  padding: 8px 12px; }
+
+legend, .legend {
+  font-size: 21px;
+  margin-left: -4px;
+  padding: 0 4px; }
+
 /* Text Input Areas & Labels */
 .text-Label, .option-Container {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  cursor: pointer;
   display: block;
   margin-bottom: 4px; }
+
+.dis-Label {
+  cursor: not-allowed; }
 
 .input-Area, .text-Area, .select-Container, .input-Number {
   background: #fff;
@@ -556,9 +597,25 @@ input:-moz-placeholder {
 .input-Number {
   font-size: 16.0px; }
 
-/*
-	TODO - creating base styling / HTML structure for file Inputs
-*/
+.file-Input-Area {
+  position: relative; }
+  .file-Input-Area label {
+    cursor: default; }
+
+.input-File {
+  cursor: pointer;
+  left: 0;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 9; }
+
+.input-File-Text {
+  cursor: pointer;
+  display: inline-block; }
+
 .txt-Center {
   text-align: center; }
 
@@ -567,6 +624,9 @@ input:-moz-placeholder {
 
 .txt-Right {
   text-align: right; }
+
+.txt-Just {
+  text-align: justify; }
 
 .truncate {
   max-width: 100%;
@@ -722,7 +782,14 @@ input:-moz-placeholder {
 	-- 	Divs were used in this example, but the media element could be applied to various situations.
 		Ie. could be used for a header or footer area where a logo is placed on the right or left w/text to the side.
 */
-.callout {
+.shout-Out {
+  background: #f8f8f8;
+  border-left: 4px solid #444444;
+  padding: 16px; }
+  .shout-Out:before, .shout-Out:after {
+    display: none; }
+
+.emph-Block {
   background: #fafafa;
   border: 1px solid #ddd;
   -moz-border-radius: 4px;
@@ -735,7 +802,7 @@ input:-moz-placeholder {
   margin-bottom: 16px;
   min-height: 50px;
   padding: 16px; }
-  .callout > :last-child {
+  .emph-Block > :last-child {
     margin-bottom: 0; }
 
 .multi {
@@ -846,7 +913,7 @@ body {
 
 .content {
   margin: 0 auto;
-  max-width: 900px;
+  max-width: 1000px;
   padding: 20px; }
   .content > :last-child {
     margin-bottom: 0; }

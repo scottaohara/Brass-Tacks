@@ -1,13 +1,27 @@
 {% block content %} 
 <section class="content">
-	<h1>Basic Form Styling</h1>
+	<h2>Basic Form Styling</h2>
+	
+<div class="row">
+	<div class="col col-60">
 	<form class="form-Container">
-	   <fieldset class="">
-	       <div class="grouping">
-	           <h2>Text Input Fields</h2>
+	   <fieldset class="grouping">
+
+	           <h3>Base Input Fields</h3>
 	           
     	       <label for="input-Text" class="text-Label">Input - Normal Text</label>
     	       <input id="input-Text" class="input-Area" type="text" placeholder="Write Text Here" />
+    	       
+    	       <label for="input-Text" class="text-Label">Input - Text w/Data List</label>
+    	       <input id="input-Text-dl" list="fav-color"  class="input-Area" type="text" placeholder="Choose your fav. color" />
+			   <datalist id="fav-color">
+			   		<option value="Red"></option> 
+			        <option value="Orange"></option> 
+			        <option value="Yellow"></option>
+			        <option value="Green"></option>
+			        <option value="Blue"></option>
+			        <option value="Purple"></option> 
+			   </datalist>
     	       
     	       <label for="input-Email" class="text-Label">Input - Email</label>
     	       <input id="input-Email" class="input-Area" type="email" placeholder="Enter Email" />
@@ -18,19 +32,35 @@
     	       <label for="input-Url" class="text-Label">Input - Web Address</label>
     	       <input id="input-Url" class="input-Area" type="url" placeholder="Enter Web Address" />
     	       
+    	       <label for="input-tel" class="text-Label">Input - Phone Number</label>
+    	       <input id="input-tel" class="input-Area" type="tel" placeholder="555.555.5555" />
+    	       
     	       <label for="input-Search" class="text-Label">Input - Search</label>
     	       <input id="input-Search" class="input-Area" type="search" placeholder="Search for..." />
     	       <input type="submit" class="btn btn-action" value="Search" />
     	       
     	       <label for="input-TextArea" class="text-Label">Text Area</label>
     	       <textarea id="input-TextArea" class="text-Area"></textarea>
-    	       
-	       </div>
+    	</fieldset>
+	   
+	   <fieldset class="grouping fs-Legend">
+	   		<legend class="legend">Input Variants</legend>
+	   		<label for="input-Text-Disabled" class="text-Label dis-Label">Disabled Text Input</label> 
+    	    <input id="input-Text-Disabled" class="input-Area" type="text" value="Disabled text input" disabled="disabled" />
+	   
+	   		<label for="input-Text-Readonly" class="text-Label">Readonly Text Input</label>
+	   		<input id="input-Text-Readonly" class="input-Area" type="text" value="Readonly text input" readonly="readonly">
+	   		
+	   		<label for="input-Required" class="text-Label">Required Input</label>
+	   		<input id="input-Required" class="input-Area" type="text" placeholder="Placeholder Text" required="required" />
+	   		
+	   </fieldset>
 	       
 	       <hr />
-	       
-	       <div class="grouping checkers">
-	           <h2>Check Boxes</h2>
+	     
+	   <fieldset class="grouping checkers">  
+
+	           <h3>Check Boxes</h3>
 	           
 	           <div class="option-Container input-Check">
 	               <label for="check-1" class="option-Label option-Check">
@@ -52,15 +82,13 @@
 	               
     	           <input type="checkbox" class="input-Hide" id="check-2" />
 	           </div>
-	           
-	       </div>
-	       
+
+	   </fieldset>  
+	     
 	       <hr />
 	       
-	       
-	       
-	       <div class="grouping radios">
-	           <h2>Radio Buttons</h2>
+	  <fieldset class="radios grouping">
+	           <h3>Radio Buttons</h3>
 	           
 	           <div class="option-Container input-Radio">
 	               <label for="radio-1" class="option-Label">Radio Option 1</label>
@@ -80,12 +108,12 @@
     	           <input type="radio" class="input-Hide" id="radio-3" name="radio-Set" />
 	           </div>
 	           
-	       </div>
+	       </fieldset>
 	       
 	       <hr />
 	       
-	       <div class="grouping">
-	           <h2>Selections</h2>
+	       <fieldset class="grouping">
+	           <h3>Selections</h3>
 	           
 	           <label for="base-Select" class="text-Label">Default Select</label>
 	           <div class="select-Container">
@@ -98,6 +126,17 @@
     	           </select>
 	           </div>
 	           
+	           <label for="multi-Select" class="text-Label">Multiple select field</label>
+		       <select id="multi-Select" multiple size="5" class="input-Area">
+		           <option>Option 1</option>
+		           <option>Option 2</option>
+		           <option>Option 3</option>
+		           <option>Option 4</option>
+		           <option>Option 5</option>
+		       </select>
+	           
+	           
+	           
 	           <label for="num-Spin" class="text-Label">Number Spinbox</label>
 	           <input id="num-Spin" type="number" min="0" max="20" step="1" value="5" class="input-Number" />
 	           
@@ -109,20 +148,56 @@
 	           
 	           <label for="color-Picker" class="text-Label">Hex Color</label>
 	           <input id="color-Picker" type="color" class="input-Color" />
-	       </div>
+	           
+	       </fieldset>
 	       
 	       <hr />
 	       
-	       <div class="grouping txt-Center">
-	           <h2 class="txt-Left">Submission Buttons</h2>
+	       <fieldset class="grouping fs-Legend">
+	       	<legend>File Input</legend>
+	       	
+	       	<div class="file-Input-Area">
+		       	<input id="input-File" class="input-File" type="file" />
+	       		<label for="input-File" class="text-Label">File input</label>
+		   		<span class="input-File-Text input-Area">
+	       			<span class="placeholder">Select a file...</span>
+	       		</span>
+	       		<span class="btn">
+	       			Select
+	       		</span>
+		   	</div>
+		   	
+		   	<div class="file-Input-Area">
+		       	<input id="input-File" class="input-File" type="file" />
+	       		<label for="input-File" class="text-Label">File input</label>
+		   		<span class="input-File-Text input-Area">
+	       			<span class="placeholder">Select a file...</span>
+	       		</span>
+	       		<span class="btn">
+	       			Select
+	       		</span>
+		   	</div>
+	       	
+	       </fieldset>
+	       
+	       <fieldset class="grouping txt-Center">
+	           <h3 class="txt-Left">Submission Buttons</h3>
 	           
 	           <input type="button" class="btn-Disable" value="Disabled" />
 	           <input type="reset" class="btn-Neg" value="Reset" />
 	           <input type="submit" class="btn" value="Submit" />
-	       </div>
 	       
 	       </fieldset>
 	</form>
+	
+	</div> <!-- end .col-60 -->
+	
+	<div class="col col-40">
+
+			explain all this so so crazy
+
+	</div>
+	
 </section>
 {% endblock %}
 
@@ -138,6 +213,12 @@
 		$(".input-Radio").click(function() {
 			$(".selected-Radio").removeClass('selected-Radio');
 			$(this).addClass('selected-Radio');
+		});
+		
+		// jQuery to make file uploads look styled / display text after click/choosing of file
+		// Thanks jdrumm
+		$(".input-File").change(function() {
+		   $(this).parent().find(".input-File-Text").html(this.value)
 		});
 	});
 
