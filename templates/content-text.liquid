@@ -1,13 +1,16 @@
 {% block content %} 
 <section class="content">
-	<h1>Sample TextContent</h1>
+	<h2>Sample Text Content</h2>
 	<p>
 		Various examples of text-only content groupings.
 	</p>
 
-<h2>Address Block</h2>
+<hr />
+
+	<h3>Address Block</h3>
 <div class="row">
 	<div class="col col-60">
+	
 		<address>
 		  <strong>Company Name, Inc.</strong><br>
 		  811 7th Ave, Suite 700<br>
@@ -23,12 +26,48 @@
 	</div>
 </div> <!-- end .row -->
 
+<hr />
 
-<h2>Media Element</h2>
+<h3>Details</h3>
+<div class="row">
+	<div class="col col-60">
+
+<details open="open">
+    <summary>More info</summary>
+    <div>
+        <p>Additional information</p>
+        <ul>
+            <li>Point 1</li>
+            <li>Point 2</li>
+        </ul>
+    </div>
+</details>
+<details>
+    <summary>More info</summary>
+    <div>
+        <p>Additional information</p>
+        <ul>
+            <li>Point 1</li>
+            <li>Point 2</li>
+        </ul>
+    </div>
+</details>
+</div> <!-- end .col-60 -->
+	
+	<div class="col col-40">
+
+			explain
+
+	</div>
+</div> <!-- end .row -->
+
+<hr />
+
+<h3>Media Element</h3>
 <div class="row">
 	<div class="col col-60">
 		
-		<h3>Profiles Images inside of media element</h3>
+		<h4>Profiles Images inside of media element</h4>
 			<div class="media emph-Block">
 				<div class="media-Object">
 					<a href="#!" class="pic-Rounded">
@@ -36,7 +75,7 @@
 					</a>
 				</div>
 				<div class="media-Text">
-					<h1 class="gamma">Media Element with emph-Block Class</h1>
+					<h1 class="eps">Media Element with emph-Block Class</h1>
 					<p>
 						How does it work? The hard part is making sure that the image can be any width, so that the element is reusable. 
 						It means our content area needs to be flexible so that it can fill in all the remaining space available. 
@@ -52,7 +91,7 @@
 					</a>
 				</div>
 				<div class="media-Text">
-					<h1 class="gamma">Reverse Media Element</h1>
+					<h1 class="eps">Reverse Media Element</h1>
 					<p>
 						How does it work? The hard part is making sure that the image can be any width, so that the element is reusable. 
 						It means our content area needs to be flexible so that it can fill in all the remaining space available. 
@@ -68,7 +107,7 @@
 					</a>
 				</div>
 				<div class="media-Text">
-					<h1 class="gamma">Media Element with no text wrap</h1>
+					<h1 class="eps">Media Element with no text wrap</h1>
 					<p>
 						How does it work? The hard part is making sure that the image can be any width, so that the element is reusable. 
 						It means our content area needs to be flexible so that it can fill in all the remaining space available. 
@@ -84,7 +123,7 @@
 					</a>
 				</div>
 				<div class="media-Text">
-					<h1 class="gamma">Media Element with no text wrap, reversed</h1>
+					<h1 class="eps">Media Element with no text wrap, reversed</h1>
 					<p>
 						How does it work? The hard part is making sure that the image can be any width, so that the element is reusable. 
 						It means our content area needs to be flexible so that it can fill in all the remaining space available. 
@@ -105,42 +144,42 @@
 </div> <!-- end .row -->
 
 
+<hr />
 
+<h3>Preformatted Text</h3>
+<div class="row">
+	<div class="col col-60">
+<pre>  	
+P R E F O R M A T T E D T E X T
+! " # $ % &amp; ' ( ) * + , - . /
+0 1 2 3 4 5 6 7 8 9 : ; &lt; = &gt; ?
+@ A B C D E F G H I J K L M N O
+P Q R S T U V W X Y Z [ \ ] ^ _
+` a b c d e f g h i j k l m n o
+p q r s t u v w x y z { | } ~ 
+</pre>
+<br />
+<h4>Pre Code</h4>
+<pre><code>&lt;html>
+  &lt;head>
+  &lt;/head>
+  &lt;body>
+    &lt;div class="main"> 
+      &lt;p>Content goes here&lt;/p>
+    &lt;div>
+  &lt;/body>
+&lt;/html>
+</code></pre>
+</div> <!-- end .col-60 -->
+	
+	<div class="col col-40">
 
+			explain
 
+	</div>
+</div> <!-- end .row -->
 
 
 
 </section>   	
 {% endblock %}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

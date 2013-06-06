@@ -1,87 +1,239 @@
 {% block content %} 
 <section class="content">
-<h1>Horizontal Navigation</h1>
-<nav class="nav">
-	<ul class="h-Nav">
-   	<li>
-      	<a href="#" class="" title="#">Link 1</a> 
-      </li>
-      <li>
-      	<a href="#" class="selected" title="#">Link 2 (selected)</a> 
-      </li>
-      <li class="drop-Start">
-      	<a href="#" class="" title="#">Link 3 DD</a> 
-         <ul class="drop-Menu">
-         	<li>
-            	<a href="#" class="" title="#">DM Link 1</a>
-            </li>
-            <li>
-            	<a href="#" class="" title="#">DM Link 2 a long link name</a>
-            </li>
-         </ul>
-      </li>
-      <li>
-      	<a href="#" class="" title="#">Link 4</a> 
-      </li>
-   </ul>
-</nav>
+	<h2>
+		Navigation Elements
+	</h2>
+	
+	<p>
+		All navigations should be wrapped in the HTML5 &#60;nav&#62; with the .nav class to normalize its children 
+		(if using &#60;ul&#62;s or &#60;ol&#62;s).
+	</p>
+	<p>
+		If using listless &#60;nav&#62;s, &#60;a&#62;s should be wrapped in &#60;span&#62;s if they need additional CSS rules applied to them.  
+		Use &#60;div&#62;s to house drop down links.
+	</p>
+	<p>
+		For additional accessibility benefits (Accessible Rich Internet Applications (ARIA))
+		also add the role="navigation" attribute to &#60;nav&#62;s.
+	</p>
+	
+	<hr />
+	
+	<h3>Horizontal Navigation</h3>
+		<div class="row">
+			<div class="col col-60">
+				<nav class="nav" role="navigation">
+					<ol class="h-Nav">
+				   		<li>
+				      		<a href="#" class="" title="#">Link 1</a> 
+					  	</li>
+					  	<li>
+				      		<a href="#" class="selected" title="#">Link 2 (selected)</a> 
+					  	</li>
+					  	<li class="drop-Start">
+				      		<a href="#" class="" title="#">Link 3 DD</a> 
+					  		<ol class="drop-Menu">
+					         	<li>
+					            	<a href="#" class="" title="#">DM Link 1</a>
+					            </li>
+					            <li>
+					            	<a href="#" class="" title="#">DM Link 2 a long link name</a>
+					            </li>
+							</ol>
+						</li>
+						<li>
+				      		<a href="#" class="" title="#">Link 4</a> 
+					  	</li>
+				   </ol>
+				</nav>
+			</div>
+			<div class=" col col-40">
+				
+				<h4 class="eps">.h-Nav</h4>
+				<p>
+					asdf
+				</p>
+				
+			</div>
+		</div> <!-- end .row -->
+		
+				<hr />
+				
+		<h3>Horizontal Navigation (centered)</h3>
+		<div class="row">
+			<div class="col col-60">
+				<nav class="nav" role="navigation">
+					<ol class="c-Nav">
+				   		<li>
+				      	<a href="#" class="" title="#">Link 1</a> 
+				      	</li>
+				      	<li>
+					      	<a href="#" class="selected" title="#">Link 2 (selected)</a> 
+					    </li>
+					    <li class="drop-Start">
+					      	<a href="#" class="" title="#">Link 3 DD</a> 
+					        <ol class="drop-Menu">
+					        	<li>
+					            	<a href="#" class="" title="#">DM Link 1</a>
+					            </li>
+					            <li>
+					            	<a href="#" class="" title="#">DM Link 2</a>
+					            </li>
+					         </ol>
+					    </li>
+					    <li>
+					      	<a href="#" class="" title="#">Link 4</a> 
+					    </li>
+				   </ol>
+				</nav>
+			</div>
+			<div class=" col col-40">
+				<h4 class="eps">.c-Nav</h4>
+				<p>
+					asdf
+				</p>
+			</div>
+		</div> <!-- end .row -->
+		
+		<hr />
+		
+		<h3>Vertical Navigation</h3>
+		<div class="row">
+			<div class="col col-60">
+				<nav class="nav" role="navigation">
+					<ol class="v-Nav col-25">
+				   	<li>
+				      	<a href="#" class="" title="#">Link 1</a> 
+				      </li>
+				      <li>
+				      	<a href="#" class="selected" title="#">Link 2 (selected)</a> 
+				      </li>
+				      <li class="drop-Start">
+				      	<a href="#" class="" title="#">Link 3 (dd)</a> 
+				         <ol class="drop-Menu">
+				         	<li>
+				            	<a href="#" class="" title="#">DM Link 1</a>
+				            </li>
+				            <li>
+				            	<a href="#" class="" title="#">DM Link 2</a>
+				            </li>
+				         </ol>
+				      </li>
+				      <li>
+				      	<a href="#" class="" title="#">Link 4</a> 
+				      </li>
+				   </ol>
+				</nav>
+			</div>
+			<div class=" col col-40">
+				<h4 class="eps">.v-Nav</h4>
+				<p>
+					asdf
+				</p>
+			</div>
+		</div> <!-- end .row -->
+
+		<hr />
+		
+		<h3>Listless Horizontal Navigation</h3>
+		<div class="row">
+			<div class="col col-60">
+				<nav class="nav" role="navigation">
+					<div class="ah-Nav">
+				      	<a href="#" class="" title="#">Link 1</a> 
+					  	<a href="#" class="selected" title="#">Link 2 (selected)</a> 
+					  	<span class="drop-Start">
+				      		<a href="#" class="" title="#">Link 3 DD</a> 
+					  		<div class="drop-Menu">
+					            <a href="#" class="" title="#">DM Link 1</a>
+					            <a href="#" class="" title="#">DM Link 2 a long link name</a>
+							</div>
+						</span>
+				      		<a href="#" class="" title="#">Link 4</a> 
+				   </div>
+				</nav>
+			</div>
+			<div class=" col col-40">
+				
+				<h4 class="eps">.ah-Nav</h4>
+				<p>
+					A horizontal navigation that doesn't use list elements.  
+				</p>
+				
+			</div>
+		</div> <!-- end .row -->
+		
+				<hr />
+		
+		
+		<h3>Listless Vertical Navigation</h3>
+		<div class="row">
+			<div class="col col-60">
+				
+				<nav class="nav" role="navigation">
+					<div class="av-Nav col-25">
+				      	<a href="#" class="" title="#">Link 1</a> 
+					  	<a href="#" class="selected" title="#">Link 2 (selected)</a> 
+					  	<span class="drop-Start">
+				      		<a href="#" class="" title="#">Link 3 DD</a> 
+					  		<div class="drop-Menu">
+					            <a href="#" class="" title="#">DM Link 1</a>
+					            <a href="#" class="" title="#">DM Link 2 a long link name</a>
+							</div>
+						</span>
+				      		<a href="#" class="" title="#">Link 4</a> 
+				   </div>
+				</nav>
+			</div>
+			<div class=" col col-40">
+				
+				<h4 class="eps">.av-Nav</h4>
+				<p>
+					asdf
+				</p>
+				
+			</div>
+		</div> <!-- end .row -->
 
 <hr />
-
-<h2>Horizontal Navigation (centered)</h2>
-<nav class="nav">
-	<ul class="h-Nav center">
-   		<li>
-      	<a href="#" class="" title="#">Link 1</a> 
-      	</li>
-      	<li>
-	      	<a href="#" class="selected" title="#">Link 2 (selected)</a> 
-	    </li>
-	    <li class="drop-Start">
-	      	<a href="#" class="" title="#">Link 3 DD</a> 
-	        <ul class="drop-Menu">
-	        	<li>
-	            	<a href="#" class="" title="#">DM Link 1</a>
-	            </li>
-	            <li>
-	            	<a href="#" class="" title="#">DM Link 2</a>
-	            </li>
-	         </ul>
-	    </li>
-	    <li>
-	      	<a href="#" class="" title="#">Link 4</a> 
-	    </li>
-   </ul>
-</nav>
-
-<hr />
-
-<h1>Vertical Navigation</h1>
-<p class="highlight">This nav has an arbitrary max-width 200px / min-width 100px applied to it.</p>
-<nav class="nav" style="max-width:200px; min-width:100px">
-	<ul class="v-Nav">
-   	<li>
-      	<a href="#" class="" title="#">Link 1</a> 
-      </li>
-      <li>
-      	<a href="#" class="selected" title="#">Link 2 (selected)</a> 
-      </li>
-      <li class="drop-Start">
-      	<a href="#" class="" title="#">Link 3 (selected)</a> 
-         <ul class="drop-Menu">
-         	<li>
-            	<a href="#" class="" title="#">DM Link 1</a>
-            </li>
-            <li>
-            	<a href="#" class="" title="#">DM Link 2</a>
-            </li>
-         </ul>
-      </li>
-      <li>
-      	<a href="#" class="" title="#">Link 4</a> 
-      </li>
-   </ul>
-</nav>
+		
+<h3>Breadcrumb Navigation</h3>
+<div class="row">
+	<div class="col col-60">
+		<nav class="nav">
+			<ol class="bread">
+			  <li>
+			  	<a href="#!" title="back to home">
+			  		Home	
+			  	</a>
+			  </li>
+			  <li>
+			  	<a href="#!" title="back to whatever this page was">
+			  		Page 2	
+			  	</a>
+			  </li>
+			  <li>
+			  	<a href="#!" title="back to library">
+			  		Library
+			  	</a>
+			  </li>
+			  <li class="active">
+				  <span>
+				  	Data
+				  </span>
+			  </li>
+			</ol>
+		</nav>
+	</div>
+	<div class=" col col-40">
+				
+		<h4 class="eps">.bread</h4>
+		<p>
+			Breadcrumbs should be written as ordered lists inside of a nav element
+		</p>
+		
+	</div>
+</div> <!-- end .row -->
 
 </section> 	
 

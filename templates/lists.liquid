@@ -1,6 +1,7 @@
 {% block content %} 
 <section class="content">
-<h1>List Base Styling</h1>
+
+<h2>List Base Styling</h2>
 <p>
 	Many reset CSS docs completely obliterate the styling of lists and leave it up to the developer to
 	build them back from scratch.  This framework leaves them mostly as they were intended, with some slight
@@ -13,30 +14,41 @@
 
 <hr />
 
-<h2>Ordered List</h2>
-        
-        <ol>
-            <li>list item 1</li>
-            <li>list item 1
-                <ol>
-                    <li>list item 2</li>
-                    <li>list item 2
-                        <ol>
-                            <li>list item 3</li>
-                            <li>list item 3</li>
-                        </ol>
-                    </li>
-                    <li>list item 2</li>
-                    <li>list item 2</li>
-                </ol>
-            </li>
-            <li>list item 1</li>
-            <li>list item 1</li>
-        </ol>
+<div class="row">
+	<div class="col col-60">
+		<h3>Ordered List</h3>
+		<ol>
+		    <li>list item 1</li>
+		    <li>list item 1
+		        <ol>
+		            <li>list item 2</li>
+		            <li>list item 2
+		                <ol>
+		                    <li>list item 3</li>
+		                    <li>list item 3</li>
+		                </ol>
+		            </li>
+		            <li>list item 2</li>
+		            <li>list item 2</li>
+		        </ol>
+		    </li>
+		    <li>list item 1</li>
+		    <li>list item 1</li>
+		</ol>
+	</div> <!-- end .col-60 -->
+	
+	<div class="col col-40">
+
+			explain
+
+	</div>
+</div> <!-- end .row -->
 
 <hr />
 
-<h2>Unordered List</h2>
+<div class="row">
+	<div class="col col-60">
+		<h3>Unordered List</h3>
         
         <ul>
             <li>list item 1</li>
@@ -56,10 +68,20 @@
             <li>list item 1</li>
             <li>list item 1</li>
         </ul>
+	</div> <!-- end .col-60 -->
+	
+	<div class="col col-40">
+
+			explain
+
+	</div>
+</div> <!-- end .row -->
 
 <hr />
-       
-<h2>Description List</h2>
+
+<div class="row">
+	<div class="col col-60">   
+		<h3>Description List</h3>
         
         <dl>
             <dt>Description name</dt>
@@ -71,11 +93,31 @@
             <dt>Description name</dt>
             <dd>Description value</dd>
         </dl>
+    </div> <!-- end .col-60 -->
+	
+	<div class="col col-40">
+
+			explain
+
+	</div>
+</div> <!-- end .row -->
 
 <hr />
 
-<p>
-	Add in list-specific CSS examples
-</p>	
+<h3>Class Extended Lists</h3>
+<div class="row">
+	<div class="col col-60">
+	
+	
+	</div> <!-- end .col-60 -->
+	
+	<div class="col col-40">
+
+			explain
+
+	</div>
+</div> <!-- end .row -->
+	
+		
 </section>
 {% endblock %}
