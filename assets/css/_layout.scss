@@ -12,7 +12,7 @@
 }
 
 // Convert columns to inline-blocks so we can center them when our row does not add up to 100%
-.row-noFloat{
+.c-Row{
 	@extend .row;
 	font-size:0; // **
 	text-align:center;
