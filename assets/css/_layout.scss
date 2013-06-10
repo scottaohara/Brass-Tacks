@@ -19,6 +19,7 @@
 	.col{
 		display:inline-block; 
 		float:none; 
+		font-size:16px; // resets the font back to the default base to fix the font-size:0 needed for centering
 		text-align:left;
 	}
 		// ** This kills the extra white-space created by the inline-blocks.  

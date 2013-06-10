@@ -198,6 +198,7 @@ svg:not(:root) {
   .c-Row .col {
     display: inline-block;
     float: none;
+    font-size: 16px;
     text-align: left; }
 
 .col {
