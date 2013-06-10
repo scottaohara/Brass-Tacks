@@ -41,7 +41,7 @@ body{background:#fafafa; font-family:$brand; font-weight:300}
 }
 
 // Apply to <header> for styling
-.base-Header{
+.header-Base{
 	padding-top:$spacing*2;
 }
 
@@ -54,6 +54,7 @@ body{background:#fafafa; font-family:$brand; font-weight:300}
 .base-Content{
 	min-height:500px;
 	padding-bottom:$spacing*5;
+	
 	.content{
 		background:#fff; 
 		border:1px solid $c-Light; 
@@ -68,7 +69,7 @@ body{background:#fafafa; font-family:$brand; font-weight:300}
 // ----------------------------------------------------------------
 
 // Apply to <footer> for styling
-.base-Footer{
+.footer-Base{
 	background:#2d2d2d;
 	color:#fff;
 }

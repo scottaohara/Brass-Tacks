@@ -1,0 +1,101 @@
+<link href="assets/css/master.min.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="assets/css/header-examples.css" rel="stylesheet" type="text/css" media="all"/>
+
+<nav class="nav">
+		<a href="#!" class="show-Base">Base Header</a>
+		<a href="#!" class="show-Fixed">Fixed Header</a>
+		<a href="#!" class="show-Fixed-Shrink">Fixed Shrinking Header</a>
+		<a href="#!" class="show-Fixed-Hide">Fixed Flow Infront Header</a>
+	</nav>
+
+<header class="header-Base js-Header" role="" style="display:block">
+	<div class="header-Content">
+		<h1 class="mega">Base Header</h1>
+		<p>It is of the normal variety</p>
+	</div>
+</header>
+
+
+
+<header class="header-Hide js-Header" role="">
+	<div class="header-Content">
+		<h1 class="mega">Fixed Hide Header</h1>
+		<p>On scroll, the header gets hidden</p>
+	</div>
+</header>
+
+
+
+<header class="header-Fixed js-Header" role="">
+	<div class="header-Content">
+		<h1 class="mega">Fixed Header</h1>
+		<p>It is fixed</p>
+	</div>
+</header>
+
+<header class="header-Fixed-Shrink js-Header" role="">
+	<div class="header-Content">
+		<h1 class="mega">Fixed Shrinking Header</h1>
+		<p>It is fixed header that shrinks after scroll</p>
+	</div>
+</header>
+
+<main class="main">
+	<section class="main-Content">
+		<p>
+			This is where you would put all your normal content and stuff.
+		</p>
+	</section>
+</main>
+
+<footer class="footer-Base">
+	<div class="footer-Content">
+		<p class="tiny">Footer content.  hooray</p>
+	</div>
+</footer>
+
+
+<script src="assets/scripts/jquery-1.10.0.min.js"></script>
+<script type="text/javascript">
+ // show/hide the different headers for this example	
+ 	$(document).ready(function(){
+	 	$('.show-Base').click(function(){
+		 	$('.js-Header').hide();
+		 	$('.header-Base').show();
+		 	$('body').removeClass('h-Pad');
+	 	});
+	 	
+	 	$('.show-Fixed').click(function(){
+		 	$('.js-Header').hide();
+		 	$('.header-Fixed').show();
+		 	$('body').removeClass('h-Pad');
+		 	$('body').addClass('h-Pad');
+	 	});
+	 	
+	 	$('.show-Fixed-Hide').click(function(){
+		 	$('.js-Header').hide();
+		 	$('.header-Hide').show();
+		 	$('body').removeClass('h-Pad');
+		 	$('body').addClass('h-Pad');
+	 	});
+	 	
+	 	$('.show-Fixed-Shrink').click(function(){
+		 	$('.js-Header').hide();
+		 	$('.header-Fixed-Shrink').show();
+		 	$('body').removeClass('h-Pad');
+		 	$('body').addClass('h-Pad');
+	 	});
+	 	
+	 	
+	 	
+	// replace large logo w/small logo in top bar on scroll
+	$(window).bind('scroll', function(){
+		if($(this).scrollTop() > 50) {
+			$(".header-Fixed-Shrink").addClass('shrinky');
+		}
+		if($(this).scrollTop() < 50) {
+			$(".header-Fixed-Shrink").removeClass('shrinky');
+		}
+	});
+});
+</script>

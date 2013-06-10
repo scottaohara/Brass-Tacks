@@ -20,7 +20,7 @@
 .ah-Nav{
 	font-size:0;
 	
-	a{font-size:$base}
+	a{font-size:14px}
 	// Set drop menu location to the bottom of the hovered link
 	.drop-Menu{
 		left:0; top:100%;
@@ -32,9 +32,7 @@
 // Basic rules for Listless Vertical Navigations
 // ----------------------------------------------------------------
 .av-Nav{
-	font-size:0;
-	
-	a{font-size:$base; display:block}
+	a{display:block}
 	// Set drop menu location to the bottom of the hovered link
 	.drop-Start{display:block}
 	.drop-Menu{
@@ -64,7 +62,7 @@
 			// font-size:0; deletes the white space between the <li>s 
 			// However, the font size inside of the <li>'s must be reset when using this trick.
 			
-	& > li{display:inline-block; float:none; font-size:$base}
+	& > li{display:inline-block; float:none; font-size:14px}
 			// Sets links to the base font-size.  Update for your own uses.
 }
 

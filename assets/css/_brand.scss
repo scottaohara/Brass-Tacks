@@ -11,21 +11,23 @@ $verdana:	Verdana, Geneva, sans-serif;
 // ----------------------------------------------------------------
 // Font Size Declarations 
 // ----------------------------------------------------------------
-$base-font:12px;
+$base-font:1em; // 1em = 16px
 
-$giga:	$base-font * 5;		  // 60px
-$ultra: $base-font * 4.5;	  // 54px
-$mega:  $base-font * 4;		  // 48px
-$alpha: $base-font * 3.5;	  // 42px
-$beta:  $base-font * 3;		  // 36px
-$gamma: $base-font * 2.5;	  // 30px
-$delta: $base-font * 2;		  // 24px
-$eps:	$base-font * 1.75;	  // 21px
-$zeta:	$base-font * 1.5;	  // 18px
+$giga:	$base-font * 4.375;		// 70px
+$ultra: $base-font * 3.75;	  	// 60px
+$mega:  $base-font * 3.5;		// 56px
 
-$base:  $base-font * 1.3334 - .0008;  // 16px
-$tiny:  12px;
-$mini:  10px;
+$alpha: $base-font * 3.125;	  	// 50px
+$beta:  $base-font * 2.5;		// 40px
+$gamma: $base-font * 2;	  		// 32px
+$delta: $base-font * 1.625;	  	// 26px
+$eps:	$base-font * 1.25;		// 20px
+$zeta:	$base-font * 1;	  		// 16px
+
+$base:  $base-font * .875;		// 14px
+$tiny:  $base-font * .75;		// 12px
+$mini:  $base-font * .625;		// 10px
+
 
 // ----------------------------------------------------------------
 //		Site-Wide Typography Standards
@@ -43,7 +45,7 @@ h4, .delta			{font:{size:$delta; weight:300;}}
 h5, .eps			{font:{size:$eps;  	weight:300;}}
 h6, .zeta			{font:{size:$zeta; 	weight:300;}}
 p, li, li p, .base	{font:{size:$base; 	weight:300;}}
-.tiny				{font:{size:$tiny; 	weight:300;}}
+small, .tiny		{font:{size:$tiny; 	weight:300;}}
 .mini				{font:{size:$mini; 	weight:300;}}
 
 

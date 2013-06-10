@@ -5,6 +5,8 @@
 		Here we shall go over various text/font stylings, sizes and types.
 	</p>
 
+<hr />
+
 <h3>Heading / Font Sizes</h3>
 <div class="row">
 	<div class="col col-60">
@@ -26,7 +28,94 @@
 	
 	<div class="col col-40">
 
-			explain
+			<table class="table-Border">
+				<thead>
+					<tr>
+						<th>
+							Tag/Classes
+						</th>
+						<th>
+							Size in ems
+						</th>
+						<th>
+							Pixel Translation
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<th>.giga:</th><td>4.375em</td><td>= 70px</td>
+				</tr>
+				<tr>
+					<th>
+					.ultra:</th><td>3.75em</td><td>= 60px
+					</td>
+				</tr>
+				<tr>
+					<th>
+					.mega:</th><td>3.5em</td><td>= 56px
+					</td>
+				</tr>
+				<tr>
+					<th>	
+					h1, .alpha:</th><td>3.125em</td><td>= 50px
+					</td>
+				</tr>
+				<tr>
+					<th>
+					h2, .beta:</th><td>2.5em</td><td>= 40px
+					</td>
+				</tr>
+				<tr>
+					<th>
+					h3, .gamma:</th><td>2em</td><td>= 32px
+					</td>
+				</tr>
+				<tr>
+					<th>
+					h4, .delta:</th><td>1.625em</td><td>= 26px
+					</td>
+				</tr>
+				<tr>
+					<th>
+					h5, .eps:</th><td>1.25em</td><td>= 20px
+					</td>
+				</tr>
+				<tr>
+					<th>
+					h6, .zeta:</th><td>1em</td><td>= 16px
+					</td>
+				</tr>
+				<tr>
+					<th>
+					p, li, .base:</th><td>.875em</td><td>= 14px
+					</td>
+				</tr>
+				<tr>
+					<th>
+					small, .tiny:</th><td>.75em</td><td>= 12px
+					</td>
+				</tr>
+				<tr>
+					<th>
+					.mini:</th><td>.625em</td><td>= 10px
+					</td>
+				</tr>
+				</tbody>
+			</table>
+			
+			<p>
+				Sizes are based off from a 16px standard, which is what fonts will be set to if they 
+				are not enclosed in the appropriate HTML elements, or elements lacking an appropriate class for
+				resizing.  
+			</p>
+			
+			<p>
+				While 16px is the standard for the font-sizes for the framework, the .base (along with p and li) are set
+				to 14px (7/8s of 16px).
+			</p>
+			
+			
 
 	</div>
 </div> <!-- end .row -->
@@ -42,15 +131,19 @@
 			</li>
 			<li>The <b>b element</b> &amp; <strong>strong element</strong></li>
 			<li>The <dfn>dfn element</dfn>, <i>i element</i> &amp; <em>em element</em></li>
-			<li>The <span>span element</span> example</li>
 			<li>The <u>u element</u> example</li>
 			<li>Time element: <time datetime="1605-11-05">5<sup>th</sup> of November</time></li>
+			<li>The <small>small element</small> example</li>
 		</ul>
 	</div> <!-- end .col-60 -->
 	
 	<div class="col col-40">
 
-			explain
+			<p>
+				These are the remaining text elements that don't fall into the most used elements above.
+				As most of these will find themselves used within one of the above tags, they will inherit the 
+				font-sizes of the above elements, save the blockquote which has a declared font-size of 1.25em.
+			</p>
 
 	</div>
 </div> <!-- end .row -->
@@ -69,7 +162,6 @@
 			<li>The <kbd>kbd element</kbd> example</li>
 			<li>The <mark>mark element</mark> example</li>
 			<li>The <samp>samp element</samp> example</li>
-			<li>The <small>small element</small> example</li>
 			<li>The <sub>sub element</sub> example</li>
 			<li>The <sup>sup element</sup> example</li>
 			<li>The <var>var element</var> example</li>
@@ -78,7 +170,13 @@
 	
 	<div class="col col-40">
 
-			explain
+			<p>
+				Many of these tags will likely not be used in regular development.
+			</p>
+			<p>
+				As such, they are included in the separate _base2.scss.  Comment out the @import in
+				the master.scss to not include their CSS rules.
+			</p>
 
 	</div>
 </div> <!-- end .row -->

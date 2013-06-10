@@ -5,7 +5,7 @@
 
 <div class="row">
 	<div class="col col-60">
-		<table class="base-Table">
+		<table class="table-Base">
             <thead class="table-Header">
                 <tr>
                     <th>Item 1</th>
@@ -46,15 +46,15 @@
 	</div> <!-- end .col-60 -->
 	
 	<div class="col col-40">
-
-			explain
-
+		<p>
+			Basic styling for a table.   Includes a background color to separate it from the normal background color of the site.
+		</p>
 	</div>
 </div> <!-- end .row -->
 
 <div class="row">
 	<div class="col col-60">
-		<table class="base-Table">
+		<table class="table-Base">
 			<caption>Table Caption</caption>
             <thead class="table-Header">
                 <tr>
@@ -96,67 +96,9 @@
 	</div> <!-- end .col-60 -->
 	
 	<div class="col col-40">
-
-			explain
-
-	</div>
-</div> <!-- end .row -->
-
-<hr />
-
-<h3>Table Pin-Striped</h3>
-<div class="row">
-	<div class="col col-60">
-		<table class="stripe-Table">
-			<caption>Table Caption</caption>
-            <thead class="table-Header">
-                <tr>
-                    <th>TH Col Start</th>
-                    <th>Item 2</th>
-                    <th>Item 3</th>
-                </tr>
-            </thead>
-            <tfoot class="table-Footer">
-                <tr>
-                    <th>TH Col End</th>
-                    <th>Item 2 End</th>
-                    <th>Item 3 End</th>
-                </tr>
-            </tfoot>
-            <tbody class="table-Body">
-                <tr>
-                    <th>Title TH</th>
-                    <td>Data area 1</td>
-                    <td>Data area 2</td>
-                </tr>
-                <tr>
-                    <th>Title TH</th>
-                    <td>Data area 1</td>
-                    <td>Data area 2</td>
-                </tr>
-                <tr>
-                    <th>Title TH</th>
-                    <td>Data area 1</td>
-                    <td>Data area 2</td>
-                </tr>
-                <tr>
-                    <th>Title TH</th>
-                    <td>Data area 1</td>
-                    <td>Data area 2</td>
-                </tr>
-                <tr>
-                    <th>Title TH</th>
-                    <td>Data area 1</td>
-                    <td>Data area 2</td>
-                </tr>
-            </tbody>
-        </table>
-	</div> <!-- end .col-60 -->
-	
-	<div class="col col-40">
-
-			explain
-
+		<p>
+			Basic table with a caption element.
+		</p>
 	</div>
 </div> <!-- end .row -->
 
@@ -165,7 +107,7 @@
 <h3>Table Bordered</h3>
 <div class="row">
 	<div class="col col-60">
-		<table class="border-Table">
+		<table class="table-Border">
 			<caption>Table Caption</caption>
             <thead class="table-Header">
                 <tr>
@@ -212,12 +154,69 @@
 	</div> <!-- end .col-60 -->
 	
 	<div class="col col-40">
-
-			explain
-
+		<p>
+			.table-Border extends the .table-Base class to add borders to the various elements in the table.
+		</p>
 	</div>
 </div> <!-- end .row -->
+
+<hr />
+
+<h3>Table Pin-Striped</h3>
+<div class="row">
+	<div class="col col-60">
+		<table class="table-Stripe">
+			<caption>Table Caption</caption>
+            <thead class="table-Header">
+                <tr>
+                    <th>TH Col Start</th>
+                    <th>Item 2</th>
+                    <th>Item 3</th>
+                </tr>
+            </thead>
+            <tfoot class="table-Footer">
+                <tr>
+                    <th>TH Col End</th>
+                    <th>Item 2 End</th>
+                    <th>Item 3 End</th>
+                </tr>
+            </tfoot>
+            <tbody class="table-Body">
+                <tr>
+                    <th>Title TH</th>
+                    <td>Data area 1</td>
+                    <td>Data area 2</td>
+                </tr>
+                <tr>
+                    <th>Title TH</th>
+                    <td>Data area 1</td>
+                    <td>Data area 2</td>
+                </tr>
+                <tr>
+                    <th>Title TH</th>
+                    <td>Data area 1</td>
+                    <td>Data area 2</td>
+                </tr>
+                <tr>
+                    <th>Title TH</th>
+                    <td>Data area 1</td>
+                    <td>Data area 2</td>
+                </tr>
+                <tr>
+                    <th>Title TH</th>
+                    <td>Data area 1</td>
+                    <td>Data area 2</td>
+                </tr>
+            </tbody>
+        </table>
+	</div> <!-- end .col-60 -->
 	
+	<div class="col col-40">
+		<p>
+			.table-Stripe extends the .table-Base class to add zebra striping using CSS nth-child.
+		</p>
+	</div>
+</div> <!-- end .row -->
 	
 
 </section> <!-- end .content -->

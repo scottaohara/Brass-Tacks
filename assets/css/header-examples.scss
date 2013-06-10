@@ -1,0 +1,66 @@
+.js-Header{display:none}
+.h-Pad{
+	padding-top:147px
+}
+
+.header-Base{
+	// general styling goes here
+	background:#446CB3;
+	border-bottom:1px solid #333;
+	box-shadow:inset 0 0 50px rgba(0,0,0,.2);
+	color:#fff;
+	height:147px;	// under normal circumstances, don't apply a height to an element that doesn't 'need it'
+	position:relative;
+	text-shadow:0 1px 1px rgba(0,0,0,.3);
+}
+
+.header-Fixed{
+	@extend .header-Base;
+	left:0;
+	position:fixed;
+	top:0;
+	width:100%;
+	z-index:10;
+}
+
+.header-Hide{
+	@extend .header-Fixed;
+	z-index:3
+}
+
+.header-Fixed-Shrink{
+	@extend .header-Fixed;
+	
+	&.shrinky{
+		font-size:70%!important;
+		height:110px;
+	}
+}
+
+.header-Content, .main-Content, .footer-Content{
+	margin:0 auto;
+	max-width:1200px;
+	padding:30px 20px 20px;
+	
+	& :last-child{margin-bottom:0}
+}
+
+.nav{
+	background:#6684ba;
+	border-bottom:1px solid #22437d;
+	position:fixed;
+	left:0;
+	text-align:center;
+	top:0;
+	width:100%;
+	z-index:12;
+	
+	a{color:#fff}
+}
+
+.main{
+	background:#fff;
+	min-height:800px;
+	position:relative;
+	z-index:5
+}

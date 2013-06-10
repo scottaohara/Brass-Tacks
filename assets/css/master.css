@@ -1,50 +1,50 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,700italic,600,400italic,300italic,600italic);
 .giga {
-  font-size: 60px;
+  font-size: 4.375em;
   font-weight: 700; }
 
 .ultra {
-  font-size: 54px;
+  font-size: 3.75em;
   font-weight: 600; }
 
 .mega {
-  font-size: 48px;
+  font-size: 3.5em;
   font-weight: 300; }
 
 h1, .alpha {
-  font-size: 42px;
+  font-size: 3.125em;
   font-weight: 400; }
 
 h2, .beta {
-  font-size: 36px;
+  font-size: 2.5em;
   font-weight: 400; }
 
 h3, .gamma {
-  font-size: 30px;
+  font-size: 2em;
   font-weight: 400; }
 
 h4, .delta {
-  font-size: 24px;
+  font-size: 1.625em;
   font-weight: 300; }
 
 h5, .eps {
-  font-size: 21px;
+  font-size: 1.25em;
   font-weight: 300; }
 
 h6, .zeta {
-  font-size: 18px;
+  font-size: 1em;
   font-weight: 300; }
 
 p, li, li p, .base {
-  font-size: 16.0px;
+  font-size: 0.875em;
   font-weight: 300; }
 
-.tiny {
-  font-size: 12px;
+small, .tiny {
+  font-size: 0.75em;
   font-weight: 300; }
 
 .mini {
-  font-size: 10px;
+  font-size: 0.625em;
   font-weight: 300; }
 
 .brand {
@@ -72,6 +72,7 @@ html {
   min-height: 100%; }
 
 body {
+  font-size: 16px;
   line-height: 1.2; }
 
 body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, form, fieldset, img,
@@ -81,11 +82,8 @@ legend, table, th, td, caption, hr {
   outline: 0;
   padding: 0; }
 
-ul li, ol li, p, h1, h2, h3, h4, blockquote, form {
+blockquote, form, h1, h2, h3, h4, h5, h6, li, p, table {
   margin-bottom: 8px; }
-
-h5, h6 {
-  margin-bottom: 4px; }
 
 ul, ol {
   margin: 0 0 8px;
@@ -113,10 +111,10 @@ i, em, dfn {
   font-style: italic; }
 
 blockquote {
-  font-size: 18px;
+  font-size: 1em;
   font-style: italic; }
   blockquote:before, blockquote:after {
-    font-size: 21px;
+    font-size: 1.25em;
     font-weight: 400;
     line-height: 1;
     position: relative;
@@ -174,9 +172,6 @@ pre {
 
 q {
   quotes: "\201C" "\201D" "\2018" "\2019"; }
-
-small {
-  font-size: 80%; }
 
 sub, sup {
   font-size: 75%;
@@ -264,11 +259,11 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.base-Table, .border-Table, .stripe-Table {
+.table-Base, .table-Border, .table-Stripe {
   background: #fafafa;
-  font-size: 16.0px;
+  font-size: 0.875em;
   width: 100%; }
-  .base-Table th, .border-Table th, .stripe-Table th, .base-Table td, .border-Table td, .stripe-Table td {
+  .table-Base th, .table-Border th, .table-Stripe th, .table-Base td, .table-Border td, .table-Stripe td {
     padding: 4px;
     text-align: left; }
 
@@ -278,15 +273,15 @@ table {
 .table-Footer {
   background: #e3e3e3; }
 
-.border-Table {
+.table-Border {
   border-bottom: 1px solid #cccccc;
   border-right: 1px solid #cccccc; }
-  .border-Table tr {
+  .table-Border tr {
     border-top: 1px solid #cccccc; }
-  .border-Table th, .border-Table td {
+  .table-Border th, .table-Border td {
     border-left: 1px solid #cccccc; }
 
-.stripe-Table tr:nth-child(2n) {
+.table-Stripe tr:nth-child(2n) {
   background: #eeeeee; }
 
 .nav ul, .header-Nav ul, .footer-Nav ul, .nav ol, .header-Nav ol, .footer-Nav ol {
@@ -305,21 +300,18 @@ table {
 .ah-Nav {
   font-size: 0; }
   .ah-Nav a {
-    font-size: 16.0px; }
+    font-size: 14px; }
   .ah-Nav .drop-Menu {
     left: 0;
     top: 100%; }
 
-.av-Nav {
-  font-size: 0; }
-  .av-Nav a {
-    font-size: 16.0px;
-    display: block; }
-  .av-Nav .drop-Start {
-    display: block; }
-  .av-Nav .drop-Menu {
-    left: 100%;
-    top: 0; }
+.av-Nav a {
+  display: block; }
+.av-Nav .drop-Start {
+  display: block; }
+.av-Nav .drop-Menu {
+  left: 100%;
+  top: 0; }
 
 .h-Nav > li, .c-Nav > li, .bread > li {
   float: left; }
@@ -333,7 +325,7 @@ table {
   .c-Nav > li {
     display: inline-block;
     float: none;
-    font-size: 16.0px; }
+    font-size: 14px; }
 
 .v-Nav {
   /* really only needs styling applied to it, as vertical nav is default */ }
@@ -378,7 +370,7 @@ table {
   cursor: pointer;
   display: inline-block;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 16.0px;
+  font-size: 0.875em;
   line-height: 1;
   padding: 8px 12px;
   text-align: center;
@@ -398,15 +390,15 @@ table {
     color: #f8f8f8; }
 
 .btn-Small {
-  font-size: 12px;
+  font-size: 0.75em;
   padding: 4px 8px; }
 
 .btn-Large {
-  font-size: 30px;
+  font-size: 2em;
   padding: 12px; }
 
 .btn-XLarge {
-  font-size: 36px;
+  font-size: 2.5em;
   padding: 12px 16px; }
 
 .btn-Wide {
@@ -513,7 +505,7 @@ input:-moz-placeholder {
   padding: 8px 12px; }
 
 legend, .legend {
-  font-size: 21px;
+  font-size: 1.25em;
   margin-left: -4px;
   padding: 0 4px; }
 
@@ -609,7 +601,7 @@ legend, .legend {
 .input-Select {
   background: none;
   border: 0;
-  font-size: 16.0px;
+  font-size: 0.875em;
   padding-right: 16px;
   width: 120%;
   -webkit-appearance: textarea; }
@@ -630,7 +622,7 @@ legend, .legend {
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.25) inset; }
 
 .input-Number {
-  font-size: 16.0px; }
+  font-size: 0.875em; }
 
 .file-Input-Area {
   position: relative; }
@@ -966,7 +958,7 @@ body {
     .header-Nav a.selected, .header-Nav a:active {
       background: #ddd; }
 
-.base-Header {
+.header-Base {
   padding-top: 8px; }
 
 .base-Content {
@@ -979,7 +971,7 @@ body {
     -webkit-box-shadow: 0 8px 8px -8px rgba(0, 0, 0, 0.5);
     box-shadow: 0 8px 8px -8px rgba(0, 0, 0, 0.5); }
 
-.base-Footer {
+.footer-Base {
   background: #2d2d2d;
   color: #fff; }
 
