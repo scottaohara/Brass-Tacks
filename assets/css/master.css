@@ -382,6 +382,8 @@ table {
   transition: all 0.25s ease-in-out 0s;
   vertical-align: middle;
   -webkit-appearance: none; }
+  .btn.btn-Pad, .btn-Pad.btn-Small, .btn-Pad.btn-Large, .btn-Pad.btn-XLarge, .btn-Pad.btn-Wide, .btn-Pad.btn-Action, .btn-Pad.btn-Action-2, .btn-Pad.btn-Action-3, .btn-Pad.btn-Neg, .btn-Pad.btn-Disable, .btn-Pad.btn-Square, .btn-Pad.btn-Round, .btn-Pad.btn-Radio, .btn-Pad.btn-Check {
+    padding: 8px 16px; }
   .btn:hover, .btn:active, .btn-Small:hover, .btn-Large:hover, .btn-XLarge:hover, .btn-Wide:hover, .btn-Action:hover, .btn-Action-2:hover, .btn-Action-3:hover, .btn-Neg:hover, .btn-Disable:hover, .btn-Square:hover, .btn-Round:hover, .btn-Radio:hover, .input-Radio.selected-Radio .btn-Radio, .btn-Check:hover, .input-Check.selected-Check .btn-Check, .btn-Small:active, .btn-Large:active, .btn-XLarge:active, .btn-Wide:active, .btn-Action:active, .btn-Action-2:active, .btn-Action-3:active, .btn-Neg:active, .btn-Disable:active, .btn-Square:active, .btn-Round:active, .btn-Radio:active, .btn-Check:active {
     background: #101010;
     -moz-box-shadow: 0 0 6px rgba(255, 255, 255, 0.5) inset;
@@ -392,14 +394,20 @@ table {
 .btn-Small {
   font-size: 0.75em;
   padding: 4px 8px; }
+  .btn-Small.btn-Pad {
+    padding: 4px 12px; }
 
 .btn-Large {
   font-size: 2em;
   padding: 12px; }
+  .btn-Large.btn-Pad {
+    padding: 12px 20px; }
 
 .btn-XLarge {
   font-size: 2.5em;
   padding: 12px 16px; }
+  .btn-XLarge.btn-Pad {
+    padding: 16px 24px; }
 
 .btn-Wide {
   display: block; }
