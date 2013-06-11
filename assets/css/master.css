@@ -733,8 +733,23 @@ legend, .legend {
 .d-Block, .show {
   display: block; }
 
-.d-None, .hide, .mobile-Show {
+.d-None, .mobile-Show {
   display: none; }
+
+.hidden {
+  display: none !important;
+  visibility: hidden; }
+
+.hide {
+  border: 0;
+  height: 1px;
+  left: -9999px;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  top: -9999px;
+  width: 1px; }
 
 .kill-List {
   list-style: none;

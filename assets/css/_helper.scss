@@ -80,8 +80,14 @@
 //		Showing & Hiding
 // ----------------------------------------------------------------
 .d-Block, .show{display:block}
-.d-None, .hide, .mobile-Show{display:none} 
+.d-None, .mobile-Show{display:none} 
 	// change display value for .mobile-Show in the appropriate @media break-point
+	
+// Hides from screenreaders and browsers
+.hidden{display:none!important; visibility:hidden}
+
+// Hide from browsers but not from screen readers
+.hide{border:0; height:1px; left:-9999px; margin:0; overflow:hidden; padding:0; position:absolute; top:-9999px; width:1px}
 
 
 // ----------------------------------------------------------------
