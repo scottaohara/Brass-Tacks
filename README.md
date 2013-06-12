@@ -50,3 +50,12 @@ Credit to normalize.css's HTML example for providing a good base of HTML tags to
 use as a list of tags to consider for this foundation and tags that are just not important in
 the majority of website projects I've been involved with.
 
+
+
+//
+Additional references for further documentation
+
+http://cwebbdesign.tumblr.com/post/23666803241/scalable-and-maintainable-css-approaches
+https://www.gov.uk/designprinciples
+http://metroui.org.ua/typography.php
+http://gumbyframework.com/docs/ui-kit/#!/
