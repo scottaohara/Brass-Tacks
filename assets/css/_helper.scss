@@ -17,11 +17,9 @@
 %go:after{content:"\00A0" "\00BB"}
 
 // Word Wraps
-%breakword{word-wrap:break-word}
-
-%normal-wrap{word-wrap:normal}
-
-%auto-wrap{word-wrap:auto}
+%auto-wrap	  {word-wrap:auto}
+%breakword	  {word-wrap:break-word}
+%normal-wrap  {word-wrap:normal}
 
 // Highlight Text
 .highlight, %highlight{
@@ -29,25 +27,19 @@
 	color:#fff;
 	@include border-radius(3px);
 	display:inline-block;
-	padding:2px 4px;
+	padding:$spacing;
 	vertical-align:text-top;
 }
 
 // Skew Text/Highlight
-.slant {
+.slant{
 	@extend %highlight;
-	   -moz-transform:skewX(-16deg);
-	     -o-transform:skewX(-16deg);
-	-webkit-transform:skewX(-16deg);
-		    transform:skewX(-16deg);
+	@include vendor(transform, skewX(-16deg));
 }
 
 .text-Correct{
 	display:inline-block;
-	   -moz-transform:skewX(16deg);
-		 -o-transform:skewX(16deg);
-	-webkit-transform:skewX(16deg);
-			transform:skewX(16deg);
+	@include vendor(transform, skewX(16deg));
 }
 	
 /*
@@ -87,7 +79,7 @@
 .hidden{display:none!important; visibility:hidden}
 
 // Hide from browsers but not from screen readers
-.hide{border:0; height:1px; left:-9999px; margin:0; overflow:hidden; padding:0; position:absolute; top:-9999px; width:1px}
+.invis, %invis{@include invisible}
 
 
 // ----------------------------------------------------------------
@@ -198,145 +190,8 @@
 
 // Multi-Columned Text
 .multi{
-	   -moz-column-count:3;
-	-webkit-column-count:3;
-			column-count:3;
-			
-	   -moz-column-gap:$spacing*10;
-	-webkit-column-gap:$spacing*10;
-			column-gap:$spacing*10;
-			
-	   -moz-column-rule:1px outset #eee; 
-	-webkit-column-rule:1px outset #eee;
-			column-rule:1px outset #eee;
+	@include base-vendor(column-count, 3);
+	@include base-vendor(column-gap, $spacing*10);
+	@include base-vendor(column-rule, 1px outset #eee);
 }
-
-
-// Tool Tips / Hover Desc.
-/* 
-	the tool tips 
-	-- default position is to show tool-tip as pop-under
-	-- use additional helper classes to reassign where tool-tip displayes.
-	
-	Default HTML:
-	
-	<a href="#" title="Title" class="tool-Tip">
-		Content Goes Here
-	</a>
-*/
-
-.tool-Tip{
-	cursor:help;
-	display:inline-block;
-	position:relative;
-	
-	&:after{
-		background:#fff;
-		background:rgba(255,255,255,.95);
-		border:1px solid #333;
-		border-radius:4px;
-		color:#333;
-		content:attr(title);
-		font-size:12px;
-		left:0; 
-		opacity:0;
-		padding:5px 10px;
-		position:absolute;
-		text-align:center;
-		top:90%;
-		-moz-transition:all 0.35s; -webkit-transition:all 0.35s; -o-transition:all 0.35s; transition:all 0.35s;
-		width:100%;
-	}
-	
-	&:hover{
-		text-decoration:none;
-	}
-	
-	&:hover:after{
-		opacity:1;
-		top:105%
-	}
-		
-}
-
-.above{
-	
-	&:after{
-		bottom:90%;
-		top:auto;
-	}
-	
-	&:hover:after{
-		bottom:105%;
-		top:auto;
-	}
-}
-
-.img-Bottom{
-	img{display:block}
-	
-	&:after{bottom:-5%; top:auto}
-	&:hover:after{bottom:0; top:auto}
-}
-
-.img-Top{
-	img{display:block}
-	
-	&:after{top:-5%}
-	&:hover:after{top:0}
-	
-}
-
-.img-Left{
-	img{display:block}
-	
-	&:after{height:100%; left:-5%; top:0; width:50%}
-	&:hover:after{left:0; top:0}
-	
-}
-
-.img-Right{
-	img{display:block}
-	
-	&:after{height:100%; left:auto; right:-5%; top:0; width:50%}
-	&:hover:after{left:auto; right:0; top:0}
-	
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

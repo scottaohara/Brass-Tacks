@@ -39,9 +39,9 @@
 
 	
 // Transition
-@mixin transition($tran-property, $tran-time, $tran-method, $tran-delay) {
-	@include vendor(transition, $tran-property $tran-time $tran-method $tran-delay);
-}
+//@mixin transition($tran-property, $tran-time, $tran-method, $tran-delay) {
+//	@include vendor(transition, $tran-property $tran-time $tran-method $tran-delay);
+//}
 	// Example --  @include transition(all 0.35s ease 0;);
 	// transition: property duration timing-function(method) delay;
 	// transition: all 		.35s 	 ease 					 0s;  <-- the s is required regardless of if it's 0 or not
@@ -62,7 +62,7 @@
 // but still need for accesibility / functionality 
 // -- ie. radio buttons for custom styled radio inputs
 @mixin invisible{
-	height:1px!important; left:-999999px!important; overflow:hidden!important; position:absolute!important; width:1px!important;
+	border:0!important; height:1px!important; left:-999999px!important; overflow:hidden!important; position:absolute!important; width:1px!important;
 }
 
 // Truncate Text
@@ -124,12 +124,4 @@
 		width:$col-Size - 20px;
 	}
 }
-
-
-
-
-
-
-
-
 
