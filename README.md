@@ -51,11 +51,15 @@ use as a list of tags to consider for this foundation and tags that are just not
 the majority of website projects I've been involved with.
 
 
+## Uses
+* June 14, 2013 - Freelance Project w/ @xbuzz - version 0.4.2
+* June 8, 2013 - Freelance Project w/ @xbuzz - version 0.3.5 
+
 
 //
 Additional references for further documentation
 
-http://cwebbdesign.tumblr.com/post/23666803241/scalable-and-maintainable-css-approaches
-https://www.gov.uk/designprinciples
-http://metroui.org.ua/typography.php
-http://gumbyframework.com/docs/ui-kit/#!/
+* http://cwebbdesign.tumblr.com/post/23666803241/scalable-and-maintainable-css-approaches
+* https://www.gov.uk/designprinciples
+* http://metroui.org.ua/typography.php
+* http://gumbyframework.com/docs/ui-kit/#!/
