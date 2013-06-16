@@ -1,34 +1,42 @@
 <!doctype html>
-<!--[if IE 7 ]><html lang="en" class="ieAll ie7"><![endif]-->
+<!--[if lte IE 7 ]><html lang="en" class="ieAll ie7"><![endif]-->
 <!--[if IE 8 ]><html lang="en" class="ieAll ie8"><![endif]-->
 <!--[if IE 9 ]><html lang="en" class="ieAll ie9"><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--><html lang="en" itemscope itemtype="http://schema.org/Person"><!--<![endif]-->
     <head>
     	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    	
+    	<title>{% block title %}Example Title{% endblock %}</title>
     	<meta name="description" content="" />
 		<meta name="keywords" content="" />
-	    <meta name="viewport" content="width=device-width, minimum-scale=1.0" />
-        <title>{% block title %}Example Title{% endblock %}</title>
+		
+		<!-- Open Graph 
+        <meta property="og:title" 		content=""/>
+		<meta property="og:type" 		content=""/>
+		<meta property="og:image" 		content=""/>
+		<meta property="og:url" 		content=""/>
+		<meta property="og:description" content=""/>
+		<meta property="fb:app_id" 		content=""/> -->
         
-        <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0" />
         <!-- Styles -->
         {{ "master.css" | asset_url | stylesheet_tag }}
-        <!-- Style block allowing child pages to inject their own styles -->
-        {% block styles %}{% endblock %}
+        {% block styles %}{% endblock %} <!-- If exists, brings over style blocks from child pages -->
         
-        <link rel="shortcut icon" href="icon.png" />
-	    <link rel="apple-touch-icon-precomposed" href="icon.png" />
+        <link rel="shortcut icon" type="image/ico" href="#favicon.ico" />
+	    <link rel="apple-touch-icon-precomposed" href="#icon.png" />
+	    <link href="#startup.png" rel="apple-touch-startup-image" />
 	<!--
-		These guys are causing validation errors.  oh what to do...
+		These guys are causing validation errors.  what to do...
 	    <meta name="apple-mobile-web-app-title" content="" />
 	    <meta name="msapplication-TileImage" content="/images/57x57" />
 	    <meta name="msapplication-TileColor" content="#000000" />
 	-->
 	    
-	    <link rel="apple-touch-startup-image" href="/images/startup.png">
 	    <meta name="apple-mobile-web-app-capable" content="yes" />
 	    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 	    
+	    <!-- oh vanity.  -->
 	    <link type="text/plain" rel="author" href="humans.txt" />
 	    
 	    <!--[if lt IE 9]> 
@@ -54,10 +62,10 @@
             
         </div> <!-- end .page -->
         
-        <!-- Script block allowing child pages to inject their own scripts -->
+        <!-- scripts -->
         {{ "jquery-1.10.0.min.js" | asset_url | script_tag }}
         {{ "app.js" | asset_url | script_tag }}
-        {% block js %}{% endblock %}
+        {% block js %}{% endblock %} <!-- Script block allowing child pages to inject their own scripts -->
         
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
