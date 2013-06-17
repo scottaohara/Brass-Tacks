@@ -8,7 +8,7 @@
 }
 
 .header-Content{
-	
+	@extend .content;
 }
 
 // Extend the .nav class to style your header navigation

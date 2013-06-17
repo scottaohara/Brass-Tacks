@@ -22,5 +22,5 @@ blockquote, form, h1, h2, h3, h4, h5, h6, li, p, table{margin-bottom:$spacing*2}
 hr{border-top:1px solid #ddd; display:block; height:1px; margin:$spacing*2 0}
 
 @import 'base-HTML5';		// Styling for HTML5 sepecific elements/selectors
-@import 'base-Type';		// Styling for base typographical elements
 @import 'base-Media';		// Styling for base media elements
+@import 'base-Type';		// Styling for base typographical elements

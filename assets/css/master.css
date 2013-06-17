@@ -35,6 +35,23 @@ header, main, nav, section, summary {
 [hidden] {
   display: none; }
 
+img {
+  color: red;
+  font-style: italic; }
+
+audio, img, object, embed, video {
+  max-width: 100%; }
+
+audio, canvas, video {
+  display: inline-block; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
 ul, ol {
   margin: 0 0 8px;
   padding: 0 0 0 24px; }
@@ -99,23 +116,6 @@ sub {
 
 sup {
   top: -.5em; }
-
-img {
-  color: red;
-  font-style: italic; }
-
-audio, img, object, embed, video {
-  max-width: 100%; }
-
-audio, canvas, video {
-  display: inline-block; }
-
-audio:not([controls]) {
-  display: none;
-  height: 0; }
-
-svg:not(:root) {
-  overflow: hidden; }
 
 .row, .c-Row {
   margin-left: -20px;
@@ -859,11 +859,11 @@ body {
   color: #eeeeee;
   text-shadow: none; }
 
-.content {
+.content, .header-Content, .footer-Content {
   margin: 0 auto;
   max-width: 1000px;
   padding: 20px; }
-  .content > :last-child {
+  .content > :last-child, .header-Content > :last-child, .footer-Content > :last-child {
     margin-bottom: 0; }
 
 .brand-Color, .brand {
@@ -895,7 +895,7 @@ a {
 .base-Content {
   min-height: 500px;
   padding-bottom: 20px; }
-  .base-Content .content {
+  .base-Content .content, .base-Content .header-Content, .base-Content .footer-Content {
     background: #fff;
     border: 1px solid #eeeeee;
     -moz-box-shadow: 0 8px 8px -8px rgba(0, 0, 0, 0.5);

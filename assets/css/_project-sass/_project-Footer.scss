@@ -10,7 +10,7 @@
 
 // Apply to internal wrapper for footer content
 .footer-Content{
-	
+	@extend .content;
 }
 
 // Extend the .nav class to style your footer navigation
