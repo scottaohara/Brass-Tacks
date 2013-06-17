@@ -8,15 +8,21 @@
 	
 	Default HTML:
 	
-	<a href="#" title="Title" class="tool-Tip">
+	<a href="#" title="Title" data-tooltip="Tool Tip Here">
 		Content Goes Here
 	</a>
+	
+	<span data-tooltip="Tool Tip Here">
+		Content Goes Here
+	</span>
 */
 
-.tool-Tip{
+[data-tooltip]{
 	cursor:help;
 	display:inline-block;
 	position:relative;
+	
+	img{display:block}
 	
 	&:after{
 		background:#fff;
@@ -24,7 +30,7 @@
 		border:1px solid #333;
 		border-radius:4px;
 		color:#333;
-		content:attr(title);
+		content:attr(data-tooltip);
 		font-size:12px;
 		left:0; 
 		opacity:0;
@@ -38,55 +44,31 @@
 	
 	&:hover{
 		text-decoration:none;
-	}
-	
-	&:hover:after{
-		opacity:1;
-		top:105%
-	}
-		
+		&:after{opacity:1; top:105%}
+	}		
 }
 
-.above{
-	
-	&:after{
-		bottom:90%;
-		top:auto;
-	}
-	
-	&:hover:after{
-		bottom:105%;
-		top:auto;
-	}
+.tip-Above{
+	&:after{bottom:90%;	top:auto;}	
+	&:hover:after{bottom:105%; top:auto;}
 }
 
-.img-Bottom{
-	img{display:block}
-	
+.tip-Bottom{
 	&:after{bottom:-5%; top:auto}
 	&:hover:after{bottom:0; top:auto}
 }
 
-.img-Top{
-	img{display:block}
-	
+.tip-Top{
 	&:after{top:-5%}
-	&:hover:after{top:0}
-	
+	&:hover:after{top:0}	
 }
 
-.img-Left{
-	img{display:block}
-	
+.tip-Left{	
 	&:after{height:100%; left:-5%; top:0; width:50%}
-	&:hover:after{left:0; top:0}
-	
+	&:hover:after{left:0; top:0}	
 }
 
-.img-Right{
-	img{display:block}
-	
+.tip-Right{	
 	&:after{height:100%; left:auto; right:-5%; top:0; width:50%}
-	&:hover:after{left:auto; right:0; top:0}
-	
+	&:hover:after{left:auto; right:0; top:0}	
 }

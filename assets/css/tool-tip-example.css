@@ -5,21 +5,27 @@
 	
 	Default HTML:
 	
-	<a href="#" title="Title" class="tool-Tip">
+	<a href="#" title="Title" data-tooltip="Tool Tip Here">
 		Content Goes Here
 	</a>
+	
+	<span data-tooltip="Tool Tip Here">
+		Content Goes Here
+	</span>
 */
-.tool-Tip {
+[data-tooltip] {
   cursor: help;
   display: inline-block;
   position: relative; }
-  .tool-Tip:after {
+  [data-tooltip] img {
+    display: block; }
+  [data-tooltip]:after {
     background: #fff;
     background: rgba(255, 255, 255, 0.95);
     border: 1px solid #333;
     border-radius: 4px;
     color: #333;
-    content: attr(title);
+    content: attr(data-tooltip);
     font-size: 12px;
     left: 0;
     opacity: 0;
@@ -33,55 +39,47 @@
     -webkit-transition: all 0.35s;
     transition: all 0.35s;
     width: 100%; }
-  .tool-Tip:hover {
+  [data-tooltip]:hover {
     text-decoration: none; }
-  .tool-Tip:hover:after {
-    opacity: 1;
-    top: 105%; }
+    [data-tooltip]:hover:after {
+      opacity: 1;
+      top: 105%; }
 
-.above:after {
+.tip-Above:after {
   bottom: 90%;
   top: auto; }
-.above:hover:after {
+.tip-Above:hover:after {
   bottom: 105%;
   top: auto; }
 
-.img-Bottom img {
-  display: block; }
-.img-Bottom:after {
+.tip-Bottom:after {
   bottom: -5%;
   top: auto; }
-.img-Bottom:hover:after {
+.tip-Bottom:hover:after {
   bottom: 0;
   top: auto; }
 
-.img-Top img {
-  display: block; }
-.img-Top:after {
+.tip-Top:after {
   top: -5%; }
-.img-Top:hover:after {
+.tip-Top:hover:after {
   top: 0; }
 
-.img-Left img {
-  display: block; }
-.img-Left:after {
+.tip-Left:after {
   height: 100%;
   left: -5%;
   top: 0;
   width: 50%; }
-.img-Left:hover:after {
+.tip-Left:hover:after {
   left: 0;
   top: 0; }
 
-.img-Right img {
-  display: block; }
-.img-Right:after {
+.tip-Right:after {
   height: 100%;
   left: auto;
   right: -5%;
   top: 0;
   width: 50%; }
-.img-Right:hover:after {
+.tip-Right:hover:after {
   left: auto;
   right: 0;
   top: 0; }

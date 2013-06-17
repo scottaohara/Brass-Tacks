@@ -1,0 +1,42 @@
+// ----------------------------------------------------------------
+//		Project Specific Extended HTML Stylings
+// ----------------------------------------------------------------
+body{background:$c-BG; font-family:$brand; font-weight:300}
+
+// Highlight Text Selection
+::-moz-selection{background:$c-Brand-1; color:$c-Light; text-shadow:none}
+::selection		{background:$c-Brand-1; color:$c-Light; text-shadow:none}
+
+// Full container for the entire page.  
+.page{}
+
+// Generic tag to wrap around content within sections to apply a max width to the interior content
+// while allowing for larger sections to expand the whole page for BG purposes
+.content{
+	margin:0 auto; max-width:1000px; padding:$spacing*5;
+	& > :last-child{margin-bottom:0}	// kill any extra margin on the last element in the .content div
+}
+
+// ----------------------------------------------------------------
+//		Branding Helpers
+// ----------------------------------------------------------------
+.brand{
+	@extend .brand-Color;
+	@extend .brand-Font;
+}
+.brand-Color{color:$c-Brand-1}
+.brand-Font{font-family:$brand; font-weight:300}
+
+// ----------------------------------------------------------------
+//		Project Specific Link Stylings
+// ----------------------------------------------------------------
+a{
+	color:$c-Link;
+	&:hover, &:active{}
+	&:visited{}
+}
+// example - :hover{color:darken($c-Link, 15%)}
+
+@import 'project-Header';		// Project Specific Header Styling
+@import 'project-Main';			// Project Specific Main Content Area Styling
+@import 'project-Footer';		// Project Specific Footer Styling

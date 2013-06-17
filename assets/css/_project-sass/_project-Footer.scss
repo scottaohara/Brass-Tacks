@@ -1,0 +1,23 @@
+// ----------------------------------------------------------------
+//		Project Specific: Footer Area
+// ----------------------------------------------------------------
+
+// Apply to <footer> for styling
+.footer-Base{
+	background:#2d2d2d;
+	color:#fff;
+}
+
+// Apply to internal wrapper for footer content
+.footer-Content{
+	
+}
+
+// Extend the .nav class to style your footer navigation
+.footer-Nav{
+	@extend .nav;
+	a{/* add in project styling for footer a tags here */
+		&:hover{/* add in project styling for a:hover here */}
+		&.selected{/* add in project styling for a.selected here */}
+	}
+}

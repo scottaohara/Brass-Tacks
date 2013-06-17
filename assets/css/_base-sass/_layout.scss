@@ -11,6 +11,18 @@
 	@extend .clearfix;
 }
 
+// The grid columns within a row.  
+// Do not apply styling to this class as its purpose is for layout only.
+.col{
+	float:left;
+	margin-bottom:0!important; 
+		// row has a margin-bottom applied to it already, 
+		// to absolutely make sure there is no extra margin, 0!important is used
+	padding-left:$spacing*5;
+	position:relative;
+	width:100%; // default width is 100%.  
+}
+
 // Convert columns to inline-blocks so we can center them when our row does not add up to 100%
 .c-Row{
 	@extend .row;
@@ -28,20 +40,9 @@
 		//    then this should not be a problem).
 }
 
-// The grid columns within a row.  
-// Do not apply styling to this class as its purpose is for layout only.
-.col{
-	float:left;
-	margin-bottom:0!important; 
-		// row has a margin-bottom applied to it already, 
-		// to absolutely make sure there is no extra margin, 0!important is used
-	padding-left:$spacing*5;
-	position:relative;
-	width:100%; // default width is 100%.  
-}
-
 // Base responsive grid column classes. 
 // Do not apply styling to these as their purpose is for width only. 
+.col-90	{width:90%}
 .col-80 {width:80%}
 .col-75 {width:75%}
 .col-66 {width:66.6666%}
@@ -51,6 +52,7 @@
 .col-33 {width:33.3333%}
 .col-25 {width:25%}
 .col-20 {width:20%}
+.col-10 {width:10%}
 
 .rfl{@include row-fixed-Left(300px)}
 .rfr{@include row-fixed-Right(300px)}
@@ -63,7 +65,3 @@
 	background:#ccc; color:#333; padding:$spacing;
 	& > :last-child{margin-bottom:0}
 }
-
-
-
-

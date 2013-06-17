@@ -8,7 +8,7 @@
 .txt-Just	{text-align:justify}
 
 // Truncate Text
-.truncate{@include truncate(100%)}
+%truncate{@include truncate(100%)}
 
 // Applies a degree symbol
 %degree:after{content:"\00BA"}
@@ -23,8 +23,8 @@
 
 // Highlight Text
 .highlight, %highlight{
-	background:#888;
-	color:#fff;
+	background:$c-Highlight;
+	color:$c-Darker;
 	@include border-radius(3px);
 	display:inline-block;
 	padding:$spacing;
@@ -96,7 +96,7 @@
 // ----------------------------------------------------------------
 // Profile Picture
 .pic, %pic{
-	border:1px solid #fff;
+	border:1px solid $c-White;
 	@include border-radius(4px);
 	@include box-shadow($bs-4);
 	display:inline-block;
@@ -194,4 +194,3 @@
 	@include base-vendor(column-gap, $spacing*10);
 	@include base-vendor(column-rule, 1px outset #eee);
 }
-

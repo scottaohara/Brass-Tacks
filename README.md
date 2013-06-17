@@ -63,3 +63,5 @@ Additional references for further documentation
 * https://www.gov.uk/designprinciples
 * http://metroui.org.ua/typography.php
 * http://gumbyframework.com/docs/ui-kit/#!/
+* http://purecss.io/
+* http://brettjankord.com/projects/style-guide-boilerplate/#text-elements

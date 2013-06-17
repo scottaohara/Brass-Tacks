@@ -1,0 +1,25 @@
+// ----------------------------------------------------------------
+//		Project Specific: Header Area
+// ----------------------------------------------------------------
+
+// Apply to <header> for styling
+.header-Base{
+	padding-top:$spacing*2;
+}
+
+.header-Content{
+	
+}
+
+// Extend the .nav class to style your header navigation
+.header-Nav{
+	@extend .nav;
+	background:#f8f8f8;
+	border-bottom:1px solid #eee;
+	border-top:1px solid #eee;
+	margin:$spacing*4 auto;
+	a{padding:$spacing*2 $spacing*3; text-decoration:none;
+		&:hover{background:#eee;}
+		&.selected, &:active{background:#ddd;}
+	}
+}

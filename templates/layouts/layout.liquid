@@ -10,36 +10,41 @@
     	<meta itemprop="name" content="Microdata of your name" />
 		<meta itemprop="description" content="Enter microdata description of your website" />
     	
+    	<meta name="HandheldFriendly" content="True" />
+        <meta name="MobileOptimized" content="320" />
     	<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		
-		<!-- Open Graph 
+	<!-- Open Graph 
         <meta property="og:title" 		content=""/>
 		<meta property="og:type" 		content=""/>
 		<meta property="og:image" 		content=""/>
 		<meta property="og:url" 		content=""/>
 		<meta property="og:description" content=""/>
-		<meta property="fb:app_id" 		content=""/> -->
+		<meta property="fb:app_id" 		content=""/> 
+	-->
         
-        <meta name="viewport" content="width=device-width, minimum-scale=1.0" />
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1" />
         <!-- Styles -->
         {{ "master.css" | asset_url | stylesheet_tag }}
         {% block styles %}{% endblock %} <!-- If exists, brings over style blocks from child pages -->
         
         <link rel="shortcut icon" type="image/ico" href="#favicon.ico" />
-	    <link rel="apple-touch-icon-precomposed" href="#icon.png" />
+	    <link rel="apple-touch-icon-precomposed" href="#apple-icon-144.png" />
 	    <link href="#startup.png" rel="apple-touch-startup-image" />
-	<!--
-		These guys are causing validation errors.  what to do...
-	    <meta name="apple-mobile-web-app-title" content="" />
-	    <meta name="msapplication-TileImage" content="/images/57x57" />
-	    <meta name="msapplication-TileColor" content="#000000" />
+	    
+	<!-- Tile icon for Win8 (144x144 + tile color) --doesn't validate--
+	    <meta name="msapplication-TileImage" content="#apple-icon-144.png">
+        <meta name="msapplication-TileColor" content="#222222">
 	-->
 	    
+	<!-- For iOS web apps. Delete if not needed.  
 	    <meta name="apple-mobile-web-app-capable" content="yes" />
+	    <meta name="apple-mobile-web-app-title" content="" />
 	    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-	    
-	    <!-- oh vanity.  -->
+	-->
+
+	<!-- oh vanity.  -->
 	    <link type="text/plain" rel="author" href="humans.txt" />
 	    
 	    <!--[if lt IE 9]> 
@@ -78,4 +83,3 @@
             s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
     </body>
-</html>
