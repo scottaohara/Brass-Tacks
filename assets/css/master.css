@@ -117,6 +117,39 @@ sub {
 sup {
   top: -.5em; }
 
+button, input, select, textarea {
+  border: 0;
+  font-family: inherit;
+  font-size: 100%;
+  line-height: normal;
+  margin: 0;
+  text-transform: none; }
+
+button, html input[type='button'], input[type='reset'], input[type='submit'] {
+  cursor: pointer;
+  -webkit-appearance: button; }
+
+input[type='search'] {
+  -webkit-appearance: textfield; }
+
+input[disabled] {
+  background: #eeeeee;
+  cursor: not-allowed; }
+
+input[readonly] {
+  background: #fafafa; }
+
+input[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+buton::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+textarea {
+  overflow: auto;
+  vertical-align: top; }
+
 .row, .c-Row {
   margin-left: -20px;
   margin-bottom: 20px; }
@@ -387,64 +420,11 @@ table {
   border-radius: 12px;
   background-clip: padding-box; }
 
-button, input, select, textarea {
-  border: 0;
-  font-family: inherit;
-  font-size: 100%;
-  line-height: normal;
-  margin: 0;
-  text-transform: none; }
-
-button, html input[type='button'], input[type='reset'], input[type='submit'] {
-  cursor: pointer;
-  -webkit-appearance: button; }
-
-input[type='search'] {
-  -webkit-appearance: textfield; }
-
-input[disabled] {
-  background: #eee;
-  cursor: not-allowed; }
-
-input[readonly] {
-  background: #fafafa; }
-
-input[type='search']::-webkit-search-decoration {
-  -webkit-appearance: none; }
-
-buton::-moz-focus-inner, input::-moz-focus-inner {
-  border: 0;
-  padding: 0; }
-
-textarea {
-  overflow: auto;
-  vertical-align: top; }
-
-.placeholder {
-  color: #bbb;
-  font-style: italic; }
-
-:-ms-input-placeholder {
-  color: #bbb;
-  font-style: italic; }
-
-::-moz-placeholder {
-  color: #bbb;
-  font-style: italic; }
-
-::-webkit-input-placeholder {
-  color: #bbb;
-  font-style: italic; }
-
-input:-moz-placeholder {
-  color: #bbb;
-  font-style: italic; }
-
 .grouping {
   padding: 4px 0; }
 
 .fs-Legend {
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   margin-bottom: 8px;
   padding: 8px 12px; }
 
@@ -465,14 +445,14 @@ legend, .legend {
 
 .input-Area, .text-Area, .select-Container, .input-Number {
   background: #fff;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   line-height: 1.25;
   margin-bottom: 8px;
   padding: 8px 4px;
   width: 50%; }
   .input-Area:focus, .text-Area:focus, .select-Container:focus, .input-Number:focus {
-    background: #fffffd;
+    background: #f8f8f8;
     border: 1px solid #50B6D5;
     -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.25) inset;
     -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.25) inset;
@@ -487,7 +467,8 @@ legend, .legend {
 /* Check/Radio Inputs & Labels */
 .option-Container {
   position: relative; }
-  .option-Container:hover .btn-Radio, .option-Container:hover .btn-Check {
+  .option-Container:hover .btn-Radio,
+  .option-Container:hover .btn-Check {
     border-color: #333; }
 
 .option-Label {
@@ -551,24 +532,6 @@ legend, .legend {
   width: 120%;
   -webkit-appearance: textarea; }
 
-/* Inputs not supported in all browsers */
-.input-Color {
-  border: 1px solid #ccc;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  margin-bottom: 8px;
-  padding: 0 4px;
-  height: 45px;
-  width: 50%; }
-  .input-Color:focus {
-    background: #fffffd;
-    border: 1px solid #50B6D5;
-    -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.25) inset;
-    -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.25) inset;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.25) inset; }
-
-.input-Number {
-  font-size: 0.875em; }
-
 .file-Input-Area {
   position: relative; }
   .file-Input-Area label {
@@ -587,6 +550,24 @@ legend, .legend {
 .input-File-Text {
   cursor: pointer;
   display: inline-block; }
+
+/* Inputs not supported in all browsers */
+.input-Color {
+  border: 1px solid #cccccc;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  margin-bottom: 8px;
+  padding: 0 4px;
+  height: 45px;
+  width: 50%; }
+  .input-Color:focus {
+    background: #f8f8f8;
+    border: 1px solid #50B6D5;
+    -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.25) inset;
+    -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.25) inset;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.25) inset; }
+
+.input-Number {
+  font-size: 0.875em; }
 
 .txt-Center {
   text-align: center; }

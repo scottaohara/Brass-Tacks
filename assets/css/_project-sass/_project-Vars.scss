@@ -18,7 +18,7 @@ $c-Lighter:		#f8f8f8;
 $c-Body-Copy:	$c-Dark;
 $c-Heading:		$c-Darker;
 
-$c-BG:			#f8f8f8;
+$c-BG:			$c-Lighter;
 
 $c-Link:		$c-Brand-2;
 
@@ -31,7 +31,7 @@ $c-Btn-Neg:		#aaa;
 $c-Disabled:	#fafafa;
 
 // Color for Radio/Check box buttons
-$c-Btn-RC:		#eee;
+$c-Btn-RC:		$c-Light;
 
 // Required / Error Text Color
 $c-Required:	#f00;
@@ -39,6 +39,7 @@ $c-Required:	#f00;
 // Underlines & Highlights
 $c-Highlight:	#ff0;
 $c-Underline:	#ccc; // not for links
+$c-Border:		#ccc;
 
 // ----------------------------------------------------------------
 // Fonts Families
