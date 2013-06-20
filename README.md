@@ -65,4 +65,7 @@ Additional references for further documentation
 * http://gumbyframework.com/docs/ui-kit/#!/
 * http://www.newnet-soft.com/blog/csstypography
 * http://purecss.io/
+* http://coding.smashingmagazine.com/2013/05/22/centering-elements-with-flexbox/
+* http://dropshado.ws/post/51574113930/flex-box-with-collapsed-height
 * http://brettjankord.com/projects/style-guide-boilerplate/#text-elements
+* http://www.99lime.com/elements/
