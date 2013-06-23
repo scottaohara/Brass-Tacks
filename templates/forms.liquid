@@ -9,11 +9,11 @@
 	<div class="row">
 	<div class="col col-60">
 	   <fieldset class="grouping">        
-    	       <label for="input-Text" class="text-Label">Input - Normal Text</label>
-    	       <input id="input-Text" class="input-Area" type="text" placeholder="Write Text Here" />
+    	   <label for="input-Text" class="text-Label">Input - Normal Text</label>
+    	   <input type="text" id="input-Text" class="input-Area" placeholder="Write Text Here" />
     	       
-    	       <label for="input-Text" class="text-Label">Input - Text w/Data List</label>
-    	       <input id="input-Text-dl" list="fav-color"  class="input-Area" type="text" placeholder="Choose your fav. color" />
+    	   <label for="input-Text-dl" class="text-Label">Input - Text w/Data List</label>
+    	   <input type="text" id="input-Text-dl" list="fav-color" class="input-Area" placeholder="Choose your fav. color" />
 			   <datalist id="fav-color">
 			   		<option value="Red"></option> 
 			        <option value="Orange"></option> 
@@ -24,19 +24,19 @@
 			   </datalist>
     	       
     	       <label for="input-Email" class="text-Label">Input - Email</label>
-    	       <input id="input-Email" class="input-Area" type="email" placeholder="Enter Email" />
+    	       <input type="email" id="input-Email" class="input-Area" placeholder="Enter Email" />
     	       
     	       <label for="input-Password" class="text-Label">Input - Password</label>
-    	       <input id="input-Password" class="input-Area" type="password" placeholder="Enter Password" />
+    	       <input type="password" id="input-Password" class="input-Area" placeholder="Enter Password" />
     	       
     	       <label for="input-Url" class="text-Label">Input - Web Address</label>
     	       <input id="input-Url" class="input-Area" type="url" placeholder="Enter Web Address" />
     	       
-    	       <label for="input-tel" class="text-Label">Input - Phone Number</label>
-    	       <input id="input-tel" class="input-Area" type="tel" placeholder="555.555.5555" />
+    	       <label for="input-Tel" class="text-Label">Input - Phone Number</label>
+    	       <input type="tel" id="input-Tel" class="input-Area" placeholder="555.555.5555" />
     	       
     	       <label for="input-Search" class="text-Label">Input - Search</label>
-    	       <input id="input-Search" class="input-Area" type="search" placeholder="Search for..." />
+    	       <input type="search" id="input-Search" class="input-Area" placeholder="Search for..." />
     	       <input type="submit" class="btn btn-action" value="Search" />
     	       
     	       <label for="input-TextArea" class="text-Label">Text Area</label>
@@ -45,27 +45,27 @@
 	   
 	   <fieldset class="grouping fs-Legend">
 	   		<legend class="legend">Input Variants</legend>
-	   		<label for="input-Text-Disabled" class="text-Label dis-Label">Disabled Text Input</label> 
-    	    <input id="input-Text-Disabled" class="input-Area" type="text" value="Disabled text input" disabled="disabled" />
+	   		<label class="text-Label dis-Label">Disabled Text Input</label> 
+    	  <input type="text" class="input-Area" value="Disabled text input" disabled="disabled" />
 	   
-	   		<label for="input-Text-Readonly" class="text-Label">Readonly Text Input</label>
-	   		<input id="input-Text-Readonly" class="input-Area" type="text" value="Readonly text input" readonly="readonly">
+	   		<label class="text-Label">Readonly Text Input</label>
+	   		<input type="text" class="input-Area" value="Readonly text input" readonly="readonly" />
 	   		
 	   		<label for="input-Required" class="text-Label">Required Input</label>
-	   		<input id="input-Required" class="input-Area" type="text" placeholder="Placeholder Text" required="required" />
-	   		
+	   		<input type="text" id="input-Required" class="input-Area" placeholder="Placeholder Text" required="required" />	   		
 	   </fieldset>
 	</div>
+	
 	<div class=" col col-40">
-		<h4 class="eps">base inputs</h4>
+		<h4 class="eps">Base inputs</h4>
 		<p>
-					asdf
+      
 		</p>
 				
 	</div>
 </div> <!-- end .row -->
-	  
-	       <hr />
+
+<hr />
 
 <h3>Check Boxes</h3>
 <div class="row">
@@ -88,11 +88,9 @@
     	               </span>
     	               Check Box 2
 	               </label>
-	               
-    	           <input type="checkbox" class="input-Hide" id="check-2" />
+	               <input type="checkbox" class="input-Hide" id="check-2" />
 	           </div>
-
-	   </fieldset>  
+    </fieldset>  
 </div>
 	<div class=" col col-40">
 		<h4 class="eps">Check box inputs</h4>
@@ -108,27 +106,24 @@
 <div class="row">
 	<div class="col col-60">	       
 	  <fieldset class="radios grouping">
-	           
-	           
-	           <div class="option-Container input-Radio">
-	               <label for="radio-1" class="option-Label">Radio Option 1</label>
-	               <span class="btn-Radio"></span>
-    	           <input type="radio" class="input-Hide" id="radio-1" name="radio-Set" />
-	           </div>
-	           
-	           <div class="option-Container input-Radio">
+	    <div class="option-Container input-Radio">
+         <label for="radio-1" class="option-Label">Radio Option 1</label>
+         <span class="btn-Radio"></span>
+         <input type="radio" class="input-Hide" id="radio-1" name="radio-Set" />
+      </div>
+	    
+	    <div class="option-Container input-Radio">
 	               <label for="radio-2" class="option-Label">Radio Option 2</label>
 	               <span class="btn-Radio"></span>
     	           <input type="radio" class="input-Hide" id="radio-2" name="radio-Set" />
 	           </div>
-	           
-	           <div class="option-Container input-Radio">
+	    
+	    <div class="option-Container input-Radio">
 	               <label for="radio-3" class="option-Label">Radio Option 3</label>
 	               <span class="btn-Radio"></span>
     	           <input type="radio" class="input-Hide" id="radio-3" name="radio-Set" />
 	           </div>
-	           
-	       </fieldset>
+	   </fieldset>
 </div>
 	<div class=" col col-40">
 		<h4 class="eps">Radio Button inputs</h4>
@@ -138,15 +133,14 @@
 				
 	</div>
 </div> <!-- end .row -->	       
-	       <hr />
 
-  <h3>Selections</h3>
+<hr />
+
+<h3>Selections</h3>
 <div class="row">
 	<div class="col col-60">	       
-	       <fieldset class="grouping">
-	         
-	           
-	           <label for="base-Select" class="text-Label">Default Select</label>
+	  <fieldset class="grouping">
+	        <label for="base-Select" class="text-Label">Default Select</label>
 	           <div class="select-Container">
     	           <select id="base-Select" class="input-Select">
     	               <option>Select an Item...</option>
@@ -157,7 +151,7 @@
     	           </select>
 	           </div>
 	           
-	           <label for="multi-Select" class="text-Label">Multiple select field</label>
+	         <label for="multi-Select" class="text-Label">Multiple select field</label>
 		       <select id="multi-Select" multiple size="5" class="input-Area">
 		           <option>Option 1</option>
 		           <option>Option 2</option>
@@ -165,40 +159,38 @@
 		           <option>Option 4</option>
 		           <option>Option 5</option>
 		       </select>
-	           
-	           
-	           
-	           <label for="num-Spin" class="text-Label">Number Spinbox</label>
-	           <input id="num-Spin" type="number" min="0" max="20" step="1" value="5" class="input-Number" />
-	           
-	           <label for="num-Date" class="text-Label">Date: mm/dd/yyy</label>
-	           <input id="num-Date" type="date" class="input-Number" />
-	           
-	           <label for="num-Time" class="text-Label">Time: 12:00 PM</label>
-	           <input id="num-Time" type="time" class="input-Number" />
-	           
-	           <label for="color-Picker" class="text-Label">Hex Color</label>
-	           <input id="color-Picker" type="color" class="input-Color" />
-	           
-	       </fieldset>
+	         
+	         <label for="num-Spin" class="text-Label">Number Spinbox</label>
+	         <input type="number" id="num-Spin" min="0" max="20" step="1" value="5" class="input-Number" />
+	         
+	         <label for="num-Date" class="text-Label">Date: mm/dd/yyy</label>
+	         <input type="date" id="num-Date" class="input-Number" />
+	         
+	         <label type="time" for="num-Time" class="text-Label">Time: 12:00 PM</label>
+	         <input id="num-Time" class="input-Number" />
+	         
+	         <label for="color-Picker" class="text-Label">Hex Color</label>
+	         <input type="color" id="color-Picker" class="input-Color" />
+	  </fieldset>
 </div>
-	<div class=" col col-40">
-		<h4 class="eps">Selection inputs</h4>
-		<p>
-					asdf
-		</p>
-				
-	</div>
+
+<div class=" col col-40">
+  <h4 class="eps">Selection Inputs</h4>
+  <p>
+    asdf
+  </p>
+</div>
+
 </div> <!-- end .row -->	       
-	       <hr />
+
+<hr />
+
 <h3>File Inputs</h3>
 <div class="row">
 	<div class="col col-60">	       
 	       <fieldset class="grouping">
-	
-	       	
-	       	<div class="file-Input-Area">
-		       	<input id="input-File" class="input-File" type="file" />
+           <div class="file-Input-Area">
+		       	<input type="file" id="input-File" class="input-File" />
 	       		<label for="input-File" class="text-Label">File input</label>
 		   		<span class="input-File-Text input-Area">
 	       			<span class="placeholder">Select a file...</span>
@@ -207,44 +199,38 @@
 	       			Select
 	       		</span>
 		   	</div>
-		   	
-	       	
-	       </fieldset>
+</fieldset>
+
 </div>
-	<div class=" col col-40">
-		<h4 class="eps">File inputs</h4>
-		<p>
-					asdf
-		</p>
-				
-	</div>
+<div class=" col col-40">
+  <h4 class="eps">File inputs</h4>
+  <p>
+    asdf
+  </p>
+</div>
 </div> <!-- end .row -->	
 
 <hr />
 
 <h3 class="txt-Left">Submission Buttons</h3>
 <div class="row">
-	<div class="col col-60">       
-	       <fieldset class="grouping txt-Center">
-	           
-	           
-	           <input type="button" class="btn-Disable" value="Disabled" />
-	           <input type="reset" class="btn-Neg" value="Reset" />
-	           <input type="submit" class="btn" value="Submit" />
-	       
-	       </fieldset>
-</div>
-	<div class=" col col-40">
-		<h4 class="eps">Button inputs</h4>
-		<p>
-					asdf
-		</p>
-				
-	</div>
+  <div class="col col-60">       
+    <fieldset class="grouping txt-Center">
+      <input type="button" class="btn-Disable" value="Disabled" />
+      <input type="reset" class="btn-Neg" value="Reset" />
+      <input type="submit" class="btn" value="Submit" />
+	  </fieldset>
+  </div>
+  
+  <div class=" col col-40">
+    <h4 class="eps">Button inputs</h4>
+  	<p>
+  	  asdf
+    </p>
+  </div>
 </div> <!-- end .row -->
-	</form>
-	
-	
+
+</form>
 </section>
 {% endblock %}
 
@@ -268,7 +254,5 @@
 		   $(this).parent().find(".input-File-Text").html(this.value)
 		});
 	});
-
 </script>
-
 {% endblock %}
