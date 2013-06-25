@@ -15,7 +15,7 @@ A current(maybe?) build can be viewed at http://playground.scott-ohara.mixture.i
 
 <hr />
 
-## Ground Floor Specifics
+## Brass Tacks Specifics
 
 * HTML5 ready building and general styling
 * Modern Browser friendly with compatibility for IE7/8+ (untested)
