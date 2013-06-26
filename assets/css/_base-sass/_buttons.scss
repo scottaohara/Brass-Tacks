@@ -25,6 +25,8 @@
         @include box-shadow($bs-6);
         color:$c-Lighter
     }
+    
+    &:visited{color:$c-Lighter;}
 }
 
 
@@ -81,10 +83,21 @@
 }
 
 .btn-Neg, 
-.btn-Neg:hover{@extend %btn; background:$c-Btn-Neg; color:$c-Lighter}
+.btn-Neg:hover{
+  @extend %btn; 
+  background:$c-Btn-Neg; 
+  color:$c-Lighter;
+}
 
-.btn-Disable, 
-.btn-Disable:hover{@extend %btn; background:$c-Disabled; border:1px solid #eee; color:$c-Dark; cursor:default}
+.btn-Disable{
+  &:hover, &:visited{
+    @extend %btn; 
+    background:$c-Disabled; 
+    border:1px solid #eee; 
+    color:$c-Dark; 
+    cursor:default;
+  }
+}
 
 
 // ----------------------------------------------------------------
