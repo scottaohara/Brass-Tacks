@@ -4,8 +4,8 @@
 body{background:$c-BG; font-family:$brand; font-weight:300}
 
 // Highlight Text Selection
-::-moz-selection{background:$c-Brand-1; color:$c-Light; text-shadow:none}
-::selection		{background:$c-Brand-1; color:$c-Light; text-shadow:none}
+::-moz-selection  {background:$c-Brand-1; color:$c-Light; text-shadow:none}
+::selection       {background:$c-Brand-1; color:$c-Light; text-shadow:none}
 
 // Full container for the entire page.  
 .page{}
@@ -30,10 +30,10 @@ body{background:$c-BG; font-family:$brand; font-weight:300}
 // ----------------------------------------------------------------
 //		Project Specific Link Stylings
 // ----------------------------------------------------------------
-a{
+a, a:not(.btn){   // :not makes sure that .btns don't inherit base <a> styling
 	color:$c-Link;
-	&:hover, &:active{}
-	&:visited{}
+	&:hover, &:active{color:darken($c-Link, 15%)}
+	&:visited{color:darken($c-Link, 30%)}
 }
 // example - :hover{color:darken($c-Link, 15%)}
 

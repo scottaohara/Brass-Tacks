@@ -18,7 +18,8 @@
 	border-bottom:1px solid #eee;
 	border-top:1px solid #eee;
 	margin:$spacing*4 auto;
-	a{padding:$spacing*2 $spacing*3; text-decoration:none;
+	
+	a, a:visited{padding:$spacing*2 $spacing*3; text-decoration:none;
 		&:hover{background:#eee;}
 		&.selected, &:active{background:#ddd;}
 	}

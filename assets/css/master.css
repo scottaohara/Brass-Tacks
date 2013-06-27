@@ -328,8 +328,7 @@ table {
   padding: 4px 8px; }
 
 .btn, .btn-Small, .btn-Large, .btn-XLarge, .btn-Wide, .btn-Action, .btn-Action-2, .btn-Action-3, .btn-Neg,
-.btn-Neg:hover, .btn-Disable,
-.btn-Disable:hover, .btn-Square, .btn-Round, .btn-Radio, .btn-Check {
+.btn-Neg:hover, .btn-Disable:hover, .btn-Disable:visited, .btn-Square, .btn-Round, .btn-Radio, .btn-Check {
   background: #444444;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -351,13 +350,15 @@ table {
   transition: all 0.25s ease-in-out 0s;
   vertical-align: middle;
   -webkit-appearance: none; }
-  .btn.btn-Pad, .btn-Pad.btn-Small, .btn-Pad.btn-Large, .btn-Pad.btn-XLarge, .btn-Pad.btn-Wide, .btn-Pad.btn-Action, .btn-Pad.btn-Action-2, .btn-Pad.btn-Action-3, .btn-Pad.btn-Neg, .btn-Pad.btn-Disable, .btn-Pad.btn-Square, .btn-Pad.btn-Round, .btn-Pad.btn-Radio, .btn-Pad.btn-Check {
+  .btn.btn-Pad, .btn-Pad.btn-Small, .btn-Pad.btn-Large, .btn-Pad.btn-XLarge, .btn-Pad.btn-Wide, .btn-Pad.btn-Action, .btn-Pad.btn-Action-2, .btn-Pad.btn-Action-3, .btn-Pad.btn-Neg, .btn-Pad.btn-Disable:hover, .btn-Pad.btn-Disable:visited, .btn-Pad.btn-Square, .btn-Pad.btn-Round, .btn-Pad.btn-Radio, .btn-Pad.btn-Check {
     padding: 8px 16px; }
-  .btn:hover, .btn:active, .btn-Small:hover, .btn-Large:hover, .btn-XLarge:hover, .btn-Wide:hover, .btn-Action:hover, .btn-Action-2:hover, .btn-Action-3:hover, .btn-Neg:hover, .btn-Disable:hover, .btn-Square:hover, .btn-Round:hover, .btn-Radio:hover, .input-Radio.selected-Radio .btn-Radio, .btn-Check:hover, .input-Check.selected-Check .btn-Check, .btn-Small:active, .btn-Large:active, .btn-XLarge:active, .btn-Wide:active, .btn-Action:active, .btn-Action-2:active, .btn-Action-3:active, .btn-Neg:active, .btn-Disable:active, .btn-Square:active, .btn-Round:active, .btn-Radio:active, .btn-Check:active {
+  .btn:hover, .btn:active, .btn-Small:hover, .btn-Large:hover, .btn-XLarge:hover, .btn-Wide:hover, .btn-Action:hover, .btn-Action-2:hover, .btn-Action-3:hover, .btn-Neg:hover, .btn-Disable:hover, .btn-Square:hover, .btn-Round:hover, .btn-Radio:hover, .input-Radio.selected-Radio .btn-Radio, .btn-Check:hover, .input-Check.selected-Check .btn-Check, .btn-Small:active, .btn-Large:active, .btn-XLarge:active, .btn-Wide:active, .btn-Action:active, .btn-Action-2:active, .btn-Action-3:active, .btn-Neg:active, .btn-Disable:active:hover, .btn-Disable:active:visited, .btn-Square:active, .btn-Round:active, .btn-Radio:active, .btn-Check:active {
     background: #101010;
     -moz-box-shadow: 0 0 6px rgba(255, 255, 255, 0.5) inset;
     -webkit-box-shadow: 0 0 6px rgba(255, 255, 255, 0.5) inset;
     box-shadow: 0 0 6px rgba(255, 255, 255, 0.5) inset;
+    color: #f8f8f8; }
+  .btn:visited, .btn-Small:visited, .btn-Large:visited, .btn-XLarge:visited, .btn-Wide:visited, .btn-Action:visited, .btn-Action-2:visited, .btn-Action-3:visited, .btn-Neg:visited, .btn-Disable:visited, .btn-Square:visited, .btn-Round:visited, .btn-Radio:visited, .btn-Check:visited {
     color: #f8f8f8; }
 
 .btn-Small {
@@ -401,8 +402,7 @@ table {
   background: #aaaaaa;
   color: #f8f8f8; }
 
-.btn-Disable,
-.btn-Disable:hover {
+.btn-Disable:hover, .btn-Disable:visited {
   background: #fafafa;
   border: 1px solid #eee;
   color: #444444;
@@ -854,8 +854,12 @@ body {
   font-family: "Open Sans";
   font-weight: 300; }
 
-a {
+a, a:not(.btn) {
   color: #d48371; }
+  a:hover, a:active, a:not(.btn):hover, a:not(.btn):active {
+    color: #bf523a; }
+  a:visited, a:not(.btn):visited {
+    color: #843928; }
 
 .header-Base {
   padding-top: 8px; }
@@ -865,18 +869,18 @@ a {
   border-bottom: 1px solid #eee;
   border-top: 1px solid #eee;
   margin: 16px auto; }
-  .header-Nav a {
+  .header-Nav a, .header-Nav a:visited {
     padding: 8px 12px;
     text-decoration: none; }
-    .header-Nav a:hover {
+    .header-Nav a:hover, .header-Nav a:visited:hover {
       background: #eee; }
-    .header-Nav a.selected, .header-Nav a:active {
+    .header-Nav a.selected, .header-Nav a:active, .header-Nav a:visited.selected, .header-Nav a:visited:active {
       background: #ddd; }
 
-.base-Content {
+.content-Base {
   min-height: 500px;
   padding-bottom: 20px; }
-  .base-Content .content, .base-Content .header-Content, .base-Content .footer-Content {
+  .content-Base .content, .content-Base .header-Content, .content-Base .footer-Content {
     background: #fff;
     border: 1px solid #eeeeee;
     -moz-box-shadow: 0 8px 8px -8px rgba(0, 0, 0, 0.5);
