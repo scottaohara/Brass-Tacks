@@ -1,63 +1,4 @@
 // ----------------------------------------------------------------
-//		Text Helpers
-// ----------------------------------------------------------------
-// Align Text
-.txt-Center	{text-align:center}
-.txt-Left	{text-align:left}
-.txt-Right	{text-align:right}
-.txt-Just	{text-align:justify}
-
-// Truncate Text
-%truncate{@include truncate(100%)}
-
-// Applies a degree symbol
-%degree:after{content:"\00BA"}
-
-// Applies >> to a link/btn
-%go:after{content:"\00A0" "\00BB"}
-
-// Word Wraps
-%auto-wrap	  {word-wrap:auto}
-%breakword	  {word-wrap:break-word}
-%normal-wrap  {word-wrap:normal}
-
-// Highlight Text
-.highlight, %highlight{
-	background:$c-Highlight;
-	color:$c-Darker;
-	@include border-radius(3px);
-	display:inline-block;
-	padding:$spacing;
-	vertical-align:text-top;
-}
-
-// Skew Text/Highlight
-.slant{
-	@extend %highlight;
-	@include vendor(transform, skewX(-16deg));
-}
-
-.text-Correct{
-	display:inline-block;
-	@include vendor(transform, skewX(16deg));
-}
-	
-/*
-	Code Example: Slanted Text w/Highlight
-	--------------------------
-	<span class="slant">
-		Text Goes here
-	</span>
-	
-	Code Example: Normal flowing text w/slanted highlight
-	--------------------------
-	<span class="slant">
-		<span class="text-Correct">Text Goes here</span>
-	</span>
-*/
-
-
-// ----------------------------------------------------------------
 //		Floats & Clearing
 // ----------------------------------------------------------------
 .float-Left	  {float:left}
@@ -80,16 +21,6 @@
 
 // Hide from browsers but not from screen readers
 .invis, %invis{@include invisible}
-
-
-// ----------------------------------------------------------------
-//		List Manipulation
-// ----------------------------------------------------------------
-// Kill list styling - extend into Navigations & for lists that don't require markings
-.kill-List, %kill-List{list-style:none; padding:0}
-// Give numerical values to a semantically unordered list
-.numbered{list-style:decimal}  
-
 
 // ----------------------------------------------------------------
 //		Reoccuring HTML Elements
@@ -165,15 +96,6 @@
 */
 
 
-// Shout Out - blockquote / blockquote like styling for emphasizing text
-.shout-Out{
-	background:$c-Lighter;
-	border-left:4px solid $c-Dark;
-	padding:$spacing*4;
-	&:before, &:after{display:none}
-}
-
-
 // Call out boxes
 .emph-Block{
 	background:#fafafa;
@@ -188,9 +110,4 @@
 }
 
 
-// Multi-Columned Text
-.multi{
-	@include base-vendor(column-count, 3);
-	@include base-vendor(column-gap, $spacing*10);
-	@include base-vendor(column-rule, 1px outset #eee);
-}
+

@@ -17,6 +17,7 @@
            #{$property}:$value;
 }
 
+
 // ----------------------------------------------------------------
 //		Useful CSS3 Mixins
 // ----------------------------------------------------------------
@@ -31,20 +32,30 @@
 	background-clip:padding-box;
 }
 
-// Box Shadow
+// Box Shadow   ---  See _var.scss to edit & create box-shadow rules
 @mixin box-shadow($bs-value){
 	@include base-vendor(box-shadow, $bs-value)
 }
-	// See _var.scss to edit & create box-shadow rules
 
-	
-// Transition
-//@mixin transition($tran-property, $tran-time, $tran-method, $tran-delay) {
-//	@include vendor(transition, $tran-property $tran-time $tran-method $tran-delay);
-//}
-	// Example --  @include transition(all 0.35s ease 0;);
-	// transition: property duration timing-function(method) delay;
-	// transition: all 		.35s 	 ease 					 0s;  <-- the s is required regardless of if it's 0 or not
+// Linear Gradient
+@mixin linear-gradient($grad-Line, $grad-Colors...) {
+  background: -webkit-linear-gradient($grad-Line, $grad-Colors);
+  background:    -moz-linear-gradient($grad-Line, $grad-Colors);
+  background:      -o-linear-gradient($grad-Line, $grad-Colors);
+  background:         linear-gradient($grad-Line, $grad-Colors);
+}
+    //  grad-Line - use either ###deg or top, let, bottom, right
+    //  example:
+    //    @include linear-gradient(80deg, #fcc, #f23);
+    //    @include linear-gradient(top, #fcc, #f23);
+
+// Radial Gradient
+@mixin radial-gradient($radial...) {
+  background: -webkit-radial-gradient($radial);
+  background:    -moz-radial-gradient($radial);
+  background:      -o-radial-gradient($radial);
+  background:         radial-gradient($radial);
+}
 	
 	
 // ----------------------------------------------------------------

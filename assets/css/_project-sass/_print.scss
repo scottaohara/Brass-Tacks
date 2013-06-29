@@ -2,14 +2,13 @@
 
 @media print{
 	*{
-        background:transparent!important;
-        color:#000!important; // Black prints faster
-        box-shadow:none!important;
-        text-shadow:none!important;
+	    background:transparent!important;
+      color:#000!important; // Black prints faster
+      box-shadow:none!important;
+      text-shadow:none!important;
     }
-
+    
     a, a:visited{text-decoration:underline}
-
     a[href]:after{content:" (" attr(href) ")"}
 
     abbr[title]:after{content:" (" attr(title) ")"}
@@ -25,6 +24,5 @@
     @page{margin:0.5cm}
 
     p,h2, h3{orphans:3; widows:3}
-
     h2, h3{page-break-after:avoid}
 }

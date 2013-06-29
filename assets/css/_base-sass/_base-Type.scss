@@ -8,6 +8,10 @@ ul, ol{margin:0 0 $spacing*2; padding:0 0 0 $spacing*6;
 	li ol, li ul{margin-top:$spacing*2} // keep equal spacing li content followed by lists within lists
 }
 
+// Definition Lists
+dt{margin-bottom:$spacing}
+dd{margin:0 0 $spacing*2; padding-left:$spacing*4}
+
 // Bold these things.  Bold 'em good.
 b, strong{font-weight:bold}
 
@@ -22,8 +26,9 @@ blockquote{
 	&:after{content:'"'; right:-1px}
 }
 
-// Outlines - get rid of em
-:focus, a:focus, a:active, input[type="submit"]::-moz-focus-inner{outline:none}
+// sets consistent quotes across browsers
+q{quotes:"\201C" "\201D" "\2018" "\2019"}
+
 
 //  Here are extra resets for additional HTML tags that 
 //  aren't really necessary to use for most websites/web apps
@@ -36,14 +41,6 @@ abbr[title], dfn[title]{cursor:help}
 
 // IE 8/9 doesn't do this by default.  shame.  shame IE.  shame...
 mark{background:$c-Highlight; color:$c-Darker}
-
-code, kbd, pre, samp{font-family:monospace, serif; font-size:$base}
-
-// improves readability
-pre{white-space:pre-wrap}
-
-// sets consistent quotes across browsers
-q{quotes:"\201C" "\201D" "\2018" "\2019"}
 
 // Prevents sub & sup from affecting the line-height
 sub, sup{font-size:75%; line-height:0; position:relative; vertical-align:baseline}

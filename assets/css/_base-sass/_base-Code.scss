@@ -1,0 +1,16 @@
+// ----------------------------------------------------------------
+//		Basic Styling: Code Elements
+// ----------------------------------------------------------------
+
+code, kbd, pre, samp{font-family:monospace, serif; font-size:$base}
+
+pre{
+  overflow:auto; 
+  white-space:pre-wrap;
+  
+  mark{   // test out styling for this
+    background:#eee;
+    border-bottom:1px solid #ddd;
+    color:#333;
+  }
+}

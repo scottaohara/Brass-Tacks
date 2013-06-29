@@ -90,13 +90,12 @@
 }
 
 .btn-Disable{
-  &:hover, &:visited{
     @extend %btn; 
     background:$c-Disabled; 
     border:1px solid #eee; 
     color:$c-Dark; 
     cursor:default;
-  }
+    &:hover, &:visited{@extend .btn-Disable}
 }
 
 
