@@ -6,6 +6,7 @@
 ul, ol{margin:0 0 $spacing*2; padding:0 0 0 $spacing*6;
 	> li:last-child{margin-bottom:0} // Kill double bottom margin
 	li ol, li ul{margin-top:$spacing*2} // keep equal spacing li content followed by lists within lists
+	li li{font-size:1em} // Keeps same font-size as parent <li>
 }
 
 // Definition Lists
@@ -29,15 +30,8 @@ blockquote{
 // sets consistent quotes across browsers
 q{quotes:"\201C" "\201D" "\2018" "\2019"}
 
-
-//  Here are extra resets for additional HTML tags that 
-//  aren't really necessary to use for most websites/web apps
-
-// Abbr should have an underline in all browsers when a title tag is present
-abbr[title]{border-bottom:1px dotted $c-Underline}
-
-// Show help cursor to tags with title attribute
-abbr[title], dfn[title]{cursor:help}
+// An underline & help cursor in all browsers when a title tag is present
+abbr[title], dfn[title]{border-bottom:1px dotted $c-Underline; cursor:help}
 
 // IE 8/9 doesn't do this by default.  shame.  shame IE.  shame...
 mark{background:$c-Highlight; color:$c-Darker}

@@ -1,3 +1,15 @@
+/*
+  *******************************************************************************************************
+  * Brass Tacks
+  * by Scott O'Hara - @scottohara - scottohara.me  -  https://github.com/bleachedgraphics
+  * v 0.5.4 - June 29, 2013
+  *
+  * This framework is still and development.  If you have any suggestions/fixes/comments, please
+  * create an issue - https://github.com/bleachedgraphics/Brass-Tacks/issues 
+  * Thank you!
+  *
+  *******************************************************************************************************
+*/
 // Import Font(s) 
 	@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,700italic,600,400italic,300italic,600italic);
 
@@ -17,6 +29,7 @@
 	@import '_helper-sass/buttons';			    // Base button rules
 	
 // Helper Classes
+  @import '_helper-sass/navs';				    // Base navigation classes
 	@import '_helper-sass/helper';			    // Classes to extend others.  Mini-modules -- these need to be separated out?
 	
 // Branding & Typography
