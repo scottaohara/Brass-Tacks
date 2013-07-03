@@ -2,7 +2,16 @@
 //		Basic Styling: Code Elements
 // ----------------------------------------------------------------
 
-code, kbd, pre, samp{font-family:monospace, serif; font-size:$base}
+code, kbd, pre, samp{
+  @extend %margin-bottom;
+  background:#F2F2F2;
+  border:1px solid #E3E3E3;
+  border-left-width:6px;
+  display:block;
+  font-family:monospace, serif; 
+  font-size:$base;
+  padding:$spacing*2;
+}
 
 pre{
   overflow:auto; 
@@ -12,5 +21,14 @@ pre{
     background:#eee;
     border-bottom:1px solid #ddd;
     color:#333;
+  }
+}
+
+
+p, li{
+  code, kbd, pre, samp{
+    display:inline-block; 
+    margin:0;
+    padding:$spacing;
   }
 }

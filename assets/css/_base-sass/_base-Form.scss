@@ -1,6 +1,9 @@
 // ----------------------------------------------------------------
 //		Form Elements Standardization
 // ----------------------------------------------------------------
+// Consistent Margins
+form{@extend %margin-bottom;}
+
 // Corrects font-family and size not being inherited in all browsers, inconsistent margins, line-heights and transforms
 button, input, select, textarea{border:0; font:{family:inherit; size:100%}; line-height:normal; margin:0; text-transform:none}
 

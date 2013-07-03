@@ -5,14 +5,22 @@
 $table-Border: 1px solid #ccc; // sets consistent boarder styling for table elements
 
 // Removes most of the table spacing issues
-table{border-collapse:collapse; border-spacing:0}
+table{
+  @extend %margin-bottom;
+  border-collapse:collapse;
+  border-spacing:0;
+}
 
 .table-Base{
 	background:#fafafa;
 	font-size:$base;
 	width:100%; // make tables always take up the entire width of their containing parent.
 	
-	th, td{padding:$spacing; text-align:left}
+	th, 
+	td{
+  	padding:$spacing; 
+  	text-align:left;
+	}
 }
 
 .table-Header{
