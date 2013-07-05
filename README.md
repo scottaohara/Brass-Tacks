@@ -9,7 +9,7 @@ the best practices of other web designers and developers in the field.
 Many other developers have had a hand in helping me shape Brass Tacks' outcome. I will list them here and 
 likely rewrite this into later.
 
-A current(likely not current) build can be viewed at http://playground.scott-ohara.mixture.io/ (for now)
+A current(likely not current) build can be viewed at http://brass-tacks.scott-ohara.mixture.io/ (for now)
 
 
 ## Brass Tacks Specifics
