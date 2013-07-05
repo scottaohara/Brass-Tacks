@@ -2,7 +2,12 @@
 // Tables
 // ----------------------------------------------------------------
 
-$table-Border: 1px solid #ccc; // sets consistent boarder styling for table elements
+// sets consistent boarder styling for table elements
+$border-Table: 1px solid $c-Table-Border;
+
+// Resets main table tags
+caption, legend, table, td, th, tr{@extend %reset}
+
 
 // Removes most of the table spacing issues
 table{
@@ -12,7 +17,7 @@ table{
 }
 
 .table-Base{
-	background:#fafafa;
+	background:$c-Table;
 	font-size:$base;
 	width:100%; // make tables always take up the entire width of their containing parent.
 	
@@ -24,7 +29,7 @@ table{
 }
 
 .table-Header{
-	background:#eee;
+	background:$c-Table-Head;
 }
 
 .table-Body{
@@ -32,20 +37,20 @@ table{
 }
 
 .table-Footer{
-	background:#e3e3e3;
+	background:$c-Table-Foot;
 }
 
 .table-Border{
 	@extend .table-Base;
-	border-bottom:$table-Border;
-	border-right:$table-Border;
+	border-bottom:$border-Table;
+	border-right:$border-Table;
 	
-	tr{border-top:$table-Border}
-	th, td{border-left:$table-Border}
+	tr{border-top:$border-Table}
+	th, td{border-left:$border-Table}
 }
 
 .table-Stripe{
 	@extend .table-Base;
 	
-	tr:nth-child(2n){background:$c-Light}
+	tr:nth-child(2n){background:$c-Table-Striped}
 }

@@ -1,3 +1,4 @@
+{% block title %}Extended Elements{% endblock %}
 {% block content %} 
 <section class="content">
 	<h2>Sample Text Content</h2>
@@ -7,61 +8,7 @@
 
 <hr />
 
-	<h3>Address Block</h3>
-<div class="row">
-	<div class="col col-60">
-	
-		<address>
-		  <strong>Company Name, Inc.</strong><br>
-		  811 7th Ave, Suite 700<br>
-		  Manhattan, NY 10019<br>
-		  <abbr title="Phone">P:</abbr> (487) 487-4874
-		</address>
-	</div> <!-- end .col-60 -->
-	
-	<div class="col col-40">
 
-			explain
-
-	</div>
-</div> <!-- end .row -->
-
-<hr />
-
-<h3>Details</h3>
-<div class="row">
-	<div class="col col-60">
-
-<details open="open">
-    <summary>More info</summary>
-    <div>
-        <p>Additional information</p>
-        <ul>
-            <li>Point 1</li>
-            <li>Point 2</li>
-        </ul>
-    </div>
-</details>
-<details>
-    <summary>More info</summary>
-    <div>
-        <p>Additional information</p>
-        <ul>
-            <li>Point 1</li>
-            <li>Point 2</li>
-        </ul>
-    </div>
-</details>
-</div> <!-- end .col-60 -->
-	
-	<div class="col col-40">
-
-			explain
-
-	</div>
-</div> <!-- end .row -->
-
-<hr />
 
 <h3>Media Element</h3>
 <div class="row">
@@ -146,36 +93,64 @@
 
 <hr />
 
-<h3>Preformatted Text</h3>
+
+<h3>Slanted Text</h3>
 <div class="row">
 	<div class="col col-60">
-<pre>  	
-P R E F O R M A T T E D T E X T
-! " # $ % &amp; ' ( ) * + , - . /
-0 1 2 3 4 5 6 7 8 9 : ; &lt; = &gt; ?
-@ A B C D E F G H I J K L M N O
-P Q R S T U V W X Y Z [ \ ] ^ _
-` a b c d e f g h i j k l m n o
-p q r s t u v w x y z { | } ~ 
-</pre>
-<br />
-<h4>Pre Code</h4>
-<pre><code>&lt;html>
-  &lt;head>
-  &lt;/head>
-  &lt;body>
-    &lt;div class="main"> 
-      &lt;p>Content goes here&lt;/p>
-    &lt;div>
-  &lt;/body>
-&lt;/html>
-</code></pre>
+		<p class="slant">
+			Slanted Highlight &amp; text.
+		</p>
+		
+		<p class="slant">
+			<span class="text-Correct">Slanted Highlight with corrected text</span>.
+		</p>
+
+	</div> <!-- end .col-60 -->
+	
+	<div class="col col-40">
+		<p>
+			CSS3 Transform to skew the text.
+		</p>
+	</div>
+</div> <!-- end .row -->
+
+<hr />
+	
+<h3>Multi Column Text</h3>	
+<div class="row">
+<p class="multi col">
+  I am going to write something here.
+  I am going to write something here.
+  I am going to write something here.
+  I am going to write something here.
+  I am going to write something here.
+  I am going to write something here.
+  I am going to write something here.
+  I am going to write something here.
+  I am going to write something here.
+  I am going to write something here.
+  I am going to write something here.
+  I am going to write something here.
+  I am going to write something here.
+  I am going to write something here.
+</p>
+</div>	
+
+<hr />	
+	
+<h3>Basic Call Out Box using css3 box shadow</h3>
+<div class="row">
+	<div class="col col-60">
+	<div class="emph-Block">
+		stuff n' things
+	</div>
+
 </div> <!-- end .col-60 -->
 	
 	<div class="col col-40">
-
-			explain
-
+		<p>
+			Callout box using drop shadow and rounded corners
+		</p>
 	</div>
 </div> <!-- end .row -->
 

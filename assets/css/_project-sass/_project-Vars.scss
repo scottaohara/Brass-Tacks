@@ -41,6 +41,14 @@ $c-Highlight:	#ff0;
 $c-Underline:	#ccc; // not for links
 $c-Border:		#ccc;
 
+// Table Colors
+$c-Table: #fafafa;
+$c-Table-Head: #eee;
+$c-Table-Foot: #e3e3e3;
+
+$c-Table-Striped: $c-Light;
+$c-Table-Border: #ccc;
+
 // ----------------------------------------------------------------
 // Fonts Families
 // ----------------------------------------------------------------
@@ -69,7 +77,6 @@ $zeta:	$base-font-multiplier * 1.125;   // 18px
 $base:  $base-font-multiplier;		       // 16px
 $tiny:  $base-font-multiplier * .75;		 // 12px
 $mini:  $base-font-multiplier * .625;		 // 10px
-
 
 // ----------------------------------------------------------------
 // Border Radius Base Default	- t-l  t-r  b-r  b-l

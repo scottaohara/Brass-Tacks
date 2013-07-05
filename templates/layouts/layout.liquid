@@ -1,6 +1,5 @@
 <!doctype html>
-<!--[if lte IE 7 ]><html lang="en" class="ieAll ie7"><![endif]-->
-<!--[if IE 8 ]><html lang="en" class="ieAll ie8"><![endif]-->
+<!--[if lte IE 8 ]><html lang="en" class="ieAll ie8"><![endif]-->
 <!--[if IE 9 ]><html lang="en" class="ieAll ie9"><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--><html lang="en" itemscope itemtype="http://schema.org/Person"><!--<![endif]-->
 <head>
@@ -53,16 +52,15 @@
   <![endif]-->
 </head>
 
-  <body>
-  
+  <body class="fixed-Nav-Left">
+    {% include "navigation" %}
     <div class="page">
     
       <header class="header-Base">
         {% include "header" %}
-        {% include "navigation" %}
       </header>
       
-      <main class="base-Content">
+      <main class="content-Base">
         {% block content %}{% endblock %}
       </main>
       

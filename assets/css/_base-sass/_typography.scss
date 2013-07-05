@@ -2,6 +2,25 @@
 //		Basic Styling: Typography Elements
 // ----------------------------------------------------------------
 
+// Default body text styling
+body{font-size:100%; line-height:1.5}
+
+blockquote, h1, h2, h3, h4, h5, h6, p, pre{@extend %reset;}
+
+// Standard font tags and helper classes
+.giga                     {font:{size:$giga;    weight:700}}
+.ultra                    {font:{size:$ultra;   weight:600}}
+.mega                     {font:{size:$mega;    weight:300}}
+h1, .alpha                {font:{size:$alpha;   weight:400}}
+h2, .beta                 {font:{size:$beta;    weight:400}}
+h3, .gamma                {font:{size:$gamma;   weight:400}}
+h4, .delta                {font:{size:$delta;   weight:300}}
+h5, .eps                  {font:{size:$eps;     weight:300}}
+h6, .zeta                 {font:{size:$zeta;    weight:300}}
+p, li, li p, li a, .base  {font:{size:$base;    weight:300}}
+small, sub, sup, .tiny    {font:{size:$tiny;    weight:300}}
+.mini                     {font:{size:$mini;    weight:300}}
+
 // Consistent margin-bottom for block text elements
 blockquote, h1, h2, h3, h4, h5, h6, li, p, small{@extend %margin-bottom;}
 
@@ -51,7 +70,11 @@ abbr[title], dfn[title]{border-bottom:1px dotted $c-Underline; cursor:help}
 mark{background:$c-Highlight; color:$c-Darker}
 
 // Prevents sub & sup from affecting the line-height
-sub, sup{font-size:75%; line-height:0; position:relative; vertical-align:baseline}
+sub, sup{
+  line-height:0;
+  position:relative;
+  vertical-align:baseline;
+}
 	sub{bottom:-.25em}
 	sup{top:-.5em}	
 

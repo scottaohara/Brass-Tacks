@@ -3,7 +3,7 @@
   *******************************************************************************************************
   * Brass Tacks
   * by Scott O'Hara - @scottohara - scottohara.me  -  https://github.com/bleachedgraphics
-  * v 0.5.4 - June 29, 2013
+  * v 0.6 - July 5, 2013
   *
   * This framework is still and development.  If you have any suggestions/fixes/comments, please
   * create an issue - https://github.com/bleachedgraphics/Brass-Tacks/issues 
@@ -20,46 +20,70 @@ html {
   overflow-y: scroll;
   min-height: 100%; }
 
-body {
-  font-size: 100%;
-  line-height: 1.3; }
-
-body, blockquote, h1, h2, h3, h4, h5, h6, p, pre, form, fieldset, img,
-legend, table, th, td, caption, hr {
+html, body, blockquote, h1, h2, h3, h4, h5, h6, p, pre, hr, audio, embed, img, object, video, button, fieldset, form, input, select, textarea, caption, legend, table, td, th, tr {
   border: 0;
   margin: 0;
   outline: 0;
   padding: 0; }
 
-hr {
-  border-top: 1px solid #ddd;
-  display: block;
-  height: 1px;
-  margin: 8px 0; }
-
-article, aside, details, figure, figcaption, footer,
-header, main, nav, section, summary {
+article, aside, details, figure, figcaption,
+footer, header, main, nav, section, summary {
   display: block; }
 
 [hidden] {
   display: none; }
 
-img {
-  color: red;
-  font-style: italic; }
+body {
+  font-size: 100%;
+  line-height: 1.5; }
 
-audio, img, object, embed, video {
-  max-width: 100%; }
+.giga {
+  font-size: 4.375em;
+  font-weight: 700; }
 
-audio, canvas, video {
-  display: inline-block; }
+.ultra {
+  font-size: 3.75em;
+  font-weight: 600; }
 
-audio:not([controls]) {
-  display: none;
-  height: 0; }
+.mega {
+  font-size: 3.5em;
+  font-weight: 300; }
 
-svg:not(:root) {
-  overflow: hidden; }
+h1, .alpha {
+  font-size: 3.125em;
+  font-weight: 400; }
+
+h2, .beta {
+  font-size: 2.5em;
+  font-weight: 400; }
+
+h3, .gamma {
+  font-size: 2em;
+  font-weight: 400; }
+
+h4, .delta {
+  font-size: 1.625em;
+  font-weight: 300; }
+
+h5, .eps {
+  font-size: 1.25em;
+  font-weight: 300; }
+
+h6, .zeta {
+  font-size: 1.125em;
+  font-weight: 300; }
+
+p, li, li p, li a, .base {
+  font-size: 1em;
+  font-weight: 300; }
+
+small, sub, sup, .tiny {
+  font-size: 0.75em;
+  font-weight: 300; }
+
+.mini {
+  font-size: 0.625em;
+  font-weight: 300; }
 
 small {
   display: block; }
@@ -102,7 +126,6 @@ mark {
   color: #101010; }
 
 sub, sup {
-  font-size: 75%;
   line-height: 0;
   position: relative;
   vertical-align: baseline; }
@@ -113,7 +136,7 @@ sub {
 sup {
   top: -.5em; }
 
-code, kbd, pre, samp {
+code, kbd, samp {
   background: #F2F2F2;
   border: 1px solid #E3E3E3;
   border-left-width: 6px;
@@ -149,12 +172,34 @@ dd {
   margin: 0 0 8px;
   padding-left: 16px; }
 
-button, input, select, textarea {
-  border: 0;
-  font-family: inherit;
+hr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  display: block;
+  height: 1px;
+  margin: 8px 0; }
+
+audio, embed, img, object, video {
+  max-width: 100%; }
+
+img {
+  color: red;
+  font-style: italic; }
+
+audio, canvas, video {
+  display: inline-block; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+button, fieldset, form, input, select, textarea {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 100%;
   line-height: normal;
-  margin: 0;
   text-transform: none; }
 
 button, html input[type='button'], input[type='reset'], input[type='submit'] {
@@ -174,7 +219,7 @@ input[readonly] {
 input[type='search']::-webkit-search-decoration {
   -webkit-appearance: none; }
 
-buton::-moz-focus-inner, input::-moz-focus-inner {
+button::-moz-focus-inner, input::-moz-focus-inner {
   border: 0;
   padding: 0; }
 
@@ -198,7 +243,7 @@ table {
     text-align: left; }
 
 .table-Header {
-  background: #eee; }
+  background: #eeeeee; }
 
 .table-Footer {
   background: #e3e3e3; }
@@ -287,6 +332,23 @@ table {
   padding: 4px; }
   .block > :last-child {
     margin-bottom: 0; }
+
+.b-Col {
+  padding-left: 6px;
+  padding-right: 6px;
+  position: relative; }
+  .b-Col:before, .b-Col:after {
+    background: url("../img/border.png") no-repeat 0 -20px;
+    content: "";
+    height: 200px;
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    width: 1px; }
+  .b-Col:before {
+    left: -14px; }
+  .b-Col:after {
+    right: -14px; }
 
 nav ul,
 nav ol {
@@ -569,8 +631,8 @@ legend, .legend {
   display: inline-block;
   font-size: 16px; }
 
-.v-Nav {
-  /* really only needs styling applied to it, as vertical nav is default */ }
+.v-Nav a {
+  display: block; }
 
 .ah-Nav {
   font-size: 0; }
@@ -613,6 +675,55 @@ legend, .legend {
   display: inline-block;
   padding: 4px 8px; }
 
+.fixed-Nav-Left {
+  padding-left: 200px; }
+  .fixed-Nav-Left .side-Nav-Fixed {
+    left: 0; }
+  .fixed-Nav-Left .btn-Nav {
+    left: 8px;
+    top: 8px; }
+
+.fixed-Nav-Right {
+  padding-right: 200px; }
+  .fixed-Nav-Right .side-Nav-Fixed {
+    right: 0; }
+  .fixed-Nav-Right .btn-Nav {
+    right: 8px;
+    top: 8px; }
+
+.fixed-Nav-Top {
+  padding-top: 100px; }
+
+.top-Nav-Fixed, .side-Nav-Fixed {
+  background: #dc4732;
+  position: fixed;
+  top: 0;
+  z-index: 1000; }
+  .top-Nav-Fixed a, .side-Nav-Fixed a {
+    color: white; }
+    .top-Nav-Fixed a:hover, .side-Nav-Fixed a:hover, .top-Nav-Fixed a:visited, .side-Nav-Fixed a:visited {
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      text-decoration: none; }
+
+.top-Nav-Fixed {
+  height: 100px; }
+
+.side-Nav-Fixed {
+  height: 100%;
+  overflow-y: auto;
+  width: 200px; }
+
+.btn-Nav {
+  background: url(../img/nav-Icon.png) no-repeat center center; }
+
+/*
+  Code Example
+
+<a class="btn btn-Nav" id="btn-Nav-1" href="#show-Nav">
+    <span class="hidden">Show Navigation</span>
+</a>
+*/
 .float-Left {
   float: left; }
 
@@ -640,7 +751,7 @@ nav ol, .media, .media-Reverse, .media-No-Wrap-Reverse, .media-No-Wrap {
 .overflow {
   overflow: hidden; }
 
-blockquote, h1, h2, h3, h4, h5, h6, li, p, small, code, kbd, pre, samp, dt, form, table {
+blockquote, h1, h2, h3, h4, h5, h6, li, p, small, code, kbd, samp, dt, button, fieldset, form, input, select, textarea, table {
   margin-bottom: 8px; }
 
 .d-Block, .show {
@@ -786,8 +897,7 @@ blockquote, h1, h2, h3, h4, h5, h6, li, p, small, code, kbd, pre, samp, dt, form
   border-radius: 3px;
   background-clip: padding-box;
   display: inline-block;
-  padding: 4px;
-  vertical-align: text-top; }
+  padding: 4px; }
 
 .slant {
   -moz-transform: skewX(-16deg);
@@ -817,6 +927,9 @@ blockquote, h1, h2, h3, h4, h5, h6, li, p, small, code, kbd, pre, samp, dt, form
 		<span class="text-Correct">Text Goes here</span>
 	</span>
 */
+.line-Tight {
+  line-height: 1.2; }
+
 .multi {
   -moz-column-count: 3;
   -webkit-column-count: 3;
@@ -827,54 +940,6 @@ blockquote, h1, h2, h3, h4, h5, h6, li, p, small, code, kbd, pre, samp, dt, form
   -moz-column-rule: 1px outset #eeeeee;
   -webkit-column-rule: 1px outset #eeeeee;
   column-rule: 1px outset #eeeeee; }
-
-.giga {
-  font-size: 4.375em;
-  font-weight: 700; }
-
-.ultra {
-  font-size: 3.75em;
-  font-weight: 600; }
-
-.mega {
-  font-size: 3.5em;
-  font-weight: 300; }
-
-h1, .alpha {
-  font-size: 3.125em;
-  font-weight: 400; }
-
-h2, .beta {
-  font-size: 2.5em;
-  font-weight: 400; }
-
-h3, .gamma {
-  font-size: 2em;
-  font-weight: 400; }
-
-h4, .delta {
-  font-size: 1.625em;
-  font-weight: 300; }
-
-h5, .eps {
-  font-size: 1.25em;
-  font-weight: 300; }
-
-h6, .zeta {
-  font-size: 1.125em;
-  font-weight: 300; }
-
-p, li, li p, .base, li a {
-  font-size: 1em;
-  font-weight: 300; }
-
-small, .tiny {
-  font-size: 0.75em;
-  font-weight: 300; }
-
-.mini {
-  font-size: 0.625em;
-  font-weight: 300; }
 
 body {
   background: #f8f8f8;

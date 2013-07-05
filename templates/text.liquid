@@ -1,4 +1,4 @@
-{% block title %}Text Elements{% endblock %}
+{% block title %}Basic Text Elements{% endblock %}
 
 {% block content %} 
 <section class="content">
@@ -152,10 +152,16 @@
           
           <dt><b>Bolded Text</b></dt>
           <dd>- b element</dd>
+          
+          <dt><time datetime="1605-11-05">5<sup>th</sup> of November</time></dt>
+          <dd>- time element</dd>
+          
+          <dt><ins>ins element</ins></dt>
+          <dd>- ins element</dd>
         </dl>
       </div>
       
-      <div class="col col-50">       
+			<div class="col col-50">       
         <dl>
           <dt><ins>Insert</ins></dt>
           <dd>- ins element</dd>
@@ -180,6 +186,10 @@
           
           <dt><i>Text in an alternate voice</i></dt>
           <dd>- i element</dd>
+          
+          <dt><var>var element</var></dt>
+          <dd>- var element</dd>
+
         </dl>
       </div>
       
@@ -372,15 +382,54 @@
 <div class="row">
 	<div class="col col-60">
 		<ul class="kill-List">
-
-	
-			<li>Time element: <time datetime="1605-11-05">5<sup>th</sup> of November</time></li>
-		
+      <li>
+			  <h3>address</h3>
+			  <address>
+    		  <strong>Company Name, Inc.</strong><br>
+    		  811 7th Ave, Suite 700<br>
+    		  Manhattan, NY 10019<br>
+    		  <abbr title="Phone">P:</abbr> (487) 487-4874
+    		</address>
+			</li>
+			<li>
+			  <h3>Details</h3>
+        <details open="open">
+            <summary>More info</summary>
+            <div>
+                <p>Additional information</p>
+                <ul>
+                    <li>Point 1</li>
+                    <li>Point 2</li>
+                </ul>
+            </div>
+        </details>
+        <details>
+            <summary>More info</summary>
+            <div>
+                <p>Additional information</p>
+                <ul>
+                    <li>Point 1</li>
+                    <li>Point 2</li>
+                </ul>
+            </div>
+        </details>
+			</li>
 			
-	
-			<li>The <ins>ins element</ins> example</li>
-				
-			<li>The <var>var element</var> example</li>
+			<li>
+			<h3>Preformatted Text</h3>
+
+<pre>  	
+  P R E F O R M A T T E D T E X T
+  ! " # $ % &amp; ' ( ) * + , - . /
+  0 1 2 3 4 5 6 7 8 9 : ; &lt; = &gt; ?
+  @ A B C D E F G H I J K L M N O
+  P Q R S T U V W X Y Z [ \ ] ^ _
+  ` a b c d e f g h i j k l m n o
+  p q r s t u v w x y z { | } ~ 
+</pre>
+
+			</li>
+			
 		</ul>
 	</div> <!-- end .col-60 -->
 	

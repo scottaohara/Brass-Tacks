@@ -65,3 +65,27 @@
 	background:#ccc; color:#333; padding:$spacing;
 	& > :last-child{margin-bottom:0}
 }
+
+
+
+// Make a column have borders on the left/right sides of it
+// build out a better example of this
+.b-Col{
+  padding-left:6px;
+  padding-right:6px;
+  position:relative;
+
+  &:before, &:after {
+      background:url("../img/border.png") no-repeat 0 -20px;
+      content:"";
+      height:200px;
+      opacity:0.2;
+      position:absolute;
+      top:0;
+      width:1px;
+  }
+  
+  &:before{left:-14px}
+  &:after{right:-14px}
+}
+

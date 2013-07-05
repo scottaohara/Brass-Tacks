@@ -3,7 +3,7 @@
 // ----------------------------------------------------------------
 
 // Kill list styling - extend into Navigations & for lists that don't require markings
-.kill-List, %kill-List{list-style:none; padding:0}
+.kill-List, %kill-List{list-style:none; padding:0;}
 
 // Numbered lists for non-ol list types
 .numbered{list-style-type:decimal;}
@@ -42,7 +42,6 @@
 	@include border-radius(3px);
 	display:inline-block;
 	padding:$spacing;
-	vertical-align:text-top;
 }
 
 // Highlight Text - Skewed
@@ -69,6 +68,12 @@
 		<span class="text-Correct">Text Goes here</span>
 	</span>
 */
+
+// Tighten line height for text headings
+.line-Tight{
+  line-height:1.2;
+}
+
 
 // Multi-Columned Text
 .multi{

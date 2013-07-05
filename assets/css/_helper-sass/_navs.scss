@@ -46,7 +46,7 @@
 // ----------------------------------------------------------------
 // to be placed on the <ul> or <ol>
 .v-Nav{
-	/* really only needs styling applied to it, as vertical nav is default */
+	a{display:block}
 	.drop-Menu{@extend %drop-V;} // Set drop menu location to the right of the hovered link
 }
 
@@ -122,4 +122,80 @@
 
 	span{display:inline-block; padding:$spacing $spacing*2}
 }
+
+// ----------------------------------------------------------------
+// Fixed Position Sidebar Nav
+// ----------------------------------------------------------------
+
+
+
+// ----------------------------------------------------------------
+// Floating Menu Nav Link
+// ----------------------------------------------------------------
+$color-Fixed-Nav:   #DC4732;
+$color-FN-a:        #fff;
+$width-Fixed-Nav:   200px;
+$height-Fixed-Nav:  100px;
+
+// Add a class to the body tag
+.fixed-Nav-Left{
+  padding-left:$width-Fixed-Nav;    // padding-left = width of nav
+  
+  .side-Nav-Fixed{left:0}
+  .btn-Nav{left:$spacing*2; top:$spacing*2}
+}
+
+.fixed-Nav-Right{
+  padding-right:$width-Fixed-Nav;   // padding-right = width of nav
+  
+  .side-Nav-Fixed{right:0}
+  .btn-Nav{right:$spacing*2; top:$spacing*2}
+}
+
+.fixed-Nav-Top{
+  padding-top:$height-Fixed-Nav;    // padding-top = height of nav
+}
+
+// A placeholder class so we don't repeat ourselves
+// with duplicate declarations
+%fixed-Nav{
+  background:$color-Fixed-Nav;
+  position:fixed;
+  top:0;
+  z-index:1000;
+  
+  a{
+    color:$color-FN-a;
+    &:hover, &:visited{
+      background:rgba(0,0,0,.6);
+      color:#fff;
+      text-decoration:none;
+    }
+  }
+}
+
+.top-Nav-Fixed{
+  @extend %fixed-Nav;
+  height:$height-Fixed-Nav;
+}
+
+.side-Nav-Fixed{
+  @extend %fixed-Nav;
+  height:100%;
+  overflow-y:auto;
+  width:$width-Fixed-Nav;
+}
+
+.btn-Nav{
+  background:url(../img/nav-Icon.png) no-repeat center center;
+}
+/*
+  Code Example
+
+<a class="btn btn-Nav" id="btn-Nav-1" href="#show-Nav">
+    <span class="hidden">Show Navigation</span>
+</a>
+*/
+
+
 
