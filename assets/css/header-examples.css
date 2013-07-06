@@ -2,7 +2,7 @@
   display: none; }
 
 .h-Pad {
-  padding-top: 147px; }
+  padding-top: 177px; }
 
 .header-Base, .header-Fixed, .header-Hide, .header-Fixed-Shrink {
   background: #446CB3;
@@ -10,13 +10,15 @@
   box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.2);
   color: #fff;
   height: 147px;
+  margin-top: 30px;
   position: relative;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3); }
 
 .header-Fixed, .header-Hide, .header-Fixed-Shrink {
   left: 0;
+  margin: 0;
   position: fixed;
-  top: 0;
+  top: 30px;
   width: 100%;
   z-index: 10; }
 
@@ -30,21 +32,27 @@
 .header-Content, .main-Content, .footer-Content {
   margin: 0 auto;
   max-width: 1200px;
-  padding: 30px 20px 20px; }
+  padding: 10px 20px; }
   .header-Content :last-child, .main-Content :last-child, .footer-Content :last-child {
     margin-bottom: 0; }
 
-.nav {
+.footer-Content a {
+  color: #fff; }
+
+.nav-Container {
   background: #6684ba;
   border-bottom: 1px solid #22437d;
   position: fixed;
   left: 0;
-  text-align: center;
   top: 0;
   width: 100%;
   z-index: 12; }
-  .nav a {
+  .nav-Container a {
     color: #fff; }
+
+.btn-Nav {
+  background-color: #6684ba;
+  border: 1px solid #333; }
 
 .main {
   background: #fff;

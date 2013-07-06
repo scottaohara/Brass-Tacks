@@ -1,23 +1,50 @@
-<link href="../assets/css/master.min.css" rel="stylesheet" type="text/css" media="all"/>
-<link href="../assets/css/header-examples.css" rel="stylesheet" type="text/css" media="all"/>
+<!doctype html>
+<!--[if lte IE 8 ]><html lang="en" class="ieAll ie8"><![endif]-->
+<!--[if IE 9 ]><html lang="en" class="ieAll ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en" itemscope itemtype="http://schema.org/Person"><!--<![endif]-->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  
+  <title>Header Examples</title>
+  <meta itemprop="name"         content="Microdata of your name" />
+  <meta itemprop="description"  content="Enter microdata description of your website" />
+  
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized"  content="320" />
+  <meta name="description"      content="header examples built off from brass tacks framework" />
+  <meta name="keywords"         content="brass tacks, code example, demo, headers, css, scss" />
+  
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1" />
+  <!-- Styles --> 
+  <link href="../assets/css/master.min.css" rel="stylesheet" type="text/css" media="all"/>
+  <link href="../assets/css/header-examples.css" rel="stylesheet" type="text/css" media="all"/>
+  
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+  <![endif]-->
+</head>
 
-<nav class="nav">
-		<a href="#!" class="show-Base">Base Header</a>
-		<a href="#!" class="show-Fixed">Fixed Header</a>
-		<a href="#!" class="show-Fixed-Shrink">Fixed Shrinking Header</a>
-		<a href="#!" class="show-Fixed-Hide">Fixed Flow Infront Header</a>
-	</nav>
+<nav class="nav-Container">
+  <a href="#!menu" title="show menu" class="btn-Nav"></a>
+  <ul class="c-Nav">
+    <li><a href="#!" class="show-Base">Base Header</a></li>
+    <li><a href="#!" class="show-Fixed">Fixed Header</a></li>
+    <li><a href="#!" class="show-Fixed-Shrink">Fixed Shrinking Header</a></li>
+    <li><a href="#!" class="show-Fixed-Hide">Fixed Flow In Front Header</a></li>
+  </ul>
+</nav>
 
-<header class="header-Base js-Header" role="" style="display:block">
+<!-- Base Header Example -->
+<header class="header-Base js-Header hb" style="display:block">
 	<div class="header-Content">
-		<h1 class="mega">Base Header</h1>
+		<h1 class="mega">Basic Header</h1>
 		<p>It is of the normal variety</p>
 	</div>
 </header>
 
 
-
-<header class="header-Hide js-Header" role="">
+<!-- Fixed Header that Hides Example -->
+<header class="header-Hide js-Header hh">
 	<div class="header-Content">
 		<h1 class="mega">Fixed Hide Header</h1>
 		<p>On scroll, the header gets hidden</p>
@@ -25,32 +52,152 @@
 </header>
 
 
-
-<header class="header-Fixed js-Header" role="">
+<!-- Base Header Example -->
+<header class="header-Fixed js-Header hf">
 	<div class="header-Content">
 		<h1 class="mega">Fixed Header</h1>
 		<p>It is fixed</p>
 	</div>
 </header>
 
-<header class="header-Fixed-Shrink js-Header" role="">
+
+<!-- Fixed Header that Shrinks Example -->
+<header class="header-Fixed-Shrink js-Header hfs">
 	<div class="header-Content">
 		<h1 class="mega">Fixed Shrinking Header</h1>
 		<p>It is fixed header that shrinks after scroll</p>
 	</div>
 </header>
 
+
+<!-- Main Content Area -->
 <main class="main">
 	<section class="main-Content">
-		<p>
-			This is where you would put all your normal content and stuff.
-		</p>
+	  <h2>Code</h2>
+	  
+	  <p class="zeta">HTML</p>
+	  <code class="tiny">
+	  
+	    <span class="js-Header hb" style="display:block">
+	    
+	      <span class="code-Line">&lt;header class="header-Base"></span>
+        <span class="code-Line indent-1">&lt;div class="header-Content"></span>
+        <span class="code-Line indent-2">...</span>
+        <span class="code-Line indent-1">&lt;/div></span>
+        <span class="code-Line">&lt;/header></span>
+        
+	    </span>
+	    
+	    <span class="js-Header hh">
+	    
+	      <span class="code-Line">&lt;header class="header-Hide"></span>
+        <span class="code-Line indent-1">&lt;div class="header-Content"></span>
+        <span class="code-Line indent-2">...</span>
+        <span class="code-Line indent-1">&lt;/div></span>
+        <span class="code-Line">&lt;/header></span>
+        
+	    </span>
+	    
+	    <span class="js-Header hf">
+	    
+	      <span class="code-Line">&lt;header class="header-Fixed"></span>
+        <span class="code-Line indent-1">&lt;div class="header-Content"></span>
+        <span class="code-Line indent-2">...</span>
+        <span class="code-Line indent-1">&lt;/div></span>
+        <span class="code-Line">&lt;/header></span>
+        
+	    </span>
+	    
+	    <span class="js-Header hfs">
+	    
+	      <span class="code-Line">&lt;header class="header-Fixed-Shrink"></span>
+        <span class="code-Line indent-1">&lt;div class="header-Content"></span>
+        <span class="code-Line indent-2">...</span>
+        <span class="code-Line indent-1">&lt;/div></span>
+        <span class="code-Line">&lt;/header></span>
+        
+	    </span>
+	    
+	  </code>
+	  
+	  <p class="zeta">CSS</p>
+    <code class="tiny">
+      <!-- basic header -->
+      <span class="js-Header hb" style="display:block">
+        <span class="code-Line">.header-Base{</span>
+  	    <span class="code-Line indent-1"><span class="rule">background</span>:<span class="value">#446CB3</span>;</span>
+      	<span class="code-Line indent-1"><span class="rule">border-bottom</span>:<span class="value">1px solid #333</span>;</span>
+      	<span class="code-Line indent-1"><span class="rule">box-shadow</span>:<span class="value">inset 0 0 50px rgba(0,0,0,.2)</span>;</span>
+      	<span class="code-Line indent-1"><span class="rule">color</span>:<span class="value">#fff</span>;</span>
+      	<span class="code-Line indent-1"><span class="rule">margin-top</span>:<span class="value">30px</span>;</span>
+      	<span class="code-Line indent-1"><span class="rule">position</span>:<span class="value">relative</span>;</span>
+      	<span class="code-Line indent-1"><span class="rule">text-shadow</span>:<span class="value">0 1px 1px rgba(0,0,0,.3)</span>;</span>
+      	}
+	    </span>
+	    
+	    <!-- fixed header -->
+      <span class="js-Header hf">
+        .header-Fixed{<br />
+        <span class="code-Line indent-1"><span class="at">@extend</span> .header-Base;</span>
+        <span class="code-Line indent-1 comment">// edit height for your own header size</span>
+        <span class="code-Line indent-1"><span class="rule">height</span>:<span class="value">147px</span>;</span>
+        <span class="code-Line indent-1"><span class="rule">left</span>:<span class="value">0</span>;</span>
+        <span class="code-Line indent-1"><span class="rule">margin</span>:<span class="value">0</span>;</span>
+        <span class="code-Line indent-1"><span class="rule">position</span>:<span class="value">fixed</span>;</span>
+        <span class="code-Line indent-1"><span class="rule">top</span>:<span class="value">30px</span>;</span>
+        <span class="code-Line indent-1"><span class="rule">width</span>:<span class="value">100%</span>;</span>
+        <span class="code-Line indent-1"><span class="rule">z-index</span>:<span class="value">10</span>;</span>
+        }
+	    </span>
+	    
+	    <!-- fixed header shrink -->
+      <span class="js-Header hfs">
+	      .header-Fixed-Shrink{<br />
+        <span class="code-Line indent-1"><span class="at">@extend</span> .header-Fixed;</span>
+        	<br />
+        <span class="code-Line indent-1">&amp;.shrinky{</span>
+        		<span class="code-Line indent-2"><span class="rule">font-size</span>:<span class="value">70%</span><span class="important">!important</span>;</span>
+        		<span class="code-Line indent-2"><span class="rule">height</span>:<span class="value">110px</span>;</span>
+        &nbsp;&nbsp;}<br />
+        }
+	    </span>
+	    
+	    <!-- fixed header hide -->
+      <span class="js-Header hh">
+	      <span class="code-Line">.header-Hide{</span>
+        <span class="code-Line indent-1"><span class="at">@extend</span> .header-Fixed;</span>
+        <span class="code-Line indent-1"><span class="rule">z-index</span>:<span class="value">3</span>;</span>
+        }
+	    </span>
+    </code>
+    
+    <div class="js-Header hfs">
+      <p class="zeta">jQuery</p>
+      <code class="tiny">
+        <span class="code-Line">$(window).bind('scroll', function(){</span>
+        <span class="code-Line indent-1 comment">// checks to see if the window has scrolled more than 50px</span>
+      	<span class="code-Line indent-1">if($(this).scrollTop() &gt; 50) {</span>
+      	<span class="code-Line indent-2 comment">// if so, adds class 'shrinky' (feel free to use better class names)</span>
+      	<span class="code-Line indent-2">$(".header-Fixed-Shrink").addClass('shrinky');</span>
+      	<span class="code-Line indent-1">}</span>
+      	<span class="code-Line indent-1">if($(this).scrollTop() &lt; 50) {</span>
+      	<span class="code-Line indent-2">$(".header-Fixed-Shrink").removeClass('shrinky');</span>
+      	<span class="code-Line indent-1">}</span>
+      	});
+      </code>
+    </div>
+	  
 	</section>
 </main>
 
+
+<!-- Footer Content Area -->
 <footer class="footer-Base">
 	<div class="footer-Content">
-		<p class="tiny">Footer content.  hooray</p>
+		<p class="tiny">
+  		This example is an extension off from the
+  		<a href="https://github.com/bleachedgraphics/Brass-Tacks" title="Brass Tacks on GitHub">Brass Tacks</a> framework.
+		</p>
 	</div>
 </footer>
 
@@ -61,34 +208,32 @@
  	$(document).ready(function(){
 	 	$('.show-Base').click(function(){
 		 	$('.js-Header').hide();
-		 	$('.header-Base').show();
+		 	$('.hb').show();
 		 	$('body').removeClass('h-Pad');
 	 	});
 	 	
 	 	$('.show-Fixed').click(function(){
 		 	$('.js-Header').hide();
-		 	$('.header-Fixed').show();
+		 	$('.hf').show();
 		 	$('body').removeClass('h-Pad');
 		 	$('body').addClass('h-Pad');
 	 	});
 	 	
 	 	$('.show-Fixed-Hide').click(function(){
 		 	$('.js-Header').hide();
-		 	$('.header-Hide').show();
+		 	$('.hh').show();
 		 	$('body').removeClass('h-Pad');
 		 	$('body').addClass('h-Pad');
 	 	});
 	 	
 	 	$('.show-Fixed-Shrink').click(function(){
 		 	$('.js-Header').hide();
-		 	$('.header-Fixed-Shrink').show();
+		 	$('.hfs').show();
 		 	$('body').removeClass('h-Pad');
 		 	$('body').addClass('h-Pad');
 	 	});
-	 	
-	 	
-	 	
-	// replace large logo w/small logo in top bar on scroll
+
+	// shrinks the size of the header after scrolling x pixels
 	$(window).bind('scroll', function(){
 		if($(this).scrollTop() > 50) {
 			$(".header-Fixed-Shrink").addClass('shrinky');

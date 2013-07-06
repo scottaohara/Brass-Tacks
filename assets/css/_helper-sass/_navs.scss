@@ -188,6 +188,12 @@ $height-Fixed-Nav:  100px;
 
 .btn-Nav{
   background:url(../img/nav-Icon.png) no-repeat center center;
+  @include vendor(background-size, 75%);
+  height:24px;
+  position:fixed;
+  right:$spacing;
+  top:$spacing;
+  width:28px;
 }
 /*
   Code Example

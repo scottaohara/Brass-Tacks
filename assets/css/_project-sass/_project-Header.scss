@@ -4,9 +4,10 @@
 
 // Apply to <header> for styling
 .header-Base{
-	padding-top:$spacing*2;
+  background:#fafafa;
 }
 
+// Apply to child div inside of header for padding/margin
 .header-Content{
 	@extend .content;
 }
@@ -18,7 +19,10 @@
 	border-top:1px solid #eee;
 	margin:$spacing*4 auto;
 	
-	a, a:visited{padding:$spacing*2 $spacing*3; text-decoration:none;
+	a, a:visited{
+	  padding:$spacing*2 $spacing*3;
+	  text-decoration:none;
+	  
 		&:hover{background:#eee;}
 		&.selected, &:active{background:#ddd;}
 	}

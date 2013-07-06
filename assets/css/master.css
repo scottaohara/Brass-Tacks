@@ -158,6 +158,39 @@ p code, p kbd, p pre, p samp, li code, li kbd, li pre, li samp {
   margin: 0;
   padding: 4px; }
 
+.code-Line {
+  display: block; }
+
+.indent-1 {
+  text-indent: 1em; }
+
+.indent-2 {
+  text-indent: 2em; }
+
+.indent-3 {
+  text-indent: 3em; }
+
+.comment {
+  color: #99a; }
+
+.important {
+  color: #f00; }
+
+.selector {
+  color: #111; }
+
+.value {
+  color: #709c34; }
+
+.rule {
+  color: #2e9fe8; }
+
+.var {
+  color: #9952b2; }
+
+.at {
+  color: #c3793e; }
+
 ol, ul {
   margin: 0 0 8px;
   padding: 0 0 0 24px; }
@@ -715,7 +748,17 @@ legend, .legend {
   width: 200px; }
 
 .btn-Nav {
-  background: url(../img/nav-Icon.png) no-repeat center center; }
+  background: url(../img/nav-Icon.png) no-repeat center center;
+  -moz-background-size: 75%;
+  -ms-background-size: 75%;
+  -o-background-size: 75%;
+  -webkit-background-size: 75%;
+  background-size: 75%;
+  height: 24px;
+  position: fixed;
+  right: 4px;
+  top: 4px;
+  width: 28px; }
 
 /*
   Code Example
@@ -981,7 +1024,7 @@ a {
   outline: none; }
 
 .header-Base {
-  padding-top: 8px; }
+  background: #fafafa; }
 
 .header-Nav {
   background: #f8f8f8;
