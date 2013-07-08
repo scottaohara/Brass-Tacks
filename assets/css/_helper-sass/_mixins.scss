@@ -73,7 +73,12 @@
 // but still need for accesibility / functionality 
 // -- ie. radio buttons for custom styled radio inputs
 @mixin invisible{
-	border:0!important; height:1px!important; left:-999999px!important; overflow:hidden!important; position:absolute!important; width:1px!important;
+	border:0!important;
+	height:1px!important;
+	left:-999999px!important;
+	overflow:hidden!important;
+	position:absolute!important;
+	width:1px!important;
 }
 
 // Truncate Text

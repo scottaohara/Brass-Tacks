@@ -188,6 +188,18 @@
     </div>
 	  
 	</section>
+	<aside class="main-Content">
+	  <h3 class="zeta">About</h3>
+	  <p>
+	    This example is an extension of, but not reliant on, the <strong>Brass Tacks</strong> framework.  
+	    View it on <a href="https://github.com/bleachedgraphics/Brass-Tacks" title="Brass Tacks on GitHub">GitHub</a>.
+	  </p>
+	  <p>
+	    View the <a href="http://www.scottohara.me/headers/custom.css" title="view the customized Brass Tacks CSS">edited version</a>
+	    of the CSS as well as the 
+	    <a href="http://www.scottohara.me/headers/header-examples.css" title="header example css">header specific CSS</a>
+	  </p>
+	</aside>
 </main>
 
 
@@ -195,8 +207,7 @@
 <footer class="footer-Base">
 	<div class="footer-Content">
 		<p class="tiny">
-  		This example is an extension off from the
-  		<a href="https://github.com/bleachedgraphics/Brass-Tacks" title="Brass Tacks on GitHub">Brass Tacks</a> framework.
+  		Made by <a href="http://www.scottohara.me" title="Made by Scott O'Hara">Scott O'Hara</a>
 		</p>
 	</div>
 </footer>
@@ -242,5 +253,10 @@
 			$(".header-Fixed-Shrink").removeClass('shrinky');
 		}
 	});
+	
+	$('.nav-Container a').click(function(){
+  	$('.c-Nav').toggleClass('slide-Up');
+  	return false;
+	})
 });
 </script>
