@@ -1,16 +1,36 @@
 # humanstxt.org/
 # The humans responsible & technology colophon
 
-# TEAM
+/* ****************************************************************************
+*
+*   The Team:
+*
+**************************************************************************** */
 
-    INPUT YOUR STUFF HERE
-    <name> -- <role> -- <twitter>
+Your title: Your name.
+Site: email, link to a contact form, etc.
+Twitter: your Twitter username.
+Location: City, Country.
 
-# THANKS
 
-    <name>
+/* ****************************************************************************
+*
+*   Thanks To:
+*
+**************************************************************************** */
 
-# TECHNOLOGY COLOPHON
+Name: name or url
 
-    HTML5, CSS3, SASS,
-    whateverthisis.css
+
+
+/* ****************************************************************************
+*
+*   Website Info:
+*
+**************************************************************************** */
+
+Last update: YYYY/MM/DD
+Standards: HTML5, CSS3,..
+Components: Modernizr, jQuery, etc.
+Software: Software used for the development
+                    
