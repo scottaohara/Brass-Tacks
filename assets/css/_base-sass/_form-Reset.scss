@@ -33,4 +33,11 @@ input[type='search']::-webkit-search-decoration{-webkit-appearance:none}
 button::-moz-focus-inner, input::-moz-focus-inner{border:0; padding:0}
 
 // Makes sure that overflow shows and text is aligned to top of area
-textarea{overflow:auto; vertical-align:top}
+// also make resizing not extend beyond the max-width for the content area
+textarea{
+  max-width:100%;
+  min-height:40px;
+  overflow:auto;
+  resize:both;
+  vertical-align:top;
+}

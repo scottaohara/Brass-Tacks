@@ -59,22 +59,22 @@
     {% include "navigation" %}
     <div class="page">
     
-      <header class="header-Base">
+      <header class="header-Base" role="banner">
         {% include "header" %}
       </header>
       
-      <main class="content-Base">
+      <main class="content-Base" role="main">
         {% block content %}{% endblock %}
       </main>
       
-      <footer class="footer-Base">
+      <footer class="footer-Base" role="contentinfo">
         {% include "footer" %}
       </footer>
     
     </div> <!-- end .page -->
     
     <!-- scripts -->
-    {{ "jquery-1.10.1.min.js" | asset_url | script_tag }}
+    {{ "jquery-1.10.2.min.js" | asset_url | script_tag }}
     {{ "app.js" | asset_url | script_tag }}
     {% block js %}{% endblock %} <!-- Script block allowing child pages to inject their own scripts -->
     

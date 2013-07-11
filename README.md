@@ -19,7 +19,7 @@ A current(likely not current) build can be viewed at http://brass-tacks.scott-oh
 
 * Google Analytics placeholder
 * HTML5shiv via CDN, with local fallback file
-* jQuery 1.10.1 via CDN, with a local fallback file
+* jQuery 1.10.2 via CDN, with a local fallback file
 * IE-Specific classes on the HTML element for easer cross-browser control.
 
 * Various HTML ready-to-use snippets
