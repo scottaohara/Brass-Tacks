@@ -29,7 +29,9 @@ legend, .legend{
 
 .text-Area{
     @extend %input-Area;
-    display:block; min-height:150px; width:100%
+    display:block;
+    min-height:150px;
+    width:100%;
 }
 
 /* Check/Radio Inputs & Labels */
@@ -39,19 +41,35 @@ legend, .legend{
     // ------     instead of reusing btns for inputs, can put img sprites here instead
     position:relative;
     &:hover{
-	    .btn-Radio, 
-		.btn-Check{border-color:#333}
+      .btn-Radio, 
+      .btn-Check{border-color:#333}
     } 
 }
-.option-Label{cursor:pointer; display:block; padding-left:$spacing*7; position:relative; z-index:2}
+.option-Label{
+  cursor:pointer;
+  display:block;
+  padding-left:$spacing*7;
+  position:relative;
+  z-index:2;
+}
 
 .input-Hide{@include invisible;}
 
 .btn-Radio, .btn-Check{
     @extend %btn;
-    background:$c-Btn-RC; border:1px solid #ccc; font:{size:14px; weight:bold}; height:19px; left:0; padding:2px; position:absolute; top:0; width:19px;
-    &:hover{background:$c-Btn-1}
+    background:$c-Btn-RC;
+    border:1px solid #ccc;
+    font-size:14px!important;
+    height:19px;
+    left:0;
+    padding:2px!important;
+    position:absolute;
+    top:0;
+    width:19px;
+    
+    &:hover{background:$c-Btn-2}
 }
+
 .btn-Radio{@include border-radius($radius*5)}
 
 .input-Radio.selected-Radio .btn-Radio{@extend .btn-Radio:hover; border-color:#333}
@@ -65,7 +83,15 @@ legend, .legend{
     @extend %input-Area;
     background:url(../img/drop-Arrow.png) no-repeat 99% center #fff; display:inline-block; overflow:hidden;
 }
-.input-Select{background:none; border:0; font-size:$base; padding-right:$spacing*4; width:120%; -webkit-appearance:textarea}
+.input-Select{
+  background:none;
+  border:0;
+  font-size:$base;
+  margin-bottom:0;
+  padding-right:$spacing*4;
+  width:120%;
+  -webkit-appearance:textarea;
+}
 
 // File Input Styling
 .file-Input-Area{
