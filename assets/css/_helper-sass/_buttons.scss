@@ -13,7 +13,6 @@
     text-align:center;
     text-decoration:none!important; // set to !important so that if used inside of a .nav, no decoration doesn't get overridden
     @include vendor(transition, all .25s ease-in-out 0s);
-    vertical-align:middle;
     -webkit-appearance:none;
     
     &.btn-Pad{

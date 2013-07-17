@@ -1,6 +1,6 @@
 # Brass Tacks
 
-Brass Tacks is a professional front-end HTML5 and SCSS framework that incorporates and standardizes many
+Brass Tacks is (will be) a professional front-end HTML5 and SCSS framework that incorporates and standardizes many
 widely used HTML and CSS elements.
 
 Brass Tacks was built quietly over many years of standardizing the way I write my code, and incorporating 
