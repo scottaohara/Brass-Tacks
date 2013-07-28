@@ -6,13 +6,19 @@
 button, fieldset, form, input, select, textarea{
   @extend %reset;
   @extend %margin-bottom;
-  font:{family:$arial; size:100%}; 
+  @extend %base;
   line-height:normal; 
   text-transform:none;
 }
 
 // Makes buttons look like buttons with appropriate cursors
-button, html input[type='button'], input[type='reset'], input[type='submit']{cursor:pointer; -webkit-appearance:button}
+button,
+html input[type='button'],
+input[type='reset'],
+input[type='submit']{
+  cursor:pointer;
+  -webkit-appearance:button;
+}
 
 // Makes it look like a normal text input, only with a (x) when text has been entered
 input[type='search']{-webkit-appearance:textfield} 
@@ -40,4 +46,11 @@ textarea{
   overflow:auto;
   resize:both;
   vertical-align:top;
+}
+
+// Legend
+legend{
+  @extend %eps;
+	margin-left:-$spacing;
+	padding:0 $spacing;
 }

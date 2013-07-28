@@ -1,0 +1,45 @@
+// ----------------------------------------------------------------
+//		Basic Styling: Typography Elements
+// ----------------------------------------------------------------
+
+// Default body text styling
+body{font-size:100%; line-height:1.5}
+
+blockquote, h1, h2, h3, h4, h5, h6, p, pre{@extend %reset;}
+
+// Extra Large Fonts
+.giga                     {@extend %giga;}
+.ultra                    {@extend %ultra;}
+.mega                     {@extend %mega;}
+
+// Headings
+h1, .alpha                {@extend %alpha;}
+h2, .beta                 {@extend %beta;}
+h3, .gamma                {@extend %gamma;}
+h4, .delta                {@extend %delta;}
+h5, .eps                  {@extend %eps;}
+h6, .zeta                 {@extend %zeta;}
+
+// Normal & Small sized fonts
+p, li, li p, li a, .base  {@extend %base;}
+.tiny                     {@extend %tiny;}
+.mini                     {@extend %mini;}
+
+// Consistent margin-bottom for block text elements
+blockquote, h1, h2, h3, h4, h5, h6, li, p, small{
+  @extend %margin-bottom;
+}
+
+// Give small some weight when used outside of <p> or <li>, 
+// but make it an inline element again inside of these elements
+small{
+  @extend %tiny;
+  display:block;
+}
+
+p, li{
+  small{
+    display:inline-block; 
+    margin:0;   
+  }
+}

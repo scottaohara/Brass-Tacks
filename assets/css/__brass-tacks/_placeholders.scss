@@ -1,0 +1,42 @@
+// ----------------------------------------------------------------
+// Placeholder Classes
+//
+// A collection of common CSS rules that can be extended into 
+// the base Brass-Tacks code base, as well as project specific
+// CSS rules.
+// ----------------------------------------------------------------
+
+// Reset the Standard Tags, 
+// extend to all tags that need this
+// for better organization of code
+%reset{border:0; margin:0; outline:0; padding:0}
+
+// Typography Placeholders
+
+%giga   {font-size:$giga;   weight:700;}
+%ultra  {font-size:$ultra;  weight:600;}
+%mega   {font-size:$mega;   weight:300;}
+%alpha  {font-size:$alpha;  weight:400;}
+%beta   {font-size:$beta;   weight:400;}
+%gamma  {font-size:$gamma;  weight:400;}
+%delta  {font-size:$delta;  weight:300;}
+%eps    {font-size:$eps;    weight:300;}
+%zeta   {font-size:$zeta;   weight:300;}
+%base   {font-size:$base;   weight:300;}
+%tiny   {font-size:$tiny;   weight:300;}
+%mini   {font-size:$mini;   weight:300;}
+
+// Form Element Placeholders
+%label{
+  display:block;
+  margin-bottom:$spacing;
+}
+
+// Clearfix
+%clearfix{@include clearfix;}
+
+// Consistent Margin Bottom
+%margin-bottom{margin-bottom:$spacing*4}
+
+// Hide from browsers but not from screen readers
+%invis{@include invisible}

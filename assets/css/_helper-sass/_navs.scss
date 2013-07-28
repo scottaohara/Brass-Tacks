@@ -5,12 +5,19 @@
 // The main navigation class to be placed on the <nav>
 .nav{
 	ul, 
-	ol{border:1px solid #ccc; padding:$spacing;}
+	ol{
+	  border:1px solid #ccc;
+	  padding:$spacing;
+  }
 	
-	li{margin:0}
-	
-	a{display:block; padding:$spacing $spacing*2; text-decoration:underline;
-		&:hover{text-decoration:none}
+	a{
+	  display:block;
+	  padding:$spacing $spacing*2;
+	  text-decoration:underline;
+	  
+		&:hover{
+		  text-decoration:none;
+		}
 		
 		.selected{}
 	}
@@ -120,23 +127,19 @@
 	}
 	a{display:inline-block}
 
-	span{display:inline-block; padding:$spacing $spacing*2}
+	span{
+	  display:inline-block;
+	  padding:$spacing $spacing*2;
+  }
 }
 
 // ----------------------------------------------------------------
 // Fixed Position Sidebar Nav
 // ----------------------------------------------------------------
-
-
-
-// ----------------------------------------------------------------
-// Floating Menu Nav Link
-// ----------------------------------------------------------------
 $color-Fixed-Nav:   #DC4732;
 $color-FN-a:        #fff;
 $width-Fixed-Nav:   200px;
 $height-Fixed-Nav:  100px;
-
 // Add a class to the body tag
 .fixed-Nav-Left{
   padding-left:$width-Fixed-Nav;    // padding-left = width of nav
@@ -186,6 +189,10 @@ $height-Fixed-Nav:  100px;
   width:$width-Fixed-Nav;
 }
 
+
+// ----------------------------------------------------------------
+// Floating Menu Nav Link
+// ----------------------------------------------------------------
 .btn-Nav{
   background:url(../img/nav-Icon.png) no-repeat center center;
   @include vendor(background-size, 75%);

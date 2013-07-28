@@ -4,13 +4,10 @@
 .float-Left	  {float:left}
 .float-Right  {float:right}
 .float-None	  {float:none}
-.clear		  {clear:both}
-.clearfix	  {@include clearfix}
-.overflow	  {overflow:hidden}
+.clear		    {clear:both}
+.clearfix	    {@extend %clearfix}
+.overflow	    {overflow:hidden}
 
-
-// Consistent Margin Bottom
-%margin-bottom{margin-bottom:$spacing*4}
 
 // ----------------------------------------------------------------
 //		Showing & Hiding
@@ -23,7 +20,7 @@
 .hidden{display:none!important; visibility:hidden}
 
 // Hide from browsers but not from screen readers
-.invis, %invis{@include invisible}
+.invis{@extend %invis}
 
 // ----------------------------------------------------------------
 //		Reoccuring HTML Elements
@@ -56,7 +53,7 @@
 // Media Item
 .media, %media{
 	margin-bottom:$spacing*4;
-	@extend .clearfix;
+	@extend %clearfix;
 	position:relative;
 	z-index:2;
 	.media-Text >:last-child{margin-bottom:0}
@@ -66,20 +63,20 @@
 // Have media element appear on the right hand side
 .media-Reverse, %media-Reverse{
 	@extend %media;
-	.media-Object{float:right; margin:0 0 $spacing*2 $spacing*4; max-width:30%}
+	.media-Object{float:right; margin:0 0 $spacing*2 $spacing*4; max-width:30%;}
 }
 
 .media-No-Wrap{
 	@extend %media;
 	padding-left:100px;
-	.media-Text{float:left; width:100%}
-	.media-Object{margin-left:-100px; margin-right:0}
+	.media-Text{float:left; width:100%;}
+	.media-Object{margin-left:-100px; margin-right:0;}
 }
 
 .media-No-Wrap-Reverse{
 	@extend %media-Reverse;
 	padding-right:100px;
-	.media-Object{margin-right:-100px; margin-left:0}
+	.media-Object{margin-right:-100px; margin-left:0;}
 }
 /* 
 	Code Example

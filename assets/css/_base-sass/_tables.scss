@@ -2,9 +2,6 @@
 // Tables
 // ----------------------------------------------------------------
 
-// sets consistent boarder styling for table elements
-$border-Table: 1px solid $c-Table-Border;
-
 // Resets main table tags
 caption, legend, table, td, th, tr{@extend %reset}
 
@@ -32,9 +29,7 @@ table{
 	background:$c-Table-Head;
 }
 
-.table-Body{
-	// style?
-}
+.table-Body{}
 
 .table-Footer{
 	background:$c-Table-Foot;

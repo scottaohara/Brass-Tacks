@@ -3,23 +3,41 @@
 // ----------------------------------------------------------------
 
 // Make a smarter Box Model
-*, *:before, *:after{@include box-sizing(border-box)}
+*, *:before, *:after{
+  @include box-sizing(border-box);
+}
 
 // Just to make sure the HTML doesn't act like a bitch
-html{overflow-y:scroll; min-height:100%}
+html{
+  overflow-y:scroll;
+  min-height:100%;  
+}
 
-html, body{@extend %reset}
+html, body{
+  @extend %reset;
+  height:100%;  
+}
 
-// Reset the Standard Tags, 
-// extend to all tags that need this
-// for better organization of code
-%reset{border:0; margin:0; outline:0; padding:0}
-
-// Styling for HTML5 sepecific elements/selectors
+// Base HTML5 sepecific elements/selectors rules
 @import 'html5-Elements';
 
-// Styling for base typographical elements
-@import 'typography';
+// Base media element rules
+@import 'media-Elements';
+
+// Base typographical element rules
+@import 'typography-Base';        // Base elements for typography
+@import 'typography-Code';        // Code styling
+@import 'typography-Decorative';  // Decorative text elements
+@import 'typography-Lists';       // Lists styling
+
+// Base table element rules
+@import 'tables';
+
+// Base form element rules
+@import 'forms';
+
+// Base navigation rules
+@import 'navs';
 
 // Easy re-styling for <hr /> tags
 hr{
@@ -30,9 +48,3 @@ hr{
   height:1px; 
   margin:$spacing*2 0; 
 }
-
-// Styling for base media elements
-@import 'media-Elements';
-
-// Styling for base form elements
-@import 'form-Reset';

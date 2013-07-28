@@ -1,0 +1,8 @@
+// compile all mixins/var files to import into _master and any other file that needs them.
+@import 'mixins';
+@import 'vars';
+@import 'placeholders';
+
+// import the project specific vars
+@import '_project-sass/__vars-mixins/vars';           // project specific variables
+@import '_project-sass/__vars-mixins/mixins';         // project specific mixins

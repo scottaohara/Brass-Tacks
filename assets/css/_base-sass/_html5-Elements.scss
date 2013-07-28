@@ -1,12 +1,14 @@
 // ----------------------------------------------------------------
-//		HTML5 Elements that need some additional loving
+//		HTML5 Elements
 // ----------------------------------------------------------------
 
 // Give HTML5 elements block display, which is not defined in ie8/9
 article, aside, details, figure, figcaption, 
 footer, header, main, nav, section, summary{
-  display:block
+  display:block;
 }
 
 // Makes hidden actually [hidden] in IE 8/9
-[hidden]{display:none}
+[hidden]{
+  display:none;
+}

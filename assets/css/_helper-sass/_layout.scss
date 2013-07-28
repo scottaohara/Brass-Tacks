@@ -8,7 +8,7 @@
 .row{
 	margin-left:-$spacing*5;
 	margin-bottom:$spacing*5;
-	@extend .clearfix;
+	@extend %clearfix;
 }
 
 // The grid columns within a row.  
@@ -62,8 +62,13 @@
 // The main purpose of a class like this is to apply to an inner HTML element of the column structure
 // so we can apply styling to the columns.
 .block{
-	background:#ccc; color:#333; padding:$spacing;
-	& > :last-child{margin-bottom:0}
+	background:#ccc;
+	color:#333;
+	padding:$spacing;
+	
+	& > :last-child{
+	  margin-bottom:0;	
+	}
 }
 
 
@@ -76,16 +81,20 @@
   position:relative;
 
   &:before, &:after {
-      background:url("../img/border.png") no-repeat 0 -20px;
-      content:"";
-      height:200px;
-      opacity:0.2;
-      position:absolute;
-      top:0;
-      width:1px;
+    background:url("../img/border.png") no-repeat 0 -20px;
+    content:"";
+    height:200px;
+    opacity:0.2;
+    position:absolute;
+    top:0;
+    width:1px;
   }
   
-  &:before{left:-14px}
-  &:after{right:-14px}
+  &:before{
+    left:-14px;
+  }
+  &:after{
+    right:-14px;
+  }
 }
 

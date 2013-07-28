@@ -1,10 +1,6 @@
 // ----------------------------------------------------------------
 // Colors
 // ----------------------------------------------------------------
-// Base Branding Colors
-$c-Brand-1:		#54a4a3;
-$c-Brand-2:		#d48371;
-$c-Brand-3:		#7e984c;
 
 // Base Darker Colors
 $c-Dark:      #444;
@@ -20,13 +16,6 @@ $c-Heading:		$c-Darker;
 
 $c-BG:			  $c-Lighter;
 
-$c-Link:		  $c-Brand-2;
-
-// Button Colors
-$c-Btn-1:     $c-Brand-1;
-$c-Btn-2:     $c-Brand-2;
-$c-Btn-3:     $c-Brand-3;
-
 $c-Btn-Neg:		#aaa;
 $c-Disabled:	#fafafa;
 
@@ -41,18 +30,20 @@ $c-Highlight:	#ff0;
 $c-Underline:	#ccc; // not for links
 $c-Border:		#ccc;
 
-// Table Colors
-$c-Table: #fafafa;
-$c-Table-Head: #eee;
-$c-Table-Foot: #e3e3e3;
+// Tables
+$c-Table:         #fafafa;
+$c-Table-Head:    #eee;
+$c-Table-Foot:    #e3e3e3;
 
 $c-Table-Striped: $c-Light;
-$c-Table-Border: #ccc;
+$c-Table-Border:  #ccc;
+
+// sets consistent boarder styling for table elements
+$border-Table:    1px solid $c-Table-Border;
 
 // ----------------------------------------------------------------
 // Fonts Families
 // ----------------------------------------------------------------
-$brand:     'Open Sans'; // replace this with your main brand font
 $arial:     Arial, "Helvetica Neue", Helvetica, sans-serif;
 $georgia:   Georgia, "Times New Roman", Times, serif;
 $helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif;
