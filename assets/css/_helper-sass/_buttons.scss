@@ -3,26 +3,26 @@
 // ----------------------------------------------------------------
 .btn, %btn{
     background:$c-Dark; 
-    @include border-radius($radius);
+    @include border-radius($px-Unit);
     color:$c-Lighter;
     cursor:pointer;
     display:inline-block;
     font:{family:$arial; size:$base};
     line-height:1;
-    padding:$spacing*2 $spacing*3; 
+    padding:$px-Unit*2 $px-Unit*3; 
     text-align:center;
     text-decoration:none!important; // set to !important so that if used inside of a .nav, no decoration doesn't get overridden
     @include vendor(transition, all .25s ease-in-out 0s);
     -webkit-appearance:none;
     
     &.btn-Pad{
-	    padding:$spacing*2 $spacing*4
+	    padding:$px-Unit*2 $px-Unit*4;
     }
     
     &:hover, &:active{
         background:$c-Darker; 
         @include box-shadow($bs-6);
-        color:$c-Lighter
+        color:$c-Lighter;
     }
     
     &:visited{color:$c-Lighter;}
@@ -35,32 +35,31 @@
 .btn-Small{
 	@extend %btn; 
 	font-size:$tiny; 
-	padding:$spacing $spacing*2;
+	padding:$px-Unit $px-Unit*2;
 	
 	&.btn-Pad{
-		padding:$spacing $spacing*3
+		padding:$px-Unit $px-Unit*3
 	}
 	
 }
 .btn-Large{
 	@extend %btn; 
 	font-size:$gamma; 
-	padding:$spacing*3;
+	padding:$px-Unit*3;
 	
 	&.btn-Pad{
-		padding:$spacing*3 $spacing*5
+		padding:$px-Unit*3 $px-Unit*5
 	}
 	
 }
 .btn-XLarge{
 	@extend %btn; 
 	font-size:$beta; 
-	padding:$spacing*3 $spacing*4;
+	padding:$px-Unit*3 $px-Unit*4;
 	
 	&.btn-Pad{
-		padding:$spacing*4 $spacing*6
+		padding:$px-Unit*4 $px-Unit*6
 	}
-	
 }
 
 .btn-Wide{@extend %btn; display:block}
@@ -101,5 +100,5 @@
 // ----------------------------------------------------------------
 // Additional Styling
 // ----------------------------------------------------------------
-.btn-Square{@extend %btn; @include border-radius(0)}
-.btn-Round{@extend %btn; @include border-radius($radius*4)}
+.btn-Square{@include border-radius(0)}
+.btn-Round{@include border-radius($px-Unit*4)}

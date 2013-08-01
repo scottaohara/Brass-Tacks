@@ -28,7 +28,7 @@
 // Profile Picture
 .pic, %pic{
 	border:1px solid $c-White;
-	@include border-radius(4px);
+	@include border-radius($px-Unit);
 	@include box-shadow($bs-4);
 	display:inline-block;
 	overflow:hidden;
@@ -40,7 +40,7 @@
 // Make picture into a circle
 .pic-Rounded{
 	@extend %pic;
-	@include border-radius(100px);
+	@include border-radius(130px);
 }
 /* 
 	Code Example
@@ -52,18 +52,18 @@
 
 // Media Item
 .media, %media{
-	margin-bottom:$spacing*4;
+	margin-bottom:$px-Unit*4;
 	@extend %clearfix;
 	position:relative;
 	z-index:2;
 	.media-Text >:last-child{margin-bottom:0}
-	.media-Object{float:left; margin:0 $spacing*4 $spacing*2 0; max-width:30%;}
+	.media-Object{float:left; margin:0 $px-Unit*4 $px-Unit*2 0; max-width:30%;}
 }
 
 // Have media element appear on the right hand side
 .media-Reverse, %media-Reverse{
 	@extend %media;
-	.media-Object{float:right; margin:0 0 $spacing*2 $spacing*4; max-width:30%;}
+	.media-Object{float:right; margin:0 0 $px-Unit*2 $px-Unit*4; max-width:30%;}
 }
 
 .media-No-Wrap{
@@ -100,14 +100,12 @@
 .emph-Block{
 	background:#fafafa;
 	border:1px solid #ddd;
-	@include border-radius(4px);
+	@include border-radius($px-Unit);
 	@include box-shadow($bs-4);
-	margin-bottom:$spacing*4;
+	margin-bottom:$px-Unit*4;
 	min-height:50px;
-	padding:$spacing*4;
+	padding:$px-Unit*4;
 	
 	& > :last-child{margin-bottom:0}
 }
-
-
 

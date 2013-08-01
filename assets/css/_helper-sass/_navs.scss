@@ -6,13 +6,13 @@
 .nav{
 	ul, 
 	ol{
-	  border:1px solid #ccc;
-	  padding:$spacing;
+	  border:1px solid $c-Grey;
+	  padding:$px-Unit;
   }
 	
 	a{
 	  display:block;
-	  padding:$spacing $spacing*2;
+	  padding:$px-Unit $px-Unit*2;
 	  text-decoration:underline;
 	  
 		&:hover{
@@ -28,7 +28,7 @@
 // ----------------------------------------------------------------
 // to be placed on the <ul> or <ol>
 .h-Nav{
-	& > li{float:left}
+	& > li{float:left;}
 	
 	// Set drop menu location to the bottom of the hovered link
 	.drop-Menu{
@@ -38,7 +38,8 @@
 
 // to be placed on the <ul> or <ol> -- don't use floats, but instead use display inline-block and center navigation links
 .c-Nav{
-	font-size:0; text-align:center;
+	font-size:0;
+  text-align:center;
 			// font-size:0; deletes the white space between the <li>s 
 			// However, the font size inside of the <li>'s must be reset when using this trick.
 			
@@ -46,14 +47,14 @@
 }
 
 // Sets links to the base font-size, while also making them inline-block.  Update for your own uses.
-%reset-Type{display:inline-block; font-size:16px}
+%reset-Type{display:inline-block; font-size:16px;}
 	
 // ----------------------------------------------------------------
 // Basic rules for Vertical Navigations
 // ----------------------------------------------------------------
 // to be placed on the <ul> or <ol>
 .v-Nav{
-	a{display:block}
+	a{display:block;}
 	.drop-Menu{@extend %drop-V;} // Set drop menu location to the right of the hovered link
 }
 
@@ -77,7 +78,7 @@
 // ----------------------------------------------------------------
 .av-Nav{
 	// Set drop menu location to the bottom of the hovered link
-	.drop-Start{display:block}
+	.drop-Start{display:block;}
 	.drop-Menu{
 		@extend %drop-V;
 	}
@@ -92,10 +93,10 @@
   
 	&:hover{
 		background:#eee;
-		.drop-Menu{visibility:visible}
+		.drop-Menu{visibility:visible;}
 	}
 	
-	a{white-space:nowrap} // makes it so the dd doesn't get stuck only being as big as the top level button
+	a{white-space:nowrap;} // makes it so the dd doesn't get stuck only being as big as the top level button
 }
 .drop-Menu{
   background:#eee; 
@@ -125,11 +126,11 @@
 		&:last-child:after{content:none;}
 		&:after{content:">"; display:inline-block;}
 	}
-	a{display:inline-block}
+	a{display:inline-block;}
 
 	span{
 	  display:inline-block;
-	  padding:$spacing $spacing*2;
+	  padding:$px-Unit $px-Unit*2;
   }
 }
 
@@ -145,14 +146,14 @@ $height-Fixed-Nav:  100px;
   padding-left:$width-Fixed-Nav;    // padding-left = width of nav
   
   .side-Nav-Fixed{left:0}
-  .btn-Nav{left:$spacing*2; top:$spacing*2}
+  .btn-Nav{left:$px-Unit*2; top:$px-Unit*2}
 }
 
 .fixed-Nav-Right{
   padding-right:$width-Fixed-Nav;   // padding-right = width of nav
   
   .side-Nav-Fixed{right:0}
-  .btn-Nav{right:$spacing*2; top:$spacing*2}
+  .btn-Nav{right:$px-Unit*2; top:$px-Unit*2}
 }
 
 .fixed-Nav-Top{
@@ -171,7 +172,7 @@ $height-Fixed-Nav:  100px;
     color:$color-FN-a;
     &:hover, &:visited{
       background:rgba(0,0,0,.6);
-      color:#fff;
+      color:$c-White;
       text-decoration:none;
     }
   }
@@ -198,8 +199,8 @@ $height-Fixed-Nav:  100px;
   @include vendor(background-size, 75%);
   height:24px;
   position:fixed;
-  right:$spacing;
-  top:$spacing;
+  right:$px-Unit;
+  top:$px-Unit;
   width:28px;
 }
 /*

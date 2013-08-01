@@ -6,8 +6,8 @@
 // Simply styled with only a base margin-bottom and extending the clearfix class,
 // a row can also have helper classes added onto it for other general styling purposes
 .row{
-	margin-left:-$spacing*5;
-	margin-bottom:$spacing*5;
+	margin-left:-$px-Unit*5;
+	margin-bottom:$px-Unit*5;
 	@extend %clearfix;
 }
 
@@ -18,7 +18,7 @@
 	margin-bottom:0!important; 
 		// row has a margin-bottom applied to it already, 
 		// to absolutely make sure there is no extra margin, 0!important is used
-	padding-left:$spacing*5;
+	padding-left:$px-Unit*5;
 	position:relative;
 	width:100%; // default width is 100%.  
 }
@@ -64,7 +64,7 @@
 .block{
 	background:#ccc;
 	color:#333;
-	padding:$spacing;
+	padding:$px-Unit;
 	
 	& > :last-child{
 	  margin-bottom:0;	

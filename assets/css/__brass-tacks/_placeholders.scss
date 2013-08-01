@@ -9,7 +9,7 @@
 // Reset the Standard Tags, 
 // extend to all tags that need this
 // for better organization of code
-%reset{border:0; margin:0; outline:0; padding:0}
+%reset{border:0; margin:0; outline:0; padding:0;}
 
 // Typography Placeholders
 
@@ -26,10 +26,47 @@
 %tiny   {font-size:$tiny;   weight:300;}
 %mini   {font-size:$mini;   weight:300;}
 
-// Form Element Placeholders
-%label{
-  display:block;
-  margin-bottom:$spacing;
+
+// Reset/Remove List Styling
+%kill-List{
+  list-style:none;
+  padding:0;
+}
+
+// Truncate Text
+%truncate{@include truncate(100%)}
+
+// Word Wraps
+%auto-wrap    {word-wrap:auto;}
+%breakword    {word-wrap:break-word;}
+%normal-wrap  {word-wrap:normal;}
+
+// Messaging Unit Placeholder
+%message{
+  @include border-radius($px-Unit);
+  @include vendor(transition, all .3s linear);
+  border:1px solid;
+  margin-bottom:$em-Unit;
+  padding:$em-Unit*.35 $em-Unit*.5;
+  position:relative;
+  text-shadow:0 1px 1px rgba(255,255,255,.6);
+
+  p{
+    margin-bottom:0;
+  }
+}
+
+%message-Holder{
+  left:$per-Unit;
+  position:fixed;
+  top:0;
+  width:$per-Unit*8;
+}
+
+%close-Message{
+  border:1px solid;
+  position:absolute;
+  text-decoration:none;
 }
 
 // Clearfix
@@ -38,7 +75,27 @@
 }
 
 // Consistent Margin Bottom
-%margin-bottom{margin-bottom:$spacing*4}
+%margin-bottom{
+  margin-bottom:$px-Unit*2;
+}
+
+// Input Area Styling
+%input-Area{
+  background:#fff;
+  border:1px solid $c-Border;
+  font-family:$arial;
+  line-height:1.25; 
+  margin-bottom:$px-Unit*2;
+  padding:$px-Unit*2 $px-Unit;
+  width:80%;
+    
+  &:focus{
+    background:$c-Lighter;
+    border:1px solid #50B6D5;
+    @include box-shadow($bs-2);
+  }
+}
+
 
 // Hide from browsers but not from screen readers
 %invis{@include invisible}

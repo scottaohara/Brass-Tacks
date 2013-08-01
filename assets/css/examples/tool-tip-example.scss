@@ -30,13 +30,13 @@
 		background:#fff;
 		background:rgba(255,255,255,.95);
 		border:1px solid #333;
-		border-radius:$radius;
+		border-radius:$px-Unit;
 		color:#333;
 		content:attr(data-tooltip);
 		font-size:12px;
 		left:0; 
 		opacity:0;
-		padding:$spacing $spacing*3;
+		padding:$px-Unit $px-Unit*3;
 		position:absolute;
 		text-align:center;
 		top:90%;

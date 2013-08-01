@@ -10,7 +10,7 @@ code, kbd, samp{
   display:block;
   font-family:monospace, serif; 
   font-size:$base;
-  padding:$spacing*2;
+  padding:$px-Unit*2;
 }
 
 pre{
@@ -24,12 +24,11 @@ pre{
   }
 }
 
-
 p, li{
   code, kbd, pre, samp{
     display:inline-block; 
     margin:0;
-    padding:$spacing;
+    padding:$px-Unit;
   }
 }
 

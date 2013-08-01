@@ -5,7 +5,7 @@
 // Apply to <main> or top level <section> for styling
 .content-Base{
 	min-height:500px;
-	padding-bottom:$spacing*5;
+	padding-bottom:$px-Unit*5;
 	
 	.content{
 		background:#fff; 

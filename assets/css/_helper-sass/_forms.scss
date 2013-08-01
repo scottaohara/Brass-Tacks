@@ -1,0 +1,132 @@
+// ----------------------------------------------------------------
+//		Styling for form elements
+// ----------------------------------------------------------------
+
+.grouping{padding:$px-Unit 0}
+
+// Fieldset Styling
+.fieldset{
+	border:1px solid $c-Border;
+	margin-bottom:$px-Unit*2; 
+	padding:$px-Unit*2 $px-Unit*3;
+}
+
+// Inline Form Elements
+.inline-Label{
+  display:inline-block;
+}
+
+.dis-Label{
+  cursor:not-allowed;
+}
+
+/* Check/Radio Inputs & Labels */
+.option-Container{
+    // background:url() no-repeat left center;       
+    // ------     instead of reusing btns for inputs, can put img sprites here instead
+    position:relative;
+    &:hover{
+      .btn-Radio, 
+      .btn-Check{border-color:#333}
+    } 
+}
+.option-Label{
+  cursor:pointer;
+  display:block;
+  padding-left:$px-Unit*7;
+  position:relative;
+  z-index:2;
+}
+
+.input-Hide{@include invisible;}
+
+.btn-Radio, .btn-Check{
+    @extend %btn;
+    background:$c-Btn-RC;
+    border:1px solid #ccc;
+    font-size:14px!important;
+    height:19px;
+    left:0;
+    padding:2px!important;
+    position:absolute;
+    top:0;
+    width:19px;
+    
+    &:hover{background:$c-Btn-2}
+}
+
+.btn-Radio{@include border-radius($px-Unit*4)}
+
+.input-Radio.selected-Radio .btn-Radio{@extend .btn-Radio:hover; border-color:#333}
+.input-Check.selected-Check .btn-Check{@extend .btn-Check:hover; border-color:#333}
+
+.ifChecked{
+  visibility:hidden;
+}
+.selected-Check .ifChecked{
+  visibility:visible;
+}
+
+/* Drop Down Selection Inputs */
+.select-Container{
+  @extend %input-Area;
+  background:url(../img/drop-Arrow.png) no-repeat 99% center #fff;
+  display:inline-block;
+  overflow:hidden;
+}
+
+.input-Select{
+  background:none;
+  border:0;
+  font-size:$base;
+  margin-bottom:0;
+  padding-right:$px-Unit*4;
+  width:120%;
+  -webkit-appearance:textarea;
+}
+
+.multi-Select{
+  @extend %input-Area;
+}
+
+// File Input Styling
+.file-Input-Area{
+	position:relative;
+	label{cursor:default}
+}
+.input-File{
+	cursor:pointer;
+	left:0;
+	height:100%;
+	opacity:0;
+	position:absolute;
+	top:0;
+	width:100%;
+	z-index:9;
+}
+.input-File-Text{
+  @extend %input-Area;
+	cursor:pointer;
+	display:inline-block; 
+}
+
+/* Inputs not supported in all browsers */
+.input-Color{ // reusing a lot of input-Area here, but not @extending it because the rules of input-Area 'break' how this should look in chrome/opera
+    border:1px solid $c-Border;
+    font-family:$arial;
+    margin-bottom:$px-Unit*2;
+    padding:0 $px-Unit;
+    height:45px;
+    width:50%;
+    
+    &:focus{
+      background:$c-Lighter;
+      border:1px solid #50B6D5;
+      @include box-shadow($bs-2);
+    }
+}
+
+.input-Number{
+    @extend %input-Area;
+    font-size:$base;
+}

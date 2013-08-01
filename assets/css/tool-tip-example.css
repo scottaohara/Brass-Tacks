@@ -23,7 +23,7 @@
     background: #fff;
     background: rgba(255, 255, 255, 0.95);
     border: 1px solid #333;
-    border-radius: 3px;
+    border-radius: 4px;
     color: #333;
     content: attr(data-tooltip);
     font-size: 12px;

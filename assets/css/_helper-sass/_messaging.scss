@@ -1,0 +1,88 @@
+// ----------------------------------------------------------------
+//		Messaging
+// ----------------------------------------------------------------
+
+.message-Holder{
+	@extend %message-Holder;
+}
+
+.message-Warning{
+	@extend %message;
+	background:lighten($c-Yellow, 20%);
+	border-color:darken($c-Yellow, 15%);
+	color:darken($c-Yellow, 50%);
+	@include select-Text(darken($c-Yellow, 15%), $c-Dark, none);
+
+	.close-Message{
+		background:$c-Yellow;
+		border-color:darken($c-Yellow, 15%);
+		color:darken($c-Yellow, 45%);
+
+		&:hover{
+			background:darken($c-Yellow, 15%);
+		}
+	}
+}
+
+.message-Error{
+	@extend %message;
+	background:lighten($c-Red, 10%);
+	border-color:darken($c-Red, 15%);
+	color:darken($c-Red, 44%);
+	@include select-Text(darken($c-Red, 15%), $c-White, none);
+
+	.close-Message{
+		background:$c-Red;
+		border-color:darken($c-Red, 15%);
+		color:lighten($c-Red, 45%);
+
+		&:hover{
+			background:darken($c-Red, 15%);
+		}
+	}
+}
+
+.message-Success{
+	@extend %message;
+	background:lighten($c-Green, 10%);
+	border-color:darken($c-Green, 15%);
+	color:darken($c-Green, 40%);
+	@include select-Text(darken($c-Green, 15%), $c-White, none);
+
+	.close-Message{
+		background:$c-Green;
+		border-color:darken($c-Green, 15%);
+		color:lighten($c-Green, 60%);
+
+		&:hover{
+			background:darken($c-Green, 15%);
+		}
+	}
+}
+
+.message-Info{
+	@extend %message;
+	background:lighten($c-Blue, 10%);
+	border-color:darken($c-Blue, 15%);
+	color:darken($c-Blue, 45%);
+	@include select-Text(darken($c-Blue, 15%), $c-White, none);
+
+	.close-Message{
+		background:$c-Blue;
+		border-color:darken($c-Blue, 15%);
+		color:lighten($c-Blue, 45%);
+
+		&:hover{
+			background:darken($c-Blue, 15%);
+		}
+	}
+}
+
+// Button to close messages
+.close-Message{
+	@extend %close-Message;
+	@include border-radius($px-Unit*20);
+	padding:$px-Unit $px-Unit*3;
+	right:-$em-Unit*.5;
+	top:-$em-Unit*.5;
+}

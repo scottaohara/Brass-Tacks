@@ -29,7 +29,11 @@
 }
 
 .table-Stripe{
-	tr:nth-child(2n){background:$c-Table-Striped}
+	tr:nth-child(2n){
+		background:$c-Table-Striped;
+	}
 }
 
-// Table Cell Widths
+.table-Row-Stripe{
+	background:$c-Table-Striped;
+}

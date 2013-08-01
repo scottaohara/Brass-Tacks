@@ -18,12 +18,14 @@ $c-Light:       #eee;
 $c-Lighter:     #f0f0f0;
 
 // Generic Colors
-$c-Red:         #c70a0a;
-$c-Green:       #81b75a;
-$c-Blue:        #2858e1;
+$c-Red:         #ff3e3e;
+$c-Green:       #6ccf31;
+$c-Blue:        #66b0e9;
 
 $c-Magenta:     #dd0986;
-$c-Yellow:      #e1e404;
+$c-Yellow:      #faea65;
+$c-Orange:      #fd6f29;
+$c-Purple:      #9729fd;
 
 
 
@@ -62,11 +64,6 @@ $base:  $base-font-multiplier;		       // 16px
 $tiny:  $base-font-multiplier * .75;		 // 12px
 $mini:  $base-font-multiplier * .625;		 // 10px
 
-// ----------------------------------------------------------------
-// Border Radius Base Default	- t-l  t-r  b-r  b-l
-// ----------------------------------------------------------------
-$radius:	3px;
-
 
 // ----------------------------------------------------------------
 // Box Shadow Types  (these are just examples.  Make your own!)
@@ -80,9 +77,11 @@ $bs-6:		0 0 6px rgba(255,255,255,.5) inset;
 
 
 // ----------------------------------------------------------------
-// Layout
+// Measurement Units
 // ----------------------------------------------------------------
-$spacing:4px;
+$px-Unit:  4px;   // base of 4px, 1/4 of 16px
+$em-Unit:  1em;   // translates to 16px based on 100% font-size
+$per-Unit: 10%;   // base of 10 for percentages
 
 
 // ----------------------------------------------------------------

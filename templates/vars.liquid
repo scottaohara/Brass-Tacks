@@ -58,15 +58,15 @@
 		      </tr>
 		      <tr>
 		        <td>$c-Red</td>
-		        <td>#c70a0a</td>
+		        <td>#ff3e3e</td>
 		      </tr>
 		      <tr>
 		        <td>$c-Green</td>
-		        <td>#81b75a</td>
+		        <td>#6ccf31</td>
 		      </tr>
 		      <tr>
 		        <td>$c-Blue</td>
-		        <td>#2858e1</td>
+		        <td>#66b0e9</td>
 		      </tr>
 		      <tr>
 		        <td>$c-Magenta</td>
@@ -74,15 +74,15 @@
 		      </tr>
 		      <tr>
 		        <td>$c-Yellow</td>
-		        <td>#e1e404</td>
+		        <td>#faea65</td>
 		      </tr>
 		      <tr>
 		        <td>$c-Orange</td>
-		        <td>#e47d04</td>
+		        <td>#fd6f29</td>
 		      </tr>
 		      <tr>
 		        <td>$c-Purple</td>
-		        <td>#6804e4</td>
+		        <td>#9729fd</td>
 		      </tr>
 		    </tbody>
 		  </table>
@@ -356,12 +356,16 @@
 		    </thead>
 		    <tbody>
 		      <tr>
-		        <td>$radius</td>
-		        <td>3px</td>
+		        <td>$px-Units</td>
+		        <td>4px</td>
 		      </tr>
 		      <tr>
-		        <td>$spacing</td>
-		        <td>4px</td>
+		        <td>$em-Units</td>
+		        <td>1em</td>
+		      </tr>
+		      <tr>
+		        <td>$per-Units</td>
+		        <td>10%</td>
 		      </tr>
 		    </tbody>
 		  </table>
@@ -369,17 +373,10 @@
 		
 		<div class="col col-40">
 		  <p>
-		    Radius and spacing are the standard pixel units of measure for border-radius and 
-		    spacing units respectively.  
+		   	Base measurements set for Pixel, Ems and Percentage measurment units.
 		  </p>
 		  <p>
-		    Use the $spacing variable in place of using absolute pixel values, and use 
-		    addition, subtraction, multiplication or division to change the value as the 
-		    situation calls for.
-		  </p>
-		  <p>
-		    This will keep all of your spacing values consistent, with a single value
-		    to edit to change spacing across your project.
+		    Using these in place of static values will keep all of your measurement values consistent, with a single value to edit to change measurements across your project.
 		  </p>
 		      
 		</div> <!-- end .col-40 -->

@@ -3,10 +3,14 @@
 // ----------------------------------------------------------------
 
 // Kill list styling - extend into Navigations & for lists that don't require markings
-.kill-List, %kill-List{list-style:none; padding:0;}
+.kill-List{
+	@extend %kill-List;
+}
 
 // Numbered lists for non-ol list types
-.numbered{list-style-type:decimal;}
+.numbered{
+	list-style-type:decimal;
+}
 
 
 // ----------------------------------------------------------------
@@ -17,8 +21,8 @@
 .shout-Out{
 	background:$c-Lighter;
 	border-left:4px solid $c-Dark;
-	padding:$spacing*4;
-	&:before, &:after{display:none}
+	padding:$px-Unit*4;
+	&:before, &:after{display:none;}
 }
 
 // ----------------------------------------------------------------
@@ -30,18 +34,18 @@
 %go:after     {content:"\00A0" "\00BB"}  // >> (use on link / btn
 
 // Align Text
-.txt-Center {text-align:center}
-.txt-Left   {text-align:left}
-.txt-Right  {text-align:right}
-.txt-Just   {text-align:justify}
+.txt-Center {text-align:center;}
+.txt-Left   {text-align:left;}
+.txt-Right  {text-align:right;}
+.txt-Just   {text-align:justify;}
 
 // Highlight Text
 .highlight, %highlight{
 	background:$c-Highlight;
 	color:$c-Darker;
-	@include border-radius(3px);
+	@include border-radius($px-Unit);
 	display:inline-block;
-	padding:$spacing;
+	padding:$px-Unit;
 }
 
 // Highlight Text - Skewed
@@ -78,14 +82,7 @@
 // Multi-Columned Text
 .multi{
 	@include base-vendor(column-count, 3);
-	@include base-vendor(column-gap, $spacing*10);
-	@include base-vendor(column-rule, 1px outset #eee);
+	@include base-vendor(column-gap, $px-Unit*10);
+	@include base-vendor(column-rule, 1px outset $c-Light);
 }
 
-// Truncate Text
-%truncate{@include truncate(100%)}
-
-// Word Wraps
-%auto-wrap	  {word-wrap:auto}
-%breakword	  {word-wrap:break-word}
-%normal-wrap  {word-wrap:normal}

@@ -15,7 +15,7 @@ table{
 	width:100%; // make tables always take up the entire width of their containing parent.
 	
 	th, td{
-	padding:$spacing $spacing*2;
+	padding:$px-Unit $px-Unit*2;
   	text-align:left;
 	}
 }

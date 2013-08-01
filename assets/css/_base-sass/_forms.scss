@@ -38,21 +38,45 @@ input[readonly]{background:$c-Disabled}
 input[type='search']::-webkit-search-decoration{-webkit-appearance:none} 
 
 // Removes inner padding & border in Firefox 4+
-button::-moz-focus-inner, input::-moz-focus-inner{border:0; padding:0}
+button::-moz-focus-inner, input::-moz-focus-inner{
+  border:0;
+  padding:0;
+}
+
+// Base styling for text input elements
+input{
+  &[type="email"], &[type="file"], &[type="password"],
+  &[type="search"], &[type="tel"], &[type="text"], &[type="url"]{
+    @extend %input-Area;
+  }
+} 
 
 // Makes sure that overflow shows and text is aligned to top of area
 // also make resizing not extend beyond the max-width for the content area
 textarea{
+  @extend %input-Area;
+  display:block;
   max-width:100%;
   min-height:40px;
   overflow:auto;
   resize:both;
   vertical-align:top;
+  width:80%;
+}
+
+// Form Element Placeholders
+label{
+  display:block;
+  margin-bottom:$px-Unit;
+
+  &[for]{
+    cursor:pointer;
+  }
 }
 
 // Legend
 legend{
   @extend %eps;
-	margin-left:-$spacing;
-	padding:0 $spacing;
+	margin-left:-$px-Unit;
+	padding:0 $px-Unit;
 }
