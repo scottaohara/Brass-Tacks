@@ -3,102 +3,124 @@
 <section class="content">
 
 <h2>Tables</h2>
+<p>
+  Examples of basic styling and helper classes for Table Elements.
+</p>
+<hr />
 
+<h3>Standard Tables</h3>
 <div class="row">
 	<div class="col col-60">
-		<table class="table-Base">
-            <thead class="table-Header">
-                <tr>
-                    <th>Item 1</th>
-                    <th>Item 2</th>
-                    <th>Item 3</th>
-                </tr>
-            </thead>
-            <tfoot class="table-Footer">
-                <tr>
-                    <th>Item 1 End</th>
-                    <th>Item 2 End</th>
-                    <th>Item 3 End</th>
-                </tr>
-            </tfoot>
-            <tbody class="table-Body">
-                <tr>
-                    <td>Title</td>
-                    <td>Data area 1</td>
-                    <td>Data area 2</td>
-                </tr>
-                <tr>
-                    <td>Title</td>
-                    <td>Data area 1</td>
-                    <td>Data area 2</td>
-                </tr>
-                <tr>
-                    <td>Title</td>
-                    <td>Data area 1</td>
-                    <td>Data area 2</td>
-                </tr>
-                <tr>
-                    <td>Title</td>
-                    <td>Data area 1</td>
-                    <td>Data area 2</td>
-                </tr>
-            </tbody>
-        </table>
-	</div> <!-- end .col-60 -->
+		<table>
+      <thead>
+        <tr>
+          <th>Item 1</th>
+          <th>Item 2</th>
+          <th>Item 3</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <th>Item 1 End</th>
+          <th>Item 2 End</th>
+          <th>Item 3 End</th>
+        </tr>
+      </tfoot>
+      <tbody>
+        <tr>
+          <td>Title</td>
+          <td>Data area 1</td>
+          <td>Data area 2</td>
+        </tr>
+        <tr>
+          <td>Title</td>
+          <td>Data area 1</td>
+          <td>Data area 2</td>
+        </tr>
+        <tr>
+          <td>Title</td>
+          <td>Data area 1</td>
+          <td>Data area 2</td>
+        </tr>
+        <tr>
+          <td>Title</td>
+          <td>Data area 1</td>
+          <td>Data area 2</td>
+        </tr>
+      </tbody>
+    </table>
+  </div> <!-- end .col-60 -->
 	
 	<div class="col col-40">
 		<p>
-			Basic styling for a table.   Includes a background color to separate it from the normal background color of the site.
+			Basic, unclassed styling for a table.  
+		</p>
+		<p>
+		  Extends the %margin-bottom placeholder as well as collapses borders, sets border spacing to zero.
+		</p>
+		<p>
+		  The base font-size is applied to the entire table, as well as a width of 100% to force tables
+		  to fill the width of their container.  Text is set to align left.
 		</p>
 	</div>
 </div> <!-- end .row -->
 
+<hr />
+
+<h3>Standard Helper Classes</h3>
 <div class="row">
 	<div class="col col-60">
-		<table class="table-Base">
-			<caption>Table Caption</caption>
-            <thead class="table-Header">
-                <tr>
-                    <th>TH Col Start</th>
-                    <th>Item 2</th>
-                    <th>Item 3</th>
-                </tr>
-            </thead>
-            <tfoot class="table-Footer">
-                <tr>
-                    <th>TH Col End</th>
-                    <th>Item 2 End</th>
-                    <th>Item 3 End</th>
-                </tr>
-            </tfoot>
-            <tbody class="table-Body">
-                <tr>
-                    <th>Title TH</th>
-                    <td>Data area 1</td>
-                    <td>Data area 2</td>
-                </tr>
-                <tr>
-                    <th>Title TH</th>
-                    <td>Data area 1</td>
-                    <td>Data area 2</td>
-                </tr>
-                <tr>
-                    <th>Title TH</th>
-                    <td>Data area 1</td>
-                    <td>Data area 2</td>
-                </tr>
-                <tr>
-                    <th>Title TH</th>
-                    <td>Data area 1</td>
-                    <td>Data area 2</td>
-                </tr>
-            </tbody>
-        </table>
+    <table>
+      <caption>Table Caption</caption>
+      <thead class="table-Header">
+        <tr>
+          <th>TH Col Start</th>
+          <th>Item 2</th>
+          <th>Item 3</th>
+        </tr>
+      </thead>
+      <tfoot class="table-Footer">
+        <tr>
+          <th>TH Col End</th>
+          <th>Item 2 End</th>
+          <th>Item 3 End</th>
+        </tr>
+      </tfoot>
+      <tbody class="table-Body">
+        <tr>
+          <th>Title TH</th>
+          <td>Data area 1</td>
+          <td>Data area 2</td>
+        </tr>
+        <tr>
+          <th>Title TH</th>
+          <td>Data area 1</td>
+          <td>Data area 2</td>
+        </tr>
+        <tr>
+          <th>Title TH</th>
+          <td>Data area 1</td>
+          <td>Data area 2</td>
+        </tr>
+        <tr>
+          <th>Title TH</th>
+          <td>Data area 1</td>
+          <td>Data area 2</td>
+        </tr>
+      </tbody>
+    </table>
 	</div> <!-- end .col-60 -->
 	
 	<div class="col col-40">
 		<p>
 			Basic table with a caption element.
+		</p>
+		<p>
+		  Classes .table-Header, .table-Body and .table-Footer are applied to their respective elements.
+		</p>
+		<p>
+		  .table-Body does not start with any preset styling.  .table-Header and Footer each have background
+		  colors applied that can be changed in the Project Variables file.
 		</p>
 	</div>
 </div> <!-- end .row -->
@@ -108,55 +130,58 @@
 <h3>Table Bordered</h3>
 <div class="row">
 	<div class="col col-60">
-		<table class="table-Border">
-			<caption>Table Caption</caption>
-            <thead class="table-Header">
-                <tr>
-                    <th>TH Col Start</th>
-                    <th>Item 2</th>
-                    <th>Item 3</th>
-                </tr>
-            </thead>
-            <tfoot class="table-Footer">
-                <tr>
-                    <th>TH Col End</th>
-                    <th>Item 2 End</th>
-                    <th>Item 3 End</th>
-                </tr>
-            </tfoot>
-            <tbody class="table-Body">
-                <tr>
-                    <th>Title TH</th>
-                    <td>Data area 1</td>
-                    <td>Data area 2</td>
-                </tr>
-                <tr>
-                    <th>Title TH</th>
-                    <td>Data area 1</td>
-                    <td>Data area 2</td>
-                </tr>
-                <tr>
-                    <th>Title TH</th>
-                    <td>Data area 1</td>
-                    <td>Data area 2</td>
-                </tr>
-                <tr>
-                    <th>Title TH</th>
-                    <td>Data area 1</td>
-                    <td>Data area 2</td>
-                </tr>
-                <tr>
-                    <th>Title TH</th>
-                    <td>Data area 1</td>
-                    <td>Data area 2</td>
-                </tr>
-            </tbody>
-        </table>
+    <table class="table-Border">
+      <thead class="table-Header">
+        <tr>
+          <th>TH Col Start</th>
+          <th>Item 2</th>
+          <th>Item 3</th>
+        </tr>
+      </thead>
+      <tfoot class="table-Footer">
+        <tr>
+          <th>TH Col End</th>
+          <th>Item 2 End</th>
+          <th>Item 3 End</th>
+        </tr>
+      </tfoot>
+      <tbody class="table-Body">
+        <tr>
+          <th>Title TH</th>
+          <td>Data area 1</td>
+          <td>Data area 2</td>
+        </tr>
+        <tr>
+          <th>Title TH</th>
+          <td>Data area 1</td>
+          <td>Data area 2</td>
+        </tr>
+        <tr>
+          <th>Title TH</th>
+          <td>Data area 1</td>
+          <td>Data area 2</td>
+        </tr>
+        <tr>
+          <th>Title TH</th>
+          <td>Data area 1</td>
+          <td>Data area 2</td>
+        </tr>
+        <tr>
+          <th>Title TH</th>
+          <td>Data area 1</td>
+          <td>Data area 2</td>
+        </tr>
+      </tbody>
+    </table>
 	</div> <!-- end .col-60 -->
 	
 	<div class="col col-40">
 		<p>
-			.table-Border extends the .table-Base class to add borders to the various elements in the table.
+			.table-Border adds simple borders to the various table elements, so that there are
+			no double borders on any cell.
+		</p>
+		<p>
+		  It utilizes various table variables found in the Project Variables file.
 		</p>
 	</div>
 </div> <!-- end .row -->
@@ -167,55 +192,55 @@
 <div class="row">
 	<div class="col col-60">
 		<table class="table-Stripe">
-			<caption>Table Caption</caption>
-            <thead class="table-Header">
-                <tr>
-                    <th>TH Col Start</th>
-                    <th>Item 2</th>
-                    <th>Item 3</th>
-                </tr>
-            </thead>
-            <tfoot class="table-Footer">
-                <tr>
-                    <th>TH Col End</th>
-                    <th>Item 2 End</th>
-                    <th>Item 3 End</th>
-                </tr>
-            </tfoot>
-            <tbody class="table-Body">
-                <tr>
-                    <th>Title TH</th>
-                    <td>Data area 1</td>
-                    <td>Data area 2</td>
-                </tr>
-                <tr>
-                    <th>Title TH</th>
-                    <td>Data area 1</td>
-                    <td>Data area 2</td>
-                </tr>
-                <tr>
-                    <th>Title TH</th>
-                    <td>Data area 1</td>
-                    <td>Data area 2</td>
-                </tr>
-                <tr>
-                    <th>Title TH</th>
-                    <td>Data area 1</td>
-                    <td>Data area 2</td>
-                </tr>
-                <tr>
-                    <th>Title TH</th>
-                    <td>Data area 1</td>
-                    <td>Data area 2</td>
-                </tr>
-            </tbody>
-        </table>
+      <thead class="table-Header">
+        <tr>
+          <th>TH Col Start</th>
+          <th>Item 2</th>
+          <th>Item 3</th>
+        </tr>
+      </thead>
+      <tfoot class="table-Footer">
+        <tr>
+          <th>TH Col End</th>
+          <th>Item 2 End</th>
+          <th>Item 3 End</th>
+        </tr>
+      </tfoot>
+      <tbody class="table-Body">
+        <tr>
+          <th>Title TH</th>
+          <td>Data area 1</td>
+          <td>Data area 2</td>
+        </tr>
+        <tr>
+          <th>Title TH</th>
+          <td>Data area 1</td>
+          <td>Data area 2</td>
+        </tr>
+        <tr>
+          <th>Title TH</th>
+          <td>Data area 1</td>
+          <td>Data area 2</td>
+        </tr>
+        <tr>
+          <th>Title TH</th>
+          <td>Data area 1</td>
+          <td>Data area 2</td>
+        </tr>
+        <tr>
+          <th>Title TH</th>
+          <td>Data area 1</td>
+          <td>Data area 2</td>
+        </tr>
+      </tbody>
+    </table>
 	</div> <!-- end .col-60 -->
 	
 	<div class="col col-40">
 		<p>
-			.table-Stripe extends the .table-Base class to add zebra striping using CSS nth-child.
+			.table-Stripe adds zebra-striping using the :nth-child() selector.  
 		</p>
+		<p>The stripe color is set via the Project Vars file.</p>
 	</div>
 </div> <!-- end .row -->
 	

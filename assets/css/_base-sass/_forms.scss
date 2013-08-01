@@ -11,6 +11,8 @@ button, fieldset, form, input, select, textarea{
   text-transform:none;
 }
 
+legend{@extend %reset}
+
 // Makes buttons look like buttons with appropriate cursors
 button,
 html input[type='button'],

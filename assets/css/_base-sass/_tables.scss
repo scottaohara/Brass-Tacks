@@ -3,7 +3,7 @@
 // ----------------------------------------------------------------
 
 // Resets main table tags
-caption, legend, table, td, th, tr{@extend %reset}
+caption, table, td, th, tr{@extend %reset}
 
 
 // Removes most of the table spacing issues
@@ -11,41 +11,11 @@ table{
   @extend %margin-bottom;
   border-collapse:collapse;
   border-spacing:0;
-}
-
-.table-Base{
-	background:$c-Table;
-	font-size:$base;
+  font-size:$base;
 	width:100%; // make tables always take up the entire width of their containing parent.
 	
-	th, 
-	td{
-  	padding:$spacing; 
+	th, td{
+	padding:$spacing $spacing*2;
   	text-align:left;
 	}
-}
-
-.table-Header{
-	background:$c-Table-Head;
-}
-
-.table-Body{}
-
-.table-Footer{
-	background:$c-Table-Foot;
-}
-
-.table-Border{
-	@extend .table-Base;
-	border-bottom:$border-Table;
-	border-right:$border-Table;
-	
-	tr{border-top:$border-Table}
-	th, td{border-left:$border-Table}
-}
-
-.table-Stripe{
-	@extend .table-Base;
-	
-	tr:nth-child(2n){background:$c-Table-Striped}
 }

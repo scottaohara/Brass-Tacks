@@ -33,10 +33,22 @@
 }
 
 // Clearfix
-%clearfix{@include clearfix;}
+%clearfix{
+  &:after{clear:both; content:""; display:table}
+}
 
 // Consistent Margin Bottom
 %margin-bottom{margin-bottom:$spacing*4}
 
 // Hide from browsers but not from screen readers
 %invis{@include invisible}
+
+// ----------------------------------------------------------------
+//		Branding Helpers
+// ----------------------------------------------------------------
+%brand{
+	@extend .brand-Color;
+	@extend .brand-Font;
+}
+//%brand-Color{color:$c-Brand-1}
+//%brand-Font{font-family:$brand; font-weight:300}

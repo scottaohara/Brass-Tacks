@@ -2,20 +2,53 @@
 // Project Specific Variables
 // ----------------------------------------------------------------
 
-// Base Branding Colors  ------------------------------------------
+// Edit these variables for 
+
+// ----------------------------------------------------------------
+// Base Branding Colors
+// ----------------------------------------------------------------
 $c-Brand-1:		#54a4a3;
 $c-Brand-2:		#d48371;
 $c-Brand-3:		#7e984c;
 
 
-// Button & Link Colors  ------------------------------------------
+// ----------------------------------------------------------------
+// Button & Link Colors
+// ----------------------------------------------------------------
 $c-Btn-1:     $c-Brand-1;
 $c-Btn-2:     $c-Brand-2;
 $c-Btn-3:     $c-Brand-3;
 
+$c-Btn-Neg:		#aaa;
+$c-Disabled:	$c-Lighter;
+
 $c-Link:		  $c-Brand-2;
+
+// Color for Radio/Check box buttons
+$c-Btn-RC:		$c-Light;
+
+// Required / Error Text Color
+$c-Required:	$c-Red;
+
+// Underlines & Highlights
+$c-Highlight:	$c-Yellow;
+$c-Underline:	$c-Grey; // not for links
+$c-Border:		$c-Grey;
+
+
+// ----------------------------------------------------------------
+// Tables
+// ----------------------------------------------------------------
+$c-Table:         $c-Lighter;
+$c-Table-Head:    $c-Light;
+$c-Table-Foot:    #e3e3e3;
+
+$c-Table-Striped: $c-Light;
+$c-Table-Border:  #ccc;
+
+// sets consistent boarder styling for table elements
+$border-Table:    1px solid $c-Table-Border;
 
 
 // Fonts Families  ------------------------------------------------
-
 $brand:     'Open Sans'; // replace this with your main brand font

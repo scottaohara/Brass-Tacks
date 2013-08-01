@@ -1,7 +1,7 @@
 // ----------------------------------------------------------------
 //		Project Specific Extended HTML Stylings
 // ----------------------------------------------------------------
-body{background:$c-BG; font-family:$brand; font-weight:300}
+body{background:$c-Lighter; font-family:$brand; font-weight:300}
 
 // Highlight Text Selection
 ::-moz-selection  {background:$c-Brand-1; color:$c-Light; text-shadow:none}
@@ -17,15 +17,6 @@ body{background:$c-BG; font-family:$brand; font-weight:300}
 	& > :last-child{margin-bottom:0}	// kill any extra margin on the last element in the .content div
 }
 
-// ----------------------------------------------------------------
-//		Branding Helpers
-// ----------------------------------------------------------------
-.brand{
-	@extend .brand-Color;
-	@extend .brand-Font;
-}
-.brand-Color{color:$c-Brand-1}
-.brand-Font{font-family:$brand; font-weight:300}
 
 // ----------------------------------------------------------------
 //		Project Specific Link Stylings

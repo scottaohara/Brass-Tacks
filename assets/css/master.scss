@@ -2,7 +2,7 @@
   *******************************************************************************************************
   * Brass Tacks
   * by Scott O'Hara - @scottohara - scottohara.me  -  https://github.com/bleachedgraphics
-  * v 0.6.3 - July 27, 2013
+  * v 0.6.4 - July 31, 2013
   *
   * This framework is still and development.  If you have any suggestions/fixes/comments, please
   * create an issue - https://github.com/bleachedgraphics/Brass-Tacks/issues 
@@ -34,6 +34,7 @@
 	@import '_helper-sass/type';            // helper classes for general typography
 	@import '_helper-sass/buttons';			    // Base button rules
 	@import '_helper-sass/layout';			    // Responsive & fixed layouts
+	@import '_helper-sass/tables';          // Helper classes for prettying up tables
 	
 // Project Specific Styling - see inside "base"
 	@import '_project-sass/base';	          // restyle and make classes specific for your project here

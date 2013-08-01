@@ -17,27 +17,37 @@
            #{$property}:$value;
 }
 
-
 // ----------------------------------------------------------------
-//		Useful CSS3 Mixins
+//		Box Sizing
 // ----------------------------------------------------------------
-// Box Sizing
 @mixin box-sizing($box-value){
 	@include base-vendor(box-sizing, $box-value);	
 }
 
+
+// ----------------------------------------------------------------
 // Border Radius
+// ----------------------------------------------------------------
 @mixin border-radius($br-value){
-	@include base-vendor(border-radius, $br-value);
+  border-radius:$br-value;
 	background-clip:padding-box;
 }
 
+
+// ----------------------------------------------------------------
 // Box Shadow   ---  See _var.scss to edit & create box-shadow rules
+// keeping webkit prefix around for early android / ios devices that may still need it.
+// -moz- removed as it hasn't been needed since firefox 3.6
+// ----------------------------------------------------------------
 @mixin box-shadow($bs-value){
-	@include base-vendor(box-shadow, $bs-value)
+  -webkit-box-shadow:$bs-value;
+          box-shadow:$bs-value;
 }
 
+
+// ----------------------------------------------------------------
 // Linear Gradient
+// ----------------------------------------------------------------
 @mixin linear-gradient($grad-Line, $grad-Colors...) {
   background: -webkit-linear-gradient($grad-Line, $grad-Colors);
   background:    -moz-linear-gradient($grad-Line, $grad-Colors);
@@ -48,16 +58,19 @@
     //  example:
     //    @include linear-gradient(80deg, #fcc, #f23);
     //    @include linear-gradient(top, #fcc, #f23);
-
+    
+    
+// ----------------------------------------------------------------
 // Radial Gradient
+// ----------------------------------------------------------------
 @mixin radial-gradient($radial...) {
   background: -webkit-radial-gradient($radial);
   background:    -moz-radial-gradient($radial);
   background:      -o-radial-gradient($radial);
   background:         radial-gradient($radial);
 }
-	
-	
+
+
 // ----------------------------------------------------------------
 //		Hidden Elements Mixins
 // ----------------------------------------------------------------
@@ -89,14 +102,6 @@
     white-space:nowrap;
 }
 	// Example --  @include truncate(100%);
-
-
-// ----------------------------------------------------------------
-//		Clearfix
-// ----------------------------------------------------------------
-@mixin clearfix{
-  &:after{clear:both; content:""; display:table}
-}
 
 
 // ----------------------------------------------------------------
@@ -149,7 +154,8 @@
 }
 
 // ----------------------------------------------------------------
-//		Responsive Row w/fixed width column -- use in combo with .row
+//    Responsive Row w/fixed width column 
+//    -- use in combo with .row
 // ----------------------------------------------------------------
 @mixin row-fixed-Left($col-Size){
 	padding-left:$col-Size;

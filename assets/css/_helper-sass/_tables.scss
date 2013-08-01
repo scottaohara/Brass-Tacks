@@ -1,0 +1,35 @@
+// ----------------------------------------------------------------
+// Tables Helper Classes
+// ----------------------------------------------------------------
+
+.table-Header{
+	background:$c-Table-Head;
+}
+
+.table-Body{
+  // insert styles here
+}
+
+.table-Footer{
+	background:$c-Table-Foot;
+}
+
+// Table Decorations
+.table-Border{
+	border-bottom:$border-Table;
+	border-right:$border-Table;
+	
+	tr{
+	  border-top:$border-Table;
+	}
+	
+	th, td{
+	  border-left:$border-Table;
+	}
+}
+
+.table-Stripe{
+	tr:nth-child(2n){background:$c-Table-Striped}
+}
+
+// Table Cell Widths

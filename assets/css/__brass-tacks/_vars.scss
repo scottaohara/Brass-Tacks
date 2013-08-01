@@ -2,52 +2,45 @@
 // Colors
 // ----------------------------------------------------------------
 
-// Base Darker Colors
-$c-Dark:      #444;
-$c-Darker:		#101010;
+// Darker Colors
+$c-Black:       #0a0a0a;
+$c-Dark:        #333;
+$c-Darker:		  #1a1a1a;
 
-// Base Ligher Colors
-$c-White:     #fff;
-$c-Light:     #eee;
-$c-Lighter:   #f8f8f8;
+// Medium Colors
+$c-Grey:        #ccc;
+$c-Dark-Grey:   #999;
+$c-Light-Grey:  #ddd;
 
-$c-Body-Copy:	$c-Dark;
-$c-Heading:		$c-Darker;
+// Ligher Colors
+$c-White:       #fdfdfd;
+$c-Light:       #eee;
+$c-Lighter:     #f0f0f0;
 
-$c-BG:			  $c-Lighter;
+// Generic Colors
+$c-Red:         #c70a0a;
+$c-Green:       #81b75a;
+$c-Blue:        #2858e1;
 
-$c-Btn-Neg:		#aaa;
-$c-Disabled:	#fafafa;
+$c-Magenta:     #dd0986;
+$c-Yellow:      #e1e404;
 
-// Color for Radio/Check box buttons
-$c-Btn-RC:		$c-Light;
 
-// Required / Error Text Color
-$c-Required:	#f00;
-
-// Underlines & Highlights
-$c-Highlight:	#ff0;
-$c-Underline:	#ccc; // not for links
-$c-Border:		#ccc;
-
-// Tables
-$c-Table:         #fafafa;
-$c-Table-Head:    #eee;
-$c-Table-Foot:    #e3e3e3;
-
-$c-Table-Striped: $c-Light;
-$c-Table-Border:  #ccc;
-
-// sets consistent boarder styling for table elements
-$border-Table:    1px solid $c-Table-Border;
 
 // ----------------------------------------------------------------
 // Fonts Families
 // ----------------------------------------------------------------
-$arial:     Arial, "Helvetica Neue", Helvetica, sans-serif;
-$georgia:   Georgia, "Times New Roman", Times, serif;
-$helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$verdana:   Verdana, Geneva, sans-serif;
+
+// Base Web Fonts
+$arial:         Arial, "Helvetica Neue", Helvetica, sans-serif;
+$arial-Black:   "Arial Black", Gadget, sans-serif;
+$courier:       "Courier New", Courier, monospace;
+$georgia:       Georgia, "Times New Roman", Times, serif;
+$helvetica:     "Helvetica Neue", Helvetica, Arial, sans-serif;
+$lucida:        "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+$tahoma:        Tahoma, Geneva, sans-serif;
+$verdana:       Verdana, Geneva, sans-serif;
+
 
 // ----------------------------------------------------------------
 // Font Size Declarations 
@@ -93,10 +86,10 @@ $spacing:4px;
 
 
 // ----------------------------------------------------------------
-//		Media Query Break Points
+//		Media Query Break Points  // based on a 16px base font
 // ----------------------------------------------------------------
-$break-Mini:    480px;
-$break-Tiny:    500px;
+$break-Mini:    30em;
+$break-Tiny:    31.25em;  // 500px at 16px base
 $break-Small:   600px;
 $break-Medium:  800px;
 $break-Large:   1000px;
