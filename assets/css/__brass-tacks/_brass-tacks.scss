@@ -1,12 +1,37 @@
-// compile all mixins/var files to import into _master and any other file that needs them
-@import 'mixins';
-@import 'vars';
+// ----------------------------------------------------------------
+//  Compiles all mixins & var files into 
+//  master & thus any other file that needs them
+// ----------------------------------------------------------------
+
+  @import 'mixins';   // Brass Tacks Mixins
+  @import 'vars';     // Brass Tacks Variables
 
 
-// import the project specific vars
-@import '_project-sass/__vars-mixins/vars';           // project specific variables
-@import '_project-sass/__vars-mixins/mixins';         // project specific mixins
+// ----------------------------------------------------------------
+//  Imports project specific Mixins & Variables
+// ----------------------------------------------------------------
+
+  @import '_project-sass/__vars-mixins/vars';           // project specific variables
+  @import '_project-sass/__vars-mixins/mixins';         // project specific mixins
 
 
-// Common placeholder classes to extend into your project
-@import 'placeholders';
+// ----------------------------------------------------------------
+//  Imports common preset classes that will
+//  only be used if extended into a project
+//  Placeholders is divided into various sub files...
+// ----------------------------------------------------------------
+
+@import '_placeholders/generic';        // Multi-Purpose classes such as clearfix
+@import '_placeholders/brand';          // contains presets to quickly add brand fonts/colors
+@import '_placeholders/forms';          // helper form classes
+@import '_placeholders/typography';     // Various typography base classe
+
+
+// ----------------------------------------------------------------
+//  Extensions
+//  Placeholder classes that extend beyond the general Brass Tacks
+//  Boilerplate by adding additional styling and functionality 
+// ----------------------------------------------------------------
+
+@import '_placeholders/messaging';      // Classes for messaging units & modal boxes
+@import '_placeholders/tool-Tips';     // Tool Tips

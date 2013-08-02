@@ -2,121 +2,102 @@
 
 {% block content %} 
 <section class="content">
-	<h2>Text Elements</h2>
-	<p>
-		Here we shall go over various text/font stylings, sizes and types.
-	</p>
+
+<h2>Basic Text Elements &amp; Font Sizes</h2>
+<p>
+	Font sizes are all calculated in ems.  1em = 16px or font-size:100% which is browser defaults.
+</p>
+<p>
+  With no classes applied, most text elements will default to the 1em standards, except for:
+  &lt;h1-6>, &lt;blockquote>, &lt;small>, &lt;sub> and &lt;sup>.
+</p>
 
 <hr />
 
-<h3>Basic Text Elements &amp; Font Sizes</h3>
 <div class="row">
 
-	<div class="col col-60">
+	<div class="col col-33">
 	
-		<h1 class="giga">Giga <a href="#!" title="a link example">Heading</a></h1>
-		<h2 class="ultra">Ultra <a href="#!" title="a link example">Heading</a></h2>
-		<h3 class="mega">Mega <a href="#!" title="a link example">Heading</a></h3>
-		
-		<h1>Alpha &amp; <a href="#!" title="a link example">Heading 1</a></h1>
-		<h2>Beta &amp; <a href="#!" title="a link example">Heading 2</a></h2>
-		<h3>Gamma &amp; <a href="#!" title="a link example">Heading 3</a></h3>
-		<h4>Delta &amp; <a href="#!" title="a link example">Heading 4</a></h4>
-		<h5>Eps &amp; <a href="#!" title="a link example">Heading 5</a></h5>
-		<h6>Zeta &amp; <a href="#!" title="a link example">Heading 6</a></h6>
-		
-		<p>This is a basic paragraph style with a <a href="#!" title="a link example">link</a>.</p>
-		<small>This is tiny text with a <a href="#!" title="a link example">link</a>.</small>
-		<p class="mini">This is mini text with a <a href="#!" title="a link example">link</a>.</p>
-		
-	</div> <!-- end .col-60 -->
+		<h1 class="giga">.giga</h1>
+  		<code class="tiny">
+  		  &lt;h1 class="giga">.giga&lt;/h1>
+  		</code>
+		<h2 class="ultra">.ultra</h2>
+		  <code class="tiny">
+  		  &lt;span class="ultra">.ultra&lt;/span>
+  		</code>
+		<h3 class="mega">.mega</h3>
+		  <code class="tiny">
+  		  &lt;p class="mega">.mega&lt;/p>
+  		</code>
+  		
+		<p class="tiny">
+		  These are large display fonts for use in headers and on landing pages for giant call-to-action text.
+		</p>
+	</div> <!-- end .col-33 -->
 	
-	<div class="col col-40">
+  <div class="col col-33">
+		<h1><a href="#!" title="a link example">H1</a> &amp; .alpha</h1>
+		<code class="tiny">
+		  &lt;h1 class="alpha">.alpha&lt;/h1>
+		</code>
+		<h2><a href="#!" title="a link example">H2</a> &amp; .beta</h2>
+		<code class="tiny">
+		  &lt;h2>.beta&lt;/h2>
+		</code>
+		<h3><a href="#!" title="a link example">H3</a> &amp; .gamma</h3>
+		<code class="tiny">
+		  &lt;h3 class="gamma">.gamma&lt;/h3>
+		</code>
+		<h4><a href="#!" title="a link example">H4</a> &amp; .delta</h4>
+		<code class="tiny">
+		  &lt;h4>.delta&lt;/h4>
+		</code>
+		<h5><a href="#!" title="a link example">H5</a> &amp; .eps</h5>
+		<code class="tiny">
+		  &lt;h5> class="epS">.eps&lt;/h5>
+		</code>
+		<h6><a href="#!" title="a link example">H6</a> &amp; .zeta</h6>
+		<code class="tiny">
+		  &lt;h6>.zeta&lt;/h6>
+		</code>
+  </div> <!-- end .col-33 -->
+  
+  <div class="col col-33">
+  
+		<p>
+		  This is a basic paragraph style with a 
+		  <a href="#!" title="a link example">link</a> and some
+		  <small>small text</small>.
+		</p>
+		<code class="tiny">
+		  &lt;p>Normal paragraph&lt;/p><br />
+		  &nbsp;&nbsp;or<br />
+		  &lt;h3>H3 at .base size.&lt;/h3>
+		</code>
+		
+		<small>This is tiny text.</small>
+		<code class="tiny">
+		  &lt;small>This is tiny text.&lt;/small><br />
+		  &nbsp;&nbsp;or<br />
+		  &lt;h3 class="tiny">This is tiny too!&lt;/h3>
+		</code>
+		
+		<p class="mini">This is mini text.</p>
+		<code class="tiny">
+		  &lt;p class="mini">This is mini text.&lt;/p>
+		</code>
+		
+		
+		<p class="tiny">
+		  Any of these classes can be applied to any HTML element to alter it's font-size.
+		</p>
+		<p class="tiny">
+		  Very useful for being mindful of SEO, but still wanting to play with text sizes.
+		</p>
+	</div> <!-- end .col-33 -->
+	
 
-			<table class="table-Border">
-				<thead>
-					<tr>
-						<th>
-							Tag/Classes
-						</th>
-						<th>
-							Size in ems
-						</th>
-						<th>
-							Pixel Translation
-						</th>
-					</tr>
-				</thead>
-				<tbody>
-				<tr>
-					<th>.giga:</th><td>4.375em</td><td>= 70px</td>
-				</tr>
-				<tr>
-					<th>
-					.ultra:</th><td>3.75em</td><td>= 60px
-					</td>
-				</tr>
-				<tr>
-					<th>
-					.mega:</th><td>3.5em</td><td>= 56px
-					</td>
-				</tr>
-				<tr>
-					<th>	
-					h1, .alpha:</th><td>3.125em</td><td>= 50px
-					</td>
-				</tr>
-				<tr>
-					<th>
-					h2, .beta:</th><td>2.5em</td><td>= 40px
-					</td>
-				</tr>
-				<tr>
-					<th>
-					h3, .gamma:</th><td>2em</td><td>= 32px
-					</td>
-				</tr>
-				<tr>
-					<th>
-					h4, .delta:</th><td>1.625em</td><td>= 26px
-					</td>
-				</tr>
-				<tr>
-					<th>
-					h5, .eps:</th><td>1.25em</td><td>= 20px
-					</td>
-				</tr>
-				<tr>
-					<th>
-					h6, .zeta:</th><td>1.125em</td><td>= 18px
-					</td>
-				</tr>
-				<tr>
-					<th>
-					p, li, .base:</th><td>1em</td><td>= 16px
-					</td>
-				</tr>
-				<tr>
-					<th>
-					small, .tiny:</th><td>.75em</td><td>= 12px
-					</td>
-				</tr>
-				<tr>
-					<th>
-					.mini:</th><td>.625em</td><td>= 10px
-					</td>
-				</tr>
-				</tbody>
-			</table>
-			
-			<p>
-				Sizes are based off from a 16px standard, which is what fonts will be set to if they 
-				are not enclosed in the appropriate HTML elements, or elements lacking an appropriate class for
-				resizing.  
-			</p>	
-			
-
-	</div>
 </div> <!-- end .row -->
 
 <hr />
@@ -213,16 +194,18 @@
         <kbd>Keyboard Input</kbd>
         
         <h3>Address</h3>
-         <address>
-          Address: somewhere, world
-        </address>
+          <address>
+      		  <strong>Company Name, Inc.</strong><br>
+      		  123 Fake Street, Suite 999<br>
+      		  Somewhere, NY 10019<br>
+      		  <abbr title="Phone">P:</abbr> 487.487.4874
+          </address>
       </div>
 </div> <!-- end .row -->
 
 <!-- Code of above examples -->
 <div class="row show-Code">
   <div class="col col-33">
-    <strong>Code</strong>
     <code class="tiny">
       &lt;em>Emphasized Text&lt;/em><br />
       &lt;strong>Important Text&lt;/strong><br />
@@ -236,7 +219,6 @@
   </div>
   
   <div class="col col-33">
-    <strong>Code</strong>
     <code class="tiny">
       &lt;ins>Insert</ins>&lt;/dt><br />
       &lt;u>Underline&lt;/u><br />
@@ -250,7 +232,6 @@
   </div>
   
   <div class="col col-33">
-    <strong>Code</strong>
     <code class="tiny">
       &lt;blockquote>A call out quote of some sort&lt;/blockquote><br />
       &lt;code>Computer Code&lt;/code><br />
@@ -318,7 +299,6 @@
 
 <div class="row show-Code">
   <div class="col col-33">
-    <strong>Code</strong>
    <code class="tiny">
       &lt;ol><br />
         &nbsp;&nbsp;&lt;li>list item 1&lt;/li><br />
@@ -337,7 +317,6 @@
   </div>
   
   <div class="col col-33">
-    <strong>Code</strong>
     <code class="tiny">
       &lt;ul><br />
         &nbsp;&nbsp;&lt;li>list item 1&lt;/li><br />
@@ -356,7 +335,6 @@
   </div>
   
   <div class="col col-33">
-    <strong>Code</strong>
     <code class="tiny">
       &lt;dl><br />
         &nbsp;&nbsp;&lt;dt>Description name&lt;/dt><br />
@@ -382,15 +360,6 @@
 <div class="row">
 	<div class="col col-60">
 		<ul class="kill-List">
-      <li>
-			  <h3>address</h3>
-			  <address>
-    		  <strong>Company Name, Inc.</strong><br>
-    		  811 7th Ave, Suite 700<br>
-    		  Manhattan, NY 10019<br>
-    		  <abbr title="Phone">P:</abbr> (487) 487-4874
-    		</address>
-			</li>
 			<li>
 			  <h3>Details</h3>
         <details open="open">
@@ -442,28 +411,7 @@
 	</div>
 </div> <!-- end .row -->
 
-<hr />
 
-<h3>Text Styling Classes</h3>
-<div class="row">
-	<div class="col col-60">
-		
-		<blockquote class="shout-Out">
-			A quote with a bit extra pizazz
-		</blockquote>
-		
-		<p>
-			Here is some <span class="highlight">Highlighted text</span> in a paragraph.
-		</p>
-		
-	</div> <!-- end .col-60 -->
-	
-	<div class="col col-40">
-
-			explain
-
-	</div>
-</div> <!-- end .row -->
 
 
 

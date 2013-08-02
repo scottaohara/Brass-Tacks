@@ -3,7 +3,7 @@
   *******************************************************************************************************
   * Brass Tacks
   * by Scott O'Hara - @scottohara - scottohara.me  -  https://github.com/bleachedgraphics
-  * v 0.6.5 - August 1, 2013
+  * v 0.6.6 - August 1, 2013
   *
   * This framework is still and development.  If you have any suggestions/fixes/comments, please
   * create an issue - https://github.com/bleachedgraphics/Brass-Tacks/issues 
@@ -21,53 +21,84 @@ video, blockquote, h1, h2, h3, h4, h5, h6, p, pre, caption, table, td, th, tr, b
   outline: 0;
   padding: 0; }
 
+nav ul:after,
+nav ol:after, .clearfix:after, .media:after, .media-Reverse:after, .media-No-Wrap-Reverse:after, .media-No-Wrap:after, .row:after, .c-Row:after {
+  clear: both;
+  content: "";
+  display: table; }
+
+blockquote, h1, h2, h3, h4, h5, h6, li, p, small, code, kbd, samp, table, button, fieldset, form, input, select, textarea {
+  margin-bottom: 8px; }
+
+.invis {
+  border: 0 !important;
+  height: 1px !important;
+  left: -999999px !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  width: 1px !important; }
+
+input[type="email"], input[type="file"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], textarea, .select-Container, .multi-Select, .input-File-Text, .input-Number {
+  background: #fdfdfd;
+  border: 1px solid #cccccc;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  line-height: 1.25;
+  margin-bottom: 8px;
+  padding: 8px 4px;
+  width: 75%; }
+  input[type="email"]:focus, input[type="file"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, textarea:focus, .select-Container:focus, .multi-Select:focus, .input-File-Text:focus, .input-Number:focus {
+    background: #f0f0f0;
+    border: 1px solid #ecf5fc;
+    -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.25) inset;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.25) inset; }
+
 .giga {
   font-size: 4.375em;
-  weight: 700; }
+  font-weight: 700; }
 
 .ultra {
   font-size: 3.75em;
-  weight: 600; }
+  font-weight: 600; }
 
 .mega {
   font-size: 3.5em;
-  weight: 300; }
+  font-weight: 300; }
 
 h1, .alpha {
   font-size: 3.125em;
-  weight: 400; }
+  font-weight: 400; }
 
 h2, .beta {
   font-size: 2.5em;
-  weight: 400; }
+  font-weight: 400; }
 
 h3, .gamma {
   font-size: 2em;
-  weight: 400; }
+  font-weight: 400; }
 
 h4, .delta {
   font-size: 1.625em;
-  weight: 300; }
+  font-weight: 300; }
 
 h5, .eps, legend {
   font-size: 1.25em;
-  weight: 300; }
+  font-weight: 300; }
 
 h6, .zeta, blockquote {
   font-size: 1.125em;
-  weight: 300; }
+  font-weight: 300; }
 
 p, li, li p, li a, .base, button, fieldset, form, input, select, textarea {
   font-size: 1em;
-  weight: 300; }
+  font-weight: 300; }
 
 .tiny, small, sub, sup {
   font-size: 0.75em;
-  weight: 300; }
+  font-weight: 300; }
 
 .mini {
   font-size: 0.625em;
-  weight: 300; }
+  font-weight: 300; }
 
 .kill-List {
   list-style: none;
@@ -100,37 +131,92 @@ p, li, li p, li a, .base, button, fieldset, form, input, select, textarea {
   position: absolute;
   text-decoration: none; }
 
-nav ul:after,
-nav ol:after, .clearfix:after, .media:after, .media-Reverse:after, .media-No-Wrap-Reverse:after, .media-No-Wrap:after, .row:after, .c-Row:after {
-  clear: both;
-  content: "";
-  display: table; }
+[data-tooltip] {
+  cursor: help;
+  display: inline-block;
+  position: relative; }
+  [data-tooltip] img {
+    display: block; }
+  [data-tooltip]:after {
+    background: #fdfdfd;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid #333;
+    border-radius: 4px;
+    color: #333;
+    content: attr(data-tooltip);
+    font-size: 12px;
+    left: 0;
+    opacity: 0;
+    padding: 4px 12px;
+    position: absolute;
+    text-align: center;
+    top: 90%;
+    -moz-transition: all 0.35s;
+    -ms-transition: all 0.35s;
+    -o-transition: all 0.35s;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+    width: 100%; }
+  [data-tooltip]:hover {
+    text-decoration: none; }
+    [data-tooltip]:hover:after {
+      opacity: 1;
+      top: 105%; }
 
-blockquote, h1, h2, h3, h4, h5, h6, li, p, small, code, kbd, samp, table, button, fieldset, form, input, select, textarea {
-  margin-bottom: 8px; }
+.tip-Above:after {
+  bottom: 90%;
+  top: auto; }
+.tip-Above:hover:after {
+  bottom: 105%;
+  top: auto; }
 
-input[type="email"], input[type="file"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], textarea, .select-Container, .multi-Select, .input-File-Text, .input-Number {
-  background: #fff;
-  border: 1px solid #cccccc;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  line-height: 1.25;
-  margin-bottom: 8px;
-  padding: 8px 4px;
-  width: 80%; }
-  input[type="email"]:focus, input[type="file"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, textarea:focus, .select-Container:focus, .multi-Select:focus, .input-File-Text:focus, .input-Number:focus {
-    background: #f0f0f0;
-    border: 1px solid #50B6D5;
-    -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.25) inset;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.25) inset; }
+.tip-Bottom:after {
+  bottom: -5%;
+  top: auto; }
+.tip-Bottom:hover:after {
+  bottom: 0;
+  top: auto; }
 
-.invis {
-  border: 0 !important;
-  height: 1px !important;
-  left: -999999px !important;
-  overflow: hidden !important;
-  position: absolute !important;
-  width: 1px !important; }
+.tip-Top:after {
+  top: -5%; }
+.tip-Top:hover:after {
+  top: 0; }
 
+.tip-Left:after {
+  height: 100%;
+  left: -5%;
+  top: 0;
+  width: 50%; }
+.tip-Left:hover:after {
+  left: 0;
+  top: 0; }
+
+.tip-Right:after {
+  height: 100%;
+  left: auto;
+  right: -5%;
+  top: 0;
+  width: 50%; }
+.tip-Right:hover:after {
+  left: auto;
+  right: 0;
+  top: 0; }
+
+/* 
+	the tool tips 
+	-- default position is to show tool-tip as pop-under
+	-- use additional helper classes to reassign where tool-tip displayes.
+	
+	Default HTML:
+	
+	<a href="#" title="Title" data-tooltip="Tool Tip Here">
+		Content Goes Here
+	</a>
+	
+	<span data-tooltip="Tool Tip Here">
+		Content Goes Here
+	</span>
+*/
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -770,15 +856,20 @@ hr {
   background-clip: padding-box; }
 
 .row, .c-Row {
-  margin-left: -20px;
+  margin-left: -40px;
   margin-bottom: 20px; }
+  .row.half-Gutter, .half-Gutter.c-Row {
+    margin-left: -20px; }
 
 .col {
   float: left;
   margin-bottom: 0 !important;
-  padding-left: 20px;
+  padding-left: 40px;
   position: relative;
   width: 100%; }
+
+.half-Gutter .col {
+  padding-left: 20px; }
 
 .c-Row {
   font-size: 0;
@@ -822,19 +913,42 @@ hr {
 .col-10 {
   width: 10%; }
 
+@media (max-device-width: 480px), screen and (max-width: 800px) {
+  .col-90, .col-80, .col-75, .col-66,
+  .col-60, .col-50, .col-40, .col-33,
+  .col-25, .col-20, .col-10 {
+    width: 100%; } }
 .rfl {
   padding-left: 300px; }
+  @media (max-device-width: 480px), screen and (max-width: 800px) {
+    .rfl {
+      padding: 0; } }
   .rfl .f-Col {
     float: left;
-    margin-left: -280px;
-    width: 280px; }
+    margin-left: -260px;
+    width: 260px; }
+    @media (max-device-width: 480px), screen and (max-width: 800px) {
+      .rfl .f-Col {
+        float: none;
+        margin: 0;
+        padding-left: 40px;
+        width: auto; } }
 
 .rfr {
   padding-right: 300px; }
+  @media (max-device-width: 480px), screen and (max-width: 800px) {
+    .rfr {
+      padding: 0; } }
   .rfr .f-Col {
     float: right;
     margin-right: -300px;
-    width: 280px; }
+    width: 260px; }
+    @media (max-device-width: 480px), screen and (max-width: 800px) {
+      .rfr .f-Col {
+        float: none;
+        margin: 0;
+        padding-left: 40px;
+        width: auto; } }
 
 .block {
   background: #ccc;
@@ -991,14 +1105,6 @@ hr {
   position: relative;
   z-index: 2; }
 
-.input-Hide {
-  border: 0 !important;
-  height: 1px !important;
-  left: -999999px !important;
-  overflow: hidden !important;
-  position: absolute !important;
-  width: 1px !important; }
-
 .btn-Radio, .btn-Check {
   background: #eeeeee;
   border: 1px solid #ccc;
@@ -1112,20 +1218,7 @@ a {
   outline: none; }
 
 .header-Base {
-  background: #fafafa; }
-
-.header-Nav {
-  background: #f8f8f8;
-  border-bottom: 1px solid #eee;
-  border-top: 1px solid #eee;
-  margin: 16px auto; }
-  .header-Nav a, .header-Nav a:visited {
-    padding: 8px 12px;
-    text-decoration: none; }
-    .header-Nav a:hover, .header-Nav a:visited:hover {
-      background: #eee; }
-    .header-Nav a.selected, .header-Nav a:active, .header-Nav a:visited.selected, .header-Nav a:visited:active {
-      background: #ddd; }
+  text-shadow: 0 1px 1px #fff; }
 
 .section-Title {
   background: #e96a4e;

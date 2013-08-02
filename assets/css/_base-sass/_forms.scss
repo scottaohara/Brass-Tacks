@@ -45,8 +45,8 @@ button::-moz-focus-inner, input::-moz-focus-inner{
 
 // Base styling for text input elements
 input{
-  &[type="email"], &[type="file"], &[type="password"],
-  &[type="search"], &[type="tel"], &[type="text"], &[type="url"]{
+  &[type="email"], &[type="file"], &[type="password"], &[type="search"], 
+  &[type="tel"], &[type="text"], &[type="url"]{
     @extend %input-Area;
   }
 } 

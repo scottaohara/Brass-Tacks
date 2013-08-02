@@ -4,7 +4,7 @@
 
 // Apply to <header> for styling
 .header-Base{
-  background:#fafafa;
+  text-shadow:0 1px 1px #fff;
 }
 
 // Apply to child div inside of header for padding/margin
@@ -13,20 +13,7 @@
 }
 
 // Extend the .nav class to style your header navigation
-.header-Nav{
-	background:#f8f8f8;
-	border-bottom:1px solid #eee;
-	border-top:1px solid #eee;
-	margin:$px-Unit*4 auto;
-	
-	a, a:visited{
-	  padding:$px-Unit*2 $px-Unit*3;
-	  text-decoration:none;
-	  
-		&:hover{background:#eee;}
-		&.selected, &:active{background:#ddd;}
-	}
-}
+.header-Nav{}
 
 .section-Title{
   background:#e96a4e;

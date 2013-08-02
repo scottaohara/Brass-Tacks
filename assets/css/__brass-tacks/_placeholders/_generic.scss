@@ -1,0 +1,48 @@
+// ----------------------------------------------------------------
+//  Standard Reset
+// ----------------------------------------------------------------
+// Reset the Standard Tags,
+// extend to all tags that need this
+// for better organization of code
+%reset{
+  border:0;
+  margin:0;
+  outline:0;
+  padding:0;
+}
+
+// ----------------------------------------------------------------
+//  Clearfix
+// ----------------------------------------------------------------
+
+%clearfix{
+  &:after{clear:both; content:""; display:table}
+}
+
+
+// ----------------------------------------------------------------
+//  Consistent Margin Bottom
+// ----------------------------------------------------------------
+
+%margin-bottom{
+  margin-bottom:$px-Unit*2;
+}
+
+
+// ----------------------------------------------------------------
+//  Hide from browsers but not from screen readers
+//  
+//  Hide entire elements that you don't want visible
+//  but still need for accesibility / functionality 
+//  -- ie. radio buttons for custom styled radio inputs
+// ----------------------------------------------------------------
+
+%invis{
+  border:0!important;
+	height:1px!important;
+	left:-999999px!important;
+	overflow:hidden!important;
+	position:absolute!important;
+	width:1px!important;
+}
+

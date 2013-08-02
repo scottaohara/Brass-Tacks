@@ -82,18 +82,6 @@
   text-shadow:none;
 }
 
-// Hide entire elements that you don't want visible
-// but still need for accesibility / functionality 
-// -- ie. radio buttons for custom styled radio inputs
-@mixin invisible{
-	border:0!important;
-	height:1px!important;
-	left:-999999px!important;
-	overflow:hidden!important;
-	position:absolute!important;
-	width:1px!important;
-}
-
 // Truncate Text
 @mixin truncate($truncation-boundary){
     max-width:$truncation-boundary;
@@ -159,21 +147,35 @@
 // ----------------------------------------------------------------
 @mixin row-fixed-Left($col-Size){
 	padding-left:$col-Size;
+	@media (max-device-width:480px), screen and (max-width:800px){padding:0}
 	
 	.f-Col{
 		float:left;
-		margin-left:-$col-Size + 20px;
-		width:$col-Size - 20px;
+		margin-left:-$col-Size + 40px;
+		width:$col-Size - 40px;
+		@media (max-device-width:480px), screen and (max-width:800px){
+		  float:none;
+		  margin:0;
+		  padding-left:40px;
+		  width:auto;
+		}
 	}
 }
 
 @mixin row-fixed-Right($col-Size){
 	padding-right:$col-Size;
+	@media (max-device-width:480px), screen and (max-width:800px){padding:0}
 	
 	.f-Col{
 		float:right;
 		margin-right:-$col-Size;
-		width:$col-Size - 20px;
+		width:$col-Size - 40px;
+		@media (max-device-width:480px), screen and (max-width:800px){
+		  float:none;
+		  margin:0;
+		  padding-left:40px;
+		  width:auto;
+		}
 	}
 }
 
