@@ -2,7 +2,9 @@
 //		Styling for form elements
 // ----------------------------------------------------------------
 
-.grouping{padding:$px-Unit 0}
+.grouping{
+  padding:$px-Unit 0;
+}
 
 // Fieldset Styling
 .fieldset{
@@ -11,9 +13,21 @@
 	padding:$px-Unit*2 $px-Unit*3;
 }
 
+.legend-Header{
+  border-bottom:1px solid $c-Border;
+}
+
 // Inline Form Elements
-.inline-Label{
+.inline-Element{
   display:inline-block;
+  margin-right:$px-Unit;
+  width:auto;
+}
+
+.inline-All{
+  input, textarea, label{
+    @extend .inline-Element;
+  }
 }
 
 .dis-Label{
@@ -39,28 +53,86 @@
 }
 
 .input-Hide{
-  @extend invisible;
+  @extend %invis;
 }
 
-.btn-Radio, .btn-Check{
-    @extend %btn;
+
+/* ROUNDED TWO */
+.input-Checkbox{
+  position:relative;
+
+  .visual-Check{
     background:$c-Btn-RC;
-    border:1px solid #ccc;
-    font-size:14px!important;
-    height:19px;
-    left:0;
-    padding:2px!important;
-    position:absolute;
-    top:0;
-    width:19px;
-    
-    &:hover{background:$c-Btn-2}
+    border:1px solid $c-Grey;
+    @include border-radius($circle);
+    cursor:pointer;
+    display:inline-block;
+    height:20px;
+    position:relative;
+    top:4px;
+    width:20px;
+
+    &:after{
+      @include vendor(transform, rotate(-45deg));
+      border:3px solid #000;
+      border-top:none;
+      border-right:none;
+      content:'';
+      height:5px;
+      left:5px;
+      opacity:0;
+      position:absolute;
+      top:6px;
+      width:8px; 
+    }
+
+    &:hover::after{
+      opacity:.3;
+    }
+  }  // end span
+
+  .checkbox:checked + .visual-Check:after{
+    opacity:1;
+  }
+
+  .checkbox{
+    @extend %invis;
+  }
 }
 
-.btn-Radio{@include border-radius($px-Unit*4)}
+.input-Radio{
+  @extend %invis;
+}
+
+
+
+.input-Radio:checked + .btn-Radio{
+    background:$c-Btn-2;
+    border-color:$c-Dark;
+}
+
+
+
+.radio-Hold{}
+
+.btn-Radio{
+  @extend %btn;
+  background:$c-Btn-RC;
+  border:1px solid $c-Grey;
+  font-size:14px!important;
+  height:14px;
+  margin:0 4px;
+  padding:2px!important;
+  position:relative;
+  top:1px;
+  width:14px;
+  
+  &:hover{background:$c-Btn-2}
+}
+
+.btn-Radio{@include border-radius($px-Unit)}
 
 .input-Radio.selected-Radio .btn-Radio{@extend .btn-Radio:hover; border-color:#333}
-.input-Check.selected-Check .btn-Check{@extend .btn-Check:hover; border-color:#333}
 
 .ifChecked{
   visibility:hidden;
@@ -68,6 +140,15 @@
 .selected-Check .ifChecked{
   visibility:visible;
 }
+
+
+
+
+
+
+
+
+
 
 /* Drop Down Selection Inputs */
 .select-Container{
@@ -96,6 +177,7 @@
 	position:relative;
 	label{cursor:default}
 }
+
 .input-File{
 	cursor:pointer;
 	left:0;
@@ -114,18 +196,18 @@
 
 /* Inputs not supported in all browsers */
 .input-Color{ // reusing a lot of input-Area here, but not @extending it because the rules of input-Area 'break' how this should look in chrome/opera
-    border:1px solid $c-Border;
-    font-family:$arial;
-    margin-bottom:$px-Unit*2;
-    padding:0 $px-Unit;
-    height:45px;
-    width:50%;
-    
-    &:focus{
-      background:$c-Lighter;
-      border:1px solid #50B6D5;
-      @include box-shadow($bs-2);
-    }
+  border:1px solid $c-Border;
+  font-family:$arial;
+  height:45px;
+  margin-bottom:$px-Unit*2;
+  padding:0 $px-Unit;
+  width:50%;
+  
+  &:focus{
+    background:$c-Lighter;
+    border:1px solid #50B6D5;
+    @include box-shadow($bs-2);
+  }
 }
 
 .input-Number{

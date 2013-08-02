@@ -74,8 +74,6 @@
     </div> <!-- end .page -->
     
     <!-- scripts -->
-    {{ "jquery-1.10.2.min.js" | asset_url | script_tag }}
-    {{ "app.js" | asset_url | script_tag }}
     {% block js %}{% endblock %} <!-- Script block allowing child pages to inject their own scripts -->
     
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. 

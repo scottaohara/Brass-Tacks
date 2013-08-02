@@ -49,15 +49,16 @@ input{
   &[type="tel"], &[type="text"], &[type="url"]{
     @extend %input-Area;
   }
-} 
+}
 
 // Makes sure that overflow shows and text is aligned to top of area
 // also make resizing not extend beyond the max-width for the content area
 textarea{
   @extend %input-Area;
   display:block;
-  max-width:100%;
+  max-width:800px;
   min-height:40px;
+  min-width:60px;
   overflow:auto;
   resize:both;
   vertical-align:top;

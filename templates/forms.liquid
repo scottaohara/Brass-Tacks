@@ -15,187 +15,93 @@
 	<h3>Base Input Fields</h3>
 	
 	<div class="row">
-	<div class="col col-60">
-	   <fieldset class="grouping">        
-    	   <label for="input-Text" class="text-Label">Input - Normal Text</label>
-    	   <input type="text" id="input-Text" class="input-Area" placeholder="Write Text Here" />
-    	       
-    	   <label for="input-Text-dl" class="text-Label">Input - Text w/Data List</label>
-    	   <input type="text" id="input-Text-dl" list="fav-color" class="input-Area" placeholder="Choose your fav. color" />
-			   <datalist id="fav-color">
-			   		<option value="Red"></option> 
-			      <option value="Orange"></option> 
-			      <option value="Yellow"></option>
-			      <option value="Green"></option>
-			      <option value="Blue"></option>
-			      <option value="Purple"></option> 
-			   </datalist>
-    	       
-    	       <label for="input-Email" class="text-Label">Input - Email</label>
-    	       <input type="email" id="input-Email" placeholder="Enter Email" />
-    	       
-    	       <label for="input-Password" class="text-Label">Input - Password</label>
-    	       <input type="password" id="input-Password" placeholder="Enter Password" />
-    	       
-    	       <label for="input-Url" class="text-Label">Input - Web Address</label>
-    	       <input id="input-Url" type="url" placeholder="Enter Web Address" />
-    	       
-    	       <label for="input-Tel" class="text-Label">Input - Phone Number</label>
-    	       <input type="tel" id="input-Tel" placeholder="555.555.5555" />
-    	       
-    	       <label for="input-Search" class="text-Label">Input - Search</label>
-    	       <input type="search" id="input-Search" placeholder="Search for..." />
-    	       <input type="submit" class="btn btn-action" value="Search" />
-    	       
-    	       <label for="input-TextArea" class="text-Label">Text Area</label>
-    	       <textarea id="input-TextArea"></textarea>
-       </fieldset>
-	   
-	   <fieldset class="grouping fieldset">
-	   		<legend class="legend">Input Variants</legend>
-	   		<label class="dis-Label">Disabled Text Input</label> 
-    	  <input type="text" class="input-Area" value="Disabled text input" disabled="disabled" />
-	   
-	   		<label class="text-Label">Readonly Text Input</label>
-	   		<input type="text" class="input-Area" value="Readonly text input" readonly="readonly" />
-	   		
-	   		<label for="input-Required" class="text-Label">Required Input</label>
-	   		<input type="text" id="input-Required" class="input-Area" placeholder="Placeholder Text" required="required" />	   		
-	   </fieldset>
+	<div class="col col-50">
+
+   <fieldset class="grouping">
+	   <label for="input-Text">Input - Normal Text</label>
+	   <input type="text" id="input-Text" placeholder="Write Text Here" />
+	       
+	   <label for="input-Text-dl">Input - Text w/Data List</label>
+	   <input type="text" id="input-Text-dl" list="fav-color" placeholder="Choose your fav. color" />
+    <datalist id="fav-color">
+      <option value="Red">Red</option> 
+      <option value="Orange">Orange</option> 
+      <option value="Yellow">Yellow</option>
+    </datalist>
+	       
+     <label for="input-Email">Input - Email</label>
+     <input type="email" id="input-Email" placeholder="Enter Email" />
+     
+     <label for="input-Password">Input - Password</label>
+     <input type="password" id="input-Password" placeholder="Enter Password" />
+     
+     <label for="input-Url">Input - Web Address</label>
+     <input id="input-Url" type="url" placeholder="Enter Web Address" />
+     
+     <label for="input-Tel">Input - Phone Number</label>
+     <input type="tel" id="input-Tel" placeholder="555.555.5555" />
+     
+     <label for="input-Search">Input - Search</label>
+     <input type="search" id="input-Search" placeholder="Search for..." />
+     <input type="submit" class="btn btn-Action" value="Search" />
+     
+     <label for="input-TextArea">Text Area</label>
+     <textarea id="input-TextArea"></textarea>
+   </fieldset>
 	</div>
 	
-	<div class=" col col-40">
-		<h4 class="eps">Base inputs</h4>
-		<p>
+	<div class=" col col-50">
+		<fieldset class="grouping fieldset">
+      <legend class="legend">Input Variants</legend>
+      <label class="dis-Label">Disabled Text Input</label> 
+      <input type="text" value="Disabled text input" disabled="disabled" />
+   
+      <label>Readonly Text Input</label>
+      <input type="text" value="Readonly text input" readonly="readonly" />
       
-		</p>
+      <label for="input-Required">Required Input</label>
+      <input type="text" id="input-Required" placeholder="Placeholder Text" required="required" />
+    </fieldset>
+    
+    <ul class="">
+      <li>
+        All base input fields and the textarea are pulling from a
+        the Placeholder class "%input-Area" for basic styling.  This will keep these
+        input elements looking consistent across browsers, opposed to having forms take
+        on the default styling of each different browser.
+      </li>
+
+      <li>
+        The only classes in use in this section are for the search buttton <code>.btn-Action</code> and
+        a class for the diabled text input label <code>.dis-Label</code>.
+      </li>
+
+      <li>
+        To create individual inline form elements, apply the class of 
+        <code>.inline-Element</code>.  If you want all elements to be inline, use the 
+        class of <code>.inline-All</code> on the parent of the elements.
+      </li>
+
+      <li>
+        If you need to create more complex from layouts, you can use classes from
+        the <a href="layout" title="Layout Classes">Layout Helpers</a> on &lt;div> and
+        &lt;fieldset> elements in your forms.
+      </li>
+
+      <li>
+        Use the class of <code>.grouping</code> on divs or fieldsets within forms to 
+        apply block level groups to elements, and to apply slight padding between groups.
+      </li>
+    </ul>
 				
 	</div>
 </div> <!-- end .row -->
 
 <hr />
 
-<h3>Check Boxes</h3>
-<div class="row">
-	<div class="col col-60">	     
-	   <fieldset class="grouping checkers">  
-		   <div class="option-Container input-Check">
-	               <label for="check-1" class="option-Label option-Check">
-    	               <span class="btn-Check">
-    	                   <span class="ifChecked">X</span>
-    	               </span>
-    	               Check Box 1
-	               </label>
-	               <input type="checkbox" class="input-Hide" id="check-1" />
-	           </div>
-	           
-	           <div class="option-Container input-Check">
-	               <label for="check-2" class="option-Label option-Check">
-    	               <span class="btn-Check">
-        	               <span class="ifChecked">X</span>
-    	               </span>
-    	               Check Box 2
-	               </label>
-	               <input type="checkbox" class="input-Hide" id="check-2" />
-	           </div>
-    </fieldset>  
-</div>
-	<div class=" col col-40">
-		<h4 class="eps">Check box inputs</h4>
-		<p>
-					asdf
-		</p>
-				
-	</div>
-</div> <!-- end .row -->   
-	       <hr />
-	       
-<h3>Radio Buttons</h3>
-<div class="row">
-	<div class="col col-60">	       
-	  <fieldset class="radios grouping">
-	    <div class="option-Container input-Radio">
-         <label for="radio-1" class="option-Label">Radio Option 1</label>
-         <span class="btn-Radio"></span>
-         <input type="radio" class="input-Hide" id="radio-1" name="radio-Set" />
-      </div>
-	    
-	    <div class="option-Container input-Radio">
-	               <label for="radio-2" class="option-Label">Radio Option 2</label>
-	               <span class="btn-Radio"></span>
-    	           <input type="radio" class="input-Hide" id="radio-2" name="radio-Set" />
-	           </div>
-	    
-	    <div class="option-Container input-Radio">
-	               <label for="radio-3" class="option-Label">Radio Option 3</label>
-	               <span class="btn-Radio"></span>
-    	           <input type="radio" class="input-Hide" id="radio-3" name="radio-Set" />
-	           </div>
-	   </fieldset>
-</div>
-	<div class=" col col-40">
-		<h4 class="eps">Radio Button inputs</h4>
-		<p>
-					asdf
-		</p>
-				
-	</div>
-</div> <!-- end .row -->	       
-
-<hr />
-
-<h3>Selections</h3>
-<div class="row">
-	<div class="col col-60">	       
-	  <fieldset class="grouping">
-	        <label for="base-Select" class="text-Label">Default Select</label>
-	           <div class="select-Container">
-    	           <select id="base-Select" class="input-Select">
-    	               <option>Select an Item...</option>
-    	               <option>First Item</option>
-    	               <option>Second Item</option>
-    	               <option>Third Item</option>
-    	               <option>Fourth Item Fourth Item Fourth Item</option>
-    	           </select>
-	           </div>
-	           
-	         <label for="multi-Select" class="text-Label">Multiple select field</label>
-		       <select id="multi-Select" multiple size="5" class="multi-Select">
-		           <option>Option 1</option>
-		           <option>Option 2</option>
-		           <option>Option 3</option>
-		           <option>Option 4</option>
-		           <option>Option 5</option>
-		       </select>
-	         
-	         <label for="num-Spin" class="text-Label">Number Spinbox</label>
-	         <input type="number" id="num-Spin" min="0" max="20" step="1" value="5" class="input-Number" />
-	         
-	         <label for="num-Date" class="text-Label">Date: mm/dd/yyy</label>
-	         <input type="date" id="num-Date" class="input-Number" />
-	         
-	         <label type="time" for="num-Time" class="text-Label">Time: 12:00 PM</label>
-	         <input id="num-Time" class="input-Number" />
-	         
-	         <label for="color-Picker" class="text-Label">Hex Color</label>
-	         <input type="color" id="color-Picker" class="input-Color" />
-	  </fieldset>
-</div>
-
-<div class=" col col-40">
-  <h4 class="eps">Selection Inputs</h4>
-  <p>
-    asdf
-  </p>
-</div>
-
-</div> <!-- end .row -->	       
-
-<hr />
-
 <h3>File Inputs</h3>
 <div class="row">
-	<div class="col col-50">
+  <div class="col col-50">
     <p class="eps">With Classes</p>
     <fieldset class="grouping">
       <div class="file-Input-Area">
@@ -208,29 +114,165 @@
           Select
         </span>
       </div>
+
+      <p class="eps">Without Classes</p>
+      <label for="input-File2">File Input</label>
+      <input type="file" id="input-File2" /> 
     </fieldset>
 
 </div>
   <div class=" col col-50">
-    <p class="eps">Without Classes</p>
-    <label for="input-File2">File Input</label>
-    <input type="file" id="input-File2" /> 
+    <p>
+      To make file inputs appear more like other text inputs, the code snippet.
+      Otherwise, file inputs will take on the default styling of the browser.
+    </p>
+    <code class="tiny">
+      &lt;div class="file-Input-Area"><br />
+        &nbsp;&nbsp;&lt;input type="file" id="input-File" class="input-File" /><br />
+        &nbsp;&nbsp;&lt;label for="input-File">File Input&lt;/label><br />
+        &nbsp;&nbsp;&lt;span class="input-File-Text"><br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="placeholder">Select a file...&lt;/span><br />
+        &nbsp;&nbsp;&lt;/span><br />
+        &nbsp;&nbsp;&lt;span class="btn">Select&lt;/span><br />
+      &lt;/div>
+    </code>
   </div>
-</div> <!-- end .row -->	
+</div> <!-- end .row -->  
+
+<hr />
+
+<h3>Check Boxes &amp; Radio Buttons</h3>
+<div class="row">
+	<div class="col col-50">	     
+
+    <h4 class="eps">Check Boxes</h4>
+    
+    <fieldset class="grouping">
+      <div>
+        <label for="check-1" class="inline-Element">Unclassed Check Box</label>
+        <input type="checkbox" id="check-1" />
+      </div>
+
+      <label for="check-2" class="input-Checkbox">
+        <input type="checkbox" value="None" id="check-2" class="checkbox" />
+        Designed Checkbox (ie9+)
+        <span class="visual-Check"></span>
+      </label>
+      <br />
+      <strong>Code for Designed Checkbox</strong>
+      <code class="tiny">
+        &lt;label for="check-2" class="input-Checkbox"><br />
+          &nbsp;&nbsp;&lt;input type="checkbox" value="None" id="check-2" class="checkbox" name="check" /><br />
+          &nbsp;&nbsp;Designed Checkbox<br />
+         &nbsp;&nbsp;&lt;span class="visual-Check">&lt;/span><br />
+        &lt;/label>
+      </code>
+    </fieldset>
+
+</div>
+	<div class=" col col-50">
+    <h4 class="eps">Radio Buttons</h4>
+    <fieldset class="radios grouping">
+      <label for="r1" class="radio-Hold">
+        <input type="radio" id="r1" name="rr" class="input-Radio" />
+        <span class="btn-Radio"></span>Radio Button 3
+      </label>
+
+      <label for="r2" class="radio-Hold">
+        <input type="radio" id="r2" name="rr" class="input-Radio" />
+        <span class="btn-Radio"></span>Radio Button 3
+      </label>
+      
+      <label for="r3" class="radio-Hold">
+        <input type="radio" id="r3" name="rr" class="input-Radio" />
+        <span class="btn-Radio"></span>Radio Button 3
+      </label>
+     </fieldset>
+
+     <code class="tiny">
+        &lt;label for="r3" class="radio-Hold"><br />
+        &nbsp;&nbsp;&lt;input type="radio" id="r3" name="rr" class="input-Radio" /><br />
+        &nbsp;&nbsp;&lt;span class="btn-Radio">&lt;/span>Radio Button 3<br />
+      &lt;/label>
+     </code>
+	</div>
+</div> <!-- end .row -->          
+
+<hr />
+
+<h3>Selections</h3>
+<div class="row">
+  <div class="col col-50">	       
+    <fieldset class="grouping">
+      <label for="base-Select" class="text-Label">Default Select</label>
+       <div class="select-Container">
+         <select id="base-Select" class="input-Select">
+           <option>Select an Item...</option>
+           <option>First Item</option>
+           <option>Second Item</option>
+           <option>Third Item</option>
+           <option>Fourth Item Fourth Item Fourth Item</option>
+         </select>
+       </div>
+
+       <code class="tiny">
+         &lt;div class="select-Container"><br />
+           &nbsp;&nbsp;&lt;select id="base-Select" class="input-Select"><br />
+             &nbsp;&nbsp;&nbsp;&nbsp;&lt;option>Select an Item...&lt;/option><br />
+             &nbsp;&nbsp;&nbsp;&nbsp;&lt;option>First Item&lt;/option><br />
+             &nbsp;&nbsp;&nbsp;&nbsp;&lt;option>Second Item&lt;/option><br />
+             &nbsp;&nbsp;&nbsp;&nbsp;&lt;option>Third Item&lt;/option><br />
+           &nbsp;&nbsp;&lt;/select><br />
+         &lt;/div>
+       </code>
+         
+       <label for="multi-Select" class="text-Label">Multiple select field</label>
+       <select id="multi-Select" multiple size="5" class="multi-Select">
+         <option>Option 1</option>
+         <option>Option 2</option>
+         <option>Option 3</option>
+         <option>Option 4</option>
+         <option>Option 5</option>
+       </select>
+	  </fieldset>
+  </div>
+
+  <div class=" col col-50">
+    <p>
+      The following input types such do not yet have full
+      browser support.  They will fall back to the default text input styling.
+    </p>
+
+    <fieldset class="grouping">
+      <label for="num-Spin" class="text-Label">Number Spinbox</label>
+       <input type="number" id="num-Spin" min="0" max="20" step="1" value="5" class="input-Number" />
+       
+       <label for="num-Date" class="text-Label">Date: mm/dd/yyyy</label>
+       <input type="date" id="num-Date" class="input-Number" />
+       
+       <label for="num-Time" class="text-Label">Time: 12:00 PM</label>
+       <input type="time" id="num-Time" class="input-Number" />
+       
+       <label for="color-Picker" class="text-Label">Hex Color</label>
+       <input type="color" id="color-Picker" class="input-Color" />
+    </fieldset>
+
+  </div>
+</div> <!-- end .row -->	       
 
 <hr />
 
 <h3 class="txt-Left">Submission Buttons</h3>
 <div class="row">
-  <div class="col col-60">       
+  <div class="col col-50">       
     <fieldset class="grouping">
-      <input type="button" class="btn-Disable" value="Disabled" />
-      <input type="reset" class="btn-Neg" value="Reset" />
+      <input type="button" class="btn btn-Disable" value="Disabled" />
+      <input type="reset" class="btn btn-Neg" value="Reset" />
       <input type="submit" class="btn" value="Submit" />
 	  </fieldset>
   </div>
   
-  <div class=" col col-40">
+  <div class="col col-50">
   	<p>
   	  Submission buttons are styled using the <a href="buttons" title="Brass Tacks Buttons">Brass Tacks Button Stylings</a>.
     </p>
@@ -242,20 +284,12 @@
 {% endblock %}
 
 {% block js %}
+{{ "jquery-1.10.2.min.js" | asset_url | script_tag }}
+{{ "app.js" | asset_url | script_tag }}
+
 <script type="text/javascript">
 	$(document).ready(function(){
-		// jQuery scripts that make the custom check boxes turn on and off
-		$('.option-Check').click(function() {
-			$(this).parent().toggleClass('selected-Check');
-		});
-		
-		// jQuery scripts that make the radios turn on and off
-		$(".input-Radio").click(function() {
-			$(".selected-Radio").removeClass('selected-Radio');
-			$(this).addClass('selected-Radio');
-		});
-		
-		// jQuery to make file uploads look styled / display text after click/choosing of file
+	  // jQuery to make file uploads look styled / display text after click/choosing of file
 		// Thanks jdrumm
 		$(".input-File").change(function() {
 		   $(this).parent().find(".input-File-Text").html(this.value)
@@ -263,3 +297,4 @@
 	});
 </script>
 {% endblock %}
+

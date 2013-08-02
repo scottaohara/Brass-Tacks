@@ -2,80 +2,33 @@
 {% block content %} 
 <section class="content">
 
-<h2>Buttons</h2>
-<p>
-	A break down of the different button types available through this framework.
-</p>
+	<h2>Buttons</h2>
+	<p>
+		Examples of the various Brass Tacks button stylings.  Use these on any
+		&lt;a>, &lt;input>, &lt;button> element as well as elements that may need to
+		be mocked up to look like buttons.
+	</p>
 
-<hr />
+	<hr />
 
-<h3>Colors / Actions</h3>
+	<h3>Sizes &amp; Widths</h3>	
 	<div class="row">
-		<div class="col col-60">
-			   <ul class="kill-List">
-			       <li><a href="#!" title="yeah title" class="btn">Button</a></li>
-			       <li><a href="#!" title="yeah title" class="btn-Neg">Negative Action</a></li>
-			       <li><a href="#!" title="yeah title" class="btn-Disable">Disabled</a></li>
-			       <li><a href="#!" title="yeah title" class="btn-Action">Action 1</a></li>
-			       <li><a href="#!" title="yeah title" class="btn-Action-2">Action 2</a></li>
-			       <li><a href="#!" title="yeah title" class="btn-Action-3">Action 3</a></li>
-			   </ul>
-		</div> <!-- end .col-60 -->
-		<div class="col col-40">
-			<p>
-				The basic .btn sets up the general foundation of all button styling.  
-			</p>
-			<ul>
-				<li>.btn</li>
-				<li>.btn-Neg</li>
-				<li>.btn-Disable</li>
-				<li>.btn-Action</li>
-				<li>.btn-Action-2</li>
-				<li>.btn-Action-3</li>
+		<div class="col col-50">
+			<ul class="kill-List">
+				<li><a href="#!" title="yeah title" class="btn-Small">Small</a></li>
+				<li><a href="#!" title="yeah title" class="btn">Regular</a></li>
+				<li><a href="#!" title="yeah title" class="btn-Large">Large</a></li>
+				<li><a href="#!" title="yeah title" class="btn-XLarge">X-Large</a></li>
+
+				<li><a href="#!" title="yeah title" class="btn-Small btn-Wide">Small Wide</a></li>
+				<li><a href="#!" title="yeah title" class="btn btn-Wide">Normal Wide</a></li>
+				<li><a href="#!" title="yeah title" class="btn-Large btn-Wide">Large Wide</a></li>
+				<li><a href="#!" title="yeah title" class="btn-XLarge btn-Wide">X-Large Wide</a></li>
 			</ul>
-			
+		</div> <!-- end .col-50 -->
+		<div class="col col-50">
 			<p>
-				The hover states for .btn-Action 1-3 use sass to darken the base color by 15%.  Change this in the _button.scss.
-			</p>
-			<p>
-				These coloring classes all extend the .btn class, so they can be used by themselves as long as you only require 
-				a normal button size.  Use them as helper classes to style other .btn types.
-			</p>
-		</div>
-	</div> <!-- end .row -->
-
-<hr />	
-
-<h3>Sizes</h3>	
-	<div class="row">
-		<div class="col col-60">
-			   <ul class="kill-List">
-			   		<li><a href="#!" title="yeah title" class="btn-Small btn-Action">Small</a></li>
-				    <li><a href="#!" title="yeah title" class="btn">Regular</a></li>
-				    <li><a href="#!" title="yeah title" class="btn-Large btn-Action-2">Large</a></li>
-				    <li><a href="#!" title="yeah title" class="btn-XLarge btn-Action-3">X-Large</a></li>
-			
-			       <li>
-			           <a href="#!" title="yeah title" class="btn-Small btn-Wide">Small Wide</a>
-			       </li>
-			       <li>
-			           <a href="#!" title="yeah title" class="btn-Wide">Normal Wide</a>
-			       </li>
-			       <li>
-			           <a href="#!" title="yeah title" class="btn-Large btn-Wide">Large Wide</a>
-			       </li>
-			       <li>
-			           <a href="#!" title="yeah title" class="btn-XLarge btn-Wide">X-Large Wide</a>
-			       </li>
-			   </ul>
-		</div> <!-- end .col-60 -->
-		<div class="col col-40">
-			<p>
-				There are four basic sizes for buttons.  small, large and xLarge all extend the .btn class.
-			</p>
-			<p>
-				.btn-Wide is a helper class, so it will need
-				to be paired with a .btn class on the HTML element.
+				There are four basic sizes for buttons. 
 			</p>
 			<ul>
 				<li>.btn-Small</li>
@@ -84,51 +37,84 @@
 				<li>.btn-XLarge</li>
 				<li>.btn-Wide</li>
 			</ul>
+			<p>
+				Small, large and xLarge all extend the base .btn class and can be used by themselves on HTML elements.
+			</p>
+			<p>
+				.btn-Wide is a helper class, so it will need to be paired with a .btn class on the HTML element.
+			</p>
+			
+		</div> <!-- end .col-50 -->
+	</div> <!-- end .row -->
+
+	<hr />
+
+	<h3>Colors / Actions</h3>
+	<div class="row">
+		<div class="col col-50">
+			<ul class="kill-List">
+				<li><a href="#!" title="yeah title" class="btn">Button</a></li>
+				<li><a href="#!" title="yeah title" class="btn btn-Neg">Negative Action</a></li>
+				<li><a href="#!" title="yeah title" class="btn btn-Disable">Disabled</a></li>
+				<li><a href="#!" title="yeah title" class="btn btn-Action">Action 1</a></li>
+				<li><a href="#!" title="yeah title" class="btn btn-Action-2">Action 2</a></li>
+				<li><a href="#!" title="yeah title" class="btn btn-Action-3">Action 3</a></li>
+			</ul>
+		</div> <!-- end .col-50 -->
+		<div class="col col-50">
+			<p>
+				Button coloring consists of the following classes:
+			</p>
+			<ul>
+				<li>.btn (default class)</li>
+				<li>.btn-Action</li>
+				<li>.btn-Action-2</li>
+				<li>.btn-Action-3</li>
+				<li>.btn-Disable</li>
+				<li>.btn-Neg</li>
+			</ul>
+			<p>
+				These are helper classes to extend the sizing button classes.
+			</p>
+			<p>
+				The colors for the buttons are set in the set in the Project Sass Variables file.
+			</p>
 		</div>
 	</div> <!-- end .row -->
 
-<hr />
+	<hr />	
 
-<h3>Padding Helper Classes</h3>	
+	<h3>Padding Helper Classes</h3>	
 	<div class="row">
-		<div class="col col-60">
-			   <ul class="kill-List">
-			       	<li><a href="#!" title="yeah title" class="btn-Small btn-Pad">Small</a></li>
-				    <li><a href="#!" title="yeah title" class="btn btn-Pad">Regular</a></li>
-				    <li><a href="#!" title="yeah title" class="btn-Large btn-Pad">Large</a></li>
-				    <li><a href="#!" title="yeah title" class="btn-XLarge btn-Pad">X-Large</a></li>
-			   </ul>
-		</div> <!-- end .col-60 -->
-		<div class="col col-40">
+		<div class="col col-50">
+			<ul class="kill-List">
+				<li><a href="#!" title="yeah title" class="btn-Small btn-Pad">Small</a></li>
+				<li><a href="#!" title="yeah title" class="btn btn-Pad">Regular</a></li>
+				<li><a href="#!" title="yeah title" class="btn-Large btn-Pad">Large</a></li>
+				<li><a href="#!" title="yeah title" class="btn-XLarge btn-Pad">X-Large</a></li>
+			</ul>
+		</div> <!-- end .col-50 -->
+		<div class="col col-50">
 			<p>
-				Using the .btn-Pad along with a normal button class will increase the padding on (at least) the left and right sides of the button.
-			</p>
-			<p>
-				The .btn-Pad class is reused as a selector in each for each of the different button sizings.  
+				Using the .btn-Pad along with a sizing/width button class will increase the padding on (at least) the left and right sides of the button.  .btn-Pad has varied padding measurments depending on the class it is coupled with.
 			</p>
 		</div>
 	</div> <!-- end .row -->
 
-<hr />
-		
-<h3>Corner Styling</h3>	
+	<hr />
+
+	<h3>Corner Styling</h3>	
 	<div class="row">
-		<div class="col col-60">
-			   <ul class="kill-List">
-			       <li>
-			           <a href="#!" title="yeah title" class="btn">Regular</a>
-			       </li>
-				   <li>     
-			           <a href="#!" title="yeah title" class="btn btn-Square">Squared Corners</a>
-			       </li>
-			       <li>
-			           <a href="#!" title="yeah title" class="btn btn-Round">Rounded Corners</a>
-			       </li>
-			   </ul>
-		</div> <!-- end .col-60 -->
-		<div class="col col-40">
+		<div class="col col-50">
+			<ul class="kill-List">
+				<li><a href="#!" title="yeah title" class="btn">Regular</a></li>
+				<li><a href="#!" title="yeah title" class="btn btn-Square">Squared Corners</a></li>
+				<li><a href="#!" title="yeah title" class="btn btn-Round">Rounded Corners</a></li>
+			</ul>
+		</div> <!-- end .col-50 -->
+		<div class="col col-50">
 			<p>
-				The basic button starts out with a border radius of 3px.  
+				The basic button starts out with a border radius of 4px.  
 			</p>
 			<p>
 				.btn-Square will negate the default border radius to square off the corners.<br />
@@ -139,5 +125,47 @@
 			</p>
 		</div>
 	</div> <!-- end .row -->
+
+	<hr />
+
+	<h3>Button Pills</h3>	
+	<div class="row">
+		<div class="col col-50">
+				 <a href="#!" title="yeah title" class="btn btn-Left">Left</a><!--
+			--><a href="#!" title="yeah title" class="btn btn-Center">Center</a><!--
+			--><a href="#!" title="yeah title" class="btn btn-Right">Right</a>
+		</div> <!-- end .col-50 -->
+		<div class="col col-50">
+			<p>
+				To create button pills, the following classes are in use:
+			</p>
+			<ul class="kill-List">
+				<li>.btn-Left</li>
+				<li>.btn-Center</li>
+				<li>.btn-Right</li>
+			</ul>
+			<p>
+				.btn-Left and .btn-Right simply redefine the border radius.  
+				In this instance, .btn-Center is simply an extension of the
+				.btn-Square class, renamed for a better class naming convention.
+				However, additional styling can be applied to it in your own porjects,
+				to keep the .btn-Square class clean.
+			</p>
+			<p>
+				As buttons are inline-blocks, normally there would be white space between the buttons in the pill.
+			</p>
+			<p>
+				In this example, the white space is being commented out in the HTML to make the buttons appear
+				as one solid element.
+			</p>
+			<code class="tiny">
+				 &lt;a href="#" class="btn btn-Left">Left&lt;/a>&lt;!--<br />
+			-->&lt;a href="#" class="btn btn-Center">Center&lt;/a>&lt;!--<br />
+			-->&lt;a href="#" class="btn btn-Right">Right&lt;/a>
+			</code>
+
+		</div>
+	</div> <!-- end .row -->
+
 </section> <!-- end .content -->
 {% endblock %}

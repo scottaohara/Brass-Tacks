@@ -2,30 +2,35 @@
 //		Basic Styling for Buttons
 // ----------------------------------------------------------------
 .btn, %btn{
-    background:$c-Dark; 
-    @include border-radius($px-Unit);
+  background:$c-Dark; 
+  @include border-radius($px-Unit);
+  color:$c-Lighter;
+  cursor:pointer;
+  display:inline-block;
+  font:{
+    family:$arial;
+    size:$base;
+  };
+  line-height:1;
+  padding:$px-Unit*2 $px-Unit*3; 
+  text-align:center;
+  text-decoration:none!important; // set to !important so that if used inside of a .nav, no decoration doesn't get overridden
+  @include vendor(transition, all .25s ease-in-out 0s);
+  -webkit-appearance:none;
+    
+  &.btn-Pad{
+    padding:$px-Unit*2 $px-Unit*4;
+  }
+
+  &:hover, &:active{
+    background:$c-Darker; 
+    @include box-shadow($bs-6);
     color:$c-Lighter;
-    cursor:pointer;
-    display:inline-block;
-    font:{family:$arial; size:$base};
-    line-height:1;
-    padding:$px-Unit*2 $px-Unit*3; 
-    text-align:center;
-    text-decoration:none!important; // set to !important so that if used inside of a .nav, no decoration doesn't get overridden
-    @include vendor(transition, all .25s ease-in-out 0s);
-    -webkit-appearance:none;
-    
-    &.btn-Pad{
-	    padding:$px-Unit*2 $px-Unit*4;
-    }
-    
-    &:hover, &:active{
-        background:$c-Darker; 
-        @include box-shadow($bs-6);
-        color:$c-Lighter;
-    }
-    
-    &:visited{color:$c-Lighter;}
+  }
+
+  &:visited{
+    color:$c-Lighter;
+  }
 }
 
 
@@ -40,65 +45,88 @@
 	&.btn-Pad{
 		padding:$px-Unit $px-Unit*3
 	}
-	
 }
+
 .btn-Large{
 	@extend %btn; 
 	font-size:$gamma; 
 	padding:$px-Unit*3;
 	
 	&.btn-Pad{
-		padding:$px-Unit*3 $px-Unit*5
+	   padding:$px-Unit*3 $px-Unit*5;
 	}
-	
 }
+
 .btn-XLarge{
 	@extend %btn; 
 	font-size:$beta; 
 	padding:$px-Unit*3 $px-Unit*4;
 	
 	&.btn-Pad{
-		padding:$px-Unit*4 $px-Unit*6
+	   padding:$px-Unit*4 $px-Unit*6;
 	}
 }
 
-.btn-Wide{@extend %btn; display:block}
+.btn-Wide{
+  display:block;
+}
 
 
 // ----------------------------------------------------------------
 // Coloring
 // ----------------------------------------------------------------
-.btn-Action{@extend %btn; background:$c-Btn-1;
-    &:hover{background:darken($c-Btn-1, 15%)}
+.btn-Action{background:$c-Btn-1;
+  &:hover{background:darken($c-Btn-1, 15%);}
 }
    
-.btn-Action-2{@extend %btn; background:$c-Btn-2;
-    &:hover{background:darken($c-Btn-2, 15%)}
+.btn-Action-2{background:$c-Btn-2;
+  &:hover{background:darken($c-Btn-2, 15%);}
 }
     
-.btn-Action-3{@extend %btn; background:$c-Btn-3;
-    &:hover{background:darken($c-Btn-3, 15%)}
+.btn-Action-3{background:$c-Btn-3;
+  &:hover{background:darken($c-Btn-3, 15%);}
 }
 
 .btn-Neg, 
 .btn-Neg:hover{
-  @extend %btn; 
   background:$c-Btn-Neg; 
   color:$c-Lighter;
 }
 
 .btn-Disable{
-    @extend %btn; 
-    background:$c-Disabled; 
-    border:1px solid #eee; 
-    color:$c-Dark; 
-    cursor:default;
-    &:hover, &:visited{@extend .btn-Disable}
+  background:$c-Disabled; 
+  border:1px solid #eee; 
+  color:$c-Dark; 
+  cursor:default;
+
+  &:hover, &:visited{
+    @extend .btn-Disable;
+  }
 }
 
 
 // ----------------------------------------------------------------
 // Additional Styling
 // ----------------------------------------------------------------
-.btn-Square{@include border-radius(0)}
-.btn-Round{@include border-radius($px-Unit*4)}
+.btn-Square{
+  @include border-radius(0);
+}
+
+.btn-Round{
+  @include border-radius($px-Unit*3);
+}
+
+// To create button pills
+.btn-Left{
+  @include border-radius($px-Unit*3 0 0 $px-Unit*3);
+}
+
+.btn-Center{
+  @extend .btn-Square;
+}
+
+.btn-Right{
+  @include border-radius(0 $px-Unit*3 $px-Unit*3 0);
+}
+
+

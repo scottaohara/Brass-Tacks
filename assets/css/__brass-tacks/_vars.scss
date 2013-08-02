@@ -83,6 +83,9 @@ $px-Unit:  4px;   // base of 4px, 1/4 of 16px
 $em-Unit:  1em;   // translates to 16px based on 100% font-size
 $per-Unit: 10%;   // base of 10 for percentages
 
+$circle:   1000px;  // large number to make sure that just about anything
+                    // will be able to be 'circled'
+
 
 // ----------------------------------------------------------------
 //		Media Query Break Points  // based on a 16px base font

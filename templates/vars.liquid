@@ -22,67 +22,115 @@
 		    <tbody>
 		      <tr>
 		        <td>$c-Black</td>
-		        <td>#0a0a0a</td>
+		        <td>
+		        	<span style="background:#0a0a0a;" class="mini-Block"></span>
+		        	#0a0a0a
+		        </td>
 		      </tr>
 		      <tr>
 		        <td>$c-Dark</td>
-		        <td>#333</td>
+		        <td>
+		        		<span style="background:#333;" class="mini-Block"></span>
+		        		#333
+		      	</td>
 		      </tr>
 		      <tr>
 		        <td>$c-Darker</td>
-		        <td>#1a1a1a</td>
+		        <td>
+		        	<span style="background:#1a1a1a;" class="mini-Block"></span>
+		        	#1a1a1a
+		      	</td>
 		      </tr>
 		      <tr>
 		        <td>$c-Grey</td>
-		        <td>#ccc</td>
+		        <td>
+		        	<span style="background:#ccc;" class="mini-Block"></span>
+		        	#ccc
+		      	</td>
 		      </tr>
 		      <tr>
 		        <td>$c-Dark-Grey</td>
-		        <td>#999</td>
+		        <td>
+		        	<span style="background:#999;" class="mini-Block"></span>
+		        	#999
+		      	</td>
 		      </tr>
 		      <tr>
 		        <td>$c-Light-Grey</td>
-		        <td>#ddd</td>
+		        <td>
+		        	<span style="background:#ddd;" class="mini-Block"></span>
+		        	#ddd
+		      	</td>
 		      </tr>
 		      <tr>
 		        <td>$c-White</td>
-		        <td>#fdfdfd</td>
+		        <td>
+		        	<span style="background:#fdfdfd;" class="mini-Block"></span>
+		        	#fdfdfd
+		      	</td>
 		      </tr>
 		      <tr>
 		        <td>$c-Light</td>
-		        <td>#eee</td>
+		        <td>
+		        	<span style="background:#eee;" class="mini-Block"></span>
+		        	#eee
+		      	</td>
 		      </tr>
 		      <tr>
 		        <td>$c-Lighter</td>
-		        <td>#f0f0f0</td>
+		        <td>
+		        	<span style="background:#f0f0f0;" class="mini-Block"></span>
+		        	#f0f0f0
+		      	</td>
 		      </tr>
 		      <tr>
 		        <td>$c-Red</td>
-		        <td>#ff3e3e</td>
+		        <td>
+		        	<span style="background:#ff3e3e;" class="mini-Block"></span>
+		        	#ff3e3e
+		      	</td>
 		      </tr>
 		      <tr>
 		        <td>$c-Green</td>
-		        <td>#6ccf31</td>
+		        <td>
+		        	<span style="background:#6ccf31;" class="mini-Block"></span>
+		        	#6ccf31
+		      	</td>
 		      </tr>
 		      <tr>
 		        <td>$c-Blue</td>
-		        <td>#66b0e9</td>
+		        <td>
+		        	<span style="background:#66b0e9;" class="mini-Block"></span>
+		        	#66b0e9
+		      	</td>
 		      </tr>
 		      <tr>
 		        <td>$c-Magenta</td>
-		        <td>#dd0986</td>
+		        <td>
+		        	<span style="background:#dd0986;" class="mini-Block"></span>
+		        	#dd0986
+		      	</td>
 		      </tr>
 		      <tr>
 		        <td>$c-Yellow</td>
-		        <td>#faea65</td>
+		        <td>
+		        	<span style="background:#faea65;" class="mini-Block"></span>
+		        	#faea65
+		      	</td>
 		      </tr>
 		      <tr>
 		        <td>$c-Orange</td>
-		        <td>#fd6f29</td>
+		        <td>
+		        	<span style="background:#fd6f29;" class="mini-Block"></span>
+		        	#fd6f29
+		      	</td>
 		      </tr>
 		      <tr>
 		        <td>$c-Purple</td>
-		        <td>#9729fd</td>
+		        <td>
+		        	<span style="background:#9729fd;" class="mini-Block"></span>
+		        	#9729fd
+		      	</td>
 		      </tr>
 		    </tbody>
 		  </table>
@@ -367,6 +415,10 @@
 		        <td>$per-Units</td>
 		        <td>10%</td>
 		      </tr>
+		      <tr>
+		        <td>$circle</td>
+		        <td>1000px</td>
+		      </tr>
 		    </tbody>
 		  </table>
 		</div> <!-- end .col-60 -->
@@ -384,13 +436,20 @@
 	</div> <!-- end .row -->
 
 <hr />	
-	
-	
-	
-	
-	
-	
-	
-	
-	</section> <!-- end .content -->
+</section> <!-- end .content -->
 {% endblock %}
+
+{% block styles %}
+	<style>
+		.mini-Block{
+			border:1px solid #aaa;
+			border-radius:2px;
+			display:inline-block;
+			height:20px;
+			margin-right:20px;
+			vertical-align:text-top;
+			width:20px;
+		}
+	</style>
+{% endblock %}
+
