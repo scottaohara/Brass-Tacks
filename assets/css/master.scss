@@ -30,13 +30,13 @@
 	
 // Helper Classes
   @import '_helper-sass/type';            //  helper classes for general typography
-  @import '_helper-sass/navs';				    //  Base navigation classes
-	@import '_helper-sass/helper';			    //  Classes to extend others.  Mini-modules -- these need to be separated out?
-	@import '_helper-sass/buttons';			    //  Base button rules
-	@import '_helper-sass/layout';			    //  Responsive & fixed layouts
-	@import '_helper-sass/tables';          //  Helper classes for prettying up tables
-	@import '_helper-sass/messaging';       //  Message boxes for common interactions
-  @import '_helper-sass/forms';            //  Base form component rule
+  @import '_helper-sass/navs';            //  Base navigation classes
+  @import '_helper-sass/helper';          //  Classes to extend others.  Mini-modules -- these need to be separated out?
+  @import '_helper-sass/buttons';         //  Base button rules
+  @import '_helper-sass/layout';          //  Responsive & fixed layouts
+  @import '_helper-sass/tables';          //  Helper classes for prettying up tables
+  @import '_helper-sass/messaging';       //  Message boxes for common interactions
+  @import '_helper-sass/forms';           //  Base form component rule
 
 // Project Specific Styling - see inside "base"
 	@import '_project-sass/base';	          //  Restyle and make classes specific for your project here
