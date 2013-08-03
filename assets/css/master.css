@@ -1002,6 +1002,11 @@ hr {
 .table-Row-Stripe {
   background: #eeeeee; }
 
+.table-Mobile {
+  overflow: auto; }
+  .table-Mobile table, .table-Mobile th, .table-Mobile td, .table-Mobile tr {
+    white-space: nowrap; }
+
 .message-Warning {
   background: #fdf7c8;
   border-color: #f8e01b;

@@ -37,3 +37,12 @@
 .table-Row-Stripe{
 	background:$c-Table-Striped;
 }
+
+// Mobile View Table
+.table-Mobile{
+  overflow:auto;
+  
+  table, th, td, tr{
+    white-space:nowrap;
+  }
+}
