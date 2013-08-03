@@ -41,6 +41,7 @@
 // Mobile View Table
 .table-Mobile{
   overflow:auto;
+  -webkit-overflow-scrolling:touch;
   
   table, th, td, tr{
     white-space:nowrap;
