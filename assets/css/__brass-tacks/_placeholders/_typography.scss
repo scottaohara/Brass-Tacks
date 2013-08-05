@@ -28,7 +28,7 @@
 //  Truncate Text
 // ----------------------------------------------------------------
 
-%truncate{@include truncate(100%)}
+%truncate{@include truncate(100%);}
 
 // ----------------------------------------------------------------
 //  Word Wraps
@@ -37,3 +37,8 @@
 %auto-wrap    {word-wrap:auto;}
 %breakword    {word-wrap:break-word;}
 %normal-wrap  {word-wrap:normal;}
+
+// ----------------------------------------------------------------
+//  Anti-aliasing Text
+// ----------------------------------------------------------------
+%antialias{-webkit-font-smoothing: antialiased; font-smoothing: antialiased;}
