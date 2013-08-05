@@ -46,6 +46,7 @@ the majority of website projects I've been involved with.
 ## Current Usage:
 
 * July 13, 2013   - Currently used in combination w/Bootstraps on neocities.org - version 0.6.2
+* June 29, 2013   - Shopping Website Project w/ @xbuzz - version 0.5.4
 * June 23, 2013   - spin-off version of Brass Tacks (Ground Floor) created for basic styling of NeoCities websites
-* June 14, 2013   - Freelance Project w/ @xbuzz - version 0.4.2
-* June 8, 2013    - Freelance Project w/ @xbuzz - version 0.3.5 
+* June 14, 2013   - Shopping Website Project w/ @xbuzz - version 0.4.2
+* June 8, 2013    - Shopping Website Project w/ @xbuzz - version 0.3.5 
