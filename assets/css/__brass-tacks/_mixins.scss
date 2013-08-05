@@ -21,7 +21,7 @@
 //		Box Sizing
 // ----------------------------------------------------------------
 @mixin box-sizing($box-value){
-	@include base-vendor(box-sizing, $box-value);	
+  @include base-vendor(box-sizing, $box-value);	
 }
 
 
@@ -30,7 +30,7 @@
 // ----------------------------------------------------------------
 @mixin border-radius($br-value){
   border-radius:$br-value;
-	background-clip:padding-box;
+  background-clip:padding-box;
 }
 
 
@@ -131,9 +131,9 @@
          (-webkit-min-device-pixel-ratio: 1.3),
          (min-device-pixel-ratio: 1.3),
          (min-resolution: 1.3dppx){
-    		    // on retina, use image that's scaled by 2
-    		    background-image:url($image);
-    		    background-size:$width $height;
+          // on retina, use image that's scaled by 2
+          background-image:url($image);
+          background-size:$width $height;
     		 }
 }
 
@@ -175,37 +175,41 @@
 //    -- use in combo with .row
 // ----------------------------------------------------------------
 @mixin row-fixed-Left($col-Size){
-	padding-left:$col-Size;
-	@media (max-device-width:480px), screen and (max-width:800px){padding:0}
-	
-	.f-Col{
-		float:left;
-		margin-left:-$col-Size + 40px;
-		width:$col-Size - 40px;
-		@media (max-device-width:480px), screen and (max-width:800px){
-		  float:none;
-		  margin:0;
-		  padding-left:40px;
-		  width:auto;
-		}
-	}
+  padding-left:$col-Size;
+  @media (max-device-width:480px), screen and (max-width:800px){
+    padding:0;
+  }
+  .f-Col{
+    float:left;
+    margin-left:-$col-Size + 40px;
+    width:$col-Size - 40px;
+
+    @media (max-device-width:480px), screen and (max-width:800px){
+      float:none;
+      margin:0;
+      padding-left:40px;
+      width:auto;
+    }
+  }
 }
 
 @mixin row-fixed-Right($col-Size){
-	padding-right:$col-Size;
-	@media (max-device-width:480px), screen and (max-width:800px){padding:0}
-	
-	.f-Col{
-		float:right;
-		margin-right:-$col-Size;
-		width:$col-Size - 40px;
-		@media (max-device-width:480px), screen and (max-width:800px){
-		  float:none;
-		  margin:0;
-		  padding-left:40px;
-		  width:auto;
-		}
-	}
+  padding-right:$col-Size;
+  @media (max-device-width:480px), screen and (max-width:800px){
+    padding:0;
+  }
+  .f-Col{
+    float:right;
+    margin-right:-$col-Size;
+    width:$col-Size - 40px;
+
+    @media (max-device-width:480px), screen and (max-width:800px){
+      float:none;
+      margin:0;
+      padding-left:40px;
+      width:auto;
+    }
+  }
 }
 
 // ----------------------------------------------------------------
