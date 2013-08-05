@@ -41,4 +41,7 @@
 // ----------------------------------------------------------------
 //  Anti-aliasing Text
 // ----------------------------------------------------------------
-%antialias{-webkit-font-smoothing: antialiased; font-smoothing: antialiased;}
+%antialias{
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}

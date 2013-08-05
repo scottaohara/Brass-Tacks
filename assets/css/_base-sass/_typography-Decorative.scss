@@ -14,28 +14,28 @@ i, em, dfn{font-style:italic}
 // Blockquote base styling
 blockquote{
   @extend %zeta;
-	font-style:italic;
-	
-	&:before, 
-	&:after{
-	  font:{
-	    size:$eps;
-	    weight:400
-	   }; 
-	  line-height:1; 
-	  position:relative; 
-	  top:2px;
-	}
-	
-	&:before{
-	  content:'"';
-	  left:-1px;
-	}
-	
-	&:after{
-  	content:'"';
-  	right:-1px;
-	}
+  font-style:italic;
+
+  &:before, 
+  &:after{
+    font:{
+      size:$eps;
+      weight:400
+     }; 
+    line-height:1; 
+    position:relative; 
+    top:2px;
+  }
+
+  &:before{
+    content:'"';
+    left:-1px;
+  }
+
+  &:after{
+    content:'"';
+    right:-1px;
+  }
 }
 
 // sets consistent quotes across browsers
@@ -57,5 +57,5 @@ sub, sup{
   position:relative;
   vertical-align:baseline;
 }
-	sub{bottom:-.25em;}
-	sup{top:-.5em;}	
+  sub{bottom:-.25em;}
+  sup{top:-.5em;}

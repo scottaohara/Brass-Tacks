@@ -25,7 +25,8 @@ pre{
 }
 
 p, li{
-  code, kbd, pre, samp{
+  code, kbd,
+  pre, samp{
     display:inline-block; 
     margin:0;
     padding:$px-Unit;
@@ -58,4 +59,3 @@ p, li{
 .rule{color:#2e9fe8}
 .var{color:#9952b2}
 .at{color:#c3793e}
-

@@ -12,10 +12,10 @@ table{
   border-collapse:collapse;
   border-spacing:0;
   font-size:$base;
-	width:100%; // make tables always take up the entire width of their containing parent.
-	
-	th, td{
-	padding:$px-Unit $px-Unit*2;
-  	text-align:left;
-	}
+  width:100%; // make tables always take up the entire width of their containing parent.
+
+  th, td{
+    padding:$px-Unit $px-Unit*2;
+    text-align:left;
+  }
 }

@@ -7,7 +7,7 @@ button, fieldset, form, input, select, textarea{
   @extend %reset;
   @extend %margin-bottom;
   @extend %base;
-  line-height:normal; 
+  line-height:normal;
   text-transform:none;
 }
 
@@ -78,6 +78,6 @@ label{
 // Legend
 legend{
   @extend %eps;
-	margin-left:-$px-Unit;
-	padding:0 $px-Unit;
+  margin-left:-$px-Unit;
+  padding:0 $px-Unit;
 }

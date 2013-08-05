@@ -1,13 +1,13 @@
 // Print Stylesheet default from HTML5 Boiler Plate
 
 @media print{
-	*{
-	    background:transparent!important;
+  *{
+      background:transparent!important;
       color:#000!important; // Black prints faster
       box-shadow:none!important;
       text-shadow:none!important;
     }
-    
+
     a, a:visited{text-decoration:underline}
     a[href]:after{content:" (" attr(href) ")"}
 

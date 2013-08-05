@@ -4,14 +4,14 @@
 
 // Apply to <main> or top level <section> for styling
 .content-Base{
-	min-height:500px;
-	padding-bottom:$px-Unit*5;
-	
-	.content{
-		background:#fff; 
-		border:1px solid $c-Light; 
-		@include box-shadow($bs-4);
-	}
+  min-height:500px;
+  padding-bottom:$px-Unit*5;
+
+  .content{
+    background:$c-White; 
+    border:1px solid $c-Light; 
+    @include box-shadow($bs-4);
+  }
 }
 
 // Additional Content Area stylings go below...
