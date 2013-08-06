@@ -1,0 +1,88 @@
+{% block title %}Misc. Helper Classes{% endblock %}
+{% block content %} 
+<section class="content">
+
+  <h2>Misc. Helper Classes</h2>
+  <p>
+  	Brass Tacks includes many default helper classes that are ready to use via the class names listed below.
+  	You can also extend many of these classes into your own project specific classes for easier recognition.
+  </p>
+  
+  <hr />
+
+  <h3>Font Families</h3>
+  <table class="table-Stripe table-Border">
+    <thead class="table-Header">
+      <tr>
+        <th class="col-20">Class</th>
+        <th class="col-80">Use Case</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>.float-Left</td>
+        <td>Float elements to the left of a container.</td>
+      </tr>
+      <tr>
+        <td>.float-Right</td>
+        <td>Float elements to the right of a container.</td>
+      </tr>
+      <tr>
+        <td>.float-None</td>
+        <td>Remove float from an element.</td>
+      </tr>
+      
+      <tr>
+        <td>.clear</td>
+        <td>Applies clear:both to an element.</td>
+      </tr>
+      <tr>
+        <td>.clearfix</td>
+        <td>Modern, IE8+, Clearfix hack (also known as .btcf)</td>
+      </tr>
+      <tr>
+        <td>.overflow</td>
+        <td>Applies an overflow:hidden to an element.</td>
+      </tr>
+      
+      <tr>
+        <td>.d-Block, .js-Show</td>
+        <td>Applies display:block to an element.  Use .js-Show when adding/removing classes via javascript.</td>
+      </tr>
+      <tr>
+        <td>.d-None, .js-Hide</td>
+        <td>Applies display:none to an element. Use .js-Hide when adding/removing classes via javascript.</td>
+      </tr>
+      <tr>
+        <td>.mobile-show</td>
+        <td>Applies display:block to an element in larger screens, but display:block to an element in smaller screens.</td>
+      </tr>
+      
+      <tr>
+        <td>.hidden</td>
+        <td>Hides an element from screen readers and browsers.</td>
+      </tr>
+      <tr>
+        <td>.invis</td>
+        <td>Extends the %invis placeholder.</td>
+      </tr>
+      
+      <tr>
+        <td>.pic</td>
+        <td>Usable for avatar/profile pictures.  Add to an &lt;img /> element.</td>
+      </tr>
+      <tr>
+        <td>.pic-Rounded</td>
+        <td>Extends the $pic class and makes the picture a circle.</td>
+      </tr>
+      
+      <tr>
+        <td>.emph-Block</td>
+        <td>Apply to a containing element to create an emphasis/call out box.</td>
+      </tr>
+      
+    </tbody>
+  </table>
+	
+</section> <!-- end .content -->
+{% endblock %}

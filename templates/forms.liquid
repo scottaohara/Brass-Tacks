@@ -11,58 +11,57 @@
   <hr />
 	
 <form class="form-Container">
-	
 	<h3>Base Input Fields</h3>
 	
 	<div class="row">
-	<div class="col col-50">
+	  <div class="col col-50">
 
-   <fieldset class="grouping">
-	   <label for="input-Text">Input - Normal Text</label>
-	   <input type="text" id="input-Text" placeholder="Write Text Here" />
-	       
-	   <label for="input-Text-dl">Input - Text w/Data List</label>
-	   <input type="text" id="input-Text-dl" list="fav-color" placeholder="Choose your fav. color" />
-    <datalist id="fav-color">
-      <option value="Red">Red</option> 
-      <option value="Orange">Orange</option> 
-      <option value="Yellow">Yellow</option>
-    </datalist>
-	       
-     <label for="input-Email">Input - Email</label>
-     <input type="email" id="input-Email" placeholder="Enter Email" />
-     
-     <label for="input-Password">Input - Password</label>
-     <input type="password" id="input-Password" placeholder="Enter Password" />
-     
-     <label for="input-Url">Input - Web Address</label>
-     <input id="input-Url" type="url" placeholder="Enter Web Address" />
-     
-     <label for="input-Tel">Input - Phone Number</label>
-     <input type="tel" id="input-Tel" placeholder="555.555.5555" />
-     
-     <label for="input-Search">Input - Search</label>
-     <input type="search" id="input-Search" placeholder="Search for..." />
-     <input type="submit" class="btn btn-Action" value="Search" />
-     
-     <label for="input-TextArea">Text Area</label>
-     <textarea id="input-TextArea"></textarea>
-   </fieldset>
-	</div>
+      <fieldset class="grouping">
+        <label for="input-Text">Input - Normal Text</label>
+        <input type="text" id="input-Text" placeholder="Write Text Here" />
+
+        <label for="input-Text-dl">Input - Text w/Data List</label>
+        <input type="text" id="input-Text-dl" list="fav-color" placeholder="Choose your fav. color" />
+        <datalist id="fav-color">
+          <option value="Red">Red</option> 
+          <option value="Orange">Orange</option> 
+          <option value="Yellow">Yellow</option>
+        </datalist>
+
+        <label for="input-Email">Input - Email</label>
+        <input type="email" id="input-Email" placeholder="Enter Email" />
+
+        <label for="input-Password">Input - Password</label>
+        <input type="password" id="input-Password" placeholder="Enter Password" />
+
+        <label for="input-Url">Input - Web Address</label>
+        <input id="input-Url" type="url" placeholder="Enter Web Address" />
+
+        <label for="input-Tel">Input - Phone Number</label>
+        <input type="tel" id="input-Tel" placeholder="555.555.5555" />
+
+        <label for="input-Search">Input - Search</label>
+        <input type="search" id="input-Search" placeholder="Search for..." />
+        <input type="submit" class="btn btn-Action" value="Search" />
+
+        <label for="input-TextArea">Text Area</label>
+        <textarea id="input-TextArea"></textarea>
+      </fieldset>
+	</div> <!-- end .col-50 -->
 	
-	<div class=" col col-50">
+	<div class="col col-50">
 		<fieldset class="grouping fieldset">
       <legend class="legend">Input Variants</legend>
       <label class="dis-Label">Disabled Text Input</label> 
       <input type="text" value="Disabled text input" disabled="disabled" />
-   
+
       <label>Readonly Text Input</label>
       <input type="text" value="Readonly text input" readonly="readonly" />
-      
+
       <label for="input-Required">Required Input</label>
       <input type="text" id="input-Required" placeholder="Placeholder Text" required="required" />
     </fieldset>
-    
+
     <ul class="">
       <li>
         All base input fields and the textarea are pulling from a
@@ -70,24 +69,20 @@
         input elements looking consistent across browsers, opposed to having forms take
         on the default styling of each different browser.
       </li>
-
       <li>
         The only classes in use in this section are for the search buttton <code>.btn-Action</code> and
         a class for the diabled text input label <code>.dis-Label</code>.
       </li>
-
       <li>
         To create individual inline form elements, apply the class of 
         <code>.inline-Element</code>.  If you want all elements to be inline, use the 
         class of <code>.inline-All</code> on the parent of the elements.
       </li>
-
       <li>
         If you need to create more complex from layouts, you can use classes from
         the <a href="layout" title="Layout Classes">Layout Helpers</a> on &lt;div> and
         &lt;fieldset> elements in your forms.
       </li>
-
       <li>
         Use the class of <code>.grouping</code> on divs or fieldsets within forms to 
         apply block level groups to elements, and to apply slight padding between groups.
@@ -106,13 +101,11 @@
     <fieldset class="grouping">
       <div class="file-Input-Area">
         <input type="file" id="input-File" class="input-File" />
-        <label for="input-File" class="text-Label">File Input</label>
+        <label for="input-File">File Input</label>
         <span class="input-File-Text">
           <span class="placeholder">Select a file...</span>
         </span>
-        <span class="btn">
-          Select
-        </span>
+        <span class="btn">Select</span>
       </div>
 
       <p class="eps">Without Classes</p>
@@ -121,9 +114,9 @@
     </fieldset>
 
 </div>
-  <div class=" col col-50">
+  <div class="col col-50">
     <p>
-      To make file inputs appear more like other text inputs, the code snippet.
+      To make file inputs appear more like other text inputs, apply the code snippet with the accompanying jQuery.
       Otherwise, file inputs will take on the default styling of the browser.
     </p>
     <code class="tiny">
@@ -136,6 +129,15 @@
         &nbsp;&nbsp;&lt;span class="btn">Select&lt;/span><br />
       &lt;/div>
     </code>
+    <code class="tiny">
+      $(document).ready(function(){<br />
+    	&nbsp;&nbsp;// when file is selected via OS file picker,<br />
+    	&nbsp;&nbsp;// place file name into .placeholder span<br />
+    	&nbsp;&nbsp;$(".input-File").change(function() {<br />
+    	&nbsp;&nbsp;&nbsp;&nbsp;$(this).parent().find(".input-File-Text").html(this.value)<br />
+    	&nbsp;&nbsp;});<br />
+    	});
+    </code>
   </div>
 </div> <!-- end .row -->  
 
@@ -143,13 +145,15 @@
 
 <h3>Check Boxes &amp; Radio Buttons</h3>
 <div class="row">
-	<div class="col col-50">	     
 
+	<div class="col col-50">	     
     <h4 class="eps">Check Boxes</h4>
     
     <fieldset class="grouping">
       <div>
-        <label for="check-1" class="inline-Element">Unclassed Check Box</label>
+        <label for="check-1" class="inline-Element">
+          Classless Check Box
+        </label>
         <input type="checkbox" id="check-1" />
       </div>
 
@@ -158,7 +162,8 @@
         Designed Checkbox (ie9+)
         <span class="visual-Check"></span>
       </label>
-      <br />
+     </fieldset>
+     
       <strong>Code for Designed Checkbox</strong>
       <code class="tiny">
         &lt;label for="check-2" class="input-Checkbox"><br />
@@ -167,31 +172,28 @@
          &nbsp;&nbsp;&lt;span class="visual-Check">&lt;/span><br />
         &lt;/label>
       </code>
-    </fieldset>
-
-</div>
+  </div>
+  
 	<div class=" col col-50">
     <h4 class="eps">Radio Buttons</h4>
+    
     <fieldset class="radios grouping">
-      <label for="r1" class="radio-Hold">
-        <input type="radio" id="r1" name="rr" class="input-Radio" />
-        <span class="btn-Radio"></span>Radio Button 3
+      <label for="r1">
+        <input type="radio" id="r1" name="rr" />
+        Classless Radio Button 1
       </label>
 
-      <label for="r2" class="radio-Hold">
-        <input type="radio" id="r2" name="rr" class="input-Radio" />
-        <span class="btn-Radio"></span>Radio Button 3
+      <label for="r2">
+        <input type="radio" id="r2" name="rr" class="input-Hide" />
+        <span class="btn-Radio"></span>
+        Radio Button 2
       </label>
-      
-      <label for="r3" class="radio-Hold">
-        <input type="radio" id="r3" name="rr" class="input-Radio" />
-        <span class="btn-Radio"></span>Radio Button 3
-      </label>
-     </fieldset>
-
+    </fieldset>
+     
+     <strong>Code for Designed Radio Buttons</strong>
      <code class="tiny">
         &lt;label for="r3" class="radio-Hold"><br />
-        &nbsp;&nbsp;&lt;input type="radio" id="r3" name="rr" class="input-Radio" /><br />
+        &nbsp;&nbsp;&lt;input type="radio" id="r3" name="rr" class="input-Hide" /><br />
         &nbsp;&nbsp;&lt;span class="btn-Radio">&lt;/span>Radio Button 3<br />
       &lt;/label>
      </code>
@@ -244,16 +246,16 @@
     </p>
 
     <fieldset class="grouping">
-      <label for="num-Spin" class="text-Label">Number Spinbox</label>
-       <input type="number" id="num-Spin" min="0" max="20" step="1" value="5" class="input-Number" />
+      <label for="num-Spin">Number Spinbox</label>
+       <input type="number" id="num-Spin" min="0" max="20" step="1" value="5" />
        
-       <label for="num-Date" class="text-Label">Date: mm/dd/yyyy</label>
-       <input type="date" id="num-Date" class="input-Number" />
+       <label for="num-Date">Date: mm/dd/yyyy</label>
+       <input type="date" id="num-Date" />
        
-       <label for="num-Time" class="text-Label">Time: 12:00 PM</label>
-       <input type="time" id="num-Time" class="input-Number" />
+       <label for="num-Time">Time: 12:00 PM</label>
+       <input type="time" id="num-Time" />
        
-       <label for="color-Picker" class="text-Label">Hex Color</label>
+       <label for="color-Picker">Hex Color</label>
        <input type="color" id="color-Picker" class="input-Color" />
     </fieldset>
 
@@ -285,16 +287,14 @@
 
 {% block js %}
 {{ "jquery-1.10.2.min.js" | asset_url | script_tag }}
-{{ "app.js" | asset_url | script_tag }}
 
 <script type="text/javascript">
 	$(document).ready(function(){
 	  // jQuery to make file uploads look styled / display text after click/choosing of file
 		// Thanks jdrumm
 		$(".input-File").change(function() {
-		   $(this).parent().find(".input-File-Text").html(this.value)
+		  $(this).parent().find(".input-File-Text").html(this.value)
 		});
 	});
 </script>
 {% endblock %}
-

@@ -12,15 +12,27 @@
 // ----------------------------------------------------------------
 //		Showing & Hiding
 // ----------------------------------------------------------------
-.d-Block, .show{display:block}
-.d-None, .mobile-Show{display:none} 
-	// change display value for .mobile-Show in the appropriate @media break-point
+.d-Block, .js-Show{
+  display:block;
+}
+.d-None, .js-Hide, .mobile-Show{
+  display:none;
+}
+
+@media (max-device-width:480px), screen and (max-width:800px){
+  .mobile-Show{
+    display:block;
+  }
+}
 	
 // Hides from screenreaders and browsers
-.hidden{display:none!important; visibility:hidden}
+.hidden{
+  display:none!important;
+  visibility:hidden;
+}
 
 // Hide from browsers but not from screen readers
-.invis{@extend %invis}
+.invis{@extend %invis;}
 
 // ----------------------------------------------------------------
 //		Reoccuring HTML Elements
@@ -40,7 +52,7 @@
 // Make picture into a circle
 .pic-Rounded{
 	@extend %pic;
-	@include border-radius(130px);
+	@include border-radius($circle);
 }
 /* 
 	Code Example
@@ -56,27 +68,47 @@
 	@extend %clearfix;
 	position:relative;
 	z-index:2;
-	.media-Text >:last-child{margin-bottom:0}
-	.media-Object{float:left; margin:0 $px-Unit*4 $px-Unit*2 0; max-width:30%;}
+	.media-Text >:last-child{
+	  margin-bottom:0;
+	}
+	.media-Object{
+	  float:left;
+	  margin:0 $px-Unit*4 $px-Unit*2 0;
+	  max-width:30%;
+	}
 }
 
 // Have media element appear on the right hand side
 .media-Reverse, %media-Reverse{
 	@extend %media;
-	.media-Object{float:right; margin:0 0 $px-Unit*2 $px-Unit*4; max-width:30%;}
+	.media-Object{
+	  float:right;
+	  margin:0 0 $px-Unit*2 $px-Unit*4;
+	  max-width:30%;
+  }
 }
 
 .media-No-Wrap{
 	@extend %media;
 	padding-left:100px;
-	.media-Text{float:left; width:100%;}
-	.media-Object{margin-left:-100px; margin-right:0;}
+	.media-Text{
+	  float:left;
+	  width:100%;
+	}
+	.media-Object{
+  	margin-left:-100px;
+  	margin-right:0;
+	}
 }
 
 .media-No-Wrap-Reverse{
 	@extend %media-Reverse;
 	padding-right:100px;
-	.media-Object{margin-right:-100px; margin-left:0;}
+	
+	.media-Object{
+  	margin-right:-100px;
+  	margin-left:0;
+	}
 }
 /* 
 	Code Example
@@ -98,14 +130,16 @@
 
 // Call out boxes
 .emph-Block{
-	background:#fafafa;
-	border:1px solid #ddd;
+	background:$c-White;
+	border:1px solid $c-Light-Grey;
 	@include border-radius($px-Unit);
 	@include box-shadow($bs-4);
 	margin-bottom:$px-Unit*4;
 	min-height:50px;
 	padding:$px-Unit*4;
 	
-	& > :last-child{margin-bottom:0}
+	& > :last-child{
+	  margin-bottom:0;
+	}
 }
 
