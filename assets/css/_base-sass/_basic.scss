@@ -7,15 +7,23 @@
   @include box-sizing(border-box);
 }
 
-// Just to make sure the HTML doesn't act like a bitch
 html{
-  overflow-y:scroll;
-  min-height:100%;
+  -ms-text-size-adjust:100%;
+  -webkit-text-size-adjust:100%;
 }
 
 html, body{
-  @extend %reset;
-  height:100%;
+  @extend %mp-Reset;
+  height:100%;  
+}
+
+body{
+  @extend %font-Size-LH;
+}
+
+// Removes grey background color from active links in IE10
+a{
+  background:transparent;
 }
 
 // Base HTML5 sepecific elements/selectors rules
@@ -41,10 +49,10 @@ html, body{
 
 // Easy re-styling for <hr /> tags
 hr{
-  @extend %reset;
+  border:0;
   border-bottom:1px solid rgba(255,255,255,.2);
   border-top:   1px solid rgba(0,0,0,.2); 
-  display:block; 
+  @extend %d-Block;
   height:1px; 
   margin:$px-Unit*2 0;
 }

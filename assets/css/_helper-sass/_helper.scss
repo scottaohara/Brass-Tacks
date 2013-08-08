@@ -13,26 +13,27 @@
 //		Showing & Hiding
 // ----------------------------------------------------------------
 .d-Block, .js-Show{
-  display:block;
+  @extend %d-Block;
 }
 .d-None, .js-Hide, .mobile-Show{
-  display:none;
+  @extend %d-None;
 }
 
 @media (max-device-width:480px), screen and (max-width:800px){
   .mobile-Show{
-    display:block;
+    @extend %d-Block;
   }
 }
 	
 // Hides from screenreaders and browsers
 .hidden{
-  display:none!important;
-  visibility:hidden;
+	@extend %hidden;
 }
 
 // Hide from browsers but not from screen readers
-.invis{@extend %invis;}
+.invis{
+	@extend %invis;
+}
 
 // ----------------------------------------------------------------
 //		Reoccuring HTML Elements
@@ -46,7 +47,7 @@
 	overflow:hidden;
 	width:90px;
 	
-	img{display:block}
+	img{@extend %d-Block;}
 }
 
 // Make picture into a circle
@@ -143,3 +144,30 @@
 	}
 }
 
+
+
+/*
+
+<!-- ***************************
+  Generic Block Element
+*************************** -->
+
+<div class="block xHELPER-CLASSx">
+  <div class="block-Body"></div>
+</div>
+
+
+<div class="block xHELPER-CLASSx">
+  <header class="block-Header"></header> 
+  <div class="block-Body"></div>
+  <footer class="block-Footer"></footer>
+</div>
+
+
+<div class="block xHELPER-CLASSx">
+  <div class="block-Body"></div>
+  <footer class="block-Footer"></footer>
+</div>
+
+
+*/

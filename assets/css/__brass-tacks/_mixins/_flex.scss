@@ -1,40 +1,6 @@
-// ----------------------------------------------------------------
-//  Brass Tacks Mixins
-// ----------------------------------------------------------------
-
-@import '_mixins/vendor';
-
-// Typography
-@import '_mixins/typography';
-
-// Styling
-@import '_mixins/border-radius';
-@import '_mixins/box-shadow';
-@import '_mixins/gradients';
-
-// Layout
-@import '_mixins/box-sizing';
-@import '_mixins/position';
-@import '_mixins/static-column';
-@import '_mixins/hidden-element';
-
-// CSS Shapes
-@import '_mixins/triangle';
-
-// Media Elements
-@import '_mixins/retina';
-
-
-
-
-
-
-
-
-
 
 // ----------------------------------------------------------------
-//		Basic Flex Box Mixins
+//    Basic Flex Box Mixins
 // ----------------------------------------------------------------
 @mixin flexbox(){
   // old prefixes

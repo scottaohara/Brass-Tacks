@@ -6,15 +6,18 @@
 // ----------------------------------------------------------------
 
 // Bold these things.  Bold 'em good.
-b, strong{font-weight:bold}
+b, strong{
+  font-weight:bold;
+}
 
 // Italicize these things.  Italicize them gooder.
-i, em, dfn{font-style:italic}
+i, em, dfn, blockquote{
+  font-style:italic;
+}
 
 // Blockquote base styling
 blockquote{
   @extend %zeta;
-  font-style:italic;
 
   &:before, 
   &:after{
@@ -39,7 +42,9 @@ blockquote{
 }
 
 // sets consistent quotes across browsers
-q{quotes:"\201C" "\201D" "\2018" "\2019";}
+q{
+  quotes:"\201C" "\201D" "\2018" "\2019";
+}
 
 // An underline & help cursor in all browsers when a title tag is present
 abbr[title], dfn[title]{

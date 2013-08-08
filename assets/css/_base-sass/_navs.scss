@@ -6,9 +6,8 @@ nav{
   ul,
   ol{
     @extend %clearfix;
+    @extend %mp-Reset;
     list-style:none; 
-    margin:0; 
-    padding:0;
   }
 
   li{

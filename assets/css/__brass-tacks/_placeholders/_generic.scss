@@ -5,18 +5,33 @@
 // extend to all tags that need this
 // for better organization of code
 %reset{
+  @extend %mp-Reset;
   border:0;
-  margin:0;
   outline:0;
+}
+
+%mp-Reset{
+  margin:0;
   padding:0;
 }
+
+// ----------------------------------------------------------------
+//  Displays
+// ----------------------------------------------------------------
+
+%d-Block{display:block;}
+%d-None{display:none;}
 
 // ----------------------------------------------------------------
 //  Clearfix
 // ----------------------------------------------------------------
 
 %clearfix{
-  &:after{clear:both; content:""; display:table}
+  &:after{
+    clear:both;
+    content:"";
+    display:table;
+  }
 }
 
 
@@ -28,6 +43,14 @@
   margin-bottom:$px-Unit*2;
 }
 
+// ----------------------------------------------------------------
+//  Hides from screenreaders and browsers
+// ----------------------------------------------------------------
+// Hides from screenreaders and browsers
+%hidden{
+  display:none!important;
+  visibility:hidden;
+}
 
 // ----------------------------------------------------------------
 //  Hide from browsers but not from screen readers

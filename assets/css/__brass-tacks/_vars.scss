@@ -28,7 +28,6 @@ $c-Orange:      #fd6f29;
 $c-Purple:      #9729fd;
 
 
-
 // ----------------------------------------------------------------
 // Fonts Families
 // ----------------------------------------------------------------
@@ -90,10 +89,10 @@ $circle:   1000px;  // large number to make sure that just about anything
 // ----------------------------------------------------------------
 //		Media Query Break Points  // based on a 16px base font
 // ----------------------------------------------------------------
-$break-Mini:    30em;
+$break-Mini:    30em;     // 480px at 16px base
 $break-Tiny:    31.25em;  // 500px at 16px base
-$break-Small:   600px;
-$break-Medium:  800px;
-$break-Large:   1000px;
-$break-xLarge:  1200px;
-$break-xxLarge: 1600px;
+$break-Small:   600px;    // 37.5em
+$break-Medium:  800px;    // 50em
+$break-Large:   1000px;   // 62.5em
+$break-xLarge:  1200px;   // 75em
+$break-xxLarge: 1600px;   // 100em

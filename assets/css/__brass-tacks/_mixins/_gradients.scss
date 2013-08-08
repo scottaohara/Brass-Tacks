@@ -1,0 +1,24 @@
+// ----------------------------------------------------------------
+// Linear Gradient
+// ----------------------------------------------------------------
+@mixin linear-gradient($grad-Line, $grad-Colors...) {
+  background: -webkit-linear-gradient($grad-Line, $grad-Colors);
+  background:    -moz-linear-gradient($grad-Line, $grad-Colors);
+  background:      -o-linear-gradient($grad-Line, $grad-Colors);
+  background:         linear-gradient($grad-Line, $grad-Colors);
+}
+    //  grad-Line - use either ###deg or top, let, bottom, right
+    //  example:
+    //  @include linear-gradient(80deg, #fcc, #f23);
+    //  @include linear-gradient(top, #fcc, #f23);
+
+
+// ----------------------------------------------------------------
+//  Radial Gradient
+// ----------------------------------------------------------------
+@mixin radial-gradient($radial...) {
+  background: -webkit-radial-gradient($radial);
+  background:    -moz-radial-gradient($radial);
+  background:      -o-radial-gradient($radial);
+  background:         radial-gradient($radial);
+}

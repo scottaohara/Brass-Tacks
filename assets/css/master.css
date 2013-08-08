@@ -11,15 +11,23 @@
   *
   *******************************************************************************************************
 */
-html, body, audio,
-embed,
-img,
-object,
-video, blockquote, h1, h2, h3, h4, h5, h6, p, pre, caption, table, td, th, tr, button, fieldset, form, input, select, textarea, legend, hr {
+audio, embed,
+img, object, video, caption, table, tr, th, td, button, fieldset, form, input, select, textarea, legend {
   border: 0;
+  outline: 0; }
+
+audio, embed,
+img, object, video, caption, table, tr, th, td, button, fieldset, form, input, select, textarea, legend, html, body, blockquote, h1, h2, h3, h4, h5, h6, p, pre, nav ul,
+nav ol {
   margin: 0;
-  outline: 0;
   padding: 0; }
+
+[data-tooltip] img, article, aside, details, figure, figcaption,
+footer, header, main, nav, section, summary, small, hr, .d-Block, .js-Show, .pic img, .pic-Rounded img {
+  display: block; }
+
+[hidden], template, .d-None, .js-Hide, .mobile-Show {
+  display: none; }
 
 nav ul:after,
 nav ol:after, .clearfix:after, .media:after, .media-Reverse:after, .media-No-Wrap-Reverse:after, .media-No-Wrap:after, .row:after, .c-Row:after {
@@ -29,6 +37,10 @@ nav ol:after, .clearfix:after, .media:after, .media-Reverse:after, .media-No-Wra
 
 blockquote, h1, h2, h3, h4, h5, h6, li, p, small, code, kbd, samp, table, button, fieldset, form, input, select, textarea {
   margin-bottom: 8px; }
+
+.hidden {
+  display: none !important;
+  visibility: hidden; }
 
 .invis, .input-Hide, .input-Checkbox .checkbox {
   border: 0 !important;
@@ -117,14 +129,14 @@ p, li, li p, li a, .base, button, fieldset, form, input, select, textarea {
   padding: 0.35em 0.5em;
   position: relative;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6); }
-  .message-Warning p, .message-Error p, .message-Success p, .message-Info p {
-    margin-bottom: 0; }
 
 .message-Holder {
   left: 10%;
   position: fixed;
   top: 0;
   width: 80%; }
+  .message-Holder p {
+    margin-bottom: 0; }
 
 .close-Message {
   border: 1px solid;
@@ -135,121 +147,56 @@ p, li, li p, li a, .base, button, fieldset, form, input, select, textarea {
   cursor: help;
   display: inline-block;
   position: relative; }
-  [data-tooltip] img {
-    display: block; }
   [data-tooltip]:after {
-    background: #fdfdfd;
-    background: rgba(255, 255, 255, 0.95);
-    border: 1px solid #333;
-    border-radius: 4px;
-    color: #333;
-    content: attr(data-tooltip);
-    font-size: 12px;
-    left: 0;
-    opacity: 0;
-    padding: 4px 12px;
+    bottom: -20%;
     position: absolute;
-    text-align: center;
-    top: 90%;
+    left: 0;
     -moz-transition: all 0.35s;
     -ms-transition: all 0.35s;
     -o-transition: all 0.35s;
     -webkit-transition: all 0.35s;
     transition: all 0.35s;
+    background: #fdfdfd;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid #333;
+    border-radius: 4px;
+    color: #333333;
+    content: attr(data-tooltip);
+    font-size: 0.75em;
+    opacity: 0;
+    padding: 4px 12px;
+    text-align: center;
     width: 100%; }
   [data-tooltip]:hover {
     text-decoration: none; }
     [data-tooltip]:hover:after {
-      opacity: 1;
-      top: 105%; }
+      bottom: 0;
+      opacity: 1; }
 
-.tip-Above:after {
-  bottom: 90%;
-  top: auto; }
-.tip-Above:hover:after {
-  bottom: 105%;
-  top: auto; }
-
-.tip-Bottom:after {
-  bottom: -5%;
-  top: auto; }
-.tip-Bottom:hover:after {
-  bottom: 0;
-  top: auto; }
-
-.tip-Top:after {
-  top: -5%; }
-.tip-Top:hover:after {
-  top: 0; }
-
-.tip-Left:after {
-  height: 100%;
-  left: -5%;
-  top: 0;
-  width: 50%; }
-.tip-Left:hover:after {
-  left: 0;
-  top: 0; }
-
-.tip-Right:after {
-  height: 100%;
-  left: auto;
-  right: -5%;
-  top: 0;
-  width: 50%; }
-.tip-Right:hover:after {
-  left: auto;
-  right: 0;
-  top: 0; }
-
-/*
-  the tool tips 
-  -- default position is to show tool-tip as pop-under
-  -- use additional helper classes to reassign where tool-tip displayes.
-
-  Default HTML:
-	
-  <a href="#" title="Title" data-tooltip="Tool Tip Here">
-    Content Goes Here
-  </a>
-	
-  <span data-tooltip="Tool Tip Here">
-    Content Goes Here
-  </span>
- */
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 html {
-  overflow-y: scroll;
-  min-height: 100%; }
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
 
 html, body {
   height: 100%; }
 
-article, aside, details, figure, figcaption,
-footer, header, main, nav, section, summary {
-  display: block; }
+a {
+  background: transparent; }
 
-[hidden] {
-  display: none; }
-
-audio,
-embed,
-img,
-object,
-video {
+audio, embed,
+img, object, video {
   max-width: 100%; }
 
 img {
   color: #ff3e3e;
   font-style: italic; }
 
-audio,
-canvas,
-video {
+audio, canvas, video {
   display: inline-block; }
 
 audio:not([controls]) {
@@ -262,9 +209,6 @@ svg:not(:root) {
 body {
   font-size: 100%;
   line-height: 1.5; }
-
-small {
-  display: block; }
 
 p small, li small {
   display: inline-block;
@@ -282,10 +226,11 @@ code, kbd, samp {
 pre {
   overflow: auto;
   white-space: pre-wrap; }
-  pre mark {
-    background: #eee;
-    border-bottom: 1px solid #ddd;
-    color: #333; }
+
+mark {
+  background: #eee;
+  border-bottom: 1px solid #ddd;
+  color: #333333; }
 
 p code, p kbd,
 p pre, p samp, li code, li kbd,
@@ -294,59 +239,24 @@ li pre, li samp {
   margin: 0;
   padding: 4px; }
 
-.code-Line {
-  display: block; }
-
-.indent-1 {
-  text-indent: 1em; }
-
-.indent-2 {
-  text-indent: 2em; }
-
-.indent-3 {
-  text-indent: 3em; }
-
-.comment {
-  color: #99a; }
-
-.important {
-  color: #f00; }
-
-.selector {
-  color: #111; }
-
-.value {
-  color: #709c34; }
-
-.rule {
-  color: #2e9fe8; }
-
-.var {
-  color: #9952b2; }
-
-.at {
-  color: #c3793e; }
-
 b, strong {
   font-weight: bold; }
 
-i, em, dfn {
+i, em, dfn, blockquote {
   font-style: italic; }
 
-blockquote {
-  font-style: italic; }
-  blockquote:before, blockquote:after {
-    font-size: 1.25em;
-    font-weight: 400;
-    line-height: 1;
-    position: relative;
-    top: 2px; }
-  blockquote:before {
-    content: '"';
-    left: -1px; }
-  blockquote:after {
-    content: '"';
-    right: -1px; }
+blockquote:before, blockquote:after {
+  font-size: 1.25em;
+  font-weight: 400;
+  line-height: 1;
+  position: relative;
+  top: 2px; }
+blockquote:before {
+  content: '"';
+  left: -1px; }
+blockquote:after {
+  content: '"';
+  right: -1px; }
 
 q {
   quotes: "\201C" "\201D" "\2018" "\2019"; }
@@ -394,9 +304,10 @@ table {
   border-spacing: 0;
   font-size: 1em;
   width: 100%; }
-  table th, table td {
-    padding: 4px 8px;
-    text-align: left; }
+
+th, td {
+  padding: 4px 8px;
+  text-align: left; }
 
 button, fieldset, form, input, select, textarea {
   line-height: normal;
@@ -448,9 +359,7 @@ legend {
 
 nav ul,
 nav ol {
-  list-style: none;
-  margin: 0;
-  padding: 0; }
+  list-style: none; }
 nav li {
   margin: 0; }
 nav a {
@@ -461,9 +370,9 @@ nav a {
     text-decoration: none; }
 
 hr {
+  border: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   border-top: 1px solid rgba(0, 0, 0, 0.2);
-  display: block;
   height: 1px;
   margin: 8px 0; }
 
@@ -680,19 +589,6 @@ hr {
 .overflow {
   overflow: hidden; }
 
-.d-Block, .js-Show {
-  display: block; }
-
-.d-None, .js-Hide, .mobile-Show {
-  display: none; }
-
-@media (max-device-width: 480px), screen and (max-width: 800px) {
-  .mobile-Show {
-    display: block; } }
-.hidden {
-  display: none !important;
-  visibility: hidden; }
-
 .pic, .pic-Rounded {
   border: 1px solid #fdfdfd;
   border-radius: 4px;
@@ -702,8 +598,6 @@ hr {
   display: inline-block;
   overflow: hidden;
   width: 90px; }
-  .pic img, .pic-Rounded img {
-    display: block; }
 
 .pic-Rounded {
   border-radius: 1000px;
@@ -776,6 +670,31 @@ hr {
   .emph-Block > :last-child {
     margin-bottom: 0; }
 
+/*
+
+<!-- ***************************
+  Generic Block Element
+*************************** -->
+
+<div class="block xHELPER-CLASSx">
+  <div class="block-Body"></div>
+</div>
+
+
+<div class="block xHELPER-CLASSx">
+  <header class="block-Header"></header> 
+  <div class="block-Body"></div>
+  <footer class="block-Footer"></footer>
+</div>
+
+
+<div class="block xHELPER-CLASSx">
+  <div class="block-Body"></div>
+  <footer class="block-Footer"></footer>
+</div>
+
+
+*/
 .btn, .btn-Small, .btn-Large, .btn-XLarge, .btn-Radio {
   background: #333333;
   border-radius: 4px;

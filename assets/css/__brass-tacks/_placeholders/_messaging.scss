@@ -10,9 +10,6 @@
   position:relative;
   text-shadow:0 1px 1px rgba(255,255,255,.6);
 
-  p{
-    margin-bottom:0;
-  }
 }
 
 %message-Holder{
@@ -20,6 +17,10 @@
   position:fixed;
   top:0;
   width:$per-Unit*8; // 80%
+
+  p{
+    margin-bottom:0;
+  }
 }
 
 %close-Message{

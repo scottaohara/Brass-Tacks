@@ -16,12 +16,12 @@ code, kbd, samp{
 pre{
   overflow:auto; 
   white-space:pre-wrap;
-  
-  mark{   // test out styling for this
-    background:#eee;
-    border-bottom:1px solid #ddd;
-    color:#333;
-  }
+}
+
+mark{
+  background:#eee;
+  border-bottom:1px solid #ddd;
+  color:$c-Dark;
 }
 
 p, li{
@@ -32,30 +32,3 @@ p, li{
     padding:$px-Unit;
   }
 }
-
-.code-Line{
-  display:block;
-}
-
-.indent-1{
-  text-indent:1em;
-}
-.indent-2{
-  text-indent:2em;
-}
-.indent-3{
-  text-indent:3em;
-}
-
-// Coloring for code types
-.comment{color:#99a}
-
-// HTML
-
-// CSS
-.important{color:#f00}
-.selector{color:#111}
-.value{color:#709c34}
-.rule{color:#2e9fe8}
-.var{color:#9952b2}
-.at{color:#c3793e}

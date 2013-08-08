@@ -23,7 +23,9 @@ input[type='submit']{
 }
 
 // Makes it look like a normal text input, only with a (x) when text has been entered
-input[type='search']{-webkit-appearance:textfield} 
+input[type='search']{
+  -webkit-appearance:textfield;
+} 
 
 // Disabled input styling
 input[disabled]{
@@ -32,10 +34,14 @@ input[disabled]{
 }
 
 // Read Only input styling
-input[readonly]{background:$c-Disabled}
+input[readonly]{
+  background:$c-Disabled;
+}
 
 // Removes extra inner padding for webkit
-input[type='search']::-webkit-search-decoration{-webkit-appearance:none} 
+input[type='search']::-webkit-search-decoration{
+  -webkit-appearance:none;
+} 
 
 // Removes inner padding & border in Firefox 4+
 button::-moz-focus-inner, input::-moz-focus-inner{

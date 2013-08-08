@@ -1,0 +1,46 @@
+// ----------------------------------------------------------------
+//    Responsive Row w/fixed width column 
+//    -- use in combo with .row
+// ----------------------------------------------------------------
+@mixin row-fixed-Left($col-Size){
+  padding-left:$col-Size;
+  @media (max-device-width:480px), screen and (max-width:800px){
+    padding:0;
+  }
+  .f-Col{
+    float:left;
+    margin-left:-$col-Size + 40px;
+    width:$col-Size - 40px;
+
+    @media (max-device-width:480px), screen and (max-width:800px){
+      float:none;
+      margin:0;
+      padding-left:40px;
+      width:auto;
+    }
+  }
+}
+
+@mixin row-fixed-Right($col-Size){
+  padding-right:$col-Size;
+  
+  @media (max-device-width:480px), screen and (max-width:800px){
+    padding:0;
+  }
+
+  .f-Col{
+    float:right;
+    margin-right:-$col-Size;
+    width:$col-Size - 40px;
+
+    @media (max-device-width:480px), screen and (max-width:800px){
+      float:none;
+      margin:0;
+      padding-left:40px;
+      width:auto;
+    }
+  }
+}
+
+
+

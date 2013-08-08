@@ -3,7 +3,7 @@
 // ----------------------------------------------------------------
 
 // Resets main table tags
-caption, table, td, th, tr{@extend %reset}
+caption, table, tr{@extend %reset}
 
 
 // Removes most of the table spacing issues
@@ -13,9 +13,10 @@ table{
   border-spacing:0;
   font-size:$base;
   width:100%; // make tables always take up the entire width of their containing parent.
+}
 
-  th, td{
-    padding:$px-Unit $px-Unit*2;
-    text-align:left;
-  }
+th, td{
+  @extend %reset;
+  padding:$px-Unit $px-Unit*2;
+  text-align:left;
 }

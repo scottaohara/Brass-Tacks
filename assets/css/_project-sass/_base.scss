@@ -22,6 +22,10 @@ body{
   & > :last-child{margin-bottom:0;}	// kill any extra margin on the last element in the .content div
 }
 
+// Tool tip example
+[data-tooltip]{
+  @extend %tool-Tip;
+}
 
 // ----------------------------------------------------------------
 //		Project Specific Link Stylings

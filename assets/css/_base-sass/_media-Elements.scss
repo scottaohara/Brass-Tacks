@@ -4,11 +4,8 @@
 
 // Reset styling for media elements &
 // make sure they don't extend beyond parent containers
-audio,
-embed,
-img,
-object,
-video{
+audio, embed,
+img, object, video{
   @extend %reset;
   max-width:100%;  
 }
@@ -19,10 +16,8 @@ img{
   font-style:italic;
 }
 
-// Give HTML5 elements inline-block display, which is also not defined in ie8/9
-audio,
-canvas,
-video{
+// Give HTML5 elements inline-block display, which is not defined in ie8/9
+audio, canvas, video{
   display:inline-block;
 }
 

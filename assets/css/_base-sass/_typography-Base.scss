@@ -2,10 +2,13 @@
 //		Basic Styling: Typography Elements
 // ----------------------------------------------------------------
 
-// Default body text styling
-body{font-size:100%; line-height:1.5}
+// Sets the base font-size and line height, extends back into the base.scss file.
+%font-Size-LH{
+  font-size:100%;
+  line-height:1.5;
+}
 
-blockquote, h1, h2, h3, h4, h5, h6, p, pre{@extend %reset;}
+blockquote, h1, h2, h3, h4, h5, h6, p, pre{@extend %mp-Reset;}
 
 // Extra Large Fonts
 .giga                     {@extend %giga;}
@@ -34,7 +37,7 @@ blockquote, h1, h2, h3, h4, h5, h6, li, p, small{
 // but make it an inline element again inside of these elements
 small{
   @extend %tiny;
-  display:block;
+  @extend %d-Block;
 }
 
 p, li{
