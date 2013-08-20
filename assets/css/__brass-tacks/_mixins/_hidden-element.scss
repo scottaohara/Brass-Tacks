@@ -1,13 +1,6 @@
 // ----------------------------------------------------------------
 //  Hidden Elements Mixins
 // ----------------------------------------------------------------
-// Hide text that you don't want visible
-// like on submit buttons that use an icon instead of text
-@mixin hide-text{
-  color:transparent;
-  font:0/0 a;
-  text-shadow:none;
-}
 
 // Truncate Text
 @mixin truncate($truncation-boundary){

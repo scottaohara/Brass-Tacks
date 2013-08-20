@@ -1,12 +1,12 @@
 // ----------------------------------------------------------------
 //		Floats & Clearing
 // ----------------------------------------------------------------
-.float-Left	  {float:left}
+.float-Left   {float:left}
 .float-Right  {float:right}
-.float-None	  {float:none}
-.clear		    {clear:both}
-.clearfix	    {@extend %clearfix}
-.overflow	    {overflow:hidden}
+.float-None   {float:none}
+.clear        {clear:both}
+.clearfix     {@extend %clearfix}
+.overflow     {overflow:hidden}
 
 
 // ----------------------------------------------------------------
@@ -24,15 +24,15 @@
     @extend %d-Block;
   }
 }
-	
+
 // Hides from screenreaders and browsers
 .hidden{
-	@extend %hidden;
+@extend %hidden;
 }
 
 // Hide from browsers but not from screen readers
 .invis{
-	@extend %invis;
+  @extend %invis;
 }
 
 // ----------------------------------------------------------------
@@ -40,76 +40,78 @@
 // ----------------------------------------------------------------
 // Profile Picture
 .pic, %pic{
-	border:1px solid $c-White;
-	@include border-radius($px-Unit);
-	@include box-shadow($bs-4);
-	display:inline-block;
-	overflow:hidden;
-	width:90px;
-	
-	img{@extend %d-Block;}
+  border:1px solid $c-White;
+  @include border-radius($px-Unit);
+  @include box-shadow($bs-4);
+  display:inline-block;
+  overflow:hidden;
+  width:90px;
+
+  img{
+    @extend %d-Block;
+  }
 }
 
 // Make picture into a circle
 .pic-Rounded{
-	@extend %pic;
-	@include border-radius($circle);
+  @extend %pic;
+  @include border-radius($circle);
 }
-/* 
-	Code Example
-	--------------------------
-	<a href="#" title="TITLE" class="pic-Rounded">
-		<img src="assets/img/little-V.jpg" alt="" />
-	</a>
-*/
+// 
+//  Code Example
+//  --------------------------
+//  <a href="#" title="TITLE" class="pic-Rounded">
+//  <img src="assets/img/little-V.jpg" alt="" />
+//  </a>
+//
 
 // Media Item
 .media, %media{
-	margin-bottom:$px-Unit*4;
-	@extend %clearfix;
-	position:relative;
-	z-index:2;
-	.media-Text >:last-child{
-	  margin-bottom:0;
-	}
-	.media-Object{
-	  float:left;
-	  margin:0 $px-Unit*4 $px-Unit*2 0;
-	  max-width:30%;
-	}
+  margin-bottom:$px-Unit*4;
+  @extend %clearfix;
+  position:relative;
+  z-index:2;
+  .media-Text >:last-child{
+    margin-bottom:0;
+  }
+  .media-Object{
+    float:left;
+    margin:0 $px-Unit*4 $px-Unit*2 0;
+    max-width:30%;
+  }
 }
 
 // Have media element appear on the right hand side
 .media-Reverse, %media-Reverse{
-	@extend %media;
-	.media-Object{
-	  float:right;
-	  margin:0 0 $px-Unit*2 $px-Unit*4;
-	  max-width:30%;
+  @extend %media;
+  .media-Object{
+    float:right;
+    margin:0 0 $px-Unit*2 $px-Unit*4;
+    max-width:30%;
   }
 }
 
 .media-No-Wrap{
-	@extend %media;
-	padding-left:100px;
-	.media-Text{
-	  float:left;
-	  width:100%;
-	}
-	.media-Object{
-  	margin-left:-100px;
-  	margin-right:0;
-	}
+  @extend %media;
+  padding-left:100px;
+  .media-Text{
+    float:left;
+    width:100%;
+  }
+  .media-Object{
+    margin-left:-100px;
+    margin-right:0;
+  }
 }
 
 .media-No-Wrap-Reverse{
-	@extend %media-Reverse;
-	padding-right:100px;
-	
-	.media-Object{
-  	margin-right:-100px;
-  	margin-left:0;
-	}
+  @extend %media-Reverse;
+  padding-right:100px;
+
+  .media-Object{
+    margin-right:-100px;
+    margin-left:0;
+  }
 }
 /* 
 	Code Example

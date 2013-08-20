@@ -10,8 +10,8 @@
 
 <h3>Standard Tables</h3>
 <div class="row">
-	<div class="col col-60">
-		<table>
+  <div class="col col-60">
+    <table>
       <thead>
         <tr>
           <th>Item 1</th>
@@ -50,26 +50,26 @@
       </tbody>
     </table>
   </div> <!-- end .col-60 -->
-	
-	<div class="col col-40">
-		<p>
-			Basic, unclassed styling for a table.  
-		</p>
-		<p>
-		  Extends the %margin-bottom placeholder as well as collapses borders, sets border spacing to zero.
-		</p>
-		<p>
-		  The base font-size is applied to the entire table, as well as a width of 100% to force tables
-		  to fill the width of their container.  Text is set to align left.
-		</p>
-	</div>
+
+  <div class="col col-40">
+    <p>
+      Basic, unclassed styling for a table.  
+    </p>
+    <p>
+      Extends the %margin-bottom placeholder as well as collapses borders, sets border spacing to zero.
+    </p>
+    <p>
+      The base font-size is applied to the entire table, as well as a width of 100% to force tables
+      to fill the width of their container.  Text is set to align left.
+    </p>
+  </div>
 </div> <!-- end .row -->
 
 <hr />
 
 <h3>Standard Helper Classes</h3>
 <div class="row">
-	<div class="col col-60">
+  <div class="col col-60">
     <table>
       <caption>Table Caption</caption>
       <thead class="table-Header">
@@ -109,27 +109,27 @@
         </tr>
       </tbody>
     </table>
-	</div> <!-- end .col-60 -->
-	
-	<div class="col col-40">
-		<p>
-			Basic table with a caption element.
-		</p>
-		<p>
-		  Classes .table-Header, .table-Body and .table-Footer are applied to their respective elements.
-		</p>
-		<p>
-		  .table-Body does not start with any preset styling.  .table-Header and Footer each have background
-		  colors applied that can be changed in the Project Variables file.
-		</p>
-	</div>
+  </div> <!-- end .col-60 -->
+
+  <div class="col col-40">
+    <p>
+      Basic table with a caption element.
+    </p>
+    <p>
+      Classes .table-Header, .table-Body and .table-Footer are applied to their respective elements.
+    </p>
+    <p>
+      .table-Body does not start with any preset styling.  .table-Header and Footer each have background
+      colors applied that can be changed in the Project Variables file.
+    </p>
+  </div>
 </div> <!-- end .row -->
 
 <hr />
 
 <h3>Table Bordered</h3>
 <div class="row">
-	<div class="col col-60">
+  <div class="col col-60">
     <table class="table-Border">
       <thead class="table-Header">
         <tr>
@@ -173,25 +173,25 @@
         </tr>
       </tbody>
     </table>
-	</div> <!-- end .col-60 -->
-	
-	<div class="col col-40">
-		<p>
-			.table-Border adds simple borders to the various table elements, so that there are
-			no double borders on any cell.
-		</p>
-		<p>
-		  It utilizes various table variables found in the Project Variables file.
-		</p>
-	</div>
+  </div> <!-- end .col-60 -->
+
+  <div class="col col-40">
+    <p>
+      .table-Border adds simple borders to the various table elements, so that there are
+      no double borders on any cell.
+    </p>
+    <p>
+      It utilizes various table variables found in the Project Variables file.
+    </p>
+  </div>
 </div> <!-- end .row -->
 
 <hr />
 
 <h3>Table Pin-Striped</h3>
 <div class="row">
-	<div class="col col-60">
-		<table class="table-Stripe">
+  <div class="col col-60">
+    <table class="table-Stripe">
       <thead class="table-Header">
         <tr>
           <th>TH Col Start</th>
@@ -234,28 +234,28 @@
         </tr>
       </tbody>
     </table>
-	</div> <!-- end .col-60 -->
-	
-	<div class="col col-40">
-		<p>
-			.table-Stripe adds zebra-striping using the :nth-child() selector.  
-		</p>
-		<p>
+  </div> <!-- end .col-60 -->
+
+  <div class="col col-40">
+    <p>
+      .table-Stripe adds zebra-striping using the :nth-child() selector.  
+    </p>
+    <p>
       The stripe color is set via the Project Vars file.
     </p>
     <p>
       If support for ie8 is required, the class of .table-Row-Stripe can be used instead.
     </p>
-	</div>
+  </div>
 </div> <!-- end .row -->
 
 <hr />
 
 <h3>Small Screen Table</h3>
 <div class="row">
-	<div class="col col-60">
-  	<div class="table-Mobile">
-  	  <table class="table-Stripe">
+  <div class="col col-60">
+    <div class="table-Mobile">
+      <table class="table-Stripe">
         <thead class="table-Header">
           <tr>
             <th>TH Col Start</th>
@@ -298,26 +298,29 @@
           </tr>
         </tbody>
       </table>
-  	</div>
-	</div> <!-- end .col-60 -->
-	
-	<div class="col col-40">
-		<p>
-		  A simple means of viewing tabular data on a small screen.
-		</p>
-		<p>
-		  Enclose a table in a parent element with a class of <code>.table-Mobile</code>
-		  to give the table a horizontal scroll when the screen becomes too small to
-		  view all of it's content.
-		</p>
-		<code class="tiny">
-		  &lt;div class="table-Mobile"><br />
-		  &nbsp;&nbsp;&lt;table>...&lt;/table><br />
-		  &lt;/div>
-		</code>
-	</div>
-</div> <!-- end .row -->
-	
+    </div>
+  </div> <!-- end .col-60 -->
 
+  <div class="col col-40">
+    <p>
+      A simple means of viewing tabular data on a small screen.
+    </p>
+    <p>
+      Enclose a table in a parent element with a class of <code>.table-Mobile</code>
+      to give the table a horizontal scroll when the screen becomes too small to
+      view all of it's content.
+    </p>
+    <code class="tiny">
+      &lt;div class="table-Mobile"><br />
+      &nbsp;&nbsp;&lt;table>...&lt;/table><br />
+      &lt;/div>
+    </code>
+
+    <p>
+      For another take on small screen tables, check out the 
+      <a href="https://github.com/bleachedgraphics/responsive-table-reborn" title="View on GitHub">revised Zurb's responsive table</a>.
+    </p>
+  </div>
+</div> <!-- end .row -->
 </section> <!-- end .content -->
 {% endblock %}

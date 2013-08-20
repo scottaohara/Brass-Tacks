@@ -8,7 +8,9 @@
   line-height:1.5;
 }
 
-blockquote, h1, h2, h3, h4, h5, h6, p, pre{@extend %mp-Reset;}
+blockquote, h1, h2, h3, h4, h5, h6, p, pre{
+  @extend %mp-Reset;
+}
 
 // Extra Large Fonts
 .giga                     {@extend %giga;}
@@ -30,7 +32,7 @@ p, li, li p, li a, .base  {@extend %base;}
 
 // Consistent margin-bottom for block text elements
 blockquote, h1, h2, h3, h4, h5, h6, li, p, small{
-  @extend %margin-bottom;
+  @extend %margin-Bottom;
 }
 
 // Give small some weight when used outside of <p> or <li>, 

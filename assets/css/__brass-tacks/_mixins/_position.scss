@@ -2,20 +2,20 @@
 //  Fixed Position Elements
 // ----------------------------------------------------------------
 
-@mixin position($tb, $tb-Unit, $lr, $lr-Unit, $position){
-  @if $tb == bottom{
+@mixin position($t-or-b, $tb-Unit, $l-or-r, $lr-Unit, $position){
+  @if $t-or-b == bottom{
     bottom:$tb-Unit;
   }
-  @else if $tb == top{
+  @else if $t-or-b == top{
     top:$tb-Unit;
   }
 
   position:$position;
 
-  @if $lr == left{
+  @if $l-or-r == left{
     left:$lr-Unit;
   }
-  @else if $lr == right{
+  @else if $l-or-r == right{
     right:$lr-Unit;
   }
 }

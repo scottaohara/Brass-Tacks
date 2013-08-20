@@ -5,13 +5,18 @@
 // Standardize form elements for all browsers and add in additional base styling
 button, fieldset, form, input, select, textarea{
   @extend %reset;
-  @extend %margin-bottom;
+  @extend %margin-Bottom;
   @extend %base;
   line-height:normal;
   text-transform:none;
 }
 
-legend{@extend %reset}
+legend{
+  @extend %reset;
+  @extend %eps;
+  margin-left:-$px-Unit;
+  padding:0 $px-Unit;
+}
 
 // Makes buttons look like buttons with appropriate cursors
 button,
@@ -79,11 +84,4 @@ label{
   &[for]{
     cursor:pointer;
   }
-}
-
-// Legend
-legend{
-  @extend %eps;
-  margin-left:-$px-Unit;
-  padding:0 $px-Unit;
 }

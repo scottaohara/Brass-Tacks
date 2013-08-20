@@ -34,12 +34,11 @@
   }
 }
 
-
 // ----------------------------------------------------------------
 //  Consistent Margin Bottom
 // ----------------------------------------------------------------
 
-%margin-bottom{
+%margin-Bottom{
   margin-bottom:$px-Unit*2;
 }
 
@@ -67,4 +66,12 @@
   overflow:hidden!important;
   position:absolute!important;
   width:1px!important;
+}
+
+// Hide text that you don't want visible
+// like on submit buttons that use an icon instead of text
+%hide-text{
+  color:transparent;
+  font:0/0 a;
+  text-shadow:none;
 }

@@ -1,7 +1,7 @@
 // ----------------------------------------------------------------
 //		Basic Styling for Buttons
 // ----------------------------------------------------------------
-.btn, %btn{
+.btn{
   background:$c-Dark; 
   @include border-radius($px-Unit);
   color:$c-Lighter;
@@ -14,7 +14,7 @@
   line-height:1;
   padding:$px-Unit*2 $px-Unit*3; 
   text-align:center;
-  text-decoration:none!important; // set to !important so that if used inside of a .nav, no decoration doesn't get overridden
+  text-decoration:none!important; // never have an underline on button text.
   @include vendor(transition, all .25s ease-in-out 0s);
   -webkit-appearance:none;
     
@@ -38,7 +38,7 @@
 // Sizing
 // ----------------------------------------------------------------
 .btn-Small{
-	@extend %btn; 
+	@extend .btn; 
 	font-size:$tiny; 
 	padding:$px-Unit $px-Unit*2;
 	
@@ -48,7 +48,7 @@
 }
 
 .btn-Large{
-	@extend %btn; 
+	@extend .btn; 
 	font-size:$gamma; 
 	padding:$px-Unit*3;
 	
@@ -58,7 +58,7 @@
 }
 
 .btn-XLarge{
-	@extend %btn; 
+	@extend .btn; 
 	font-size:$beta; 
 	padding:$px-Unit*3 $px-Unit*4;
 	
@@ -87,10 +87,12 @@
   &:hover{background:darken($c-Btn-3, 15%);}
 }
 
-.btn-Neg, 
-.btn-Neg:hover{
+.btn-Neg{
   background:$c-Btn-Neg; 
   color:$c-Lighter;
+  &:hover{
+    @extend .btn-Neg;
+  }
 }
 
 .btn-Disable{
@@ -128,5 +130,3 @@
 .btn-Right{
   @include border-radius(0 $px-Unit*3 $px-Unit*3 0);
 }
-
-

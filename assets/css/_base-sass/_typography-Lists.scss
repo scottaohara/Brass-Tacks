@@ -22,10 +22,20 @@ ol, ul{
 }
 
 // Definition Lists
-dt{
-  font-weight:bold;
+dl{
+  @extend %reset;
+  margin:0 0 $px-Unit*2;
+
+  > dd:last-child{
+   margin-bottom:0; // Kill double bottom margin
+  } 
 }
-dd{
-  margin:0 0 $px-Unit*2; 
-  padding-left:$px-Unit*4
-}
+
+  dt{
+    font-weight:bold;
+  }
+
+  dd{
+    margin:0 0 $px-Unit*2; 
+    padding-left:$px-Unit*4
+  }

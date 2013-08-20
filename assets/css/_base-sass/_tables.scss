@@ -3,12 +3,14 @@
 // ----------------------------------------------------------------
 
 // Resets main table tags
-caption, table, tr{@extend %reset}
+caption, table, tr{
+  @extend %reset;
+}
 
 
 // Removes most of the table spacing issues
 table{
-  @extend %margin-bottom;
+  @extend %margin-Bottom;
   border-collapse:collapse;
   border-spacing:0;
   font-size:$base;

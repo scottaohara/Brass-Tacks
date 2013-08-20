@@ -1,262 +1,143 @@
-{% block title %}Basic Text Elements{% endblock %}
+{% block title %}Text Elements{% endblock %}
 
 {% block content %} 
 <section class="content">
+  <h2>Basic Text Elements &amp; Font Sizes</h2>
+  <p>
+    Font sizes are all calculated in ems.  1em = 16px or font-size:100% which is browser defaults.
+  </p>
+  <p>
+    With no classes applied, most text elements will default to the 1em standards, except for:
+    &lt;h1-6>, &lt;blockquote>, &lt;small>, &lt;sub> and &lt;sup>.
+  </p>
 
-<h2>Basic Text Elements &amp; Font Sizes</h2>
-<p>
-	Font sizes are all calculated in ems.  1em = 16px or font-size:100% which is browser defaults.
-</p>
-<p>
-  With no classes applied, most text elements will default to the 1em standards, except for:
-  &lt;h1-6>, &lt;blockquote>, &lt;small>, &lt;sub> and &lt;sup>.
-</p>
+  <hr />
 
-<hr />
+  <h3>Headings &amp; Larger Text Classes</h3>
+  <div class="row">
+    <div class="col col-50">
+      <h1>H1 &amp; .alpha</h1>
+      <code class="tiny">
+        &lt;h1>...&lt;/h1> 
+        <br /> 
+        <strong>or</strong> &lt;p class="alpha">...&lt;/p>
+      </code>
+      <h2>H2 &amp; .beta</h2>
+      <code class="tiny">
+        &lt;h2>...&lt;/h2> 
+        <br /> 
+        <strong>or</strong> &lt;p class="beta">...&lt;/p>
+      </code>
+      <h3>H3 &amp; .gamma</h3>
+      <code class="tiny">
+        &lt;h3>...&lt;/h3> 
+        <br /> 
+        <strong>or</strong> &lt;p class="gamma">...&lt;/p>
+      </code>
+      <h4>H4 &amp; .delta</h4>
+      <code class="tiny">
+        &lt;h4>...&lt;/h4> 
+        <br /> 
+        <strong>or</strong> &lt;p class="delta">...&lt;/p>
+      </code>
+      <h5>H5 &amp; .eps</h5>
+      <code class="tiny">
+        &lt;h5>...&lt;/h5> 
+        <br /> 
+        <strong>or</strong> &lt;p class="eps">...&lt;/p>
+      </code>
+      <h6>H6 &amp; .zeta</h6>
+      <code class="tiny">
+        &lt;h6>...&lt;/h6> 
+        <br /> 
+        <strong>or</strong> &lt;p class="zeta">...&lt;/p>
+      </code>
+    </div> <!-- end .col-50 -->
+    <div class="col col-50">
+      <p class="">
+        Below are large display fonts for use in headers and on landing pages for giant call-to-action text.
+      </p>
 
-<div class="row">
+      <h1 class="giga">.giga</h1>
+        <code class="tiny">
+          &lt;h1 class="giga">.giga&lt;/h1>
+        </code>
+      <h2 class="ultra">.ultra</h2>
+        <code class="tiny">
+          &lt;span class="ultra">.ultra&lt;/span>
+        </code>
+      <h3 class="mega">.mega</h3>
+        <code class="tiny">
+          &lt;p class="mega">.mega&lt;/p>
+        </code>
+    </div> <!-- end .col-50 -->
+  </div> <!-- end .row -->
 
-	<div class="col col-33">
-	
-		<h1 class="giga">.giga</h1>
-  		<code class="tiny">
-  		  &lt;h1 class="giga">.giga&lt;/h1>
-  		</code>
-		<h2 class="ultra">.ultra</h2>
-		  <code class="tiny">
-  		  &lt;span class="ultra">.ultra&lt;/span>
-  		</code>
-		<h3 class="mega">.mega</h3>
-		  <code class="tiny">
-  		  &lt;p class="mega">.mega&lt;/p>
-  		</code>
-  		
-		<p class="tiny">
-		  These are large display fonts for use in headers and on landing pages for giant call-to-action text.
-		</p>
-	</div> <!-- end .col-33 -->
-	
-  <div class="col col-33">
-		<h1><a href="#!" title="a link example">H1</a> &amp; .alpha</h1>
-		<code class="tiny">
-		  &lt;h1 class="alpha">.alpha&lt;/h1>
-		</code>
-		<h2><a href="#!" title="a link example">H2</a> &amp; .beta</h2>
-		<code class="tiny">
-		  &lt;h2>.beta&lt;/h2>
-		</code>
-		<h3><a href="#!" title="a link example">H3</a> &amp; .gamma</h3>
-		<code class="tiny">
-		  &lt;h3 class="gamma">.gamma&lt;/h3>
-		</code>
-		<h4><a href="#!" title="a link example">H4</a> &amp; .delta</h4>
-		<code class="tiny">
-		  &lt;h4>.delta&lt;/h4>
-		</code>
-		<h5><a href="#!" title="a link example">H5</a> &amp; .eps</h5>
-		<code class="tiny">
-		  &lt;h5> class="epS">.eps&lt;/h5>
-		</code>
-		<h6><a href="#!" title="a link example">H6</a> &amp; .zeta</h6>
-		<code class="tiny">
-		  &lt;h6>.zeta&lt;/h6>
-		</code>
-  </div> <!-- end .col-33 -->
-  
-  <div class="col col-33">
-  
-		<p>
-		  This is a basic paragraph style with a 
-		  <a href="#!" title="a link example">link</a> and some
-		  <small>small text</small>.
-		</p>
-		<code class="tiny">
-		  &lt;p>Normal paragraph&lt;/p><br />
-		  &nbsp;&nbsp;or<br />
-		  &lt;h3>H3 at .base size.&lt;/h3>
-		</code>
-		
-		<small>This is tiny text.</small>
-		<code class="tiny">
-		  &lt;small>This is tiny text.&lt;/small><br />
-		  &nbsp;&nbsp;or<br />
-		  &lt;h3 class="tiny">This is tiny too!&lt;/h3>
-		</code>
-		
-		<p class="mini">This is mini text.</p>
-		<code class="tiny">
-		  &lt;p class="mini">This is mini text.&lt;/p>
-		</code>
-		
-		
-		<p class="tiny">
-		  Any of these classes can be applied to any HTML element to alter it's font-size.
-		</p>
-		<p class="tiny">
-		  Very useful for being mindful of SEO, but still wanting to play with text sizes.
-		</p>
-	</div> <!-- end .col-33 -->
-	
+  <hr />
 
-</div> <!-- end .row -->
+  <h3>Paragraphs &amp; Anchors</h3>
+  <div class="row">
+    <div class="col col-50">
+      <p>
+        This is a basic paragraph style with a 
+        <a href="#!" title="a link example">link</a> and some
+        <small>small text</small>.
+      </p>
+      <code class="tiny">
+        &lt;p>...&lt;/p> 
+        <br /> 
+        <strong>or</strong>
+        &lt;h2 class="base">...&lt;/h2>
+      </code>
 
-<hr />
+      <small>This is tiny text.</small>
+      <code class="tiny">
+        &lt;small>...&lt;/small> 
+        <br /> 
+        <strong>or</strong>
+        &lt;h3 class="tiny">...&lt;/h3>
+      </code>
 
-<div class="row">
-      <div class="col col-50">
-      
-      <h3>Standard Text Elements</h3>
-      
-      <div class="row">
-      <div class="col col-50">
-        <dl>
-          <dt><em>Emphasized Text</em></dt>
-          <dd>- em element</dd>
-          
-          <dt><strong>Important Text</strong></dt>
-          <dd>- strong element</dd>
-          
-          <dt><dfn title="This has a title attribute">Definition Term</dfn></dt>
-          <dd>- dfn element</dd>
-          
-          <dt><mark>Marked Text</mark></dt>
-          <dd>- mark element</dd>
-          
-          <dt><var>Variable</var></dt>
-          <dd>- var element</dd>
-          
-          <dt><abbr title="Abbreviations">Abbr</abbr></dt>
-          <dd>- abbr element</dd>
-          
-          <dt><a href="#!" title="an anchor tag that goes nowhere">Hyperlink</a></dt>
-          <dd>- a element</dd>
-          
-          <dt><b>Bolded Text</b></dt>
-          <dd>- b element</dd>
-          
-          <dt><time datetime="1605-11-05">5<sup>th</sup> of November</time></dt>
-          <dd>- time element</dd>
-          
-          <dt><ins>ins element</ins></dt>
-          <dd>- ins element</dd>
-        </dl>
-      </div>
-      
-			<div class="col col-50">       
-        <dl>
-          <dt><ins>Insert</ins></dt>
-          <dd>- ins element</dd>
-          
-          <dt><u>Underline</u></dt>
-          <dd>- u element</dd>
-          
-          <dt>Normal <sub>subscript</sub></dt>
-          <dd>- sub element</dd>
-          
-          <dt>Normal <sup>superscript</sup></dt>
-          <dd>- sup element</dd>
-          
-          <dt><q>Quote</q></dt>
-          <dd>- q element</dd>
-          
-          <dt><cite>Citation</cite></dt>
-          <dd>- cite element</dd>
-          
-          <dt><del>Text to be deleted</del></dt>
-          <dd>- del element</dd>
-          
-          <dt><i>Text in an alternate voice</i></dt>
-          <dd>- i element</dd>
-          
-          <dt><var>var element</var></dt>
-          <dd>- var element</dd>
+      <p class="mini">This is mini text.</p>
+      <code class="tiny">
+        &lt;p class="mini">...&lt;/p>
+      </code>
 
-        </dl>
-      </div>
-      
-      </div>
-      </div>
-      
-      <div class="col col-50">
-        <h3>Blockquote</h3>
-        
-        <blockquote>
-          A call out quote of some sort
-        </blockquote>
-        
-        <h3>code</h3>
-        <code>Computer Code</code>
-        
-        <h3>samp</h3>
-        <samp>Sample Output</samp>
-        
-        <h3>kbd</h3>
-        <kbd>Keyboard Input</kbd>
-        
-        <h3>Address</h3>
-          <address>
-      		  <strong>Company Name, Inc.</strong><br>
-      		  123 Fake Street, Suite 999<br>
-      		  Somewhere, NY 10019<br>
-      		  <abbr title="Phone">P:</abbr> 487.487.4874
-          </address>
-      </div>
-</div> <!-- end .row -->
+      <p class="tiny">
+        Any of these classes can be applied to any HTML element to alter it's font-size.
+      </p>
+      <p class="tiny">
+        Very useful for being mindful of SEO, but still wanting to play with text sizes.
+      </p>
+    </div> <!-- end .col-50 -->
+    <div class="col col-50">
+      <p>A <a href="#!" title="an anchor tag that goes nowhere">hyperlink</a> inside a paragraph.</p>
+      <code class="tiny">&lt;p>... &lt;a href="#!" title="...">...&lt;/a> ...&lt;/p></code>
 
-<!-- Code of above examples -->
-<div class="row show-Code">
-  <div class="col col-33">
-    <code class="tiny">
-      &lt;em>Emphasized Text&lt;/em><br />
-      &lt;strong>Important Text&lt;/strong><br />
-      &lt;dfn title="title attr">Definition Term&lt;/dfn><br />
-      &lt;mark>Marked Text&lt;/mark><br />
-      &lt;var>Variable&lt;/var><br />
-      &lt;abbr title="title attr">Abbr&lt;/abbr><br />
-      &lt;a href="#!" title="title attr">Hyperlink&lt;/a><br />
-      &lt;b>Bolded Text&lt;/b>
-    </code>
+      <a href="#!" title="an anchor tag that goes nowhere">Solo Hyperlink</a>
+      <code class="tiny">&lt;a href="#!" title="...">...&lt;/a></code>
+
+      <h3><a href="#!" title="an anchor tag that goes nowhere">Hyperlink in H3</a></h3>
+      <code class="tiny">&lt;h3>&lt;a href="#!" title="...">...&lt;/a>&lt;/h3></code>
+
+      <a href="#!" title="an anchor tag that goes nowhere"><h5>Hyperlink Around H5</h5></a>
+      <code class="tiny">&lt;a href="#!" title="...">&lt;h5>...&lt;/h5>&lt;/a></code>
+    </div> <!-- end .col-50 -->
   </div>
-  
-  <div class="col col-33">
-    <code class="tiny">
-      &lt;ins>Insert</ins>&lt;/dt><br />
-      &lt;u>Underline&lt;/u><br />
-      &lt;sub>subscript&lt;/sub><br />
-      &lt;sup>superscript&lt;/sup><br />
-      &lt;q>Quote&lt;/q><br />
-      &lt;cite>Citation&lt;/cite><br />
-      &lt;del>Text to be deleted&lt;/del><br />
-      &lt;i>Text in an alternate voice&lt;/i>
-    </code>
-  </div>
-  
-  <div class="col col-33">
-    <code class="tiny">
-      &lt;blockquote>A call out quote of some sort&lt;/blockquote><br />
-      &lt;code>Computer Code&lt;/code><br />
-      &lt;samp>Sample Output&lt;/samp><br />
-      &lt;kbd>Keyboard Input&lt;/kbd><br />
-      &lt;address>Address: somewhere, world&lt;/address>
-    </code>
-  </div>
-</div> <!-- end .row.show-Code -->
 
- <hr />
+  <hr />
 
- <h2>Lists</h2>
-  
+ <h3>Lists</h3>
   <div class="row">
     <div class="col col-33">
       <h3>Ordered List</h3>
-  
       <ol>
-        <li>list item 1</li>
+        <li>list item 1
           <ol>
-            <li>list item 2</li>
-                <ol>
-                    <li>list item 3</li>
-                </ol>
+            <li>list item 2
+              <ol>
+                <li>list item 3</li>
+              </ol>
             </li>
             <li>list item 2</li>
           </ol>
@@ -264,14 +145,12 @@
         <li>list item 1</li>
       </ol>
     </div>
-    
     <div class="col col-33">
       <h3>Unordered List</h3>
-      
       <ul>
-        <li>list item 1</li>
+        <li>list item 1
           <ul>
-            <li>list item 2</li>
+            <li>list item 2
                 <ul>
                   <li>list item 3</li>
                 </ul>
@@ -280,12 +159,10 @@
           </ul>
         </li>
         <li>list item 1</li>
-      </ul>    
+      </ul>
     </div>
-    
     <div class="col col-33">
       <h3>Description List</h3>
-      
       <dl>
         <dt>Description name</dt>
         <dd>Description value</dd>
@@ -293,122 +170,205 @@
         <dd>Description value</dd>
         <dt>Description name</dt>
         <dd>Description value</dd>
-      </dl>      
+      </dl>
     </div>
   </div>
 
-<div class="row show-Code">
+<div class="row">
   <div class="col col-33">
    <code class="tiny">
       &lt;ol><br />
-        &nbsp;&nbsp;&lt;li>list item 1&lt;/li><br />
+        &nbsp;&nbsp;&lt;li>...<br />
           &nbsp;&nbsp;&nbsp;&nbsp;&lt;ol><br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li>list item 2&lt;/li><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li>...<br />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ol><br />
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li>list item 3&lt;/li><br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li>...&lt;/li><br />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ol><br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li><br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li>list item 2&lt;/li><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li>...&lt;/li><br />
           &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ol><br />
         &nbsp;&nbsp;&lt;/li><br />
-        &nbsp;&nbsp;&lt;li>list item 1&lt;/li><br />
+        &nbsp;&nbsp;&lt;li>...&lt;/li><br />
       &lt;/ol>
     </code>
   </div>
-  
   <div class="col col-33">
     <code class="tiny">
       &lt;ul><br />
-        &nbsp;&nbsp;&lt;li>list item 1&lt;/li><br />
+        &nbsp;&nbsp;&lt;li>...<br />
           &nbsp;&nbsp;&nbsp;&nbsp;&lt;ul><br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li>list item 2&lt;/li><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li>...<br />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul><br />
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li>list item 3&lt;/li><br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li>...&lt;/li><br />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul><br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li><br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li>list item 2&lt;/li><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li>...&lt;/li><br />
           &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul><br />
         &nbsp;&nbsp;&lt;/li><br />
-        &nbsp;&nbsp;&lt;li>list item 1&lt;/li><br />
+        &nbsp;&nbsp;&lt;li>...&lt;/li><br />
       &lt;/ul>
     </code>
   </div>
-  
   <div class="col col-33">
     <code class="tiny">
       &lt;dl><br />
-        &nbsp;&nbsp;&lt;dt>Description name&lt;/dt><br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;dd>Description value&lt;/dd><br />
-        &nbsp;&nbsp;&lt;dt>Description name&lt;/dt><br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;dd>Description value&lt;/dd><br />
-        &nbsp;&nbsp;&lt;dt>Description name&lt;/dt><br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;dd>Description value&lt;/dd><br />
+        &nbsp;&nbsp;&lt;dt>...&lt;/dt><br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;dd>...&lt;/dd><br />
+        &nbsp;&nbsp;&lt;dt>...&lt;/dt><br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;dd>...&lt;/dd><br />
+        &nbsp;&nbsp;&lt;dt>...&lt;/dt><br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;dd>...&lt;/dd><br />
       &lt;/dl> 
     </code>
   </div>
-</div> <!-- end .row.show-Code -->
-
-
-
-
-
-
+</div> <!-- end .row -->
 
 <hr />
 
-<h3>Text-level Base</h3>
+<h3>Decoratively Semantic Text Elements</h3>
+  <div class="row">
+    <div class="col col-33">
+      <dl>
+        <dt><abbr title="Abbreviations">Abbr</abbr></dt>
+        <dd><code class="tiny">&lt;abbr title="...">...&lt;/abbr></code></dd>
+
+        <dt><blockquote>Blockquote</blockquote></dt>
+        <dd><code class="tiny">&lt;blockquote>...&lt;/blockquote></code></dd>
+
+        <dt><b>Bolded Text</b></dt>
+        <dd><code class="tiny">&lt;b>...&lt;/b></code></dd>
+
+        <dt><cite>Citation</cite></dt>
+        <dd><code class="tiny">&lt;cite>...&lt;/cite></code></dd>
+
+        <dt>Code</dt>
+        <dd><code class="tiny">&lt;code>...&lt;/code></code></dd>
+
+        <dt><dfn title="This has a title attribute">Definition Term</dfn></dt>
+        <dd><code class="tiny">&lt;dfn title="title attr">...&lt;/dfn></code></dd>
+
+        <dt><del>Delete Element</del></dt>
+        <dd><code class="tiny">&lt;del>...&lt;/del></code></dd>
+      </dl>
+    </div>
+
+    <div class="col col-33">
+      <dl>
+        <dt><em>Emphasized Text</em></dt>
+        <dd><code class="tiny">&lt;em>...&lt;/em></code></dd>
+
+        <dt><strong>Important Text</strong></dt>
+        <dd><code class="tiny">&lt;strong>...&lt;/strong></code></dd>
+
+        <dt><ins>Insert</ins></dt>
+        <dd><code class="tiny">&lt;ins>...&lt;/ins>&lt;/dt></code></dd>
+
+        <dt><i>Text in an alternate voice</i></dt>
+        <dd><code class="tiny">&lt;i>...&lt;/i></code></dd>
+
+        <dt>Keyboard Input</dt>
+        <dd><code class="tiny">&lt;kbd>...&lt;/kbd></code></dd>
+
+        <dt><mark>Marked Text</mark></dt>
+        <dd><code class="tiny">&lt;mark>...&lt;/mark></code></dd>
+
+        <dt><pre>P R E F O R M A T T E D  T E X T</pre></dt>
+        <dd><code class="tiny">&lt;pre>...&lt;/pre></code></dd>
+      </dl>
+    </div>
+
+    <div class="col col-33">
+      <dl>
+        <dt><q>Quote</q></dt>
+        <dd><code class="tiny">&lt;q>...&lt;/q></code></dd>
+
+        <dt>Sample Output</dt>
+        <dd><code class="tiny">&lt;samp>...&lt;/samp></code></dd>
+
+        <dt><sub>sub</sub>script</dt>
+        <dd><code class="tiny">&lt;sub>...&lt;/sub></code></dd>
+
+        <dt><sup>super</sup>script</dt>
+        <dd><code class="tiny">&lt;sup>...&lt;/sup></code></dd>
+
+        <dt>Time</dt>
+        <dd><code class="tiny">&lt;time datetime="2013-12-08">...&lt;/time></code></dd>
+
+        <dt><u>Underline</u></dt>
+        <dd><code class="tiny">&lt;u>...&lt;/u></code></dd>
+
+        <dt><var>Variable</var></dt>
+        <dd><code class="tiny">&lt;var>...&lt;/var></code></dd>
+      </dl>
+    </div>
+  </div> <!-- end .row -->
+
+ <hr />
+
+<h3>Address &amp; Details</h3>
 <div class="row">
-	<div class="col col-60">
-		<ul class="kill-List">
-			<li>
-			  <h3>Details</h3>
-        <details open="open">
-            <summary>More info</summary>
-            <div>
-                <p>Additional information</p>
-                <ul>
-                    <li>Point 1</li>
-                    <li>Point 2</li>
-                </ul>
-            </div>
-        </details>
-        <details>
-            <summary>More info</summary>
-            <div>
-                <p>Additional information</p>
-                <ul>
-                    <li>Point 1</li>
-                    <li>Point 2</li>
-                </ul>
-            </div>
-        </details>
-			</li>
-			
-			<li>
-			<h3>Preformatted Text</h3>
+	<div class="col col-50">
+  
+    <h4>Details</h4>
+    <p class="tiny">
+      (The details element is not supported in all browsers. Until then, there will be no additional styling to this element, so as not to break &lt;details> in browsers that do support it.)
+    </p>
 
-<pre>  	
-  P R E F O R M A T T E D T E X T
-  ! " # $ % &amp; ' ( ) * + , - . /
-  0 1 2 3 4 5 6 7 8 9 : ; &lt; = &gt; ?
-  @ A B C D E F G H I J K L M N O
-  P Q R S T U V W X Y Z [ \ ] ^ _
-  ` a b c d e f g h i j k l m n o
-  p q r s t u v w x y z { | } ~ 
-</pre>
+    <details open="open" class="details">
+      <summary class="summary">
+        Summary Opened
+      </summary>
+      <div class="details-Info">
+        <p>Additional information</p>
+        <ul>
+          <li>Point 1</li>
+          <li>Point 2</li>
+        </ul>
+      </div>
+    </details>
+    <code class="tiny">
+      &lt;details open="open"><br />
+      &nbsp;&nbsp;&lt;summary>...&lt;/summary><br />
+      &nbsp;&nbsp;&lt;div class="details-Info">...&lt;/div><br />
+      &lt;/details>
+    </code>
 
-			</li>
-			
-		</ul>
-	</div> <!-- end .col-60 -->
+    <details class="details">
+      <summary class="summary">
+        Summary Not Opened
+      </summary>
+      <div class="details-Info">
+          <p>Additional information</p>
+          <ul>
+            <li>Point 1</li>
+            <li>Point 2</li>
+          </ul>
+      </div>
+    </details>
+    <code class="tiny">
+      &lt;details><br />
+      &nbsp;&nbsp;&lt;summary>...&lt;/summary><br />
+      &nbsp;&nbsp;&lt;div class="details-Info">...&lt;/div><br />
+      &lt;/details>
+    </code>
+	</div> <!-- end .col-50 -->
 	
-	<div class="col col-40">
+	<div class="col col-50">
+    <h4>Address</h4>
+      <address class="address">
+        <strong>Company Name, Inc.</strong><br />
+        123 Fake Street, Suite 999<br />
+        Somewhere, NY 10019<br />
+        <abbr title="Phone">P:</abbr> 487.487.4874
+      </address>
 
-			<p>
-				HTML Text elements.  This section is being redone.
-			</p>
+       <code class="tiny">
+        &lt;address><br />
+        &nbsp;&nbsp;...<br />
+        &lt;/address>
+      </code>
 
-	</div>
+	</div> <!-- end .col-50 -->
 </div> <!-- end .row -->
 
 

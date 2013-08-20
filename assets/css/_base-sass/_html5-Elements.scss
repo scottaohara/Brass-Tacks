@@ -12,3 +12,16 @@ footer, header, main, nav, section, summary{
 [hidden], template{
   @extend %d-None;
 }
+
+address, details{
+  @extend %margin-Bottom;
+}
+
+details{
+  summary{
+    @extend %margin-Bottom;
+    &:last-child{
+      margin-bottom:0;
+    }
+  }
+}

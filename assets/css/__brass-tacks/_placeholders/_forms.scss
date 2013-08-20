@@ -16,4 +16,16 @@
     border:1px solid lighten($c-Blue, 30%);
     @include box-shadow($bs-2);
   }
+
+  &:required{
+    color:$c-Red;
+  }
+
+  &:valid{
+    color:$c-Dark;
+  }
+
+  &:invalid{
+    color:$c-Red;
+  }
 }

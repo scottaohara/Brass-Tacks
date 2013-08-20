@@ -82,15 +82,15 @@ $px-Unit:  4px;   // base of 4px, 1/4 of 16px
 $em-Unit:  1em;   // translates to 16px based on 100% font-size
 $per-Unit: 10%;   // base of 10 for percentages
 
-$circle:   1000px;  // large number to make sure that just about anything
+$circle:   1100px;  // large number to make sure that just about anything
                     // will be able to be 'circled'
 
 
 // ----------------------------------------------------------------
 //		Media Query Break Points  // based on a 16px base font
 // ----------------------------------------------------------------
-$break-Mini:    30em;     // 480px at 16px base
-$break-Tiny:    31.25em;  // 500px at 16px base
+$break-Mini:    380px;    // 30em
+$break-Tiny:    500px;    // 31.25em
 $break-Small:   600px;    // 37.5em
 $break-Medium:  800px;    // 50em
 $break-Large:   1000px;   // 62.5em

@@ -42,8 +42,9 @@
 .table-Mobile{
   overflow:auto;
   -webkit-overflow-scrolling:touch;
-  
-  table, th, td, tr{
-    white-space:nowrap;
+  @media (max-device-width:480px), screen and (max-width:800px){
+    table, th, td, tr{
+      white-space:nowrap;
+    }
   }
 }

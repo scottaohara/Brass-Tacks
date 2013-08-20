@@ -8,9 +8,9 @@
 
 // Fieldset Styling
 .fieldset{
-	border:1px solid $c-Border;
-	margin-bottom:$px-Unit*2; 
-	padding:$px-Unit*2 $px-Unit*3;
+  border:1px solid $c-Border;
+  margin-bottom:$px-Unit*2;
+  padding:$px-Unit*2 $px-Unit*3;
 }
 
 // Inline Form Elements
@@ -85,7 +85,7 @@
 }
 
 .btn-Radio{
-  @extend %btn;
+  @extend .btn;
   background:$c-Btn-RC;
   border:1px solid $c-Grey;
   font-size:14px!important;
@@ -94,7 +94,7 @@
   position:relative;
   top:1px;
   width:14px;
-  
+
   &:hover{
     background:$c-Btn-2;
   }
@@ -125,27 +125,27 @@
 
 // File Input Styling
 .file-Input-Area{
-	position:relative;
-	label{
-	  cursor:default;
-	}
+  position:relative;
+  label{
+    cursor:default;
+  }
 }
 
 .input-File{
-	cursor:pointer;
-	height:100%;
-	left:0;
-	opacity:0;
-	position:absolute;
-	top:0;
-	width:100%;
-	z-index:9;
+  cursor:pointer;
+  height:100%;
+  left:0;
+  opacity:0;
+  position:absolute;
+  top:0;
+  width:100%;
+  z-index:9;
 }
 
 .input-File-Text{
   @extend %input-Area;
-	cursor:pointer;
-	display:inline-block; 
+  cursor:pointer;
+  display:inline-block; 
 }
 
 // Inputs not supported in all browsers 

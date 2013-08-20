@@ -4,7 +4,7 @@
 // ----------------------------------------------------------------
 @mixin row-fixed-Left($col-Size){
   padding-left:$col-Size;
-  @media (max-device-width:480px), screen and (max-width:800px){
+  @media (max-device-width:$break-Mini), screen and (max-width:$break-Medium){
     padding:0;
   }
   .f-Col{
@@ -12,7 +12,7 @@
     margin-left:-$col-Size + 40px;
     width:$col-Size - 40px;
 
-    @media (max-device-width:480px), screen and (max-width:800px){
+    @media (max-device-width:$break-Mini), screen and (max-width:$break-Medium){
       float:none;
       margin:0;
       padding-left:40px;
@@ -24,7 +24,7 @@
 @mixin row-fixed-Right($col-Size){
   padding-right:$col-Size;
   
-  @media (max-device-width:480px), screen and (max-width:800px){
+  @media (max-device-width:$break-Mini), screen and (max-width:$break-Medium){
     padding:0;
   }
 
@@ -33,7 +33,7 @@
     margin-right:-$col-Size;
     width:$col-Size - 40px;
 
-    @media (max-device-width:480px), screen and (max-width:800px){
+    @media (max-device-width:$break-Mini), screen and (max-width:$break-Medium){
       float:none;
       margin:0;
       padding-left:40px;
@@ -41,6 +41,3 @@
     }
   }
 }
-
-
-
