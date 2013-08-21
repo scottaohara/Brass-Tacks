@@ -3,7 +3,7 @@
   *******************************************************************************************************
   * Brass Tacks
   * by Scott O'Hara - @scottohara - scottohara.me  -  https://github.com/bleachedgraphics
-  * v 0.7 - August 20, 2013
+  * v 0.7.0.1 - August 20, 2013
   *
   * This framework is still and development.  If you have any suggestions/fixes/comments, please
   * create an issue - https://github.com/bleachedgraphics/Brass-Tacks/issues 
@@ -403,14 +403,14 @@ hr {
 .txt-Center {
   text-align: center; }
 
+.txt-Justify {
+  text-align: justify; }
+
 .txt-Left {
   text-align: left; }
 
 .txt-Right {
   text-align: right; }
-
-.txt-Just {
-  text-align: justify; }
 
 .highlight, .slant {
   background: #faea65;
@@ -435,19 +435,6 @@ hr {
   -webkit-transform: skewX(16deg);
   transform: skewX(16deg); }
 
-/*
-	Code Example: Slanted Text w/Highlight
-	--------------------------
-	<span class="slant">
-		Text Goes here
-	</span>
-	
-	Code Example: Normal flowing text w/slanted highlight
-	--------------------------
-	<span class="slant">
-		<span class="text-Correct">Text Goes here</span>
-	</span>
-*/
 .line-Tight {
   line-height: 1.2; }
 
@@ -794,17 +781,20 @@ hr {
   background-clip: padding-box; }
 
 .row, .c-Row {
-  margin-left: -40px;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  margin-left: -40px; }
   .row.half-Gutter, .half-Gutter.c-Row {
     margin-left: -20px; }
 
 .col {
   float: left;
-  margin-bottom: 0 !important;
+  margin-bottom: 0;
   padding-left: 40px;
   position: relative;
   width: 100%; }
+  @media (max-device-width: 480px), screen and (max-width: 800px) {
+    .col {
+      margin-bottom: 8px; } }
 
 .half-Gutter .col {
   padding-left: 20px; }

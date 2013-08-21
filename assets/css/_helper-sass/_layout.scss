@@ -6,8 +6,8 @@
 // Simply styled with only a base margin-bottom and extending the clearfix class,
 // a row can also have helper classes added onto it for other general styling purposes
 .row{
+  margin-bottom:$px-Unit*5;
 	margin-left:-$px-Unit*10;
-	margin-bottom:$px-Unit*5;
 	@extend %clearfix;
 	
 	// Don't need as wide gutters?  Use this class to cut them in half.
@@ -20,19 +20,18 @@
 // Do not apply styling to this class as its purpose is for layout only.
 .col{
 	float:left;
-	margin-bottom:0!important; 
-		// row has a margin-bottom applied to it already, 
-		// to absolutely make sure there is no extra margin, 0!important is used
+	margin-bottom:0;
 	padding-left:$px-Unit*10;
 	position:relative;
-	width:100%; // default width is 100%.  
+	width:100%; // default width is 100%
+	@media (max-device-width:480px), screen and (max-width:800px){
+    margin-bottom:$px-Unit*2;
+  }
 }
 
 // Adjust .col padding-left to account for half-Gutter
-.half-Gutter{
-  .col{
-    padding-left:$px-Unit*5;
-  }
+.half-Gutter .col{
+  padding-left:$px-Unit*5;
 }
 
 // Convert columns to inline-blocks so we can center them when our row does not add up to 100%
@@ -69,7 +68,9 @@
 @media (max-device-width:480px), screen and (max-width:800px){
   .col-90, .col-80, .col-75, .col-66,
   .col-60, .col-50, .col-40, .col-33,
-  .col-25, .col-20, .col-10 {width:100%}
+  .col-25, .col-20, .col-10{
+    width:100%
+  }
 }
 
 .rfl{@include row-fixed-Left(300px)}
@@ -89,7 +90,6 @@
 	}
 }
 
-
 // Make a column have borders on the left/right sides of it
 // build out a better example of this
 .b-Col{
@@ -97,7 +97,7 @@
   padding-right:6px;
   position:relative;
 
-  &:before, &:after {
+  &:before, &:after{
     background:url("../img/border.png") no-repeat 0 -20px;
     content:"";
     height:200px;
@@ -114,4 +114,3 @@
     right:-14px;
   }
 }
-

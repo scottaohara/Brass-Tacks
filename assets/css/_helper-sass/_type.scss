@@ -34,10 +34,10 @@
 %go:after     {content:"\00A0" "\00BB"}  // >> (use on link / btn
 
 // Align Text
-.txt-Center {text-align:center;}
-.txt-Left   {text-align:left;}
-.txt-Right  {text-align:right;}
-.txt-Just   {text-align:justify;}
+.txt-Center   {text-align:center;}
+.txt-Justify  {text-align:justify;}
+.txt-Left     {text-align:left;}
+.txt-Right    {text-align:right;}
 
 // Highlight Text
 .highlight, %highlight{
@@ -59,19 +59,19 @@
 	@include vendor(transform, skewX(16deg));
 }
 	
-/*
-	Code Example: Slanted Text w/Highlight
-	--------------------------
-	<span class="slant">
-		Text Goes here
-	</span>
+
+//	Code Example: Slanted Text w/Highlight
+//	--------------------------
+//	<span class="slant">
+//		Text Goes here
+//	</span>
 	
-	Code Example: Normal flowing text w/slanted highlight
-	--------------------------
-	<span class="slant">
-		<span class="text-Correct">Text Goes here</span>
-	</span>
-*/
+//	Code Example: Normal flowing text w/slanted highlight
+//	--------------------------
+//	<span class="slant">
+//		<span class="text-Correct">Text Goes here</span>
+//	</span>
+
 
 // Tighten line height for text headings
 .line-Tight{

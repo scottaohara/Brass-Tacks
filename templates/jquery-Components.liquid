@@ -50,11 +50,10 @@
 <div class="txt-Right">
 <span id="chars">100</span>/<strong>100</strong>
 </div>
+
+{{ "jquery-1.10.2.min.js" | asset_url | script_tag }}
+{{ "app.js" | asset_url | script_tag }}
 	
 </section>      	
 
-{% endblock %}
-{% block js %}
-	{{ "jquery-1.10.2.min.js" | asset_url | script_tag }}
-  {{ "app.js" | asset_url | script_tag }}
 {% endblock %}
