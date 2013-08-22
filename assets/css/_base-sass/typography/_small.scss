@@ -1,26 +1,21 @@
 // ----------------------------------------------------------------
-// Tables
+//		Basic Styling: Small Element
 // ----------------------------------------------------------------
 
-// Resets main table tags
-caption, tr{
-  @extend %reset;
-}
-
-// Removes most of the table spacing issues
-table{
-  @extend %reset;
+small{
+  @extend %tiny;
+  @extend %d-Block;
+  // Give small some weight when used outside of <p> or <li>, 
+  // but make it an inline element again inside of these elements
   @extend %margin-Bottom;
-  border-collapse:collapse;
-  border-spacing:0;
-  font-size:$base;
-  width:100%; // make tables always take up the entire width of their containing parent.
 }
 
-th, td{
-  @extend %reset;
-  padding:$px-Unit $px-Unit*2;
-  text-align:left;
+// If small exists within another element, turn it into an inline-block
+h1, h2, h3, h4, h5, h6, p, li{
+  small{
+    display:inline-block;
+    margin:0;
+  }
 }
 
 // Placeholder classes are used so elements can be easily

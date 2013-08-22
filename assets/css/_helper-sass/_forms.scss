@@ -148,22 +148,6 @@
   display:inline-block; 
 }
 
-// Inputs not supported in all browsers 
-.input-Color{ // reusing a lot of %input-Area here, but not @extending it because the rules of input-Area 'break' how this should look in chrome/opera
-  border:1px solid $c-Border;
-  font-family:$arial;
-  height:45px;
-  margin-bottom:$px-Unit*2;
-  padding:0 $px-Unit;
-  width:50%;
-  
-  &:focus{
-    background:$c-Lighter;
-    border:1px solid #50B6D5;
-    @include box-shadow($bs-2);
-  }
-}
-
 .input-Number{
   @extend %input-Area;
   font-size:$base;

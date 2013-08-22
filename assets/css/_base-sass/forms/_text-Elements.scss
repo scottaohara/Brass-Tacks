@@ -1,0 +1,19 @@
+// ----------------------------------------------------------------
+//    Form Elements: Text Elements
+// ----------------------------------------------------------------
+
+legend{
+  @extend %reset;
+  @extend %eps;
+  margin-left:-$px-Unit;
+  padding:0 $px-Unit;
+}
+
+label{
+  display:block;
+  margin-bottom:$px-Unit;
+
+  &[for]{
+    cursor:pointer;
+  }
+}

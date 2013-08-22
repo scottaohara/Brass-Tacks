@@ -1,26 +1,15 @@
 // ----------------------------------------------------------------
-// Tables
+//		Basic Styling: Abbr & Dfn Elements
 // ----------------------------------------------------------------
 
-// Resets main table tags
-caption, tr{
-  @extend %reset;
+dfn{
+  @extend %italic;
 }
 
-// Removes most of the table spacing issues
-table{
-  @extend %reset;
-  @extend %margin-Bottom;
-  border-collapse:collapse;
-  border-spacing:0;
-  font-size:$base;
-  width:100%; // make tables always take up the entire width of their containing parent.
-}
-
-th, td{
-  @extend %reset;
-  padding:$px-Unit $px-Unit*2;
-  text-align:left;
+// An underline & help cursor in all browsers when a title tag is present
+abbr[title], dfn[title]{
+  border-bottom:1px dotted $c-Underline;
+  cursor:help;
 }
 
 // Placeholder classes are used so elements can be easily

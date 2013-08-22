@@ -1,27 +1,24 @@
 // ----------------------------------------------------------------
-//		Basic Setups for Navigation Elements
+//		Basic Style Normalizing/Resetting
 // ----------------------------------------------------------------
 
-nav{
-  ul, ol{
-    @extend %clearfix;
-    @extend %reset;
-    list-style:none; 
-  }
+// Make a smarter Box Model
+*, *:before, *:after{
+  @include box-sizing(border-box);
+}
 
-  li{
-    margin:0;	
-  }
+html{
+  -ms-text-size-adjust:100%;
+  -webkit-text-size-adjust:100%;
+}
 
-  a{
-    display:inline-block;
-    padding:$px-Unit $px-Unit*2; 
-    text-decoration:underline;
+html, body{
+  @extend %reset;
+  height:100%;  
+}
 
-    &:hover{
-      text-decoration:none;
-    }
-  }
+body{
+  @extend %font-Size-LH;
 }
 
 // Placeholder classes are used so elements can be easily

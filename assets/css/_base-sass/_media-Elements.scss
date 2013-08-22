@@ -4,8 +4,7 @@
 
 // Reset styling for media elements &
 // make sure they don't extend beyond parent containers
-audio, embed,
-img, object, video{
+audio, embed, img, object, video{
   @extend %reset;
   max-width:100%;  
 }

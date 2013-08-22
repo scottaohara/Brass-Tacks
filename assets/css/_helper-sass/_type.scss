@@ -2,6 +2,28 @@
 //		List Helpers
 // ----------------------------------------------------------------
 
+// Extra Large Font Classes
+.giga    {@extend %giga;}
+.ultra   {@extend %ultra;}
+.mega    {@extend %mega;}
+
+// Normal Sized Font
+.base		 {@extend %base;}
+
+// Heading Sized Font Classes
+.alpha   {@extend %alpha;}
+.beta    {@extend %beta;}
+.gamma   {@extend %gamma;}
+.delta   {@extend %delta;}
+.eps     {@extend %eps;}
+.zeta    {@extend %zeta;}
+
+// Small Font Classes
+.tiny    {@extend %tiny;}
+.mini    {@extend %mini;}
+
+
+
 // Kill list styling - extend into Navigations & for lists that don't require markings
 .kill-List{
 	@extend %kill-List;

@@ -1,26 +1,15 @@
 // ----------------------------------------------------------------
-// Tables
+//		Basic Styling: Bold & Italic Elements
 // ----------------------------------------------------------------
 
-// Resets main table tags
-caption, tr{
-  @extend %reset;
+// Bold these things.  Bold 'em good.
+b, strong{
+  @extend %bold;
 }
 
-// Removes most of the table spacing issues
-table{
-  @extend %reset;
-  @extend %margin-Bottom;
-  border-collapse:collapse;
-  border-spacing:0;
-  font-size:$base;
-  width:100%; // make tables always take up the entire width of their containing parent.
-}
-
-th, td{
-  @extend %reset;
-  padding:$px-Unit $px-Unit*2;
-  text-align:left;
+// Italicize these things.  Italicize them gooder.
+i, em{
+  @extend %italic;
 }
 
 // Placeholder classes are used so elements can be easily

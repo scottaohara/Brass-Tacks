@@ -1,9 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,700italic,600,400italic,300italic,600italic);
 /*
   *******************************************************************************************************
+  *
   * Brass Tacks
   * by Scott O'Hara - @scottohara - scottohara.me  -  https://github.com/bleachedgraphics
-  * v 0.7.0.1 - August 20, 2013
+  * v 0.7.1 - August 22, 2013
   *
   * This framework is still and development.  If you have any suggestions/fixes/comments, please
   * create an issue - https://github.com/bleachedgraphics/Brass-Tacks/issues 
@@ -11,31 +12,25 @@
   *
   *******************************************************************************************************
 */
-audio, embed,
-img, object, video, dl, caption, table, tr, th, td, button, fieldset, form, input, select, textarea, legend {
+html, body, h1, h2, h3, h4, h5, h6, p, pre, blockquote, audio, embed, img, object, video, button, fieldset, form, input, select, textarea, legend, nav ul, nav ol, caption, tr, table, th, td {
   border: 0;
-  outline: 0; }
-
-audio, embed,
-img, object, video, dl, caption, table, tr, th, td, button, fieldset, form, input, select, textarea, legend, html, body, blockquote, h1, h2, h3, h4, h5, h6, p, pre, nav ul,
-nav ol {
   margin: 0;
+  outline: 0;
   padding: 0; }
 
-[data-tooltip] img, article, aside, details, figure, figcaption,
-footer, header, main, nav, section, summary, small, hr, .d-Block, .js-Show, .pic img, .pic-Rounded img {
+article, aside, details, figure, figcaption,
+footer, header, main, nav, section, summary, small, .d-Block, .js-Show {
   display: block; }
 
 [hidden], template, .d-None, .js-Hide, .mobile-Show {
   display: none; }
 
-nav ul:after,
-nav ol:after, .clearfix:after, .media:after, .media-Reverse:after, .media-No-Wrap-Reverse:after, .media-No-Wrap:after, .row:after, .c-Row:after {
+nav ul:after, nav ol:after, .clearfix:after, .media:after, .media-Reverse:after, .media-No-Wrap-Reverse:after, .media-No-Wrap:after, .row:after, .c-Row:after {
   clear: both;
   content: "";
   display: table; }
 
-address, details, details summary, blockquote, h1, h2, h3, h4, h5, h6, li, p, small, code, kbd, samp, table, button, fieldset, form, input, select, textarea {
+address, details, details summary, h1, h2, h3, h4, h5, h6, p, small, code, kbd, samp, li, blockquote, button, fieldset, form, input, select, textarea, table {
   margin-bottom: 8px; }
 
 .hidden {
@@ -70,6 +65,10 @@ input[type="date"], input[type="email"], input[type="file"], input[type="number"
   input[type="date"]:invalid, input[type="email"]:invalid, input[type="file"]:invalid, input[type="number"]:invalid, input[type="password"]:invalid, input[type="search"]:invalid, input[type="tel"]:invalid, input[type="text"]:invalid, input[type="time"]:invalid, input[type="url"]:invalid, textarea:invalid, .select-Container:invalid, .multi-Select:invalid, .input-File-Text:invalid, .input-Number:invalid {
     color: #ff3e3e; }
 
+body {
+  font-size: 100%;
+  line-height: 1.5; }
+
 .giga {
   font-size: 4.375em;
   font-weight: 700; }
@@ -98,25 +97,34 @@ h4, .delta {
   font-size: 1.625em;
   font-weight: 300; }
 
-h5, .eps, legend {
+h5, legend, .eps {
   font-size: 1.25em;
   font-weight: 300; }
 
-h6, .zeta, blockquote {
+h6, blockquote, .zeta {
   font-size: 1.125em;
   font-weight: 300; }
 
-p, li, li p, li a, .base, button, fieldset, form, input, select, textarea {
+p, li,
+li p,
+li a,
+li li, button, fieldset, form, input, select, textarea, .base {
   font-size: 1em;
   font-weight: 300; }
 
-.tiny, small, sub, sup {
+small, sub, sup, .tiny {
   font-size: 0.75em;
   font-weight: 300; }
 
 .mini {
   font-size: 0.625em;
   font-weight: 300; }
+
+b, strong, dt {
+  font-weight: bold; }
+
+dfn, i, em, blockquote {
+  font-style: italic; }
 
 .kill-List {
   list-style: none;
@@ -153,6 +161,8 @@ p, li, li p, li a, .base, button, fieldset, form, input, select, textarea {
   cursor: help;
   display: inline-block;
   position: relative; }
+  [data-tooltip] img {
+    display: block; }
   [data-tooltip]:after {
     bottom: -20%;
     position: absolute;
@@ -191,37 +201,19 @@ html {
 html, body {
   height: 100%; }
 
+details summary > :last-child {
+  margin-bottom: 0; }
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, p small, li small {
+  display: inline-block;
+  margin: 0; }
+
 a {
   background: transparent; }
 
-details summary:last-child {
-  margin-bottom: 0; }
-
-audio, embed,
-img, object, video {
-  max-width: 100%; }
-
-img {
-  color: #ff3e3e;
-  font-style: italic; }
-
-audio, canvas, video {
-  display: inline-block; }
-
-audio:not([controls]) {
-  display: none;
-  height: 0; }
-
-svg:not(:root) {
-  overflow: hidden; }
-
-body {
-  font-size: 100%;
-  line-height: 1.5; }
-
-p small, li small {
-  display: inline-block;
-  margin: 0; }
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted #cccccc;
+  cursor: help; }
 
 code, kbd, samp {
   background: #F2F2F2;
@@ -248,35 +240,42 @@ li pre, li samp {
   margin: 0;
   padding: 4px; }
 
-b, strong {
-  font-weight: bold; }
+ol, ul {
+  margin: 0 0 8px;
+  padding: 0 0 0 24px; }
+  ol > :last-child, ul > :last-child {
+    margin-bottom: 0; }
+  ol ol, ol ul, ul ol, ul ul {
+    margin-top: 8px; }
 
-i, em, dfn, blockquote {
-  font-style: italic; }
+dl {
+  margin: 0 0 8px; }
+  dl > :last-child {
+    margin-bottom: 0; }
 
-blockquote:before, blockquote:after {
+dd {
+  margin: 0 0 8px;
+  padding-left: 16px; }
+
+mark {
+  background: #faea65;
+  color: #1a1a1a; }
+
+blockquote:after, blockquote:before {
   font-size: 1.25em;
   font-weight: 400;
   line-height: 1;
   position: relative;
   top: 2px; }
-blockquote:before {
-  content: '"';
-  left: -1px; }
 blockquote:after {
-  content: '"';
+  content: "\201D";
   right: -1px; }
+blockquote:before {
+  content: "\201C";
+  left: -1px; }
 
 q {
   quotes: "\201C" "\201D" "\2018" "\2019"; }
-
-abbr[title], dfn[title] {
-  border-bottom: 1px dotted #cccccc;
-  cursor: help; }
-
-mark {
-  background: #faea65;
-  color: #1a1a1a; }
 
 sub, sup {
   line-height: 0;
@@ -289,54 +288,35 @@ sub {
 sup {
   top: -.5em; }
 
-ol, ul {
-  margin: 0 0 8px;
-  padding: 0 0 0 24px; }
-  ol > li:last-child, ul > li:last-child {
-    margin-bottom: 0; }
-  ol li ol,
-  ol li ul, ul li ol,
-  ul li ul {
-    margin-top: 8px; }
-  ol li li, ul li li {
-    font-size: 1em; }
+audio, embed, img, object, video {
+  max-width: 100%; }
 
-dl {
-  margin: 0 0 8px; }
-  dl > dd:last-child {
-    margin-bottom: 0; }
+img {
+  color: #ff3e3e;
+  font-style: italic; }
 
-dt {
-  font-weight: bold; }
+audio, canvas, video {
+  display: inline-block; }
 
-dd {
-  margin: 0 0 8px;
-  padding-left: 16px; }
+audio:not([controls]) {
+  display: none;
+  height: 0; }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  font-size: 1em;
-  width: 100%; }
-
-th, td {
-  padding: 4px 8px;
-  text-align: left; }
+svg:not(:root) {
+  overflow: hidden; }
 
 button, fieldset, form, input, select, textarea {
   line-height: normal;
   text-transform: none; }
 
-legend {
-  margin-left: -4px;
-  padding: 0 4px; }
-
-button,
-html input[type='button'],
-input[type='reset'],
-input[type='submit'] {
+button, html input[type='button'],
+input[type='reset'], input[type='submit'] {
   cursor: pointer;
   -webkit-appearance: button; }
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
 
 input[type='search'] {
   -webkit-appearance: textfield; }
@@ -351,19 +331,36 @@ input[readonly] {
 input[type='search']::-webkit-search-decoration {
   -webkit-appearance: none; }
 
-button::-moz-focus-inner, input::-moz-focus-inner {
-  border: 0;
-  padding: 0; }
+select {
+  border: 1px solid #cccccc;
+  padding: 4px 0 4px 4px;
+  width: 100%; }
+
+input[type="color"] {
+  border: 1px solid #cccccc;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  height: 45px;
+  margin-bottom: 8px;
+  padding: 0 4px;
+  width: 75%; }
+  input[type="color"]:focus {
+    background: #f0f0f0;
+    border: 1px solid #50B6D5;
+    -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.25) inset;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.25) inset; }
 
 textarea {
   display: block;
-  max-width: 800px;
   min-height: 40px;
   min-width: 60px;
   overflow: auto;
-  resize: both;
+  resize: vertical;
   vertical-align: top;
-  width: 80%; }
+  width: 100%; }
+
+legend {
+  margin-left: -4px;
+  padding: 0 4px; }
 
 label {
   display: block;
@@ -371,8 +368,7 @@ label {
   label[for] {
     cursor: pointer; }
 
-nav ul,
-nav ol {
+nav ul, nav ol {
   list-style: none; }
 nav li {
   margin: 0; }
@@ -383,10 +379,21 @@ nav a {
   nav a:hover {
     text-decoration: none; }
 
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 1em;
+  width: 100%; }
+
+th, td {
+  padding: 4px 8px;
+  text-align: left; }
+
 hr {
   border: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   border-top: 1px solid rgba(0, 0, 0, 0.2);
+  display: block;
   height: 1px;
   margin: 8px 0; }
 
@@ -590,6 +597,9 @@ hr {
 .overflow {
   overflow: hidden; }
 
+@media (max-device-width: 480px), screen and (max-width: 800px) {
+  .mobile-Show {
+    display: block; } }
 .pic, .pic-Rounded {
   border: 1px solid #fdfdfd;
   border-radius: 4px;
@@ -599,6 +609,8 @@ hr {
   display: inline-block;
   overflow: hidden;
   width: 90px; }
+  .pic img, .pic-Rounded img {
+    display: block; }
 
 .pic-Rounded {
   border-radius: 1100px;
@@ -635,22 +647,6 @@ hr {
     margin-right: -100px;
     margin-left: 0; }
 
-/* 
-	Code Example
-	--------------------------
-	<div class="media">
-		<div class="media-Object">
-			<img src="assets/img/little-V.jpg" alt="" />
-		</div>
-		<div class="media-Text">
-			<h1>Title for Meida Element</h1>
-			<p>Paragraph text to go along with media element.</p>
-		</div>
-	</div>
-	
-	-- 	Divs were used in this example, but the media element could be applied to various situations.
-		Ie. could be used for a header or footer area where a logo is placed on the right or left w/text to the side.
-*/
 .emph-Block {
   background: #fdfdfd;
   border: 1px solid #dddddd;
@@ -664,31 +660,6 @@ hr {
   .emph-Block > :last-child {
     margin-bottom: 0; }
 
-/*
-
-<!-- ***************************
-  Generic Block Element
-*************************** -->
-
-<div class="block xHELPER-CLASSx">
-  <div class="block-Body"></div>
-</div>
-
-
-<div class="block xHELPER-CLASSx">
-  <header class="block-Header"></header> 
-  <div class="block-Body"></div>
-  <footer class="block-Footer"></footer>
-</div>
-
-
-<div class="block xHELPER-CLASSx">
-  <div class="block-Body"></div>
-  <footer class="block-Footer"></footer>
-</div>
-
-
-*/
 .btn, .btn-Small, .btn-Large, .btn-XLarge, .btn-Radio {
   background: #333333;
   border-radius: 4px;
@@ -1110,19 +1081,6 @@ hr {
 .input-File-Text {
   cursor: pointer;
   display: inline-block; }
-
-.input-Color {
-  border: 1px solid #cccccc;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  height: 45px;
-  margin-bottom: 8px;
-  padding: 0 4px;
-  width: 50%; }
-  .input-Color:focus {
-    background: #f0f0f0;
-    border: 1px solid #50B6D5;
-    -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.25) inset;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.25) inset; }
 
 .input-Number {
   font-size: 1em; }

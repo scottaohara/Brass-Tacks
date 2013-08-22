@@ -19,7 +19,7 @@ body{
   margin:0 auto;
   max-width:1000px;
   padding:$px-Unit*5;
-  & > :last-child{margin-bottom:0;}	// kill any extra margin on the last element in the .content div
+  @include last-Child-0();
 }
 
 // Tool tip example

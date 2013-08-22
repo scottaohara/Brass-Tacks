@@ -20,7 +20,7 @@
 
 @media (max-device-width:480px), screen and (max-width:800px){
   .mobile-Show{
-    @extend %d-Block;
+    display:block;
   }
 }
 
@@ -47,7 +47,7 @@
   width:90px;
 
   img{
-    @extend %d-Block;
+    display:block;
   }
 }
 
@@ -112,22 +112,22 @@
     margin-left:0;
   }
 }
-/* 
-	Code Example
-	--------------------------
-	<div class="media">
-		<div class="media-Object">
-			<img src="assets/img/little-V.jpg" alt="" />
-		</div>
-		<div class="media-Text">
-			<h1>Title for Meida Element</h1>
-			<p>Paragraph text to go along with media element.</p>
-		</div>
-	</div>
+ 
+//	Code Example
+//	--------------------------
+//	<div class="media">
+//		<div class="media-Object">
+//			<img src="assets/img/little-V.jpg" alt="" />
+//		</div>
+//		<div class="media-Text">
+//			<h1>Title for Meida Element</h1>
+//			<p>Paragraph text to go along with media element.</p>
+//		</div>
+//	</div>
 	
-	-- 	Divs were used in this example, but the media element could be applied to various situations.
-		Ie. could be used for a header or footer area where a logo is placed on the right or left w/text to the side.
-*/
+//	-- 	Divs were used in this example, but the media element could be applied to various situations.
+//		Ie. could be used for a header or footer area where a logo is placed on the right or left w/text to the side.
+
 
 
 // Call out boxes
@@ -140,35 +140,32 @@
 	min-height:50px;
 	padding:$px-Unit*4;
 	
-	& > :last-child{
-	  margin-bottom:0;
-	}
+	@include last-Child-0();
 }
 
 
 
-/*
-
-<!-- ***************************
-  Generic Block Element
-*************************** -->
-
-<div class="block xHELPER-CLASSx">
-  <div class="block-Body"></div>
-</div>
 
 
-<div class="block xHELPER-CLASSx">
-  <header class="block-Header"></header> 
-  <div class="block-Body"></div>
-  <footer class="block-Footer"></footer>
-</div>
+// ***************************
+//  Generic Block Element
+//*************************** 
+
+//<div class="block xHELPER-CLASSx">
+//  <div class="block-Body"></div>
+//</div>
 
 
-<div class="block xHELPER-CLASSx">
-  <div class="block-Body"></div>
-  <footer class="block-Footer"></footer>
-</div>
+//<div class="block xHELPER-CLASSx">
+//  <header class="block-Header"></header> 
+//  <div class="block-Body"></div>
+//  <footer class="block-Footer"></footer>
+//</div>
 
 
-*/
+//<div class="block xHELPER-CLASSx">
+//  <div class="block-Body"></div>
+//  <footer class="block-Footer"></footer>
+//</div>
+
+

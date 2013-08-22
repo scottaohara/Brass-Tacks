@@ -1,26 +1,38 @@
 // ----------------------------------------------------------------
-// Tables
+//    Basic Styling: Quote Elements
 // ----------------------------------------------------------------
 
-// Resets main table tags
-caption, tr{
+// Blockquote base styling
+blockquote{
   @extend %reset;
-}
-
-// Removes most of the table spacing issues
-table{
-  @extend %reset;
+  @extend %zeta;
+  @extend %italic;
   @extend %margin-Bottom;
-  border-collapse:collapse;
-  border-spacing:0;
-  font-size:$base;
-  width:100%; // make tables always take up the entire width of their containing parent.
+
+  &:after, &:before{
+    font:{
+      size:$eps;
+      weight:400;
+     }; 
+    line-height:1; 
+    position:relative; 
+    top:2px;
+  }
+
+  &:after{
+    content:"\201D";
+    right:-1px;
+  }
+
+  &:before{
+    content:"\201C";
+    left:-1px;
+  }
 }
 
-th, td{
-  @extend %reset;
-  padding:$px-Unit $px-Unit*2;
-  text-align:left;
+// sets consistent quotes across browsers
+q{
+  quotes:"\201C" "\201D" "\2018" "\2019";
 }
 
 // Placeholder classes are used so elements can be easily
@@ -30,3 +42,4 @@ th, td{
 // elements, simply either delete the place holder reference
 // and add your own styling, or edit the placeholder class
 // in the corresponding Brass Tacks placeholders .scss file.
+

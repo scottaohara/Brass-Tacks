@@ -21,10 +21,10 @@
 //  Placeholders is divided into various sub files...
 // ----------------------------------------------------------------
 
-@import '_placeholders/generic';        // Multi-Purpose classes such as clearfix
-@import '_placeholders/brand';          // contains presets to quickly add brand fonts/colors
-@import '_placeholders/forms';          // helper form classes
-@import '_placeholders/typography';     // Various typography base classe
+@import 'placeholders/generic';        // Multi-Purpose classes such as clearfix
+@import 'placeholders/brand';          // contains presets to quickly add brand fonts/colors
+@import 'placeholders/forms';          // helper form classes
+@import 'placeholders/typography';     // Various typography base classe
 
 
 // ----------------------------------------------------------------
@@ -33,5 +33,5 @@
 //  Boilerplate by adding additional styling and functionality 
 // ----------------------------------------------------------------
 
-@import '_placeholders/messaging';      // Classes for messaging units & modal boxes
-@import '_placeholders/tool-Tips';      // Tool Tips
+@import 'placeholders/messaging';      // Classes for messaging units & modal boxes
+@import 'placeholders/tool-Tips';      // Tool Tips

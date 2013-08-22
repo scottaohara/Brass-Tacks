@@ -11,7 +11,7 @@
   position:relative;
 
   img{
-    @extend %d-Block;
+    display:block;
   }
 
   &:after{

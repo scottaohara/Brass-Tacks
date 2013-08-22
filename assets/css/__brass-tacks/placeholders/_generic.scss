@@ -5,13 +5,9 @@
 // extend to all tags that need this
 // for better organization of code
 %reset{
-  @extend %mp-Reset;
   border:0;
-  outline:0;
-}
-
-%mp-Reset{
   margin:0;
+  outline:0;
   padding:0;
 }
 

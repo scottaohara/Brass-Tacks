@@ -1,0 +1,47 @@
+// ----------------------------------------------------------------
+//		Basic Styling: List Elements
+// ----------------------------------------------------------------
+
+// Un/Ordered lists
+ol, ul{
+  @include last-Child-0();
+  margin:0 0 $px-Unit*2; 
+  padding:0 0 0 $px-Unit*6;
+
+  ol, ul{
+    margin-top:$px-Unit*2; // keep equal spacing li content followed by lists within lists	
+  } 
+}
+
+li{@extend %margin-Bottom;}
+
+// Normal & Small sized fonts
+li,
+li p,
+li a,
+li li{
+  @extend %base;
+}
+
+// Definition Lists
+dl{
+  @include last-Child-0();
+  margin:0 0 $px-Unit*2;
+}
+
+  dt{
+    @extend %bold;
+  }
+
+  dd{
+    margin:0 0 $px-Unit*2; 
+    padding-left:$px-Unit*4;
+  }
+
+// Placeholder classes are used so elements can be easily
+// broken out into modular files.
+
+// If you would like to change the basic values of these 
+// elements, simply either delete the place holder reference
+// and add your own styling, or edit the placeholder class
+// in the corresponding Brass Tacks placeholders .scss file.

@@ -3,9 +3,9 @@
 // ----------------------------------------------------------------
 
 @mixin triangle($tri-size, $tri-color, $tri-direction){
-  @extend %d-Block;
   border:inset $tri-size;
   content:"";
+  display:block;
   height:0;
   width:0;
   

@@ -14,6 +14,7 @@ code, kbd, samp{
 }
 
 pre{
+  @extend %reset;
   overflow:auto; 
   white-space:pre-wrap;
 }

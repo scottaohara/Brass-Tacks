@@ -85,9 +85,7 @@
 	color:#333;
 	padding:$px-Unit;
 	
-	& > :last-child{
-	  margin-bottom:0;	
-	}
+	@include last-Child-0();
 }
 
 // Make a column have borders on the left/right sides of it

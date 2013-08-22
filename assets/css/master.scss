@@ -1,8 +1,9 @@
 /*
   *******************************************************************************************************
+  *
   * Brass Tacks
   * by Scott O'Hara - @scottohara - scottohara.me  -  https://github.com/bleachedgraphics
-  * v 0.7.0.1 - August 20, 2013
+  * v 0.7.1 - August 22, 2013
   *
   * This framework is still and development.  If you have any suggestions/fixes/comments, please
   * create an issue - https://github.com/bleachedgraphics/Brass-Tacks/issues 
@@ -10,6 +11,11 @@
   *
   *******************************************************************************************************
 */
+
+
+//  To customize the CSS output of this file, go into each of the /base files to add/remove specific imports.
+//  ie. don't need default <code> styling?  comment out/remove the code @import inside the _base-sas/base file.
+
 
 // Import Font(s)
   @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,700italic,600,400italic,300italic,600italic);
@@ -20,14 +26,7 @@
 
 // Base Values
   @import '_base-sass/basic';             //  Standardizes the base styling of HTML elements
-                                          //
-                                          //  Imports:
-                                          //  html5-Elements
-                                          //  media-Elements
-                                          //  typgraphy-Base
-                                          //  forms
-                                          //  tables
-                                          //  navs
+
 
 // Helper Classes
   @import '_helper-sass/type';            //  helper classes for general typography

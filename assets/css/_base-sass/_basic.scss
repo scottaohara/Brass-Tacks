@@ -2,57 +2,39 @@
 //		Basic Style Normalizing/Resetting
 // ----------------------------------------------------------------
 
-// Make a smarter Box Model
-*, *:before, *:after{
-  @include box-sizing(border-box);
-}
-
-html{
-  -ms-text-size-adjust:100%;
-  -webkit-text-size-adjust:100%;
-}
-
-html, body{
-  @extend %mp-Reset;
-  height:100%;  
-}
-
-body{
-  @extend %font-Size-LH;
-}
-
-// Removes grey background color from active links in IE10
-a{
-  background:transparent;
-}
-
+// Rules for HTML, Body & * elements
+@import 'body-html';
+   
 // Base HTML5 sepecific elements/selectors rules
 @import 'html5-Elements';
+
+// Base typographical element rules
+@import 'typography/headings';        // Heading Elements
+@import 'typography/paragraphs';      // Paragraph Element
+@import 'typography/small';           // Small Element
+@import 'typography/anchor';          // Anchor Element
+@import 'typography/abbr-Dfn';        // Abbr & Dfn Elements
+@import 'typography/bold-Italic';     // Bold & Italic Elements
+@import 'typography/code';            // Code Elements
+@import 'typography/lists';           // List Elements
+@import 'typography/mark';            // Mark Element
+@import 'typography/quotes';          // Quote Elements
+@import 'typography/sub-Super';       // Super and Subscript Elements
 
 // Base media element rules
 @import 'media-Elements';
 
-// Base typographical element rules
-@import 'typography-Base';        // Base elements for typography
-@import 'typography-Code';        // Code styling
-@import 'typography-Decorative';  // Decorative text elements
-@import 'typography-Lists';       // Lists styling
-
-// Base table element rules
-@import 'tables';
-
 // Base form element rules
-@import 'forms';
+@import 'forms/base';                 // Standard Form Containers / resets
+@import 'forms/buttons';              // Button/input button rules
+@import 'forms/inputs';               // input areas and textareas
+@import 'forms/text-Elements';        // Form specific text elements
 
 // Base navigation rules
 @import 'navs';
 
-// Easy re-styling for <hr /> tags
-hr{
-  border:0;
-  border-bottom:1px solid rgba(255,255,255,.2);
-  border-top:   1px solid rgba(0,0,0,.2); 
-  @extend %d-Block;
-  height:1px; 
-  margin:$px-Unit*2 0;
-}
+// Base table element rules
+@import 'tables';
+
+// HR Element
+@import 'hr';

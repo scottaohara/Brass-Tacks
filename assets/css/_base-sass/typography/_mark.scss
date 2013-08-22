@@ -1,0 +1,9 @@
+// ----------------------------------------------------------------
+//		Basic Styling: Mark Element
+// ----------------------------------------------------------------
+
+// IE 8/9 doesn't highlight background by default.
+mark{
+  background:$c-Highlight;
+  color:$c-Darker;
+}
