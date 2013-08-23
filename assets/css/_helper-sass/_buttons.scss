@@ -1,6 +1,7 @@
 // ----------------------------------------------------------------
-//		Basic Styling for Buttons
+//  Basic Styling for Buttons
 // ----------------------------------------------------------------
+
 .btn{
   background:$c-Dark; 
   @include border-radius($px-Unit);
@@ -35,8 +36,9 @@
 
 
 // ----------------------------------------------------------------
-// Sizing
+//  Sizing
 // ----------------------------------------------------------------
+
 .btn-Small{
 	@extend .btn; 
 	font-size:$tiny; 
@@ -73,23 +75,31 @@
 
 
 // ----------------------------------------------------------------
-// Coloring
+//  Coloring
 // ----------------------------------------------------------------
+
 .btn-Action{background:$c-Btn-1;
-  &:hover{background:darken($c-Btn-1, 15%);}
+  &:hover{
+    background:darken($c-Btn-1, 15%);
+  }
 }
    
 .btn-Action-2{background:$c-Btn-2;
-  &:hover{background:darken($c-Btn-2, 15%);}
+  &:hover{
+    background:darken($c-Btn-2, 15%);
+  }
 }
     
 .btn-Action-3{background:$c-Btn-3;
-  &:hover{background:darken($c-Btn-3, 15%);}
+  &:hover{
+    background:darken($c-Btn-3, 15%);
+  }
 }
 
 .btn-Neg{
   background:$c-Btn-Neg; 
   color:$c-Lighter;
+
   &:hover{
     @extend .btn-Neg;
   }
@@ -108,8 +118,9 @@
 
 
 // ----------------------------------------------------------------
-// Additional Styling
+//  Corner Styling
 // ----------------------------------------------------------------
+
 .btn-Square{
   @include border-radius(0);
 }
@@ -118,7 +129,11 @@
   @include border-radius($px-Unit*3);
 }
 
-// To create button pills
+
+// ----------------------------------------------------------------
+//  Button Pills
+// ----------------------------------------------------------------
+
 .btn-Left{
   @include border-radius($px-Unit*3 0 0 $px-Unit*3);
 }
@@ -130,3 +145,36 @@
 .btn-Right{
   @include border-radius(0 $px-Unit*3 $px-Unit*3 0);
 }
+
+
+// ----------------------------------------------------------------
+//  Buttons with Icons
+// ----------------------------------------------------------------
+/*
+%btn-Icon{
+
+}
+
+.btn-Icon-16{
+  height:16px;
+  padding-left:20px;
+  width:16px;
+}
+
+.btn-Icon-32{
+  height:32px;
+  padding-left:36px;
+  width:32px;
+}
+
+.btn-Icon-64{
+  height:64px;
+  padding-left:68px;
+  width:64px;
+}
+
+.icon{
+
+}
+*/
+

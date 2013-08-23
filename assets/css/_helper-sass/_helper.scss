@@ -24,6 +24,10 @@
   }
 }
 
+.mute{
+  opacity:.75;
+}
+
 // Hides from screenreaders and browsers
 .hidden{
   @extend %hidden;

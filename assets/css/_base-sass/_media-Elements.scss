@@ -11,8 +11,12 @@ audio, embed, img, object, video{
 
 // If an image doesn't load, make the alt text noticable
 img{
-  color:$c-Required;
-  font-style:italic;
+  @extend %italic;
+  color:$c-Red;
+}
+
+figure img{
+  display:block;
 }
 
 // Give HTML5 elements inline-block display, which is not defined in ie8/9

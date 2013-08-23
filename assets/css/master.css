@@ -4,7 +4,7 @@
   *
   * Brass Tacks
   * by Scott O'Hara - @scottohara - scottohara.me  -  https://github.com/bleachedgraphics
-  * v 0.7.1 - August 22, 2013
+  * v 0.7.2 - August 23, 2013
   *
   * This framework is still and development.  If you have any suggestions/fixes/comments, please
   * create an issue - https://github.com/bleachedgraphics/Brass-Tacks/issues 
@@ -30,8 +30,11 @@ nav ul:after, nav ol:after, .clearfix:after, .media:after, .media-Reverse:after,
   content: "";
   display: table; }
 
-address, details, details summary, h1, h2, h3, h4, h5, h6, p, small, code, kbd, samp, li, blockquote, button, fieldset, form, input, select, textarea, table {
+address, details, figure, details summary, h1, h2, h3, h4, h5, h6, p, small, code, kbd, samp, li, blockquote, button, fieldset, form, input, select, textarea, table {
   margin-bottom: 8px; }
+
+a:active, a:hover, a:focus, :focus, input[type="submit"]::-moz-focus-inner {
+  outline: none; }
 
 .hidden {
   display: none !important;
@@ -123,7 +126,7 @@ small, sub, sup, .tiny {
 b, strong, dt {
   font-weight: bold; }
 
-dfn, i, em, blockquote {
+dfn, i, em, blockquote, img {
   font-style: italic; }
 
 .kill-List {
@@ -233,9 +236,7 @@ mark {
   border-bottom: 1px solid #ddd;
   color: #333333; }
 
-p code, p kbd,
-p pre, p samp, li code, li kbd,
-li pre, li samp {
+p code, p kbd, p pre, p samp, li code, li kbd, li pre, li samp {
   display: inline-block;
   margin: 0;
   padding: 4px; }
@@ -292,8 +293,10 @@ audio, embed, img, object, video {
   max-width: 100%; }
 
 img {
-  color: #ff3e3e;
-  font-style: italic; }
+  color: #ff3e3e; }
+
+figure img {
+  display: block; }
 
 audio, canvas, video {
   display: inline-block; }
@@ -391,8 +394,7 @@ th, td {
 
 hr {
   border: 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   display: block;
   height: 1px;
   margin: 8px 0; }
@@ -600,6 +602,9 @@ hr {
 @media (max-device-width: 480px), screen and (max-width: 800px) {
   .mobile-Show {
     display: block; } }
+.mute {
+  opacity: .75; }
+
 .pic, .pic-Rounded {
   border: 1px solid #fdfdfd;
   border-radius: 4px;
@@ -711,22 +716,22 @@ hr {
   display: block; }
 
 .btn-Action {
-  background: #54a4a3; }
+  background: #40b5bb; }
   .btn-Action:hover {
-    background: #3a7171; }
+    background: #2c7e82; }
 
 .btn-Action-2 {
-  background: #d48371; }
+  background: #2c8692; }
   .btn-Action-2:hover {
-    background: #bf523a; }
+    background: #1a5057; }
 
 .btn-Action-3 {
-  background: #7e984c; }
+  background: #fc7a14; }
   .btn-Action-3:hover {
-    background: #546532; }
+    background: #c15602; }
 
 .btn-Neg, .btn-Neg:hover {
-  background: #aaaaaa;
+  background: #999999;
   color: #f0f0f0; }
 
 .btn-Disable, .btn-Disable:hover, .btn-Disable:visited {
@@ -751,6 +756,33 @@ hr {
   border-radius: 0 12px 12px 0;
   background-clip: padding-box; }
 
+/*
+%btn-Icon{
+
+}
+
+.btn-Icon-16{
+  height:16px;
+  padding-left:20px;
+  width:16px;
+}
+
+.btn-Icon-32{
+  height:32px;
+  padding-left:36px;
+  width:32px;
+}
+
+.btn-Icon-64{
+  height:64px;
+  padding-left:68px;
+  width:64px;
+}
+
+.icon{
+
+}
+*/
 .row, .c-Row {
   margin-bottom: 20px;
   margin-left: -40px; }
@@ -877,7 +909,7 @@ hr {
   background: #eeeeee; }
 
 .table-Footer {
-  background: #e3e3e3; }
+  background: #f0f0f0; }
 
 .table-Border {
   border-bottom: 1px solid #cccccc;
@@ -1034,7 +1066,7 @@ hr {
     opacity: 1; }
 
 .input-Radio:checked + .btn-Radio {
-  background: #d48371;
+  background: #2c8692;
   border-color: #333333; }
 
 .btn-Radio {
@@ -1047,7 +1079,7 @@ hr {
   top: 1px;
   width: 14px; }
   .btn-Radio:hover {
-    background: #d48371; }
+    background: #2c8692; }
 
 .select-Container {
   background: url(../img/drop-Arrow.png) no-repeat 99% center white;
@@ -1085,6 +1117,22 @@ hr {
 .input-Number {
   font-size: 1em; }
 
+.hr-Dual {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgba(0, 0, 0, 0.2); }
+
+.hr-Dash {
+  border-style: dashed; }
+
+.hr-Dot {
+  border-style: dotted; }
+
+.hr-Dual-Spaced {
+  border-bottom: 1px solid #cccccc;
+  border-top: 1px solid #cccccc;
+  height: 4px;
+  position: relative; }
+
 body {
   background: #f0f0f0;
   font-family: "Open Sans";
@@ -1108,14 +1156,11 @@ body {
     margin-bottom: 0; }
 
 a {
-  color: #d48371; }
+  color: #2c8692; }
   a:hover, a:active {
-    color: #bf523a; }
+    color: #1a5057; }
   a:visited {
-    color: #843928; }
-
-:focus, a:focus, a:active, input[type="submit"]::-moz-focus-inner {
-  outline: none; }
+    color: #091a1c; }
 
 .header-Base {
   text-shadow: 0 1px 1px #fff; }

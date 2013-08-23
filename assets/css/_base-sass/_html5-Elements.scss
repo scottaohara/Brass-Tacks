@@ -13,7 +13,7 @@ footer, header, main, nav, section, summary{
   @extend %d-None;
 }
 
-address, details{
+address, details, figure{
   @extend %margin-Bottom;
 }
 

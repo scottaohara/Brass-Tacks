@@ -1,0 +1,23 @@
+// ----------------------------------------------------------------
+//  Dividers
+// ----------------------------------------------------------------
+
+.hr-Dual{
+  border-bottom:1px solid rgba(255,255,255,.2);
+  border-top:   1px solid rgba(0,0,0,.2);
+}
+
+.hr-Dash{
+  border-style:dashed;
+}
+
+.hr-Dot{
+  border-style:dotted;
+}
+
+.hr-Dual-Spaced{
+  border-bottom:1px solid $c-Grey;
+  border-top:   1px solid $c-Grey;
+  height:4px;
+  position:relative;
+}

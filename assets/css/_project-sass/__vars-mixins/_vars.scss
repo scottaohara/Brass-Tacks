@@ -7,9 +7,9 @@
 // ----------------------------------------------------------------
 // Base Branding Colors
 // ----------------------------------------------------------------
-$c-Brand-1:		#54a4a3;
-$c-Brand-2:		#d48371;
-$c-Brand-3:		#7e984c;
+$c-Brand-1:		#40b5bb;
+$c-Brand-2:		#2c8692;
+$c-Brand-3:		#fc7a14;
 
 
 // ----------------------------------------------------------------
@@ -19,7 +19,7 @@ $c-Btn-1:     $c-Brand-1;
 $c-Btn-2:     $c-Brand-2;
 $c-Btn-3:     $c-Brand-3;
 
-$c-Btn-Neg:		#aaa;
+$c-Btn-Neg:		$c-Dark-Grey;
 $c-Disabled:	$c-Lighter;
 
 $c-Link:		  $c-Brand-2;
@@ -41,10 +41,10 @@ $c-Border:		$c-Grey;
 // ----------------------------------------------------------------
 $c-Table:         $c-Lighter;
 $c-Table-Head:    $c-Light;
-$c-Table-Foot:    #e3e3e3;
+$c-Table-Foot:    $c-Lighter;
 
 $c-Table-Striped: $c-Light;
-$c-Table-Border:  #ccc;
+$c-Table-Border:  $c-Grey;
 
 // sets consistent boarder styling for table elements
 $border-Table:    1px solid $c-Table-Border;

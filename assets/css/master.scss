@@ -3,7 +3,7 @@
   *
   * Brass Tacks
   * by Scott O'Hara - @scottohara - scottohara.me  -  https://github.com/bleachedgraphics
-  * v 0.7.1 - August 22, 2013
+  * v 0.7.2 - August 23, 2013
   *
   * This framework is still and development.  If you have any suggestions/fixes/comments, please
   * create an issue - https://github.com/bleachedgraphics/Brass-Tacks/issues 
@@ -37,6 +37,7 @@
   @import '_helper-sass/tables';          //  Helper classes for prettying up tables
   @import '_helper-sass/messaging';       //  Message boxes for common interactions
   @import '_helper-sass/forms';           //  Base form component rule
+  @import '_helper-sass/dividers';           //  Base form component rule
 
 // Project Specific Styling - see inside "base"
   @import '_project-sass/base';           //  Restyle and make classes specific for your project here

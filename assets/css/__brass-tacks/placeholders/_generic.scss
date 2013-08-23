@@ -1,6 +1,7 @@
 // ----------------------------------------------------------------
 //  Standard Reset
 // ----------------------------------------------------------------
+
 // Reset the Standard Tags,
 // extend to all tags that need this
 // for better organization of code
@@ -39,8 +40,17 @@
 }
 
 // ----------------------------------------------------------------
+//  Kill Outlines
+// ----------------------------------------------------------------
+
+%outline-None{
+  outline:none;
+}
+
+// ----------------------------------------------------------------
 //  Hides from screenreaders and browsers
 // ----------------------------------------------------------------
+
 // Hides from screenreaders and browsers
 %hidden{
   display:none!important;
