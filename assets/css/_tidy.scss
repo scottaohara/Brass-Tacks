@@ -10,19 +10,6 @@
   display:block;
 }
 
-.indent-1{
-  text-indent:1em;
-}
-.indent-2{
-  text-indent:2em;
-}
-.indent-3{
-  text-indent:3em;
-}
-
-// Coloring for code types
-.comment{color:#99a}
-
 // HTML
 
 // CSS
@@ -32,3 +19,32 @@
 .rule{color:#2e9fe8}
 .var{color:#9952b2}
 .at{color:#c3793e}
+
+// 
+// ----------------------------------------------------------------
+.comment{
+  color:#99a;
+}
+
+
+
+// ***************************
+//  Generic Block Element
+//*************************** 
+
+//<div class="block xHELPER-CLASSx">
+//  <div class="block-Body"></div>
+//</div>
+
+
+//<div class="block xHELPER-CLASSx">
+//  <header class="block-Header"></header> 
+//  <div class="block-Body"></div>
+//  <footer class="block-Footer"></footer>
+//</div>
+
+
+//<div class="block xHELPER-CLASSx">
+//  <div class="block-Body"></div>
+//  <footer class="block-Footer"></footer>
+//</div>

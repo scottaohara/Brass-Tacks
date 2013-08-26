@@ -6,7 +6,7 @@ nav{
   ul, ol{
     @extend %clearfix;
     @extend %reset;
-    list-style:none; 
+    @extend %kill-List; 
   }
 
   li{

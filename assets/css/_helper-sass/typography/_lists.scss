@@ -1,0 +1,13 @@
+// ----------------------------------------------------------------
+//  List Styles
+// ----------------------------------------------------------------
+
+// Kill list styling - removes list markings & padding
+.kill-List{
+  @extend %kill-List;
+}
+
+// For non-semantic list numbering
+.numbered{
+  list-style-type:decimal;
+}

@@ -1,0 +1,56 @@
+// ----------------------------------------------------------------
+//  Callout Text
+// ----------------------------------------------------------------
+
+// Shout Out - blockquote / blockquote like styling for emphasizing text
+.pull-Quote{
+  background:$c-Lighter;
+  border-left:4px solid $c-Dark;
+  padding:$px-Unit*4;
+
+  &:after,
+  &:before{
+    display:none;
+  }
+}
+
+// Background Text Highlight
+// ----------------------------------------------------------------
+.highlight{
+  @include border-radius($px-Unit);
+  background:$c-Highlight;
+  color:$c-Darker;
+  display:inline-block;
+  padding:$px-Unit;
+}
+
+//  Code Example: Slanted Text w/Highlight
+//  --------------------------
+//  <span class="slant">
+//    Text Goes here
+//  </span>
+
+
+// Background Text Highlight - Skewed
+.slant{
+  @include vendor(transform, skewX(-16deg));
+  @extend .highlight;
+}
+
+//  Code Example: Slanted Text w/Highlight
+//  --------------------------
+//  <span class="slant">
+//    Text Goes here
+//  </span>
+
+
+.text-Correct{
+  @include vendor(transform, skewX(16deg));
+  display:inline-block;
+}
+
+//  Code Example: Normal flowing text w/slanted highlight
+//  --------------------------
+//  <span class="slant">
+//    <span class="text-Correct">Text Goes here</span>
+//  </span>

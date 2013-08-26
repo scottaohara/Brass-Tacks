@@ -1,0 +1,46 @@
+// ----------------------------------------------------------------
+//  Showing & Hiding
+// ----------------------------------------------------------------
+
+// Show Elements with Display:block
+// ----------------------------------------------------------------
+.d-Block, .js-Show{
+  @extend %d-Block;
+}
+
+
+// Hide Elements with display:none
+// ----------------------------------------------------------------
+.d-None, .js-Hide, .mobile-Show{
+  @extend %d-None;
+}
+
+@media (max-device-width:480px), screen and (max-width:800px){
+  .mobile-Show{
+    display:block;
+  }
+}
+
+// Mute an element by changing Opacity
+// ----------------------------------------------------------------
+.mute{
+  opacity:.75;
+}
+
+.mute-More{
+  opacity:.5;
+}
+
+
+// Hides from screenreaders and browsers
+// ----------------------------------------------------------------
+.hidden{
+  @extend %hidden;
+}
+
+
+// Hide from browsers but not from screen readers
+// ----------------------------------------------------------------
+.invis{
+  @extend %invis;
+}

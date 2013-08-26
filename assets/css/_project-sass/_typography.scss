@@ -1,3 +1,8 @@
 // ----------------------------------------------------------------
 //		Typography for project
 // ----------------------------------------------------------------
+
+// Multi-Columned Text
+.multi{
+  @include multi-Col(3, $px-Unit*10, 1px, outset, $c-Light);
+}

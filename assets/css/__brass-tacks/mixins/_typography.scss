@@ -2,7 +2,7 @@
 //  Typography Mixins
 // ----------------------------------------------------------------
 
-//    Custom Text Selection Styling
+// Custom Text Selection Styling
 // ----------------------------------------------------------------
 @mixin select-Text-Default($select-BG, $txt-Color, $txt-Shadow){
   background:   $select-BG;
@@ -10,8 +10,17 @@
   text-shadow:  $txt-Shadow;
 }
 
-// include this into elements to have text selection colors be specific to region
+// Include this into elements to have text selection colors be specific to region
 @mixin select-Text($select-BG, $txt-Color, $txt-Shadow){
   ::-moz-selection  {@include select-Text-Default($select-BG, $txt-Color, $txt-Shadow)}
   ::selection       {@include select-Text-Default($select-BG, $txt-Color, $txt-Shadow)} 
+}
+
+
+// Multi-Column Text Blocks
+// ----------------------------------------------------------------
+@mixin multi-Col($cols, $gap, $rule-Width, $rule-Location, $rule-Color){
+  @include base-vendor(column-count, $cols);
+  @include base-vendor(column-gap, $gap);
+  @include base-vendor(column-rule, $rule-Width $rule-Location $rule-Color);
 }

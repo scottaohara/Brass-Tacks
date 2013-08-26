@@ -1,0 +1,67 @@
+// ----------------------------------------------------------------
+//  Media Element
+// ----------------------------------------------------------------
+
+// Media Item
+.media{
+  @extend %clearfix;
+  margin-bottom:$px-Unit*4;
+  position:relative;
+  z-index:2;
+  .media-Text >:last-child{
+    margin-bottom:0;
+  }
+  .media-Object{
+    float:left;
+    margin:0 $px-Unit*4 $px-Unit*2 0;
+    max-width:30%;
+  }
+}
+
+// Have media element appear on the right hand side
+.media-Reverse{
+  @extend .media;
+  .media-Object{
+    float:right;
+    margin:0 0 $px-Unit*2 $px-Unit*4;
+    max-width:30%;
+  }
+}
+
+.media-No-Wrap{
+  @extend .media;
+  padding-left:100px;
+  .media-Text{
+    float:left;
+    width:100%;
+  }
+  .media-Object{
+    margin-left:-100px;
+    margin-right:0;
+  }
+}
+
+.media-No-Wrap-Reverse{
+  @extend .media-Reverse;
+  padding-right:100px;
+
+  .media-Object{
+    margin-right:-100px;
+    margin-left:0;
+  }
+}
+ 
+//  Code Example
+//  --------------------------
+//  <div class="media">
+//    <div class="media-Object">
+//      <img src="assets/img/little-V.jpg" alt="" />
+//    </div>
+//    <div class="media-Text">
+//      <h1>Title for Meida Element</h1>
+//      <p>Paragraph text to go along with media element.</p>
+//    </div>
+//  </div>
+  
+//  --  Divs were used in this example, but the media element could be applied to various situations.
+//    Ie. could be used for a header or footer area where a logo is placed on the right or left w/text to the side.
