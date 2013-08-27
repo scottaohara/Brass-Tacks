@@ -24,6 +24,7 @@
 	padding-left:$px-Unit*10;
 	position:relative;
 	width:100%; // default width is 100%
+  
 	@media (max-device-width:480px), screen and (max-width:800px){
     margin-bottom:$px-Unit*2;
   }
@@ -81,7 +82,7 @@
 // The main purpose of a class like this is to apply to an inner HTML element of the column structure
 // so we can apply styling to the columns.
 .block{
-	background:#ccc;
+	background:$c-Grey;
 	color:#333;
 	padding:$px-Unit;
 	
@@ -95,7 +96,7 @@
   padding-right:6px;
   position:relative;
 
-  &:before, &:after{
+  &:after, &:before{
     background:url("../img/border.png") no-repeat 0 -20px;
     content:"";
     height:200px;
@@ -104,11 +105,12 @@
     top:0;
     width:1px;
   }
-  
-  &:before{
-    left:-14px;
-  }
+
   &:after{
     right:-14px;
   }
+  
+  &:before{
+    left:-14px;
+  }  
 }

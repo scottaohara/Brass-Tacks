@@ -1,0 +1,64 @@
+// ----------------------------------------------------------------
+//  Horizontal Navigations
+// ----------------------------------------------------------------
+
+// Place this class on the ul or ol inside the .nav.
+// Edit this file, or extend it / overwrite it in your project 
+// scss files to change it's styling.
+
+.h-Nav{
+  & > li{
+    float:left;
+  }
+
+  // Set drop menu location to the bottom of the hovered link
+  .drop-Menu{
+    @extend %drop-H;
+  }
+}
+
+// to be placed on the <ul> or <ol> -- don't use floats, but instead use display inline-block and center navigation links
+.c-Nav{
+  font-size:0;
+  text-align:center;
+    // font-size:0; deletes the white space between the <li>s 
+    // However, the font size inside of the <li>'s must be reset when using this trick.
+
+  & > li{
+    @extend %reset-Type;
+  }
+}
+
+// Sets links to the base font-size, while also making them inline-block.  Update for your own uses.
+%reset-Type{
+  display:inline-block;
+  font-size:16px;
+}
+
+
+// ----------------------------------------------------------------
+// Basic rules for Breadcrumb Navigations
+// ----------------------------------------------------------------
+.bread{
+  @extend .h-Nav;
+
+  li{
+    &:last-child:after{
+      content:none;
+    }
+    
+    &:after{
+      content:">";
+      display:inline-block;
+    }
+  }
+
+  a{
+    display:inline-block;
+  }
+
+  span{
+    display:inline-block;
+    padding:$px-Unit $px-Unit*2;
+  }
+}

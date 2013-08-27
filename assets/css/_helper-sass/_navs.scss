@@ -17,8 +17,6 @@
     &:hover{
       text-decoration:none;
     }
-
-    .selected{}
   }
 }
 
@@ -239,13 +237,11 @@ $height-Fixed-Nav:  100px;
   top:$px-Unit;
   width:28px;
 }
-/*
-  Code Example
 
-<a class="btn btn-Nav" id="btn-Nav-1" href="#show-Nav">
-    <span class="hidden">Show Navigation</span>
-</a>
-*/
+//  Code Example
 
+//<a class="btn btn-Nav" id="btn-Nav-1" href="#show-Nav">
+//    <span class="hidden">Show Navigation</span>
+//</a>
 
 

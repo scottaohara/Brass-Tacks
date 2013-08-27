@@ -4,7 +4,7 @@
   *
   * Brass Tacks
   * by Scott O'Hara - @scottohara - scottohara.me  -  https://github.com/bleachedgraphics
-  * v 0.7.3 - August 26, 2013
+  * v 0.7.3.1 - August 27, 2013
   *
   * This framework is still and development.  If you have any suggestions/fixes/comments, please
   * create an issue - https://github.com/bleachedgraphics/Brass-Tacks/issues 
@@ -49,7 +49,7 @@ a:active, a:hover, a:focus, :focus, input[type="submit"]::-moz-focus-inner {
   width: 1px !important; }
 
 input[type="date"], input[type="email"], input[type="file"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], textarea, .select-Container, .multi-Select, .input-File-Text, .input-Number {
-  background: #fdfdfd;
+  background: #fdfdfd none;
   border: 1px solid #cccccc;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   line-height: 1.25;
@@ -314,6 +314,7 @@ button, fieldset, form, input, select, textarea {
 
 button, html input[type='button'],
 input[type='reset'], input[type='submit'] {
+  background-image: none;
   cursor: pointer;
   -webkit-appearance: button; }
 
@@ -340,6 +341,7 @@ select {
   width: 100%; }
 
 input[type="color"] {
+  background-image: none;
   border: 1px solid #cccccc;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   height: 45px;
@@ -347,10 +349,10 @@ input[type="color"] {
   padding: 0 4px;
   width: 75%; }
   input[type="color"]:focus {
-    background: #f0f0f0;
-    border: 1px solid #50B6D5;
     -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.25) inset;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.25) inset; }
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.25) inset;
+    background: #f0f0f0;
+    border: 1px solid #50B6D5; }
 
 textarea {
   display: block;
@@ -398,9 +400,14 @@ hr {
   margin: 8px 0; }
 
 .btn, .btn-Small, .btn-Large, .btn-XLarge, .btn-Radio {
-  background: #333333;
   border-radius: 4px;
   background-clip: padding-box;
+  -moz-transition: all 0.25s ease-in-out 0s;
+  -ms-transition: all 0.25s ease-in-out 0s;
+  -o-transition: all 0.25s ease-in-out 0s;
+  -webkit-transition: all 0.25s ease-in-out 0s;
+  transition: all 0.25s ease-in-out 0s;
+  background: #333333 none;
   color: #f0f0f0;
   cursor: pointer;
   display: inline-block;
@@ -410,18 +417,13 @@ hr {
   padding: 8px 12px;
   text-align: center;
   text-decoration: none !important;
-  -moz-transition: all 0.25s ease-in-out 0s;
-  -ms-transition: all 0.25s ease-in-out 0s;
-  -o-transition: all 0.25s ease-in-out 0s;
-  -webkit-transition: all 0.25s ease-in-out 0s;
-  transition: all 0.25s ease-in-out 0s;
   -webkit-appearance: none; }
   .btn.btn-Pad, .btn-Pad.btn-Small, .btn-Pad.btn-Large, .btn-Pad.btn-XLarge, .btn-Pad.btn-Radio {
     padding: 8px 16px; }
-  .btn:hover, .btn-Small:hover, .btn-Large:hover, .btn-XLarge:hover, .btn-Radio:hover, .btn:active, .btn-Small:active, .btn-Large:active, .btn-XLarge:active, .btn-Radio:active {
-    background: #1a1a1a;
+  .btn:active, .btn-Small:active, .btn-Large:active, .btn-XLarge:active, .btn-Radio:active, .btn:hover, .btn-Small:hover, .btn-Large:hover, .btn-XLarge:hover, .btn-Radio:hover {
     -webkit-box-shadow: 0 0 6px rgba(255, 255, 255, 0.5) inset;
     box-shadow: 0 0 6px rgba(255, 255, 255, 0.5) inset;
+    background: #1a1a1a;
     color: #f0f0f0; }
   .btn:visited, .btn-Small:visited, .btn-Large:visited, .btn-XLarge:visited, .btn-Radio:visited {
     color: #f0f0f0; }
@@ -797,7 +799,7 @@ hr {
         width: auto; } }
 
 .block {
-  background: #ccc;
+  background: #cccccc;
   color: #333;
   padding: 4px; }
   .block > :last-child {
@@ -807,7 +809,7 @@ hr {
   padding-left: 6px;
   padding-right: 6px;
   position: relative; }
-  .b-Col:before, .b-Col:after {
+  .b-Col:after, .b-Col:before {
     background: url("../img/border.png") no-repeat 0 -20px;
     content: "";
     height: 200px;
@@ -815,10 +817,10 @@ hr {
     position: absolute;
     top: 0;
     width: 1px; }
-  .b-Col:before {
-    left: -14px; }
   .b-Col:after {
     right: -14px; }
+  .b-Col:before {
+    left: -14px; }
 
 .media, .media-Reverse, .media-No-Wrap-Reverse, .media-No-Wrap {
   margin-bottom: 16px;
@@ -1051,13 +1053,6 @@ hr {
   top: 4px;
   width: 28px; }
 
-/*
-  Code Example
-
-<a class="btn btn-Nav" id="btn-Nav-1" href="#show-Nav">
-    <span class="hidden">Show Navigation</span>
-</a>
-*/
 .table-Header {
   background: #eeeeee; }
 
@@ -1196,6 +1191,9 @@ a {
 
 .table-2col td {
   width: 50%; }
+
+.nav ul, .footer-Nav ul, .nav ol, .footer-Nav ol {
+  border: 1px solid #eeeeee; }
 
 .footer-Base {
   background: #2d2d2d;

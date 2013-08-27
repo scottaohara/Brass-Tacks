@@ -19,3 +19,10 @@
 .table-2col{
   td{width:50%}
 }
+
+// Add a border to .nav so it is easier to see in examples
+.nav{
+  ul, ol{
+    border:1px solid $c-Light;
+  }
+}

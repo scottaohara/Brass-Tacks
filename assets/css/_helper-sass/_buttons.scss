@@ -3,8 +3,9 @@
 // ----------------------------------------------------------------
 
 .btn{
-  background:$c-Dark; 
   @include border-radius($px-Unit);
+  @include vendor(transition, all .25s ease-in-out 0s);
+  background:$c-Dark none; 
   color:$c-Lighter;
   cursor:pointer;
   display:inline-block;
@@ -16,16 +17,15 @@
   padding:$px-Unit*2 $px-Unit*3; 
   text-align:center;
   text-decoration:none!important; // never have an underline on button text.
-  @include vendor(transition, all .25s ease-in-out 0s);
   -webkit-appearance:none;
     
   &.btn-Pad{
     padding:$px-Unit*2 $px-Unit*4;
   }
 
-  &:hover, &:active{
-    background:$c-Darker; 
+  &:active, &:hover{
     @include box-shadow($bs-6);
+    background:$c-Darker; 
     color:$c-Lighter;
   }
 

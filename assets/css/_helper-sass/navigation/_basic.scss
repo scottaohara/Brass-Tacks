@@ -1,0 +1,23 @@
+// ----------------------------------------------------------------
+//  Basic Setup for Navigation Elements
+// ----------------------------------------------------------------
+
+// The main navigation class to be placed on the <nav>
+// Edit this file, or extend it / overwrite it in your project 
+// scss files to change it's styling.
+
+.nav{
+  ul, ol{
+    padding:$px-Unit;
+  }
+
+  a{
+    display:block;
+    padding:$px-Unit $px-Unit*3;
+    text-decoration:underline;
+
+    &:hover{
+      text-decoration:none;
+    }
+  }
+}
