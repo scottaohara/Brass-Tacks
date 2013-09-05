@@ -71,15 +71,15 @@
 //  Word Wraps
 // ----------------------------------------------------------------
 
-%auto-wrap{
+%auto-Wrap{
   word-wrap:auto;
 }
 
-%breakword{
+%break-Word{
   word-wrap:break-word;
 }
 
-%normal-wrap{
+%normal-Wrap{
   word-wrap:normal;
 }
 
@@ -87,12 +87,16 @@
 // ----------------------------------------------------------------
 //  :after Symbols
 // ----------------------------------------------------------------
-%degree:after{
-  content:"\00BA";  // Creates degree symbol
+%degree{
+  &:after{
+    content:"\00BA";  // Creates degree symbol
+  }
 }
 
-%go:after{
-  content:"\00A0" "\00BB";  // >> (use on link / btn
+%go{
+  &:after{
+    content:"\00A0" "\00BB";  // >> (use on link / btn
+  }
 }
 
 
