@@ -1,10 +1,14 @@
 // ----------------------------------------------------------------
-// Sets the base font-size and line height.
+// Sets the base font-size and line heights.
 // ----------------------------------------------------------------
 
 %font-Size-LH{
   font-size:100%;
   line-height:1.5;
+}
+
+%giga, %ulta, %mega, %alpha{
+  line-height:1
 }
 
 
