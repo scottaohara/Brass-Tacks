@@ -2,18 +2,19 @@
 //  Helper Sass Master List
 // ----------------------------------------------------------------
 
-@import 'buttons';                        //
-@import 'dividers';                       //
-@import 'emphasis-Block';                 //
-@import 'floats-And-Clears';              //
-@import 'forms';                          //
+@import 'buttons';                        // Classes for buttons
+@import 'dividers';                       // Classes for divider lines
+@import 'emphasis-Block';                 // Classes to give elements emphasis
+@import 'floats-And-Clears';              // Classes for floating/clearing
+@import 'forms';                          // Classes for styling forms
 @import 'show-And-Hide';                  // Classes to show, hide or mute elements
-@import 'images';                         //
-@import 'layout';                         //
-@import 'media-Element';                  //
-@import 'messaging';                      //
-@import 'navs';                           //
-@import 'tables';                         //
+@import 'images';                         // Classes for styling images
+@import 'layout';                         // Classes for layouts
+@import 'media-Element';                  // Classes to create the media/text element
+@import 'messaging';                      // Classes for messaging elements
+@import 'navs';                           // Classes for styling navigations
+@import 'shapes';                         // Classes to make elements into shapes
+@import 'tables';                         // Classes for table styling
 
 // Typograhy Helpers
 @import 'typography/align';               // Alignment classes

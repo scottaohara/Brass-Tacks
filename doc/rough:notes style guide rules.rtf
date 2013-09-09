@@ -1,0 +1,175 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf390
+{\fonttbl\f0\fswiss\fcharset0 ArialMT;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww17100\viewh14600\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\b\fs28 \cf0 // http://nicolasgallagher.com/about-html-semantics-front-end-architecture/\
+\
+// http://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml\
+\
+// http://purecss.io/\
+\
+// http://engineering.appfolio.com/2012/11/16/css-architecture/\
+\
+Sass\
+\pard\pardeftab720
+
+\b0 \cf0 We will be using Sass (scss) for developing our CSS.  \
+\
+Please adhere to the following when writing your code:\
+1. Use minimal to no IDs.  \
+	- IDs create super specificity that works against an Object Oriented mindset.  \
+2. Aside from base defaults (normalizing), there should be minimal to no styling of straight HTML tags.\
+	Exceptions being typographical & color setting for text elements, and basic display settings for other applicable elements.\
+	- Use classes / selectors beginning with classes to target down to HTML tags.\
+	  ie: \
+	      .header-Base\{\} to style the main <header>\
+	      or \
+	      .nav li\{\} to style <li>s within a .nav\
+3. When writing mixins, give them obvious names.  Ie, a box-shadow mixin should be named as such, and not simply 'shadow'.  \
+	Is it a text-shadow, a box-shadow?  Be clear and then questions like this won't arise.\
+4. When writing rules, list @extends first, it's good to know right off the bat that a class inherits other rules.\
+5. List regular styling next, and attempt to keep alphabetical.  This will cut down on instances of double rule declarations.  For example, one developer may put their positioning rules at the top of a CSS rule, while another puts theirs at the bottom of a rule set.  Obviously the bottom rules ail always overwrite the top, leading to potential confusion or QA issues if rules go unnoticed. \
+6. List @includes all at the end of your css rules.  \
+	.foo\{\
+		@extend %wut;\
+		background:#f00;\
+		@include box-shadow;\
+	\}\
+\
+\
+\
+We don't need vendor prefixes for Border-Radius.  The only old browser that still has a noticeable market share that doesn't support it is IE8, and IE9 does support it without need for a prefix.\
+\
+Separate Structure / Styling / Functionality\
+HTML for structure, CSS for styling and JS for functionality.\
+Simply speaking HTML should be written semantically and not include inline styles or js.  \
+\
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////\
+\
+CSS should be predictable, reusable, maintainable, and scalable.\
+\
+\pard\pardeftab720\sa280
+\cf0 Predictable\
+\pard\pardeftab720\sa240
+\cf0 Predictable CSS means your rules behave as you\'92d expect. When you add or update a rule, it shouldn\'92t affect parts of your site that you didn\'92t intend. \
+\pard\pardeftab720\sa280
+\cf0 Reusable\
+\pard\pardeftab720\sa240
+\cf0 CSS rules should be abstract and decoupled enough that you can build new components quickly from existing parts without having to recode patterns and problems you\'92ve already solved.\
+\pard\pardeftab720\sa280
+\cf0 Maintainable\
+\pard\pardeftab720\sa240
+\cf0 When new components and features need to be added, updated or rearranged on your site, doing so shouldn\'92t require refactoring existing CSS. Adding component X to the page shouldn\'92t break component Y by its mere presence.\
+\pard\pardeftab720\sa280
+\cf0 Scalable\
+\pard\pardeftab720\sa240
+\cf0 Scalable CSS can be easily managed by a single person or a large engineering team. It also means your site\'92s CSS architecture is easily approachable without requiring an enormous learning curve.\
+\pard\pardeftab720
+\cf0 \
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////\
+\
+Practices to stay away from:\
+\
+1. Giving modules specific styling based on the section they are in.\
+\
+ie. .sidebar .widget\{\} being different than .header .widget or body.home .widget\
+\
+The markup for this HTML widget is likely the same in all instances, but the styling would clearly be different,\
+resulting in potential confusion, or yet another more specific CSS rule set overriding the base .widget rules.\
+\
+In the grand picture, this is not very maintainable because if .widget were to ever get redesigned, then there are multiple different\
+versions of .widget that would need to be re-looked at.\
+\
+2. Overly Complicated Selectors\
+The more complicated the selector, the more strongly tied the CSS is to the HTML.  The stronger this relation, the more likely updating either\
+one code base will require having to update both code bases.\
+\
+3. Generic Class Names\
+Overly generic class names can lead to unwanted mixing of styling.  .widget . title\{\} may have particular styling, but with another developer may not be working on the .widget class, and may have developed a .title without a parent selector.  Now, any rules that the developer gave to .title, that aren't canceled out by .widget .title, will now start to affect that rule set.\
+\
+4. Making a rule do too much\
+A rule that does too much is a rule that likely won't be very reusable.   \
+\
+For instance:\
+.widget\{\
+	background:#efefef;\
+	border-radius:0 10px 10px 0;\
+	height:200px;\
+	left:0;\
+	position:absolute;\
+	text-transform:uppercase;\
+	top:0;\
+	width:200px;\
+\}\
+\
+.widget is now only useful as a block that is position absoluted in the top, left, with specifics layout and styling rules.\
+Now if we need to use a component that looks just like .widget in another area of the website, but don't want the absolute positioning\
+that goes along with it, then we have to either overwrite the rules for that particular section/instance or write a copy of the rule with the pieces we don't want removed.\
+\
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////\
+\
+Multimedia Fallback
+\b \
+
+\b0 Always provide alternative content for multimedia.\
+That means for images, video or canvas objects, make sure to offer alternative access.  Images should always have alt attributes.  Video and audio should provide transcripts and captions if available.\
+\
+\
+\pard\pardeftab720
+
+\b \cf0 Headings Notes:
+\b0 \
+Do not use <h1> - <h6> elements to markup subheadings, subtitles, alternative titles and tag-lines unless they are intended to be the heading for a new section or subsection.\
+\
+If you need to use a subtitle for a particular section, use either the <p> tag or <small> tag with the appropriate heading class (alpha, beta, etc\'85) to create the visual heading hierarchy you are trying to achieve.\
+\
+When structuring content hierarchy on a page, make sure to use the proper <h> tag for each section.  If there are multiple top level sections of your page, they can each have their own <h1> tag.  If there is only one main top level section of your page, then structure your <h> tags in defending order of importance, using the heading classes to change their visual importance if need be.\
+\
+If multiple headings are required for a section, wrap them in a <header>.  \
+We should never be using straight HTML tags for styling, so there should be no worry about inheriting the styling of the main header of the website.\
+\
+\
+
+\b Media Element Notes:
+\b0 \
+The Media Element is likely going to be one of the most reused snippets of HTML throughout our pages, as it should be used each time you need to have a standalone grouping of an image and short text.\
+\
+<!-- put examples of media element usage here -->\
+\
+\
+
+\b Buttons:
+\b0 \
+asdf\
+\
+If you need to make an element clickable, then you should be using either a <button>, <input type="submit" /> or <a> with the appropriate styling classes.  Never use HTML tags that were not meant for clicking.\
+\
+\
+
+\b Text Elements (not headings):
+\b0 \
+When including text, \
+\
+\
+Applying Margins\
+Only apply margins in one direction in all of css.  Ie. only ever apply margin top or bottom, left or right to elements.  This is particularly useful in defining a consistent vertical rhythm and negates the times when top/bottom margins collapse in on each other.\
+\
+\
+\
+\
+Head Section Elements\
+Structure of elements in the head tag\
+\
+<meta> (only include if applicable to tag.)\
+item prop, property, name, content\
+\
+<link>\
+rel, type, href\
+\
+<script>\
+type, src\
+\
+\
+}

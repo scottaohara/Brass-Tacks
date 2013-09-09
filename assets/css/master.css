@@ -4,7 +4,7 @@
   *
   * Brass Tacks
   * by Scott O'Hara - @scottohara - scottohara.me  -  https://github.com/bleachedgraphics
-  * v 0.7.3.1 - August 27, 2013
+  * v 0.7.3.3 - September 9, 2013
   *
   * This framework is still and development.  If you have any suggestions/fixes/comments, please
   * create an issue - https://github.com/bleachedgraphics/Brass-Tacks/issues 
@@ -71,6 +71,9 @@ input[type="date"], input[type="email"], input[type="file"], input[type="number"
 body {
   font-size: 100%;
   line-height: 1.5; }
+
+.giga, .mega, h1, .alpha {
+  line-height: 1; }
 
 .giga {
   font-size: 4.375em;
@@ -672,11 +675,6 @@ hr {
 .mute-More {
   opacity: .5; }
 
-.circle {
-  border-radius: 1100px;
-  background-clip: padding-box;
-  overflow: hidden; }
-
 .frame {
   border: 1px solid #333333;
   display: inline-block; }
@@ -1052,6 +1050,11 @@ hr {
   right: 4px;
   top: 4px;
   width: 28px; }
+
+.circle {
+  border-radius: 1100px;
+  background-clip: padding-box;
+  overflow: hidden; }
 
 .table-Header {
   background: #eeeeee; }

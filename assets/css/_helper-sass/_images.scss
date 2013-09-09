@@ -2,12 +2,6 @@
 //  Helper Classes for Images
 // ----------------------------------------------------------------
 
-// Make images into circles
-.circle{
-  @include border-radius($circle);
-  overflow:hidden;
-}
-
 // Give pictures a frame
 .frame{
   border:1px solid $c-Dark;

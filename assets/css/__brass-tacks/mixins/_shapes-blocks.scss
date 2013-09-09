@@ -1,0 +1,21 @@
+// ----------------------------------------------------------------
+//  CSS Block Shapes
+// ----------------------------------------------------------------
+
+// Prefect Square
+@mixin square($measurement){
+  height:$measurement;
+  width:$measurement;
+}
+
+// Wide Rectangle
+@mixin rectangle-Wide($measurement, $number){
+  height:$measurement;
+  width:$measurement*$number;
+}
+
+// Tall Rectangle
+@mixin rectangle-Tall($measurement, $number){
+  height:$measurement*$number;
+  width:$measurement;
+}
