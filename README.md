@@ -1,4 +1,4 @@
-# Brass Tacks (Last updated: 0.7.3.3)
+# Brass Tacks (Last updated: 0.7.3.3.1)
 
 Brass Tacks is (will be) a professional front-end HTML5 and SCSS framework that incorporates and standardizes many widely used HTML and CSS elements.
 
@@ -40,6 +40,8 @@ the majority of website projects I've been involved with.
 
 
 ## Current Usage:
+
+* September --, 2013    - Project to be named upon completion - version 0.7.3.3
 
 * September --, 2013    - Project to be named upon completion - version 0.7.3.2.1
 

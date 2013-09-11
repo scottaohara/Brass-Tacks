@@ -19,12 +19,6 @@ pre{
   white-space:pre-wrap;
 }
 
-mark{
-  background:#eee;
-  border-bottom:1px solid #ddd;
-  color:$c-Dark;
-}
-
 p, li{
   code, kbd, pre, samp{
     display:inline-block; 
