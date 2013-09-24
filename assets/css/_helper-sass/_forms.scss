@@ -80,23 +80,41 @@
 }
 
 .input-Radio:checked + .btn-Radio{
-  background:$c-Btn-2;
-  border-color:$c-Dark;
+  background:$c-Brand-1;
+}
+
+.input-Radio:checked + .btn-Radio:after{
+  border-color:$c-White;
+  opacity:1
 }
 
 .btn-Radio{
-  @extend .btn;
   background:$c-Btn-RC;
   border:1px solid $c-Grey;
-  font-size:14px!important;
-  height:14px;
-  padding:2px!important;
+  @include border-radius($circle);
+  cursor:pointer;
+  display:inline-block;
+  height:20px;
   position:relative;
-  top:1px;
-  width:14px;
+  top:4px;
+  width:20px;
 
-  &:hover{
-    background:$c-Btn-2;
+  &:after{
+    @include vendor(transform, rotate(-45deg));
+    border:3px solid #000;
+    border-top:none;
+    border-right:none;
+    content:'';
+    height:5px;
+    left:5px;
+    opacity:0;
+    position:absolute;
+    top:6px;
+    width:8px; 
+  }
+
+  &:hover::after{
+    opacity:.3;
   }
 }
 
@@ -104,17 +122,19 @@
 // Drop Down Selection Inputs
 .select-Container{
   @extend %input-Area;
-  background:url(../img/drop-Arrow.png) no-repeat 99% center #fff;
-  display:inline-block;
+  background:url(../img/drop-Arrow.png) no-repeat 99% center $c-White;
+  display:block;
   overflow:hidden;
 }
 
 .input-Select{
   background:none;
   border:0;
+  font-family:$brand;
   font-size:$base;
+  font-weight:300;
   margin-bottom:0;
-  padding-right:$px-Unit*4;
+  padding:0 $px-Unit*4 0 0;
   width:120%;
   -webkit-appearance:textarea;
 }
