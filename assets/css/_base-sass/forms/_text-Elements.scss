@@ -9,9 +9,9 @@ legend{
   padding:0 $px-Unit;
 }
 
-label{
+label, .label{
   display:block;
-  margin-bottom:$px-Unit;
+  margin-bottom:$px-Unit*2;
 
   &[for]{
     cursor:pointer;

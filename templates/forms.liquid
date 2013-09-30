@@ -40,12 +40,18 @@
         <label for="input-Tel">Input - Phone Number</label>
         <input type="tel" id="input-Tel" placeholder="555.555.5555" />
 
-        <label for="input-Search">Input - Search</label>
-        <input type="search" id="input-Search" placeholder="Search for..." />
-        <input type="submit" class="btn btn-Action" value="Search" />
+        <label for="input-Search">Input - Search (field only)</label>
+        <input type="search" class="input-Search" id="input-Search" placeholder="Search for..." />
+        
+        <label for="search-Area">Input &amp; Button combo area</label>
+        <div class="search-Area">
+          <input type="search" id="search-Area" class="input-Search" placeholder="Search for..." />
+          <input type="submit" class="btn btn-Search btn-Action" value="Search" />
+        </div>
 
         <label for="input-TextArea">Text Area</label>
         <textarea id="input-TextArea"></textarea>
+
       </fieldset>
 	</div> <!-- end .col-50 -->
 	
@@ -157,21 +163,35 @@
         <input type="checkbox" id="check-1" />
       </div>
 
-      <label for="check-2" class="input-Checkbox">
-        <input type="checkbox" value="None" id="check-2" class="checkbox" />
+      <label for="check-2" class="cr-Area">
+        <input type="checkbox" value="None" id="check-2" class="input-Hide" />
         Designed Checkbox (ie9+)
-        <span class="visual-Check"></span>
+        <span class="check-Radio"></span>
+      </label>
+
+      <label for="check-3" class="cr-Slider">
+        <input type="checkbox" id="check-3" class="input-Hide input-Slide" />
+        <span class="crs"></span>
+        <span class="crs-Label">Text label</span>
       </label>
      </fieldset>
      
       <strong>Code for Designed Checkbox</strong>
       <code class="tiny">
-        &lt;label for="check-2" class="input-Checkbox"><br />
-          &nbsp;&nbsp;&lt;input type="checkbox" value="None" id="check-2" class="checkbox" name="check" /><br />
+        &lt;label for="check-2" class="cr-Area"><br />
+          &nbsp;&nbsp;&lt;input type="checkbox" value="None" id="check-2" class="input-Hide" name="check" /><br />
           &nbsp;&nbsp;Designed Checkbox<br />
-         &nbsp;&nbsp;&lt;span class="visual-Check">&lt;/span><br />
+         &nbsp;&nbsp;&lt;span class="check-Radio">&lt;/span><br />
         &lt;/label>
       </code>
+
+      <code class="tiny">
+      &lt;label for="check-3" class="cr-Slider">
+        &lt;input type="radio" id="check-3" class="input-Hide input-Slide" />
+        &lt;span class="crs">&lt;/span>
+        &lt;span class="crs-Label">Text label&lt;/span>
+      &lt;/label>
+     </code>
   </div>
   
 	<div class=" col col-50">
@@ -183,20 +203,37 @@
         Classless Radio Button
       </label>
 
-      <label for="r2">
-        <input type="radio" id="r2" name="rr" class="input-Hide input-Radio" />
-        <span class="btn-Radio"></span>
+      <label for="r2" class="cr-Area">
+        <input type="radio" id="r2" name="rr" class="input-Hide radio-Syle" />
+        <span class="check-Radio"></span>
         Designed Radio Button
       </label>
+
+      <label for="r3" class="cr-Slider">
+        <input type="radio" id="r3" name="rr" class="input-Hide input-Slide" />
+        <span class="crs circle"></span>
+        <span class="crs-Label">Text label</span>
+      </label>
+
     </fieldset>
      
      <strong>Code for Designed Radio Buttons</strong>
      <code class="tiny">
-        &lt;label for="r3" class="radio-Hold"><br />
-        &nbsp;&nbsp;&lt;input type="radio" id="r2" name="rr" class="input-Hide" /><br />
-        &nbsp;&nbsp;&lt;span class="btn-Radio">&lt;/span>Label <br />
+        &lt;label for="r3" class="cr-Area"><br />
+        &nbsp;&nbsp;&lt;input type="radio" id="r2" name="rr" class="input-Hide radio-Style" /><br />
+        &nbsp;&nbsp;&lt;span class="check-Radio">&lt;/span>Label <br />
       &lt;/label>
      </code>
+
+     <strong>Code for Slider Radio Button</strong>
+     <code class="tiny">
+      &lt;label for="r3" class="cr-Slider">
+        &lt;input type="radio" id="r3" name="rr" class="input-Hide input-Slide" />
+        &lt;span class="crs circle">&lt;/span>
+        &lt;span class="crs-Label">Text label&lt;/span>
+      &lt;/label>
+     </code>
+     <small>There is commented out code for on/off labels in the helper forms.scss, if you would like to use those.</small>
 	</div>
 </div> <!-- end .row -->          
 

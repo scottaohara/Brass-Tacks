@@ -2,11 +2,6 @@
 //    Form Elements: Input Elements
 // ----------------------------------------------------------------
 
-// Makes it look like a normal text input, only with a (x) when text has been entered
-input[type='search']{
-  -webkit-appearance:textfield;
-} 
-
 // Disabled input styling
 input[disabled]{
   background:$c-Light;
@@ -25,11 +20,16 @@ input[type='search']::-webkit-search-decoration{
 
 // Base styling for text input elements
 input{
-  &[type="date"], &[type="email"], &[type="file"], &[type="number"], &[type="password"], &[type="search"], 
-  &[type="tel"], &[type="text"], &[type="time"], &[type="url"]{
+  &[type='date'], &[type='email'], &[type='file'], &[type='number'], &[type='password'], &[type='search'], 
+  &[type='tel'], &[type='text'], &[type='time'], &[type='url']{
     @extend %input-Area;
   }
 }
+
+// Makes it look like a normal text input, only with a (x) when text has been entered
+input[type='search']{
+  -webkit-appearance:textfield;
+} 
 
 select{
   border:1px solid $c-Border;
@@ -40,7 +40,7 @@ select{
 // Color is not supported in all browsers, and extending %input-Area breaks the default look in webkit
 // so instead we will carry over some of the input-Area styling that doesn't break it in webkit, but 
 // standardizes it in other browsers.
-input[type="color"]{
+input[type='color']{
   background-image:none;
   border:1px solid $c-Border;
   font-family:$arial;
@@ -65,5 +65,4 @@ textarea{
   overflow:auto;
   resize:vertical;
   vertical-align:top;
-  width:100%;
 }
