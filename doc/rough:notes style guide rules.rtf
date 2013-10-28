@@ -1,7 +1,7 @@
 {\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf390
 {\fonttbl\f0\fswiss\fcharset0 ArialMT;}
 {\colortbl;\red255\green255\blue255;}
-\margl1440\margr1440\vieww17100\viewh14600\viewkind0
+\margl1440\margr1440\vieww17100\viewh14300\viewkind0
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
 
 \f0\b\fs28 \cf0 // http://nicolasgallagher.com/about-html-semantics-front-end-architecture/\
@@ -30,17 +30,18 @@ Please adhere to the following when writing your code:\
 3. When writing mixins, give them obvious names.  Ie, a box-shadow mixin should be named as such, and not simply 'shadow'.  \
 	Is it a text-shadow, a box-shadow?  Be clear and then questions like this won't arise.\
 4. When writing rules, list @extends first, it's good to know right off the bat that a class inherits other rules.\
-5. List regular styling next, and attempt to keep alphabetical.  This will cut down on instances of double rule declarations.  For example, one developer may put their positioning rules at the top of a CSS rule, while another puts theirs at the bottom of a rule set.  Obviously the bottom rules ail always overwrite the top, leading to potential confusion or QA issues if rules go unnoticed. \
-6. List @includes all at the end of your css rules.  \
+5. List regular styling next, and write rules in alphabetical order.  This will cut down on instances of double rule declarations.  For example, one developer may put their positioning rules at the top of a CSS rule, while another puts theirs at the bottom of a rule set.  Obviously the bottom rules ail always overwrite the top, leading to confusion or QA issues if rules go unnoticed. \
+6. List @includes after any @extends \
 	.foo\{\
 		@extend %wut;\
-		background:#f00;\
 		@include box-shadow;\
+		background:#f00;\
+		\
 	\}\
 \
 \
 \
-We don't need vendor prefixes for Border-Radius.  The only old browser that still has a noticeable market share that doesn't support it is IE8, and IE9 does support it without need for a prefix.\
+We don't need vendor prefixes for Border-Radius.  The only old browser that still has a noticeable market share that doesn't support it is IE8, and all other modern browsers no longer need the prefix to use it.  The only exception to this rule is old mobile webkit browsers.  If we still care about those, the only prefix we need is -webkit-\
 \
 Separate Structure / Styling / Functionality\
 HTML for structure, CSS for styling and JS for functionality.\

@@ -2,8 +2,8 @@
 //		Styling for form elements
 // ----------------------------------------------------------------
 
-.grouping, .form-Row{ // going back and forth on which class name I like here
-  padding:$px-Unit 0; // I should make a decision someday...
+.form-Row{ // group form elements and give them some space via padding
+  padding:$px-Unit 0;
 }
 
 
@@ -27,7 +27,9 @@
 }
 
 .inline-All{ // inline all elements inside a container
-  input, textarea, label{
+  input,
+  textarea,
+  label{
     @extend .inline-Element;
   }
 }
@@ -129,6 +131,10 @@
 
 .multi-Select{
   @extend %input-Area;
+
+  option{
+    padding:$px-Unit 2px;
+  }
 }
 
 

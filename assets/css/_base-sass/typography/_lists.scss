@@ -13,7 +13,9 @@ ol, ul{
   } 
 }
 
-li{@extend %margin-Bottom;}
+li{
+  @extend %margin-Bottom;
+}
 
 // Normal & Small sized fonts
 li,

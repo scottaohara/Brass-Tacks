@@ -22,10 +22,10 @@
 
 
 // Create a profile
-.pic, %pic{
-  border:1px solid $c-White;
+.pic{
   @include border-radius($px-Unit);
   @include box-shadow($bs-4);
+  border:1px solid $c-White;
   display:inline-block;
   overflow:hidden;
   width:90px;
@@ -37,7 +37,7 @@
 
 // Make picture into a circle
 .pic-Rounded{
-  @extend %pic;
+  @extend .pic;
   @include border-radius($circle);
 }
 // 

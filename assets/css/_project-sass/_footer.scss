@@ -1,5 +1,5 @@
 // ----------------------------------------------------------------
-//		Project Specific: Footer Area
+//    Project Specific: Footer Area
 // ----------------------------------------------------------------
 
 // Apply to <footer> for styling
@@ -16,8 +16,12 @@
 // Extend the .nav class to style your footer navigation
 .footer-Nav{
   @extend .nav;
-  a{/* add in project styling for footer a tags here */
-    &:hover{/* add in project styling for a:hover here */}
-    &.selected{/* add in project styling for a.selected here */}
+  a{ // add in project styling for footer a tags here
+    &:hover{
+      // add in project styling for a:hover here
+    }
+    &.selected{
+      // add in project styling for a.selected here
+    }
   }
 }

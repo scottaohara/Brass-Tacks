@@ -1,5 +1,5 @@
 // ----------------------------------------------------------------
-//		Project Specific: Main Content Area
+//    Project Specific: Main Content Area
 // ----------------------------------------------------------------
 
 // Apply to <main> or top level <section> for styling
@@ -8,9 +8,9 @@
   padding-bottom:$px-Unit*5;
 
   .content{
+    @include box-shadow($bs-4);
     background:$c-White; 
     border:1px solid $c-Light; 
-    @include box-shadow($bs-4);
   }
 }
 

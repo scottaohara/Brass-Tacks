@@ -3,15 +3,14 @@
 // ----------------------------------------------------------------
 
 .emph-Block{
-  background:$c-White;
-  border:1px solid $c-Light-Grey;
   @include border-radius($px-Unit);
   @include box-shadow($bs-4);
+  @include last-Child-0();
+  background:$c-White;
+  border:1px solid $c-Light-Grey;
   margin-bottom:$px-Unit*4;
   min-height:50px;
   padding:$px-Unit*4;
-  
-  @include last-Child-0();
 }
 
 // Code Example
@@ -19,4 +18,3 @@
 // <div class="emph-Block">
 //  ...
 // </div>
- 

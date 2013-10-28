@@ -20,7 +20,8 @@ input[type='search']::-webkit-search-decoration{
 
 // Base styling for text input elements
 input{
-  &[type='date'], &[type='email'], &[type='file'], &[type='number'], &[type='password'], &[type='search'], 
+  &[type='date'], &[type='email'], &[type='file'], 
+  &[type='number'], &[type='password'], &[type='search'], 
   &[type='tel'], &[type='text'], &[type='time'], &[type='url']{
     @extend %input-Area;
   }

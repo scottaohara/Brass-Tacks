@@ -14,9 +14,9 @@
 	<h3>Base Input Fields</h3>
 	
 	<div class="row">
-	  <div class="col col-50">
+	  <div class="col w-50">
 
-      <fieldset class="grouping">
+      <fieldset class="form-Row">
         <label for="input-Text">Input - Normal Text</label>
         <input type="text" id="input-Text" placeholder="Write Text Here" />
 
@@ -53,10 +53,10 @@
         <textarea id="input-TextArea"></textarea>
 
       </fieldset>
-	</div> <!-- end .col-50 -->
+	</div> <!-- end .w-50 -->
 	
-	<div class="col col-50">
-		<fieldset class="grouping fieldset">
+	<div class="col w-50">
+		<fieldset class="form-Row fieldset">
       <legend class="legend">Input Variants</legend>
       <label class="dis-Label">Disabled Text Input</label> 
       <input type="text" value="Disabled text input" disabled="disabled" />
@@ -90,7 +90,7 @@
         &lt;fieldset> elements in your forms.
       </li>
       <li>
-        Use the class of <code>.grouping</code> on divs or fieldsets within forms to 
+        Use the class of <code>.form-Row</code> on divs or fieldsets within forms to 
         apply block level groups to elements, and to apply slight padding between groups.
       </li>
     </ul>
@@ -102,9 +102,9 @@
 
 <h3>File Inputs</h3>
 <div class="row">
-  <div class="col col-50">
+  <div class="col w-50">
     <p class="eps">With Classes</p>
-    <fieldset class="grouping">
+    <fieldset class="form-Row">
       <div class="file-Input-Area">
         <input type="file" id="input-File" class="input-File" />
         <label for="input-File">File Input</label>
@@ -120,7 +120,7 @@
     </fieldset>
 
 </div>
-  <div class="col col-50">
+  <div class="col w-50">
     <p>
       To make file inputs appear more like other text inputs, apply the code snippet with the accompanying jQuery.
       Otherwise, file inputs will take on the default styling of the browser.
@@ -152,10 +152,10 @@
 <h3>Check Boxes &amp; Radio Buttons</h3>
 <div class="row">
 
-	<div class="col col-50">	     
+	<div class="col w-50">	     
     <h4 class="eps">Check Boxes</h4>
     
-    <fieldset class="grouping">
+    <fieldset class="form-Row">
       <div>
         <label for="check-1" class="inline-Element">
           Classless Check Box
@@ -194,10 +194,10 @@
      </code>
   </div>
   
-	<div class=" col col-50">
+	<div class=" col w-50">
     <h4 class="eps">Radio Buttons</h4>
     
-    <fieldset class="radios grouping">
+    <fieldset class="radios form-Row">
       <label for="r1">
         <input type="radio" id="r1" name="rr" />
         Classless Radio Button
@@ -241,8 +241,8 @@
 
 <h3>Selections</h3>
 <div class="row">
-  <div class="col col-50">	       
-    <fieldset class="grouping">
+  <div class="col w-50">	       
+    <fieldset class="form-Row">
       <label for="base-Select" class="text-Label">Default Select</label>
        <div class="select-Container">
          <select id="base-Select" class="input-Select">
@@ -274,13 +274,13 @@
 	  </fieldset>
   </div>
 
-  <div class=" col col-50">
+  <div class=" col w-50">
     <p>
       The following input types such do not yet have full
       browser support.  They will fall back to the default text input styling.
     </p>
 
-    <fieldset class="grouping">
+    <fieldset class="form-Row">
       <label for="num-Spin">Number Spinbox</label>
        <input type="number" id="num-Spin" min="0" max="20" step="1" value="5" />
        
@@ -301,15 +301,15 @@
 
 <h3 class="txt-Left">Submission Buttons</h3>
 <div class="row">
-  <div class="col col-50">       
-    <fieldset class="grouping">
+  <div class="col w-50">       
+    <fieldset class="form-Row">
       <input type="button" class="btn btn-Disable" value="Disabled" />
       <input type="reset" class="btn btn-Neg" value="Reset" />
       <input type="submit" class="btn" value="Submit" />
 	  </fieldset>
   </div>
   
-  <div class="col col-50">
+  <div class="col w-50">
   	<p>
   	  Submission buttons are styled using the <a href="buttons" title="Brass Tacks Buttons">Brass Tacks Button Stylings</a>.
     </p>

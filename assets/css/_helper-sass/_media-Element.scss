@@ -8,9 +8,11 @@
   margin-bottom:$px-Unit*4;
   position:relative;
   z-index:2;
+  
   .media-Text >:last-child{
     margin-bottom:0;
   }
+
   .media-Object{
     float:left;
     margin:0 $px-Unit*4 $px-Unit*2 0;
@@ -21,6 +23,7 @@
 // Have media element appear on the right hand side
 .media-Reverse{
   @extend .media;
+
   .media-Object{
     float:right;
     margin:0 0 $px-Unit*2 $px-Unit*4;
@@ -31,10 +34,12 @@
 .media-No-Wrap{
   @extend .media;
   padding-left:100px;
+
   .media-Text{
     float:left;
     width:100%;
   }
+
   .media-Object{
     margin-left:-100px;
     margin-right:0;

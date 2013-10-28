@@ -14,9 +14,9 @@
   -webkit-appearance:none;
     
   &:focus{
+    @include box-shadow($bs-2);
     background:$c-Lighter;
     border:1px solid lighten($c-Blue, 30%);
-    @include box-shadow($bs-2);
   }
 
   &:required{

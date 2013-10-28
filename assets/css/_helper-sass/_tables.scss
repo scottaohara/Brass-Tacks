@@ -6,10 +6,6 @@
 	background:$c-Table-Head;
 }
 
-.table-Body{
-  // insert styles here
-}
-
 .table-Footer{
 	background:$c-Table-Foot;
 }
@@ -43,6 +39,8 @@
   overflow:auto;
   -webkit-overflow-scrolling:touch;
   @media (max-device-width:480px), screen and (max-width:800px){
+    border:$border-Table;
+    
     table, th, td, tr{
       white-space:nowrap;
     }

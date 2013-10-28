@@ -4,8 +4,8 @@
 
 nav{
   ul, ol{
-    @extend %clearfix;
     @extend %reset;
+    @extend %clearfix;
     @extend %kill-List; 
   }
 

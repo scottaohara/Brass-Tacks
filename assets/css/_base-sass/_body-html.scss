@@ -7,14 +7,14 @@
   @include box-sizing(border-box);
 }
 
-html{
-  -ms-text-size-adjust:100%;
-  -webkit-text-size-adjust:100%;
-}
-
 html, body{
   @extend %reset;
   height:100%;  
+}
+
+html{
+  -ms-text-size-adjust:100%;
+  -webkit-text-size-adjust:100%;
 }
 
 body{

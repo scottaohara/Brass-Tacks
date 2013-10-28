@@ -4,7 +4,8 @@
 
 // The main navigation class to be placed on the <nav>
 .nav{
-  ul, ol{
+  ul,
+  ol{
     border:1px solid $c-Grey;
     padding:$px-Unit;
   }

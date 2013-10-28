@@ -4,464 +4,464 @@
 
 <h2>Default Variables</h2>
 <p>
-	Listing of all the default variables included in Brass-Tacks.
+  Listing of all the default variables included in Brass-Tacks.
 </p>
 
 <hr />
 
-<h3>Colors</h3>
-	<div class="row">
-		<div class="col col-60">
-			<div class="table-Mobile">
-		  <table class="table-Stripe table-Border table-2col">
-		    <thead class="table-Header">
-		      <tr>
-		        <th>Variable</th>
-		        <th>Value</th>
-		      </tr>
-		    </thead>
-		    <tbody>
-		      <tr>
-		        <td>$c-Black</td>
-		        <td>
-		        	<span style="background:#0a0a0a;" class="mini-Block"></span>
-		        	#0a0a0a
-		        </td>
-		      </tr>
-		      <tr>
-		        <td>$c-Dark</td>
-		        <td>
-		        		<span style="background:#333;" class="mini-Block"></span>
-		        		#333
-		      	</td>
-		      </tr>
-		      <tr>
-		        <td>$c-Darker</td>
-		        <td>
-		        	<span style="background:#1a1a1a;" class="mini-Block"></span>
-		        	#1a1a1a
-		      	</td>
-		      </tr>
-		      <tr>
-		        <td>$c-Grey</td>
-		        <td>
-		        	<span style="background:#ccc;" class="mini-Block"></span>
-		        	#ccc
-		      	</td>
-		      </tr>
-		      <tr>
-		        <td>$c-Dark-Grey</td>
-		        <td>
-		        	<span style="background:#999;" class="mini-Block"></span>
-		        	#999
-		      	</td>
-		      </tr>
-		      <tr>
-		        <td>$c-Light-Grey</td>
-		        <td>
-		        	<span style="background:#ddd;" class="mini-Block"></span>
-		        	#ddd
-		      	</td>
-		      </tr>
-		      <tr>
-		        <td>$c-White</td>
-		        <td>
-		        	<span style="background:#fdfdfd;" class="mini-Block"></span>
-		        	#fdfdfd
-		      	</td>
-		      </tr>
-		      <tr>
-		        <td>$c-Light</td>
-		        <td>
-		        	<span style="background:#eee;" class="mini-Block"></span>
-		        	#eee
-		      	</td>
-		      </tr>
-		      <tr>
-		        <td>$c-Lighter</td>
-		        <td>
-		        	<span style="background:#f0f0f0;" class="mini-Block"></span>
-		        	#f0f0f0
-		      	</td>
-		      </tr>
-		      <tr>
-		        <td>$c-Red</td>
-		        <td>
-		        	<span style="background:#ff3e3e;" class="mini-Block"></span>
-		        	#ff3e3e
-		      	</td>
-		      </tr>
-		      <tr>
-		        <td>$c-Green</td>
-		        <td>
-		        	<span style="background:#6ccf31;" class="mini-Block"></span>
-		        	#6ccf31
-		      	</td>
-		      </tr>
-		      <tr>
-		        <td>$c-Blue</td>
-		        <td>
-		        	<span style="background:#66b0e9;" class="mini-Block"></span>
-		        	#66b0e9
-		      	</td>
-		      </tr>
-		      <tr>
-		        <td>$c-Magenta</td>
-		        <td>
-		        	<span style="background:#dd0986;" class="mini-Block"></span>
-		        	#dd0986
-		      	</td>
-		      </tr>
-		      <tr>
-		        <td>$c-Yellow</td>
-		        <td>
-		        	<span style="background:#faea65;" class="mini-Block"></span>
-		        	#faea65
-		      	</td>
-		      </tr>
-		      <tr>
-		        <td>$c-Orange</td>
-		        <td>
-		        	<span style="background:#fd6f29;" class="mini-Block"></span>
-		        	#fd6f29
-		      	</td>
-		      </tr>
-		      <tr>
-		        <td>$c-Purple</td>
-		        <td>
-		        	<span style="background:#9729fd;" class="mini-Block"></span>
-		        	#9729fd
-		      	</td>
-		      </tr>
-		    </tbody>
-		  </table>
-		</div>
-		</div> <!-- end .col-60 -->
-		
-		<div class="col col-40">
-		  <p>
-		    A collection of variations on standard colors, modified for Brass Tacks.
-		  </p>	      
-		      
-		</div> <!-- end .col-40 -->
-		
-	</div><!-- end .row -->
-	
-	<hr />	
+<h3>Box Shadows</h3>
+  <div class="row">
+    <div class="col w-60">
+      <div class="table-Mobile">
+      <table class="table-Stripe table-Border table-2col">
+        <thead class="table-Header">
+          <tr>
+            <th>Variable</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>$bs-1</td>
+            <td>0 0 6px rgba(0,0,0,.25)</td>
+          </tr>
+          <tr>
+            <td>$bs-2</td>
+            <td>$bs-1 inset</td>
+          </tr>
+          <tr>
+            <td>$bs-3</td>
+            <td>$bs-1, $bs-1 inset</td>
+          </tr>
+          <tr>
+            <td>$bs-4</td>
+            <td>0 8px 8px -8px rgba(0,0,0,.5)</td>
+          </tr>
+          <tr>
+            <td>$bs-5</td>
+            <td>$bs-4, 0 0 6px rgba(0,0,0,.75) inset</td>
+          </tr>
+          <tr>
+            <td>$bs-6</td>
+            <td>0 0 6px rgba(255,255,255,.5) inset</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </div> <!-- end .w-60 -->
+    
+    <div class="col w-40">
+      <p>
+        Preset box-shadow combos.  Both exterior and inset versions.
+      </p>
+          
+    </div> <!-- end .w-40 -->
+    
+  </div> <!-- end .row -->
 
-	<h3>Font Families</h3>
-	<div class="row">
-		<div class="col col-60">
-			<div class="table-Mobile">
-		  <table class="table-Stripe table-Border table-2col">
-		    <thead class="table-Header">
-		      <tr>
-		        <th>Variable</th>
-		        <th>Value</th>
-		      </tr>
-		    </thead>
-		    <tbody>
-		      <tr>
-		        <td>$arial</td>
-		        <td>Arial, "Helvetica Neue", Helvetica, sans-serif;</td>
-		      </tr>
-		      <tr>
-		        <td>$arial-Black</td>
-		        <td>"Arial Black", Gadget, sans-serif;</td>
-		      </tr>
-		      <tr>
-		        <td>$courier</td>
-		        <td>Georgia, "Times New Roman", Times, serif;</td>
-		      </tr>
-		      <tr>
-		        <td>$georgia</td>
-		        <td>Georgia, "Times New Roman", Times, serif;</td>
-		      </tr>
-		      <tr>
-		        <td>$helvetica</td>
-		        <td>"Helvetica Neue", Helvetica, Arial, sans-serif;</td>
-		      </tr>
-		      <tr>
-		        <td>$lucida</td>
-		        <td>"Lucida Sans Unicode", "Lucida Grande", sans-serif;</td>
-		      </tr>
-		      <tr>
-		        <td>$tahoma</td>
-		        <td>Tahoma, Geneva, sans-serif;</td>
-		      </tr>
-		      <tr>
-		        <td>$verdana</td>
-		        <td>Verdana, Geneva, sans-serif;</td>
-		      </tr>
-		    </tbody>
-		  </table>
-		</div>
-		</div> <!-- end .col-60 -->
-		
-		<div class="col col-40">
-		  <p>
-		    Collection of basic font stacks.
-		  </p>
-		      
-		</div> <!-- end .col-40 -->
-		
-	</div> <!-- end .row -->
-	
-	<hr />
-		
-	<h3>Font Sizes</h3>
-	<div class="row">
-		<div class="col col-60">
-			<div class="table-Mobile">
-		  <table class="table-Stripe table-Border table-2col">
-		    <thead class="table-Header">
-		      <tr>
-		        <th>Variable</th>
-		        <th>Value</th>
-		      </tr>
-		    </thead>
-		    <tbody>
-		      <tr>
-		        <td>$giga</td>
-		        <td>4.35em / 70px</td>
-		      </tr>
-		      <tr>
-		        <td>$ultra</td>
-		        <td>3.75em / 60px</td>
-		      </tr>
-		      <tr>
-		        <td>$mega</td>
-		        <td>3.5em / 56px</td>
-		      </tr>
-		      
-		      <tr>
-		        <td>$alpha</td>
-		        <td>3.125em / 50px</td>
-		      </tr>
-		      <tr>
-		        <td>$beta</td>
-		        <td>2.5em / 40px</td>
-		      </tr>
-		      <tr>
-		        <td>$gamma</td>
-		        <td>2em / 32px</td>
-		      </tr>
-		      <tr>
-		        <td>$delta</td>
-		        <td>1.625em / 26px</td>
-		      </tr>
-		      <tr>
-		        <td>$eps</td>
-		        <td>1.25em / 20px</td>
-		      </tr>
-		      <tr>
-		        <td>$zeta</td>
-		        <td>1.125em / 18px</td>
-		      </tr>
-		      
-		      <tr>
-		        <td>$base</td>
-		        <td>1em / 16px</td>
-		      </tr>
-		      <tr>
-		        <td>$tiny</td>
-		        <td>.75em / 12px</td>
-		      </tr>
-		      <tr>
-		        <td>$mini</td>
-		        <td>.625em / 10px</td>
-		      </tr>
-		    </tbody>
-		  </table>
-		</div>
-		</div> <!-- end .col-60 -->
-		<div class="col col-40">
-		  <p>
-		    Font size variables that are used by the corresponding typography class.
-		  </p>
-		  <p>
-		    The values are in ems, with the pixels being their equivalent based on a font-size:100%
-		    for the html/body tags.  If you change the base font-size for your website, the equivalent
-		    font-size will change accordingly.
-		  </p>
-		      
-		</div> <!-- end .col-40 -->
-	</div> <!-- end .row -->
+<hr />  
+
+<h3>Colors</h3>
+  <div class="row">
+    <div class="col w-60">
+      <div class="table-Mobile">
+      <table class="table-Stripe table-Border table-2col">
+        <thead class="table-Header">
+          <tr>
+            <th>Variable</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>$c-Black</td>
+            <td>
+              <span style="background:#0a0a0a;" class="mini-Block"></span>
+              #0a0a0a
+            </td>
+          </tr>
+          <tr>
+            <td>$c-Dark</td>
+            <td>
+                <span style="background:#333;" class="mini-Block"></span>
+                #333
+            </td>
+          </tr>
+          <tr>
+            <td>$c-Darker</td>
+            <td>
+              <span style="background:#1a1a1a;" class="mini-Block"></span>
+              #1a1a1a
+            </td>
+          </tr>
+          <tr>
+            <td>$c-Grey</td>
+            <td>
+              <span style="background:#ccc;" class="mini-Block"></span>
+              #ccc
+            </td>
+          </tr>
+          <tr>
+            <td>$c-Dark-Grey</td>
+            <td>
+              <span style="background:#999;" class="mini-Block"></span>
+              #999
+            </td>
+          </tr>
+          <tr>
+            <td>$c-Light-Grey</td>
+            <td>
+              <span style="background:#ddd;" class="mini-Block"></span>
+              #ddd
+            </td>
+          </tr>
+          <tr>
+            <td>$c-White</td>
+            <td>
+              <span style="background:#fdfdfd;" class="mini-Block"></span>
+              #fdfdfd
+            </td>
+          </tr>
+          <tr>
+            <td>$c-Light</td>
+            <td>
+              <span style="background:#eee;" class="mini-Block"></span>
+              #eee
+            </td>
+          </tr>
+          <tr>
+            <td>$c-Lighter</td>
+            <td>
+              <span style="background:#f0f0f0;" class="mini-Block"></span>
+              #f0f0f0
+            </td>
+          </tr>
+          <tr>
+            <td>$c-Red</td>
+            <td>
+              <span style="background:#ff3e3e;" class="mini-Block"></span>
+              #ff3e3e
+            </td>
+          </tr>
+          <tr>
+            <td>$c-Green</td>
+            <td>
+              <span style="background:#6ccf31;" class="mini-Block"></span>
+              #6ccf31
+            </td>
+          </tr>
+          <tr>
+            <td>$c-Blue</td>
+            <td>
+              <span style="background:#66b0e9;" class="mini-Block"></span>
+              #66b0e9
+            </td>
+          </tr>
+          <tr>
+            <td>$c-Magenta</td>
+            <td>
+              <span style="background:#dd0986;" class="mini-Block"></span>
+              #dd0986
+            </td>
+          </tr>
+          <tr>
+            <td>$c-Yellow</td>
+            <td>
+              <span style="background:#faea65;" class="mini-Block"></span>
+              #faea65
+            </td>
+          </tr>
+          <tr>
+            <td>$c-Orange</td>
+            <td>
+              <span style="background:#fd6f29;" class="mini-Block"></span>
+              #fd6f29
+            </td>
+          </tr>
+          <tr>
+            <td>$c-Purple</td>
+            <td>
+              <span style="background:#9729fd;" class="mini-Block"></span>
+              #9729fd
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </div> <!-- end .w-60 -->
+    
+    <div class="col w-40">
+      <p>
+        A collection of variations on standard colors, modified for Brass Tacks.
+      </p>        
+          
+    </div> <!-- end .w-40 -->
+    
+  </div><!-- end .row -->
+  
+  <hr />  
+
+  <h3>Font Families</h3>
+  <div class="row">
+    <div class="col w-60">
+      <div class="table-Mobile">
+      <table class="table-Stripe table-Border table-2col">
+        <thead class="table-Header">
+          <tr>
+            <th>Variable</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>$arial</td>
+            <td>Arial, "Helvetica Neue", Helvetica, sans-serif;</td>
+          </tr>
+          <tr>
+            <td>$arial-Black</td>
+            <td>"Arial Black", Gadget, sans-serif;</td>
+          </tr>
+          <tr>
+            <td>$courier</td>
+            <td>Georgia, "Times New Roman", Times, serif;</td>
+          </tr>
+          <tr>
+            <td>$georgia</td>
+            <td>Georgia, "Times New Roman", Times, serif;</td>
+          </tr>
+          <tr>
+            <td>$helvetica</td>
+            <td>"Helvetica Neue", Helvetica, Arial, sans-serif;</td>
+          </tr>
+          <tr>
+            <td>$lucida</td>
+            <td>"Lucida Sans Unicode", "Lucida Grande", sans-serif;</td>
+          </tr>
+          <tr>
+            <td>$tahoma</td>
+            <td>Tahoma, Geneva, sans-serif;</td>
+          </tr>
+          <tr>
+            <td>$verdana</td>
+            <td>Verdana, Geneva, sans-serif;</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </div> <!-- end .w-60 -->
+    
+    <div class="col w-40">
+      <p>
+        Collection of basic font stacks.
+      </p>
+          
+    </div> <!-- end .w-40 -->
+    
+  </div> <!-- end .row -->
+  
+  <hr />
+    
+  <h3>Font Sizes</h3>
+  <div class="row">
+    <div class="col w-60">
+      <div class="table-Mobile">
+      <table class="table-Stripe table-Border table-2col">
+        <thead class="table-Header">
+          <tr>
+            <th>Variable</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>$giga</td>
+            <td>4.35em / 70px</td>
+          </tr>
+          <tr>
+            <td>$ultra</td>
+            <td>3.75em / 60px</td>
+          </tr>
+          <tr>
+            <td>$mega</td>
+            <td>3.5em / 56px</td>
+          </tr>
+          
+          <tr>
+            <td>$alpha</td>
+            <td>3.125em / 50px</td>
+          </tr>
+          <tr>
+            <td>$beta</td>
+            <td>2.5em / 40px</td>
+          </tr>
+          <tr>
+            <td>$gamma</td>
+            <td>2em / 32px</td>
+          </tr>
+          <tr>
+            <td>$delta</td>
+            <td>1.625em / 26px</td>
+          </tr>
+          <tr>
+            <td>$eps</td>
+            <td>1.25em / 20px</td>
+          </tr>
+          <tr>
+            <td>$zeta</td>
+            <td>1.125em / 18px</td>
+          </tr>
+          
+          <tr>
+            <td>$base</td>
+            <td>1em / 16px</td>
+          </tr>
+          <tr>
+            <td>$tiny</td>
+            <td>.75em / 12px</td>
+          </tr>
+          <tr>
+            <td>$mini</td>
+            <td>.625em / 10px</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </div> <!-- end .w-60 -->
+    <div class="col w-40">
+      <p>
+        Font size variables that are used by the corresponding typography class.
+      </p>
+      <p>
+        The values are in ems, with the pixels being their equivalent based on a font-size:100%
+        for the html/body tags.  If you change the base font-size for your website, the equivalent
+        font-size will change accordingly.
+      </p>
+          
+    </div> <!-- end .w-40 -->
+  </div> <!-- end .row -->
 
 <hr />
 
 <h3>Media Query Measurements</h3>
-	<div class="row">
-		<div class="col col-60">
-			<div class="table-Mobile">
-		  <table class="table-Stripe table-Border table-2col">
-		    <thead class="table-Header">
-		      <tr>
-		        <th>Variable</th>
-		        <th>Value</th>
-		      </tr>
-		    </thead>
-		    <tbody>
-		      <tr>
-		        <td>$break-Mini</td>
-		        <td>480px</td>
-		      </tr>
-		      <tr>
-		        <td>$break-Tiny</td>
-		        <td>500px</td>
-		      </tr>
-		      
-		      <tr>
-		        <td>$break-Small</td>
-		        <td>600px</td>
-		      </tr>
-		      <tr>
-		        <td>$break-Medium</td>
-		        <td>800px</td>
-		      </tr>
-		      <tr>
-		        <td>$break-Large</td>
-		        <td>1000px</td>
-		      </tr>
-		      <tr>
-		        <td>$break-xLarge</td>
-		        <td>1200px</td>
-		      </tr>
-		      <tr>
-		        <td>$break-xxLarge</td>
-		        <td>1600px</td>
-		      </tr>
-		    </tbody>
-		  </table>
-		</div>
-		</div> <!-- end .col-60 -->
-		
-		<div class="col col-40">
-		  <p>
-		    Basic defaults for various screen size break points. 
-		  </p>
-		  <p>
-		    These are meant to be defaults, and not necessarily the best 
-		    break points for your project.  Update and edit as need be.
-		  </p>
-		</div> <!-- end .col-40 -->
-		
-	</div> <!-- end .row -->
+  <div class="row">
+    <div class="col w-60">
+      <div class="table-Mobile">
+      <table class="table-Stripe table-Border table-2col">
+        <thead class="table-Header">
+          <tr>
+            <th>Variable</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>$break-Mini</td>
+            <td>480px</td>
+          </tr>
+          <tr>
+            <td>$break-Tiny</td>
+            <td>500px</td>
+          </tr>
+          
+          <tr>
+            <td>$break-Small</td>
+            <td>600px</td>
+          </tr>
+          <tr>
+            <td>$break-Medium</td>
+            <td>800px</td>
+          </tr>
+          <tr>
+            <td>$break-Large</td>
+            <td>1000px</td>
+          </tr>
+          <tr>
+            <td>$break-xLarge</td>
+            <td>1200px</td>
+          </tr>
+          <tr>
+            <td>$break-xxLarge</td>
+            <td>1600px</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </div> <!-- end .w-60 -->
+    
+    <div class="col w-40">
+      <p>
+        Basic defaults for various screen size break points. 
+      </p>
+      <p>
+        These are meant to be defaults, and not necessarily the best 
+        break points for your project.  Update and edit as need be.
+      </p>
+    </div> <!-- end .w-40 -->
+    
+  </div> <!-- end .row -->
 
 <hr />
 
-<h3>Box Shadows</h3>
-	<div class="row">
-		<div class="col col-60">
-			<div class="table-Mobile">
-		  <table class="table-Stripe table-Border table-2col">
-		    <thead class="table-Header">
-		      <tr>
-		        <th>Variable</th>
-		        <th>Value</th>
-		      </tr>
-		    </thead>
-		    <tbody>
-		      <tr>
-		        <td>$bs-1</td>
-		        <td>0 0 6px rgba(0,0,0,.25)</td>
-		      </tr>
-		      <tr>
-		        <td>$bs-2</td>
-		        <td>$bs-1 inset</td>
-		      </tr>
-		      <tr>
-		        <td>$bs-3</td>
-		        <td>$bs-1, $bs-1 inset</td>
-		      </tr>
-		      <tr>
-		        <td>$bs-4</td>
-		        <td>0 8px 8px -8px rgba(0,0,0,.5)</td>
-		      </tr>
-		      <tr>
-		        <td>$bs-5</td>
-		        <td>$bs-4, 0 0 6px rgba(0,0,0,.75) inset</td>
-		      </tr>
-		      <tr>
-		        <td>$bs-6</td>
-		        <td>0 0 6px rgba(255,255,255,.5) inset</td>
-		      </tr>
-		    </tbody>
-		  </table>
-		</div>
-		</div> <!-- end .col-60 -->
-		
-		<div class="col col-40">
-		  <p>
-		    Preset box-shadow combos.  Both exterior and inset versions.
-		  </p>
-		      
-		</div> <!-- end .col-40 -->
-		
-	</div> <!-- end .row -->
-
-<hr />	
-
 <h3>Misc. Variables</h3>
-	<div class="row">
-		<div class="col col-60">
-			<div class="table-Mobile">
-		  <table class="table-Stripe table-Border table-2col">
-		    <thead class="table-Header">
-		      <tr>
-		        <th>Variable</th>
-		        <th>Value</th>
-		      </tr>
-		    </thead>
-		    <tbody>
-		      <tr>
-		        <td>$px-Units</td>
-		        <td>4px</td>
-		      </tr>
-		      <tr>
-		        <td>$em-Units</td>
-		        <td>1em</td>
-		      </tr>
-		      <tr>
-		        <td>$per-Units</td>
-		        <td>10%</td>
-		      </tr>
-		      <tr>
-		        <td>$circle</td>
-		        <td>1000px</td>
-		      </tr>
-		    </tbody>
-		  </table>
-		</div>
-		</div> <!-- end .col-60 -->
-		
-		<div class="col col-40">
-		  <p>
-		   	Base measurements set for Pixel, Ems and Percentage measurment units.
-		  </p>
-		  <p>
-		    Using these in place of static values will keep all of your measurement values consistent, with a single value to edit to change measurements across your project.
-		  </p>
-		      
-		</div> <!-- end .col-40 -->
-		
-	</div> <!-- end .row -->
+  <div class="row">
+    <div class="col w-60">
+      <div class="table-Mobile">
+      <table class="table-Stripe table-Border table-2col">
+        <thead class="table-Header">
+          <tr>
+            <th>Variable</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>$px-Units</td>
+            <td>4px</td>
+          </tr>
+          <tr>
+            <td>$em-Units</td>
+            <td>1em</td>
+          </tr>
+          <tr>
+            <td>$per-Units</td>
+            <td>10%</td>
+          </tr>
+          <tr>
+            <td>$circle</td>
+            <td>1000px</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </div> <!-- end .w-60 -->
+    
+    <div class="col w-40">
+      <p>
+        Base measurements set for Pixel, Ems and Percentage measurment units.
+      </p>
+      <p>
+        Using these in place of static values will keep all of your measurement values consistent, with a single value to edit to change measurements across your project.
+      </p>
+          
+    </div> <!-- end .w-40 -->
+    
+  </div> <!-- end .row -->
 
-<hr />	
+<hr />  
 </section> <!-- end .content -->
 {% endblock %}
 
 {% block styles %}
-	<style>
-		.mini-Block{
-			border:1px solid #aaa;
-			border-radius:2px;
-			display:inline-block;
-			height:20px;
-			margin-right:20px;
-			vertical-align:text-top;
-			width:20px;
-		}
-	</style>
+  <style>
+    .mini-Block{
+      border:1px solid #aaa;
+      border-radius:2px;
+      display:inline-block;
+      height:20px;
+      margin-right:20px;
+      vertical-align:text-top;
+      width:20px;
+    }
+  </style>
 {% endblock %}
 
