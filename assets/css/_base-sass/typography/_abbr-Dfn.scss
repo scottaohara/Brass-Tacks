@@ -8,7 +8,7 @@ dfn{
 
 // An underline & help cursor in all browsers when a title tag is present
 abbr[title], dfn[title]{
-  border-bottom:1px dotted $c-Underline;
+  border-bottom:1px dotted $c-underline;
   cursor:help;
 }
 

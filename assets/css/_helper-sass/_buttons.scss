@@ -3,10 +3,10 @@
 // ----------------------------------------------------------------
 
 .btn{
-  @include border-radius($px-Unit);
+  @include border-radius($unit-px);
   @include vendor(transition, all .25s ease-in-out 0s);
-  background:$c-Dark none; 
-  color:$c-Lighter;
+  background:$c-dark none; 
+  color:$c-lighter;
   cursor:pointer;
   display:inline-block;
   font:{
@@ -14,13 +14,13 @@
     size:$base;
   };
   line-height:1;
-  padding:$px-Unit*2 $px-Unit*3; 
+  padding:$unit-px*2 $unit-px*3; 
   text-align:center;
   text-decoration:none!important; // never have an underline on button text.
   -webkit-appearance:none;
     
-  &.btn-Pad{
-    padding:$px-Unit*2 $px-Unit*4;
+  &.btn-pad{
+    padding:$unit-px*2 $unit-px*4;
   }
 
   &:active, &:hover{
@@ -39,37 +39,37 @@
 //  Sizing
 // ----------------------------------------------------------------
 
-.btn-Small{
+.btn-small{
 	@extend .btn; 
 	font-size:$tiny; 
-	padding:$px-Unit $px-Unit*2;
+	padding:$unit-px $unit-px*2;
 	
-	&.btn-Pad{
-		padding:$px-Unit $px-Unit*3
+	&.btn-pad{
+		padding:$unit-px $unit-px*3
 	}
 }
 
-.btn-Large{
+.btn-large{
 	@extend .btn; 
 	font-size:$gamma; 
-	padding:$px-Unit*3;
+	padding:$unit-px*3;
 	
-	&.btn-Pad{
-	   padding:$px-Unit*3 $px-Unit*5;
+	&.btn-pad{
+	   padding:$unit-px*3 $unit-px*5;
 	}
 }
 
-.btn-XLarge{
+.btn-xlarge{
 	@extend .btn; 
 	font-size:$beta; 
-	padding:$px-Unit*3 $px-Unit*4;
+	padding:$unit-px*3 $unit-px*4;
 	
-	&.btn-Pad{
-	   padding:$px-Unit*4 $px-Unit*6;
+	&.btn-pad{
+	   padding:$unit-px*4 $unit-px*6;
 	}
 }
 
-.btn-Wide{
+.btn-wide{
   display:block;
 }
 
@@ -78,41 +78,47 @@
 //  Coloring
 // ----------------------------------------------------------------
 
-.btn-Action{background:$c-Btn-1;
+.btn-action{
+  background:$c-btn-1;
+  
   &:hover{
-    background:darken($c-Btn-1, 15%);
+    background:darken($c-btn-1, 15%);
   }
 }
    
-.btn-Action-2{background:$c-Btn-2;
+.btn-action-2{
+  background:$c-btn-2;
+  
   &:hover{
-    background:darken($c-Btn-2, 15%);
+    background:darken($c-btn-2, 15%);
   }
 }
     
-.btn-Action-3{background:$c-Btn-3;
+.btn-action-3{
+  background:$c-btn-3;
+  
   &:hover{
-    background:darken($c-Btn-3, 15%);
+    background:darken($c-btn-3, 15%);
   }
 }
 
-.btn-Neg{
-  background:$c-Btn-Neg; 
+.btn-neg{
+  background:$c-btn-neg; 
   color:$c-Lighter;
 
   &:hover{
-    @extend .btn-Neg;
+    @extend .btn-neg;
   }
 }
 
-.btn-Disable{
-  background:$c-Disabled; 
+.btn-disable{
+  background:$c-disabled; 
   border:1px solid #eee; 
-  color:$c-Dark; 
+  color:$c-dark; 
   cursor:default;
 
   &:hover, &:visited{
-    @extend .btn-Disable;
+    @extend .btn-disable;
   }
 }
 
@@ -121,12 +127,12 @@
 //  Corner Styling
 // ----------------------------------------------------------------
 
-.btn-Square{
+.btn-square{
   @include border-radius(0);
 }
 
-.btn-Round{
-  @include border-radius($px-Unit*3);
+.btn-round{
+  @include border-radius($unit-px*3);
 }
 
 
@@ -134,16 +140,16 @@
 //  Button Pills
 // ----------------------------------------------------------------
 
-.btn-Left{
-  @include border-radius($px-Unit*3 0 0 $px-Unit*3);
+.btn-left{
+  @include border-radius($unit-px*3 0 0 $unit-px*3);
 }
 
-.btn-Center{
-  @extend .btn-Square;
+.btn-center{
+  @extend .btn-square;
 }
 
-.btn-Right{
-  @include border-radius(0 $px-Unit*3 $px-Unit*3 0);
+.btn-right{
+  @include border-radius(0 $unit-px*3 $unit-px*3 0);
 }
 
 
@@ -151,23 +157,23 @@
 //  Buttons with Icons
 // ----------------------------------------------------------------
 /*
-%btn-Icon{
+%btn-icon{
 
 }
 
-.btn-Icon-16{
+.btn-icon-16{
   height:16px;
   padding-left:20px;
   width:16px;
 }
 
-.btn-Icon-32{
+.btn-icon-32{
   height:32px;
   padding-left:36px;
   width:32px;
 }
 
-.btn-Icon-64{
+.btn-icon-64{
   height:64px;
   padding-left:68px;
   width:64px;

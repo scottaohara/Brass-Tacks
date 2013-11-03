@@ -2,22 +2,22 @@
 //  Dividers
 // ----------------------------------------------------------------
 
-.hr-Dual{
+.hr-dual{
   border-bottom:1px solid rgba(255,255,255,.2);
   border-top:   1px solid rgba(0,0,0,.2);
 }
 
-.hr-Dash{
+.hr-dash{
   border-style:dashed;
 }
 
-.hr-Dot{
+.hr-dot{
   border-style:dotted;
 }
 
-.hr-Dual-Spaced{
-  border-bottom:1px solid $c-Grey;
-  border-top:   1px solid $c-Grey;
+.hr-dual-spaced{
+  border-bottom:1px solid $c-grey;
+  border-top:   1px solid $c-grey;
   height:4px;
   position:relative;
 }

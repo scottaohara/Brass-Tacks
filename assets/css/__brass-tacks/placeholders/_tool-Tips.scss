@@ -17,15 +17,15 @@
   &:after{
     @include position(bottom, -20%, left, 0, absolute);
     @include vendor(transition, all 0.35s);
-    background:$c-White;
+    background:$c-white;
     background:rgba(255,255,255,.95);
-    border:1px solid #333;
-    border-radius:$px-Unit;
-    color:$c-Dark;
+    border:1px solid $c-dark;
+    border-radius:$unit-px;
+    color:$c-dark;
     content:attr(data-tooltip);
     font-size:$tiny;
     opacity:0;
-    padding:$px-Unit $px-Unit*3;
+    padding:$unit-px $unit-px*3;
     text-align:center;
     width:100%;
   }

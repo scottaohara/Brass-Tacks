@@ -7,47 +7,47 @@
 // ----------------------------------------------------------------
 // Base Branding Colors
 // ----------------------------------------------------------------
-$c-Brand-1:		#40b5bb;
-$c-Brand-2:		#2c8692;
-$c-Brand-3:		#fc7a14;
+$c-brand-1:		#40b5bb;
+$c-brand-2:		#2c8692;
+$c-brand-3:		#fc7a14;
 
 
 // ----------------------------------------------------------------
 // Button & Link Colors
 // ----------------------------------------------------------------
-$c-Btn-1:     $c-Brand-1;
-$c-Btn-2:     $c-Brand-2;
-$c-Btn-3:     $c-Brand-3;
+$c-btn-1:     $c-brand-1;
+$c-btn-2:     $c-brand-2;
+$c-btn-3:     $c-brand-3;
 
-$c-Btn-Neg:		$c-Dark-Grey;
-$c-Disabled:	$c-Lighter;
+$c-btn-neg:		$c-dark-grey;
+$c-disabled:	$c-lighter;
 
-$c-Link:		  $c-Brand-2;
+$c-link:		  $c-brand-2;
 
 // Color for Radio/Check box buttons
-$c-Btn-RC:		$c-Light;
+$c-btn-rc:		$c-light;
 
 // Required / Error Text Color
-$c-Required:	$c-Red;
+$c-required:	$c-red;
 
 // Underlines & Highlights
-$c-Highlight:	$c-Yellow;
-$c-Underline:	$c-Grey; // not for links
-$c-Border:		$c-Grey;
+$c-Highlight:	$c-yellow;
+$c-underline:	$c-grey; // not for links
+$c-border:		$c-grey;
 
 
 // ----------------------------------------------------------------
 // Tables
 // ----------------------------------------------------------------
-$c-Table:         $c-Lighter;
-$c-Table-Head:    $c-Light;
-$c-Table-Foot:    $c-Lighter;
+$c-table:         $c-lighter;
+$c-table-Head:    $c-light;
+$c-table-Foot:    $c-lighter;
 
-$c-Table-Striped: $c-Light;
-$c-Table-Border:  $c-Grey;
+$c-table-striped: $c-light;
+$c-table-border:  $c-grey;
 
 // sets consistent boarder styling for table elements
-$border-Table:    1px solid $c-Table-Border;
+$border-table:    1px solid $c-table-border;
 
 
 // Fonts Families  ------------------------------------------------

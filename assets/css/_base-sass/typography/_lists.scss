@@ -4,12 +4,12 @@
 
 // Un/Ordered lists
 ol, ul{
-  @include last-Child-0();
-  margin:0 0 $px-Unit*2; 
-  padding:0 0 0 $px-Unit*6;
+  @include last-child-0();
+  margin:0 0 $unit-px*2; 
+  padding:0 0 0 $unit-px*6;
 
   ol, ul{
-    margin-top:$px-Unit*2; // keep equal spacing li content followed by lists within lists	
+    margin-top:$unit-px*2; // keep equal spacing li content followed by lists within lists	
   } 
 }
 
@@ -27,18 +27,18 @@ li li{
 
 // Definition Lists
 dl{
-  @include last-Child-0();
-  margin:0 0 $px-Unit*2;
+  @include last-child-0();
+  margin:0 0 $unit-px*2;
 }
 
-  dt{
-    @extend %bold;
-  }
+dt{
+  @extend %bold;
+}
 
-  dd{
-    margin:0 0 $px-Unit*2; 
-    padding-left:$px-Unit*4;
-  }
+dd{
+  margin:0 0 $unit-px*2; 
+  padding-left:$unit-px*4;
+}
 
 // Placeholder classes are used so elements can be easily
 // broken out into modular files.

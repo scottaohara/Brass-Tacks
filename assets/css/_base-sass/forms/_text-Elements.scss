@@ -5,13 +5,13 @@
 legend{
   @extend %reset;
   @extend %eps;
-  margin-left:-$px-Unit;
-  padding:0 $px-Unit;
+  margin-left:-$unit-px;
+  padding:0 $unit-px;
 }
 
 label, .label{
   display:block;
-  margin-bottom:$px-Unit*2;
+  margin-bottom:$unit-px*2;
 
   &[for]{
     cursor:pointer;

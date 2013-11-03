@@ -3,23 +3,23 @@
 // ----------------------------------------------------------------
 
 // Apply to <header> for styling
-.header-Base{
+.header-base{
   text-shadow:0 1px 1px #fff;
 }
 
 // Apply to child div inside of header for padding/margin
-.header-Content{
+.header-content{
   @extend .content;
 }
 
 // Extend the .nav class to style your header navigation
-.header-Nav{}
+.header-nav{}
 
-.section-Title{
+.section-title{
   background:#e96a4e;
   border-bottom:1px solid rgba(0,0,0,.3);
   border-top:1px solid rgba(0,0,0,.3);
-  padding:$px-Unit $px-Unit*3;
+  padding:$unit-px $unit-px*3;
 
   &:first-child{
     border-top:0;

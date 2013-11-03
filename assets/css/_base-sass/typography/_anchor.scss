@@ -7,6 +7,6 @@ a{
   background:transparent;
 
   &:active, &:hover{
-    @extend %outline-None;
+    @extend %outline-none;
   }
 }

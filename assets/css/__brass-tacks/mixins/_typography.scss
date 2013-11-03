@@ -3,24 +3,23 @@
 // ----------------------------------------------------------------
 
 // Custom Text Selection Styling
-// ----------------------------------------------------------------
-@mixin select-Text-Default($select-BG, $txt-Color, $txt-Shadow){
-  background:   $select-BG;
-  color:        $txt-Color;
-  text-shadow:  $txt-Shadow;
+@mixin select-text-default($select-bg, $txt-color, $txt-shadow){
+  background:   $select-bg;
+  color:        $txt-color;
+  text-shadow:  $txt-shadow;
 }
+
 
 // Include this into elements to have text selection colors be specific to region
-@mixin select-Text($select-BG, $txt-Color, $txt-Shadow){
-  ::-moz-selection  {@include select-Text-Default($select-BG, $txt-Color, $txt-Shadow)}
-  ::selection       {@include select-Text-Default($select-BG, $txt-Color, $txt-Shadow)} 
+@mixin select-Text($select-bg, $txt-color, $txt-shadow){
+  ::-moz-selection  {@include select-text-default($select-bg, $txt-color, $txt-shadow)}
+  ::selection       {@include select-text-default($select-bg, $txt-color, $txt-shadow)} 
 }
 
 
-// Multi-Column Text Blocks
-// ----------------------------------------------------------------
-@mixin multi-Col($cols, $gap, $rule-Width, $rule-Location, $rule-Color){
+// Multi-column Text Blocks
+@mixin multi-col($cols, $gap, $rule-width, $rule-location, $rule-color){
   @include base-vendor(column-count, $cols);
   @include base-vendor(column-gap, $gap);
-  @include base-vendor(column-rule, $rule-Width $rule-Location $rule-Color);
+  @include base-vendor(column-rule, $rule-width $rule-location $rule-color);
 }

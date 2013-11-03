@@ -3,16 +3,16 @@
 // ----------------------------------------------------------------
 
 %brand{
-  @extend %brand-Color;
-  @extend %brand-Font;
+  @extend %brand-color;
+  @extend %brand-font;
 }
 
 %brand-Color{
-  color:$c-Brand-1;
+  color:$c-brand-1;
 }
 
 %brand-Font{
-  font-family:$brand;
+  font-family:$f-brand;
   //font-size:$base;
   font-weight:300;
 }

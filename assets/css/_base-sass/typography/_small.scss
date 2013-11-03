@@ -4,7 +4,7 @@
 
 small{
   @extend %tiny;
-  @extend %d-Block;
+  @extend %d-block;
   // Give small some weight when used outside of <p> or <li>, 
   // but make it an inline element again inside of these elements
   @extend %margin-Bottom;

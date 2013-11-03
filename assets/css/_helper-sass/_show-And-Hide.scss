@@ -4,19 +4,19 @@
 
 // Show Elements with Display:block
 // ----------------------------------------------------------------
-.d-Block, .js-Show{
-  @extend %d-Block;
+.d-Block, .js-show{
+  @extend %d-block;
 }
 
 
 // Hide Elements with display:none
 // ----------------------------------------------------------------
-.d-None, .js-Hide, .mobile-Show{
-  @extend %d-None;
+.d-none, .js-hide, .mobile-show{
+  @extend %d-none;
 }
 
 @media (max-device-width:480px), screen and (max-width:800px){
-  .mobile-Show{
+  .mobile-show{
     display:block;
   }
 }
@@ -27,7 +27,7 @@
   opacity:.75;
 }
 
-.mute-More{
+.mute-more{
   opacity:.5;
 }
 

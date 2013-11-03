@@ -7,17 +7,7 @@
 // scss files to change it's styling.
 
 .nav{
-  ul, ol{
-    padding:$px-Unit;
-  }
-
-  a{
+  li a{
     display:block;
-    padding:$px-Unit $px-Unit*3;
-    text-decoration:underline;
-
-    &:hover{
-      text-decoration:none;
-    }
   }
 }

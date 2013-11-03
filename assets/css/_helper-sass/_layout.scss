@@ -7,41 +7,41 @@
 // a row can also have helper classes added onto it for other general styling purposes
 .row{
   @extend %clearfix;
-  margin-bottom:$px-Unit*5;
-  margin-left:-$px-Unit*10;
+  margin-bottom:$unit-px*5;
+  margin-left:-$unit-px*10;
 
   &:last-child{
     margin-bottom:0;
   }
   
   // Don't need as wide gutters?  Use this class to cut them in half.
-  &.half-Gutter{
-    margin-left:-$px-Unit*5;
+  &.half-gutter{
+    margin-left:-$unit-px*5;
   }
 }
 
 // The grid columns within a row.  
 // Do not apply styling to this class as its purpose is for layout only.
 .col{
-  @include last-Child-0();
+  @include last-child-0();
   float:left;
   margin-bottom:0;
-  padding-left:$px-Unit*10;
+  padding-left:$unit-px*10;
   position:relative;
   width:100%; // default width is 100%
 
   @media (max-device-width:480px), screen and (max-width:800px){
-    margin-bottom:$px-Unit*2;
+    margin-bottom:$unit-px*2;
   }
 }
 
 // Adjust .col padding-left to account for half-Gutter
-.half-Gutter .col{
-  padding-left:$px-Unit*5;
+.half-gutter .col{
+  padding-left:$unit-px*5;
 }
 
 // Convert columns to inline-blocks so we can center them when our row does not add up to 100%
-.c-Row{
+.c-row{
   @extend .row;
   font-size:0; // **
   text-align:center;
@@ -84,10 +84,10 @@
 }
 
 .rfl{
-  @include row-fixed-Left(300px);
+  @include row-fixed-left(300px);
 }
 .rfr{
-  @include row-fixed-Right(300px);
+  @include row-fixed-right(300px);
 }
   // make sure to use .f-Col for the fixed column in the row
 
@@ -95,15 +95,15 @@
 // The main purpose of a class like this is to apply to an inner HTML element of the column structure
 // so we can apply styling to the columns.
 .block{
-  @include last-Child-0();
-  background:$c-Grey;
+  @include last-child-0();
+  background:$c-grey;
   color:#333;
-  padding:$px-Unit;
+  padding:$unit-px;
 }
 
 // Make a column have borders on the left/right sides of it
 // build out a better example of this
-.b-Col{
+.b-col{
   padding-left:6px;
   padding-right:6px;
   position:relative;

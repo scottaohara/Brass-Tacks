@@ -3,26 +3,28 @@
 // ----------------------------------------------------------------
 
 // Apply to <main> or top level <section> for styling
-.content-Base{
+.content-base{
   min-height:500px;
-  padding-bottom:$px-Unit*5;
+  padding-bottom:$unit-px*5;
 
   .content{
     @include box-shadow($bs-4);
-    background:$c-White; 
-    border:1px solid $c-Light; 
+    background:$c-white; 
+    border:1px solid $c-light; 
   }
 }
 
 // Additional Content Area stylings go below...
 
 .table-2col{
-  td{width:50%}
+  td{
+    width:50%;
+  }
 }
 
 // Add a border to .nav so it is easier to see in examples
 .nav{
   ul, ol{
-    border:1px solid $c-Light;
+    border:1px solid $c-light;
   }
 }

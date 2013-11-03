@@ -3,29 +3,29 @@
 // ----------------------------------------------------------------
 
 // Darker Colors
-$c-Black:       #0a0a0a;
-$c-Dark:        #333;
-$c-Darker:      #1a1a1a;
+$c-black:       #0a0a0a;
+$c-dark:        #333;
+$c-darker:      #1a1a1a;
 
 // Medium Colors
-$c-Grey:        #ccc;
-$c-Dark-Grey:   #999;
-$c-Light-Grey:  #ddd;
+$c-grey:        #ccc;
+$c-dark-grey:   #999;
+$c-light-grey:  #ddd;
 
 // Ligher Colors
-$c-White:       #fdfdfd;
-$c-Light:       #eee;
-$c-Lighter:     #f0f0f0;
+$c-white:       #fdfdfd;
+$c-light:       #eee;
+$c-lighter:     #f0f0f0;
 
 // Generic Colors
-$c-Red:         #ff3e3e;
-$c-Green:       #6ccf31;
-$c-Blue:        #66b0e9;
+$c-red:         #ff3e3e;
+$c-green:       #6ccf31;
+$c-blue:        #66b0e9;
 
-$c-Magenta:     #dd0986;
-$c-Yellow:      #faea65;
-$c-Orange:      #fd6f29;
-$c-Purple:      #9729fd;
+$c-magenta:     #dd0986;
+$c-yellow:      #faea65;
+$c-orange:      #fd6f29;
+$c-purple:      #9729fd;
 
 
 // ----------------------------------------------------------------
@@ -34,10 +34,10 @@ $c-Purple:      #9729fd;
 
 // Base Web Fonts
 $arial:         Arial, "Helvetica Neue", Helvetica, sans-serif;
-$arial-Black:   "Arial Black", Gadget, sans-serif;
+$arial-black:   "Arial Black", Gadget, sans-serif;
 $courier:       "Courier New", Courier, monospace;
 $georgia:       Georgia, "Times New Roman", Times, serif;
-$helvetica:     "Helvetica Neue", Helvetica, Arial, sans-serif;
+$helvetica:     "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
 $lucida:        "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 $tahoma:        Tahoma, Geneva, sans-serif;
 $verdana:       Verdana, Geneva, sans-serif;
@@ -79,9 +79,9 @@ $bs-6:    0 0 6px rgba(255,255,255,.5) inset;
 // ----------------------------------------------------------------
 // Measurement Units
 // ----------------------------------------------------------------
-$px-Unit:  4px;   // base of 4px, 1/4 of 16px
-$em-Unit:  1em;   // translates to 16px based on 100% font-size
-$per-Unit: 10%;   // base of 10 for percentages
+$unit-px:  4px;   // base of 4px, 1/4 of 16px
+$unit-em:  1em;   // translates to 16px based on 100% font-size
+$unit-per: 10%;   // base of 10 for percentages
 
 $circle:   1100px;  // large number to make sure that just about anything
                     // will be able to be 'circled'
@@ -90,10 +90,10 @@ $circle:   1100px;  // large number to make sure that just about anything
 // ----------------------------------------------------------------
 //		Media Query Break Points  // based on a 16px base font
 // ----------------------------------------------------------------
-$break-Mini:    380px;    // 30em
-$break-Tiny:    500px;    // 31.25em
-$break-Small:   600px;    // 37.5em
-$break-Medium:  800px;    // 50em
-$break-Large:   1000px;   // 62.5em
-$break-xLarge:  1200px;   // 75em
-$break-xxLarge: 1600px;   // 100em
+$break-mini:    380px;    // 30em
+$break-tiny:    500px;    // 31.25em
+$break-small:   600px;    // 37.5em
+$break-medium:  800px;    // 50em
+$break-large:   1000px;   // 62.5em
+$break-xlarge:  1200px;   // 75em
+$break-xxlarge: 1600px;   // 100em

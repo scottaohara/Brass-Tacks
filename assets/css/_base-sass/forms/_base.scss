@@ -4,7 +4,7 @@
 
 button, fieldset, form, input, select, textarea{
   @extend %reset;
-  @extend %margin-Bottom;
+  @extend %margin-bottom;
   @extend %base;
   line-height:normal;
   text-transform:none;

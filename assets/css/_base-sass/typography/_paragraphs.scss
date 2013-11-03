@@ -4,10 +4,7 @@
 
 p{
   @extend %reset;
-  @extend %margin-Bottom;
-}
-
-p{
+  @extend %margin-bottom;
   @extend %base
 }
 

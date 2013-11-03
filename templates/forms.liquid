@@ -10,79 +10,79 @@
 
   <hr />
 	
-<form class="form-Container">
+<form class="form-container">
 	<h3>Base Input Fields</h3>
 	
 	<div class="row">
 	  <div class="col w-50">
 
-      <fieldset class="form-Row">
-        <label for="input-Text">Input - Normal Text</label>
-        <input type="text" id="input-Text" placeholder="Write Text Here" />
+      <fieldset class="form-row">
+        <label for="input-text">Input - Normal Text</label>
+        <input type="text" id="input-text" placeholder="Write Text Here" />
 
-        <label for="input-Text-dl">Input - Text w/Data List</label>
-        <input type="text" id="input-Text-dl" list="fav-color" placeholder="Choose your fav. color" />
+        <label for="input-text-dl">Input - Text w/Data List</label>
+        <input type="text" id="input-text-dl" list="fav-color" placeholder="Choose your fav. color" />
         <datalist id="fav-color">
           <option value="Red">Red</option> 
           <option value="Orange">Orange</option> 
           <option value="Yellow">Yellow</option>
         </datalist>
 
-        <label for="input-Email">Input - Email</label>
-        <input type="email" id="input-Email" placeholder="Enter Email" />
+        <label for="input-email">Input - Email</label>
+        <input type="email" id="input-email" placeholder="Enter Email" />
 
-        <label for="input-Password">Input - Password</label>
-        <input type="password" id="input-Password" placeholder="Enter Password" />
+        <label for="input-password">Input - Password</label>
+        <input type="password" id="input-password" placeholder="Enter Password" />
 
         <label for="input-Url">Input - Web Address</label>
         <input id="input-Url" type="url" placeholder="Enter Web Address" />
 
-        <label for="input-Tel">Input - Phone Number</label>
-        <input type="tel" id="input-Tel" placeholder="555.555.5555" />
+        <label for="input-tel">Input - Phone Number</label>
+        <input type="tel" id="input-tel" placeholder="555.555.5555" />
 
-        <label for="input-Search">Input - Search (field only)</label>
-        <input type="search" class="input-Search" id="input-Search" placeholder="Search for..." />
+        <label for="input-search">Input - Search (field only)</label>
+        <input type="search" class="input-search" id="input-search" placeholder="Search for..." />
         
-        <label for="search-Area">Input &amp; Button combo area</label>
-        <div class="search-Area">
-          <input type="search" id="search-Area" class="input-Search" placeholder="Search for..." />
-          <input type="submit" class="btn btn-Search btn-Action" value="Search" />
+        <label for="search-area">Input &amp; Button combo area</label>
+        <div class="search-area">
+          <input type="search" id="search-area" class="input-search" placeholder="Search for..." />
+          <input type="submit" class="btn btn-search btn-action" value="Search" />
         </div>
 
-        <label for="input-TextArea">Text Area</label>
-        <textarea id="input-TextArea"></textarea>
+        <label for="input-textarea">Text Area</label>
+        <textarea id="input-textarea"></textarea>
 
       </fieldset>
 	</div> <!-- end .w-50 -->
 	
 	<div class="col w-50">
-		<fieldset class="form-Row fieldset">
+		<fieldset class="form-row fieldset">
       <legend class="legend">Input Variants</legend>
-      <label class="dis-Label">Disabled Text Input</label> 
+      <label class="dis-label">Disabled Text Input</label> 
       <input type="text" value="Disabled text input" disabled="disabled" />
 
       <label>Readonly Text Input</label>
       <input type="text" value="Readonly text input" readonly="readonly" />
 
-      <label for="input-Required">Required Input</label>
-      <input type="text" id="input-Required" placeholder="Placeholder Text" required="required" />
+      <label for="input-required">Required Input</label>
+      <input type="text" id="input-required" placeholder="Placeholder Text" required="required" />
     </fieldset>
 
-    <ul class="">
+    <ul>
       <li>
         All base input fields and the textarea are pulling from a
-        the Placeholder class "%input-Area" for basic styling.  This will keep these
+        the Placeholder class "%input-area" for basic styling.  This will keep these
         input elements looking consistent across browsers, opposed to having forms take
         on the default styling of each different browser.
       </li>
       <li>
-        The only classes in use in this section are for the search buttton <code>.btn-Action</code> and
-        a class for the diabled text input label <code>.dis-Label</code>.
+        The only classes in use in this section are for the search button <code>.btn-action</code> and
+        a class for the disabled text input label <code>.dis-label</code>.
       </li>
       <li>
         To create individual inline form elements, apply the class of 
-        <code>.inline-Element</code>.  If you want all elements to be inline, use the 
-        class of <code>.inline-All</code> on the parent of the elements.
+        <code>.inline-element</code>.  If you want all elements to be inline, use the 
+        class of <code>.inline-all</code> on the parent of the elements.
       </li>
       <li>
         If you need to create more complex from layouts, you can use classes from
@@ -90,7 +90,7 @@
         &lt;fieldset> elements in your forms.
       </li>
       <li>
-        Use the class of <code>.form-Row</code> on divs or fieldsets within forms to 
+        Use the class of <code>.form-row</code> on divs or fieldsets within forms to 
         apply block level groups to elements, and to apply slight padding between groups.
       </li>
     </ul>
@@ -104,19 +104,19 @@
 <div class="row">
   <div class="col w-50">
     <p class="eps">With Classes</p>
-    <fieldset class="form-Row">
-      <div class="file-Input-Area">
-        <input type="file" id="input-File" class="input-File" />
-        <label for="input-File">File Input</label>
-        <span class="input-File-Text">
+    <fieldset class="form-row">
+      <div class="file-input-area">
+        <input type="file" id="input-file" class="input-file" />
+        <label for="input-file">File Input</label>
+        <span class="input-file-text">
           <span class="placeholder">Select a file...</span>
         </span>
         <span class="btn">Select</span>
       </div>
 
       <p class="eps">Without Classes</p>
-      <label for="input-File2">File Input</label>
-      <input type="file" id="input-File2" /> 
+      <label for="input-file2">File Input</label>
+      <input type="file" id="input-file2" /> 
     </fieldset>
 
 </div>
@@ -126,10 +126,10 @@
       Otherwise, file inputs will take on the default styling of the browser.
     </p>
     <code class="tiny">
-      &lt;div class="file-Input-Area"><br />
-        &nbsp;&nbsp;&lt;input type="file" id="input-File" class="input-File" /><br />
-        &nbsp;&nbsp;&lt;label for="input-File">File Input&lt;/label><br />
-        &nbsp;&nbsp;&lt;span class="input-File-Text"><br />
+      &lt;div class="file-Input-area"><br />
+        &nbsp;&nbsp;&lt;input type="file" id="input-file" class="input-file" /><br />
+        &nbsp;&nbsp;&lt;label for="input-file">File Input&lt;/label><br />
+        &nbsp;&nbsp;&lt;span class="input-file-text"><br />
           &nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="placeholder">Select a file...&lt;/span><br />
         &nbsp;&nbsp;&lt;/span><br />
         &nbsp;&nbsp;&lt;span class="btn">Select&lt;/span><br />
@@ -139,8 +139,8 @@
       $(document).ready(function(){<br />
     	&nbsp;&nbsp;// when file is selected via OS file picker,<br />
     	&nbsp;&nbsp;// place file name into .placeholder span<br />
-    	&nbsp;&nbsp;$(".input-File").change(function() {<br />
-    	&nbsp;&nbsp;&nbsp;&nbsp;$(this).parent().find(".input-File-Text").html(this.value)<br />
+    	&nbsp;&nbsp;$(".input-file").change(function() {<br />
+    	&nbsp;&nbsp;&nbsp;&nbsp;$(this).parent().find(".input-file-text").html(this.value)<br />
     	&nbsp;&nbsp;});<br />
     	});
     </code>
@@ -155,41 +155,41 @@
 	<div class="col w-50">	     
     <h4 class="eps">Check Boxes</h4>
     
-    <fieldset class="form-Row">
+    <fieldset class="form-row">
       <div>
-        <label for="check-1" class="inline-Element">
+        <label for="check-1" class="inline-element">
           Classless Check Box
         </label>
         <input type="checkbox" id="check-1" />
       </div>
 
-      <label for="check-2" class="cr-Area">
-        <input type="checkbox" value="None" id="check-2" class="input-Hide" />
+      <label for="check-2" class="cr-area">
+        <input type="checkbox" value="None" id="check-2" class="input-hide" />
         Designed Checkbox (ie9+)
-        <span class="check-Radio"></span>
+        <span class="check-radio"></span>
       </label>
 
-      <label for="check-3" class="cr-Slider">
-        <input type="checkbox" id="check-3" class="input-Hide input-Slide" />
+      <label for="check-3" class="cr-slider">
+        <input type="checkbox" id="check-3" class="input-hide input-slide" />
         <span class="crs"></span>
-        <span class="crs-Label">Text label</span>
+        <span class="crs-label">Text label</span>
       </label>
      </fieldset>
      
       <strong>Code for Designed Checkbox</strong>
       <code class="tiny">
-        &lt;label for="check-2" class="cr-Area"><br />
-          &nbsp;&nbsp;&lt;input type="checkbox" value="None" id="check-2" class="input-Hide" name="check" /><br />
+        &lt;label for="check-2" class="cr-area"><br />
+          &nbsp;&nbsp;&lt;input type="checkbox" value="None" id="check-2" class="input-hide" name="check" /><br />
           &nbsp;&nbsp;Designed Checkbox<br />
-         &nbsp;&nbsp;&lt;span class="check-Radio">&lt;/span><br />
+         &nbsp;&nbsp;&lt;span class="check-radio">&lt;/span><br />
         &lt;/label>
       </code>
 
       <code class="tiny">
-      &lt;label for="check-3" class="cr-Slider">
-        &lt;input type="radio" id="check-3" class="input-Hide input-Slide" />
+      &lt;label for="check-3" class="cr-slider">
+        &lt;input type="radio" id="check-3" class="input-hide input-slide" />
         &lt;span class="crs">&lt;/span>
-        &lt;span class="crs-Label">Text label&lt;/span>
+        &lt;span class="crs-label">Text label&lt;/span>
       &lt;/label>
      </code>
   </div>
@@ -197,40 +197,40 @@
 	<div class=" col w-50">
     <h4 class="eps">Radio Buttons</h4>
     
-    <fieldset class="radios form-Row">
+    <fieldset class="radios form-row">
       <label for="r1">
         <input type="radio" id="r1" name="rr" />
         Classless Radio Button
       </label>
 
-      <label for="r2" class="cr-Area">
-        <input type="radio" id="r2" name="rr" class="input-Hide radio-Syle" />
-        <span class="check-Radio"></span>
+      <label for="r2" class="cr-area">
+        <input type="radio" id="r2" name="rr" class="input-hide radio-syle" />
+        <span class="check-radio"></span>
         Designed Radio Button
       </label>
 
-      <label for="r3" class="cr-Slider">
-        <input type="radio" id="r3" name="rr" class="input-Hide input-Slide" />
+      <label for="r3" class="cr-slider">
+        <input type="radio" id="r3" name="rr" class="input-hide input-slide" />
         <span class="crs circle"></span>
-        <span class="crs-Label">Text label</span>
+        <span class="crs-label">Text label</span>
       </label>
 
     </fieldset>
      
      <strong>Code for Designed Radio Buttons</strong>
      <code class="tiny">
-        &lt;label for="r3" class="cr-Area"><br />
-        &nbsp;&nbsp;&lt;input type="radio" id="r2" name="rr" class="input-Hide radio-Style" /><br />
-        &nbsp;&nbsp;&lt;span class="check-Radio">&lt;/span>Label <br />
+        &lt;label for="r3" class="cr-area"><br />
+        &nbsp;&nbsp;&lt;input type="radio" id="r2" name="rr" class="input-hide radio-style" /><br />
+        &nbsp;&nbsp;&lt;span class="check-radio">&lt;/span>Label <br />
       &lt;/label>
      </code>
 
      <strong>Code for Slider Radio Button</strong>
      <code class="tiny">
-      &lt;label for="r3" class="cr-Slider">
-        &lt;input type="radio" id="r3" name="rr" class="input-Hide input-Slide" />
+      &lt;label for="r3" class="cr-slider">
+        &lt;input type="radio" id="r3" name="rr" class="input-hide input-slide" />
         &lt;span class="crs circle">&lt;/span>
-        &lt;span class="crs-Label">Text label&lt;/span>
+        &lt;span class="crs-label">Text label&lt;/span>
       &lt;/label>
      </code>
      <small>There is commented out code for on/off labels in the helper forms.scss, if you would like to use those.</small>
@@ -242,10 +242,10 @@
 <h3>Selections</h3>
 <div class="row">
   <div class="col w-50">	       
-    <fieldset class="form-Row">
-      <label for="base-Select" class="text-Label">Default Select</label>
-       <div class="select-Container">
-         <select id="base-Select" class="input-Select">
+    <fieldset class="form-row">
+      <label for="base-select" class="text-label">Default Select</label>
+       <div class="select-container">
+         <select id="base-select" class="input-select">
            <option>Select an Item...</option>
            <option>First Item</option>
            <option>Second Item</option>
@@ -255,16 +255,16 @@
        </div>
 
        <code class="tiny">
-         &lt;div class="select-Container"><br />
-           &nbsp;&nbsp;&lt;select id="base-Select" class="input-Select"><br />
+         &lt;div class="select-container"><br />
+           &nbsp;&nbsp;&lt;select id="base-select" class="input-select"><br />
              &nbsp;&nbsp;&nbsp;&nbsp;&lt;option>...&lt;/option><br />
              &nbsp;&nbsp;&nbsp;&nbsp;&lt;option>...&lt;/option><br />
            &nbsp;&nbsp;&lt;/select><br />
          &lt;/div>
        </code>
          
-       <label for="multi-Select" class="text-Label">Multiple select field</label>
-       <select id="multi-Select" multiple size="5" class="multi-Select">
+       <label for="multi-select" class="text-label">Multiple select field</label>
+       <select id="multi-select" multiple size="5" class="multi-select">
          <option>Option 1</option>
          <option>Option 2</option>
          <option>Option 3</option>
@@ -280,18 +280,18 @@
       browser support.  They will fall back to the default text input styling.
     </p>
 
-    <fieldset class="form-Row">
-      <label for="num-Spin">Number Spinbox</label>
-       <input type="number" id="num-Spin" min="0" max="20" step="1" value="5" />
+    <fieldset class="form-row">
+      <label for="num-spin">Number Spinbox</label>
+       <input type="number" id="num-spin" min="0" max="20" step="1" value="5" />
        
-       <label for="num-Date">Date: mm/dd/yyyy</label>
-       <input type="date" id="num-Date" />
+       <label for="num-date">Date: mm/dd/yyyy</label>
+       <input type="date" id="num-date" />
        
-       <label for="num-Time">Time: 12:00 PM</label>
-       <input type="time" id="num-Time" />
+       <label for="num-time">Time: 12:00 PM</label>
+       <input type="time" id="num-time" />
        
-       <label for="color-Picker">Hex Color</label>
-       <input type="color" id="color-Picker" />
+       <label for="color-picker">Hex Color</label>
+       <input type="color" id="color-picker" />
     </fieldset>
 
   </div>
@@ -299,12 +299,12 @@
 
 <hr />
 
-<h3 class="txt-Left">Submission Buttons</h3>
+<h3 class="txt-left">Submission Buttons</h3>
 <div class="row">
   <div class="col w-50">       
-    <fieldset class="form-Row">
-      <input type="button" class="btn btn-Disable" value="Disabled" />
-      <input type="reset" class="btn btn-Neg" value="Reset" />
+    <fieldset class="form-row">
+      <input type="button" class="btn btn-disable" value="Disabled" />
+      <input type="reset" class="btn btn-neg" value="Reset" />
       <input type="submit" class="btn" value="Submit" />
 	  </fieldset>
   </div>
@@ -327,8 +327,8 @@
 	$(document).ready(function(){
 	  // jQuery to make file uploads look styled / display text after click/choosing of file
 		// Thanks jdrumm
-		$(".input-File").change(function() {
-		  $(this).parent().find(".input-File-Text").html(this.value)
+		$(".input-file").change(function() {
+		  $(this).parent().find(".input-file-text").html(this.value)
 		});
 	});
 </script>

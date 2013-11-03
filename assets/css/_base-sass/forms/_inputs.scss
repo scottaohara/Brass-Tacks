@@ -4,13 +4,13 @@
 
 // Disabled input styling
 input[disabled]{
-  background:$c-Light;
+  background:$c-light;
   cursor:not-allowed;
 }
 
 // Read Only input styling
 input[readonly]{
-  background:$c-Disabled;
+  background:$c-disabled;
 }
 
 // Removes extra inner padding for webkit
@@ -23,7 +23,7 @@ input{
   &[type='date'], &[type='email'], &[type='file'], 
   &[type='number'], &[type='password'], &[type='search'], 
   &[type='tel'], &[type='text'], &[type='time'], &[type='url']{
-    @extend %input-Area;
+    @extend %input-area;
   }
 }
 
@@ -33,8 +33,8 @@ input[type='search']{
 } 
 
 select{
-  border:1px solid $c-Border;
-  padding:$px-Unit 0 $px-Unit $px-Unit;
+  border:1px solid $c-border;
+  padding:$unit-px 0 $unit-px $unit-px;
   width:100%;
 }
 
@@ -43,23 +43,23 @@ select{
 // standardizes it in other browsers.
 input[type='color']{
   background-image:none;
-  border:1px solid $c-Border;
+  border:1px solid $c-border;
   font-family:$arial;
   height:45px;
-  margin-bottom:$px-Unit*2;
-  padding:0 $px-Unit;
+  margin-bottom:$unit-px*2;
+  padding:0 $unit-px;
   width:75%;
 
   &:focus{
     @include box-shadow($bs-2);
-    background:$c-Lighter;
+    background:$c-lighter;
     border:1px solid #50B6D5;
   }
 }
 
 // Make textareas look like input areas, only bigger
 textarea{
-  @extend %input-Area;
+  @extend %input-area;
   display:block;
   min-height:40px;
   min-width:60px;

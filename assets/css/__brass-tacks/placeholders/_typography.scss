@@ -2,7 +2,7 @@
 // Sets the base font-size and line heights.
 // ----------------------------------------------------------------
 
-%font-Size-LH{
+%font-size-lh{
   font-size:100%;
   line-height:1.5;
 }
@@ -56,7 +56,7 @@
 //  Remove Styling from List Elements
 // ----------------------------------------------------------------
 
-%kill-List{
+%kill-list{
   list-style:none;
   padding:0;
 }
@@ -75,15 +75,15 @@
 //  Word Wraps
 // ----------------------------------------------------------------
 
-%auto-Wrap{
+%auto-wrap{
   word-wrap:auto;
 }
 
-%break-Word{
+%break-word{
   word-wrap:break-word;
 }
 
-%normal-Wrap{
+%normal-wrap{
   word-wrap:normal;
 }
 

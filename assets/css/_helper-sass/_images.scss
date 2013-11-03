@@ -4,11 +4,11 @@
 
 // Give pictures a frame
 .frame{
-  border:1px solid $c-Dark;
+  border:1px solid $c-dark;
   display:inline-block;
 
   img{
-    border:4px solid $c-White;
+    border:4px solid $c-white;
     display:block;
   }
 }
@@ -23,9 +23,9 @@
 
 // Create a profile
 .pic{
-  @include border-radius($px-Unit);
+  @include border-radius($unit-px);
   @include box-shadow($bs-4);
-  border:1px solid $c-White;
+  border:1px solid $c-white;
   display:inline-block;
   overflow:hidden;
   width:90px;
@@ -36,14 +36,14 @@
 }
 
 // Make picture into a circle
-.pic-Rounded{
+.pic-rounded{
   @extend .pic;
   @include border-radius($circle);
 }
 // 
 //  Code Example
 //  --------------------------
-//  <a href="#" title="TITLE" class="pic-Rounded">
+//  <a href="#" title="TITLE" class="pic-rounded">
 //  <img src="assets/img/little-V.jpg" alt="" />
 //  </a>
 //

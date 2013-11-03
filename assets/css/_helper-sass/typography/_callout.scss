@@ -4,9 +4,9 @@
 
 // Shout Out - blockquote / blockquote like styling for emphasizing text
 .pull-Quote{
-  background:$c-Lighter;
-  border-left:4px solid $c-Dark;
-  padding:$px-Unit*4;
+  background:$c-lighter;
+  border-left:4px solid $c-dark;
+  padding:$unit-px*4;
 
   &:after,
   &:before{
@@ -17,11 +17,11 @@
 // Background Text Highlight
 // ----------------------------------------------------------------
 .highlight{
-  @include border-radius($px-Unit);
-  background:$c-Highlight;
-  color:$c-Darker;
+  @include border-radius($unit-px);
+  background:$c-highlight;
+  color:$c-darker;
   display:inline-block;
-  padding:$px-Unit;
+  padding:$unit-px;
 }
 
 //  Code Example: Slanted Text w/Highlight
@@ -33,8 +33,8 @@
 
 // Background Text Highlight - Skewed
 .slant{
-  @include vendor(transform, skewX(-16deg));
   @extend .highlight;
+  @include vendor(transform, skewX(-16deg));
 }
 
 //  Code Example: Slanted Text w/Highlight

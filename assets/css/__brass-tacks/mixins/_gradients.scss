@@ -1,13 +1,13 @@
 // ----------------------------------------------------------------
 // Linear Gradient
 // ----------------------------------------------------------------
-@mixin linear-gradient($grad-Line, $grad-Colors...) {
-  background: -webkit-linear-gradient($grad-Line, $grad-Colors);
-  background:    -moz-linear-gradient($grad-Line, $grad-Colors);
-  background:      -o-linear-gradient($grad-Line, $grad-Colors);
-  background:         linear-gradient($grad-Line, $grad-Colors);
+@mixin linear-gradient($grad-line, $grad-colors...) {
+  background: -webkit-linear-gradient($grad-line, $grad-colors);
+  background:    -moz-linear-gradient($grad-line, $grad-colors);
+  background:      -o-linear-gradient($grad-line, $grad-colors);
+  background:         linear-gradient($grad-line, $grad-colors);
 }
-    //  grad-Line - use either ###deg or top, let, bottom, right
+    //  grad-line - use either ###deg or top, let, bottom, right
     //  example:
     //  @include linear-gradient(80deg, #fcc, #f23);
     //  @include linear-gradient(top, #fcc, #f23);

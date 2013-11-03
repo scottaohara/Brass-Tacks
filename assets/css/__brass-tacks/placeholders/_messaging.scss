@@ -1,29 +1,30 @@
 // ----------------------------------------------------------------
 //  Messaging Unit Placeholder
 // ----------------------------------------------------------------
+
 %message{
   @include border-radius($px-Unit);
   @include vendor(transition, all .3s linear);
   border:1px solid;
-  margin-bottom:$em-Unit; // 1em
-  padding:$em-Unit*.35 $em-Unit*.5;
+  margin-bottom:$unit-em; // 1em
+  padding:$unit-em*.35 $unit-em*.5;
   position:relative;
   text-shadow:0 1px 1px rgba(255,255,255,.6);
 
 }
 
-%message-Holder{
-  left:$per-Unit;
+%message-holder{
+  left:$unit-per;
   position:fixed;
   top:0;
-  width:$per-Unit*8; // 80%
+  width:80%;
 
   p{
     margin-bottom:0;
   }
 }
 
-%close-Message{
+%close-message{
   border:1px solid;
   position:absolute;
   text-decoration:none;

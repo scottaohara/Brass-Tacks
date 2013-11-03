@@ -2,8 +2,7 @@
 //  Standard Reset
 // ----------------------------------------------------------------
 
-// Reset the Standard Tags,
-// extend to all tags that need this
+// Reset the Standard Tags, extend to all tags that need this
 // for better organization of code
 %reset{
   border:0;
@@ -16,8 +15,13 @@
 //  Displays
 // ----------------------------------------------------------------
 
-%d-Block{display:block;}
-%d-None{display:none;}
+%d-block{
+  display:block;
+}
+
+%d-none{
+  display:none;
+}
 
 // ----------------------------------------------------------------
 //  Clearfix
@@ -35,15 +39,15 @@
 //  Consistent Margin Bottom
 // ----------------------------------------------------------------
 
-%margin-Bottom{
-  margin-bottom:$px-Unit*2;
+%margin-bottom{
+  margin-bottom:$unit-px*2;
 }
 
 // ----------------------------------------------------------------
 //  Kill Outlines
 // ----------------------------------------------------------------
 
-%outline-None{
+%outline-none{
   outline:none;
 }
 

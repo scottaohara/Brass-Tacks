@@ -3,14 +3,14 @@
 // ----------------------------------------------------------------
 
 code, kbd, samp{
-  @extend %margin-Bottom;
+  @extend %margin-bottom;
   background:#F2F2F2;
   border:1px solid #E3E3E3;
   border-left-width:6px;
   display:block;
   font-family:$monospace; 
   font-size:$base;
-  padding:$px-Unit*2;
+  padding:$unit-px*2;
 }
 
 pre{
@@ -23,6 +23,6 @@ p, li{
   code, kbd, pre, samp{
     display:inline-block; 
     margin:0;
-    padding:$px-Unit;
+    padding:$unit-px;
   }
 }

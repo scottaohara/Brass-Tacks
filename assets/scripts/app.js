@@ -15,7 +15,7 @@ var getMaxHeight = function ($elms) {
 };
 
 // Usage
-$('.js-equal-Height').height(getMaxHeight($('.js-equal-Height')));
+$('.js-equal-height').height(getMaxHeight($('.js-equal-height')));
 
 
 // ----------------------------------------------------------------

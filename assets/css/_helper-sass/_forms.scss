@@ -2,8 +2,8 @@
 //		Styling for form elements
 // ----------------------------------------------------------------
 
-.form-Row{ // group form elements and give them some space via padding
-  padding:$px-Unit 0;
+.form-row{ // group form elements and give them some space via padding
+  padding:$unit-px 0;
 }
 
 
@@ -11,30 +11,30 @@
 // ----------------------------------------------------------------
 
 .fieldset{
-  border:1px solid $c-Border;
-  margin-bottom:$px-Unit*2;
-  padding:$px-Unit*2 $px-Unit*3;
+  border:1px solid $c-border;
+  margin-bottom:$unit-px*2;
+  padding:$unit-px*2 $unit-px*3;
 }
 
 
 // Inline Form Elements
 // ----------------------------------------------------------------
 
-.inline-Element{ // inline a specific element
+.inline-element{ // inline a specific element
   display:inline-block;
-  margin-right:$px-Unit;
+  margin-right:$unit-px;
   width:auto;
 }
 
-.inline-All{ // inline all elements inside a container
+.inline-all{ // inline all elements inside a container
   input,
   textarea,
   label{
-    @extend .inline-Element;
+    @extend .inline-element;
   }
 }
 
-.dis-Label{ // disabled cursor styling for labels of disablem form elements
+.dis-label{ // disabled cursor styling for labels of disablem form elements
   cursor:not-allowed;
 }
 
@@ -42,36 +42,36 @@
 // Check/Radio Inputs & Labels
 // ----------------------------------------------------------------
 
-.input-Hide{ // extend invis placeholder for easy to remember input hide class name
+.input-hide{ // extend invis placeholder for easy to remember input hide class name
   @extend %invis;
 }
 
-.check-Radio{
-  @extend %circle-Check;
+.check-radio{
+  @extend %circle-check;
 }
 
 // Checkbox
-.cr-Area{
+.cr-area{
   position:relative;
 
-  :checked + .check-Radio:after{
+  :checked + .check-radio:after{
     opacity:1;
   }
 }
 
 // Additional styling to make radio buttons appear a bit different
 // Radios still work even if these classes aren't applied.
-.radio-Style:checked + .check-Radio{
-  background:$c-Brand-1;
+.radio-style:checked + .check-radio{
+  background:$c-brand-1;
 }
 
-.radio-Style:checked + .check-Radio:after{
-  border-color:$c-White;
+.radio-style:checked + .check-radio:after{
+  border-color:$c-white;
 }
 
 .crs{
-  background:$c-Light-Grey;
-  border:1px solid $c-Dark-Grey;
+  background:$c-light-grey;
+  border:1px solid $c-dark-grey;
   display:inline-block;
   height:28px;
   max-width:80px;
@@ -82,7 +82,7 @@
 
   &:after{
     @include vendor(transition, .2s all);
-    background:$c-Red;
+    background:$c-red;
     content:"";
     //content:"Off";
     height:100%;
@@ -95,11 +95,11 @@
   }
 }
 
-.crs-Label{
+.crs-label{
   vertical-align:middle;
 }
 
-.input-Slide:checked + .crs:after{
+.input-slide:checked + .crs:after{
   background:$c-Green;
   //content:"On";
   right:0;
@@ -110,51 +110,51 @@
 // Drop Down Selection Inputs
 // ----------------------------------------------------------------
 
-.select-Container{
-  @extend %input-Area;
-  background:url(../img/drop-Arrow.png) no-repeat 99% center $c-White;
+.select-container{
+  @extend %input-area;
+  background:url(../img/drop-Arrow.png) no-repeat 99% center $c-white;
   display:block;
   overflow:hidden;
 }
 
-.input-Select{
+.input-select{
   background:none;
   border:0;
   font-family:$arial;
   font-size:$base;
   font-weight:300;
   margin-bottom:0;
-  padding:0 $px-Unit*4 0 0;
+  padding:0 $unit-px*4 0 0;
   width:130%;
   -webkit-appearance:textarea;
 }
 
-.multi-Select{
+.multi-select{
   @extend %input-Area;
 
   option{
-    padding:$px-Unit 2px;
+    padding:$unit-px 2px;
   }
 }
 
 
 // Search Input
 // ----------------------------------------------------------------
-.input-Search{
+.input-search{
   width:75%;
 }
 
-.search-Area{
-  margin-bottom:$px-Unit*2;
+.search-area{
+  margin-bottom:$unit-px*2;
   position:relative;
 
-  .input-Search{
+  .input-search{
     margin-bottom:0;
-    padding-right:$px-Unit*10;
+    padding-right:$unit-px*10;
     width:100%;
   }
 
-  .btn-Search{
+  .btn-search{
     height:100%;
     position:absolute;
     right:0;
@@ -166,7 +166,7 @@
 // File Input Styling
 // ----------------------------------------------------------------
 
-.file-Input-Area{
+.file-input-area{
   position:relative;
 
   label{
@@ -174,7 +174,7 @@
   }
 }
 
-.input-File{
+.input-file{
   cursor:pointer;
   height:100%;
   left:0;
@@ -185,8 +185,8 @@
   z-index:9;
 }
 
-.input-File-Text{
-  @extend %input-Area;
+.input-file-text{
+  @extend %input-area;
   cursor:pointer;
   display:inline-block;
   width:75%;
@@ -196,7 +196,7 @@
 // Number Inputs
 // ----------------------------------------------------------------
 
-.input-Number{
-  @extend %input-Area;
+.input-number{
+  @extend %input-area;
   font-size:$base;
 }

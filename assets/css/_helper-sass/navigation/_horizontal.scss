@@ -6,31 +6,31 @@
 // Edit this file, or extend it / overwrite it in your project 
 // scss files to change it's styling.
 
-.h-Nav{
+.h-nav{
   & > li{
     float:left;
   }
 
   // Set drop menu location to the bottom of the hovered link
-  .drop-Menu{
-    @extend %drop-H;
+  .drop-menu{
+    @extend %drop-h;
   }
 }
 
 // to be placed on the <ul> or <ol> -- don't use floats, but instead use display inline-block and center navigation links
-.c-Nav{
+.c-nav{
   font-size:0;
   text-align:center;
     // font-size:0; deletes the white space between the <li>s 
     // However, the font size inside of the <li>'s must be reset when using this trick.
 
   & > li{
-    @extend %reset-Type;
+    @extend %reset-type;
   }
 }
 
 // Sets links to the base font-size, while also making them inline-block.  Update for your own uses.
-%reset-Type{
+%reset-type{
   display:inline-block;
   font-size:16px;
 }
@@ -40,7 +40,7 @@
 // Basic rules for Breadcrumb Navigations
 // ----------------------------------------------------------------
 .bread{
-  @extend .h-Nav;
+  @extend .h-nav;
 
   li{
     &:last-child:after{
@@ -59,6 +59,6 @@
 
   span{
     display:inline-block;
-    padding:$px-Unit $px-Unit*2;
+    padding:$unit-px $unit-px*2;
   }
 }

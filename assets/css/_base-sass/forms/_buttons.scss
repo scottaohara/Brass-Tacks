@@ -5,7 +5,6 @@
 // Makes buttons look like buttons with appropriate cursors
 button, html input[type='button'],
 input[type='reset'], input[type='submit']{
-  background-image:none;
   cursor:pointer;
   -webkit-appearance:button;
 }

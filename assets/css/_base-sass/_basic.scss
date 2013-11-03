@@ -6,29 +6,29 @@
 @import 'body-html';
    
 // Base HTML5 sepecific elements/selectors rules
-@import 'html5-Elements';
+@import 'html5-elements';
 
 // Base typographical element rules
 @import 'typography/headings';        // Heading Elements
 @import 'typography/paragraphs';      // Paragraph Element
 @import 'typography/small';           // Small Element
 @import 'typography/anchor';          // Anchor Element
-@import 'typography/abbr-Dfn';        // Abbr & Dfn Elements
-@import 'typography/bold-Italic';     // Bold & Italic Elements
+@import 'typography/abbr-dfn';        // Abbr & Dfn Elements
+@import 'typography/bold-italic';     // Bold & Italic Elements
 @import 'typography/code';            // Code Elements
 @import 'typography/lists';           // List Elements
 @import 'typography/mark';            // Mark Element
 @import 'typography/quotes';          // Quote Elements
-@import 'typography/sub-Super';       // Super and Subscript Elements
+@import 'typography/sub-super';       // Super and Subscript Elements
 
 // Base media element rules
-@import 'media-Elements';
+@import 'media-elements';
 
 // Base form element rules
 @import 'forms/base';                 // Standard Form Containers / resets
 @import 'forms/buttons';              // Button/input button rules
 @import 'forms/inputs';               // input areas and textareas
-@import 'forms/text-Elements';        // Form specific text elements
+@import 'forms/text-elements';        // Form specific text elements
 
 // Base navigation rules
 @import 'navs';

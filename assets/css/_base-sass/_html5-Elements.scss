@@ -5,22 +5,22 @@
 // Give HTML5 elements block display, which is not defined in ie8/9
 article, aside, details, figure, figcaption, 
 footer, header, main, nav, section, summary{
-  @extend %d-Block;
+  @extend %d-block;
 }
 
 // Makes hidden actually [hidden] in IE 8/9
 [hidden], template{
-  @extend %d-None;
+  @extend %d-none;
 }
 
 address, details, figure{
-  @extend %margin-Bottom;
+  @extend %margin-bottom;
 }
 
 details{
   summary{
-    @extend %margin-Bottom;
-    @include last-Child-0();
+    @extend %margin-bottom;
+    @include last-child-0();
   }
 }
 

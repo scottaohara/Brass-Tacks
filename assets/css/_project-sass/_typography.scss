@@ -4,5 +4,5 @@
 
 // Multi-Columned Text
 .multi{
-  @include multi-Col(3, $px-Unit*10, 1px, outset, $c-Light);
+  @include multi-col(3, $unit-px*10, 1px, outset, $c-light);
 }

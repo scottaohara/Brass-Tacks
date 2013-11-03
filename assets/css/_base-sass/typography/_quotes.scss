@@ -7,13 +7,13 @@ blockquote{
   @extend %reset;
   @extend %zeta;
   @extend %italic;
-  @extend %margin-Bottom;
+  @extend %margin-bottom;
 
   &:after, &:before{
     font:{
       size:$eps;
       weight:400;
-     }; 
+    }; 
     line-height:1; 
     position:relative; 
     top:2px;
@@ -30,7 +30,7 @@ blockquote{
   }
 }
 
-// sets consistent quotes across browsers
+// Sets consistent quotes across browsers
 q{
   quotes:"\201C" "\201D" "\2018" "\2019";
 }
