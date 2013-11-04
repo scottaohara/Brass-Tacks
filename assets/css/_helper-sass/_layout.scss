@@ -1,6 +1,6 @@
-// ----------------------------------------------------------------
+// ----------------------------------------------------------------------------
 //    Layout - Responsive & Static Grid Elements
-// ----------------------------------------------------------------
+// ----------------------------------------------------------------------------
 
 // A container for each row of our layout. 
 // Simply styled with only a base margin-bottom and extending the clearfix class,
@@ -28,7 +28,7 @@
   margin-bottom:0;
   padding-left:$unit-px*10;
   position:relative;
-  width:100%; // default width is 100%
+  width:100%;
 
   @media (max-device-width:480px), screen and (max-width:800px){
     margin-bottom:$unit-px*2;

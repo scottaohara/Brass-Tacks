@@ -1,11 +1,12 @@
-// ----------------------------------------------------------------
-// Colors
-// ----------------------------------------------------------------
+// ----------------------------------------------------------------------------
+//  Colors
+// ----------------------------------------------------------------------------
 
 // Darker Colors
-$c-black:       #0a0a0a;
-$c-dark:        #333;
+$c-off-black:   #0a0a0a;
 $c-darker:      #1a1a1a;
+$c-dark:        #333;
+$c-hell:        #666;
 
 // Medium Colors
 $c-grey:        #ccc;
@@ -13,11 +14,14 @@ $c-dark-grey:   #999;
 $c-light-grey:  #ddd;
 
 // Ligher Colors
-$c-white:       #fdfdfd;
-$c-light:       #eee;
-$c-lighter:     #f0f0f0;
+$c-off-white:   #f0f0f0;
+$c-light:       #e0e0e0;
+$c-lighter:     #eee;
 
 // Generic Colors
+$c-black:       #000;
+$c-white:       #fff;
+
 $c-red:         #ff3e3e;
 $c-green:       #6ccf31;
 $c-blue:        #66b0e9;
@@ -28,9 +32,9 @@ $c-orange:      #fd6f29;
 $c-purple:      #9729fd;
 
 
-// ----------------------------------------------------------------
-// Fonts Families
-// ----------------------------------------------------------------
+// ----------------------------------------------------------------------------
+//  Fonts Families
+// ----------------------------------------------------------------------------
 
 // Base Web Fonts
 $arial:         Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -44,9 +48,10 @@ $verdana:       Verdana, Geneva, sans-serif;
 $monospace:     monospace, serif;
 
 
-// ----------------------------------------------------------------
-// Font Size Declarations 
-// ----------------------------------------------------------------
+// ----------------------------------------------------------------------------
+//  Font Size Declarations 
+// ----------------------------------------------------------------------------
+
 $base-font-multiplier:1em; // 1em = 16px
 
 $giga:	$base-font-multiplier * 4.375;   // 70px
@@ -65,9 +70,10 @@ $tiny:  $base-font-multiplier * .75;     // 12px
 $mini:  $base-font-multiplier * .625;    // 10px
 
 
-// ----------------------------------------------------------------
-// Box Shadow Types  (these are just examples.  Make your own!)
-// ----------------------------------------------------------------
+// ----------------------------------------------------------------------------
+//  Box Shadow Types  (these are just examples.  Make your own!)
+// ----------------------------------------------------------------------------
+
 $bs-1:    0 0 6px rgba(0,0,0,.25);
 $bs-2:    $bs-1 inset;
 $bs-3:    $bs-1, $bs-1 inset;
@@ -75,21 +81,31 @@ $bs-4:    0 8px 8px -8px rgba(0,0,0,.5);
 $bs-5:    $bs-4, 0 0 6px rgba(0,0,0,.75) inset;
 $bs-6:    0 0 6px rgba(255,255,255,.5) inset;
 
+$bs-input-txt:      0 1px 4px rgba(0,0,0,.15) inset;
+$bs-input-focus:    0 0 6px rgba(64,181,187,.65);
 
-// ----------------------------------------------------------------
-// Measurement Units
-// ----------------------------------------------------------------
+$bs-button:         0 1px 4px rgba(0,0,0,.25), 0 0 2px #fff inset;
+
+
+// ----------------------------------------------------------------------------
+//  Measurement Units
+// ----------------------------------------------------------------------------
+
+// Base measurment units like margin & padding off from a standard base,
+// so if it ever changes, it will only need to be updated in a single location
+
 $unit-px:  4px;   // base of 4px, 1/4 of 16px
 $unit-em:  1em;   // translates to 16px based on 100% font-size
 $unit-per: 10%;   // base of 10 for percentages
 
-$circle:   1100px;  // large number to make sure that just about anything
+$circle:   2000px;  // large number to make sure that just about anything
                     // will be able to be 'circled'
 
 
-// ----------------------------------------------------------------
-//		Media Query Break Points  // based on a 16px base font
-// ----------------------------------------------------------------
+// ----------------------------------------------------------------------------
+//  Media Query Break Points  // based on a 16px base font
+// ----------------------------------------------------------------------------
+
 $break-mini:    380px;    // 30em
 $break-tiny:    500px;    // 31.25em
 $break-small:   600px;    // 37.5em
@@ -97,3 +113,11 @@ $break-medium:  800px;    // 50em
 $break-large:   1000px;   // 62.5em
 $break-xlarge:  1200px;   // 75em
 $break-xxlarge: 1600px;   // 100em
+
+
+// ----------------------------------------------------------------------------
+//  Text Shadow Variations
+// ----------------------------------------------------------------------------
+$ts-primary:    0 1px 1px rgba(0,0,0,.5);
+$ts-secondary:  0 0 3px rgba(0,0,0,.5);
+$ts-dark-bg:    0 0 1px rgba(255,255,255,.3);

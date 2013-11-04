@@ -1,16 +1,11 @@
-// ----------------------------------------------------------------
+// ----------------------------------------------------------------------------
 //  Brass Tacks Mixins
-// ----------------------------------------------------------------
+// ----------------------------------------------------------------------------
 
 @import 'mixins/vendor';
 
 // Typography
 @import 'mixins/typography';
-
-// Styling
-@import 'mixins/border-radius';
-@import 'mixins/box-shadow';
-@import 'mixins/gradients';
 
 // Layout
 @import 'mixins/box-sizing';
@@ -20,7 +15,12 @@
 @import 'mixins/hidden-element';
 @import 'mixins/last-child-m0';
 
+// Design
+@import 'mixins/box-shadow';
+@import 'mixins/gradients';
+
 // CSS Shapes
+@import 'mixins/border-radius';
 @import 'mixins/shapes-blocks';
 @import 'mixins/shapes-triangle';
 

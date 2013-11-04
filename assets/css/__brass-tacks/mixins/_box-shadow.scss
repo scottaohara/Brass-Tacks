@@ -1,11 +1,12 @@
-// ----------------------------------------------------------------
+// ----------------------------------------------------------------------------
 //  Box Shadow
 //
 //  See _var.scss to edit & create box-shadow rules
 //  keeping webkit prefix around for early android / 
 //  ios devices that may still need it.
 //  -moz- removed as it hasn't been needed since firefox 3.6
-// ----------------------------------------------------------------
+// ----------------------------------------------------------------------------
+
 @mixin box-shadow($bs-value ...){
   -webkit-box-shadow:$bs-value;
           box-shadow:$bs-value;

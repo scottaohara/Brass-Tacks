@@ -1,11 +1,33 @@
-// ----------------------------------------------------------------
+// ----------------------------------------------------------------------------
 //  CSS Animation
-// ----------------------------------------------------------------
-@mixin keyframe($animation-name){
-  @-webkit-keyframes $animation-name{
-    @content;
-  }
+//  Source: https://gist.github.com/Integralist/3931680
+// ----------------------------------------------------------------------------
 
+// Setup for animation w/out keyframes
+@mixin animation ($delay, $duration, $animation) {
+  -moz-animation-delay: $delay;
+  -moz-animation-duration: $duration;
+  -moz-animation-name: $animation;
+  -moz-animation-fill-mode: forwards; // prevents the animation from restarting
+
+  -ms-animation-delay: $delay;
+  -ms-animation-duration: $duration;
+  -ms-animation-name: $animation;
+  -ms-animation-fill-mode: forwards; // prevents the animation from restarting
+
+  -webkit-animation-delay: $delay;
+  -webkit-animation-duration: $duration;
+  -webkit-animation-name: $animation;
+  -webkit-animation-fill-mode: forwards; // prevents the animation from restarting
+
+  animation-delay: $delay;
+  animation-duration: $duration;
+  animation-name: $animation;
+  animation-fill-mode: forwards; // prevents the animation from restarting
+}
+
+// Setup for keyframes
+@mixin keyframe($animation-name){
   @-moz-keyframes $animation-name{
     @content;
   }
@@ -14,7 +36,7 @@
     @content;
   }
 
-  @-o-keyframes $animation-name{
+  @-webkit-keyframes $animation-name{
     @content;
   }
 
@@ -26,14 +48,16 @@
 
 // Create CSS keyframe animations for all vendors in one go, e.g.:
 
-//   .foo{
-//     @include vendor(animation, shrink 3s);
+//  .foo{
+//    @include animation(10s, 5s, name);
 //  }
 
-// @include keyframe(shrink){
+// @include keyframe(name){
 //   from{
-//     font-size:5em;
+//     font-size:1em;
 //   }
+//
+//    to{
+//      font-size:5em;
+//    }
 // }
-
-// Courtesy of @integralist: twitter.com/integralist/status/260484115315437569

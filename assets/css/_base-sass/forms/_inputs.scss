@@ -1,6 +1,6 @@
-// ----------------------------------------------------------------
+// ----------------------------------------------------------------------------
 //    Form Elements: Input Elements
-// ----------------------------------------------------------------
+// ----------------------------------------------------------------------------
 
 // Disabled input styling
 input[disabled]{
@@ -33,7 +33,7 @@ input[type='search']{
 } 
 
 select{
-  border:1px solid $c-border;
+  border:1px solid $c-grey;
   padding:$unit-px 0 $unit-px $unit-px;
   width:100%;
 }
@@ -43,7 +43,7 @@ select{
 // standardizes it in other browsers.
 input[type='color']{
   background-image:none;
-  border:1px solid $c-border;
+  border:1px solid $c-grey;
   font-family:$arial;
   height:45px;
   margin-bottom:$unit-px*2;

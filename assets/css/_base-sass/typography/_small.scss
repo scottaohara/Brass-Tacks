@@ -1,13 +1,13 @@
-// ----------------------------------------------------------------
+// ----------------------------------------------------------------------------
 //		Basic Styling: Small Element
-// ----------------------------------------------------------------
+// ----------------------------------------------------------------------------
 
 small{
   @extend %tiny;
   @extend %d-block;
   // Give small some weight when used outside of <p> or <li>, 
   // but make it an inline element again inside of these elements
-  @extend %margin-Bottom;
+  @extend %margin-bottom;
 }
 
 // If small exists within another element, turn it into an inline-block

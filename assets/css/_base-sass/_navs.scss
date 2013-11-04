@@ -1,21 +1,24 @@
-// ----------------------------------------------------------------
+// ----------------------------------------------------------------------------
 //		Basic Setups for Navigation Elements
-// ----------------------------------------------------------------
+// ----------------------------------------------------------------------------
 
 nav{
   ul, ol{
     @extend %reset;
     @extend %clearfix;
-    @extend %kill-List; 
+    @extend %kill-List;
   }
 
   li{
-    margin:0;	
+    margin:0;
+
+    a{
+      display:block; // if inside a <li> make into a block
+    }
   }
 
   a{
-    display:inline-block;
-    padding:$unit-px $unit-px*2; 
+    display:inline-block; // inline-block links if not inside a <li>
   }
 }
 

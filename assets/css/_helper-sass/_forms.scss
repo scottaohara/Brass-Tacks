@@ -1,6 +1,6 @@
-// ----------------------------------------------------------------
+// ----------------------------------------------------------------------------
 //		Styling for form elements
-// ----------------------------------------------------------------
+// ----------------------------------------------------------------------------
 
 .form-row{ // group form elements and give them some space via padding
   padding:$unit-px 0;
@@ -8,8 +8,6 @@
 
 
 // Fieldset Styling
-// ----------------------------------------------------------------
-
 .fieldset{
   border:1px solid $c-border;
   margin-bottom:$unit-px*2;
@@ -18,18 +16,16 @@
 
 
 // Inline Form Elements
-// ----------------------------------------------------------------
-
-.inline-element{ // inline a specific element
+.inline-element{
+  // inline a specific element
   display:inline-block;
   margin-right:$unit-px;
   width:auto;
 }
 
-.inline-all{ // inline all elements inside a container
-  input,
-  textarea,
-  label{
+.inline-all{
+  // inline all elements inside a container
+  input, textarea, label{
     @extend .inline-element;
   }
 }
@@ -40,9 +36,8 @@
 
 
 // Check/Radio Inputs & Labels
-// ----------------------------------------------------------------
-
-.input-hide{ // extend invis placeholder for easy to remember input hide class name
+.input-hide{
+  // extend invis placeholder for easy to remember input hide class name
   @extend %invis;
 }
 
@@ -139,7 +134,6 @@
 
 
 // Search Input
-// ----------------------------------------------------------------
 .input-search{
   width:75%;
 }
@@ -164,8 +158,6 @@
 
 
 // File Input Styling
-// ----------------------------------------------------------------
-
 .file-input-area{
   position:relative;
 
@@ -194,8 +186,6 @@
 
 
 // Number Inputs
-// ----------------------------------------------------------------
-
 .input-number{
   @extend %input-area;
   font-size:$base;

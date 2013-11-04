@@ -1,16 +1,15 @@
-// ----------------------------------------------------------------
+// ----------------------------------------------------------------------------
 //  Messaging Unit Placeholder
-// ----------------------------------------------------------------
+// ----------------------------------------------------------------------------
 
 %message{
-  @include border-radius($px-Unit);
+  @include border-radius($unit-px);
   @include vendor(transition, all .3s linear);
   border:1px solid;
   margin-bottom:$unit-em; // 1em
   padding:$unit-em*.35 $unit-em*.5;
   position:relative;
   text-shadow:0 1px 1px rgba(255,255,255,.6);
-
 }
 
 %message-holder{

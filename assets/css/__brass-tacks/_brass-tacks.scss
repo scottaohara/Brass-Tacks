@@ -1,37 +1,37 @@
-// ----------------------------------------------------------------
+// ----------------------------------------------------------------------------
 //  Compiles all mixins & var files into 
 //  master & thus any other file that needs them
-// ----------------------------------------------------------------
+// ----------------------------------------------------------------------------
 
   @import 'mixins';   // Brass Tacks Mixins
   @import 'vars';     // Brass Tacks Variables
 
 
-// ----------------------------------------------------------------
+// ----------------------------------------------------------------------------
 //  Imports project specific Mixins & Variables
-// ----------------------------------------------------------------
+// ----------------------------------------------------------------------------
 
-  @import '../_project-sass/__vars-mixins/vars';           // project specific variables
-  @import '../_project-sass/__vars-mixins/mixins';         // project specific mixins
+  @import '../_project-sass/__vars-mixins/vars';      // project variables
+  @import '../_project-sass/__vars-mixins/mixins';    // project mixins
 
 
-// ----------------------------------------------------------------
+// ----------------------------------------------------------------------------
 //  Imports common preset classes that will
 //  only be used if extended into a project
 //  Placeholders is divided into various sub files...
-// ----------------------------------------------------------------
+// ----------------------------------------------------------------------------
 
-@import 'placeholders/generic';        // Multi-Purpose classes such as clearfix
-@import 'placeholders/brand';          // contains presets to quickly add brand fonts/colors
-@import 'placeholders/forms';          // helper form classes
-@import 'placeholders/typography';     // Various typography base classe
+@import 'placeholders/generic';        // Multi-Purpose classes like clearfix
+@import 'placeholders/brand';          // Presets for brand fonts/colors
+@import 'placeholders/forms';          // Form helper classes
+@import 'placeholders/typography';     // Various typography classes
 
 
-// ----------------------------------------------------------------
+// ----------------------------------------------------------------------------
 //  Extensions
 //  Placeholder classes that extend beyond the general Brass Tacks
 //  Boilerplate by adding additional styling and functionality 
-// ----------------------------------------------------------------
+// ----------------------------------------------------------------------------
 
-@import 'placeholders/messaging';      // Classes for messaging units & modal boxes
-@import 'placeholders/tool-tips';      // Tool Tips
+@import 'placeholders/messaging';    // Messaging units & modal boxes
+@import 'placeholders/tool-tips';    // Tool Tips

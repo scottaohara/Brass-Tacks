@@ -1,9 +1,9 @@
-// ----------------------------------------------------------------
+// ----------------------------------------------------------------------------
 //  Helper Classes for Images
-// ----------------------------------------------------------------
+// ----------------------------------------------------------------------------
 
-// Give pictures a frame
 .frame{
+  // Give pictures a frame
   border:1px solid $c-dark;
   display:inline-block;
 
@@ -14,14 +14,13 @@
 }
 
 //  Code Example
-// --------------------------
+//
 // <div class="frame">
 //   <img src="..." alt="..." />
 // </div>
 
 
-
-// Create a profile
+// Profile picture
 .pic{
   @include border-radius($unit-px);
   @include box-shadow($bs-4);
@@ -35,15 +34,14 @@
   }
 }
 
-// Make picture into a circle
 .pic-rounded{
+  // Make picture into a circle
   @extend .pic;
   @include border-radius($circle);
 }
-// 
+
 //  Code Example
-//  --------------------------
+//
 //  <a href="#" title="TITLE" class="pic-rounded">
 //  <img src="assets/img/little-V.jpg" alt="" />
 //  </a>
-//

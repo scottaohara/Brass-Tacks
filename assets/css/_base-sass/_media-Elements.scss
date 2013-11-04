@@ -1,9 +1,8 @@
-// ----------------------------------------------------------------
+// ----------------------------------------------------------------------------
 //		Basic Styling: Media Elements
-// ----------------------------------------------------------------
+// ----------------------------------------------------------------------------
 
-// Reset styling for media elements &
-// make sure they don't extend beyond parent containers
+// Reset styling for media elements & always keep contained in parent element
 audio, embed, img, object, video{
   @extend %reset;
   max-width:100%;  
@@ -24,7 +23,7 @@ audio, canvas, video{
   display:inline-block;
 }
 
-// Prevents browsers from displaying 'audio' w/out controls and fixes height for iOS 5
+// Prevents displaying 'audio' w/out controls & height fix for iOS 5
 audio:not([controls]){
   display:none;
   height:0;  
