@@ -3,11 +3,11 @@
 // ----------------------------------------------------------------------------
 
 // Truncate Text
-@mixin truncate($truncation-boundary){
-  max-width:$truncation-boundary;
-  overflow:hidden;
-  text-overflow:ellipsis;
-  white-space:nowrap;
+@mixin truncate($truncation-boundary) {
+  max-width: $truncation-boundary;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 // Usage example  --  @include truncate(100%);

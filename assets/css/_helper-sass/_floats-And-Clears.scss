@@ -3,28 +3,28 @@
 // ----------------------------------------------------------------------------
 
 // Floats
-.float-left{
-  float:left;
+.float-left {
+  float: left;
 }
 
-.float-right{
-  float:right;
+.float-right {
+  float: right;
 }
 
-.float-none{
-  float:none;
+.float-none {
+  float: none;
 }
 
 
 // Clears
-.clear{
-  clear:both;
+.clear {
+  clear: both;
 }
 
-.clearfix{
+.clearfix {
   @extend %clearfix;
 }
 
-.overflow{
-  overflow:hidden;
+.overflow {
+  overflow: hidden;
 }

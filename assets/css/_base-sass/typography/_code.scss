@@ -1,28 +1,28 @@
 // ----------------------------------------------------------------------------
-//		Basic Styling: Code Elements
+//  Basic Styling: Code Elements
 // ----------------------------------------------------------------------------
 
-code, kbd, samp{
+code, kbd, samp {
   @extend %margin-bottom;
-  background:#F2F2F2;
-  border:1px solid #E3E3E3;
-  border-left-width:6px;
-  display:block;
-  font-family:$monospace; 
-  font-size:$base;
-  padding:$unit-px*2;
+  background: #F2F2F2;
+  border: 1px solid #E3E3E3;
+  border-left-width: 6px;
+  display: block;
+  font-family: $monospace; 
+  font-size: $base;
+  padding: $unit-px*2;
 }
 
-pre{
+pre {
   @extend %reset;
   overflow:auto; 
-  white-space:pre-wrap;
+  white-space: pre-wrap;
 }
 
-p, li{
-  code, kbd, pre, samp{
-    display:inline-block; 
-    margin:0;
-    padding:$unit-px;
+p, li {
+  code, kbd, pre, samp {
+    display: inline-block; 
+    margin: 0;
+    padding: $unit-px;
   }
 }

@@ -4,183 +4,185 @@
 
 // The main navigation class to be placed on the <nav>
 // these rules have been moved into the navigation folter _nav file.
-// update references to:
+// update references to: 
 
 // .nav, .h-nav
-
 
 
 // ----------------------------------------------------------------------------
 // Basic rules for Vertical Navigations
 // ----------------------------------------------------------------------------
+
 // to be placed on the <ul> or <ol>
-.v-nav{
-  a{
-    display:block;
+.v-nav {
+  a {
+    display: block;
   }
-  .drop-menu{
+  .drop-menu {
     @extend %drop-v; // Set drop menu location to the right of the hovered link
   }
 }
 
 
 // ----------------------------------------------------------------------------
-// Basic rules for Listless Horizontal Navigations
+//  Basic rules for Listless Horizontal Navigations
 // ----------------------------------------------------------------------------
-.ah-nav{
-  font-size:0;
 
-  a{
+.ah-nav {
+  font-size: 0;
+
+  a {
     @extend %reset-type;
   }
 
   // Set drop menu location to the bottom of the hovered link
-  .drop-Menu{
+  .drop-Menu {
     @extend %drop-h;
   }
 }
 
 
 // ----------------------------------------------------------------------------
-// Basic rules for Listless Vertical Navigations
+//  Basic rules for Listless Vertical Navigations
 // ----------------------------------------------------------------------------
-.av-nav{
+
+.av-nav {
   // Set drop menu location to the bottom of the hovered link
-  .drop-start{
-    display:block;
+  .drop-start {
+    display: block;
   }
 
-  .drop-menu{
+  .drop-menu {
     @extend %drop-v;
   }
 }
 
 
 // ----------------------------------------------------------------------------
-// Basic rules for Drop Down Menus (applied to both horizontal & vertical navs)
+//  Basic rules for Drop Down Menus (applied to both horizontal & vertical navs)
 // ----------------------------------------------------------------------------
-.drop-start{
-  position:relative;
-  
-  &:hover{
-    background:$c-light;
 
-    .drop-menu{
-      visibility:visible;
+.drop-start {
+  position: relative;
+  
+  &:hover {
+    background: $c-light;
+
+    .drop-menu {
+      visibility: visible;
     }
   }
 
-  a{
-    white-space:nowrap;
-    // makes it so the dd doesn't get stuck only being as big as the top level button
+  a {
+    white-space: nowrap;
+    // makes the dd not get stuck only being as big as the top level button
   }
 }
-.drop-Menu{
-  background:$c-light; 
-  border:1px solid $c-light-grey; 
+.drop-Menu {
+  background: $c-light; 
+  border: 1px solid $c-light-grey; 
   position:absolute; 
-  visibility:hidden; 
-  z-index:5;
+  visibility: hidden; 
+  z-index: 5;
 }
 
-%drop-v{
-  left:100%;
-  top:0;
+%drop-v {
+  left: 100%;
+  top: 0;
 }
 
-%drop-h{
-  left:0;
-  top:100%;
+%drop-h {
+  left: 0;
+  top: 100%;
 }
 
 
 // ----------------------------------------------------------------------------
-// Fixed Position Sidebar Nav
+//  Fixed Position Sidebar Nav
 // ----------------------------------------------------------------------------
+
 $color-fixed-nav:   #DC4732;
-$color-fn-a:        #fff;
 $width-fixed-nav:   200px;
 $height-fixed-nav:  100px;
 
 // Add a class to the body tag
-.fixed-nav-left{
-  padding-left:$width-fixed-nav;    // padding-left = width of nav
+.fixed-nav-left {
+  padding-left: $width-fixed-nav;    // padding-left = width of nav
   
-  .side-nav-fixed{
-    left:0;
+  .side-nav-fixed {
+    left: 0;
   }
   
-  .btn-nav{
-    left:$unit-px*2;
-    top:$unit-px*2;
-  }
-}
-
-.fixed-nav-right{
-  padding-right:$width-fixed-nav;   // padding-right = width of nav
-  
-  .side-nav-fixed{
-    right:0;
-  }
-  
-  .btn-nav{
-    right:$unit-px*2;
-    top:$unit-px*2;
+  .btn-nav {
+    left: $unit-px*2;
+    top: $unit-px*2;
   }
 }
 
-.fixed-nav-top{
-  padding-top:$height-fixed-nav;    // padding-top = height of nav
+.fixed-nav-right {
+  padding-right: $width-fixed-nav;   // padding-right = width of nav
+  
+  .side-nav-fixed {
+    right: 0;
+  }
+  
+  .btn-nav {
+    right: $unit-px*2;
+    top: $unit-px*2;
+  }
+}
+
+.fixed-nav-top {
+  padding-top: $height-fixed-nav;    // padding-top = height of nav
 }
 
 // A placeholder class so we don't repeat ourselves
 // with duplicate declarations
-%fixed-nav{
-  background:$color-fixed-nav;
-  position:fixed;
-  top:0;
-  z-index:1000;
+%fixed-nav {
+  background: $color-fixed-nav;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
   
-  a{
-    color:$color-fn-a;
+  a {
+    color: $c-white;
 
-    &:hover, &:visited{
-      background:rgba(0,0,0,.6);
-      color:$c-white;
-      text-decoration:none;
+    &:hover, &:visited {
+      background: rgba(0,0,0,.6);
+      color: $c-white;
+      text-decoration: none;
     }
   }
 }
 
-.top-nav-fixed{
+.top-nav-fixed {
   @extend %fixed-nav;
-  height:$height-fixed-nav;
+  height: $height-fixed-nav;
 }
 
-.side-nav-fixed{
+.side-nav-fixed {
   @extend %fixed-nav;
-  height:100%;
+  height: 100%;
   overflow-y:auto;
-  width:$width-fixed-nav;
+  width: $width-fixed-nav;
 }
 
 
 // ----------------------------------------------------------------------------
-// Floating Menu Nav Link
+//  Floating Menu Nav Link
 // ----------------------------------------------------------------------------
-.btn-nav{
-  background:url(../img/nav-Icon.png) no-repeat center center;
+
+.btn-nav {
+  background: url(../img/nav-Icon.png) no-repeat center center;
   @include vendor(background-size, 75%);
-  height:24px;
-  position:fixed;
-  right:$unit-px;
-  top:$unit-px;
-  width:28px;
+  height: 24px;
+  position: fixed;
+  right: $unit-px;
+  top: $unit-px;
+  width: 28px;
 }
 
 //  Code Example
-
-//<a class="btn btn-nav" id="btn-nav-1" href="#show-nav">
+//  <a class="btn btn-nav" id="btn-nav-1" href="#show-nav">
 //    <span class="hidden">Show Navigation</span>
-//</a>
-
+//  </a>

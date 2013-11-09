@@ -1,18 +1,18 @@
 // ----------------------------------------------------------------------------
-//		Basic Styling: Heading Elements & Classes
+//	Basic Styling: Heading Elements & Classes
 // ----------------------------------------------------------------------------
 
-h1, h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6 {
   @extend %reset;
   @extend %margin-bottom;
 }
 
-h1{@extend %alpha;}
-h2{@extend %beta;}
-h3{@extend %gamma;}
-h4{@extend %delta;}
-h5{@extend %eps;}
-h6{@extend %zeta;}
+h1 {@extend %alpha;}
+h2 {@extend %beta;}
+h3 {@extend %gamma;}
+h4 {@extend %delta;}
+h5 {@extend %eps;}
+h6 {@extend %zeta;}
 
 // Placeholder classes are used so elements can be easily
 // broken out into modular files.

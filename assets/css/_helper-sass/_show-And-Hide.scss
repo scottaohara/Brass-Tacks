@@ -2,40 +2,40 @@
 //  Showing & Hiding
 // ----------------------------------------------------------------------------
 
-// Show Elements with Display:block
-.d-Block, .js-show{
+// Show Elements with Display: block
+.d-Block, .js-show {
   @extend %d-block;
 }
 
 
-// Hide Elements with display:none
-.d-none, .js-hide, .mobile-show{
+// Hide Elements with display: none
+.d-none, .js-hide, .mobile-show {
   @extend %d-none;
 }
 
-@media (max-device-width:480px), screen and (max-width:800px){
-  .mobile-show{
-    display:block;
+@media (max-device-width: 480px), screen and (max-width: 800px) {
+  .mobile-show {
+    display: block;
   }
 }
 
 // Mute an element by changing Opacity
-.mute{
-  opacity:.75;
+.mute {
+  opacity: .75;
 }
 
-.mute-more{
-  opacity:.5;
+.mute-more {
+  opacity: .5;
 }
 
 
 // Hides from screenreaders and browsers
-.hidden{
+.hidden {
   @extend %hidden;
 }
 
 
 // Hide from browsers but not from screen readers
-.invis{
+.invis {
   @extend %invis;
 }

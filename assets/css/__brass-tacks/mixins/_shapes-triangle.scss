@@ -2,12 +2,12 @@
 //  CSS Triangles
 // ----------------------------------------------------------------------------
 
-@mixin triangle($tri-size, $tri-color, $tri-direction){
-  border:inset $tri-size;
-  content:"";
-  display:block;
-  height:0;
-  width:0;
+@mixin triangle($tri-size, $tri-color, $tri-direction) {
+  border: inset $tri-size;
+  content: "";
+  display: block;
+  height: 0;
+  width: 0;
   
   @if ($tri-direction == top) {
     border-color: $tri-color transparent transparent transparent;

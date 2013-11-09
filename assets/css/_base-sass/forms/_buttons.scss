@@ -1,16 +1,16 @@
 // ----------------------------------------------------------------------------
-//    Form Elements: Button Elements
+//	Form Elements: Button Elements
 // ----------------------------------------------------------------------------
 
 // Makes buttons look like buttons with appropriate cursors
 button, html input[type='button'],
-input[type='reset'], input[type='submit']{
-  cursor:pointer;
-  -webkit-appearance:button;
+input[type='reset'], input[type='submit'] {
+  cursor: pointer;
+  -webkit-appearance: button;
 }
 
 // Removes inner padding & border in Firefox 4+
-button::-moz-focus-inner, input::-moz-focus-inner{
-  border:0;
-  padding:0;
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
 }

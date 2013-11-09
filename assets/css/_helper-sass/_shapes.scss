@@ -3,7 +3,7 @@
 // ----------------------------------------------------------------------------
 
 // Make an element into a circle
-.circle{
+.circle {
   @include border-radius($circle);
-  overflow:hidden;
+  overflow: hidden;
 }

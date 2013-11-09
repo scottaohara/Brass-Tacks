@@ -1,5 +1,5 @@
 // ----------------------------------------------------------------------------
-//		HTML5 Elements
+//	HTML5 Elements
 // ----------------------------------------------------------------------------
 
 // Give HTML5 elements block display, which is not defined in ie8/9
@@ -20,7 +20,7 @@ address, details, figure{
 details{
   summary{
     @extend %margin-bottom;
-    @include last-child-0();
+    @include last-child-0;
   }
 }
 

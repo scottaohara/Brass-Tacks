@@ -2,14 +2,14 @@
 //  Helper Classes for Images
 // ----------------------------------------------------------------------------
 
-.frame{
+.frame {
   // Give pictures a frame
-  border:1px solid $c-dark;
-  display:inline-block;
+  border: 1px solid $c-dark;
+  display: inline-block;
 
-  img{
-    border:4px solid $c-white;
-    display:block;
+  img {
+    border: 4px solid $c-white;
+    display: block;
   }
 }
 
@@ -21,20 +21,20 @@
 
 
 // Profile picture
-.pic{
+.pic {
   @include border-radius($unit-px);
   @include box-shadow($bs-4);
-  border:1px solid $c-white;
-  display:inline-block;
-  overflow:hidden;
-  width:90px;
+  border: 1px solid $c-white;
+  display: inline-block;
+  overflow: hidden;
+  width: 90px;
 
-  img{
-    display:block;
+  img {
+    display: block;
   }
 }
 
-.pic-rounded{
+.pic-rounded {
   // Make picture into a circle
   @extend .pic;
   @include border-radius($circle);

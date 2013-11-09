@@ -1,14 +1,14 @@
 // ----------------------------------------------------------------------------
-//		Basic Styling: Bold & Italic Elements
+//	Basic Styling: Bold & Italic Elements
 // ----------------------------------------------------------------------------
 
 // Bold these things.  Bold 'em good.
-b, strong{
+b, strong {
   @extend %bold;
 }
 
-// Italicize these things.  Italicize them gooder.
-i, em{
+// Italicize these things. Italicize them gooder.
+i, em {
   @extend %italic;
 }
 

@@ -1,5 +1,5 @@
 // ----------------------------------------------------------------------------
-//		Basic Styling: Small Element
+//  Basic Styling: Small Element
 // ----------------------------------------------------------------------------
 
 small{
@@ -13,8 +13,8 @@ small{
 // If small exists within another element, turn it into an inline-block
 h1, h2, h3, h4, h5, h6, p, li{
   small{
-    display:inline-block;
-    margin:0;
+    display: inline-block;
+    margin: 0;
   }
 }
 

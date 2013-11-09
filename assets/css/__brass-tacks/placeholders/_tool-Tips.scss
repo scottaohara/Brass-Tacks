@@ -1,39 +1,39 @@
 // ----------------------------------------------------------------------------
-//  Tool Tips / Hover Desc.
+//  Tool Tips / Hover Description
 //  extend this rule into the a [data-tooltip] selector
 // ----------------------------------------------------------------------------
 
-%tool-tip{
-  cursor:help;
-  display:inline-block;
-  position:relative;
+%tool-tip {
+  cursor: help;
+  display: inline-block;
+  position: relative;
 
-  img{
-    display:block;
+  img {
+    display: block;
   }
 
-  &:after{
+  &:after {
     @include position(bottom, -20%, left, 0, absolute);
     @include vendor(transition, all 0.35s);
-    background:$c-white;
-    background:rgba(255,255,255,.95);
-    border:1px solid $c-dark;
-    border-radius:$unit-px;
-    color:$c-dark;
+    background: $c-white;
+    background: rgba(255,255,255,.95);
+    border: 1px solid $c-dark;
+    border-radius: $unit-px;
+    color: $c-dark;
     content:attr(data-tooltip);
-    font-size:$tiny;
-    opacity:0;
-    padding:$unit-px $unit-px*3;
-    text-align:center;
-    width:100%;
+    font-size: $tiny;
+    opacity: 0;
+    padding: $unit-px $unit-px*3;
+    text-align: center;
+    width: 100%;
   }
 
-  &:hover{
-    text-decoration:none;
+  &:hover {
+    text-decoration: none;
 
-    &:after{
-      bottom:0;
-      opacity:1;
+    &:after {
+      bottom: 0;
+      opacity: 1;
     }
   }
 }

@@ -2,15 +2,15 @@
 //  Emphasis Block
 // ----------------------------------------------------------------------------
 
-.emph-block{
+.emph-block	{
   @include border-radius($unit-px);
   @include box-shadow($bs-4);
   @include last-child-0();
-  background:$c-white;
-  border:1px solid $c-light-grey;
-  margin-bottom:$unit-px*4;
-  min-height:50px;
-  padding:$unit-px*4;
+  background: $c-white;
+  border: 1px solid $c-light-grey;
+  margin-bottom: $unit-px*4;
+  min-height: 50px;
+  padding: $unit-px*4;
 }
 
 // Code Example

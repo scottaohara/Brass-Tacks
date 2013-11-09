@@ -2,43 +2,43 @@
 //  Responsive Row w/fixed width column -- use in combo with .row
 // ----------------------------------------------------------------------------
 
-@mixin row-fixed-left($col-size){
-  padding-left:$col-size;
+@mixin row-fixed-left($col-size) {
+  padding-left: $col-size;
   
-  @media (max-device-width:$break-mini), screen and (max-width:$break-medium){
-    padding:0;
+  @media (max-device-width: $break-mini), screen and (max-width: $break-medium) {
+    padding: 0;
   }
   
-  .f-Col{
-    float:left;
-    margin-left:-$col-size + 40px;
-    width:$col-size - 40px;
+  .f-Col {
+    float: left;
+    margin-left: -$col-size + 40px;
+    width: $col-size - 40px;
 
-    @media (max-device-width:$break-mini), screen and (max-width:$break-medium){
-      float:none;
-      margin:0;
-      padding-left:40px;
+    @media (max-device-width: $break-mini), screen and (max-width: $break-medium) {
+      float: none;
+      margin: 0;
+      padding-left: 40px;
       width:auto;
     }
   }
 }
 
-@mixin row-fixed-Right($col-size){
-  padding-right:$col-size;
+@mixin row-fixed-right($col-size) {
+  padding-right: $col-size;
   
-  @media (max-device-width:$break-mini), screen and (max-width:$break-medium){
-    padding:0;
+  @media (max-device-width: $break-mini), screen and (max-width: $break-medium) {
+    padding: 0;
   }
 
-  .f-Col{
-    float:right;
-    margin-right:-$col-size;
-    width:$col-size - 40px;
+  .f-Col {
+    float: right;
+    margin-right: -$col-size;
+    width: $col-size - 40px;
 
-    @media (max-device-width:$break-mini), screen and (max-width:$break-medium){
-      float:none;
-      margin:0;
-      padding-left:40px;
+    @media (max-device-width: $break-mini), screen and (max-width: $break-medium) {
+      float: none;
+      margin: 0;
+      padding-left: 40px;
       width:auto;
     }
   }

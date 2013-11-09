@@ -3,11 +3,11 @@
 // ----------------------------------------------------------------------------
 
 // Kill list styling - removes list markings & padding
-.kill-list{
+.kill-list {
   @extend %kill-list;
 }
 
 // For non-semantic list numbering
-.number-list{
-  list-style-type:decimal;
+.number-list {
+  list-style-type: decimal;
 }

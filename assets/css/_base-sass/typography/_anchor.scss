@@ -1,12 +1,12 @@
 // ----------------------------------------------------------------------------
-//  Basic Styling: Anchor Element
+//  Basic Styling:anchor Element
 // ----------------------------------------------------------------------------
 
 // Removes grey background color from active links in IE10
-a{
-  background:transparent;
+a {
+  background: transparent;
 
-  &:active, &:hover{
+  &:active, &:hover {
     @extend %outline-none;
   }
 }

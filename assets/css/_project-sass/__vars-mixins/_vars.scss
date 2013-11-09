@@ -1,47 +1,50 @@
 // ----------------------------------------------------------------
-// Project Specific Variables
+//	Project Specific Variables
 // ----------------------------------------------------------------
 
 // Edit these variables for 
 
 // ----------------------------------------------------------------
-// Base Branding Colors
+//	Base Branding Colors
 // ----------------------------------------------------------------
-$c-brand-1:		#40b5bb;
-$c-brand-2:		#2c8692;
-$c-brand-3:		#fc7a14;
+
+$c-brand-1: 		#40b5bb;
+$c-brand-2: 		#2c8692;
+$c-brand-3: 		#fc7a14;
 
 
 // ----------------------------------------------------------------
-// Button & Link Colors
+//	Button & Link Colors
 // ----------------------------------------------------------------
+
 $c-btn-1:     $c-brand-1;
 $c-btn-2:     $c-brand-2;
 $c-btn-3:     $c-brand-3;
 
-$c-btn-neg:		$c-dark-grey;
-$c-disabled:	$c-lighter;
+$c-btn-neg: 		$c-dark-grey;
+$c-disabled: 	$c-lighter;
 
-$c-link:		  $c-brand-2;
+$c-link: 		  $c-brand-2;
 
 // Color for Radio/Check box buttons
-$c-btn-rc:		$c-light;
+$c-btn-rc: 		$c-light;
 
 // Required / Error Text Color
-$c-required:	$c-red;
+$c-required: 	$c-red;
 
 // Underlines & Highlights
-$c-highlight:	$c-yellow;
-$c-underline:	$c-grey; // not for links
-$c-border:		$c-grey;
+$c-highlight: 	$c-yellow;
+$c-underline: 	$c-grey; // not for links
+$c-border: 		$c-grey;
 
 
 // ----------------------------------------------------------------
-// Tables
+//	Tables
 // ----------------------------------------------------------------
+
 $c-table:         $c-lighter;
-$c-table-Head:    $c-light;
-$c-table-Foot:    $c-lighter;
+$c-table-head:    $c-light;
+$c-table-foot:    $c-lighter;
 
 $c-table-striped: $c-light;
 $c-table-border:  $c-grey;
@@ -50,5 +53,8 @@ $c-table-border:  $c-grey;
 $border-table:    1px solid $c-table-border;
 
 
-// Fonts Families  ------------------------------------------------
-$brand:     'Open Sans'; // replace this with your main brand font
+// ----------------------------------------------------------------
+// Fonts Families
+// ----------------------------------------------------------------
+
+$f-brand:     'Open Sans'; // replace this with your main brand font

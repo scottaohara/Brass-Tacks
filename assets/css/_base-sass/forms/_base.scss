@@ -1,11 +1,11 @@
 // ----------------------------------------------------------------------------
-//		Form Elements Standardization
+//  Form Elements Standardization
 // ----------------------------------------------------------------------------
 
-button, fieldset, form, input, select, textarea{
+button, fieldset, form, input, select, textarea {
   @extend %reset;
   @extend %margin-bottom;
   @extend %base;
-  line-height:normal;
-  text-transform:none;
+  line-height: normal;
+  text-transform: none;
 }

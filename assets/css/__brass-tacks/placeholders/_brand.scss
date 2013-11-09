@@ -1,18 +1,18 @@
 // ----------------------------------------------------------------------------
-//		Branding Helpers Classes
+//  Branding Helpers Classes
 // ----------------------------------------------------------------------------
 
-%brand{
+%brand {
   @extend %brand-color;
   @extend %brand-font;
 }
 
-%brand-Color{
-  color:$c-brand-1;
+%brand-color {
+  color: $c-brand-1;
 }
 
-%brand-Font{
-  font-family:$f-brand;
-  //font-size:$base;
-  font-weight:300;
+%brand-font {
+  font-family: $f-brand;
+  //font-size: $base;
+  font-weight: 300;
 }

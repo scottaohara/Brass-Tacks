@@ -2,18 +2,18 @@
 //  Form Elements: Text Elements
 // ----------------------------------------------------------------------------
 
-legend{
+legend {
   @extend %reset;
   @extend %eps;
-  margin-left:-$unit-px;
-  padding:0 $unit-px;
+  margin-left: -$unit-px;
+  padding: 0 $unit-px;
 }
 
-label, .label{
-  display:block;
-  margin-bottom:$unit-px*2;
+label, .label {
+  display: block;
+  margin-bottom: $unit-px*2;
 
-  &[for]{
-    cursor:pointer;
+  &[for] {
+    cursor: pointer;
   }
 }

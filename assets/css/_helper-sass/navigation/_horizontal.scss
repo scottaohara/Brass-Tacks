@@ -6,59 +6,61 @@
 // Edit this file, or extend it / overwrite it in your project 
 // scss files to change it's styling.
 
-.h-nav{
-  & > li{
-    float:left;
+.h-nav {
+  & > li {
+    float: left;
   }
 
   // Set drop menu location to the bottom of the hovered link
-  .drop-menu{
+  .drop-menu {
     @extend %drop-h;
   }
 }
 
-// to be placed on the <ul> or <ol> -- don't use floats, but instead use display inline-block and center navigation links
-.c-nav{
-  font-size:0;
-  text-align:center;
-    // font-size:0; deletes the white space between the <li>s 
-    // However, the font size inside of the <li>'s must be reset when using this trick.
+// To be placed on the <ul> or <ol> -- don't use floats, 
+// instead use display inline-block and center navigation links
+.c-nav {
+  font-size: 0;
+  text-align: center;
+    // font-size: 0; deletes the white space between the <li>s 
+    // The font size inside of the <li>'s must be reset when using this trick.
 
-  & > li{
+  & > li {
     @extend %reset-type;
   }
 }
 
-// Sets links to the base font-size, while also making them inline-block.  Update for your own uses.
-%reset-type{
-  display:inline-block;
-  font-size:16px;
+// Sets links to the base font-size, while also making them inline-block.
+%reset-type {
+  display: inline-block;
+  font-size: 16px;
 }
 
 
 // ----------------------------------------------------------------
 // Basic rules for Breadcrumb Navigations
 // ----------------------------------------------------------------
-.bread{
+
+.bread {
   @extend .h-nav;
 
-  li{
-    &:last-child:after{
-      content:none;
+  li {
+    &: last-child:after {
+      content: none;
     }
     
-    &:after{
-      content:">";
-      display:inline-block;
+    &:after {
+      content: ">";
+      display: inline-block;
     }
   }
 
-  a{
-    display:inline-block;
+  a {
+    display: inline-block;
   }
 
-  span{
-    display:inline-block;
-    padding:$unit-px $unit-px*2;
+  span {
+    display: inline-block;
+    padding: $unit-px $unit-px*2;
   }
 }

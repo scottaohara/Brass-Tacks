@@ -1,10 +1,10 @@
 // ----------------------------------------------------------------------------
-//		Project Specific Extended HTML Stylings
+//  Project Specific Extended HTML Stylings
 // ----------------------------------------------------------------------------
 body{
-  background:$c-lighter;
-  font-family:$brand;
-  font-weight:300;
+  background: $c-lighter;
+  font-family: $f-brand;
+  font-weight: 300;
 }
 
 // Highlight Text Selection
@@ -17,9 +17,9 @@ body{
 // while allowing for larger sections to expand the whole page for BG purposes
 .content{
   @include last-child-0();
-  margin:0 auto;
-  max-width:1000px;
-  padding:$unit-px*5;
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: $unit-px*5;
 }
 
 // Tool tip example
@@ -31,14 +31,14 @@ body{
 //		Project Specific Link Stylings
 // ----------------------------------------------------------------------------
 a{   
-  color:$c-link;
+  color: $c-link;
   
-  &:hover, &:active{
-    color:darken($c-link, 15%);
+  &:active, &:hover{
+    color: darken($c-link, 15%);
   }
   
   &:visited{
-    color:darken($c-link, 30%);
+    color: darken($c-link, 30%);
   }
   
   &:focus{

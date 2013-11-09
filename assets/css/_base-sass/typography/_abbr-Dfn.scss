@@ -1,15 +1,15 @@
 // ----------------------------------------------------------------------------
-//  Basic Styling: Abbr & Dfn Elements
+//  Basic Styling:abbr & Dfn Elements
 // ----------------------------------------------------------------------------
 
-dfn{
+dfn {
   @extend %italic;
 }
 
 // An underline & help cursor in all browsers when a title tag is present
-abbr[title], dfn[title]{
-  border-bottom:1px dotted $c-grey;
-  cursor:help;
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted $c-grey;
+  cursor: help;
 }
 
 // Placeholder classes are used so elements can be easily

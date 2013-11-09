@@ -2,13 +2,13 @@
 // Sets the base font-size and line heights.
 // ----------------------------------------------------------------------------
 
-%font-size-lh{
-  font-size:100%;
-  line-height:1.5;
+%font-size-lh {
+  font-size: 100%;
+  line-height: 1.5;
 }
 
-%giga, %ulta, %mega, %alpha{
-  line-height:1
+%giga, %ulta, %mega, %alpha {
+  line-height: 1
 }
 
 
@@ -16,30 +16,30 @@
 //  Font Sizes & Weights
 // ----------------------------------------------------------------------------
 
-%giga   {font-size:$giga;   font-weight:700;}
-%ultra  {font-size:$ultra;  font-weight:600;}
-%mega   {font-size:$mega;   font-weight:300;}
-%alpha  {font-size:$alpha;  font-weight:400;}
-%beta   {font-size:$beta;   font-weight:400;}
-%gamma  {font-size:$gamma;  font-weight:400;}
-%delta  {font-size:$delta;  font-weight:300;}
-%eps    {font-size:$eps;    font-weight:300;}
-%zeta   {font-size:$zeta;   font-weight:300;}
-%base   {font-size:$base;   font-weight:300;}
-%tiny   {font-size:$tiny;   font-weight:300;}
-%mini   {font-size:$mini;   font-weight:300;}
+%giga   {font-size: $giga;   font-weight: 700;}
+%ultra  {font-size: $ultra;  font-weight: 600;}
+%mega   {font-size: $mega;   font-weight: 300;}
+%alpha  {font-size: $alpha;  font-weight: 400;}
+%beta   {font-size: $beta;   font-weight: 400;}
+%gamma  {font-size: $gamma;  font-weight: 400;}
+%delta  {font-size: $delta;  font-weight: 300;}
+%eps    {font-size: $eps;    font-weight: 300;}
+%zeta   {font-size: $zeta;   font-weight: 300;}
+%base   {font-size: $base;   font-weight: 300;}
+%tiny   {font-size: $tiny;   font-weight: 300;}
+%mini   {font-size: $mini;   font-weight: 300;}
 
 
 // ----------------------------------------------------------------------------
 //  Bold
 // ----------------------------------------------------------------------------
 
-%bold{
-  font-weight:bold;
+%bold {
+  font-weight: bold;
 }
 
 %bolder{
-  font-weight:bolder;
+  font-weight: bolder;
 }
 
 
@@ -47,8 +47,8 @@
 //  Italic
 // ----------------------------------------------------------------------------
 
-%italic{
-  font-style:italic;
+%italic {
+  font-style: italic;
 }
 
 
@@ -56,10 +56,10 @@
 //  Remove Styling from List Elements
 // ----------------------------------------------------------------------------
 
-%kill-list{
-  list-style:none;
-  margin:0;
-  padding:0;
+%kill-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -67,7 +67,7 @@
 //  Truncate Text
 // ----------------------------------------------------------------------------
 
-%truncate{
+%truncate {
   @include truncate(100%);
 }
 
@@ -76,16 +76,16 @@
 //  Word Wraps
 // ----------------------------------------------------------------------------
 
-%auto-wrap{
-  word-wrap:auto;
+%auto-wrap {
+  word-wrap: auto;
 }
 
-%break-word{
-  word-wrap:break-word;
+%break-word {
+  word-wrap: break-word;
 }
 
-%normal-wrap{
-  word-wrap:normal;
+%normal-wrap {
+  word-wrap: normal;
 }
 
 
@@ -93,15 +93,15 @@
 //  :after Symbols
 // ----------------------------------------------------------------------------
 
-%degree{
-  &:after{
-    content:"\00BA";  // Creates degree symbol
+%degree {
+  &:after {
+    content: "\00BA";  // Creates degree symbol
   }
 }
 
-%go{
-  &:after{
-    content:"\00A0" "\00BB";  // >> (use on link / btn
+%go {
+  &:after {
+    content: "\00A0" "\00BB";  // >> (use on link / btn
   }
 }
 
@@ -110,7 +110,7 @@
 //  Anti-aliasing Text
 // ----------------------------------------------------------------------------
 
-%antialias{
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
+%antialias {
+  -webkit-font-smoothing:antialiased;
+  font-smoothing:antialiased;
 }

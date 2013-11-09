@@ -1,29 +1,29 @@
 // ----------------------------------------------------------------------------
-//    Project Specific: Main Content Area
+//  Project Specific: Main Content Area
 // ----------------------------------------------------------------------------
 
 // Apply to <main> or top level <section> for styling
-.content-base{
-  min-height:500px;
-  padding-bottom:$unit-px*5;
+.content-base {
+  min-height: 500px;
+  padding-bottom: $unit-px*5;
 
-  .content{
+  .content {
     @include box-shadow($bs-4);
-    background:$c-white; 
-    border:1px solid $c-light; 
+    background: $c-white; 
+    border: 1px solid $c-light; 
   }
 }
 
 // Additional Content Area stylings go below...
-.table-2col{
+.table-2col {
   td{
-    width:50%;
+    width: 50%;
   }
 }
 
 // Add a border to .nav so it is easier to see in examples
-.nav{
+.nav {
   ul, ol{
-    border:1px solid $c-light;
+    border: 1px solid $c-light;
   }
 }

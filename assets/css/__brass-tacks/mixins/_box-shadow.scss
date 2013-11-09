@@ -7,7 +7,7 @@
 //  -moz- removed as it hasn't been needed since firefox 3.6
 // ----------------------------------------------------------------------------
 
-@mixin box-shadow($bs-value ...){
-  -webkit-box-shadow:$bs-value;
-          box-shadow:$bs-value;
+@mixin box-shadow($bs-value ...) {
+  -webkit-box-shadow: $bs-value;
+          box-shadow: $bs-value;
 }

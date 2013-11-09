@@ -2,35 +2,35 @@
 //  Basic Styling for Buttons
 // ----------------------------------------------------------------------------
 
-.btn{
+.btn {
   @include border-radius($unit-px);
   @include vendor(transition, all .25s ease-in-out 0s);
-  background:$c-dark none; 
-  color:$c-lighter;
-  cursor:pointer;
-  display:inline-block;
-  font:{
-    family:$arial;
-    size:$base;
+  background: $c-dark none; 
+  color: $c-lighter;
+  cursor: pointer;
+  display: inline-block;
+  font:  {
+    family: $arial;
+    size: $base;
   };
-  line-height:1;
-  padding:$unit-px*2 $unit-px*3; 
-  text-align:center;
-  text-decoration:none!important; // never have an underline on button text.
-  -webkit-appearance:none;
-    
-  &.btn-pad{
-    padding:$unit-px*2 $unit-px*4;
+  line-height: 1;
+  padding: $unit-px*2 $unit-px*3;
+  text-align: center;
+  text-decoration: none!important; // never have an underline on button text.
+  -webkit-appearance: none;
+
+  &.btn-pad {
+    padding: $unit-px*2 $unit-px*4;
   }
 
-  &:active, &:hover{
+  &:active, &:hover {
     @include box-shadow($bs-6);
-    background:$c-Darker; 
-    color:$c-Lighter;
+    background: $c-darker;
+    color: $c-lighter;
   }
 
-  &:visited{
-    color:$c-Lighter;
+  &:visited {
+    color: $c-lighter;
   }
 }
 
@@ -39,38 +39,38 @@
 //  Sizing
 // ----------------------------------------------------------------------------
 
-.btn-small{
-	@extend .btn; 
-	font-size:$tiny; 
-	padding:$unit-px $unit-px*2;
-	
-	&.btn-pad{
-		padding:$unit-px $unit-px*3
-	}
+.btn-small {
+  @extend .btn; 
+  font-size: $tiny; 
+  padding: $unit-px $unit-px*2;
+  
+  &.btn-pad {
+    padding: $unit-px $unit-px*3
+  }
 }
 
-.btn-large{
-	@extend .btn; 
-	font-size:$gamma; 
-	padding:$unit-px*3;
-	
-	&.btn-pad{
-	   padding:$unit-px*3 $unit-px*5;
-	}
+.btn-large {
+  @extend .btn; 
+  font-size: $gamma; 
+  padding: $unit-px*3;
+  
+  &.btn-pad {
+     padding: $unit-px*3 $unit-px*5;
+  }
 }
 
-.btn-xlarge{
-	@extend .btn; 
-	font-size:$beta; 
-	padding:$unit-px*3 $unit-px*4;
-	
-	&.btn-pad{
-	   padding:$unit-px*4 $unit-px*6;
-	}
+.btn-xlarge {
+  @extend .btn; 
+  font-size: $beta; 
+  padding: $unit-px*3 $unit-px*4;
+  
+  &.btn-pad {
+     padding: $unit-px*4 $unit-px*6;
+  }
 }
 
-.btn-wide{
-  display:block;
+.btn-wide {
+  display: block;
 }
 
 
@@ -78,46 +78,46 @@
 //  Coloring
 // ----------------------------------------------------------------------------
 
-.btn-action{
-  background:$c-btn-1;
+.btn-action {
+  background: $c-btn-1;
   
-  &:hover{
-    background:darken($c-btn-1, 15%);
-  }
-}
-   
-.btn-action-2{
-  background:$c-btn-2;
-  
-  &:hover{
-    background:darken($c-btn-2, 15%);
-  }
-}
-    
-.btn-action-3{
-  background:$c-btn-3;
-  
-  &:hover{
-    background:darken($c-btn-3, 15%);
+  &:hover {
+    background: darken($c-btn-1, 15%);
   }
 }
 
-.btn-neg{
-  background:$c-btn-neg; 
-  color:$c-Lighter;
+.btn-action-2 {
+  background: $c-btn-2;
+  
+  &:hover {
+    background: darken($c-btn-2, 15%);
+  }
+}
 
-  &:hover{
+.btn-action-3 {
+  background: $c-btn-3;
+  
+  &:hover {
+    background: darken($c-btn-3, 15%);
+  }
+}
+
+.btn-neg {
+  background: $c-btn-neg; 
+  color: $c-lighter;
+
+  &:hover {
     @extend .btn-neg;
   }
 }
 
-.btn-disable{
-  background:$c-disabled; 
-  border:1px solid #eee; 
-  color:$c-dark; 
-  cursor:default;
+.btn-disable {
+  background: $c-disabled; 
+  border: 1px solid #eee; 
+  color: $c-dark; 
+  cursor: default;
 
-  &:hover, &:visited{
+  &:hover, &:visited {
     @extend .btn-disable;
   }
 }
@@ -127,11 +127,11 @@
 //  Corner Styling
 // ----------------------------------------------------------------------------
 
-.btn-square{
+.btn-square {
   @include border-radius(0);
 }
 
-.btn-round{
+.btn-round {
   @include border-radius($unit-px*3);
 }
 
@@ -140,15 +140,15 @@
 //  Button Pills
 // ----------------------------------------------------------------------------
 
-.btn-left{
+.btn-left {
   @include border-radius($unit-px*3 0 0 $unit-px*3);
 }
 
-.btn-center{
+.btn-center {
   @extend .btn-square;
 }
 
-.btn-right{
+.btn-right {
   @include border-radius(0 $unit-px*3 $unit-px*3 0);
 }
 
@@ -157,29 +157,29 @@
 //  Buttons with Icons
 // ----------------------------------------------------------------------------
 /*
-%btn-icon{
+%btn-icon {
 
 }
 
-.btn-icon-16{
-  height:16px;
-  padding-left:20px;
-  width:16px;
+.btn-icon-16 {
+  height: 16px;
+  padding-left: 20px;
+  width: 16px;
 }
 
-.btn-icon-32{
-  height:32px;
-  padding-left:36px;
-  width:32px;
+.btn-icon-32 {
+  height: 32px;
+  padding-left: 36px;
+  width: 32px;
 }
 
-.btn-icon-64{
-  height:64px;
-  padding-left:68px;
-  width:64px;
+.btn-icon-64 {
+  height: 64px;
+  padding-left: 68px;
+  width: 64px;
 }
 
-.icon{
+.icon {
 
 }
 */

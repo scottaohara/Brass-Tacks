@@ -1,26 +1,26 @@
 // ----------------------------------------------------------------
-// Tables
+//  Tables
 // ----------------------------------------------------------------
 
 // Resets main table tags
-caption, tr{
+caption, tr {
   @extend %reset;
 }
 
 // Removes most of the table spacing issues
-table{
+table {
   @extend %reset;
   @extend %margin-bottom;
-  border-collapse:collapse;
-  border-spacing:0;
-  font-size:$base;
-  width:100%; // make tables take up the full width of their parent
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: $base;
+  width: 100%; // make tables take up the full width of their parent
 }
 
-th, td{
+th, td {
   @extend %reset;
-  padding:$unit-px $unit-px*2;
-  text-align:left;
+  padding: $unit-px $unit-px*2;
+  text-align: left;
 }
 
 // Placeholder classes are used so elements can be easily

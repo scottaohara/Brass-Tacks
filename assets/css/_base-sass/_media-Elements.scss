@@ -1,35 +1,35 @@
 // ----------------------------------------------------------------------------
-//		Basic Styling: Media Elements
+//	Basic Styling: Media Elements
 // ----------------------------------------------------------------------------
 
 // Reset styling for media elements & always keep contained in parent element
-audio, embed, img, object, video{
+audio, embed, img, object, video {
   @extend %reset;
-  max-width:100%;  
+  max-width: 100%;  
 }
 
 // If an image doesn't load, make the alt text noticable
-img{
+img {
   @extend %italic;
-  color:$c-red;
+  color: $c-red;
 }
 
-figure img{
+figure img {
   @extend %d-block;
 }
 
 // Give HTML5 elements inline-block display, which is not defined in ie8/9
-audio, canvas, video{
-  display:inline-block;
+audio, canvas, video {
+  display: inline-block;
 }
 
 // Prevents displaying 'audio' w/out controls & height fix for iOS 5
-audio:not([controls]){
-  display:none;
-  height:0;  
+audio:not([controls]) {
+  display: none;
+  height: 0;  
 }
 
 // Corrects overflow issue in IE9
-svg:not(:root){
-  overflow:hidden;
+svg:not(:root) {
+  overflow: hidden;
 }

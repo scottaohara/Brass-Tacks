@@ -1,11 +1,11 @@
 // ----------------------------------------------------------------------------
-//		HR Element
+//  HR Element
 // ----------------------------------------------------------------------------
 
-hr{
-  border:0;
-  border-bottom:1px solid rgba(0,0,0,.2);
-  display:block;
-  height:1px; 
-  margin:$unit-px*2 0;
+hr {
+  border: 0;
+  border-bottom: 1px solid rgba(0,0,0,.2);
+  display: block;
+  height: 1px; 
+  margin: $unit-px*2 0;
 }

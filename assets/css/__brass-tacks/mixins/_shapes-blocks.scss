@@ -3,19 +3,19 @@
 // ----------------------------------------------------------------------------
 
 // Prefect Square
-@mixin square($measurement){
-  height:$measurement;
-  width:$measurement;
+@mixin square($measurement) {
+  height: $measurement;
+  width: $measurement;
 }
 
 // Wide Rectangle
-@mixin rectangle-wide($measurement, $number){
-  height:$measurement;
-  width:$measurement*$number;
+@mixin rectangle-wide($measurement, $number) {
+  height: $measurement;
+  width: $measurement*$number;
 }
 
 // Tall Rectangle
-@mixin rectangle-tall($measurement, $number){
-  height:$measurement*$number;
-  width:$measurement;
+@mixin rectangle-tall($measurement, $number) {
+  height: $measurement*$number;
+  width: $measurement;
 }

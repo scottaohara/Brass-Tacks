@@ -1,5 +1,5 @@
 // ----------------------------------------------------------------------------
-// Linear Gradient
+//  Linear Gradient
 // ----------------------------------------------------------------------------
 
 @mixin linear-gradient($grad-line, $grad-colors...) {
@@ -9,7 +9,7 @@
   background:         linear-gradient($grad-line, $grad-colors);
 }
     //  grad-line - use either ###deg or top, let, bottom, right
-    //  example:
+    //  example: 
     //  @include linear-gradient(80deg, #fcc, #f23);
     //  @include linear-gradient(top, #fcc, #f23);
 
