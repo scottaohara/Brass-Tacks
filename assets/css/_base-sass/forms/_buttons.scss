@@ -3,14 +3,22 @@
 // ----------------------------------------------------------------------------
 
 // Makes buttons look like buttons with appropriate cursors
-button, html input[type='button'],
-input[type='reset'], input[type='submit'] {
+button,
+html input[type='button'],
+input[type='reset'],
+input[type='submit'] {
   cursor: pointer;
   -webkit-appearance: button;
 }
 
+// Removes outline from submit buttons in Firefox
+input[type="submit"]::-moz-focus-inner{
+  @extend %outline-none;
+}
+
 // Removes inner padding & border in Firefox 4+
-button::-moz-focus-inner, input::-moz-focus-inner {
+button::-moz-focus-inner,
+ input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }

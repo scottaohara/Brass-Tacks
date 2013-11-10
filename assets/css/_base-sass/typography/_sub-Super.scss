@@ -1,20 +1,19 @@
 // ----------------------------------------------------------------------------
-//  Basic Styling: Mark Element
+//  Basic Styling: Sub/Sup Elements
 // ----------------------------------------------------------------------------
 
 // Prevents sub & sup from affecting the line-height
-sub, sup{
+sub, sup {
   @extend %tiny;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
 }
 
-sub{
+sub {
   bottom: -.25em;
 }
 
-sup{
+sup {
   top: -.5em;
 }
-  

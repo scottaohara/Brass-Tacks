@@ -1,14 +1,9 @@
 // ----------------------------------------------------------------------------
-//  Form Elements: Text Elements
+//  Form Elements: Select Element
 // ----------------------------------------------------------------------------
 
-legend {
-  @extend %reset;
-  @extend %eps;
-  margin-left: -$unit-px;
-  padding: 0 $unit-px;
-}
-
-label {
-  @extend %label;
+select {
+  border: 1px solid $c-grey;
+  padding: $unit-px 0 $unit-px $unit-px;
+  width: 100%;
 }

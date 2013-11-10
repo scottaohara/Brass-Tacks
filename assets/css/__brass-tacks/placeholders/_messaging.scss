@@ -4,7 +4,7 @@
 
 %message {
   @include border-radius($unit-px);
-  @include vendor(transition, all .3s linear);
+  @include transition(all .3s linear);
   border: 1px solid;
   margin-bottom: $unit-em; // 1em
   padding: $unit-em*.35 $unit-em*.5;

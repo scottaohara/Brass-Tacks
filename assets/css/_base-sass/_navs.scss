@@ -6,7 +6,7 @@ nav {
   ul, ol {
     @extend %reset;
     @extend %clearfix;
-    @extend %kill-List;
+    @extend %kill-list;
   }
 
   li {
@@ -25,7 +25,7 @@ nav {
 // Placeholder classes are used so elements can be easily
 // broken out into modular files.
 
-// If you would like to change the basic values of these 
+// If you would like to change the basic values of these
 // elements, simply either delete the place holder reference
 // and add your own styling, or edit the placeholder class
 // in the corresponding Brass Tacks placeholders .scss file.

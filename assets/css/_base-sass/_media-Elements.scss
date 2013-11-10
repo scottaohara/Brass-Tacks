@@ -3,9 +3,11 @@
 // ----------------------------------------------------------------------------
 
 // Reset styling for media elements & always keep contained in parent element
+// * - Give HTML5 elements inline-block display, which is not defined in ie8/9
 audio, embed, img, object, video {
   @extend %reset;
-  max-width: 100%;  
+  display: inline-block; // *
+  max-width: 100%;
 }
 
 // If an image doesn't load, make the alt text noticable
@@ -18,15 +20,10 @@ figure img {
   @extend %d-block;
 }
 
-// Give HTML5 elements inline-block display, which is not defined in ie8/9
-audio, canvas, video {
-  display: inline-block;
-}
-
 // Prevents displaying 'audio' w/out controls & height fix for iOS 5
 audio:not([controls]) {
   display: none;
-  height: 0;  
+  height: 0;
 }
 
 // Corrects overflow issue in IE9

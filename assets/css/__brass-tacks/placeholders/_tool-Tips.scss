@@ -14,7 +14,7 @@
 
   &:after {
     @include position(bottom, -20%, left, 0, absolute);
-    @include vendor(transition, all 0.35s);
+    @include transition(all 0.35s);
     background: $c-white;
     background: rgba(255,255,255,.95);
     border: 1px solid $c-dark;

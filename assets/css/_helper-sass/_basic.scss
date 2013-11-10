@@ -12,7 +12,6 @@
 @import 'layout';                         // Classes for layouts
 @import 'media-element';                  // Classes to create the media/text element
 @import 'messaging';                      // Classes for messaging elements
-@import 'navs';                           // Classes for styling navigations
 @import 'shapes';                         // Classes to make elements into shapes
 @import 'tables';                         // Classes for table styling
 
@@ -22,3 +21,11 @@
 @import 'typography/lists';               // Styling for lists
 @import 'typography/sizing';              // Font sizing classes
 @import 'typography/height-and-indents';  // Line height and text indent classes
+
+// Navigation Helpers
+@import 'navigation/breadcrumbs';
+@import 'navigation/drop-menu';
+@import 'navigation/horizontal';
+@import 'navigation/vertical';
+@import 'navigation/fixed';
+@import 'navigation/mobile';

@@ -1,5 +1,5 @@
 // ----------------------------------------------------------------------------
-//  Basic Styling:anchor Element
+//  Basic Styling: Anchor Element
 // ----------------------------------------------------------------------------
 
 // Removes grey background color from active links in IE10
@@ -8,5 +8,9 @@ a {
 
   &:active, &:hover {
     @extend %outline-none;
+  }
+
+  &:focus {
+    outline: thin dotted;
   }
 }

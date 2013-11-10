@@ -1,5 +1,5 @@
 // ----------------------------------------------------------------------------
-//  Project Specific Extended HTML Stylings
+//  Project Specific: Extended HTML Stylings
 // ----------------------------------------------------------------------------
 body{
   background: $c-lighter;
@@ -10,7 +10,7 @@ body{
 // Highlight Text Selection
 @include select-text($c-darker, $c-light, none);
 
-// Full container for the entire page.  
+// Full container for the entire page.
 .page{}
 
 // Generic tag to wrap around content within sections to apply a max width to the interior content
@@ -28,28 +28,18 @@ body{
 }
 
 // ----------------------------------------------------------------------------
-//		Project Specific Link Stylings
+//  Project Specific: Link Stylings
 // ----------------------------------------------------------------------------
-a{   
+a{
   color: $c-link;
-  
+
   &:active, &:hover{
     color: darken($c-link, 15%);
   }
-  
+
   &:visited{
     color: darken($c-link, 30%);
   }
-  
-  &:focus{
-    @extend %outline-none;
-  }
-}
-
-// Outlines - this is considered bad for accessiblity.
-// Needs to be rewritten to not be default, but to also have a visual indicator
-:focus, input[type="submit"]::-moz-focus-inner{
-  @extend %outline-none;
 }
 
 @import 'header';		     // Project Specific Header Styling

@@ -1,0 +1,42 @@
+// ----------------------------------------------------------------------------
+//  Drop Down Menus
+// ----------------------------------------------------------------------------
+
+// Placeholders for drop menu types
+%drop-v {
+  left: 100%;
+  top: 0;
+}
+
+%drop-h {
+  left: 0;
+  top: 100%;
+}
+
+// Element that contains the hidden drop menu
+.drop-container {
+  position: relative;
+
+  &:hover {
+    background: $c-light;
+
+    .drop-menu {
+      visibility: visible;
+    }
+  }
+
+  a {
+    white-space: nowrap;
+    // makes the dd not get stuck only being as big as the top level button
+  }
+}
+
+.drop-menu {
+  background: $c-light;
+  border: 1px solid $c-light-grey;
+  position: absolute;
+  visibility: hidden;
+  z-index: 5;
+}
+
+

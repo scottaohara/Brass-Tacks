@@ -2,6 +2,20 @@
 //  Form Elements: Input Elements
 // ----------------------------------------------------------------------------
 
+// Style inputs consistently
+input {
+  &[type='date'], &[type='email'], &[type='file'],
+  &[type='number'], &[type='password'], &[type='search'],
+  &[type='tel'], &[type='text'], &[type='time'], &[type='url'] {
+    @extend %input-area;
+  }
+}
+
+// Required styling
+input:required {
+  color: $c-red;
+}
+
 // Disabled input styling
 input[disabled] {
   background: $c-light;
@@ -18,29 +32,14 @@ input[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-// Base styling for text input elements
-input {
-  &[type='date'], &[type='email'], &[type='file'], 
-  &[type='number'], &[type='password'], &[type='search'], 
-  &[type='tel'], &[type='text'], &[type='time'], &[type='url'] {
-    @extend %input-area;
-  }
-}
-
 // Makes it look like a normal text input, only with a (x) when text has been entered
 input[type='search'] {
   -webkit-appearance: textfield;
-} 
-
-select {
-  border: 1px solid $c-grey;
-  padding: $unit-px 0 $unit-px $unit-px;
-  width: 100%;
 }
 
-// Color is not supported in all browsers, and extending %input-area breaks the default look in webkit
-// so instead we will carry over some of the input-Area styling that doesn't break it in webkit, but 
-// standardizes it in other browsers.
+// Color is not supported in all browsers, and extending %input-area breaks the
+// default look in webkit so instead we will carry over some of the input-area
+// styling that doesn't break it in webkit & standardizes it in other browsers
 input[type='color'] {
   background-image: none;
   border: 1px solid $c-grey;
@@ -55,15 +54,4 @@ input[type='color'] {
     background: $c-lighter;
     border: 1px solid #50B6D5;
   }
-}
-
-// Make textareas look like input areas, only bigger
-textarea {
-  @extend %input-area;
-  display: block;
-  min-height: 40px;
-  min-width: 60px;
-  overflow:auto;
-  resize: vertical;
-  vertical-align: top;
 }

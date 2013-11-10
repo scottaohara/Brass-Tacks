@@ -9,9 +9,7 @@
 }
 
 // Apply to internal wrapper for footer content
-.footer-content {
-  @extend .content;
-}
+.footer-content {}
 
 // Extend the .nav class to style your footer navigation
 .footer-nav {
@@ -19,11 +17,11 @@
 
   a{
     // add in project styling for footer a tags here
-    
+
     &:hover{
       // add in project styling for a:hover here
     }
-    
+
     &.selected{
       // add in project styling for a.selected here
     }

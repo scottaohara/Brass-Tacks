@@ -1,4 +1,7 @@
 // ----------------------------------------------------------------------------
-//  Basic Setup for Navigation Elements
+//  Transition
 // ----------------------------------------------------------------------------
 
+@mixin transition($values) {
+  @include base-vendor(transition, $values);
+}

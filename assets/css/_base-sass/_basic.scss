@@ -4,7 +4,7 @@
 
 // Rules for HTML, Body & * elements
 @import 'body-html';
-   
+
 // Base HTML5 sepecific elements/selectors rules
 @import 'html5-elements';
 
@@ -27,7 +27,9 @@
 // Base form element rules
 @import 'forms/base';                 // Standard Form Containers / resets
 @import 'forms/buttons';              // Button/input button rules
-@import 'forms/inputs';               // input areas and textareas
+@import 'forms/textarea';             // Textarea Element
+@import 'forms/inputs';               // Input Elements
+@import 'forms/select';               // Select Elements
 @import 'forms/text-elements';        // Form specific text elements
 
 // Base navigation rules

@@ -4,13 +4,11 @@
 
 // Apply to <header> for styling
 .header-base {
-  text-shadow: 0 1px 1px #fff;
+  text-shadow: 0 1px 1px $c-white;
 }
 
 // Apply to child div inside of header for padding/margin
-.header-content {
-  @extend .content;
-}
+.header-content {}
 
 // Extend the .nav class to style your header navigation
 .header-nav {}

@@ -1,0 +1,13 @@
+// ----------------------------------------------------------------------------
+// Basic rules for Vertical Navigations
+// ----------------------------------------------------------------------------
+
+// to be placed on the <ul> or <ol>
+.v-nav {
+  a {
+    display: block;
+  }
+  .drop-menu {
+    @extend %drop-v; // Set drop menu location to the right of the hovered link
+  }
+}

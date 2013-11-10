@@ -4,8 +4,8 @@
 
 .btn {
   @include border-radius($unit-px);
-  @include vendor(transition, all .25s ease-in-out 0s);
-  background: $c-dark none; 
+  @include transition(all .25s ease-in-out 0s);
+  background: $c-dark none;
   color: $c-lighter;
   cursor: pointer;
   display: inline-block;
@@ -40,30 +40,30 @@
 // ----------------------------------------------------------------------------
 
 .btn-small {
-  @extend .btn; 
-  font-size: $tiny; 
+  @extend .btn;
+  font-size: $tiny;
   padding: $unit-px $unit-px*2;
-  
+
   &.btn-pad {
     padding: $unit-px $unit-px*3
   }
 }
 
 .btn-large {
-  @extend .btn; 
-  font-size: $gamma; 
+  @extend .btn;
+  font-size: $gamma;
   padding: $unit-px*3;
-  
+
   &.btn-pad {
      padding: $unit-px*3 $unit-px*5;
   }
 }
 
 .btn-xlarge {
-  @extend .btn; 
-  font-size: $beta; 
+  @extend .btn;
+  font-size: $beta;
   padding: $unit-px*3 $unit-px*4;
-  
+
   &.btn-pad {
      padding: $unit-px*4 $unit-px*6;
   }
@@ -80,7 +80,7 @@
 
 .btn-action {
   background: $c-btn-1;
-  
+
   &:hover {
     background: darken($c-btn-1, 15%);
   }
@@ -88,7 +88,7 @@
 
 .btn-action-2 {
   background: $c-btn-2;
-  
+
   &:hover {
     background: darken($c-btn-2, 15%);
   }
@@ -96,14 +96,14 @@
 
 .btn-action-3 {
   background: $c-btn-3;
-  
+
   &:hover {
     background: darken($c-btn-3, 15%);
   }
 }
 
 .btn-neg {
-  background: $c-btn-neg; 
+  background: $c-btn-neg;
   color: $c-lighter;
 
   &:hover {
@@ -112,9 +112,9 @@
 }
 
 .btn-disable {
-  background: $c-disabled; 
-  border: 1px solid #eee; 
-  color: $c-dark; 
+  background: $c-disabled;
+  border: 1px solid #eee;
+  color: $c-dark;
   cursor: default;
 
   &:hover, &:visited {

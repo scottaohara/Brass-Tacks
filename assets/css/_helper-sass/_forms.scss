@@ -30,16 +30,15 @@
   }
 }
 
+.label {
+  @extend %label;
+}
+
 .dis-label { // disabled cursor styling for labels of disablem form elements
   cursor: not-allowed;
 }
 
 // Check/Radio Inputs & Labels
-.input-hide {
-  // extend invis placeholder for easy to remember input hide class name
-  @extend %invis;
-}
-
 .check-radio {
   @extend %circle-check;
 }
@@ -75,7 +74,7 @@
   width: 100%;
 
   &:after {
-    @include vendor(transition, .2s all);
+    @include transition(all .25s);
     background: $c-red;
     content: "";
     //content: "Off";
