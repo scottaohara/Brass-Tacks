@@ -1,4 +1,4 @@
-# Brass Tacks (Last updated: 0.7.3.3.1)
+# Brass Tacks (Last updated: 0.7.7)
 
 Brass Tacks is (will be) a professional front-end HTML5 and SCSS framework that incorporates and standardizes many widely used HTML and CSS elements.
 
@@ -6,7 +6,8 @@ Brass Tacks was built quietly over many years of standardizing the way I write m
 
 Many other developers have had a hand in helping me shape Brass Tacks' outcome. I will list them here and likely rewrite this into later.
 
-A current(read: likely not current) build can be viewed at http://brass-tacks.scottohara.mixture.io/ (for now)
+A current(read: likely not current) build is not currently available online.  I need to fix that super quickly.  
+Which means I will likely get to doing that before the end of 2013...
 
 
 ## Brass Tacks Specifics
@@ -41,9 +42,9 @@ the majority of website projects I've been involved with.
 
 ## Current Usage:
 
-* September --, 2013    - Project to be named upon completion - version 0.7.3.3
+* November --, 2013    - Project to be named upon completion - version 0.7.7
 
-* September --, 2013    - Project to be named upon completion - version 0.7.3.2.1
+* November 11, 2013    - www.ghop.me - version 0.7.3.1
 
 * July 13, 2013         - www.neocities.org - Used in combination with
                           Twitter Bootstraps - version 0.6.2
