@@ -24,12 +24,11 @@
   @import '__brass-tacks/brass-tacks-lib';    //  Includes Brass Tacks default vars and mixins
                                               //  Also pulls in all Project specific vars/mixins to consolodate @imports
 
-// Base Values
-  @import '_base-sass/basic';             //  Standardizes the base styling of HTML elements
-
 // Variables and Mixins
   @import '__brass-tacks/brass-tacks-placeholders';    //  Includes Brass Tacks placeholder classes
 
+// Base Values
+  @import '_base-sass/basic';             //  Standardizes the base styling of HTML elements
 
 // Helper Classes
   @import '_helper-sass/basic';           //  imports all helper files  --  these will be listed out here again
