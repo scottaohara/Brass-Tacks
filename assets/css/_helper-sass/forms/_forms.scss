@@ -1,0 +1,129 @@
+// ----------------------------------------------------------------------------
+//		Styling for form elements
+// ----------------------------------------------------------------------------
+
+.form-row{
+  // group form elements and give them some space via padding
+  padding: $unit-px 0;
+}
+
+
+// Fieldset Styling
+.fieldset{
+  border: 1px solid $c-border;
+  margin-bottom: $unit-px*2;
+  padding: $unit-px*2 $unit-px*3;
+}
+
+
+// Inline Form Elements
+.inline-element{
+  // inline a specific element
+  display: inline-block;
+  margin-right: $unit-px;
+  width: auto;
+}
+
+.inline-all{
+  // inline all elements inside a container
+  input, textarea, label{
+    @extend .inline-element;
+  }
+}
+
+.dis-label{
+  // disabled cursor styling for labels of disablem form elements
+  cursor:not-allowed;
+}
+
+
+
+
+// Drop Down Selection Inputs
+.select-container{
+  @extend %input-area;
+  background: url(../img/drop-arrow.png) no-repeat 99% center #fff;
+  display: block;
+  overflow: hidden;
+}
+
+.input-select{
+  background: none;
+  border: 0;
+  font-family: $f-brand;
+  font-size: $base;
+  font-weight: 300;
+  margin-bottom: 0;
+  padding: 0 $unit-px*4 0 0;
+  width: 130%;
+  -webkit-appearance: textarea;
+}
+
+.multi-select{
+  @extend %input-area;
+
+  option{
+    padding: $unit-px 2px;
+  }
+}
+
+
+// Search Input
+.input-search{
+  width: 75%;
+}
+
+.search-area{
+  margin-bottom: $unit-px*2;
+  position: relative;
+
+  .input-search{
+    margin-bottom: 0;
+    padding-right: $unit-px*10;
+    width: 100%;
+  }
+
+  .btn-search{
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+
+// File Input Styling
+.file-input-area{
+  position: relative;
+
+  label{
+    cursor: default;
+  }
+}
+
+.input-file{
+  cursor: pointer;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+}
+
+.input-file-text{
+  @extend %input-area;
+  cursor: pointer;
+  display: inline-block;
+  width: 75%;
+}
+
+
+// Number Inputs
+.input-number{
+  @extend %input-area;
+  font-size: $base;
+}
+
+@import 'radio-checks';

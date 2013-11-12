@@ -1,22 +1,14 @@
 // ----------------------------------------------------------------------------
-//	HTML5 Layout Block Elements
+//	Figure & Figure Caption
 // ----------------------------------------------------------------------------
 
-// Give HTML5 elements block display, which is not defined in ie8/9
-article,
-aside,
-footer,
-header,
-main,
-section {
+figure, figcaption {
   @extend %d-block;
 }
 
-// Makes hidden actually [hidden] in IE 8/9
-[hidden], template {
-  @extend %d-none;
+figure {
+  @extend %margin-bottom;
 }
-
 
 // Placeholder classes are used so elements can be easily
 // broken out into modular files.

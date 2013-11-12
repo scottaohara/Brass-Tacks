@@ -3,7 +3,7 @@
   *
   * Brass Tacks
   * by Scott O'Hara - @scottohara - scottohara.me - https://github.com/scottaohara
-  * 0.7.7 - November 9, 2013
+  * 0.7.8 - November 12, 2013
   *
   * This framework is still and development. If you have any suggestions/fixes/comments, please
   * create an issue - https://github.com/scottaohara/Brass-Tacks/issues
@@ -21,11 +21,14 @@
   @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,700italic,600,400italic,300italic,600italic);
 
 // Variables and Mixins
-  @import '__brass-tacks/brass-tacks';    //  Includes Brass Tacks default vars, mixins and placeholder classes
-                                          //  Pulls in all Project specific vars/mixins for consolidation of @imports
+  @import '__brass-tacks/brass-tacks-lib';    //  Includes Brass Tacks default vars and mixins
+                                              //  Also pulls in all Project specific vars/mixins to consolodate @imports
 
 // Base Values
   @import '_base-sass/basic';             //  Standardizes the base styling of HTML elements
+
+// Variables and Mixins
+  @import '__brass-tacks/brass-tacks-placeholders';    //  Includes Brass Tacks placeholder classes
 
 
 // Helper Classes

@@ -1,20 +1,20 @@
 {% block title %}Form Elements{% endblock %}
 
-{% block content %}
+{% block content %} 
 <section class="content">
-	<h2>Basic Form Styling</h2>
+  <h2>Basic Form Styling</h2>
   <p>
     Default form element styling.  This section is still under construction, as jQuery is going to be removed
     from the elements that currently require it.  Additional helper classes and restyling may take palce as well.
   </p>
 
   <hr />
-
+  
 <form class="form-container">
-	<h3>Base Input Fields</h3>
-
-	<div class="row">
-	  <div class="col w-50">
+  <h3>Base Input Fields</h3>
+  
+  <div class="row">
+    <div class="col w-50">
 
       <fieldset class="form-row">
         <label for="input-text">Input - Normal Text</label>
@@ -23,8 +23,8 @@
         <label for="input-text-dl">Input - Text w/Data List</label>
         <input type="text" id="input-text-dl" list="fav-color" placeholder="Choose your fav. color" />
         <datalist id="fav-color">
-          <option value="Red">Red</option>
-          <option value="Orange">Orange</option>
+          <option value="Red">Red</option> 
+          <option value="Orange">Orange</option> 
           <option value="Yellow">Yellow</option>
         </datalist>
 
@@ -34,15 +34,15 @@
         <label for="input-password">Input - Password</label>
         <input type="password" id="input-password" placeholder="Enter Password" />
 
-        <label for="input-Url">Input - Web Address</label>
-        <input id="input-Url" type="url" placeholder="Enter Web Address" />
+        <label for="input-url">Input - Web Address</label>
+        <input id="input-url" type="url" placeholder="http://..." />
 
         <label for="input-tel">Input - Phone Number</label>
         <input type="tel" id="input-tel" placeholder="555.555.5555" />
 
         <label for="input-search">Input - Search (field only)</label>
         <input type="search" class="input-search" id="input-search" placeholder="Search for..." />
-
+        
         <label for="search-area">Input &amp; Button combo area</label>
         <div class="search-area">
           <input type="search" id="search-area" class="input-search" placeholder="Search for..." />
@@ -53,12 +53,12 @@
         <textarea id="input-textarea"></textarea>
 
       </fieldset>
-	</div> <!-- end .w-50 -->
-
-	<div class="col w-50">
-		<fieldset class="form-row fieldset">
+  </div> <!-- end .w-50 -->
+  
+  <div class="col w-50">
+    <fieldset class="form-row fieldset">
       <legend class="legend">Input Variants</legend>
-      <label class="dis-label">Disabled Text Input</label>
+      <label class="dis-label">Disabled Text Input</label> 
       <input type="text" value="Disabled text input" disabled="disabled" />
 
       <label>Readonly Text Input</label>
@@ -68,7 +68,7 @@
       <input type="text" id="input-required" placeholder="Placeholder Text" required="required" />
     </fieldset>
 
-    <ul>
+    <ul class="">
       <li>
         All base input fields and the textarea are pulling from a
         the Placeholder class "%input-area" for basic styling.  This will keep these
@@ -76,12 +76,12 @@
         on the default styling of each different browser.
       </li>
       <li>
-        The only classes in use in this section are for the search button <code>.btn-action</code> and
-        a class for the disabled text input label <code>.dis-label</code>.
+        The only classes in use in this section are for the search buttton <code>.btn-action</code> and
+        a class for the diabled text input label <code>.dis-label</code>.
       </li>
       <li>
-        To create individual inline form elements, apply the class of
-        <code>.inline-element</code>.  If you want all elements to be inline, use the
+        To create individual inline form elements, apply the class of 
+        <code>.inline-element</code>.  If you want all elements to be inline, use the 
         class of <code>.inline-all</code> on the parent of the elements.
       </li>
       <li>
@@ -90,12 +90,12 @@
         &lt;fieldset> elements in your forms.
       </li>
       <li>
-        Use the class of <code>.form-row</code> on divs or fieldsets within forms to
+        Use the class of <code>.form-row</code> on divs or fieldsets within forms to 
         apply block level groups to elements, and to apply slight padding between groups.
       </li>
     </ul>
-
-	</div>
+        
+  </div>
 </div> <!-- end .row -->
 
 <hr />
@@ -116,7 +116,7 @@
 
       <p class="eps">Without Classes</p>
       <label for="input-file2">File Input</label>
-      <input type="file" id="input-file2" />
+      <input type="file" id="input-file2" /> 
     </fieldset>
 
 </div>
@@ -126,7 +126,7 @@
       Otherwise, file inputs will take on the default styling of the browser.
     </p>
     <code class="tiny">
-      &lt;div class="file-Input-area"><br />
+      &lt;div class="file-input-area"><br />
         &nbsp;&nbsp;&lt;input type="file" id="input-file" class="input-file" /><br />
         &nbsp;&nbsp;&lt;label for="input-file">File Input&lt;/label><br />
         &nbsp;&nbsp;&lt;span class="input-file-text"><br />
@@ -137,24 +137,24 @@
     </code>
     <code class="tiny">
       $(document).ready(function(){<br />
-    	&nbsp;&nbsp;// when file is selected via OS file picker,<br />
-    	&nbsp;&nbsp;// place file name into .placeholder span<br />
-    	&nbsp;&nbsp;$(".input-file").change(function() {<br />
-    	&nbsp;&nbsp;&nbsp;&nbsp;$(this).parent().find(".input-file-text").html(this.value)<br />
-    	&nbsp;&nbsp;});<br />
-    	});
+      &nbsp;&nbsp;// when file is selected via OS file picker,<br />
+      &nbsp;&nbsp;// place file name into .placeholder span<br />
+      &nbsp;&nbsp;$(".input-file").change(function() {<br />
+      &nbsp;&nbsp;&nbsp;&nbsp;$(this).parent().find(".input-file-text").html(this.value)<br />
+      &nbsp;&nbsp;});<br />
+      });
     </code>
   </div>
-</div> <!-- end .row -->
+</div> <!-- end .row -->  
 
 <hr />
 
 <h3>Check Boxes &amp; Radio Buttons</h3>
 <div class="row">
 
-	<div class="col w-50">
+  <div class="col w-50">       
     <h4 class="eps">Check Boxes</h4>
-
+    
     <fieldset class="form-row">
       <div>
         <label for="check-1" class="inline-element">
@@ -174,8 +174,20 @@
         <span class="crs"></span>
         <span class="crs-label">Text label</span>
       </label>
-     </fieldset>
 
+      <label for="check-4" class="cr-slider">
+        <input type="checkbox" id="check-4" class="invis input-slide" />
+        <span class="crs knob"></span>
+        <span class="crs-label">Text label</span>
+      </label>
+
+      <label for="check-5" class="cr-slider">
+        <input type="checkbox" id="check-5" class="invis input-slide" />
+        <span class="crs knob labels"></span>
+        <span class="crs-label">Text label</span>
+      </label>
+     </fieldset>
+     
       <strong>Code for Designed Checkbox</strong>
       <code class="tiny">
         &lt;label for="check-2" class="cr-area"><br />
@@ -193,10 +205,10 @@
       &lt;/label>
      </code>
   </div>
-
-	<div class=" col w-50">
+  
+  <div class=" col w-50">
     <h4 class="eps">Radio Buttons</h4>
-
+    
     <fieldset class="radios form-row">
       <label for="r1">
         <input type="radio" id="r1" name="rr" />
@@ -211,12 +223,12 @@
 
       <label for="r3" class="cr-slider">
         <input type="radio" id="r3" name="rr" class="invis input-slide" />
-        <span class="crs circle"></span>
+        <span class="crs"></span>
         <span class="crs-label">Text label</span>
       </label>
 
     </fieldset>
-
+     
      <strong>Code for Designed Radio Buttons</strong>
      <code class="tiny">
         &lt;label for="r3" class="cr-area"><br />
@@ -234,14 +246,14 @@
       &lt;/label>
      </code>
      <small>There is commented out code for on/off labels in the helper forms.scss, if you would like to use those.</small>
-	</div>
-</div> <!-- end .row -->
+  </div>
+</div> <!-- end .row -->          
 
 <hr />
 
 <h3>Selections</h3>
 <div class="row">
-  <div class="col w-50">
+  <div class="col w-50">         
     <fieldset class="form-row">
       <label for="base-select" class="text-label">Default Select</label>
        <div class="select-container">
@@ -262,7 +274,7 @@
            &nbsp;&nbsp;&lt;/select><br />
          &lt;/div>
        </code>
-
+         
        <label for="multi-select" class="text-label">Multiple select field</label>
        <select id="multi-select" multiple size="5" class="multi-select">
          <option>Option 1</option>
@@ -271,7 +283,7 @@
          <option>Option 4</option>
          <option>Option 5</option>
        </select>
-	  </fieldset>
+    </fieldset>
   </div>
 
   <div class=" col w-50">
@@ -283,30 +295,30 @@
     <fieldset class="form-row">
       <label for="num-spin">Number Spinbox</label>
        <input type="number" id="num-spin" min="0" max="20" step="1" value="5" />
-
+       
        <label for="num-date">Date: mm/dd/yyyy</label>
        <input type="date" id="num-date" />
-
+       
        <label for="num-time">Time: 12:00 PM</label>
        <input type="time" id="num-time" />
-
+       
        <label for="color-picker">Hex Color</label>
        <input type="color" id="color-picker" />
     </fieldset>
 
   </div>
-</div> <!-- end .row -->
+</div> <!-- end .row -->         
 
 <hr />
 
 <h3 class="txt-left">Submission Buttons</h3>
 <div class="row">
-  <div class="col w-50">
+  <div class="col w-50">       
     <fieldset class="form-row">
-      <input type="button" class="btn btn-disable" value="Disabled" />
-      <input type="reset" class="btn btn-neg" value="Reset" />
-      <input type="submit" class="btn" value="Submit" />
-	  </fieldset>
+      <input type="button" class="btn-disable" value="Disabled" />
+      <input type="reset" class="btn-cancel" value="Reset" />
+      <input type="submit" class="btn-prime" value="Submit" />
+    </fieldset>
   </div>
 
   <div class="col w-50">

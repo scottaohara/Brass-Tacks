@@ -6,7 +6,10 @@
 @import 'body-html';
 
 // Base HTML5 sepecific elements/selectors rules
-@import 'html5-elements';
+@import 'html5-elements';             // HTML5 Layout Block Elements
+@import 'address';                    // HTML5 Address Element
+@import 'fig-figcaption';             // HTML5 Figure & figcaption Elements
+@import 'details-summary';            // HTML5 Details & Summary Elements
 
 // Base typographical element rules
 @import 'typography/headings';        // Heading Elements

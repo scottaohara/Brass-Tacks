@@ -1,0 +1,81 @@
+// ----------------------------------------------------------------------------
+//  Radio Buttons & Checkboxes
+// ----------------------------------------------------------------------------
+
+.check-radio{
+  @extend %circle-check;
+}
+
+// Checkbox
+.cr-area{
+  position: relative;
+
+  :checked + .check-radio:after{
+    opacity: 1;
+  }
+}
+
+.crs{
+  @extend %input-area;
+  display: inline-block;
+  height: 28px;
+  max-width: 80px;
+  position: relative;
+  vertical-align: middle;
+
+  &:after{
+    @include vendor(transition, .2s all);
+    background: $c-red;
+    content: "";
+    height: 100%;
+    position: absolute;
+    right: 50%;
+    top: 0;
+    width: 50%;
+    }
+
+    &.knob{
+      border-radius:12px;
+
+      &:after{
+        @include box-shadow($bs-1, $bs-input-txt);
+        background: $c-white;
+        border: 1px solid #aaa;
+        border-radius: $circle;
+        height: 150%;
+        top: -25%;
+      }
+  }
+
+  &.labels:before{
+    content: "Off";
+    position:absolute;
+    text-align: center;
+    text-indent: 60%;
+    top: 12%;
+  }
+}
+
+.crs-label{
+  vertical-align: middle;
+}
+
+.input-slide:checked + .crs.knob{
+  background: $c-green !important;
+  color: $c-white;
+
+  &:after{
+    background:$c-white;
+  }
+}
+
+.input-slide:checked + .crs:after{
+  background: $c-green;
+  right: 0;
+}
+
+.input-slide:checked + .crs.labels:before{
+  content: "On";
+  left:5%;
+  text-indent: 5%;
+}
