@@ -1,275 +1,386 @@
 {% block title %}Layout{% endblock %}
 {% block content %} 
 <section class="content">
-<h1>Layout</h1>
+<h1>Layout <small class="mini">Responsive Columns &amp; Rows</small></h1>
 
-<h3>Rows w/Fixed Width Columns</h3>
+<h3>General Use</h3>
+
+<div class="row">
+  <div class="col w-90">
+    <div class="block">
+      <p>
+        90%
+      </p>
+    </div>
+  </div>
+  <div class="col w-10">
+    <div class="block">
+      <p>
+        10%
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col w-80">
+    <div class="block">
+      <p>
+        80%
+      </p>
+    </div>
+  </div>
+  <div class="col w-20">
+    <div class="block">
+      <p>
+        20%
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col w-75">
+    <div class="block">
+      <p>
+        75%
+      </p>
+    </div>
+  </div>
+  <div class="col w-25">
+    <div class="block">
+      <p>
+        25%
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col w-70">
+    <div class="block">
+      <p>
+        70%
+      </p>
+    </div>
+  </div>
+  <div class="col w-30">
+    <div class="block">
+      <p>
+        30%
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col w-66">
+    <div class="block">
+      <p>
+        66%
+      </p>
+    </div>
+  </div>
+  <div class="col w-33">
+    <div class="block">
+      <p>
+        33%
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col w-60">
+    <div class="block">
+      <p>
+        60%
+      </p>
+    </div>
+  </div>
+  <div class="col w-40">
+    <div class="block">
+      <p>
+        40%
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col w-50">
+    <div class="block">
+      <p>
+        50%
+      </p>
+    </div>
+  </div>
+  <div class="col w-50">
+    <div class="block">
+      <p>
+        50%
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col w-33">
+    <div class="block">
+      <p>
+        33%
+      </p>
+    </div>
+  </div>
+  <div class="col w-33">
+    <div class="block">
+      <p>
+        33%
+      </p>
+    </div>
+  </div>
+  <div class="col w-33">
+    <div class="block">
+      <p>
+        33%
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col w-30">
+    <div class="block">
+      <p>
+        30%
+      </p>
+    </div>
+  </div>
+  <div class="col w-30">
+    <div class="block">
+      <p>
+        30%
+      </p>
+    </div>
+  </div>
+  <div class="col w-30">
+    <div class="block">
+      <p>
+        30%
+      </p>
+    </div>
+  </div>
+  <div class="col w-10">
+    <div class="block">
+      <p>
+        10%
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col w-25">
+    <div class="block">
+      <p>
+        25%
+      </p>
+    </div>
+  </div>
+  <div class="col w-25">
+    <div class="block">
+      <p>
+        25%
+      </p>
+    </div>
+  </div>
+  <div class="col w-25">
+    <div class="block">
+      <p>
+        25%
+      </p>
+    </div>
+  </div>
+  <div class="col w-25">
+    <div class="block">
+      <p>
+        25%
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<h3>Percentage Combos &amp; Nesting</h3>
+
+<div class="row">
+  <div class="col w-50">
+    <div class="block">
+      <p>
+        50%
+      </p>
+    </div>
+  </div>
+  <div class="col w-25">
+    <div class="block">
+      <p>
+        25%
+      </p>
+    </div>
+  </div>
+  <div class="col w-25">
+    <div class="block">
+      <p>
+        25%
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col w-40">
+    <div class="block">
+      <p>
+        40%
+      </p>
+    </div>
+  </div>
+  <div class="col w-40">
+    <div class="block">
+      <p>
+        40%
+      </p>
+    </div>
+  </div>
+  <div class="col w-20">
+    <div class="block">
+      <p>
+        20%
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col w-70">
+    <div class="row">
+      <div class="col w-50">
+        <div class="block">
+          <dfn title="70% parent, 50% child">
+            70% > 50%
+          </dfn title="70% parent, 50% child">
+        </div>
+      </div>
+      <div class="col w-50">
+        <div class="block">
+          <dfn title="70% parent, 50% child">
+            70% > 50%
+          </dfn title="70% parent, 50% child">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col w-30">
+    <div class="block">
+      <p>
+        30% width
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col w-50">
+    <div class="block">
+      <p>
+        50% width
+      </p>
+    </div>
+  </div>
+  <div class="col w-50">
+    <div class="row">
+      <div class="col w-33">
+        <div class="block">
+          <dfn title="50% parent, 33% child">
+            50% > 33%
+          </dfn title="50% parent, 33% child">
+        </div>
+      </div>
+      <div class="col w-33">
+        <div class="block">
+          <dfn title="50% parent, 33% child">
+            50% > 33%
+          </dfn title="50% parent, 33% child">
+        </div>
+      </div>
+      <div class="col w-33">
+        <div class="block">
+          <dfn title="50% parent, 33% child">
+            50% > 33%
+          </dfn title="50% parent, 33% child">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<h3>Responsive + Fixed Width Columns</h3>
 <div class="row rfr">
-	<div class="f-col">
-		<div class="block" style="background:#ff0">
-			<p>fixed column</p>
-		</div>
-	</div>
-	<div class="col">
-		<div class="block">
-			<p>
-				Full width column
-			</p>
-		</div>
-	</div>
+  <div class="f-col">
+    <div class="block" style="background:#ff0">
+      <p>fixed column</p>
+    </div>
+  </div>
+  <div class="col">
+    <div class="block">
+      <p>
+        Full width column
+      </p>
+    </div>
+  </div>
 </div>
 
 
 <div class="row rfl">
-	<div class="f-col">
-		<div class="block" style="background:#ff0">
-			<p>fixed column</p>
-		</div>
-	</div>
-	<div class="col">
-		<div class="block">
-			<p>
-				Full width column
-			</p>
-		</div>
-	</div>
+  <div class="f-col">
+    <div class="block" style="background:#ff0">
+      <p>Fixed column</p>
+    </div>
+  </div>
+  <div class="col w-50">
+    <div class="block">
+      <p>
+        Full width
+      </p>
+    </div>
+  </div>
+  <div class="col w-50">
+    <div class="block">
+      <p>
+        Full width
+      </p>
+    </div>
+  </div>
 </div>
 
 
-<h3>Rows with Responsive Columns</h3>
-<div class="row">
-	<div class="col w-50">
-		<div class="block">
-			<p>
-				1/2 width column
-			</p>
-		</div>
-	</div>
-	<div class="col w-50">
-		<div class="row">
-			<div class="col w-33">
-				<div class="block">
-					<p>
-						1/3 width inside 1/2 col
-					</p>
-				</div>
-			</div>
-			<div class="col w-33">
-				<div class="block">
-					<p>
-						1/3 width inside 1/2 col
-					</p>
-				</div>
-			</div>
-			<div class="col w-33">
-				<div class="block">
-					<p>
-						1/3 width inside 1/2 col
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-
-<div class="row">
-	<div class="col w-33">
-		<div class="block">
-			<p>
-				1/3 width column
-			</p>
-		</div>
-	</div>
-	<div class="col w-33">
-		<div class="block">
-			<p>
-				1/3 width column
-			</p>
-		</div>
-	</div>
-	<div class="col w-33">
-		<div class="block">
-			<p>
-				1/3 width column
-			</p>
-		</div>
-	</div>
-</div>
-
-<div class="row">
-	<div class="col w-33">
-		<div class="block">
-			<p>
-				1/3 width column
-			</p>
-		</div>
-	</div>
-	<div class="col w-66">
-		<div class="block">
-			<p>
-				2/3 width column
-			</p>
-		</div>
-	</div>
-</div>
-
-
-
-<div class="row">
-	<div class="col w-80">
-		<div class="block">
-			<p>
-				4/5 width column
-			</p>
-		</div>
-	</div>
-	<div class="col w-20">
-		<div class="block">
-			<p>
-				1/5 width column
-			</p>
-		</div>
-	</div>
-</div>
-
-<div class="row">
-	<div class="col w-75">
-		<div class="block">
-			<p>
-				3/4 width column
-			</p>
-		</div>
-	</div>
-	<div class="col w-25">
-		<div class="block">
-			<p>
-				1/4 width column
-			</p>
-		</div>
-	</div>
-</div>
-
-<div class="row">
-	<div class="col w-60">
-		<div class="block">
-			<p>
-				3/5 width column
-			</p>
-		</div>
-	</div>
-	<div class="col w-40">
-		<div class="block">
-			<p>
-				2/5 width column
-			</p>
-		</div>
-	</div>
-</div>
-
-<div class="row">
-	<div class="col w-50">
-		<div class="block">
-			<p>
-				1/2 width column
-			</p>
-		</div>
-	</div>
-	<div class="col w-50">
-		<div class="block">
-			<p>
-				1/2 width column
-			</p>
-		</div>
-	</div>
-</div>
-
-<div class="row">
-	<div class="col w-25">
-		<div class="block">
-			<p>
-				1/4 width column
-			</p>
-		</div>
-	</div>
-	<div class="col w-25">
-		<div class="block">
-			<p>
-				1/4 width column
-			</p>
-		</div>
-	</div>
-	<div class="col w-50">
-		<div class="block">
-			<p>
-				1/2 width column
-			</p>
-		</div>
-	</div>
-</div>
-
-
-<h3>Centered Rows/Columns</h3>
-
-<div class="c-row">
-	<div class="col w-25">
-		<div class="block">
-			<p>
-				1/4 width column
-			</p>
-		</div>
-	</div>
-	<div class="col w-25">
-		<div class="block">
-			<p>
-				1/4 width column
-			</p>
-		</div>
-	</div>
-</div>
-
-<div class="c-row">
-	<div class="col w-66">
-		<div class="block">
-			<p>
-				2/3 width column
-			</p>
-		</div>
-	</div>
-	<div class="col w-20">
-		<div class="block">
-			<p>
-				1/5 width column
-			</p>
-		</div>
-	</div>
-</div>
-
-<div class="c-row">
-	<div class="col w-33">
-		<div class="block">
-			<p>
-				1/3 width column
-			</p>
-		</div>
-	</div>
-	<div class="col w-25">
-		<div class="block">
-			<p>
-				1/4 width column
-			</p>
-		</div>
-	</div>
-	<div class="col w-25">
-		<div class="block">
-			<p>
-				1/4 width column
-			</p>
-		</div>
-	</div>
-</div>
 
 <h3>Horizontal Rule Stylings</h3>
+
+<mark>I don't think these really belong here...but until I can figure out where they go...</mark>
 
 <hr />
 

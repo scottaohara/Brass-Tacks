@@ -23,3 +23,9 @@
   @include base-vendor(column-gap, $gap);
   @include base-vendor(column-rule, $rule-width $rule-location $rule-color);
 }
+
+// Anti-aliasing Text
+@mixin antialiased {
+  -webkit-font-smoothing:antialiased;
+  font-smoothing:antialiased;
+}
