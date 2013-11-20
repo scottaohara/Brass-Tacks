@@ -1,11 +1,12 @@
 // ----------------------------------------------------------------------------
-//  Compiles all mixins & var files into 
+//  Compiles all mixins & var files into
 //  master & thus any other file that needs them
 // ----------------------------------------------------------------------------
 
   @import 'mixins';   // Brass Tacks Mixins
   @import 'vars';     // Brass Tacks Variables
-  
+
 //  Import project specific variables and mixins
   @import '../_project-sass/__vars-mixins/vars';      // project variables
   @import '../_project-sass/__vars-mixins/mixins';    // project mixins
+
