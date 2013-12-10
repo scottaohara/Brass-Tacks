@@ -1,0 +1,58 @@
+@if $import-helper-type-callouts == true{
+
+// ----------------------------------------------------------------------------
+//  Callout Text
+// ----------------------------------------------------------------------------
+
+// Shout Out - blockquote / blockquote like styling for emphasizing text
+.txt-callout {
+  background: $c-lighter;
+  border-left: $unit-px solid $c-dark;
+  padding: $unit-px4;
+
+  &:after,
+  &:before {
+    display:none;
+  }
+}
+
+
+// Background Text Highlight
+.txt-highlight {
+  @include border-radius($unit-px);
+  background: $c-red;
+  color: $c-white;
+  display: inline-block;
+  padding: $unit-px;
+}
+
+
+// Background Text Highlight - Skewed
+.txt-slant {
+  @extend .txt-highlight;
+  @include vendor(transform, skewX(-16deg));
+}
+
+//  Code Example: txt-slanted Text w/Highlight
+//  ----------------------------------------------------
+//  <span class="txt-slant">
+//    Text Goes here
+//  </span>
+
+
+.txt-correct {
+  @include vendor(transform, skewX(16deg));
+  display: inline-block;
+}
+
+//  Code Example: Normal flowing text w/txt-slanted highlight
+//  ----------------------------------------------------
+//  <span class="txt-slant">
+//    <span class="txt-correct">Text Goes here</span>
+//  </span>
+
+
+// ----------------------------------------------------------------------------
+} // -- end @if --
+// ----------------------------------------------------------------------------
+

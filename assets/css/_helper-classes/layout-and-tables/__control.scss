@@ -1,0 +1,66 @@
+// ----------------------------------------------------------------------------
+//  Layout Controller
+// ----------------------------------------------------------------------------
+
+// The main controller file for the layout helper files. This file exists
+// to centeralize code that may be used across multiple files in this category.
+
+
+// ----------------------------------------------------------------------------
+//  Vars
+// ----------------------------------------------------------------------------
+
+
+// ----------------------------------------------------------------------------
+//  Mixins
+// ----------------------------------------------------------------------------
+
+// Fixed Width Column - Left Side
+@mixin row-fixed-left($col-size){
+  padding-left:$col-size;
+  @media (max-device-width:$break-mini), screen and (max-width:$break-medium){
+    padding: 0;
+  }
+  
+  .f-col{
+    float: left;
+    margin-left: -$col-size + 40px;
+    width: $col-size - 40px;
+
+    @media (max-device-width:$break-mini), screen and (max-width:$break-medium){
+      float: none;
+      margin: 0;
+      padding-left: 40px;
+      width: auto;
+    }
+  }
+}
+
+
+// Fixed Width Column - Right Side
+@mixin row-fixed-right($col-size){
+  padding-right: $col-size;
+  
+  @media (max-device-width:$break-mini), screen and (max-width:$break-medium){
+    padding: 0;
+  }
+
+  .f-col{
+    float: right;
+    margin-right: -$col-size;
+    width: $col-size - 40px;
+
+    @media (max-device-width:$break-mini), screen and (max-width:$break-medium){
+      float:none;
+      margin:0;
+      padding-left:40px;
+      width:auto;
+    }
+  }
+}
+
+
+// ----------------------------------------------------------------------------
+//  Placeholders
+// ----------------------------------------------------------------------------
+

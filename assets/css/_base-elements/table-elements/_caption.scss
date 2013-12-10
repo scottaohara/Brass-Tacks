@@ -1,0 +1,36 @@
+@if $import-table-captions == true{
+
+// ----------------------------------------------------------------------------
+//  Tables: Caption Element
+// ----------------------------------------------------------------------------
+
+caption {
+  @extend %txt-h6;
+  caption-side: top;
+  text-align: left;
+}
+
+// The <caption> tag must be inserted immediately after the <table> tag.
+
+// You can specify only one caption per table.
+
+// Tip: By default, the table caption will be center-aligned above a table.
+// However, the CSS properties "text-align" and "caption-side" can be used to
+// align and place the caption.
+
+
+// ----------------------------------------------------------------------------
+
+
+// Placeholder classes are used so elements can be easily
+// broken out into modular files.
+
+// If you would like to change the basic values of these
+// elements, simply either delete the place holder reference
+// and add your own styling, or edit the placeholder class
+// in the corresponding Brass Tacks Master Styles placeholders .scss file.
+
+
+// ----------------------------------------------------------------------------
+} // -- end @if --
+// ----------------------------------------------------------------------------

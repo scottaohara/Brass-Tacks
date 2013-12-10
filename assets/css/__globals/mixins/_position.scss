@@ -1,0 +1,26 @@
+// ----------------------------------------------------------------------------
+//  Fixed Position Elements
+// ----------------------------------------------------------------------------
+
+@mixin position($t-or-b, $tb-unit, $l-or-r, $lr-unit, $position){
+  position: $position;
+
+  @if $t-or-b == bottom{
+    bottom: $tb-unit;
+  }
+  @else if $t-or-b == top{
+    top: $tb-unit;
+  }
+
+  @if $l-or-r == left{
+    left: $lr-unit;
+  }
+  @else if $l-or-r == right{
+    right: $lr-unit;
+  }
+}
+
+// Example:
+// @include fixed-block($tb:bottom, $tb-unit:10px, $lr:right, $lr-unit:20px, $position:absolute);
+// or
+// @include fixed-block(bottom, 10px, left, 333px, fixed);

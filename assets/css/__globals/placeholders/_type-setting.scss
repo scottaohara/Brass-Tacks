@@ -1,0 +1,33 @@
+// ----------------------------------------------------------------------------
+//  Rendering Type
+// ----------------------------------------------------------------------------
+
+%font-size-lh {
+  font-size: 100%;
+  line-height: 1.5;
+}
+
+%txt-xxlarge, %txt-xlarge, %txt-large, %txt-h1 {
+  line-height: 1;
+}
+
+
+// ----------------------------------------------------------------------------
+//  Font Sizes & Weights
+// ----------------------------------------------------------------------------
+
+%txt-xxlarge  {font-size: $txt-xxlarge; font-weight: 700;}
+%txt-xlarge   {font-size: $txt-xlarge;  font-weight: 600;}
+%txt-large    {font-size: $txt-large;   font-weight: 300;}
+
+%txt-h1       {font-size: $txt-h1;      font-weight: 400;}
+%txt-h2       {font-size: $txt-h2;      font-weight: 400;}
+%txt-h3       {font-size: $txt-h3;      font-weight: 400;}
+%txt-h4       {font-size: $txt-h4;      font-weight: 300;}
+%txt-h5       {font-size: $txt-h5;      font-weight: 300;}
+%txt-h6       {font-size: $txt-h6;      font-weight: 300;}
+
+%txt-base     {font-size: $txt-base;    font-weight: 300;}
+
+%txt-small    {font-size: $txt-small;   font-weight: 300;}
+%txt-mini     {font-size: $txt-mini;    font-weight: 300;}

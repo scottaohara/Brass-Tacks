@@ -1,0 +1,73 @@
+@if $import-helper-nav-dropmenu == true{
+
+// ----------------------------------------------------------------------------
+//  Drop Down Menus
+// ----------------------------------------------------------------------------
+
+// Element that contains the hidden drop menu
+.drop-container {
+  position: relative;
+
+  &:hover {
+    background: $c-light;
+
+    .drop-menu {
+      visibility: visible;
+    }
+  }
+
+  a {
+    white-space: nowrap;
+    // extends menu items beyond width of its parent element
+  }
+}
+
+// Drop Menu styling
+.drop-menu {
+  background: $c-light;
+  border: 1px solid $c-light-grey;
+  margin: 0;
+  position: absolute;
+  visibility: hidden;
+  z-index: 5;
+
+  a {
+    padding: 4px 12px;
+  }
+}
+
+
+// Horizontal and Vertical Navigation drop menu setups
+.h-nav .drop-menu {
+  @extend %drop-h;
+  // Set drop menu location to the bottom of the hovered link
+}
+
+.v-nav .drop-menu {
+  @extend %drop-v;
+  // Set location to the right of hovered link
+}
+
+
+// Example mark-up
+// ----------------------------------------------------------------------------
+// <nav class="nav" role="navigation">
+//   <ol class="#-nav">
+//     <li class="drop-container">
+//       <a href="#!" title="#!">DC Link</a> 
+//       <ol class="drop-menu">
+//         <li>
+//           <a href="#!" title="#!">DM Link 1</a>
+//         </li>
+//         <li>
+//           <a href="#!" title="#!">DM Link 2</a>
+//         </li>
+//       </ol>
+//     </li>
+//   </ol>
+// </nav>
+
+
+// ----------------------------------------------------------------------------
+} // -- end @if --
+// ----------------------------------------------------------------------------

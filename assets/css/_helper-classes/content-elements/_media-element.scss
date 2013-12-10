@@ -1,0 +1,76 @@
+@if $import-helper-media-element == true{
+
+// ----------------------------------------------------------------------------
+//  Media Element
+// ----------------------------------------------------------------------------
+
+// Media Item
+.media{
+  @extend %media;
+}
+
+
+// Have media element appear on the right hand side
+.media-reverse {
+  @extend %media;
+
+  .media-object {
+    float: right;
+    margin: 0 0 $unit-px2 $unit-px4;
+  }
+}
+
+
+// No text-wrap around media object
+.media-no-wrap {
+  @extend %media;
+  padding-left: 116px;
+  
+  .media-text {
+    float: left;
+    width: 100%;
+  }
+
+  .media-object {
+    margin-left: -116px;
+    width: 100px;
+  }
+}
+
+
+// Reverse side of the media object w/ no text-wrap
+.media-no-wrap-reverse {
+  @extend .media-reverse;
+  padding-right: 116px;
+
+  .media-text {
+    width: 100%;
+  }
+
+  .media-object {
+    margin-right: -116px;
+    width: 100px;
+  }
+}
+ 
+// Example mark-up:
+// ----------------------------------------------------------------------------
+//  <div class="media">
+//    <div class="media-object">
+//      <img src="img.jpg" alt="" />
+//    </div>
+//    <div class="media-text">
+//      <h1>Title for Meida Element</h1>
+//      <p>Paragraph text to go along with media element.</p>
+//    </div>
+//  </div>
+  
+// Divs were used in this example, but the media element could be applied to 
+// various situations.  e.g. It could be used for a header or footer area where 
+// a logo is placed on the right or left w/text to the side.
+
+
+// ----------------------------------------------------------------------------
+} // -- end @if --
+// ----------------------------------------------------------------------------
+

@@ -1,0 +1,51 @@
+// ----------------------------------------------------------------------------
+//  Navigation Controller
+// ----------------------------------------------------------------------------
+
+// The main controller file for the navigation helper files. This file exists
+// to centeralize code that may be used across multiple files in this category.
+
+
+// ----------------------------------------------------------------------------
+//  Variables
+// ----------------------------------------------------------------------------
+
+// Fixed navigation
+$height-fixed-nav:  100px;
+$width-fixed-nav:   200px;
+
+
+// ----------------------------------------------------------------------------
+//  Placeholders
+// ----------------------------------------------------------------------------
+
+// Fixed navigation
+%fixed-nav {
+  background: $c-dark;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+
+  a {
+    color: $c-white;
+
+    &:hover,
+    &:visited {
+      background: rgba(0,0,0,.6);
+      color: $c-white;
+      text-decoration: none;
+    }
+  }
+}
+
+
+// Drop down menu types
+%drop-v {
+  left: 100%;
+  top: 0;
+}
+
+%drop-h {
+  left: 0;
+  top: 100%;
+}

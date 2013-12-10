@@ -1,0 +1,60 @@
+@if $import-helper-emphasis == true{
+
+// ----------------------------------------------------------------------------
+//  Emphasis Helpers
+// ----------------------------------------------------------------------------
+
+.emph-block {
+  @include border-radius($unit-px);
+  @include box-shadow($bs-4);
+  @include last-child-0();
+  background: $c-off-white;
+  border: 1px solid $c-light-grey;
+  margin-bottom: $unit-px4;
+  min-height: 50px;
+  padding: $unit-px4;
+}
+
+// Example mark-up
+// ----------------------------------------------------------------------------
+// <div class="emph-block">
+//  ...
+// </div>
+
+
+// Give pictures a frame
+.frame {
+  border: 1px solid $c-dark;
+  display: inline-block;
+
+  img {
+    border: 4px solid $c-off-white;
+    display: block;
+  }
+}
+
+// Example mark-up
+// ----------------------------------------------------------------------------
+// <div class="frame">
+//   <img src="..." alt="..." />
+// </div>
+
+
+// Profile picture
+.pic {
+  @include border-radius($unit-px2);
+  @include box-shadow($bs-4);
+  border: 1px solid $c-off-white;
+  display: inline-block;
+  overflow: hidden;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+
+// ----------------------------------------------------------------------------
+} // -- end @if --
+// ----------------------------------------------------------------------------

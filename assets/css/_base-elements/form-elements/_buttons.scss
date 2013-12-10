@@ -1,0 +1,38 @@
+@if $import-form-buttons == true{
+
+// ----------------------------------------------------------------------------
+//	Form Elements: Button Elements
+// ----------------------------------------------------------------------------
+
+// General Form Element Reset
+button {
+  @extend %reset-form-elements;
+}
+
+
+// Makes buttons look like buttons with appropriate cursors
+button,
+input[type='reset'],
+input[type='submit'],
+html input[type='button'] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+
+
+// Removes outline from submit buttons in Firefox
+input[type="submit"]::-moz-focus-inner {
+  @extend %outline-none;
+}
+
+
+// Removes inner padding & border in Firefox 4+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+
+// ----------------------------------------------------------------------------
+} // -- end @if --
+// ----------------------------------------------------------------------------

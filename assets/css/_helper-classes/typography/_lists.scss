@@ -1,0 +1,30 @@
+@if $import-helper-type-lists == true{
+
+// ----------------------------------------------------------------------------
+//  Text List Styles
+// ----------------------------------------------------------------------------
+
+// Kill list styling - removes list markings & padding
+.kill-list {
+  @extend %kill-list;
+}
+
+
+// For non-semantic list numbering
+.number-list {
+  list-style-type: decimal;
+}
+
+
+// Inline <li>s within a list element & kill general list styling
+.inline-list{
+  @extend %kill-list;
+  >li{
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+// ----------------------------------------------------------------------------
+} // -- end @if --
+// ----------------------------------------------------------------------------

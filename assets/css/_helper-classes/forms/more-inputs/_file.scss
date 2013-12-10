@@ -1,0 +1,54 @@
+@if $import-helper-input-file == true{
+
+// ----------------------------------------------------------------------------
+//  Input Type: File Upload
+// ----------------------------------------------------------------------------
+
+// The following classes are to be used with the markup at the end of
+// this file.  This styling for file upload inputs currently requires
+// javascript to fully make functional.  It may not be worth it to 
+// implement this due to the JS dependency.
+
+.file-input-area {
+  position: relative;
+
+  label{
+    cursor: default;
+  }
+}
+
+.input-file {
+  @include position(top, 0, left, 0, absolute);
+  cursor: pointer;
+  height: 100%;
+  opacity: 0;
+  width: 100%;
+  z-index: 9;
+}
+
+.input-file-text {
+  @extend %input-area;
+  cursor: pointer;
+  display: inline-block;
+  width: 75%;
+}
+
+
+// Example mark-up:
+// ----------------------------------------------------------------------------
+// <div class="file-input-area">
+//   <input type="file" id="input-file" class="input-file" />
+
+//   <label for="input-file">File Input</label>
+
+//   <span class="input-file-text">
+//     <span class="placeholder">Select a file...</span>
+//   </span>
+
+//   <span class="btn">Select</span>
+// </div>
+
+
+// ----------------------------------------------------------------------------
+} // -- end @if --
+// ----------------------------------------------------------------------------

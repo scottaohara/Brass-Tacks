@@ -1,0 +1,34 @@
+// ----------------------------------------------------------------
+//  Hiding Elements
+// ----------------------------------------------------------------
+
+//  Hides from screenreaders and browsers
+%hidden {
+  display: none!important;
+  visibility: hidden;
+}
+
+
+// ----------------------------------------------------------------------------
+//  Hide from browsers but NOT from screen readers
+// ----------------------------------------------------------------------------
+
+//  Hide entire elements that you don't want visible
+//  but still need for accesibility / functionality 
+//  -- ie. replacing radio inputs with new custom styled elments
+%invis {
+  border: 0!important;
+  height: 1px!important;
+  left: -999999px!important;
+  overflow: hidden!important;
+  position: absolute!important;
+  width: 1px!important;
+}
+
+// Hide text that you don't want visible
+// like on submit buttons that use an icon instead of text
+%hide-text {
+  color: transparent;
+  font: 0/0 a;
+  text-shadow: none;
+}

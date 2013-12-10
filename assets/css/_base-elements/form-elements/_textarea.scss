@@ -1,0 +1,26 @@
+@if $import-form-textarea == true{
+
+// ----------------------------------------------------------------------------
+//  Form Elements: Textarea Element
+// ----------------------------------------------------------------------------
+
+// Make textareas look like input areas, only bigger
+textarea {
+  @extend %reset-form-elements;
+  @extend %d-block;
+  @extend %txt-base;
+  min-height: 40px;
+  min-width: 60px;
+  overflow: auto;
+  resize: vertical;
+  vertical-align: top;
+
+  &:required {
+    color: $c-red;
+  }
+}
+
+
+// ----------------------------------------------------------------------------
+} // -- end @if --
+// ----------------------------------------------------------------------------

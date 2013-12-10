@@ -1,0 +1,49 @@
+@if $import-helper-show-hide == true{
+
+// ----------------------------------------------------------------------------
+//  Showing & Hiding
+// ----------------------------------------------------------------------------
+
+// Show Elements with display:block
+.d-block {
+  @extend %d-block;
+}
+
+
+// Hide Elements with display:none
+.d-none, .mobile-show {
+  @extend %d-none;
+}
+
+@media (max-device-width:480px), screen and (max-width:800px) {
+  .mobile-show {
+    display: block;
+  }
+}
+
+
+// Mute an element by changing Opacity
+.mute {
+  opacity: .75;
+}
+
+.mute-more {
+  opacity: .5;
+}
+
+
+// Hides from screenreaders and browsers
+.hidden {
+  @extend %hidden;
+}
+
+
+// Hide from browsers but not from screen readers
+.invis {
+  @extend %invis;
+}
+
+
+// ----------------------------------------------------------------------------
+} // -- end @if --
+// ----------------------------------------------------------------------------

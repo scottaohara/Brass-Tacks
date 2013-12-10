@@ -1,0 +1,19 @@
+// ----------------------------------------------------------------
+//  Vendor Prefix Mixins
+// ----------------------------------------------------------------
+
+// All Vendor Prefixes
+@mixin vendor($property, $value...){
+       -moz-#{$property}:$value;
+        -ms-#{$property}:$value;
+         -o-#{$property}:$value;
+    -webkit-#{$property}:$value;
+            #{$property}:$value;
+}
+
+// Just webkit & moz Prefixes
+@mixin base-vendor($property, $value...){
+      -moz-#{$property}:$value;
+   -webkit-#{$property}:$value;
+           #{$property}:$value;
+}

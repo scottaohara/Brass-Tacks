@@ -1,0 +1,19 @@
+@if $import-helper-type-smoothing == true{
+
+// ----------------------------------------------------------------------------
+//  Antialiased
+// ----------------------------------------------------------------------------
+
+.antialiased {
+  @extend %antialiased;
+}
+
+// Antialiased font smoothing works best for light text on dark backgrounds.
+// Only pply to single elements instead of globally to the body element.
+// Only works on webkit browsers on Apple devices.
+
+
+// ----------------------------------------------------------------------------
+} // -- end @if --
+// ----------------------------------------------------------------------------
+

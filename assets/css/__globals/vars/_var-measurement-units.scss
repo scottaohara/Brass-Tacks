@@ -1,0 +1,19 @@
+// ----------------------------------------------------------------------------
+//  Measurement Units
+// ----------------------------------------------------------------------------
+
+// Base measurment units like margin & padding off from a standard base,
+// so if it ever changes, it will only need to be updated in a single location
+
+$unit-px:         4px;          // base of 4px, 1/4 of 16px
+$unit-px2:        $unit-px * 2;
+$unit-px3:        $unit-px * 3;
+$unit-px4:        $unit-px * 4;
+$unit-px5:        $unit-px * 5;
+
+$unit-em:         1em;      // translates to 16px based on 100% font-size
+
+$unit-per:        10%;      // base of 10 for percentages
+
+$circle:          2000px;   // large number to make sure that just about 
+                            //anything will be able to be 'circled'

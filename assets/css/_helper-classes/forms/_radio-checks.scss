@@ -1,0 +1,119 @@
+@if $import-helper-checkbox-radio == true{
+
+// ----------------------------------------------------------------------------
+//  Radio Buttons & Checkboxes
+// ----------------------------------------------------------------------------
+
+// Checkbox Holder + Element Styling
+.cr-area {
+  position: relative;
+
+  :checked + .cb:after {
+    opacity: 1;
+  }
+
+  :focus + .cb {
+    @include box-shadow($bs-4);
+  }
+}
+
+
+// Checkbox (CSS only) Styling
+.cb-css {
+  @extend %custom-check;
+  @include border-radius(2px);
+  @include linear-gradient($c-light-grey, top, $c-white, $c-grey);
+  border: 1px solid $c-dark-grey;
+
+  &:after{
+    @include position(top, -2px, left, 1px, absolute);
+    @include vendor(transform, rotate(-49deg));
+    border: 5px solid $c-brand-2;
+    border-top: none;
+    border-right: none;
+    height: 10px;
+    width: 20px;
+  }
+}
+
+
+// Check & Radio Slider Styling
+.crs-label {
+  vertical-align: middle;
+}
+
+.cr-slider {
+  white-space: nowrap;
+}
+
+.crs {
+  @extend %input-area;
+  @include border-radius(12px);
+  display: inline-block;
+  height: 28px;
+  margin: 0 $unit-px 0 0;
+  max-width: 80px;
+  overflow: hidden;
+  position: relative;
+  vertical-align: middle;
+
+  &:after {
+    @include position(top, 0, right, 50%, absolute);
+    @include transition(.2s all);
+    background: $c-red;
+    content: "";
+    height: 100%;
+    width: 51%;
+  }
+
+  &.knob {
+    overflow: visible;
+
+    &:after {
+      @include box-shadow($bs-1);
+      background: $c-white;
+      border: 1px solid #aaa;
+      border-radius: $circle;
+      height: 150%;
+      top: -25%;
+    }
+  }
+
+  &.labels:before {
+    @include position(top, 12%, left, 5%, absolute);
+    content: "Off";
+    text-indent: 60%;
+  }
+}
+
+.input-slide {
+  &:focus + .crs {
+    @include box-shadow($bs-4);
+  }
+
+  &:checked + .crs {
+    &.knob {
+      background: $c-green !important;
+      color: $c-white;
+
+      &:after {
+        background: $c-white;
+      }
+    }
+
+    &:after {
+      background: $c-green;
+      right: -1px;
+    }
+
+    &.labels:before {
+      content: "On";
+      text-indent: 5%;
+    }
+  }
+}
+
+
+// ----------------------------------------------------------------------------
+} // -- end @if --
+// ----------------------------------------------------------------------------

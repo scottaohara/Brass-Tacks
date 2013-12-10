@@ -1,9 +1,0 @@
-// ----------------------------------------------------------------------------
-//  Helper Classes to make Shapes
-// ----------------------------------------------------------------------------
-
-// Make an element into a circle
-.circle {
-  @include border-radius($circle);
-  overflow: hidden;
-}

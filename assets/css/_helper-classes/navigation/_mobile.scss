@@ -1,0 +1,25 @@
+@if $import-helper-nav-mobile == true{
+
+// ----------------------------------------------------------------------------
+//  Mobile Menu Open Nav Button
+// ----------------------------------------------------------------------------
+
+.btn-nav {
+  background: url(../img/nav-Icon.png) no-repeat center center;
+  background-size: 75%;
+  height: 24px;
+  position: fixed;
+  right: $unit-px;
+  top: $unit-px;
+  width: 28px;
+}
+
+//  Code Example
+//  <a class="btn btn-nav" id="btn-nav-1" href="#show-nav">
+//    <span class="hidden">Show Navigation</span>
+//  </a>
+
+
+// ----------------------------------------------------------------------------
+} // -- end @if --
+// ----------------------------------------------------------------------------

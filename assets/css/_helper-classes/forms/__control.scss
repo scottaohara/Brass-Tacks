@@ -1,0 +1,60 @@
+// ----------------------------------------------------------------------------
+//  Form Elements Controller
+// ----------------------------------------------------------------------------
+
+// The main controller file for the form helper files. This file exists
+// to centeralize code that may be used across multiple files in this category.
+
+
+// ----------------------------------------------------------------------------
+//  Vars
+// ----------------------------------------------------------------------------
+
+
+
+// ----------------------------------------------------------------------------
+//  Mixins
+// ----------------------------------------------------------------------------
+
+
+
+// ----------------------------------------------------------------------------
+//  Placeholders
+// ----------------------------------------------------------------------------
+
+// Custom inputs & textarea base code
+%input-area {
+  @include border-radius($unit-px);
+  background: $c-white;
+  border: 1px solid $c-grey;
+  font-family: $f-brand;
+  margin-bottom: $unit-px2;
+  padding: $unit-px2 $unit-px;
+  width: 100%;
+  -webkit-appearance: none;
+
+  &:focus {
+    background: $c-off-white;
+    @include box-shadow($bs-4);
+  }
+}
+
+
+// Custom Checkbox base code
+%custom-check {
+  display: inline-block;
+  height: 16px;
+  margin: 0 $unit-px 0 0;
+  position: relative;
+  vertical-align: sub;
+  width: 16px;
+
+  &:after {
+    content: '';
+    opacity: 0;
+  }
+
+  &:hover::after {
+    opacity: .3;
+  }
+}

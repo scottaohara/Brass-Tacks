@@ -1,0 +1,14 @@
+// ----------------------------------------------------------------------------
+//  Hidden Elements Mixins
+// ----------------------------------------------------------------------------
+
+// Truncate Text
+@mixin truncate($truncation-boundary){
+  display: inline-block;
+  max-width: $truncation-boundary;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+  // Example  --  @include truncate(100%);
+  

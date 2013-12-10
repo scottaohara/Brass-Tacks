@@ -1,0 +1,49 @@
+@if $import-progress-element == true{
+
+// ----------------------------------------------------------------------------
+//	Progress Element
+// ----------------------------------------------------------------------------
+
+progress {
+  @include base-vendor(appearance, none);
+  @include linear-gradient($c-light-grey, top, $c-white, $c-grey);
+  @include border-radius($circle);
+  @include box-shadow(0 1px 5px rgba(0,0,0,.25), 0 0 2px $c-white inset);
+  border: 1px solid #AFAFAF;
+  height: 18px;
+  max-width: 400px;
+  padding: 1px;
+  width: 100%;
+
+  // Webkit needs this additional rule to style background of <progress>
+  &::-webkit-progress-bar {
+    @include linear-gradient($c-light-grey, top, $c-white, $c-grey);
+  }
+  
+  // Style <progress> value
+  &::-moz-progress-bar {
+    @include border-radius($circle);
+    @include box-shadow(1px 1px 2px $c-hell inset);
+    @include linear-gradient($c-brand-1, top, $c-brand-1, $c-brand-2);
+  }
+
+  &::-webkit-progress-bar {
+    @include border-radius($circle);
+    @include box-shadow(1px 1px 2px $c-hell inset);
+    @include linear-gradient($c-brand-1, top, $c-brand-1, $c-brand-2);
+  }
+
+  // Style <progress> if there is no value assigned (defaults to 100% width)
+  &:not([value])::-moz-progress-bar {
+    background: none;
+  }
+
+  &:not([value])::-webkit-progress-bar {
+    background: none;
+  }
+}
+
+
+// ----------------------------------------------------------------------------
+} // -- end @if --
+// ----------------------------------------------------------------------------

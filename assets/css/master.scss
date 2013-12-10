@@ -1,50 +1,201 @@
 /*
-  *******************************************************************************************************
+  *****************************************************************************
   *
-  * Brass Tacks
-  * by Scott O'Hara - @scottohara - scottohara.me - https://github.com/scottaohara
-  * 0.7.8.1 - November 14, 2013
+  * Title of framework
+  * by Scott O'Hara - @scottohara
+  * 0.x - December 3, 2013
   *
-  * This framework is still and development. If you have any suggestions/fixes/comments, please
-  * create an issue - https://github.com/scottaohara/Brass-Tacks/issues
-  * Thank you!
-  *
-  *******************************************************************************************************
+  *****************************************************************************
 */
 
+// ----------------------------------------------------------------------------
+// To customize the CSS output, define import variables as true/false
+// in the Import Controllers below.
+// ----------------------------------------------------------------------------
 
-//  To customize the CSS output of this file, go into each of the /base files to add/remove specific imports.
-//  ie. don't need default <code> styling?  comment out/remove the code @import inside the _base-sas/base file.
+// ----------------------------------------------------------------------------
+//  Import Font(s)
+// ----------------------------------------------------------------------------
 
-
-// Import Font(s)
-  @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,700italic,600,400italic,300italic,600italic);
-
-// Variables and Mixins
-  @import '__brass-tacks/brass-tacks-lib';    //  Includes Brass Tacks default vars and mixins
-                                              //  Also pulls in all Project specific vars/mixins to consolodate @imports
-
-// Variables and Mixins
-  @import '__brass-tacks/brass-tacks-placeholders';    //  Includes Brass Tacks placeholder classes
-
-// Base Values
-  @import '_base-sass/basic';             //  Standardizes the base styling of HTML elements
-
-// Helper Classes
-  @import '_helper-sass/basic';           //  imports all helper files  --  these will be listed out here again
-                                          //  once development has 'completed' and all 1.0 helper files have been made
+  @import url(//fonts.googleapis.com/css?family=Open+Sans:300,400,700,700italic,600,400italic,300italic,600italic);
 
 
-// Project Specific Styling - see inside "base"
-  @import '_project-sass/base';           //  Restyle and make classes specific for your project here
+// ----------------------------------------------------------------------------
+//  Globals
+// ----------------------------------------------------------------------------
+
+  // The global files consist of variables, mixins and placeholders that
+  // are necessary for the base styling of the framework. These files don't
+  // compile if they are not used, so there is no benefit in setting global
+  // file imports to true or false.
 
 
-// Print Styling
-//@import '_project-sass/print-Styles';   // Styling for printing of websites
+  // Import Library
+  @import '__globals/__import';               // Includes global libraries
 
 
-// Fix it
-// @import 'tidy';
+// ----------------------------------------------------------------------------
+// Base Element Import Controller
+// ----------------------------------------------------------------------------
 
-// Only import tidyUp if you actually need to make some quick fix hacks that you don't
-// have time to do properly.  Otherwise the file should be empty w/no need for import
+  // Typography Elements
+  $import-abbr-element:                         true!default;
+  $import-address-element:                      true!default;
+  $import-anchor-element:                       true!default;
+  $import-blockquote-element:                   true!default;
+  $import-bold-italic-elements:                 true!default;
+  $import-code-elements:                        true!default;
+  $import-def-list-elements:                    true!default;
+  $import-details-summary-elements:             true!default;
+  $import-dfn-element:                          true!default;
+  $import-headings-element:                     true!default;
+  $import-list-elements:                        true!default;
+  $import-mark-element:                         false!default;
+  $import-paragraph-element:                    true!default;
+  $import-pre-element:                          true!default;
+  $import-q-element:                            true!default;
+  $import-small-element:                        true!default;
+  $import-sub-sup-elements:                     true!default;
+  $import-text-selection:                       true!default;
+
+
+  // Progress / Meter Elements
+  $import-meter-element:                        false!default;
+  $import-progress-element:                     false!default;
+
+
+  // Nav Element
+  $import-nav-element:                          true!default;
+
+
+  // Table Elements
+  $import-table-captions:                       false!default;
+  $import-table-parents:                        true!default;
+  $import-table-rows-cols:                      true!default;
+
+
+  // Form Elements
+  $import-form-parents:                         true!default;
+  $import-form-buttons:                         true!default;
+  $import-form-inputs:                          true!default;
+  $import-form-select:                          true!default;
+  $import-form-labels:                          true!default;
+  $import-form-legend:                          true!default;
+  $import-form-textarea:                        true!default;
+
+
+  // Media Elements
+  $import-media-audio:                          false!default;
+  $import-media-embed-object:                   true!default;
+  $import-media-fig-figcaption:                 true!default;
+  $import-media-img-svg:                        true!default;
+  $import-media-video:                          true!default;
+
+
+  // Template Element
+  $import-template-element:                     false!default;
+
+
+  // HR Element
+  $import-hr-element:                           true!default;
+
+
+  // Import Library
+  @import '_base-elements/__import';            // Imports above set to True
+
+
+// ----------------------------------------------------------------------------
+//  Helper Classes Import Controller
+// ----------------------------------------------------------------------------
+
+  // Button Helpers
+  $import-helper-btn-general:                   true!default;
+  $import-helper-btn-social:                    true!default;
+
+
+  // Content Element Helpers
+  $import-helper-emphasis:                      true!default;
+  $import-helper-media-element:                 true!default;
+  $import-helper-show-hide:                     true!default;
+
+
+  // Form Helpers
+  $import-helper-forms-general:                 true!default;
+  $import-helper-checkbox-radio:                true!default;
+  $import-helper-input-color:                   false!default;
+  $import-helper-input-file:                    true!default;
+  $import-helper-search-combo:                  true!default;
+  $import-helper-search-combo2:                 true!default;
+  $import-helper-select:                        true!default;
+  $import-helper-select-multi:                  true!default;
+
+
+  // Layout & Table Helpers
+  $import-helper-table:                         true!default;
+  $import-helper-dividers:                      true!default;
+  $import-helper-floats-clears:                 true!default;
+  $import-helper-grids:                         true!default;
+
+
+  // Messaging Helpers
+  $import-helper-loading:                       false!default;
+  $import-helper-messaging:                     true!default;
+  $import-helper-tooltip:                       true!default;
+
+
+  // Nav Helpers
+  $import-helper-nav-breadcrumbs:               true!default;
+  $import-helper-nav-dropmenu:                  true!default;
+  $import-helper-nav-fixed:                     true!default;
+  $import-helper-nav-horizontal:                true!default;
+  $import-helper-nav-mobile:                    true!default;
+  $import-helper-nav-vertical:                  true!default;
+
+
+  // Shapes
+  $import-helper-shapes:                        false!default;
+
+
+  // Typography Helpers
+  $import-helper-type-alignment:                true!default;
+  $import-helper-type-callouts:                 true!default;
+  $import-helper-type-lists:                    true!default;
+  $import-helper-type-positions:                false!default;
+  $import-helper-type-sizing:                   true!default;
+  $import-helper-type-smoothing:                false!default;
+
+
+  // Import Library
+  @import '_helper-classes/__import';           // Imports above set to True
+
+
+// ----------------------------------------------------------------------------
+//  Additional Global Styling
+// ----------------------------------------------------------------------------
+
+  // Default Print Style Resets
+  $import-global-print:                         false!default;
+
+
+  // Quick-Fix Styling **
+  $import-global-quick-fix:                     false!default;
+
+
+  // Import Library
+  @import '__globals/global-print';             // Print styles
+  @import '__globals/quick-fix';
+
+
+// **
+// Quick Fix
+// ----------------------------------------------------------------------------
+
+// The Quick Fix style sheet exists so that developers can add quick,
+// potentially hacky-by-necessity code to our CSS, without needing to worry
+// about making sure they aren't writing the most optimal of CSS, or
+// potentially adding bugs into approved code.
+
+// This is not a file that should have code in it for an extended period of
+// time. Quick Fix code should be merged back into the main code library
+// either by simply adding the new rules to the appropriate file, or by
+// refactoring existing code to negate the need for the Quick Fix.

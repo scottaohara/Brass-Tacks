@@ -1,0 +1,26 @@
+@if $import-list-elements == true{
+
+// ----------------------------------------------------------------------------
+//  List Elements
+// ----------------------------------------------------------------------------
+
+// Un/Ordered lists
+ol, ul {
+  @extend %list-elements-margin;
+  @include last-child-0(); 
+  padding-left: $unit-px*6;
+
+  ol, ul {
+    // keep equal spacing li content followed by lists within lists 
+    margin-top: $unit-px2;
+  } 
+}
+
+li {
+  @extend %base-margin-b;
+}
+
+
+// ----------------------------------------------------------------------------
+} // -- end @if --
+// ----------------------------------------------------------------------------

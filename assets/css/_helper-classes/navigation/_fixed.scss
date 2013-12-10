@@ -1,0 +1,55 @@
+@if $import-helper-nav-fixed == true{
+
+// ----------------------------------------------------------------------------
+//  Fixed Position Sidebar Nav
+// ----------------------------------------------------------------------------
+
+// Add a class to the body tag
+.fixed-nav-left {
+  padding-left: $width-fixed-nav; // = width of nav
+
+  .side-nav-fixed {
+    left: 0;
+  }
+
+  .btn-nav {
+    left: $unit-px2;
+    top: $unit-px2;
+  }
+}
+
+.fixed-nav-right {
+  padding-right: $width-fixed-nav; // = width of nav
+
+  .side-nav-fixed {
+    right: 0;
+  }
+
+  .btn-nav {
+    right: $unit-px2;
+    top: $unit-px2;
+  }
+}
+
+.fixed-nav-top {
+  padding-top: $height-fixed-nav; // = height of nav
+}
+
+
+// Horizontal or Vertical navigations
+.top-nav-fixed {
+  @extend %fixed-nav;
+  height: $height-fixed-nav;
+}
+
+.side-nav-fixed {
+  @extend %fixed-nav;
+  height: 100%;
+  overflow-y: auto;
+  width: $width-fixed-nav;
+}
+
+
+// ----------------------------------------------------------------------------
+} // -- end @if --
+// ----------------------------------------------------------------------------

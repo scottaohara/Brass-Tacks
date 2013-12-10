@@ -1,0 +1,75 @@
+// ----------------------------------------------------------------------------
+//  Messaging Controller
+// ----------------------------------------------------------------------------
+
+// The main controller file for the messaging helper files. This file exists
+// to centeralize code that may be used across multiple files in this category.
+
+
+// ----------------------------------------------------------------------------
+//  Mixins
+// ----------------------------------------------------------------------------
+
+@mixin messaging-unit($c-main-color, $c-text-color){
+  @include select-text(darken($c-main-color, 15%), $c-text-color, none);
+  background: lighten($c-main-color, 10%);
+  border-color: darken($c-main-color, 15%);
+  color: darken($c-main-color, 44%);
+
+  .close-message {
+    background: $c-main-color;
+    border-color: darken($c-main-color, 15%);
+    color: $c-text-color;
+
+    &:hover {
+      background: darken($c-main-color, 15%);
+      color: $c-text-color;
+    }
+  }
+}
+
+// ----------------------------------------------------------------------------
+//  Placeholders
+// ----------------------------------------------------------------------------
+
+// Messaging Banners
+%close-message {
+  @include border-radius($circle);
+  @include position(top, -$unit-em*.5, right, -$unit-em*.5, absolute);
+  border: 1px solid;
+  padding: $unit-px $unit-px3;
+  text-decoration: none;
+}
+
+
+// Tool Tips / Hover Description
+%tool-tip {
+  //  extend this rule into the a [data-tooltip] selector
+  cursor: help;
+  display: inline-block;
+  position: relative;
+
+  img {
+    display: block;
+  }
+
+  &:after {
+    @include position(bottom, -20%, left, 0, absolute);
+    @include transition(all 0.35s);
+    content: attr(data-tooltip);
+    font-size: $txt-small;
+    opacity: 0;
+    padding: $unit-px $unit-px3;
+    text-align: center;
+    width: 100%;
+  }
+
+  &:hover {
+    text-decoration: none;
+
+    &:after {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+}

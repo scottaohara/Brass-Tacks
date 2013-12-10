@@ -1,0 +1,12 @@
+// ----------------------------------------------------------------------------
+//  Global Imports
+// ----------------------------------------------------------------------------
+
+@import 'global-vars';                        // Global Variables
+@import 'global-mixins';                      // Global Mixins
+@import 'global-placeholders';                // Global Placeholder Classes
+
+
+// The global-print and quick-fix files are imported at the bottom of the
+// master.scss file, as they need to be inserted at the bottom of the
+// compiled style sheet.

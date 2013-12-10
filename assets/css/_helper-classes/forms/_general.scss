@@ -1,0 +1,49 @@
+@if $import-helper-forms-general == true{
+
+// ----------------------------------------------------------------------------
+//  General Form Elements Helper Classes
+// ----------------------------------------------------------------------------
+
+// Containers
+.form-row {
+  padding: $unit-px 0;
+}
+
+.fieldset {
+  border: 1px solid $c-border;
+  margin-bottom: $unit-px2;
+  padding: $unit-px2 $unit-px3;
+}
+
+
+// General text input helper class
+.input-area {
+  @extend %input-area;
+  // see 'more-inputs' for additional styling for specific input elements
+}
+  
+
+// Disabled label
+.dis-label {
+  cursor: not-allowed;
+}
+
+
+// Inline Form Elements
+.inline-element {
+  display: inline-block;
+  margin-right: $unit-px;
+  width: auto;
+}
+
+.inline-all{
+  // inline all elements inside a container
+  input, textarea, label {
+    @extend .inline-element;
+  }
+}
+
+
+// ----------------------------------------------------------------------------
+} // -- end @if --
+// ----------------------------------------------------------------------------

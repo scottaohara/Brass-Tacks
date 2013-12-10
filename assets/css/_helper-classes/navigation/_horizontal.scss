@@ -1,0 +1,64 @@
+@if $import-helper-nav-horizontal == true{
+
+// ----------------------------------------------------------------------------
+//  Horizontal Navigations
+// ----------------------------------------------------------------------------
+
+// Place this class on the ul or ol inside the .nav.
+// Edit this file, or extend it / overwrite it in your project
+// scss files to change it's styling.
+
+.h-nav {
+  @extend %clearfix;
+  
+  & > li {
+    float: left;
+  }
+}
+
+// Example mark-up
+// ----------------------------------------------------------------------------
+// <nav class="nav" role="navigation">
+//   <ol class="h-nav">
+//     <li>
+//       <a href="#!" title="#!">Link 1</a> 
+//     </li>
+//     <li>
+//       <a href="#!" title="#!">Link 2</a> 
+//     </li>
+//    </ol>
+// </nav>
+
+
+// To be placed on the <ul> or <ol> -- don't use floats,
+// instead use display inline-block and center navigation links
+.c-nav {
+  text-align: center;
+
+  & > li {
+    display: inline-block;
+  }
+}
+
+// Example mark-up
+// ----------------------------------------------------------------------------
+// <nav class="nav" role="navigation">
+//   <ol class="c-nav">
+//     <li>
+//       <a href="#!" title="#!">Link 1</a> 
+//     </li><!--
+//     --><li>
+//       <a href="#!" title="#!">Link 2</a> 
+//     </li><!--
+//     --><li>
+//       <a href="#!" title="#!">Link 3</a> 
+//     </li>
+//    </ol>
+// </nav>
+
+// The comments will negate the white space.
+
+
+// ----------------------------------------------------------------------------
+} // -- end @if --
+// ----------------------------------------------------------------------------

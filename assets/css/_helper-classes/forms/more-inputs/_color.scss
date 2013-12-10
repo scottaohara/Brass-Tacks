@@ -1,0 +1,31 @@
+@if $import-helper-input-color == true{
+
+// ----------------------------------------------------------------------------
+//  Input Type: Color
+// ----------------------------------------------------------------------------
+
+// Color is not supported in all browsers, and extending %input-area breaks the
+// default look in webkit so instead we will carry over some of the input-area
+// styling that doesn't break it in webkit & standardizes it in other browsers
+
+.input-color {
+  @include border-radius($unit-px);
+  @include box-shadow($bs-input-txt);
+  background-image: none;
+  border: 1px solid $c-grey;
+  font-family: $f-brand;
+  height: 45px;
+  margin-bottom: $unit-px2;
+  padding: 0 $unit-px;
+  width: 100%;
+
+  &:focus {
+    @include box-shadow($bs-input-focus);
+    background: $c-lighter;
+    border: 1px solid #50B6D5;
+  }
+}
+
+// ----------------------------------------------------------------------------
+} // -- end @if --
+// ----------------------------------------------------------------------------

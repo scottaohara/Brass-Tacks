@@ -1,0 +1,37 @@
+@if $import-table-parents == true{
+
+// ----------------------------------------------------------------------------
+//  Tables: Parent Elements
+// ----------------------------------------------------------------------------
+
+table {
+  @extend %reset-border;
+  @extend %reset-spacing;
+  @extend %base-margin-b;
+  @extend %txt-base;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+thead {
+  @extend %bold;
+}
+
+// tfoot {}
+
+// tbody {}
+
+
+// Placeholder classes are used so elements can be easily
+// broken out into modular files.
+
+// If you would like to change the basic values of these
+// elements, simply either delete the place holder reference
+// and add your own styling, or edit the placeholder class
+// in the corresponding Brass Tacks Master Styles placeholders .scss file.
+
+
+// ----------------------------------------------------------------------------
+} // -- end @if --
+// ----------------------------------------------------------------------------

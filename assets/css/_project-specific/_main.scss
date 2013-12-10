@@ -1,0 +1,68 @@
+// ----------------------------------------------------------------------------
+//    Project Specific: Main Content Area
+// ----------------------------------------------------------------------------
+
+// Fixed Position Sidebar Nav Variables
+$width-fixed-nav:   200px;
+$height-fixed-nav:  100px;
+
+// Add a class to the body tag
+.fixed-nav-left{
+  padding-left:$width-fixed-nav;    // padding-left = width of nav
+  
+  .side-nav-fixed{left:0}
+  .btn-nav{left:$unit-px2; top:$unit-px2}
+}
+
+.fixed-nav-right{
+  padding-right:$width-fixed-nav;   // padding-right = width of nav
+  
+  .side-nav-fixed{right:0}
+  .btn-nav{right:$unit-px2; top:$unit-px2}
+}
+
+.fixed-nav-top{
+  padding-top:$height-fixed-nav;    // padding-top = height of nav
+}
+
+// A placeholder class so we don't repeat ourselves
+// with duplicate declarations
+%fixed-nav{
+  background:$c-brand-4;
+  position:fixed;
+  top:0;
+  z-index:1000;
+  
+  a{
+    color:#fff;
+
+    &:hover, &:visited{
+      background:rgba(0,0,0,.6);
+      color:$c-off-white;
+      text-decoration:none;
+    }
+  }
+}
+
+.top-nav-fixed{
+  @extend %fixed-nav;
+  height:$height-fixed-nav;
+}
+
+.side-nav-fixed{
+  @extend %fixed-nav;
+  height:100%;
+  overflow-y:auto;
+  width:$width-fixed-nav;
+}
+
+
+// The block class can be modified or deleted and replaced with other classes (like .media or .callout) 
+// The main purpose of a class like this is to apply to an inner HTML element of the column structure
+// so we can apply styling to the columns.
+.block{
+  @include last-child-0();
+  background:$c-grey;
+  color:#333;
+  padding:$unit-px;
+}

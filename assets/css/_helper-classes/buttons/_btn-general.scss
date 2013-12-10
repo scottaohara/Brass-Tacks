@@ -1,0 +1,172 @@
+@if $import-helper-btn-general == true{
+
+// ----------------------------------------------------------------------------
+//  General Button Styling
+// ----------------------------------------------------------------------------
+
+.btn {
+  @extend %btn;
+  background-color: $c-grey;
+  border-color: $c-dark-grey;
+  color: $c-brand-4 !important;
+
+  &:active, &:hover {
+    background-color: $c-dark-grey;
+  }
+
+  &:focus {
+    @include box-shadow($bs-4);
+    outline: 0;
+  }
+}
+
+.btn-prime {
+  @extend %btn;
+  background-color: $c-brand-1;
+  border-color: $c-brand-2;
+  color: $c-white !important;
+  text-shadow: $ts-primary;
+
+  &:hover {
+    background-color: $c-brand-2;
+  }
+}
+
+.btn-emph {
+  @extend %btn;
+  background-color: $c-emph-1;
+  border-color: $c-emph-2;
+  color: $c-white !important;
+  text-shadow: $ts-primary;
+
+  &:hover {
+    background-color: $c-emph-2;
+  }
+}
+
+.btn-neg {
+  @extend %btn;
+  background-color: $c-neg-1;
+  border-color: $c-neg-2;
+  color: $c-white !important;
+
+  &:hover {
+    background-color: $c-neg-2;
+  }
+}
+
+.btn-cancel {
+  @extend %btn;
+  background-color: $c-dark;
+  border-color: $c-hell;
+  color: $c-white !important;
+
+  &:hover{
+    background-color: $c-hell;
+  }
+}
+
+.btn-disable {
+  @extend .btn;
+  cursor: not-allowed;
+  opacity: .3;
+
+  &:hover, &:visited{
+    background-color: $c-grey;
+  }
+}
+
+
+// ----------------------------------------------------------------------------
+//  Sizing Variations
+// ----------------------------------------------------------------------------
+
+.btn-small {
+  font-size: $txt-small;
+  padding: $unit-px $unit-px2;
+}
+
+.btn-large {
+  font-size: $txt-h3;
+  padding: $unit-px3 $unit-px4;
+}
+
+.btn-xlarge {
+  font-size: $txt-h2;
+  padding: $unit-px3 $unit-px5;
+}
+
+.btn-wide {
+  display: block;
+}
+
+
+// ----------------------------------------------------------------------------
+//  Border Radius Styling
+// ----------------------------------------------------------------------------
+
+.btn-square {
+  @include border-radius(0);
+}
+
+.btn-round {
+  @include border-radius($circle);
+}
+
+
+// ----------------------------------------------------------------------------
+//  Close Button
+// ----------------------------------------------------------------------------
+
+.btn-clear {
+  @include border-radius($circle);
+  @include position(top, 17%, right, 6px, absolute);
+  font-family: $arial;
+  font-size: $txt-base - .2;
+  font-weight: 600!important;
+  padding: 5px 7px;
+  text-indent: 1px;
+  text-transform: uppercase;
+}
+
+
+// ----------------------------------------------------------------------------
+//  Button Pills
+// ----------------------------------------------------------------------------
+
+// Pill container
+.btn-pill {
+  @extend %clearfix;
+  @extend %base-margin-b;
+
+  &>:first-child {
+    @include border-radius($unit-px2 0 0 $unit-px2);
+  }
+
+  &>:last-child {
+    @include border-radius(0 $unit-px2 $unit-px2 0);
+  }
+
+  &>:not(:first-child) {
+    border-left: none;
+  }
+
+  .btn {
+    @extend .btn-square;
+    float:left;
+    margin-bottom: 0;
+    min-width: 100px;
+  }
+
+  .btn-small {
+    min-width: 80px;
+    padding-bottom: 6px;
+    padding-top: 6px;
+  }
+}
+
+
+// ----------------------------------------------------------------------------
+} // -- end @if --
+// ----------------------------------------------------------------------------
+

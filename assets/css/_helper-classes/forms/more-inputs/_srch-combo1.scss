@@ -1,0 +1,37 @@
+@if $import-helper-search-combo == true{
+
+// ----------------------------------------------------------------------------
+//  Input Type: Search Box/Button Combo
+// ----------------------------------------------------------------------------
+
+.search-area{
+  margin-bottom: $unit-px2;
+  position: relative;
+
+  .input-area{
+    margin-bottom: 0;
+    padding-right: $unit-px*10;
+    width: 75%;
+  }
+
+  .btn-search{
+    @include position(top, 0, right, 0, absolute);
+    height: 100%;
+    padding-top: 6px;
+  }
+}
+
+
+// Put a search button inline with search input field via position:absolute
+
+// Example mark-up:
+// ----------------------------------------------------------------------------
+// <div class="search-area">
+//   <input type="search" placeholder="Search for..." class="input-area">
+//   <input type="submit" value="Search" class="btn-prime btn-search">
+// </div>
+
+
+// ----------------------------------------------------------------------------
+} // -- end @if --
+// ----------------------------------------------------------------------------

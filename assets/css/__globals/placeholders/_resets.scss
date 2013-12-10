@@ -1,0 +1,27 @@
+// ----------------------------------------------------------------
+//  Resets
+// ----------------------------------------------------------------
+
+// Reset default spacing styling
+%reset-spacing {
+  margin: 0;
+  padding: 0;
+}
+
+// Reset default border styling
+%reset-border {
+  border: 0;
+  outline: 0;
+}
+
+// Reset default outline styling
+%outline-none {
+  outline: 0;
+}
+
+// Reset default list styling
+%kill-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,73 @@
+@if $import-helper-btn-social == true{
+
+// ----------------------------------------------------------------------------
+//  Social Buttons
+// ----------------------------------------------------------------------------
+
+.social-icon {
+  @extend %btn-icon;
+  border-right: 1px solid;
+}
+
+
+.btn-facebook {
+  @extend %btn-social;
+  background: $c-fb-1;
+  border-color: $c-fb-1;
+
+  .social-icon {
+    //background-image: url();
+    border-color: $c-fb-1;
+  }
+
+  &:hover {
+    background: $c-fb-1;
+
+    .social-icon {
+      border-color: $c-fb-icon-border;
+    }
+  }
+}
+
+.btn-twitter {
+  @extend %btn-social;
+  background-color: $c-tw-1;
+  border-color: $c-tw-1;
+
+  .social-icon {
+    //background-image: url();
+    border-color: $c-tw-1;
+  }
+
+  &:hover {
+    background: $c-tw-1;
+
+    .social-icon {
+      border-color: $c-tw-icon-border;
+    }
+  }
+}
+
+.btn-google {
+  @extend %btn-social;
+  background-color: $c-gp-1;
+  border-color: $c-gp-3;
+
+  .social-icon {
+    //background-image: url(../../assets/img/gp.png);
+    border-color: $c-gp-3;
+  }
+
+  &:hover {
+    background: $c-gp-3;
+
+    .social-icon {
+      border-color: $c-gp-icon-border;
+    }
+  }
+}
+
+
+// ----------------------------------------------------------------------------
+} // -- end @if --
+// ----------------------------------------------------------------------------

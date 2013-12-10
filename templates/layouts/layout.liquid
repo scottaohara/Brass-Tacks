@@ -25,6 +25,7 @@
 
   <!-- Styles -->
   {{ "master.css" | asset_url | stylesheet_tag }}
+  {{ "project.css" | asset_url | stylesheet_tag }}
   {% block styles %}{% endblock %} <!-- If exists, brings over style blocks from child pages -->
 
   <!-- Favicon -->

@@ -1,0 +1,53 @@
+@if $import-helper-messaging == true{
+
+// ----------------------------------------------------------------------------
+//  Messaging
+// ----------------------------------------------------------------------------
+
+.message-position {
+  @include position(top, 0, left, $unit-per, fixed);
+  width: 80%;
+}
+
+.message-container {
+  @include border-radius($unit-px);
+  @include transition(all .3s linear);
+  border: 1px solid;
+  margin-bottom: $unit-em;
+  padding: $unit-em*.35 $unit-em*.5;
+  position: relative;
+  text-shadow: 0 1px 1px rgba(255,255,255,.6);
+}
+
+.message-title {
+
+}
+
+.message-text {
+  margin-bottom: 0;
+}
+
+.message-warning {
+  @include messaging-unit($c-yellow, $c-dark);
+}
+
+.message-error {
+  @include messaging-unit($c-red, $c-off-white);
+}
+
+.message-success {
+  @include messaging-unit($c-green, $c-off-white);
+}
+
+.message-info {
+  @include messaging-unit($c-blue, $c-off-white);
+}
+
+.close-message {
+  @extend %close-message;
+}
+
+
+// ----------------------------------------------------------------------------
+} // -- end @if --
+// ----------------------------------------------------------------------------

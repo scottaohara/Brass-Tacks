@@ -1,0 +1,30 @@
+@if $import-code-elements == true{
+
+// ----------------------------------------------------------------------------
+//  Code, kbd & samp Elements
+// ----------------------------------------------------------------------------
+
+code, kbd, samp {
+  @extend %base-margin-b;
+  @include code-border(1px, 6px, $c-code-border);
+  background: $c-code-bg;
+  display: block;
+  font:{
+    family: $monospace;
+    size: $txt-base;
+  };
+  padding: $unit-px2;
+}
+
+p, li {
+  code, kbd, pre, samp {
+    display: inline-block; 
+    margin: 0;
+    padding: $unit-px;
+  }
+}
+
+
+// ----------------------------------------------------------------------------
+} // -- end @if --
+// ----------------------------------------------------------------------------

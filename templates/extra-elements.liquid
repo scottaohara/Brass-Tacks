@@ -1,0 +1,38 @@
+{% block title %}Extra Elements{% endblock %}
+{% block content %} 
+<section class="content">
+	<h2>Extra Elements</h2>
+	<p>
+		Stuff I'm not sure where to put yet / how to categorize
+	</p>
+
+<hr />
+
+<h3>Progress Element</h3>
+<progress max="100" >
+    <strong>Total progress: <span>70</span>% done.</strong>
+  </progress>
+
+  <hr />
+  <p>
+    For more information on the <code class="txt-small">&lt;progress></code> element, visit
+    <a href="http://html5doctor.com/the-progress-element/" target="_blank" title="The HTML5 Doctor">
+      http://html5doctor.com/the-progress-element/
+    </a>
+  </p>
+
+  <hr />
+
+<h3>Meter Element</h3>
+<p>Your score is:  <meter>2 out of 10</meter></p>
+
+<p>We can give this further meaning by adding min and max attributes</p>
+
+<p>Your score is: <meter min="0" max="10">2 out of 10</meter></p>
+
+<p>Your score is: <meter value="91" min="0" max="100" low="40" high="90" optimum="100">A+</meter></p>
+
+
+
+</section>   	
+{% endblock %}

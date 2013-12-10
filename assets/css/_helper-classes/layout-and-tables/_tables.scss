@@ -1,0 +1,57 @@
+@if $import-helper-table == true{
+
+// ----------------------------------------------------------------------------
+//  Tables Helper Classes
+// ----------------------------------------------------------------------------
+
+.table-header {
+	background: $c-table-head;
+  color: $c-white;
+}
+
+.table-footer {
+	background: $c-table-foot;
+}
+
+// Table Decorations
+.table-border {
+	border-bottom: $table-border;
+	border-right: $table-border;
+	
+	tr {
+	  border-top: $table-border;
+	}
+	
+	th, td {
+	  border-left: $table-border;
+	}
+}
+
+.table-stripe {
+	tr:nth-child(2n) {
+		background: $c-table-striped;
+	}
+}
+
+.table-row-stripe {
+	background: $c-table-striped;
+}
+
+// Mobile View Table
+.table-mobile {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  
+  @media (max-device-width:480px), screen and (max-width:800px) {
+    border: $table-border;
+    
+    table, th, td, tr {
+      white-space: nowrap;
+    }
+  }
+}
+
+
+// ----------------------------------------------------------------------------
+} // -- end @if --
+// ----------------------------------------------------------------------------

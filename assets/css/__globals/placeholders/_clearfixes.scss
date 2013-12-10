@@ -1,0 +1,29 @@
+// ----------------------------------------------------------------
+//  Clearfixes
+// ----------------------------------------------------------------
+
+// For IE8+ & modern browsers
+// http: //www.css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
+%clearfix {
+  &:after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+
+// For IE6+ support
+// http: //nicolasgallagher.com/micro-clearfix-hack/
+%cf2011 {
+  *zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+
+  &:after,
+  &:before {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}

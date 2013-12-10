@@ -56,11 +56,13 @@
       Basic, unclassed styling for a table.  
     </p>
     <p>
-      Extends the %margin-bottom placeholder as well as collapses borders, sets border spacing to zero.
+      Extends the %base-margin-b placeholder as well as collapses borders, 
+      sets border spacing to zero.
     </p>
     <p>
-      The base font-size is applied to the entire table, as well as a width of 100% to force tables
-      to fill the width of their container.  Text is set to align left.
+      The base font-size is applied to the entire table, as well as a width 
+      of 100% to force tables to fill the width of their container.
+      Text is set to align left.
     </p>
   </div>
 </div> <!-- end .row -->
@@ -116,10 +118,12 @@
       Basic table with a caption element.
     </p>
     <p>
-      Classes .table-header, .table-body and .table-footer are applied to their respective elements.
+      Classes .table-header, .table-body and .table-footer are
+      applied to their respective elements.
     </p>
     <p>
-      .table-body does not start with any preset styling.  .table-header and Footer each have background
+      .table-body does not start with any preset styling.  
+      .table-header and Footer each have background
       colors applied that can be changed in the Project Variables file.
     </p>
   </div>
@@ -177,8 +181,8 @@
 
   <div class="col w-40">
     <p>
-      .table-border adds simple borders to the various table elements, so that there are
-      no double borders on any cell.
+      .table-border adds simple borders to the various table elements,
+      so that there are no double borders on any cell.
     </p>
     <p>
       It utilizes various table variables found in the Project Variables file.
@@ -188,10 +192,10 @@
 
 <hr />
 
-<h3>Table Pin-Striped</h3>
+<h3>Table Pin-striped</h3>
 <div class="row">
   <div class="col w-60">
-    <table class="table-Stripe">
+    <table class="table-stripe">
       <thead class="table-header">
         <tr>
           <th>TH Col Start</th>
@@ -238,13 +242,14 @@
 
   <div class="col w-40">
     <p>
-      .table-Stripe adds zebra-striping using the :nth-child() selector.  
+      .table-stripe adds zebra-striping using the :nth-child() selector.  
     </p>
     <p>
       The stripe color is set via the Project Vars file.
     </p>
     <p>
-      If support for ie8 is required, the class of .table-Row-Stripe can be used instead.
+      If support for ie8 is required, the class of 
+      .table-Row-stripe can be used instead.
     </p>
   </div>
 </div> <!-- end .row -->
@@ -255,7 +260,7 @@
 <div class="row">
   <div class="col w-60">
     <div class="table-mobile">
-      <table class="table-Stripe">
+      <table class="table-stripe">
         <thead class="table-header">
           <tr>
             <th>TH Col Start</th>
@@ -306,20 +311,16 @@
       A simple means of viewing tabular data on a small screen.
     </p>
     <p>
-      Enclose a table in a parent element with a class of <code>.table-mobile</code>
-      to give the table a horizontal scroll when the screen becomes too small to
-      view all of it's content.
+      Enclose a table in a parent element with a class of 
+      <code>.table-mobile</code> to give the table a horizontal scroll 
+      when the screen becomes too small to view all of it's content.
     </p>
-    <code class="tiny">
+    <code class="txt-small">
       &lt;div class="table-mobile"><br />
       &nbsp;&nbsp;&lt;table>...&lt;/table><br />
       &lt;/div>
     </code>
 
-    <p>
-      For another take on small screen tables, check out the 
-      <a href="https://github.com/bleachedgraphics/responsive-table-reborn" title="View on GitHub">revised Zurb's responsive table</a>.
-    </p>
   </div>
 </div> <!-- end .row -->
 </section> <!-- end .content -->

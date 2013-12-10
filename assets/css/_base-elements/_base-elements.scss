@@ -1,0 +1,41 @@
+// ----------------------------------------------------------------------------
+//  Basic HTML Element Normalize / Reset Styling
+// ----------------------------------------------------------------------------
+
+// Make a smarter Box Model
+*, *:after, *:before {
+  @include box-sizing(border-box);
+}
+
+
+// Basic HTML + Body styling
+html, body {
+  @extend %reset-spacing;
+  @extend %font-size-lh;
+  background: $c-white;
+  font-family: $f-brand;
+  font-weight: 300;
+  height: 100%;
+      -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+// Give HTML5 elements block display, which is not defined in ie8/9
+article, aside, canvas, footer, header, main, section {
+  @extend %d-block;
+}
+
+
+// Makes hidden actually [hidden] in IE 8/9
+[hidden] {
+  @extend %d-none;
+}
+
+// Placeholder classes are used so elements can be easily
+// broken out into modular files.
+
+// If you would like to change the basic values of these
+// elements, simply either delete the place holder reference
+// and add your own styling, or edit the placeholder class
+// in the corresponding Brass Tacks placeholders .scss file.

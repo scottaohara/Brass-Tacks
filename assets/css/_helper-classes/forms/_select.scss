@@ -1,0 +1,28 @@
+@if $import-helper-select == true{
+
+// ----------------------------------------------------------------------------
+//  Select Element
+// ----------------------------------------------------------------------------
+
+// Drop Down Selection Inputs
+.select-container {
+  @extend %input-area;
+  background: url(../img/drop-arrow.png) no-repeat 99% center $c-white;
+  display: block;
+  overflow: hidden;
+}
+
+.input-select {
+  background: none;
+  border: 0;
+  font-family: $f-brand;
+  padding: 0 $unit-px4 0 0;
+  position: relative;
+  width: 130%;
+  -webkit-appearance: textarea;
+}
+
+
+// ----------------------------------------------------------------------------
+} // -- end @if --
+// ----------------------------------------------------------------------------
