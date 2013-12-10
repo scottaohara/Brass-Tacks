@@ -13,8 +13,7 @@ many people who's work has influenced this framework.
 
 As of version 0.8.0, much of the code from previous releases has been significantly rewritten.
 Until a final 1.0 stamp can be put on the code, there won't be a 'live' version of the framework
-available for viewing.  However, the current .liquid files will continue to be available in the
-repo. And those may be updated from time to time until the 1.0 release.
+available for viewing.
 
 Look to this area (or other readme files) for extended documentation and best practices.
 
