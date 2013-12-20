@@ -7,7 +7,7 @@
 small {
   @extend %txt-small;
   @extend %d-block;
-  @extend %base-margin-b;
+  @extend %margin-bottom-base;
 }
 
 // When used outside of a typographical parent element, <small> should be

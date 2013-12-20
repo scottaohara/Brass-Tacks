@@ -3,7 +3,7 @@
 // ----------------------------------------------------------------
 
 // All Vendor Prefixes
-@mixin vendor($property, $value...){
+@mixin vendor($property, $value...) {
        -moz-#{$property}:$value;
         -ms-#{$property}:$value;
          -o-#{$property}:$value;
@@ -12,7 +12,7 @@
 }
 
 // Just webkit & moz Prefixes
-@mixin base-vendor($property, $value...){
+@mixin base-vendor($property, $value...) {
       -moz-#{$property}:$value;
    -webkit-#{$property}:$value;
            #{$property}:$value;

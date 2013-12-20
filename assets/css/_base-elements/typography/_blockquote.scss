@@ -7,7 +7,7 @@
 // Blockquote base styling
 blockquote {
   @extend %reset-spacing;
-  @extend %base-margin-b;
+  @extend %margin-bottom-base;
   @extend %txt-h6;
   @extend %italic;
 

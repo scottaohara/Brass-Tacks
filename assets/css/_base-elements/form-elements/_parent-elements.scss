@@ -6,7 +6,7 @@
 
 fieldset, form {
   @extend %reset-form-elements;
-  @extend %base-margin-b;
+  @extend %margin-bottom-base;
 }
 
 fieldset {

@@ -5,29 +5,6 @@
 // The main controller file for the messaging helper files. This file exists
 // to centeralize code that may be used across multiple files in this category.
 
-
-// ----------------------------------------------------------------------------
-//  Mixins
-// ----------------------------------------------------------------------------
-
-@mixin messaging-unit($c-main-color, $c-text-color){
-  @include select-text(darken($c-main-color, 15%), $c-text-color, none);
-  background: lighten($c-main-color, 10%);
-  border-color: darken($c-main-color, 15%);
-  color: darken($c-main-color, 44%);
-
-  .close-message {
-    background: $c-main-color;
-    border-color: darken($c-main-color, 15%);
-    color: $c-text-color;
-
-    &:hover {
-      background: darken($c-main-color, 15%);
-      color: $c-text-color;
-    }
-  }
-}
-
 // ----------------------------------------------------------------------------
 //  Placeholders
 // ----------------------------------------------------------------------------

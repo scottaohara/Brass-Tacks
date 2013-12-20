@@ -29,3 +29,26 @@
   -webkit-font-smoothing: antialiased;
           font-smoothing: antialiased;
 }
+
+
+// Code Mixins
+@mixin code-color($c-code-color) {
+  border-left-color: $c-code-color;
+  color: $c-code-color;
+}
+
+@mixin code-border($border-width, $border-emph-width, $border-color){
+  border: $border-width solid $border-color;
+  border-left-width: $border-emph-width;
+}
+
+
+// Truncate Text
+@mixin truncate-text($truncation-boundary) {
+  display: inline-block;
+  max-width: $truncation-boundary;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+// Example  --  @include truncate-text(100%);

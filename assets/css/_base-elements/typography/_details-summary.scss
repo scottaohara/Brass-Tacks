@@ -6,7 +6,7 @@
 
 details, summary {
   @extend %d-block;
-  @extend %base-margin-b;
+  @extend %margin-bottom-base;
   @include last-child-0;
 }
 

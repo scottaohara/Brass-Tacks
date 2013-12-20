@@ -137,7 +137,7 @@
 // Pill container
 .btn-pill {
   @extend %clearfix;
-  @extend %base-margin-b;
+  @extend %margin-bottom-base;
 
   &>:first-child {
     @include border-radius($unit-px2 0 0 $unit-px2);

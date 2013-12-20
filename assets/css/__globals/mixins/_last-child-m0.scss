@@ -2,7 +2,7 @@
 //  Set last child to margin-bottom:0;
 // ----------------------------------------------------------------------------
 
-@mixin last-child-0(){
+@mixin last-child-0() {
   & > :last-child{
     margin-bottom: 0;
   }

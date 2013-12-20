@@ -3,6 +3,10 @@
 // ----------------------------------------------------------------
 
 // Consistent margin bottom
-%base-margin-b {
+%margin-bottom-base {
+  margin-bottom: $unit-px4;
+}
+
+%margin-bottom-2x {
   margin-bottom: $unit-px2;
 }

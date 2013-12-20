@@ -40,7 +40,7 @@ $c-purple:                #9729fd;
 $c-brand-1:               #4aceff;  // light cyan
 $c-brand-2:               #00aeef;  // cyan
 $c-brand-3:               #0095cc;  // dark cyan
-
+$c-brand-4:               #525252;  // Darker Grey
 $c-brand-5:               #b6b5b5;  // Light Grey
 
 $c-neg-1:                 #a00;     // btn red
@@ -54,7 +54,7 @@ $c-emph-2:                #178900;  // dark green
 //  Colors: Simple Names
 // ----------------------------------------------------------------------------
 
-$c-brand-4:               #525252;  // Header Grey
+$c-header:                $c-brand-4;
 
 $c-border:        				$c-grey;
 
@@ -69,3 +69,31 @@ $c-table-border:  				$c-border;
 
 // sets consistent boarder styling for table elements
 $table-border:    				1px solid $c-border;
+
+
+// Code Colors
+// ----------------------------------------------------------------------------
+$c-code-bg:           $c-off-white;
+$c-code-border:       $c-light;
+$c-css:               $c-magenta;
+$c-html:              $c-green;
+
+
+// Button Colors
+// ----------------------------------------------------------------------------
+// Facebook Button Colors
+$c-fb-1:            #3a5b98;
+$c-fb-2:            #9baaca;
+$c-fb-icon-border:  #496cac;
+
+// Twitter Button Colors
+$c-tw-1:            #3096d0;
+$c-tw-2:            #96c9e7;
+$c-tw-icon-border:  #349dd9;
+
+// Google+ Button Colors
+$c-gp-1:            #dd4b39;
+$c-gp-2:            #c93e35;
+$c-gp-3:            #982b22;
+$c-gp-icon-border:  #af352b;
+

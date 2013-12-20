@@ -7,7 +7,7 @@
 table {
   @extend %reset-border;
   @extend %reset-spacing;
-  @extend %base-margin-b;
+  @extend %margin-bottom-base;
   @extend %txt-base;
   border-collapse: collapse;
   border-spacing: 0;

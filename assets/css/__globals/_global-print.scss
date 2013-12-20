@@ -7,7 +7,7 @@
 @media print{
   * {
     background: transparent!important;
-    color: $c-black !important; // Black prints faster
+    color: #000!important; // Black prints faster
     box-shadow: none!important;
     text-shadow: none!important;
   }

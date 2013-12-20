@@ -9,7 +9,7 @@ figure, figcaption {
 }
 
 figure {
-  @extend %base-margin-b;
+  @extend %margin-bottom-base;
 
   img {
     @extend %d-block;

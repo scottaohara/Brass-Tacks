@@ -5,7 +5,7 @@
 // ----------------------------------------------------------------------------
 
 code, kbd, samp {
-  @extend %base-margin-b;
+  @extend %margin-bottom-base;
   @include code-border(1px, 6px, $c-code-border);
   background: $c-code-bg;
   display: block;

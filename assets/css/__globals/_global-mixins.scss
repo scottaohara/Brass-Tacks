@@ -19,8 +19,8 @@
 @import 'mixins/box-sizing';
 @import 'mixins/flex';
 @import 'mixins/position';
-@import 'mixins/hidden-element';
 @import 'mixins/last-child-m0';
+@import 'mixins/layout';
 
 
 // CSS Shapes
@@ -36,3 +36,7 @@
 
 // Media Elements
 @import 'mixins/retina';
+
+
+// Messaging Units
+@import 'mixins/messaging';

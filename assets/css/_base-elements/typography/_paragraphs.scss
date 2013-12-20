@@ -6,7 +6,7 @@
 
 p {
   @extend %reset-spacing;
-  @extend %base-margin-b;
+  @extend %margin-bottom-base;
 }
 
 // Placeholder classes are used so elements can be easily
