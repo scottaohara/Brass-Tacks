@@ -1,9 +1,9 @@
 /*
   *****************************************************************************
   *
-  * Title of framework
-  * by Scott O'Hara - @scottohara
-  * 0.x - December 3, 2013
+  * Brass Tacks
+  * by Scott O'Hara - @scottohara - github.com/scottaohara
+  * 0.8.2 - January 2, 2013
   *
   *****************************************************************************
 */
@@ -22,13 +22,12 @@
 
 // ----------------------------------------------------------------------------
 //  Globals
+//
+//  The global files consist of variables, mixins and placeholders that
+//  are necessary for the base styling of the framework. These files don't
+//  compile if they are not used, so there is no benefit in setting global
+//  file imports to true or false.
 // ----------------------------------------------------------------------------
-
-  // The global files consist of variables, mixins and placeholders that
-  // are necessary for the base styling of the framework. These files don't
-  // compile if they are not used, so there is no benefit in setting global
-  // file imports to true or false.
-
 
   // Import Library
   @import '__globals/__import';               // Includes global libraries
@@ -44,13 +43,15 @@
   $import-anchor-element:                       true!default;
   $import-blockquote-element:                   true!default;
   $import-bold-italic-elements:                 true!default;
+  $import-cite-element:                         true!default;
   $import-code-elements:                        true!default;
   $import-def-list-elements:                    true!default;
   $import-details-summary-elements:             true!default;
   $import-dfn-element:                          true!default;
   $import-headings-element:                     true!default;
+  $import-ins-element:                          true!default;
   $import-list-elements:                        true!default;
-  $import-mark-element:                         false!default;
+  $import-mark-element:                         true!default;
   $import-paragraph-element:                    true!default;
   $import-pre-element:                          true!default;
   $import-q-element:                            true!default;
@@ -81,11 +82,12 @@
   $import-form-select:                          true!default;
   $import-form-labels:                          true!default;
   $import-form-legend:                          true!default;
+  $import-form-placeholder-text:                true!default;
   $import-form-textarea:                        true!default;
 
 
   // Media Elements
-  $import-media-audio:                          false!default;
+  $import-media-audio:                          true!default;
   $import-media-embed-object:                   true!default;
   $import-media-fig-figcaption:                 true!default;
   $import-media-img-svg:                        true!default;
@@ -115,6 +117,7 @@
 
   // Content Element Helpers
   $import-helper-emphasis:                      true!default;
+  $import-helper-inline:                        true!default;
   $import-helper-media-element:                 true!default;
   $import-helper-show-hide:                     true!default;
 
@@ -122,7 +125,7 @@
   // Form Helpers
   $import-helper-forms-general:                 true!default;
   $import-helper-checkbox-radio:                true!default;
-  $import-helper-input-color:                   false!default;
+  $import-helper-input-color:                   true!default;
   $import-helper-input-file:                    true!default;
   $import-helper-search-combo:                  true!default;
   $import-helper-search-combo2:                 true!default;
@@ -147,6 +150,7 @@
   $import-helper-nav-breadcrumbs:               true!default;
   $import-helper-nav-dropmenu:                  true!default;
   $import-helper-nav-fixed:                     true!default;
+  $import-helper-nav-grid:                      true!default;
   $import-helper-nav-horizontal:                true!default;
   $import-helper-nav-mobile:                    true!default;
   $import-helper-nav-vertical:                  true!default;
@@ -160,9 +164,9 @@
   $import-helper-type-alignment:                true!default;
   $import-helper-type-callouts:                 true!default;
   $import-helper-type-lists:                    true!default;
-  $import-helper-type-positions:                false!default;
+  $import-helper-type-positions:                true!default;
   $import-helper-type-sizing:                   true!default;
-  $import-helper-type-smoothing:                false!default;
+  $import-helper-type-smoothing:                true!default;
 
 
   // Import Library
@@ -183,11 +187,10 @@
 
   // Import Library
   @import '__globals/global-print';             // Print styles
-  @import '__globals/quick-fix';
+  @import '__globals/quick-fix';                // **
 
 
-// **
-// Quick Fix
+// ** Quick Fix
 // ----------------------------------------------------------------------------
 
 // The Quick Fix style sheet exists so that developers can add quick,

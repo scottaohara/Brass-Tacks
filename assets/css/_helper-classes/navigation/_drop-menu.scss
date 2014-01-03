@@ -8,7 +8,8 @@
 .drop-container {
   position: relative;
 
-  &:hover {
+  &:hover,
+  &.drop-open {
     background: $c-light;
 
     .drop-menu {
@@ -24,7 +25,8 @@
 
 // Drop Menu styling
 .drop-menu {
-  background: $c-light;
+  @include box-shadow($bs-1);
+  background: rgba(255,255,255,.95);
   border: 1px solid $c-light-grey;
   margin: 0;
   position: absolute;
@@ -54,7 +56,7 @@
 // <nav class="nav" role="navigation">
 //   <ol class="#-nav">
 //     <li class="drop-container">
-//       <a href="#!" title="#!">DC Link</a> 
+//       <a href="#!" title="#!">DC Link</a>
 //       <ol class="drop-menu">
 //         <li>
 //           <a href="#!" title="#!">DM Link 1</a>

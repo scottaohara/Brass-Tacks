@@ -2,23 +2,24 @@
 //  Fixed Position Elements
 // ----------------------------------------------------------------------------
 
+// Position via a coordinate on each axis & position type
 @mixin position($t-or-b, $tb-unit, $l-or-r, $lr-unit, $position) {
   position: $position;
 
-  @if $t-or-b == bottom{
+  @if $t-or-b == bottom {
     bottom: $tb-unit;
   }
 
-  @else if $t-or-b == top{
+  @else if $t-or-b == top {
     top: $tb-unit;
   }
 
 
-  @if $l-or-r == left{
+  @if $l-or-r == left {
     left: $lr-unit;
   }
 
-  @else if $l-or-r == right{
+  @else if $l-or-r == right {
     right: $lr-unit;
   }
 }

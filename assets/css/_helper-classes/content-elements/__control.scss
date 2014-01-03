@@ -2,8 +2,8 @@
 //  Navigation Controller
 // ----------------------------------------------------------------------------
 
-// The main controller file for the content elements helper files. 
-// This file exists to centeralize code that may be used across multiple files
+// The main controller file for the content elements helper files.
+// This file exists to centralize code that may be used across multiple files
 // in this category.
 
 // ----------------------------------------------------------------------------
@@ -13,7 +13,7 @@
 %media {
   @extend %clearfix;
   margin-bottom: $unit-em*2;
-  
+
   .media-text >:last-child {
     margin-bottom: 0;
   }

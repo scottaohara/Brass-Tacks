@@ -10,7 +10,7 @@ code, kbd, samp {
   background: $c-code-bg;
   display: block;
   font:{
-    family: $monospace;
+    family: $f-monospace;
     size: $txt-base;
   };
   padding: $unit-px2;
@@ -18,7 +18,7 @@ code, kbd, samp {
 
 p, li {
   code, kbd, pre, samp {
-    display: inline-block; 
+    display: inline-block;
     margin: 0;
     padding: $unit-px;
   }

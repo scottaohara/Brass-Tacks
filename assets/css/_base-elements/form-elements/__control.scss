@@ -3,18 +3,21 @@
 // ----------------------------------------------------------------------------
 
 // The main controller file for the form base files. This file exists
-// to centeralize code that may be used across multiple files in this category.
+// to centralize code that may be used across multiple files in this category.
 
 // ----------------------------------------------------------------------------
 //  Placeholders
 // ----------------------------------------------------------------------------
 
+// Basic reset/normalizing for form elements
 %reset-form-elements {
   @extend %reset-spacing;
+  font-size: 100%;
   font-weight: 400;
   line-height: 1.25;
   text-transform: none;
 }
+
 
 // Base label styling for use w/element & class to mimic element
 %label {
@@ -24,4 +27,11 @@
   &[for] {
     cursor: pointer;
   }
+}
+
+
+// Placeholder attribute styling
+%placeholder-text {
+  color: #999;
+  font-style: italic;
 }

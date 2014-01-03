@@ -4,18 +4,43 @@
 //  Mobile Menu Open Nav Button
 // ----------------------------------------------------------------------------
 
-.btn-nav {
-  background: url(../img/nav-Icon.png) no-repeat center center;
-  background-size: 75%;
-  height: 24px;
-  position: fixed;
-  right: $unit-px;
-  top: $unit-px;
-  width: 28px;
+.btn-mobile {
+  background: none;
+  border: 0;
+  display: none;
+  height: 30px;
+  margin: 0 12px;
+  padding: 12px 0;
+  width: 30px;
+
+  @media only screen and (max-width: $break-medium) {
+    display: block;
+  }
 }
 
-//  Code Example
-//  <a class="btn btn-nav" id="btn-nav-1" href="#show-nav">
+.btn-mobile-bar {
+  @extend %burger;
+  color: transparent;
+  font-size: 0;
+
+  &:after, &:before {
+    @extend %burger;
+    content: '';
+    position: relative;
+  }
+
+  &:after {
+    top: 6px
+  }
+
+  &:before {
+    top: -8px;
+  }
+}
+
+//  Example mark-up:
+// ----------------------------------------------------------------------------
+//  <a class="btn-mobile" id="btn-mobile-1" href="#show-nav">
 //    <span class="hidden">Show Navigation</span>
 //  </a>
 

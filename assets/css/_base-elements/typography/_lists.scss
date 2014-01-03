@@ -7,13 +7,21 @@
 // Un/Ordered lists
 ol, ul {
   @extend %list-elements-margin;
-  @include last-child-0(); 
+  @include last-child-0();
   padding-left: $unit-px*6;
 
   ol, ul {
-    // keep equal spacing li content followed by lists within lists 
+    // keep equal spacing li content followed by lists within lists
     margin-top: $unit-px2;
-  } 
+  }
+}
+
+ol ol {
+  list-style-type: lower-alpha;
+}
+
+ol ol ol {
+  list-style-type: lower-roman;
 }
 
 li {

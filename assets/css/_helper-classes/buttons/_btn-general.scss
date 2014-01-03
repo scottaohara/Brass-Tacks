@@ -81,23 +81,33 @@
 //  Sizing Variations
 // ----------------------------------------------------------------------------
 
+.btn-tiny {
+  font-size: $txt-tiny;
+  padding: $unit-px $unit-px2;
+  min-width: 50px;
+}
+
 .btn-small {
   font-size: $txt-small;
-  padding: $unit-px $unit-px2;
+  padding: $unit-px2 $unit-px3;
+  min-width: 50px;
 }
 
 .btn-large {
   font-size: $txt-h3;
-  padding: $unit-px3 $unit-px4;
+  padding: $unit-px2 $unit-px*8;
+  min-width: 200px;
 }
 
 .btn-xlarge {
   font-size: $txt-h2;
-  padding: $unit-px3 $unit-px5;
+  padding: $unit-px3 $unit-px*8;
+  min-width: 200px;
 }
 
 .btn-wide {
   display: block;
+  width: 100%;
 }
 
 
@@ -121,7 +131,7 @@
 .btn-clear {
   @include border-radius($circle);
   @include position(top, 17%, right, 6px, absolute);
-  font-family: $arial;
+  font-family: $f-arial;
   font-size: $txt-base - .2;
   font-weight: 600!important;
   padding: 5px 7px;

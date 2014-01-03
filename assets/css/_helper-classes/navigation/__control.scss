@@ -3,14 +3,37 @@
 // ----------------------------------------------------------------------------
 
 // The main controller file for the navigation helper files. This file exists
-// to centeralize code that may be used across multiple files in this category.
+// to centralize code that may be used across multiple files in this category.
 
 // ----------------------------------------------------------------------------
 //  Placeholders
 // ----------------------------------------------------------------------------
 
+// Basic styling for vertical navigation styles
+%nav-v {
+  a {
+    display: block;
+    padding: $unit-px;
+    position: relative;
+  }
+}
+
+
+// Basic styling for horizontal navigation styles
+%nav-h {
+  a {
+    border-right: 1px solid $c-dark-grey;
+    padding: 0 $unit-px3;
+  }
+
+  li:last-child a{
+    border-right: 0;
+  }
+}
+
+
 // Fixed navigation
-%fixed-nav {
+%nav-fixed {
   background: $c-dark;
   position: fixed;
   top: 0;
@@ -26,6 +49,16 @@
       text-decoration: none;
     }
   }
+}
+
+
+// 3-lined mobile nav 'icon'
+%burger {
+  @include box-shadow($bs-1);
+  background: $c-white;
+  border-radius: $circle;
+  display: block;
+  height: 2px;
 }
 
 

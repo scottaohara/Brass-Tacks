@@ -25,11 +25,12 @@
 
 // Small Font Classes
 .txt-small    { @extend %txt-small; }
-.txt-mini     { @extend %txt-mini;  }
+.txt-tiny     { @extend %txt-tiny; }
+.txt-mini     { @extend %txt-mini; }
 
 
 // If some of these classes are not needed, just disable the class.
-// Since these classes all pull from placeholder classes, we still 
+// Since these classes all pull from placeholder classes, we still
 // have access to the premade font-sizes without need for the
 // individual classes to be compiled.
 

@@ -7,7 +7,7 @@
 
 
 // Default Nav Element Styling
-@import 'navs';                         
+@import 'navs';
 
 
 // Default Typographical Element Styling
@@ -30,6 +30,8 @@
   @import 'typography/details-summary';     // Details & Summary Elements
   @import 'typography/code';                // Code Elements
   @import 'typography/pre';                 // Pre Element
+  @import 'typography/cite';                // Cite Element
+  @import 'typography/ins';                 // Insert Element
 
 
 // Default Media Element Styling
@@ -45,6 +47,7 @@
 @import 'form-elements/__control';          // Vars, Placeholders, Mixins
   @import 'form-elements/parent-elements';  // Form, fieldset
   @import 'form-elements/inputs';           // Inputs
+  @import 'form-elements/placeholder-text'; // Placeholder Styling
   @import 'form-elements/textarea';         // Textarea
   @import 'form-elements/label';            // Label
   @import 'form-elements/buttons';          // Button/input type=button

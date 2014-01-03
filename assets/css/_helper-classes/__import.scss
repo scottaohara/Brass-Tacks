@@ -1,15 +1,16 @@
 // ----------------------------------------------------------------------------
-//  Helper Sass Master List
+//  Helper Import List
 // ----------------------------------------------------------------------------
 
-// Content Element Helpers
+// Content Element
 @import 'content-elements/__control';       // Controller (empty)
   @import 'content-elements/emphasis';      // Give visual emphasis to elments
   @import 'content-elements/show-and-hide'; // Show, hide and mute elements
   @import 'content-elements/media-element'; // Media/text combo elements
+  @import 'content-elements/inline';        // Inline elements
 
 
-// Layout & Tables Helpers
+// Layout & Tables
 @import 'layout-and-tables/__control';       // Layout Controller
   @import 'layout-and-tables/dividers';      // Divider lines
   @import 'layout-and-tables/floats-clears'; // Floating/clearing
@@ -29,20 +30,20 @@
   @import 'forms/more-inputs/file';         // File upload input type
 
 
-// Messaging Helpers
+// Messaging
 @import 'messaging/__control';              // Messaging Controller
   @import 'messaging/messaging';            // Messaging banners
   @import 'messaging/tooltips';             // Tooltip hovers
   @import 'messaging/loading';              // Progress bars / spinners
 
 
-// Button Helpers
+// Button
 @import 'buttons/__control';                // Button Controller
   @import 'buttons/btn-general';            // General buttons
   @import 'buttons/btn-social';             // Social buttons
 
 
-// Typograhy Helpers
+// Typography
 @import 'typography/__control';             // Typography Controller
   @import 'typography/align';               // Alignment classes
   @import 'typography/callout';             // Callout text styling
@@ -52,14 +53,15 @@
   @import 'typography/height-and-indents';  // Line height and text indenting
 
 
-// Navigation Helpers
+// Navigation
 @import 'navigation/__control';             // Nav Controller
   @import 'navigation/breadcrumbs';         // Breadcrumb classes
   @import 'navigation/drop-menu';           // Drop menu classes
   @import 'navigation/horizontal';          // Horizontal navigation
-  @import 'navigation/vertical';            // Vercial navigation
+  @import 'navigation/vertical';            // Vertical navigation
   @import 'navigation/fixed';               // Fixed position navigation
   @import 'navigation/mobile';
+  @import 'navigation/grid';                // Nav Grid
 
 
 // Shapes

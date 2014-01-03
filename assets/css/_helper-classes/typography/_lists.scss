@@ -5,25 +5,18 @@
 // ----------------------------------------------------------------------------
 
 // Kill list styling - removes list markings & padding
-.kill-list {
-  @extend %kill-list;
+.list-unstyle {
+  @extend %list-unstyle;
 }
 
 
 // For non-semantic list numbering
-.number-list {
+.list-number {
   list-style-type: decimal;
 }
 
 
-// Inline <li>s within a list element & kill general list styling
-.inline-list{
-  @extend %kill-list;
-  >li{
-    display: inline-block;
-    vertical-align: top;
-  }
-}
+// Inline lists are located in the content-elements > inline.scss file
 
 // ----------------------------------------------------------------------------
 } // -- end @if --

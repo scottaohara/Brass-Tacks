@@ -6,7 +6,7 @@
 
 .bread {
   li {
-    display: inline-block;
+    @extend %d-inline-block;
 
     &:last-child:after {
       content: none;
@@ -14,14 +14,14 @@
 
     &:after {
       content: ">";
-      display: inline-block;
+      @extend %d-inline-block;
     }
   }
 }
 
-.bread a, 
+.bread a,
 .active-crumb {
-  display: inline-block;
+  @extend %d-inline-block;
   padding: $unit-px;
 }
 

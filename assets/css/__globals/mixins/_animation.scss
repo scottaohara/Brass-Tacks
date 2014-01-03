@@ -27,28 +27,27 @@
 }
 
 // Setup for keyframes
-@mixin keyframe($animation-name){
-  @-moz-keyframes $animation-name{
+@mixin keyframe($animation-name) {
+  @-moz-keyframes #{$animation-name} {
     @content;
   }
 
-  @-ms-keyframes $animation-name{
+  @-ms-keyframes #{$animation-name} {
     @content;
   }
 
-  @-webkit-keyframes $animation-name{
+  @-webkit-keyframes #{$animation-name} {
     @content;
   }
 
-  @keyframes $animation-name{
+  @keyframes #{$animation-name} {
     @content;
   }
 }
 
 
-
 // Create CSS keyframe animations for all vendors in one go, e.g.:
-
+// ----------------------------------------------------------------------------
 //  .foo{
 //    @include animation(10s, 5s, name);
 //  }
@@ -62,5 +61,3 @@
 //      font-size:5em;
 //    }
 // }
-
-

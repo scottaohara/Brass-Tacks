@@ -1,53 +1,24 @@
 @import '../__globals/global-vars';
 @import '../__globals/global-mixins';
 @import '../__globals/global-placeholders';
-//@import '../_project-sass/__vars-mixins/vars';    // project vars
-//@import '../_project-sass/__vars-mixins/mixins';  // project mixins
 
 // ----------------------------------------------------------------------------
 //  Project Specific Extended HTML Stylings
 // ----------------------------------------------------------------------------
 
-// Full container for the entire page.  
-.page{}
+// Full container for the entire page.
+.page {}
 
-// Generic tag to wrap around content within sections to apply a max width 
-// to the interior content while allowing for larger sections to expand 
+// Generic tag to wrap around content within sections to apply a max width
+// to the interior content while allowing for larger sections to expand
 // the whole page for BG styling purposes
-.content{
+.content {
   @include last-child-0();
   margin: 0 auto;
   max-width: 1000px;
   padding: $unit-px5;
 }
 
-// Outlines - this is considered bad for accessiblity.
-// Needs to be rewritten to not be default, but to also have a visual indicator
-// :focus, input[type="submit"]::-moz-focus-inner{
-//   @extend %outline-none;
-// }
-
 @import 'header';   // Project Specific Header Styling
 @import 'main';     // Project Specific Main Content Area Styling
 @import 'footer';   // Project Specific Footer Styling
-
-
-
-
-%watch {
-  @include linear-gradient($c-brand-1, top, $c-brand-1, $c-brand-2);
-  border-radius: $circle;
-  display: inline-block;
-  height: 12px;
-  margin: 0 5px 0 4px;
-  width: 12px;
-}
-
-.watched {
-  @extend %watch;
-  opacity: .5;
-}
-
-.unwatched {
-  @extend %watch; 
-}

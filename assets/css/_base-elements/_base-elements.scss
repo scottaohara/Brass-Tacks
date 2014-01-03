@@ -13,6 +13,7 @@ html, body {
   @extend %reset-spacing;
   @extend %font-size-lh;
   background: $c-white;
+  color: $c-dark;
   font-family: $f-brand;
   font-weight: 300;
   height: 100%;

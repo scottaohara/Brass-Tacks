@@ -1,9 +1,9 @@
 // ----------------------------------------------------------------
-//  Vendor Prefix Mixins
+//  Vendor Prefix
 // ----------------------------------------------------------------
 
-// All Vendor Prefixes
-@mixin vendor($property, $value...) {
+// All vendor prefixes
+@mixin vendor-all($property, $value...) {
        -moz-#{$property}:$value;
         -ms-#{$property}:$value;
          -o-#{$property}:$value;
@@ -11,9 +11,16 @@
             #{$property}:$value;
 }
 
-// Just webkit & moz Prefixes
-@mixin base-vendor($property, $value...) {
+// Just -moz- & -webkit- prefixes
+@mixin vendor-moz-wk($property, $value...) {
       -moz-#{$property}:$value;
+   -webkit-#{$property}:$value;
+           #{$property}:$value;
+}
+
+
+// Only webkit prefixes
+@mixin vendor-wk($property, $value...) {
    -webkit-#{$property}:$value;
            #{$property}:$value;
 }

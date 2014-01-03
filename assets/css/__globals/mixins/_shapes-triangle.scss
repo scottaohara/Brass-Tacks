@@ -8,7 +8,7 @@
   display: block;
   height: 0;
   width: 0;
-  
+
   @if ($tri-direction == top) {
     border-color: $tri-color transparent transparent transparent;
     border-top-style: solid;
@@ -29,3 +29,6 @@
     border-right-style: solid;
   }
 }
+
+// Example:
+// @include triangle(5px, #fff, bottom);

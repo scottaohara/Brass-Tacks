@@ -5,48 +5,48 @@
 // ----------------------------------------------------------------------------
 
 // Add a class to the body tag
-.fixed-nav-left {
-  padding-left: $width-fixed-nav; // = width of nav
+.nav-fixed-left {
+  padding-left: $width-nav-fixed; // = width of nav
 
   .side-nav-fixed {
     left: 0;
   }
 
-  .btn-nav {
+  .btn-mobile {
     left: $unit-px2;
     top: $unit-px2;
   }
 }
 
-.fixed-nav-right {
-  padding-right: $width-fixed-nav; // = width of nav
+.nav-fixed-right {
+  padding-right: $width-nav-fixed; // = width of nav
 
   .side-nav-fixed {
     right: 0;
   }
 
-  .btn-nav {
+  .btn-mobile {
     right: $unit-px2;
     top: $unit-px2;
   }
 }
 
-.fixed-nav-top {
-  padding-top: $height-fixed-nav; // = height of nav
+.nav-fixed-top {
+  padding-top: $height-nav-fixed; // = height of nav
 }
 
 
 // Horizontal or Vertical navigations
 .top-nav-fixed {
-  @extend %fixed-nav;
-  height: $height-fixed-nav;
+  @extend %nav-fixed;
+  height: $height-nav-fixed;
 }
 
 .side-nav-fixed {
-  @extend %fixed-nav;
+  @extend %nav-fixed;
   height: 100%;
   overflow-y: auto;
-  width: $width-fixed-nav;
+  width: $width-nav-fixed;
 }
 
 

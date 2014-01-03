@@ -2,6 +2,6 @@
 //  Box Sizing
 // ----------------------------------------------------------------------------
 
-@mixin box-sizing($box-value){
-  @include base-vendor(box-sizing, $box-value); 
+@mixin box-sizing($box-value) {
+  @include vendor-moz-wk(box-sizing, $box-value);
 }

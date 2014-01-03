@@ -2,7 +2,7 @@
 //  Hiding Elements
 // ----------------------------------------------------------------
 
-//  Hides from screenreaders and browsers
+//  Hides from screen readers and browsers
 %hidden {
   display: none!important;
   visibility: hidden;
@@ -14,8 +14,8 @@
 // ----------------------------------------------------------------------------
 
 //  Hide entire elements that you don't want visible
-//  but still need for accesibility / functionality 
-//  -- ie. replacing radio inputs with new custom styled elments
+//  but still need for accessibility / functionality
+//  e.g. replacing radio inputs with new custom styled elements
 %invis {
   border: 0!important;
   height: 1px!important;

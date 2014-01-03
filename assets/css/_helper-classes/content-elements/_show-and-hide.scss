@@ -11,13 +11,21 @@
 
 
 // Hide Elements with display:none
-.d-none, .mobile-show {
+.d-none {
   @extend %d-none;
 }
 
-@media (max-device-width:480px), screen and (max-width:800px) {
-  .mobile-show {
-    display: block;
+@media only screen and (max-width: $break-medium) {
+  .mobile-hide {
+    display: none!important;
+  }
+}
+
+.mobile-show {
+  display: none!important;
+
+  @media only screen and (max-width: $break-medium) {
+    display: block!important;
   }
 }
 

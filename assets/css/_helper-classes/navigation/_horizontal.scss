@@ -8,11 +8,13 @@
 // Edit this file, or extend it / overwrite it in your project
 // scss files to change it's styling.
 
-.h-nav {
+.nav-h {
   @extend %clearfix;
-  
+  @extend %nav-h;
+
   & > li {
     float: left;
+    margin-bottom: 0;
   }
 }
 
@@ -21,10 +23,10 @@
 // <nav class="nav" role="navigation">
 //   <ol class="h-nav">
 //     <li>
-//       <a href="#!" title="#!">Link 1</a> 
+//       <a href="#!" title="#!">Link 1</a>
 //     </li>
 //     <li>
-//       <a href="#!" title="#!">Link 2</a> 
+//       <a href="#!" title="#!">Link 2</a>
 //     </li>
 //    </ol>
 // </nav>
@@ -32,11 +34,12 @@
 
 // To be placed on the <ul> or <ol> -- don't use floats,
 // instead use display inline-block and center navigation links
-.c-nav {
+.nav-c {
+  @extend %nav-h;
   text-align: center;
 
   & > li {
-    display: inline-block;
+    @extend %d-inline-block;
   }
 }
 
@@ -45,13 +48,13 @@
 // <nav class="nav" role="navigation">
 //   <ol class="c-nav">
 //     <li>
-//       <a href="#!" title="#!">Link 1</a> 
+//       <a href="#!" title="#!">Link 1</a>
 //     </li><!--
 //     --><li>
-//       <a href="#!" title="#!">Link 2</a> 
+//       <a href="#!" title="#!">Link 2</a>
 //     </li><!--
 //     --><li>
-//       <a href="#!" title="#!">Link 3</a> 
+//       <a href="#!" title="#!">Link 3</a>
 //     </li>
 //    </ol>
 // </nav>

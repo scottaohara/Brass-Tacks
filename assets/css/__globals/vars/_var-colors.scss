@@ -3,6 +3,7 @@
 // ----------------------------------------------------------------------------
 
 // Darker Colors
+// ----------------------------------------------------------------------------
 $c-black:                 #000;
 $c-off-black:             #0a0a0a;
 $c-darker:                #1a1a1a;
@@ -10,19 +11,20 @@ $c-dark:                  #3a3a3a;
 $c-hell:                  #666;
 
 // Medium Colors
+// ----------------------------------------------------------------------------
 $c-grey:                  #ccc;
 $c-dark-grey:             #999;
 $c-light-grey:            #ddd;
 
 // Lighter Colors
+// ----------------------------------------------------------------------------
+$c-white:                 #fff;
 $c-off-white:             #f0f0f0;
 $c-light:                 #e0e0e0;
 $c-lighter:               #eee;
 
 // Generic Colors
-$c-white:                 #fff;
-$c-black:                 #000;
-
+// ----------------------------------------------------------------------------
 $c-red:                   #a32828;
 $c-green:                 #27ae60;
 $c-blue:                  #66b0e9;
@@ -43,11 +45,25 @@ $c-brand-3:               #0095cc;  // dark cyan
 $c-brand-4:               #525252;  // Darker Grey
 $c-brand-5:               #b6b5b5;  // Light Grey
 
-$c-neg-1:                 #a00;     // btn red
+$c-neg-1:                 #a00;     // red
 $c-neg-2:                 #600;     // dark red
 
 $c-emph-1:                #23d200;  // green
 $c-emph-2:                #178900;  // dark green
+
+
+// ----------------------------------------------------------------------------
+//  Colors: Gradients
+// ----------------------------------------------------------------------------
+
+$g-prime:                 top, $c-brand-1, $c-brand-2;
+$g-prime-hover:           top, $c-brand-2, $c-brand-1;
+
+$g-alert-error:           top, $c-neg-1, $c-neg-2;
+$g-alert-success:         top, $c-emph-1, $c-emph-2;
+
+$g-generic:               top, $c-white, $c-grey;
+$g-generic-hover:         top, $c-grey, $c-white;
 
 
 // ----------------------------------------------------------------------------
@@ -56,19 +72,19 @@ $c-emph-2:                #178900;  // dark green
 
 $c-header:                $c-brand-4;
 
-$c-border:        				$c-grey;
+$c-border:                $c-grey;
 
-$c-link:          				$c-brand-2;
-$c-link-h:        				$c-brand-3;
+$c-link:                  $c-brand-2;
+$c-link-h:                $c-brand-3;
 
-$c-table:         				#fafafa;
-$c-table-head:   					#444;
-$c-table-foot:    				$c-off-white;
-$c-table-striped: 				$c-light;
-$c-table-border:  				$c-border;
+$c-table:                 #fafafa;
+$c-table-head:            #444;
+$c-table-foot:            $c-off-white;
+$c-table-striped:         $c-light;
+$c-table-border:          $c-border;
 
 // sets consistent boarder styling for table elements
-$table-border:    				1px solid $c-border;
+$table-border:            1px solid $c-border;
 
 
 // Code Colors
@@ -79,7 +95,7 @@ $c-css:               $c-magenta;
 $c-html:              $c-green;
 
 
-// Button Colors
+// Social Button Colors
 // ----------------------------------------------------------------------------
 // Facebook Button Colors
 $c-fb-1:            #3a5b98;

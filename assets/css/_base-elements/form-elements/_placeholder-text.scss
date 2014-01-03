@@ -1,19 +1,23 @@
-@if $import-helper-type-alignment == true{
+@if $import-form-placeholder-text == true{
 
 // ----------------------------------------------------------------------------
-//  Alignment
+//  Form Elements: Input Element Placeholder Text Styling
 // ----------------------------------------------------------------------------
 
-.txt-center {
-  text-align: center;
+:-moz-placeholder { // Firefox 18-
+   @extend %placeholder-text;
 }
 
-.txt-left {
-  text-align: left;
+::-moz-placeholder {  // Firefox 19+
+   @extend %placeholder-text;
 }
 
-.txt-right {
-  text-align: right;
+:-ms-input-placeholder {
+   @extend %placeholder-text;
+}
+
+::-webkit-input-placeholder {
+   @extend %placeholder-text;
 }
 
 

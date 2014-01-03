@@ -25,7 +25,7 @@
 .media-no-wrap {
   @extend %media;
   padding-left: 116px;
-  
+
   .media-text {
     float: left;
     width: 100%;
@@ -52,7 +52,7 @@
     width: 100px;
   }
 }
- 
+
 // Example mark-up:
 // ----------------------------------------------------------------------------
 //  <div class="media">
@@ -60,13 +60,13 @@
 //      <img src="img.jpg" alt="" />
 //    </div>
 //    <div class="media-text">
-//      <h1>Title for Meida Element</h1>
+//      <h1>Title for Media Element</h1>
 //      <p>Paragraph text to go along with media element.</p>
 //    </div>
 //  </div>
-  
-// Divs were used in this example, but the media element could be applied to 
-// various situations.  e.g. It could be used for a header or footer area where 
+
+// Divs were used in this example, but the media element could be applied to
+// various situations.  e.g. It could be used for a header or footer area where
 // a logo is placed on the right or left w/text to the side.
 
 

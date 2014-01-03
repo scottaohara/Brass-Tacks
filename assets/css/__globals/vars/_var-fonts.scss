@@ -3,22 +3,23 @@
 // ----------------------------------------------------------------------------
 
 // Base Web Fonts
-$arial:             Arial, "Helvetica Neue", Helvetica, sans-serif;
-$arial-black:       "Arial Black", Gadget, sans-serif;
-$courier:           "Courier New", Courier, monospace;
-$georgia:           Georgia, "Times New Roman", Times, serif;
-$helvetica:         "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-$lucida:            "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-$tahoma:            Tahoma, Geneva, sans-serif;
-$verdana:           Verdana, Geneva, sans-serif;
-$monospace:         monospace, serif;
+$f-arial:           Arial, "Helvetica Neue", Helvetica, sans-serif;
+$f-arial-black:     "Arial Black", Gadget, sans-serif;
+$f-courier:         "Courier New", Courier, monospace;
+$f-georgia:         Georgia, "Times New Roman", Times, serif;
+$f-helvetica:       "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$f-lucida:          "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+$f-tahoma:          Tahoma, Geneva, sans-serif;
+$f-verdana:         Verdana, Geneva, sans-serif;
+$f-monospace:       monospace, serif;
+$f-times:           TimesNewRoman, "Times New Roman", Times, Georgia, serif;
 
-$f-brand:           "Open Sans", $arial;
+$f-brand:           "Open Sans", $f-arial;
 $f-brand-alt:       georgia;
 
 
 // ----------------------------------------------------------------------------
-//  Font Size Declarations 
+//  Font Size Declarations
 // ----------------------------------------------------------------------------
 
 $txt-base:          1em; // 1em = 16px

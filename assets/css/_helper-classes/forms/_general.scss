@@ -21,26 +21,11 @@
   @extend %input-area;
   // see 'more-inputs' for additional styling for specific input elements
 }
-  
+
 
 // Disabled label
 .dis-label {
   cursor: not-allowed;
-}
-
-
-// Inline Form Elements
-.inline-element {
-  display: inline-block;
-  margin-right: $unit-px;
-  width: auto;
-}
-
-.inline-all{
-  // inline all elements inside a container
-  input, textarea, label {
-    @extend .inline-element;
-  }
 }
 
 

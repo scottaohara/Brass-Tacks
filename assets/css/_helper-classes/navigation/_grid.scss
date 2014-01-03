@@ -1,33 +1,29 @@
-@if $import-helper-nav-vertical == true{
+@if $import-helper-nav-grid == true{
 
 // ----------------------------------------------------------------------------
-//  Vertical Navigations
+//  Grid Navigations
 // ----------------------------------------------------------------------------
 
-// to be placed on the <ul> or <ol>
-.nav-v {
-  @extend %nav-v;
-
+// Give an .equal-grid-# navigation styling
+.nav-grid {
   a {
-    border-bottom: 1px solid #ddd;
-    text-decoration: none;
-
-    &:hover, &.active {
-      border-bottom-color: $c-brand-1;
-    }
+    color: $c-dark-grey;
+    font-size: $txt-small;
   }
 }
+
 
 // Example mark-up:
 // ----------------------------------------------------------------------------
 // <nav role="navigation">
-//   <ol class="nav-v">
+//   <ol class="nav-grid equal-grid-#">
 //     <li>
 //       <a href="#!" title="#!">Link 1</a>
 //     </li>
 //     <li>
 //       <a href="#!" title="#!">Link 2</a>
 //     </li>
+//     ...
 //    </ol>
 // </nav>
 

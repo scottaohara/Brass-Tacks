@@ -3,5 +3,5 @@
 // ----------------------------------------------------------------------------
 
 @mixin transition($values) {
-  @include base-vendor(transition, $values);
+  @include vendor-moz-wk(transition, $values);
 }

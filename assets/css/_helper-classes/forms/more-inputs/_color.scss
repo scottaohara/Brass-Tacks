@@ -10,7 +10,6 @@
 
 .input-color {
   @include border-radius($unit-px);
-  @include box-shadow($bs-input-txt);
   background-image: none;
   border: 1px solid $c-grey;
   font-family: $f-brand;
@@ -20,7 +19,7 @@
   width: 100%;
 
   &:focus {
-    @include box-shadow($bs-input-focus);
+    @include box-shadow($bs-focus);
     background: $c-lighter;
     border: 1px solid #50B6D5;
   }

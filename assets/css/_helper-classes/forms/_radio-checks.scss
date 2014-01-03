@@ -27,7 +27,7 @@
 
   &:after{
     @include position(top, -2px, left, 1px, absolute);
-    @include vendor(transform, rotate(-49deg));
+    @include vendor-all(transform, rotate(-49deg));
     border: 5px solid $c-brand-2;
     border-top: none;
     border-right: none;

@@ -10,26 +10,44 @@ blockquote {
   @extend %margin-bottom-base;
   @extend %txt-h6;
   @extend %italic;
+  color: $c-darker;
 
-  &:after,
-  &:before {
-    font: {
-      size: $txt-h5;
-      weight: 400;
-    }; 
-    line-height: 1;
-    position: relative;
-    top: 2px;
+  p {
+    margin-bottom: 0;
+
+    &:after,
+    &:before {
+      font: {
+        family: $f-georgia;
+        size: $txt-h4;
+        weight: 400;
+      };
+      line-height: 0;
+      position: relative;
+      top: 2px;
+    }
+
+    &:after {
+      content: "\201D";
+      right: -1px;
+    }
+
+    &:before {
+      content: "\201C";
+      left: -1px;
+    }
   }
 
-  &:after {
-    content: "\201D";
-    right: -1px;
-  }
+  small {
+    color: $c-dark-grey;
+    font-size: $txt-tiny;
+    font-style: normal;
+    margin-bottom: 0;
+    padding-left: $unit-px3;
 
-  &:before {
-    content: "\201C";
-    left: -1px;
+    &:before {
+      content: "– ";
+    }
   }
 }
 

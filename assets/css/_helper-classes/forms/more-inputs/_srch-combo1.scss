@@ -4,17 +4,17 @@
 //  Input Type: Search Box/Button Combo
 // ----------------------------------------------------------------------------
 
-.search-area{
+.search-area {
   margin-bottom: $unit-px2;
   position: relative;
 
-  .input-area{
+  .input-area {
     margin-bottom: 0;
     padding-right: $unit-px*10;
     width: 75%;
   }
 
-  .btn-search{
+  .btn-search {
     @include position(top, 0, right, 0, absolute);
     height: 100%;
     padding-top: 6px;
