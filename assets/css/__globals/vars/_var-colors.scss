@@ -1,22 +1,23 @@
 // ----------------------------------------------------------------------------
 //  Colors: Generic
+//  Generic color choices influenced by - github.com/mrmrs/colors
 // ----------------------------------------------------------------------------
 
-// Darker Colors
+// Grey Scale (Dark) Colors
 // ----------------------------------------------------------------------------
 $c-black:                 #000;
-$c-off-black:             #0a0a0a;
-$c-darker:                #1a1a1a;
-$c-dark:                  #3a3a3a;
+$c-off-black:             #111;
+$c-darker:                #222;
+$c-dark:                  #333;
 $c-hell:                  #666;
 
-// Medium Colors
+// Grey Scale (Medium) Colors
 // ----------------------------------------------------------------------------
 $c-grey:                  #ccc;
 $c-dark-grey:             #999;
 $c-light-grey:            #ddd;
 
-// Lighter Colors
+// Grey Scale (Lighter) Colors
 // ----------------------------------------------------------------------------
 $c-white:                 #fff;
 $c-off-white:             #f0f0f0;
@@ -25,15 +26,20 @@ $c-lighter:               #eee;
 
 // Generic Colors
 // ----------------------------------------------------------------------------
-$c-red:                   #a32828;
-$c-green:                 #27ae60;
-$c-blue:                  #66b0e9;
+$c-red:                   #ff4136;
+$c-green:                 #2ecc40;
+$c-blue:                  #0074d9;
 
-$c-magenta:               #dd0986;
-$c-yellow:                #faea65;
-$c-orange:                #fd6f29;
-$c-purple:                #9729fd;
-
+$c-magenta:               #f012be;
+$c-yellow:                #ffdc00;
+$c-orange:                #ff851b;
+$c-purple:                #b10dc9;
+$maroon:                  #85144b;
+$aqua:                    #7fdbff;
+$navy:                    #001f3f;
+$teal:                    #39cccc;
+$olive:                   #3d9970;
+$lime:                    #01ff70;
 
 // ----------------------------------------------------------------------------
 //  Colors: Branding

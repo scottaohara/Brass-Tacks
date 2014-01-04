@@ -4,23 +4,23 @@
 
 // All vendor prefixes
 @mixin vendor-all($property, $value...) {
-       -moz-#{$property}:$value;
-        -ms-#{$property}:$value;
-         -o-#{$property}:$value;
-    -webkit-#{$property}:$value;
-            #{$property}:$value;
+       -moz-#{$property}: $value;
+        -ms-#{$property}: $value;
+         -o-#{$property}: $value;
+    -webkit-#{$property}: $value;
+            #{$property}: $value;
 }
 
 // Just -moz- & -webkit- prefixes
 @mixin vendor-moz-wk($property, $value...) {
-      -moz-#{$property}:$value;
-   -webkit-#{$property}:$value;
-           #{$property}:$value;
+      -moz-#{$property}: $value;
+   -webkit-#{$property}: $value;
+           #{$property}: $value;
 }
 
 
 // Only webkit prefixes
 @mixin vendor-wk($property, $value...) {
-   -webkit-#{$property}:$value;
-           #{$property}:$value;
+   -webkit-#{$property}: $value;
+           #{$property}: $value;
 }
