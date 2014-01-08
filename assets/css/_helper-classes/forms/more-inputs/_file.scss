@@ -6,13 +6,13 @@
 
 // The following classes are to be used with the markup at the end of
 // this file.  This styling for file upload inputs currently requires
-// javascript to fully make functional.  It may not be worth it to 
+// JavaScript to fully make functional. It may not be worth it to
 // implement this due to the JS dependency.
 
-.file-input-area {
+.input-file-container {
   position: relative;
 
-  label{
+  label {
     cursor: default;
   }
 }
@@ -26,8 +26,8 @@
   z-index: 9;
 }
 
-.input-file-text {
-  @extend %input-area;
+.input-file-area {
+  @extend %input-text;
   cursor: pointer;
   display: inline-block;
   width: 75%;
@@ -36,12 +36,12 @@
 
 // Example mark-up:
 // ----------------------------------------------------------------------------
-// <div class="file-input-area">
+// <div class="input-file-container">
 //   <input type="file" id="input-file" class="input-file" />
 
 //   <label for="input-file">File Input</label>
 
-//   <span class="input-file-text">
+//   <span class="input-file-area">
 //     <span class="placeholder">Select a file...</span>
 //   </span>
 

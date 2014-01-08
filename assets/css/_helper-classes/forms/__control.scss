@@ -6,11 +6,11 @@
 // to centralize code that may be used across multiple files in this category.
 
 // ----------------------------------------------------------------------------
-//  Placeholders
+//  Silent Classes
 // ----------------------------------------------------------------------------
 
 // Custom inputs & textarea base code
-%input-area {
+%input-text {
   @include border-radius($unit-px);
   background: $c-white;
   border: 1px solid $c-grey;

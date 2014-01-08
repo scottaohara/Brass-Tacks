@@ -3,7 +3,7 @@
   *
   * Brass Tacks
   * by Scott O'Hara - @scottohara - github.com/scottaohara
-  * 0.8.2.1 - January 4, 2013
+  * 0.8.3 - January 7, 2013
   *
   *****************************************************************************
 */
@@ -23,7 +23,7 @@
 // ----------------------------------------------------------------------------
 //  Globals
 //
-//  The global files consist of variables, mixins and placeholders that
+//  The global files consist of variables, mixins and silent classes that
 //  are necessary for the base styling of the framework. These files don't
 //  compile if they are not used, so there is no benefit in setting global
 //  file imports to true or false.
@@ -125,12 +125,14 @@
   // Form Helpers
   $import-helper-forms-general:                 true!default;
   $import-helper-checkbox-radio:                true!default;
-  $import-helper-input-color:                   true!default;
-  $import-helper-input-file:                    true!default;
+  $import-helper-input-color:                   false!default;
+  $import-helper-input-file:                    false!default;
   $import-helper-search-combo:                  true!default;
   $import-helper-search-combo2:                 true!default;
   $import-helper-select:                        true!default;
   $import-helper-select-multi:                  true!default;
+  $import-helper-sizing:                        true!default;
+  $import-helper-validation:                    true!default;
 
 
   // Layout & Table Helpers

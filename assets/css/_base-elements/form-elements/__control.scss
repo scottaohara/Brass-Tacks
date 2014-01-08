@@ -6,7 +6,7 @@
 // to centralize code that may be used across multiple files in this category.
 
 // ----------------------------------------------------------------------------
-//  Placeholders
+//  Silent Classes
 // ----------------------------------------------------------------------------
 
 // Basic reset/normalizing for form elements
@@ -27,11 +27,4 @@
   &[for] {
     cursor: pointer;
   }
-}
-
-
-// Placeholder attribute styling
-%placeholder-text {
-  color: #999;
-  font-style: italic;
 }

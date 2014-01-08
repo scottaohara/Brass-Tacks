@@ -5,24 +5,24 @@
 
 // Grey Scale (Dark) Colors
 // ----------------------------------------------------------------------------
-$c-black:                 #000;
+$c-black:                 #000;     // RGB 0,0,0
 $c-off-black:             #111;
 $c-darker:                #222;
-$c-dark:                  #333;
-$c-hell:                  #666;
+$c-dark:                  #333;     // RGB 51,51,51
+$c-hell:                  #666;     // RGB 102,102,102
 
 // Grey Scale (Medium) Colors
 // ----------------------------------------------------------------------------
-$c-grey:                  #ccc;
-$c-dark-grey:             #999;
-$c-light-grey:            #ddd;
+$c-grey:                  #ccc;       // RGB 204,204,204
+$c-dark-grey:             #999;       // RGB 153,153,153
+$c-light-grey:            #ddd;       // RGB 221,221,221
 
 // Grey Scale (Lighter) Colors
 // ----------------------------------------------------------------------------
-$c-white:                 #fff;
+$c-white:                 #fff;       // RGB 255,255,255
 $c-off-white:             #f0f0f0;
-$c-light:                 #e0e0e0;
-$c-lighter:               #eee;
+$c-light:                 #e0e0e0;    // RGB 224,224,224
+$c-lighter:               #eee;       // RGB 238,238,238
 
 // Generic Colors
 // ----------------------------------------------------------------------------
@@ -40,6 +40,7 @@ $navy:                    #001f3f;
 $teal:                    #39cccc;
 $olive:                   #3d9970;
 $lime:                    #01ff70;
+
 
 // ----------------------------------------------------------------------------
 //  Colors: Branding

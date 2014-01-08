@@ -5,7 +5,7 @@
 // ----------------------------------------------------------------------------
 
 .multi-select {
-  @extend %input-area;
+  @extend %input-text;
 
   option {
     padding: $unit-px 2px;

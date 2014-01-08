@@ -25,7 +25,7 @@
 
   &:after, &:before {
     @extend %burger;
-    content: '';
+    @extend %content-empty;
     position: relative;
   }
 

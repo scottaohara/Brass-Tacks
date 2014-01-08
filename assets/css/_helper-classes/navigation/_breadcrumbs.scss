@@ -9,7 +9,7 @@
     @extend %d-inline-block;
 
     &:last-child:after {
-      content: none;
+      @extend %content-empty;
     }
 
     &:after {

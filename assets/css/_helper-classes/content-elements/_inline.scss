@@ -15,7 +15,7 @@
 .inline-element {
   @extend %d-inline-block;
   margin-right: $unit-px;
-  width: auto;
+  width: auto!important;
 }
 
 

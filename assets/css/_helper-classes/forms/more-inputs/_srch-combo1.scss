@@ -8,10 +8,10 @@
   margin-bottom: $unit-px2;
   position: relative;
 
-  .input-area {
+  .input-text {
+    @include truncate-text(100%);
     margin-bottom: 0;
-    padding-right: $unit-px*10;
-    width: 75%;
+    padding-right: $unit-px*30;
   }
 
   .btn-search {
@@ -21,13 +21,16 @@
   }
 }
 
+.btn-small.btn-search {
+  padding-top: 4px;
+}
 
 // Put a search button inline with search input field via position:absolute
 
 // Example mark-up:
 // ----------------------------------------------------------------------------
 // <div class="search-area">
-//   <input type="search" placeholder="Search for..." class="input-area">
+//   <input type="search" placeholder="Search for..." class="input-text">
 //   <input type="submit" value="Search" class="btn-prime btn-search">
 // </div>
 

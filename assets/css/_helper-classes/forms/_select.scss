@@ -4,22 +4,33 @@
 //  Select Element
 // ----------------------------------------------------------------------------
 
-// Drop Down Selection Inputs
+// Drop Down Selection
 .select-container {
-  @extend %input-area;
-  background: url(../img/drop-arrow.png) no-repeat 99% center $c-white;
-  display: block;
-  overflow: hidden;
+  @extend %input-text;
+  position: relative;
+
+  &:after {
+    @extend %content-empty;
+    background: url(../img/drop-arrow.png) no-repeat;
+    bottom: 0;
+    height: 14px;
+    margin: auto;
+    position: absolute;
+    right: 8px;
+    top: 0;
+    width: 14px;
+  }
 }
 
 .input-select {
+  -webkit-appearance: textarea;
+     -moz-appearance: window;
   background: none;
   border: 0;
   font-family: $f-brand;
+  margin: 0;
   padding: 0 $unit-px4 0 0;
-  position: relative;
-  width: 130%;
-  -webkit-appearance: textarea;
+  z-index: 2;
 }
 
 

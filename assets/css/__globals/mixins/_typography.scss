@@ -16,7 +16,14 @@
 }
 
 
-// Multi-column Text Blocks
+// Placeholder Text Styling
+@mixin placeholder-text($c-text, $f-style) {
+  color: $c-text;
+  font-style: $f-style;
+}
+
+
+// Multi-Column Text Blocks
 @mixin multi-col($cols, $gap, $rule-width, $rule-location, $rule-color) {
   @include vendor-moz-wk(column-count, $cols);
   @include vendor-moz-wk(column-gap, $gap);
@@ -42,6 +49,7 @@
   border-left-color: $c-code-color;
   color: $c-code-color;
 }
+// Example  --  @include code-color(#f00);
 
 
 // Truncate Text

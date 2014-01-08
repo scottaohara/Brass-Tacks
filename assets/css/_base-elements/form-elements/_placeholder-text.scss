@@ -4,20 +4,30 @@
 //  Form Elements: Input Element Placeholder Text Styling
 // ----------------------------------------------------------------------------
 
-:-moz-placeholder { // Firefox 18-
-   @extend %placeholder-text;
-}
-
 ::-moz-placeholder {  // Firefox 19+
-   @extend %placeholder-text;
+  @include placeholder-text($c-dark-grey, italic);
 }
 
 :-ms-input-placeholder {
-   @extend %placeholder-text;
+  @include placeholder-text($c-dark-grey, italic);
 }
 
 ::-webkit-input-placeholder {
-   @extend %placeholder-text;
+  @include placeholder-text($c-dark-grey, italic);
+}
+
+input[required] {
+  &::-moz-placeholder {  // Firefox 19+
+    @include placeholder-text($c-red, italic);
+  }
+
+  &:-ms-input-placeholder {
+    @include placeholder-text($c-red, italic);
+  }
+
+  &::-webkit-input-placeholder {
+    @include placeholder-text($c-red, italic);
+  }
 }
 
 

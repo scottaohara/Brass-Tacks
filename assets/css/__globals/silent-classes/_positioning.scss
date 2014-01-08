@@ -11,3 +11,8 @@
   right: 0;
   top: 0;
 }
+
+// Empty content rule when positioning :before & :after
+%content-empty {
+  content: '';
+}

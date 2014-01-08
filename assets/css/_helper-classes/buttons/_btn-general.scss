@@ -128,14 +128,28 @@
 //  Close Button
 // ----------------------------------------------------------------------------
 
+// Clear button for search inputs
 .btn-clear {
+  @extend %content-empty;
+  @extend %sprite-app;
+  @include position-vertical-center(right, 6px, absolute);
+  background-position: -165px -28px;
+  border: none;
+  height: 66%;
+  width: 24px;
+
+  &:hover {
+    background-position: -165px -1px;
+  }
+}
+
+
+// Close buttons for modal windows
+.btn-close {
   @include border-radius($circle);
-  @include position(top, 17%, right, 6px, absolute);
-  font-family: $f-arial;
-  font-size: $txt-base - .2;
-  font-weight: 600!important;
+  @include position(top, -6px, left, -6px, absolute);
+  min-width: 1px!important;
   padding: 5px 7px;
-  text-indent: 1px;
   text-transform: uppercase;
 }
 

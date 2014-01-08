@@ -10,10 +10,6 @@ input {
   @extend %reset-form-elements;
 }
 
-// Required styling
-input:required {
-  color: $c-red;
-}
 
 // Disabled input styling
 input[disabled] {
@@ -21,15 +17,18 @@ input[disabled] {
   cursor: not-allowed;
 }
 
+
 // Read Only input styling
-input[readonly] {
+input[readonly], input[readonly]:focus {
   background: $c-lighter;
 }
+
 
 // Removes extra inner padding for webkit
 input[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
 }
+
 
 // Makes it look like a normal text input, only with a (x) when text has been entered
 input[type='search'] {

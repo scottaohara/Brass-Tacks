@@ -4,8 +4,8 @@
 //  Input Type: Color
 // ----------------------------------------------------------------------------
 
-// Color is not supported in all browsers, and extending %input-area breaks the
-// default look in webkit so instead we will carry over some of the input-area
+// Color is not supported in all browsers, and extending %input-text breaks the
+// default look in webkit so instead we will carry over some of the input-text
 // styling that doesn't break it in webkit & standardizes it in other browsers
 
 .input-color {

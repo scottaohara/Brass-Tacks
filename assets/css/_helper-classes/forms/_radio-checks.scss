@@ -47,7 +47,7 @@
 }
 
 .crs {
-  @extend %input-area;
+  @extend %input-text;
   @include border-radius(12px);
   display: inline-block;
   height: 28px;

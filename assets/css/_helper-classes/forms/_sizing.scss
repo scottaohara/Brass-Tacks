@@ -1,10 +1,20 @@
-// ----------------------------------------------------------------------------
-//  Table Controller
-// ----------------------------------------------------------------------------
-
-// The main controller file for the table base files. This file exists
-// to centralize code that may be used across multiple files in this category.
+@if $import-helper-sizing == true{
 
 // ----------------------------------------------------------------------------
-//  Silent Classes
+//  Form Input Sizing
+// ----------------------------------------------------------------------------
+
+.input-small {
+  font-size: $txt-small;
+  padding: $unit-px;
+}
+
+.input-large {
+  font-size: $txt-h5;
+  padding: $unit-px2 $unit-px3;
+}
+
+
+// ----------------------------------------------------------------------------
+} // -- end @if --
 // ----------------------------------------------------------------------------

@@ -5,8 +5,8 @@
 // ----------------------------------------------------------------------------
 
 // Kill list styling - removes list markings & padding
-.list-unstyle {
-  @extend %list-unstyle;
+.list-unstyled {
+  @extend %list-unstyled;
 }
 
 
@@ -17,6 +17,7 @@
 
 
 // Inline lists are located in the content-elements > inline.scss file
+
 
 // ----------------------------------------------------------------------------
 } // -- end @if --

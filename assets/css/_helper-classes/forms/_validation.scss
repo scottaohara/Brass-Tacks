@@ -1,10 +1,22 @@
-// ----------------------------------------------------------------------------
-//  Table Controller
-// ----------------------------------------------------------------------------
-
-// The main controller file for the table base files. This file exists
-// to centralize code that may be used across multiple files in this category.
+@if $import-helper-validation == true{
 
 // ----------------------------------------------------------------------------
-//  Silent Classes
+//  Form Validation Indicators
+// ----------------------------------------------------------------------------
+
+.input-success {
+  border: 1px solid $c-green;
+}
+
+.input-warning {
+  border: 1px solid $c-orange;
+}
+
+.input-error {
+  border: 1px solid $c-red;
+}
+
+
+// ----------------------------------------------------------------------------
+} // -- end @if --
 // ----------------------------------------------------------------------------

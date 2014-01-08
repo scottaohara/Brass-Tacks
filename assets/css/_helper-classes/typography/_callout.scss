@@ -4,11 +4,33 @@
 //  Callout Text
 // ----------------------------------------------------------------------------
 
+// Apply bolding to text without need for semantics
+.bold {
+  @extend %bold;
+}
+
+
+// Text Coloring for Validation Messaging
+.txt-success {
+  color: $c-green;
+}
+
+.txt-warning {
+  color: $c-orange;
+}
+
+.txt-error {
+  color: $c-red;
+}
+
+
 // Shout Out - blockquote / blockquote like styling for emphasizing text
 .txt-callout {
-  @extend %txt-h5;
+  @include box-shadow($bs-callout);
   background: $c-lighter;
-  border-left: $unit-px solid $c-dark;
+  border-left: $unit-px solid $c-brand-2;
+  color: $c-brand-2;
+  font-size: $txt-h5;
   padding: $unit-px4;
 
   &:after,
@@ -21,7 +43,7 @@
 // Background Text Highlight
 .txt-highlight {
   @include border-radius($unit-px);
-  background: $c-yellow;
+  background: $c-red;
   color: $c-white;
   display: inline-block;
   padding: $unit-px;
@@ -56,4 +78,3 @@
 // ----------------------------------------------------------------------------
 } // -- end @if --
 // ----------------------------------------------------------------------------
-

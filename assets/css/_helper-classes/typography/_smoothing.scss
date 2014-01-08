@@ -5,7 +5,7 @@
 // ----------------------------------------------------------------------------
 
 .antialiased {
-  @extend %antialiased;
+  @include vendor-wk(font-smoothing, antialiased);
 }
 
 // Antialiased font smoothing works best for light text on dark backgrounds.
@@ -16,4 +16,3 @@
 // ----------------------------------------------------------------------------
 } // -- end @if --
 // ----------------------------------------------------------------------------
-
