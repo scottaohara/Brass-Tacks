@@ -2,6 +2,13 @@
 //  Transition
 // ----------------------------------------------------------------------------
 
+// Generic Transitions
 @mixin transition($values) {
-  @include vendor-moz-wk(transition, $values);
+  @include vendor(transition, $values, $o: false, $ms: false);
+}
+
+
+// Generic Transforms
+@mixin transform($values){
+  @include vendor(transform, $values);
 }

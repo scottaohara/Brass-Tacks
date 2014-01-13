@@ -1,0 +1,33 @@
+// ----------------------------------------------------------------------------
+//  Calc()
+//
+//  Supported in
+//  IE9+ w/out prefix
+//  IE10 mobile w/out prefix
+//  -moz- 4-15 w/prefix, 16+ w/out
+//  chrome 19-25 w/prefix, 25+ w/out
+//  safari 6.0 w/prefix, 6.1+ w/out
+//  safari mobile 6.0+6.1 w/prefix, 7.0+ w/out
+// ----------------------------------------------------------------------------
+
+@mixin calc($property, $calc) {
+  #{$property}:    -moz-calc(#{$calc});
+  #{$property}: -webkit-calc(#{$calc});
+  #{$property}:         calc(#{$calc});
+}
+
+// Example:
+// @include calc(left, '100% - 222px');
+
+
+// Issues with calc():  -- via: http://caniuse.com/#search=calc
+//
+// • Internet Explorer (in accordance with the spec) does not accept
+//   calculations without spaces for additions/subtractions
+//   (ie. calc(100%-30px) is invalid, but calc(100% - 30px) works fine)
+//
+// • Chrome does not support viewport units in calc() expressions
+//
+// • calc() does not work within translate/translateX on IE 11:
+//   http://jsfiddle.net/Y5x93/ It does work in Firefox 25+ and
+//   Chrome 31+ with the -webkit- prefix

@@ -2,25 +2,27 @@
 //  Vendor Prefix
 // ----------------------------------------------------------------
 
-// All vendor prefixes
-@mixin vendor-all($property, $value...) {
-       -moz-#{$property}: $value;
-        -ms-#{$property}: $value;
-         -o-#{$property}: $value;
-    -webkit-#{$property}: $value;
-            #{$property}: $value;
+@mixin vendor($property, $value, $moz: true, $ms: true, $o: true, $webkit: true) {
+  @if $moz    == true  {    -moz-#{$property}: $value; }
+  @if $ms     == true  {     -ms-#{$property}: $value; }
+  @if $o      == true  {      -o-#{$property}: $value; }
+  @if $webkit == true  { -webkit-#{$property}: $value; }
+                                 #{$property}: $value;
 }
 
-// Just -moz- & -webkit- prefixes
-@mixin vendor-moz-wk($property, $value...) {
-      -moz-#{$property}: $value;
-   -webkit-#{$property}: $value;
-           #{$property}: $value;
-}
+// Example:
+// @include vendor (transition, .2s, $o: false);
 
+// By default, the vendor mixin sets all vendor prefixes to true,
+// simply set any variable prefix to false if it is not needed
+// for a particular rule.
 
-// Only webkit prefixes
-@mixin vendor-wk($property, $value...) {
-   -webkit-#{$property}: $value;
-           #{$property}: $value;
-}
+// Better yet, @include this mixin into easier to remember mixins,
+//
+// like:
+// @mixin box-sizing($box-value) {
+//   @include vendor(box-sizing, $box-value, $o: false, $ms: false);
+// }
+//
+// so one only has to write @include box-sizing(border-box); and not
+// have to worry about setting values to false.

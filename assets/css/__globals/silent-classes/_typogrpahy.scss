@@ -32,3 +32,33 @@
 %txt-small    {font-size: $txt-small;   font-weight: 300;}
 %txt-tiny     {font-size: $txt-tiny;    font-weight: 300;}
 %txt-mini     {font-size: $txt-mini;    font-weight: 300;}
+
+
+// ----------------------------------------------------------------------------
+//  Bold & Italic
+// ----------------------------------------------------------------------------
+
+%bold   { font-weight: bold;   }
+
+%bolder { font-weight: bolder; }
+
+%normal { font-weight: normal; }
+
+%italic { font-style: italic;  }
+
+
+// ----------------------------------------------------------------------------
+//  :after Symbols
+// ----------------------------------------------------------------------------
+
+%degree {
+  &:after {
+    content: "\00BA";  // Creates degree symbol
+  }
+}
+
+%go {
+  &:after {
+    content: "\00A0" "\00BB";  // >> (use on link / btn)
+  }
+}

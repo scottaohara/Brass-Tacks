@@ -52,7 +52,7 @@
 
 // Background Text Highlight - Skewed
 .txt-slant {
-  @include vendor-all(transform, skewX(-16deg));
+  @include transform(skewX(-16deg));
 }
 
 // Example mark-up:
@@ -63,7 +63,7 @@
 
 
 .txt-correct {
-  @include vendor-all(transform, skewX(16deg));
+  @include transform(skewX(16deg));
   display: inline-block;
   padding: 0 $unit-px;
 }

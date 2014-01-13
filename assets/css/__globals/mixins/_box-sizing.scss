@@ -3,5 +3,5 @@
 // ----------------------------------------------------------------------------
 
 @mixin box-sizing($box-value) {
-  @include vendor-moz-wk(box-sizing, $box-value);
+  @include vendor(box-sizing, $box-value, $o: false, $ms: false);
 }

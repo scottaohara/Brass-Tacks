@@ -1,12 +1,87 @@
 // ----------------------------------------------------------------------------
 //  Global Imports
 // ----------------------------------------------------------------------------
+//
+// Import various mixins, silent classes and variables used throughout the
+// Brass Framework. Some of these may be used quite frequently, and others
+// not at all.
+//
+// ----------------------------------------------------------------------------
+//  Variables
+// ----------------------------------------------------------------------------
 
-@import 'global-vars';                        // Global Variables
-@import 'global-mixins';                      // Global Mixins
-@import 'global-silent-classes';              // Global Silent Classes
+@import 'vars/var-break-points';
+@import 'vars/var-colors';
+@import 'vars/var-fonts';
+@import 'vars/var-measurement-units';
+@import 'vars/var-shadows';
 
 
+// ----------------------------------------------------------------
+//  Mixins
+// ----------------------------------------------------------------
+
+// Experimental Vendor Prefixing
+@import 'mixins/vendor';
+
+
+// Animation
+@import 'mixins/animation';
+@import 'mixins/transition-transform';
+
+
+// Typography
+@import 'mixins/typography';
+
+
+// Layout & Spacing
+@import 'mixins/box-sizing';
+@import 'mixins/flex';
+@import 'mixins/position';
+@import 'mixins/last-child-m0';
+@import 'mixins/layout';
+
+
+// CSS Shapes
+@import 'mixins/border-radius';
+@import 'mixins/shapes-blocks';
+@import 'mixins/shapes-triangle';
+
+
+// Design
+@import 'mixins/box-shadow';
+@import 'mixins/gradients';
+
+
+// Media Elements
+@import 'mixins/retina';
+
+
+// Messaging Units
+@import 'mixins/messaging';
+
+
+// ----------------------------------------------------------------------------
+//  Silent Classes
+// ----------------------------------------------------------------------------
+
+// Resets
+@import 'silent-classes/resets';
+
+
+// Type & Images
+@import 'silent-classes/typogrpahy';
+@import 'silent-classes/sprites';
+
+
+// Multi-Purpose
+@import 'silent-classes/hiding-elements';
+@import 'silent-classes/clearfixes';
+@import 'silent-classes/margins';
+@import 'silent-classes/displays';
+@import 'silent-classes/positioning';
+
+
+// ----------------------------------------------------------------------------
 // The global-print and quick-fix files are imported at the bottom of the
-// master.scss file, as they need to be inserted at the bottom of the
-// compiled style sheet.
+// master scss file, as they need to be inserted at the bottom of the cascade.

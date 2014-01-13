@@ -25,15 +25,15 @@
 
 // Multi-Column Text Blocks
 @mixin multi-col($cols, $gap, $rule-width, $rule-location, $rule-color) {
-  @include vendor-moz-wk(column-count, $cols);
-  @include vendor-moz-wk(column-gap, $gap);
-  @include vendor-moz-wk(column-rule, $rule-width $rule-location $rule-color);
+  @include vendor(column-count, $cols, $o: false, $ms: false);
+  @include vendor(column-gap, $gap, $o: false, $ms: false);
+  @include vendor(column-rule, $rule-width $rule-location $rule-color, $o: false, $ms: false);
 }
 
 
 // Anti-aliasing Text
 @mixin antialiased {
-  @include vendor-wk(font-smoothing, antialiased);
+  @include vendor(font-smoothing, antialiased, $o: false, $ms: false, $moz: false);
 }
 
 

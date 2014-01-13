@@ -131,7 +131,7 @@
 // Clear button for search inputs
 .btn-clear {
   @extend %content-empty;
-  @extend %sprite-app;
+  @extend %sprite;
   @include position-vertical-center(right, 6px, absolute);
   background-position: -165px -28px;
   border: none;
