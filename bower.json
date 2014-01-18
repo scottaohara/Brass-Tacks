@@ -1,0 +1,8 @@
+{
+  "name": "Brass Tacks",
+  "version": "0.8.4",
+  "main": "brass-tacks.css",
+  "description": "CSS framework built with Sass",
+  //"license": "MIT",
+  "author": "Scott O'Hara"
+}
