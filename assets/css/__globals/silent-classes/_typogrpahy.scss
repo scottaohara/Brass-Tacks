@@ -16,22 +16,22 @@
 //  Font Sizes & Weights
 // ----------------------------------------------------------------------------
 
-%txt-xxlarge  {font-size: $txt-xxlarge; font-weight: 700;}
-%txt-xlarge   {font-size: $txt-xlarge;  font-weight: 600;}
-%txt-large    {font-size: $txt-large;   font-weight: 300;}
+%txt-xxlarge  { font-size: $txt-xxlarge; font-weight: 700; }
+%txt-xlarge   { font-size: $txt-xlarge;  font-weight: 600; }
+%txt-large    { font-size: $txt-large;   font-weight: 300; }
 
-%txt-h1       {font-size: $txt-h1;      font-weight: 400;}
-%txt-h2       {font-size: $txt-h2;      font-weight: 400;}
-%txt-h3       {font-size: $txt-h3;      font-weight: 400;}
-%txt-h4       {font-size: $txt-h4;      font-weight: 300;}
-%txt-h5       {font-size: $txt-h5;      font-weight: 300;}
-%txt-h6       {font-size: $txt-h6;      font-weight: 300;}
+%txt-h1       { font-size: $txt-h1;      font-weight: 400; }
+%txt-h2       { font-size: $txt-h2;      font-weight: 400; }
+%txt-h3       { font-size: $txt-h3;      font-weight: 400; }
+%txt-h4       { font-size: $txt-h4;      font-weight: 300; }
+%txt-h5       { font-size: $txt-h5;      font-weight: 300; }
+%txt-h6       { font-size: $txt-h6;      font-weight: 300; }
 
-%txt-base     {font-size: $txt-base;    font-weight: 300;}
+%txt-base     { font-size: $txt-base;    font-weight: 300; }
 
-%txt-small    {font-size: $txt-small;   font-weight: 300;}
-%txt-tiny     {font-size: $txt-tiny;    font-weight: 300;}
-%txt-mini     {font-size: $txt-mini;    font-weight: 300;}
+%txt-small    { font-size: $txt-small;   font-weight: 300; }
+%txt-tiny     { font-size: $txt-tiny;    font-weight: 300; }
+%txt-mini     { font-size: $txt-mini;    font-weight: 300; }
 
 
 // ----------------------------------------------------------------------------
@@ -45,6 +45,16 @@
 %normal { font-weight: normal; }
 
 %italic { font-style: italic;  }
+
+
+// ----------------------------------------------------------------------------
+//  Style to indicate hover content
+// ----------------------------------------------------------------------------
+
+%title-attribute {
+  border-bottom: 1px dotted $c-grey;
+  cursor: help;
+}
 
 
 // ----------------------------------------------------------------------------

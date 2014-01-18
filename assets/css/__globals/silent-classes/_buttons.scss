@@ -2,13 +2,6 @@
 //  Buttons
 // ----------------------------------------------------------------------------
 
-// The main controller file for the button helper files. This file exists
-// to centralize code that may be used across multiple files in this category.
-
-// ----------------------------------------------------------------------------
-//  Silent Classes
-// ----------------------------------------------------------------------------
-
 // General Buttons
 %btn {
   @include border-radius($unit-px2);

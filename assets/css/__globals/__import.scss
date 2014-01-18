@@ -75,11 +75,19 @@
 
 
 // Multi-Purpose
-@import 'silent-classes/hiding-elements';
 @import 'silent-classes/clearfixes';
-@import 'silent-classes/margins';
 @import 'silent-classes/displays';
-@import 'silent-classes/positioning';
+
+
+// Content & Interactive Elements
+@import 'silent-classes/buttons';
+@import 'silent-classes/content-elements';
+@import 'silent-classes/forms';
+@import 'silent-classes/navigation';
+
+
+// Grid/layout, Positioning and spacing (margins)
+@import 'silent-classes/grids-positions-margins';
 
 
 // ----------------------------------------------------------------------------

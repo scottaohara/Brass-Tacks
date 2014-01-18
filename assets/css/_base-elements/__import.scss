@@ -11,7 +11,6 @@
 
 
 // Default Typographical Element Styling
-@import 'typography/__control';
   @import 'typography/text-selection';      // Text Selection Styling
   @import 'typography/headings';            // Heading Elements
   @import 'typography/paragraphs';          // Paragraph Element
@@ -35,7 +34,6 @@
 
 
 // Default Media Element Styling
-@import 'media-elements/__control';         // Vars & Silent Classes
   @import 'media-elements/img-svg';         // Img & svg
   @import 'media-elements/fig-figcaption';  // Figure & figcaption
   @import 'media-elements/audio';           // Audio
@@ -44,7 +42,6 @@
 
 
 // Default Form Element Styling
-@import 'form-elements/__control';          // Vars & Silent Classes
   @import 'form-elements/parent-elements';  // Form, fieldset
   @import 'form-elements/inputs';           // Inputs
   @import 'form-elements/placeholder-text'; // Placeholder Styling
@@ -56,14 +53,12 @@
 
 
 // Default Table Element Styling
-@import 'table-elements/__control';         // Vars & Silent Classes
   @import 'table-elements/row-parents';     // Table, tbody, tfoot, thead
   @import 'table-elements/rows-cols';       // Col, colgroup, tr, td, th
   @import 'table-elements/caption';         // Caption
 
 
 // Progress / Meter Elements
-@import 'prog-meter-elements/__control';    // Vars & Silent Classes
   @import 'prog-meter-elements/progress';   // HTML5 Progress Bar
   @import 'prog-meter-elements/meter';      // HTML5 Meter bar
 

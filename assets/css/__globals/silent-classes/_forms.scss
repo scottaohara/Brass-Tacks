@@ -1,12 +1,30 @@
 // ----------------------------------------------------------------------------
-//  Form Elements Controller
+//  General Form Elements
 // ----------------------------------------------------------------------------
 
-// The main controller file for the form helper files. This file exists
-// to centralize code that may be used across multiple files in this category.
+// Basic reset / normalizing for form elements
+%reset-form-elements {
+  @extend %reset-spacing;
+  font-size: 100%;
+  font-weight: 400;
+  line-height: 1.25;
+  text-transform: none;
+}
+
+
+// Base label styling for use with element & class to mimic element
+%label {
+  display: inline-block;
+  margin-bottom: $unit-px;
+
+  &[for] {
+    cursor: pointer;
+  }
+}
+
 
 // ----------------------------------------------------------------------------
-//  Silent Classes
+//  Inputs
 // ----------------------------------------------------------------------------
 
 // Custom inputs & textarea base code

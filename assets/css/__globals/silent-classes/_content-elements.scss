@@ -1,12 +1,25 @@
 // ----------------------------------------------------------------------------
-//  Messaging Controller
+//  Media Object
 // ----------------------------------------------------------------------------
 
-// The main controller file for the messaging helper files. This file exists
-// to centralize code that may be used across multiple files in this category.
+%media {
+  @extend %clearfix;
+  margin-bottom: $unit-em*2;
+
+  .media-text >:last-child {
+    margin-bottom: 0;
+  }
+
+  .media-object {
+    float: left;
+    margin: 0 $unit-px4 $unit-px2 0;
+    max-width: $media-object-area;
+  }
+}
+
 
 // ----------------------------------------------------------------------------
-//  Silent Classes
+//  Messaging Blocks
 // ----------------------------------------------------------------------------
 
 // Messaging Banners
@@ -19,7 +32,10 @@
 }
 
 
-// Tool Tips / Hover Description
+// ----------------------------------------------------------------------------
+//  Tool Tips
+// ----------------------------------------------------------------------------
+
 %tool-tip {
   //  extend this rule into the a [data-tooltip] selector
   cursor: help;

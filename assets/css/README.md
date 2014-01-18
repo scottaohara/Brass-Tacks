@@ -17,11 +17,8 @@ For instance, in the __globals folder, all mixins, silent classes and vars are
 collected in their designated folders.
 
 In the _base-elements folder, basic HTML elements are grouped by family into
-folders, with a __control.scss file containing any additional vars or silent
-classes that are only useful to that subset of files.
-
-All of these files are then collected via their main __import.scss and pulled
-into:
+folders. All of these files are then collected via their main __import.scss
+and pulled into:
 
 * master.scss
 * project.scss (or whatever you name this file.)

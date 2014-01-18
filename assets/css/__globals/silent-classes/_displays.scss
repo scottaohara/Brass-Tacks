@@ -1,6 +1,6 @@
-// ----------------------------------------------------------------
-//  Displays
-// ----------------------------------------------------------------
+// ----------------------------------------------------------------------------
+//  Show Elements
+// ----------------------------------------------------------------------------
 
 %d-block {
   display: block;
@@ -14,6 +14,43 @@
   display: inline;
 }
 
+
+// ----------------------------------------------------------------------------
+//  Hide Elements
+// ----------------------------------------------------------------------------
+
 %d-none {
   display: none;
+}
+
+
+//  Hides from screen readers and browsers
+%hidden {
+  display: none!important;
+  visibility: hidden;
+}
+
+
+// ----------------------------------------------------------------------------
+//  Hide from browsers but NOT from screen readers
+// ----------------------------------------------------------------------------
+
+//  Hide entire elements that you don't want visible
+//  but still need for accessibility / functionality
+//  e.g. replacing radio inputs with new custom styled elements
+%invis {
+  border: 0!important;
+  height: 1px!important;
+  left: -999999px!important;
+  overflow: hidden!important;
+  position: absolute!important;
+  width: 1px!important;
+}
+
+// Hide text that you don't want visible
+// like on submit buttons that use an icon instead of text
+%hide-text {
+  color: transparent;
+  font: 0/0 a;
+  text-shadow: none;
 }

@@ -3,15 +3,13 @@
 // ----------------------------------------------------------------------------
 
 // Content Element
-@import 'content-elements/__control';       // Controller (empty)
-  @import 'content-elements/emphasis';      // Give visual emphasis to elments
+  @import 'content-elements/emphasis';      // Give visual emphasis to elements
   @import 'content-elements/show-and-hide'; // Show, hide and mute elements
   @import 'content-elements/media-element'; // Media/text combo elements
   @import 'content-elements/inline';        // Inline elements
 
 
 // Layout & Tables
-@import 'layout-and-tables/__control';       // Layout Controller
   @import 'layout-and-tables/dividers';      // Divider lines
   @import 'layout-and-tables/floats-clears'; // Floating/clearing
   @import 'layout-and-tables/grid-layout';   // Grid layout
@@ -19,7 +17,6 @@
 
 
 // Forms
-@import 'forms/__control';                  // Form Controller
   @import 'forms/general';                  // General form helper classes
   @import 'forms/radio-checks';             // Radio & checkboxes
   @import 'forms/select';                   // Select area
@@ -33,20 +30,17 @@
 
 
 // Messaging
-@import 'messaging/__control';              // Messaging Controller
   @import 'messaging/messaging';            // Messaging banners
   @import 'messaging/tooltips';             // Tooltip hovers
   @import 'messaging/loading';              // Progress bars / spinners
 
 
 // Button
-@import 'buttons/__control';                // Button Controller
   @import 'buttons/btn-general';            // General buttons
   @import 'buttons/btn-social';             // Social buttons
 
 
 // Typography
-@import 'typography/__control';             // Typography Controller
   @import 'typography/align';               // Alignment classes
   @import 'typography/callout';             // Callout text styling
   @import 'typography/lists';               // Styling for lists
@@ -56,7 +50,6 @@
 
 
 // Navigation
-@import 'navigation/__control';             // Nav Controller
   @import 'navigation/breadcrumbs';         // Breadcrumb classes
   @import 'navigation/drop-menu';           // Drop menu classes
   @import 'navigation/horizontal';          // Horizontal navigation
