@@ -1,13 +1,8 @@
 # Brass Tacks
-###(Last updated: 0.8.3.2 - January. 18, 2014)
+###(Last updated: 0.9.0 - January. 20, 2014)
 
 Brass Tacks is (will be) a professional front-end HTML5 and SCSS framework that incorporates and
 standardizes many widely used HTML and CSS elements.
-
-Brass Tacks was officially started in mid-2013, but really is based on the evolution of my
-coding style over many years. I have learned a lot from other developers in my field, and
-continue to do so on a daily basis. Those developers, as well as my own experiences have
-significantly steered the path of Brass Tacks' development.
 
 Once Brass Tacks reaches the 1.0 release, there will be a full listing of thank yous to the
 many people who's work has influenced this framework.
@@ -16,30 +11,101 @@ As of version 0.8.0, much of the code from previous releases has been significan
 Until a final 1.0 stamp can be put on the code, there won't be a 'live' version of the framework
 available for viewing.
 
-Look to this area (or other readme files) for extended documentation and best practices.
+
+
+## Setting up your dev environment
+
+Install SASS: http://sass-lang.com/install
+
+Install Node.js: http://nodejs.org
+
+Install Gulp Globally: $ npm install gulp -g
+
+Install Gulp for your project: $ npm install gulp --save-dev
+
+Install Gulp plugins for Brass Tacks:
+
+$ npm install gulp-ruby-sass gulp-minify-css gulp-imagemin gulp-clean gulp-rename event-stream gulp-livereload tiny-lr --save-dev
+
+
+
+## Building your dev environment
+
+Enter <code>gulp</code> in the terminal to run all gulp tasks.
+
+Enter <code>gulp watch</code> to fire of tasks on change to Sass, images or JavaScript.
+
+
+<hr />
 
 
 ## Brass Tacks Specifics
 
-* HTML5 ready building and general styling
-* Built for modern browsers & IE9+ with some legacy browser fall backs.
-* Google Analytics placeholder
-* HTML5shiv via CDN
-* Various HTML ready-to-use snippets
+* HTML5 ready
+* Built for modern browsers & IE9+ with some legacy browser fall backs
+* JavaScript light: only comes with a Google Analytics placeholder & HTML5shiv via CDN
+* Various HTML Demos & snippets
 * CSS base, helper and project files
-* Hand-picked, edited & original mixins / silent classes
-* Extensive inline and accompanying documentation (partially complete -- as in barely any at all yet -- this WILL exist by v 1.0)
+* Sass Mixin, Silent Class and Variable libraries
+* Extensive inline and accompanying documentation (this WILL exist by v 1.0)
+
+
+### Sass Specifics
+
+Brass Tacks' Sass files are split up into four base folders to help
+keep the code organized and easy to find.
+
+* __globals
+* _base-elements
+* _helper-classes
+* _project-specific
+
+Each folder contains an '__import.scss' file to compile and arrange
+all of the sub-files in each folder. This means there is only one file per
+folder type to import into master.scss.
+
+E.g. The __globals folder contains all mixins, placeholders and vars that are used
+across the entire framework.
+
+All the individual folders' import files collect into either:
+
+* master.scss
+* project.scss (or whatever you name this file.)
+
+Finally, by running gulp, these files are compiled to expanded and minified CSS
+files and exported to the build/assets/css folder.
+
+
+#### Customizing Brass Tacks
+
+All the base and helper files in Brass Tacks are wrapped in conditional @if statements.
+
+Customizing the CSS output is as simple as setting variables to True or False in the
+master.scss file.
+
 
 <hr />
 
-Even though Brass Tacks isn't finished, there is plenty here that 'could' be used for a project now.
-So go ahead and fork, download and use what's available in your project. I'd love to get any feedback on the framework that you may have!
 
-<hr />
+### About
+
+Brass Tacks was officially started in mid-2013, but really is based on the evolution of my
+coding style over many years. I have learned a lot from other developers in my field, and
+continue to do so on a daily basis. Those developers, as well as my own experiences have
+significantly steered the path of Brass Tacks' development.
+
+Even though Brass Tacks isn't 'finished', it's pretty darn close to prime time.
+So go ahead and fork, download and use what's available in your project now.
+I'd love to get any feedback on the framework that you may have!
+
+And if you do end up using Brass Tacks, please let me know.
+I'd love to feature your work here.
 
 
-I've already used earlier versions of Brass Tacks on websites I've built for freelance clients, as
-well as in other open source collaborations.
+#### In the Wild
+
+I've already used earlier versions of Brass Tacks on websites I've built
+for freelance clients, as well as in other open source collaborations.
 
 * November 11, 2013     - www.ghop.me - version 0.7.3.1
 

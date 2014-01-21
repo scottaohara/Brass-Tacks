@@ -17,6 +17,6 @@
   padding: $unit-px5;
 }
 
-@import 'header';   // Project Specific Header Styling
-@import 'main';     // Project Specific Main Content Area Styling
-@import 'footer';   // Project Specific Footer Styling
+@import '_import/header';   // Project Specific Header Styling
+@import '_import/main';     // Project Specific Main Content Area Styling
+@import '_import/footer';   // Project Specific Footer Styling
