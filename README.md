@@ -25,7 +25,7 @@ Install Gulp for your project: <code>$ npm install gulp --save-dev</code>
 
 Install Gulp plugins for Brass Tacks:
 
-<code>$ npm install gulp-ruby-sass gulp-minify-css gulp-imagemin gulp-clean gulp-rename event-stream gulp-livereload tiny-lr --save-dev</code>
+<code>$ npm install gulp-ruby-sass gulp-minify-css gulp-imagemin gulp-clean gulp-rename event-stream --save-dev</code>
 
 
 
