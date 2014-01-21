@@ -19,13 +19,13 @@ Install SASS: http://sass-lang.com/install
 
 Install Node.js: http://nodejs.org
 
-Install Gulp Globally: $ npm install gulp -g
+Install Gulp Globally: <code>$ npm install gulp -g</code>(may require sudo)
 
-Install Gulp for your project: $ npm install gulp --save-dev
+Install Gulp for your project: <code>$ npm install gulp --save-dev</code>
 
 Install Gulp plugins for Brass Tacks:
 
-$ npm install gulp-ruby-sass gulp-minify-css gulp-imagemin gulp-clean gulp-rename event-stream gulp-livereload tiny-lr --save-dev
+<code>$ npm install gulp-ruby-sass gulp-minify-css gulp-imagemin gulp-clean gulp-rename event-stream gulp-livereload tiny-lr --save-dev</code>
 
 
 
