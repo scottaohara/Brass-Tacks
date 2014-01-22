@@ -74,7 +74,6 @@ gulp.task('images', function() {
   return gulp.src('./_develop/img/**/*')
     .pipe((imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
     .pipe(gulp.dest('./build/assets/img'))
-    //.pipe(livereload(server))
 });
 
 
