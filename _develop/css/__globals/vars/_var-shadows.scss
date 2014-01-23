@@ -2,13 +2,13 @@
 //  Box Shadow Variations
 // ----------------------------------------------------------------------------
 
-$bs-1:                0 0 6px rgba(0,0,0,.25);
-$bs-2:                $bs-1 inset;
-$bs-3:                $bs-1, $bs-1 inset;
-$bs-4:                0 0 6px rgba(0,200,222,.25);
-$bs-5:                0 0 3px rgba(0,0,0,.15) inset;
+$bs-1:                    0 0 6px rgba(0,0,0,.25);
+$bs-2:                    $bs-1 inset;
+$bs-3:                    $bs-1, $bs-1 inset;
+$bs-4:                    0 0 6px rgba(0,200,222,.25);
+$bs-5:                    0 0 3px rgba(0,0,0,.15) inset;
 
-$bs-focus:            0 0 6px rgba(66,166,166,.65);
+$bs-focus:                0 0 6px rgba(66,166,166,.65);
 
 $bs-callout:              0 0 3px rgba(0,0,0,.15) inset;
 
@@ -18,6 +18,8 @@ $bs-input-focus:          0 0 6px rgba(64,181,187,.65);
 $bs-input-focus-success:  0 0 6px rgba(39,174,96,.65);
 $bs-input-focus-warning:  0 0 6px rgba(253,111,41,.65);
 $bs-input-focus-error:    0 0 6px rgba(163,40,40,.65);
+
+
 
 // ----------------------------------------------------------------------------
 //  Text Shadow Variations

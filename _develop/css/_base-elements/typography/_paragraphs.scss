@@ -6,6 +6,7 @@
 
 p {
   @extend %margin-bottom-base;
+  margin-top: 0;
 }
 
 // Silent classes are used so elements can be easily

@@ -1,18 +1,15 @@
 @if $import-helper-emphasis == true{
 
 // ----------------------------------------------------------------------------
-//  Emphasis Helpers
+//  Emphasis Block
 // ----------------------------------------------------------------------------
 
 .emph-block {
+  @extend %emph-shared;
   @include border-radius($unit-px);
   @include box-shadow($bs-4);
-  @include last-child-0();
-  background: $c-off-white;
+  background-color: $c-off-white;
   border: 1px solid $c-light-grey;
-  margin-bottom: $unit-px4;
-  min-height: 50px;
-  padding: $unit-px4;
 }
 
 // Example mark-up
@@ -22,14 +19,53 @@
 // </div>
 
 
-// Give pictures a frame
-.frame {
-  border: 1px solid $c-dark;
+
+// Transparent Emphasis Block
+// For use when needing to place an emphasis block in a columned layout,
+// & need to have consistent typography / content base without the background
+// or bordering of the block.
+
+.emph-transparent {
+  @extend %emph-shared;
+}
+
+// Example mark-up
+// ----------------------------------------------------------------------------
+// <div class="emph-transparent">
+//  ...
+// </div>
+
+
+
+// A smaller emphasis block
+
+.emph-small {
+  padding: $unit-px2
+}
+
+// Example mark-up
+// ----------------------------------------------------------------------------
+// <div class="emph-block emph-small">
+//  ...
+// </div>
+
+
+
+// ----------------------------------------------------------------------------
+//  Emphasis Block
+// ----------------------------------------------------------------------------
+
+.emph-img {
+  @include border-radius($unit-px2);
+  @include box-shadow($bs-4);
+  border: 1px solid $c-dark-grey;
   display: inline-block;
+  overflow: hidden;
 
   img {
-    border: 4px solid $c-off-white;
+    border: 3px solid $c-off-white;
     display: block;
+    width: 100%;
   }
 }
 
@@ -39,20 +75,6 @@
 //   <img src="..." alt="..." />
 // </div>
 
-
-// Profile picture
-.pic {
-  @include border-radius($unit-px2);
-  @include box-shadow($bs-4);
-  border: 1px solid $c-off-white;
-  display: inline-block;
-  overflow: hidden;
-
-  img {
-    display: block;
-    width: 100%;
-  }
-}
 
 
 // ----------------------------------------------------------------------------

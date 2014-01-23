@@ -1,8 +1,0 @@
-{
-  "name": "Brass Tacks",
-  "version": "0.9.0",
-  "main": "build/assets/css/master.css",
-  "description": "Super neat CSS framework built with Sass",
-  "license": "use it how you like. or whatever",
-  "author": "Scott O'Hara"
-}

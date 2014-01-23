@@ -6,10 +6,10 @@
 
 @media print{
   * {
-    background: transparent!important;
-    color: #000!important; // Black prints faster
-    box-shadow: none!important;
-    text-shadow: none!important;
+    background: transparent !important;
+    color: #000 !important; // Black prints faster
+    box-shadow: none !important;
+    text-shadow: none !important;
   }
 
   a, a:visited {
@@ -39,7 +39,7 @@
   }
 
   img {
-    max-width: 100%!important;
+    max-width: 100% !important;
   }
 
   @page {
@@ -55,6 +55,7 @@
     page-break-after: avoid;
   }
 }
+
 
 // ----------------------------------------------------------------------------
 } // -- end @if --

@@ -8,16 +8,22 @@
   padding: 0;
 }
 
+
+
 // Reset default border styling
 %reset-border {
   border: 0;
   outline: 0;
 }
 
+
+
 // Reset default outline styling
 %outline-none {
   outline: 0;
 }
+
+
 
 // Reset default list styling
 %list-unstyled {
@@ -26,10 +32,12 @@
 }
 
 
+
 // Normalize margins on list elements
 %list-elements-margin {
   margin: 0 0 $unit-px4;
 }
+
 
 
 // Normalize Media Elements

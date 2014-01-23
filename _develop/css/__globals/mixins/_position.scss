@@ -26,7 +26,9 @@
 }
 
 // Example:
+// ----------------------------------------------------------------------------
 // @include position(bottom, 10px, left, 333px, fixed);
+
 
 
 @mixin position-vertical-center($l-or-r, $lr-unit, $position) {
@@ -46,4 +48,5 @@
 }
 
 // Example:
+// ----------------------------------------------------------------------------
 // @include position(left, 333px, absolute);

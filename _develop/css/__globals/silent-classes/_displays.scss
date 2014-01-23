@@ -15,6 +15,7 @@
 }
 
 
+
 // ----------------------------------------------------------------------------
 //  Hide Elements
 // ----------------------------------------------------------------------------
@@ -24,11 +25,13 @@
 }
 
 
+
 //  Hides from screen readers and browsers
 %hidden {
-  display: none!important;
+  display: none !important;
   visibility: hidden;
 }
+
 
 
 // ----------------------------------------------------------------------------
@@ -39,13 +42,15 @@
 //  but still need for accessibility / functionality
 //  e.g. replacing radio inputs with new custom styled elements
 %invis {
-  border: 0!important;
-  height: 1px!important;
-  left: -999999px!important;
-  overflow: hidden!important;
-  position: absolute!important;
-  width: 1px!important;
+  border: 0 !important;
+  height: 1px !important;
+  left: -999999px !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  width: 1px !important;
 }
+
+
 
 // Hide text that you don't want visible
 // like on submit buttons that use an icon instead of text

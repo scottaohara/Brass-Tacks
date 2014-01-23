@@ -3,7 +3,7 @@
   *
   * Brass Tacks
   * by Scott O'Hara - @scottohara - github.com/scottaohara
-  * 0.9.0.2 - January 21, 2013
+  * 0.9.0.3 - January 22, 2013
   *
   *****************************************************************************
 */
@@ -13,11 +13,14 @@
 // in the Import Controllers below.
 // ----------------------------------------------------------------------------
 
+
+
 // ----------------------------------------------------------------------------
 //  Import Font(s)
 // ----------------------------------------------------------------------------
 
   @import url(//fonts.googleapis.com/css?family=Open+Sans:300,400,700,700italic,600,400italic,300italic,600italic);
+
 
 
 // ----------------------------------------------------------------------------
@@ -31,6 +34,7 @@
 
   // Import Library
   @import '__globals/__import';               // Includes global libraries
+
 
 
 // ----------------------------------------------------------------------------
@@ -60,19 +64,23 @@
   $import-text-selection:                       true!default;
 
 
+
   // Progress / Meter Elements
   $import-meter-element:                        false!default;
   $import-progress-element:                     false!default;
+
 
 
   // Nav Element
   $import-nav-element:                          true!default;
 
 
+
   // Table Elements
   $import-table-captions:                       false!default;
   $import-table-parents:                        true!default;
   $import-table-rows-cols:                      true!default;
+
 
 
   // Form Elements
@@ -86,6 +94,7 @@
   $import-form-textarea:                        true!default;
 
 
+
   // Media Elements
   $import-media-audio:                          true!default;
   $import-media-embed-object:                   true!default;
@@ -94,16 +103,20 @@
   $import-media-video:                          true!default;
 
 
+
   // Template Element
   $import-template-element:                     false!default;
+
 
 
   // HR Element
   $import-hr-element:                           true!default;
 
 
+
   // Import Library
   @import '_base-elements/__import';            // Imports above set to True
+
 
 
 // ----------------------------------------------------------------------------
@@ -115,11 +128,13 @@
   $import-helper-btn-social:                    true!default;
 
 
+
   // Content Element Helpers
   $import-helper-emphasis:                      true!default;
   $import-helper-inline:                        true!default;
   $import-helper-media-element:                 true!default;
   $import-helper-show-hide:                     true!default;
+
 
 
   // Form Helpers
@@ -135,6 +150,7 @@
   $import-helper-validation:                    true!default;
 
 
+
   // Layout & Table Helpers
   $import-helper-table:                         true!default;
   $import-helper-dividers:                      true!default;
@@ -142,10 +158,12 @@
   $import-helper-grids:                         true!default;
 
 
+
   // Messaging Helpers
   $import-helper-loading:                       false!default;
   $import-helper-messaging:                     true!default;
   $import-helper-tooltip:                       true!default;
+
 
 
   // Nav Helpers
@@ -158,8 +176,10 @@
   $import-helper-nav-vertical:                  true!default;
 
 
+
   // Shapes
   $import-helper-shapes:                        false!default;
+
 
 
   // Typography Helpers
@@ -171,8 +191,10 @@
   $import-helper-type-smoothing:                true!default;
 
 
+
   // Import Library
   @import '_helper-classes/__import';           // Imports above set to True
+
 
 
 // ----------------------------------------------------------------------------
@@ -183,13 +205,16 @@
   $import-global-print:                         true!default;
 
 
+
   // Quick-Fix Styling **
   $import-global-quick-fix:                     false!default;
+
 
 
   // Import Library
   @import '__globals/global-print';             // Print styles
   @import '__globals/quick-fix';                // **
+
 
 
 // ** Quick Fix

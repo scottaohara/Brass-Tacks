@@ -9,6 +9,7 @@
   text-shadow:  $txt-shadow;
 }
 
+
 // Include this into elements to have text selection colors be specific to region
 @mixin select-text($select-bg, $txt-color, $txt-shadow) {
   ::-moz-selection  { @include select-text-default($select-bg, $txt-color, $txt-shadow); }
@@ -16,11 +17,13 @@
 }
 
 
+
 // Placeholder Text Styling
 @mixin placeholder-text($c-text, $f-style) {
   color: $c-text;
   font-style: $f-style;
 }
+
 
 
 // Multi-Column Text Blocks
@@ -31,10 +34,12 @@
 }
 
 
+
 // Anti-aliasing Text
 @mixin antialiased {
   @include vendor(font-smoothing, antialiased, $o: false, $ms: false, $moz: false);
 }
+
 
 
 // Code Bordering
@@ -44,12 +49,17 @@
 }
 
 
+
 // Code Coloring
 @mixin code-color($c-code-color) {
   border-left-color: $c-code-color;
   color: $c-code-color;
 }
-// Example  --  @include code-color(#f00);
+
+// Example:
+// ----------------------------------------------------------------------------
+// @include code-color(#f00);
+
 
 
 // Truncate Text
@@ -60,4 +70,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-// Example  --  @include truncate-text(100%);
+
+// Example
+// ----------------------------------------------------------------------------
+// @include truncate-text(100%);
