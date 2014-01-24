@@ -4,13 +4,67 @@
 //  Media Element
 // ----------------------------------------------------------------------------
 
-// Media Item
-.media{
+// Standard Media Element
+.media {
   @extend %media;
 }
 
 
-// Have media element appear on the right hand side
+
+// Titles in media elements may require slightly different typography styling
+// to long-form content areas. These are helper classes to make titles to
+// reduce the spacing between titles, subtitles and additional text / elements
+// inside of a media element.
+.media-title,
+.media-subtitle {
+  line-height: 1.3;
+  margin-bottom: $unit-px;
+}
+
+
+
+// Inside the text area for the media element, make sure the final
+// element has a margin-bottom of zero so as not to add increase the
+// margin-bottom of the main media element.
+.media-text >:last-child {
+  margin-bottom: 0;
+}
+
+
+
+// the .media-object contains the photo, illustration, video,
+// icon / avatar or other like media item.
+.media-object {
+  float: left;
+  margin: 0 $unit-px4 $unit-px2 0;
+  max-width: $media-object-area;  // default 30% max-width
+}
+
+
+// Example mark-up:
+// ----------------------------------------------------------------------------
+//  <div class="media">
+//    <div class="media-object">
+//      <img src="img.jpg" alt="" />
+//    </div>
+//    <div class="media-text">
+//      <h1 class="media-title">Title for Media Element</h1>
+//      <p class="media-subtitle">sub title</p>
+//      <p>Paragraph text to go along with media element.</p>
+//    </div>
+//  </div>
+
+// Divs were used in this example, but the media element could be applied to
+// various situations. e.g. It could be used for a header or footer area where
+// a logo is placed on the right or left w/text to the side.
+
+
+
+// ----------------------------------------------------------------------------
+//  Media Element Customization
+// ----------------------------------------------------------------------------
+
+// Have media object appear on the right side w/ text on the left
 .media-reverse {
   @extend %media;
 
@@ -21,54 +75,62 @@
 }
 
 
-// No text-wrap around media object
+
+// Media Element that prevents text-wrapping around the media object
+// ** Helper class, use in addition to .media or .media-reverse **
 .media-no-wrap {
-  @extend %media;
-  padding-left: 116px;
 
   .media-text {
     float: left;
-    width: 100%;
+    width: 70%;
   }
 
   .media-object {
-    margin-left: -116px;
-    width: 100px;
+    @include calc(max-width, '30% - 16px');
   }
 }
 
 
-// Reverse side of the media object w/ no text-wrap
-.media-no-wrap-reverse {
-  @extend .media-reverse;
-  padding-right: 116px;
+
+.media-no-wrap-split {
 
   .media-text {
-    width: 100%;
+    float: left;
+    width: 50%;
   }
 
   .media-object {
-    margin-right: -116px;
-    width: 100px;
+    @include calc(max-width, '50% - 16px');
   }
 }
 
-// Example mark-up:
-// ----------------------------------------------------------------------------
-//  <div class="media">
-//    <div class="media-object">
-//      <img src="img.jpg" alt="" />
-//    </div>
-//    <div class="media-text">
-//      <h1>Title for Media Element</h1>
-//      <p>Paragraph text to go along with media element.</p>
-//    </div>
-//  </div>
 
-// Divs were used in this example, but the media element could be applied to
-// various situations.  e.g. It could be used for a header or footer area where
-// a logo is placed on the right or left w/text to the side.
 
+.media-no-wrap-fourth {
+
+  .media-text {
+    float: left;
+    width: 75%;
+  }
+
+  .media-object {
+    @include calc(max-width, '25% - 16px');
+  }
+}
+
+
+
+.media-no-wrap-opposite {
+
+  .media-text {
+    float: left;
+    width: 30%;
+  }
+
+  .media-object {
+    @include calc(max-width, '70% - 16px');
+  }
+}
 
 // ----------------------------------------------------------------------------
 } // -- end @if --

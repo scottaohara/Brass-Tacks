@@ -18,6 +18,12 @@
 
 // Example:
 // @include calc(left, '100% - 222px');
+//
+// The main problem with this is that sass doesn't allow for the combination
+// of different unit values, so the math needs to be passed into the $calc
+// variable as a string. Due to this, sass variables can't be used within
+// the string, as they won't translate to their values, so only hard
+// values can be used with this mixin.
 
 
 // Issues with calc():  -- via: http://caniuse.com/#search=calc

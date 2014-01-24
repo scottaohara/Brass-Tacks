@@ -4,17 +4,7 @@
 
 %media {
   @extend %clearfix;
-  margin-bottom: $unit-em*2;
-
-  .media-text >:last-child {
-    margin-bottom: 0;
-  }
-
-  .media-object {
-    float: left;
-    margin: 0 $unit-px4 $unit-px2 0;
-    max-width: $media-object-area;
-  }
+  margin-bottom: $unit-em * 2;
 }
 
 
