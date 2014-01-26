@@ -11,14 +11,14 @@
   //
   // edit this class, or create a new one if you want to change the value
   // or location of the padding
-}
 
 
-
-// Place the burger nav icon/button to the right or left
-.btn-mobile {
-  @include nav-mobile-btn($x: $unit-px2, $y: $unit-px2);
-  // Default setting is top / right
+  // Place the burger nav icon/button to the right or left,
+  // only applies if within a .nav-fixed-area
+  .btn-mobile {
+    @include nav-mobile-btn($x: $unit-px2, $y: $unit-px2);
+    // Default setting is top / right
+  }
 }
 
 
