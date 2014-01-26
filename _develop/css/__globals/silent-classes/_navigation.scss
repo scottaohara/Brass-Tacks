@@ -2,47 +2,27 @@
 //  Navigation
 // ----------------------------------------------------------------------------
 
-// Basic styling for vertical navigation styles
-%nav-v {
+// shared rules between nav-h & nav-v
+%nav {
+
   a {
     display: block;
-    padding: $unit-px;
-    position: relative;
+    padding: $unit-px2;
   }
 }
-
-
 
 // Basic styling for horizontal navigation styles
 %nav-h {
   a {
     border-right: 1px solid $c-dark-grey;
-    padding: 0 $unit-px3;
+  }
+
+  & > li {
+    margin-bottom: 0;
   }
 
   li:last-child a{
     border-right: 0;
-  }
-}
-
-
-
-// Fixed navigation
-%nav-fixed {
-  background: $c-dark;
-  position: fixed;
-  top: 0;
-  z-index: 1000;
-
-  a {
-    color: $c-white;
-
-    &:hover,
-    &:visited {
-      background: rgba(0,0,0,.6);
-      color: $c-white;
-      text-decoration: none;
-    }
   }
 }
 

@@ -4,50 +4,45 @@
 //  Fixed Position Sidebar Nav
 // ----------------------------------------------------------------------------
 
-// Add a class to the body tag
-.nav-fixed-left {
-  padding-left: $width-nav-fixed; // = width of nav
+.nav-fixed-area {
+  @include nav-fixed-area();
+  // Default setting is top fixed nav, with a padding-top: 40px added to the
+  // body to place the nav into.
+  //
+  // edit this class, or create a new one if you want to change the value
+  // or location of the padding
+}
 
-  .side-nav-fixed {
-    left: 0;
+
+
+// Place the burger nav icon/button to the right or left
+.btn-mobile {
+  @include nav-mobile-btn($x: $unit-px2, $y: $unit-px2);
+  // Default setting is top / right
+}
+
+
+
+// Horizontal or Vertical fixed navigations
+// default to top/left horizontal nav w/no overflow
+.nav-fixed {
+  @include nav-fixed($f-height: $height-nav-fixed, $f-width: 100%);
+  background: $c-dark;
+  line-height: $height-nav-fixed;
+
+  a {
+    color: $c-white;
+    display: block;
+
+    &:hover,
+    &:visited {
+      background: rgba(0,0,0,.6);
+      color: $c-white;
+      text-decoration: none;
+    }
   }
-
-  .btn-mobile {
-    left: $unit-px2;
-    top: $unit-px2;
-  }
 }
 
-.nav-fixed-right {
-  padding-right: $width-nav-fixed; // = width of nav
-
-  .side-nav-fixed {
-    right: 0;
-  }
-
-  .btn-mobile {
-    right: $unit-px2;
-    top: $unit-px2;
-  }
-}
-
-.nav-fixed-top {
-  padding-top: $height-nav-fixed; // = height of nav
-}
-
-
-// Horizontal or Vertical navigations
-.top-nav-fixed {
-  @extend %nav-fixed;
-  height: $height-nav-fixed;
-}
-
-.side-nav-fixed {
-  @extend %nav-fixed;
-  height: 100%;
-  overflow-y: auto;
-  width: $width-nav-fixed;
-}
 
 
 // ----------------------------------------------------------------------------

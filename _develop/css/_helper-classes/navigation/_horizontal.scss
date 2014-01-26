@@ -10,11 +10,11 @@
 
 .nav-h {
   @extend %clearfix;
+  @extend %nav;
   @extend %nav-h;
 
   & > li {
     float: left;
-    margin-bottom: 0;
   }
 }
 
@@ -32,9 +32,11 @@
 // </nav>
 
 
+
 // To be placed on the <ul> or <ol> -- don't use floats,
 // instead use display inline-block and center navigation links
 .nav-c {
+  @extend %nav;
   @extend %nav-h;
   text-align: center;
 

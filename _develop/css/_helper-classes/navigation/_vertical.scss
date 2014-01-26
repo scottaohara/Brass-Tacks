@@ -6,10 +6,11 @@
 
 // to be placed on the <ul> or <ol>
 .nav-v {
-  @extend %nav-v;
+  @extend %nav;
 
   a {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid $c-dark-grey;
+    position: relative;
     text-decoration: none;
 
     &:hover, &.active {

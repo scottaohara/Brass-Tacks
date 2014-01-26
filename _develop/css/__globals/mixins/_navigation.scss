@@ -1,0 +1,80 @@
+// ----------------------------------------------------------------------------
+//  Navigation
+// ----------------------------------------------------------------------------
+
+// Fixed Navigation:
+// ----------------------------------------------------------------------------
+
+// Add padding to body tag
+@mixin nav-fixed-area($position: top, $padding-area: 40px) {
+  @if $position == bottom {
+    padding-bottom: $padding-area;
+  }
+
+  @else if $position == left {
+    padding-left: $padding-area;
+  }
+
+  @else if $position == right {
+    padding-right: $padding-area;
+  }
+
+  @else if $position == top {
+    padding-top: $padding-area;
+  }
+}
+
+
+
+// Positioning the nav element
+@mixin nav-fixed($t-or-b: top, $l-or-r: left, $f-height, $f-width, $overflow: false {
+  height: $f-height;
+  position: fixed;
+  width: $f-width;
+  z-index: 1000;
+
+  // Declare top or bottom
+  @if $t-or-b == bottom {
+    bottom: 0;
+  }
+
+  @else if $t-or-b == top {
+    top: 0;
+  }
+
+  // Declare left or right
+  @if $l-or-r == left {
+    left: 0;
+  }
+
+  @else if $l-or-r == right {
+    right: 0;
+  }
+
+  @if $overflow == true {
+    overflow-y: auto;
+  }
+}
+
+
+
+// Mobile nav button placement
+@mixin nav-mobile-btn($t-or-b: top, $l-or-r: right, $y, $x) {
+  // Declare top or bottom
+  @if $t-or-b == bottom {
+    bottom: $y;
+  }
+
+  @else if $t-or-b == top {
+    top: $y;
+  }
+
+  // Declare left or right
+  @if $l-or-r == left {
+    left: $x;
+  }
+
+  @else if $l-or-r == right {
+    right: $x;
+  }
+}
