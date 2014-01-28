@@ -1,8 +1,48 @@
-@if $import-helper-show-hide == true{
+@if $import-helper-displays == true{
 
 // ----------------------------------------------------------------------------
-//  Showing & Hiding
+//  Display Element Classes
 // ----------------------------------------------------------------------------
+
+// Convert to inline
+.inline-element {
+  @extend %d-inline;
+  margin: 0 !important;
+  width: auto !important;
+}
+
+// Inline-block Individual Elements
+.inline-block-element {
+  @extend %d-inline-block;
+  margin-right: $unit-px;
+  width: auto !important;
+}
+
+
+// Inline items with a list element
+.inline-list {
+  margin-bottom: $unit-px4;
+
+  > li {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-right: $unit-px;
+    vertical-align: middle;
+
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+}
+
+
+// inline all elements within a parent
+.inline-all{
+  > * {
+    @extend .inline-block-element;
+  }
+}
+
 
 // Show Elements with display:block
 .d-block {
@@ -17,15 +57,15 @@
 
 @media only screen and (max-width: $break-medium) {
   .mobile-hide {
-    display: none!important;
+    display: none !important;
   }
 }
 
 .mobile-show {
-  display: none!important;
+  display: none !important;
 
   @media only screen and (max-width: $break-medium) {
-    display: block!important;
+    display: block !important;
   }
 }
 
@@ -35,7 +75,7 @@
   opacity: .75;
 }
 
-.mute-more {
+.mute-half {
   opacity: .5;
 }
 
