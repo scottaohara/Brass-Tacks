@@ -3,7 +3,7 @@
   *
   * Brass Tacks
   * by Scott O'Hara - @scottohara - github.com/scottaohara
-  * 0.9.0.6 - January 28, 2013
+  * 0.9.0.7 - February 2, 2013
   *
   *****************************************************************************
 */
@@ -49,12 +49,10 @@
   $import-bold-italic-elements:                 true!default;
   $import-cite-element:                         true!default;
   $import-code-elements:                        true!default;
-  $import-def-list-elements:                    true!default;
   $import-details-summary-elements:             true!default;
   $import-dfn-element:                          true!default;
   $import-headings-element:                     true!default;
   $import-ins-element:                          true!default;
-  $import-list-elements:                        true!default;
   $import-mark-element:                         true!default;
   $import-paragraph-element:                    true!default;
   $import-pre-element:                          true!default;
@@ -71,7 +69,10 @@
 
 
 
-  // Nav Element
+  // Nav, Menu & List Elements
+  $import-def-list-elements:                    true!default;
+  $import-list-elements:                        true!default;
+  $import-menu-element:                         true!default;
   $import-nav-element:                          true!default;
 
 
@@ -133,6 +134,7 @@
   $import-helper-emphasis:                      true!default;
   $import-helper-displays:                      true!default;
   $import-helper-media-element:                 true!default;
+  $import-helper-flip-effect:                   true!default;
 
 
 

@@ -12,13 +12,13 @@
 html, body {
   @extend %reset-spacing;
   @extend %font-size-lh;
-  background: $c-white;
+  @extend %text-size-adjust;
+  @extend %text-optimize-legibility;
+  background: $c-off-white;
   color: $c-dark;
   font-family: $f-brand;
   font-weight: 300;
   height: 100%;
-      -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
 }
 
 
@@ -32,6 +32,9 @@ article, aside, canvas, footer, header, main, section {
 [hidden] {
   @extend %d-none;
 }
+
+
+// ----------------------------------------------------------------------------
 
 // Silent classes are used so elements can be easily
 // broken out into modular files.

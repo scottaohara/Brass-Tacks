@@ -1,0 +1,25 @@
+// ----------------------------------------------------------------------------
+//  Stylize Scrollbars
+//  http://codepen.io/HugoGiraudel/details/KFDuB
+// ----------------------------------------------------------------------------
+
+@mixin scrollbar($size, $c-main, $c-secondary: lighten($c-main, 25%)) {
+  ::-webkit-scrollbar {
+    height: $size;
+    width: $size;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $c-main;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: $c-secondary;
+  }
+
+  // For Internet Explorer
+  body {
+    scrollbar-face-color: $c-main;
+    scrollbar-track-color: $c-secondary;
+  }
+}

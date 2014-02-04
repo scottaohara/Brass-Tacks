@@ -33,3 +33,34 @@
 // Example:
 // ----------------------------------------------------------------------------
 // @include triangle(5px, #fff, bottom);
+
+
+
+
+// ALTERNATE:
+// @mixin triangle($direction, $size: 8px, $color: #222){
+//   content: '';
+//   display: block;
+//   position: absolute;
+//   height: 0; width: 0;
+//   @if ($direction == 'up'){
+//     border-bottom: $size solid $color;
+//     border-left: $size solid transparent;
+//     border-right: $size solid transparent;
+//   }
+//   @else if ($direction == 'down'){
+//     border-top: $size solid $color;
+//     border-left: $size solid transparent;
+//     border-right: $size solid transparent;
+//   }
+//   @else if ($direction == 'left'){
+//     border-top: $size solid transparent;
+//     border-bottom: $size solid transparent;
+//     border-right: $size solid $color;
+//   }
+//   @else if ($direction == 'right'){
+//     border-top: $size solid transparent;
+//     border-bottom: $size solid transparent;
+//     border-left: $size solid $color;
+//   }
+// }

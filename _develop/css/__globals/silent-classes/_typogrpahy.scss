@@ -1,5 +1,5 @@
 // ----------------------------------------------------------------------------
-//  Rendering Type
+//  Line-height & Font Sizing
 // ----------------------------------------------------------------------------
 
 %font-size-lh {
@@ -11,6 +11,30 @@
   line-height: 1;
 }
 
+
+
+// ----------------------------------------------------------------------------
+//  Text Rendering
+// ----------------------------------------------------------------------------
+
+%text-size-adjust {
+     -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  // Prevents iOS text size adjust after orientation change,
+  // without disabling user zoom
+  // www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+}
+
+
+%text-optimize-legibility {
+  text-rendering: optimizeLegibility;
+}
+
+
+%text-optmize-speed {
+  text-rendering: optimizeSpeed;
+}
 
 
 // ----------------------------------------------------------------------------
@@ -51,7 +75,7 @@
 
 
 // ----------------------------------------------------------------------------
-//  Style to indicate hover content
+//  Style to indicate hover help content
 // ----------------------------------------------------------------------------
 
 %title-attribute {
