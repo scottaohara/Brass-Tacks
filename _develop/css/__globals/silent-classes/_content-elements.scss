@@ -23,16 +23,13 @@
 
 
 // ----------------------------------------------------------------------------
-//  Messaging Blocks
+//  Circled
 // ----------------------------------------------------------------------------
 
-// Messaging Banners
-%close-message {
+// make a content element into a circle w/ no overflow.
+%circle {
   @include border-radius($circle);
-  @include position(top, -$unit-em*.5, right, -$unit-em*.5, absolute);
-  border: 1px solid;
-  padding: $unit-px $unit-px3;
-  text-decoration: none;
+  overflow: hidden;
 }
 
 

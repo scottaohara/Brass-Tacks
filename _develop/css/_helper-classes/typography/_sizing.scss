@@ -1,40 +1,71 @@
-@if $import-helper-type-sizing == true{
-
 // ----------------------------------------------------------------------------
 //  Font Sizing Classes
+//
+//  Disable any classes that are not needed via the master.scss file.
+//
+//  Since these classes all pull from their silent classes counterpart,
+//  we always have access to the set font sizes, even if a single class
+//  is not required.
+//
 // ----------------------------------------------------------------------------
 
-// Extra Large Font Classes
-.txt-xxlarge  { @extend %txt-xxlarge; }
-.txt-xlarge   { @extend %txt-xlarge;  }
-.txt-large    { @extend %txt-large;   }
 
 
-// Heading Sized Font Classes
-.txt-h1       { @extend %txt-h1; }
-.txt-h2       { @extend %txt-h2; }
-.txt-h3       { @extend %txt-h3; }
-.txt-h4       { @extend %txt-h4; }
-.txt-h5       { @extend %txt-h5; }
-.txt-h6       { @extend %txt-h6; }
+
+// ----------------------------------------------------------------------------
+//  Super Large Fonts
+// ----------------------------------------------------------------------------
+
+@if $import-helper-type-sizing--xlarge == true {
+
+  .txt-xxlarge  { @extend %txt-xxlarge; }
+  .txt-xlarge   { @extend %txt-xlarge;  }
+  .txt-large    { @extend %txt-large;   }
+
+} // -- end @if --
 
 
-// Normal Sized Font
+
+
+// ----------------------------------------------------------------------------
+//  Heading Sized Font Classes
+// ----------------------------------------------------------------------------
+
+@if $import-helper-type-sizing--headings == true {
+
+  .txt-h1       { @extend %txt-h1; }
+  .txt-h2       { @extend %txt-h2; }
+  .txt-h3       { @extend %txt-h3; }
+  .txt-h4       { @extend %txt-h4; }
+  .txt-h5       { @extend %txt-h5; }
+  .txt-h6       { @extend %txt-h6; }
+
+} // -- end @if --
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Normal Sized Font Class
+// ----------------------------------------------------------------------------
+
+@if $import-helper-type-sizing--base == true {
+
 .txt-base     { @extend %txt-base; } // 1em = 16px
 
+} // -- end @if --
 
-// Small Font Classes
+
+
+
+// ----------------------------------------------------------------------------
+//  Small Sized Font Classes
+// ----------------------------------------------------------------------------
+
+@if $import-helper-type-sizing--small == true {
+
 .txt-small    { @extend %txt-small; }
 .txt-tiny     { @extend %txt-tiny; }
 .txt-mini     { @extend %txt-mini; }
 
-
-// If some of these classes are not needed, just disable the class.
-// Since these classes all pull from silent classes, we still have access
-// to the pre-made font-sizes without need for the individual classes to
-// be compiled.
-
-
-// ----------------------------------------------------------------------------
 } // -- end @if --
-// ----------------------------------------------------------------------------

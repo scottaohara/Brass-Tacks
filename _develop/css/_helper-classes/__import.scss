@@ -42,11 +42,10 @@
 
 // Typography
   @import 'typography/align';               // Alignment classes
-  @import 'typography/callout';             // Callout text styling
+  @import 'typography/callouts';            // Callout text styling
   @import 'typography/lists';               // Styling for lists
   @import 'typography/sizing';              // Font sizing classes
-  @import 'typography/smoothing';           // Font smoothing classes
-  @import 'typography/height-and-indents';  // Line height and text indenting
+  @import 'typography/readability';         // Readability modifiers
 
 
 // Navigation
@@ -57,7 +56,3 @@
   @import 'navigation/fixed';               // Fixed position navigation
   @import 'navigation/mobile';
   @import 'navigation/grid';                // Nav Grid
-
-
-// Shapes
-@import 'shapes/shapes';                    // CSS shapes

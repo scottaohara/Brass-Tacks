@@ -10,7 +10,6 @@
 }
 
 .message-container {
-  @include border-radius($unit-px);
   @include transition(all .3s linear);
   border: 1px solid;
   margin-bottom: $unit-em;
@@ -42,7 +41,11 @@
 }
 
 .close-message {
-  @extend %close-message;
+  @extend %circle;
+  @include position(top, -$unit-em*.5, right, -$unit-em*.5, absolute);
+  border: 1px solid;
+  padding: $unit-px $unit-px3;
+  text-decoration: none;
 }
 
 

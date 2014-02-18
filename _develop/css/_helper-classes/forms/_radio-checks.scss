@@ -8,24 +8,24 @@
 .cr-area {
   position: relative;
 
-  :checked + .cb:after {
+  :checked + .cr:after {
     opacity: 1;
   }
 
-  :focus + .cb {
-    @include box-shadow($bs-4);
+  :focus + .cr {
+    @include box-shadow($bs-input-focus);
   }
 }
 
 
 // Checkbox (CSS only) Styling
-.cb-css {
+.cb-active {
   @extend %custom-check;
   @include border-radius(2px);
   @include linear-gradient($c-light-grey, top, $c-white, $c-grey);
   border: 1px solid $c-dark-grey;
 
-  &:after{
+  &:after {
     @include position(top, -2px, left, 1px, absolute);
     @include transform(rotate(-49deg));
     border: 5px solid $c-brand-2;
@@ -33,6 +33,21 @@
     border-right: none;
     height: 10px;
     width: 20px;
+  }
+}
+
+.radio-active {
+  @extend %custom-check;
+  @include border-radius($circle);
+  @include linear-gradient($c-light-grey, top, $c-white, $c-grey);
+  border: 1px solid $c-dark-grey;
+
+  &:after {
+    @extend %position-center;
+    @include border-radius($circle);
+    background: $c-brand-1;
+    height: 6px;
+    width: 6px;
   }
 }
 

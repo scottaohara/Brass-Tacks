@@ -7,6 +7,7 @@
 // Full container for the entire page.
 .page {}
 
+
 // Generic tag to wrap around content within sections to apply a max width
 // to the interior content while allowing for larger sections to expand
 // the whole page for BG styling purposes
@@ -17,6 +18,11 @@
   padding: $unit-px5;
 }
 
-@import '_import/header';   // Project Specific Header Styling
-@import '_import/main';     // Project Specific Main Content Area Styling
-@import '_import/footer';   // Project Specific Footer Styling
+// ----------------------------------------------------------------------------
+//  Project Specific Components
+// ----------------------------------------------------------------------------
+
+@import '_import/header';   // Header Styling
+@import '_import/nav';      // Nav Styling
+@import '_import/main';     // Main Content Area Styling
+@import '_import/footer';   // Footer Styling

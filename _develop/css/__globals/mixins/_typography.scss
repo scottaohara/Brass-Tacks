@@ -2,18 +2,19 @@
 //  Typography
 // ----------------------------------------------------------------
 
-// Custom Text Selection Styling
-@mixin select-text-default($select-bg, $txt-color, $txt-shadow) {
-  background:   $select-bg;
-  color:        $txt-color;
-  text-shadow:  $txt-shadow;
-}
-
-
 // Include this into elements to have text selection colors be specific to region
 @mixin select-text($select-bg, $txt-color, $txt-shadow) {
-  ::-moz-selection  { @include select-text-default($select-bg, $txt-color, $txt-shadow); }
-  ::selection       { @include select-text-default($select-bg, $txt-color, $txt-shadow); }
+  ::-moz-selection  {
+    background:   $select-bg;
+    color:        $txt-color;
+    text-shadow:  $txt-shadow;
+  }
+
+  ::selection       {
+    background:   $select-bg;
+    color:        $txt-color;
+    text-shadow:  $txt-shadow;
+  }
 }
 
 

@@ -178,18 +178,26 @@
 
 
 
-  // Shapes
-  $import-helper-shapes:                        false!default;
-
-
-
   // Typography Helpers
   $import-helper-type-alignment:                true!default;
-  $import-helper-type-callouts:                 true!default;
+  $import-helper-type-callouts--block:          true!default;
+  $import-helper-type-callouts--messaging:      true!default;
+  $import-helper-type-callouts--decoration:     true!default;
+  $import-helper-type-callouts--slant:          true!default;
   $import-helper-type-lists:                    true!default;
-  $import-helper-type-positions:                true!default;
-  $import-helper-type-sizing:                   true!default;
-  $import-helper-type-smoothing:                true!default;
+
+
+
+  // Sizing
+  $import-helper-type-sizing--xlarge:           true!default;
+  $import-helper-type-sizing--headings:         true!default;
+  $import-helper-type-sizing--base:             true!default;
+  $import-helper-type-sizing--small:            true!default;
+
+  // Readability Modifiers
+  $import-helper-type--line-height:             true!default;
+  $import-helper-type--indenting:               true!default;
+  $import-helper-type--smoothing:               true!default;
 
 
 
