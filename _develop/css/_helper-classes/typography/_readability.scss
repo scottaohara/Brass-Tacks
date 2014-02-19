@@ -26,16 +26,11 @@
 
 @if $import-helper-type--indenting == true {
 
-  .txt-indent-1 {
-    text-indent: 1em;
-  }
-
-  .txt-indent-2 {
-    text-indent: 2em;
-  }
-
-  .txt-indent-3 {
-    text-indent: 3em;
+  // loop to output .txt-indent-1 to 3
+  @for $i from 1 through 3 {
+    .txt-indent-#{$i} {
+      text-indent: 1em * $i;
+    }
   }
 
 

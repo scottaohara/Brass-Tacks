@@ -4,16 +4,13 @@
 
 @if $import-helper-type-alignment == true {
 
-  .txt-center {
-    text-align: center;
-  }
+  // output classes based on variable list
+  $align-list:  center, left, right;
 
-  .txt-left {
-    text-align: left;
-  }
-
-  .txt-right {
-    text-align: right;
+  @each $align in $align-list {
+    .txt-#{$align} {
+      text-align: $align;
+    }
   }
 
 
