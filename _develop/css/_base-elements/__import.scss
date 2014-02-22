@@ -7,7 +7,6 @@
 
 
 // Default Typographical Element Styling
-@import 'typography/text-selection';      // Text Selection Styling
 @import 'typography/headings';            // Heading Elements
 @import 'typography/paragraphs';          // Paragraph Element
 @import 'typography/small';               // Small Element
@@ -17,53 +16,22 @@
 @import 'typography/bold-italic';         // Bold & Italic Elements
 @import 'typography/mark';                // Mark Element
 @import 'typography/quotes';              // Quote Element
-@import 'typography/blockquote';          // Blockquote Element
 @import 'typography/sub-super';           // Super and Subscript Elements
-@import 'typography/address';             // Address Element
-@import 'typography/details-summary';     // Details & Summary Elements
-@import 'typography/code';                // Code Elements
 @import 'typography/pre';                 // Pre Element
 @import 'typography/cite';                // Cite Element
 @import 'typography/ins';                 // Insert Element
+@import 'typography/combos';              // Address, details, summary, code, kbd, samp
 
 
-// Lists & nav elements
-@import 'lists-navs/def-lists';             // Definition List Elements
-@import 'lists-navs/lists';                 // List Elements
-@import 'lists-navs/navs';                  // Nav element & lists w/in
-@import 'lists-navs/menu';                  // Menu element
 
 
-// Default Media Element Styling
-@import 'media-elements/img-svg';         // Img & svg
-@import 'media-elements/fig-figcaption';  // Figure & figcaption
-@import 'media-elements/audio';           // Audio
-@import 'media-elements/video';           // Video
-@import 'media-elements/embed-object';    // Embed & object
 
 
-// Default Form Element Styling
-@import 'form-elements/parent-elements';  // Form, fieldset
-@import 'form-elements/inputs';           // Inputs
-@import 'form-elements/placeholder-text'; // Placeholder Styling
-@import 'form-elements/textarea';         // Textarea
-@import 'form-elements/label';            // Label
-@import 'form-elements/buttons';          // Button/input type=button
-@import 'form-elements/select';           // Select
-@import 'form-elements/legend';           // Legend
-
-
-// Default Table Element Styling
-@import 'table-elements/row-parents';     // Table, tbody, tfoot, thead
-@import 'table-elements/rows-cols';       // Col, colgroup, tr, td, th
-@import 'table-elements/caption';         // Caption
-
-
-// Progress / Meter Elements
-@import 'prog-meter-elements/progress';   // HTML5 Progress Bar
-@import 'prog-meter-elements/meter';      // HTML5 Meter bar
-
-
-// Additional HTML Elements
-@import 'template';                         // HTML5 Template
-@import 'hr';                               // HR Styling
+@import 'lists';                          // List elements
+@import 'nav-and-menu';                   // Nav and menu elements
+@import 'forms';                          // Form elements
+@import 'tables';                         // Table elements
+@import 'media';                          // Media elements
+@import 'hr';                             // HR Styling
+@import 'template';                       // HTML5 Template
+@import 'progress-meters';                // Porgress & meter elements

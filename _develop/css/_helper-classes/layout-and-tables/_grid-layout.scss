@@ -23,7 +23,7 @@
 // The grid columns within a row.
 // Do not apply styling to this class as its purpose is for layout only.
 .col {
-  @include last-child-0();
+  @extend %last-child-0;
   float: left;
   margin-bottom: 0;
   min-height: 1px;

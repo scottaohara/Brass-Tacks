@@ -1,0 +1,234 @@
+// ----------------------------------------------------------------------------
+//  Form & Fieldset
+// ----------------------------------------------------------------------------
+
+@if $import-form-parents == true {
+
+  form, fieldset {
+    @extend %reset-form-elements;  // resets.scss
+  }
+
+  fieldset {
+    @extend %reset-border;
+    @extend %reset-spacing;
+  }
+
+} // -- end @if --
+
+
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Form Elements: Input Element Placeholder Text Styling
+// ----------------------------------------------------------------------------
+
+$ph-vendor-list: "::-moz-", ":-ms-input-", "::webkit-input-";
+$ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
+
+
+@if $import-form-placeholder-text == true {
+
+  @each $ph in $ph-vendor-list {
+    #{$ph}plaeholder {
+      @include placeholder-text($form-c-placeholder, italic);
+    }
+  }
+
+  @each $ph in $ph-vendor-list2 {
+    input[required] {
+      #{$ph}plaeholder {
+        font-size: italic;
+      }
+    }
+  }
+
+} // -- end @if --
+
+
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Form Elements: Input Elements
+// ----------------------------------------------------------------------------
+
+@if $import-form-inputs == true {
+
+  // General Form Element Reset
+  input {
+    @extend %txt-base;
+    @extend %reset-form-elements;
+  }
+
+
+  // Disabled input styling
+  input[disabled] {
+    background-color: $form-c-disable-bg;
+    cursor: not-allowed;
+  }
+
+
+  // Read Only input styling
+  input[readonly],
+  input[readonly]:focus {
+    background: $form-c-disable-bg;
+  }
+
+
+  // Removes extra inner padding for webkit
+  input[type='search']::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+
+
+  // Makes it look like a normal text input, only with a (x) when text has been entered
+  input[type='search'] {
+    -webkit-appearance: textfield;
+  }
+
+} // -- end @if --
+
+
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Textarea Element
+// ----------------------------------------------------------------------------
+
+@if $import-form-textarea == true {
+
+  // Make textareas look like input areas, only bigger
+  textarea {
+    @extend %reset-form-elements;
+    @extend %txt-base;
+    display: block;
+    min-width: 60px;
+    overflow: auto;
+    resize: vertical;
+    vertical-align: top;
+
+    &:required {
+      color: $form-c-required;
+    }
+  }
+
+} // -- end @if --
+
+
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Form Elements: Button Elements
+// ----------------------------------------------------------------------------
+
+@if $import-form-buttons == true {
+
+  // General Form Element Reset
+  button {
+    @extend %reset-form-elements;
+  }
+
+
+  // Makes buttons look like buttons with appropriate cursors
+  button,
+  input[type='reset'],
+  input[type='submit'],
+  html input[type='button'] {
+    cursor: pointer;
+    -webkit-appearance: button;
+  }
+
+
+  // Removes outline from submit buttons in Firefox
+  input[type="submit"]::-moz-focus-inner {
+    @extend %outline-none;
+  }
+
+
+  // Removes inner padding & border in Firefox 4+
+  button::-moz-focus-inner,
+   input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+
+} // -- end @if --
+
+
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Select Element
+// ----------------------------------------------------------------------------
+
+@if $import-form-select == true {
+
+  select {
+    @extend %txt-base;
+    @extend %reset-form-elements;
+    margin-bottom: $unit-px2;
+    width: 100%;
+  }
+
+} // -- end @if --
+
+
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Label Element
+// ----------------------------------------------------------------------------
+
+@if $import-form-labels == true {
+
+  label {
+    @extend %label;
+  }
+
+} // -- end @if --
+
+
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Legend Element
+// ----------------------------------------------------------------------------
+
+@if $import-form-labels == true {
+
+  legend {
+    @extend %txt-h5;
+    margin-left: -$unit-px;
+    padding: 0 $unit-px;
+  }
+
+} // -- end @if --
+
+

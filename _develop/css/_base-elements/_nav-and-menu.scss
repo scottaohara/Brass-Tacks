@@ -1,0 +1,55 @@
+// ----------------------------------------------------------------------------
+//  Navigation Elements
+// ----------------------------------------------------------------------------
+
+@if $import-nav == true {
+
+  nav {
+    @extend %d-block;
+
+    ul, ol {
+      @extend %list-unstyled;
+      @extend %margin-bottom-base;
+      padding: 0;
+    }
+
+    li {
+      margin: 0 0 8px;
+    }
+  }
+
+  // Example mark-up:
+  // ----------------------------------------------------------------------------
+  // <nav role="navigation>
+  //   <ul class="">
+  //     <li>
+  //       <a href="#!" title="">Nav Item 1</a>
+  //     </li>
+  //     <li>
+  //       <a href="#!" title="">Nav Item 2</a>
+  //     </li>
+  //     <li>
+  //       <a href="#!" title="">Nav Item 3</a>
+  //     </li>
+  //   </ul>
+  // </nav>
+
+} // -- end @if --
+// ----------------------------------------------------------------------------
+//  Menu Element
+// ----------------------------------------------------------------------------
+
+@if $import-menu == true{
+
+  menu {
+    @extend %list-unstyled;
+    @extend %margin-bottom-base;
+    @extend %last-child-0;
+    padding: 0;
+
+    li {
+      margin: 0 0 8px;
+    }
+  }
+
+} // -- end @if --

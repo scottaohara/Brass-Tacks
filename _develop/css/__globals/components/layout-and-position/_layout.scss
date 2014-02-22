@@ -1,0 +1,39 @@
+// ----------------------------------------------------------------------------
+//  Layout
+// ----------------------------------------------------------------------------
+
+// Fixed Width Column - Left Side
+@mixin col-fixed-width($col-size, $col-side) {
+  @extend %col-fixed-width;
+
+  @if $col-side == left{
+    padding-left: $col-size;
+  }
+
+  @else if $col-side == right{
+    padding-right: $col-size;
+  }
+
+  .col-fixed-width {
+    @if $col-side == left{
+      float: left;
+      margin-left: -$col-size + 40px;
+    }
+
+    @else if $col-side == right{
+      float: right;
+      margin-right: -$col-size;
+    }
+
+    width: $col-size - 40px;
+  }
+}
+
+
+
+// Equal Sized Grid Layout
+@mixin equal-grid-col($grid-col-width) {
+  & > * {
+    width: $grid-col-width;
+  }
+}

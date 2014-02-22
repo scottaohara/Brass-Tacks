@@ -1,0 +1,19 @@
+// ----------------------------------------------------------------------------
+//  Text Input
+// ----------------------------------------------------------------------------
+
+// Custom inputs & textarea base code
+%input-text {
+  background-color:   $input-c-bg;
+  border:             $input-border-style;
+  font-family:        $input-f-family;
+  margin-bottom:      $unit-px2;
+  padding:            $unit-px2 $unit-px;
+  width:              100%;
+  -webkit-appearance: none;
+
+  &:focus {
+    @include box-shadow($input-bs-focus);
+    background-color: $c-off-white;
+  }
+}

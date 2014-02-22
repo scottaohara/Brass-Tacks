@@ -1,4 +1,4 @@
-@if $import-helper-btn-general == true{
+@if $import-helper-btn-general == true {
 
 // ----------------------------------------------------------------------------
 //  General Button Styling
@@ -6,73 +6,32 @@
 
 .btn {
   @extend %btn;
-  background-color: $c-grey;
-  border-color: $c-dark-grey;
-  color: $c-brand-4 !important;
-
-  &:active, &:hover {
-    background-color: $c-dark-grey;
-  }
-
-  &:focus {
-    @include box-shadow($bs-4);
-    outline: 0;
-  }
+  @include btn-style($btn-bg, $btn-border, $btn-text, $btn-bg-2);
 }
 
 .btn-prime {
   @extend %btn;
-  background-color: $c-brand-1;
-  border-color: $c-brand-2;
-  color: $c-white !important;
-  text-shadow: $ts-primary;
-
-  &:hover {
-    background-color: $c-brand-2;
-  }
+  @include btn-style($btn-bg-prime, $btn-border-prime, $btn-text-prime, $btn-bg-2-prime);
 }
 
 .btn-emph {
   @extend %btn;
-  background-color: $c-emph-1;
-  border-color: $c-emph-2;
-  color: $c-white !important;
-  text-shadow: $ts-primary;
-
-  &:hover {
-    background-color: $c-emph-2;
-  }
+  @include btn-style($btn-bg-emph, $btn-border-emph, $btn-text-emph, $btn-bg-2-emph);
 }
 
 .btn-neg {
   @extend %btn;
-  background-color: $c-neg-1;
-  border-color: $c-neg-2;
-  color: $c-white !important;
-
-  &:hover {
-    background-color: $c-neg-2;
-  }
-}
-
-.btn-cancel {
-  @extend %btn;
-  background-color: $c-dark;
-  border-color: $c-hell;
-  color: $c-white !important;
-
-  &:hover{
-    background-color: $c-hell;
-  }
+  @include btn-style($btn-bg-neg, $btn-border-neg, $btn-text-neg, $btn-bg-2-neg);
 }
 
 .btn-disable {
   @extend .btn;
+  @include btn-style($btn-bg-disable, $btn-border-disable, $btn-text-disable, $btn-bg-disable);
   cursor: not-allowed;
   opacity: .3;
 
-  &:hover, &:visited{
-    background-color: $c-grey;
+  &:visited {
+    background-color: $btn-bg-disable;
   }
 }
 
@@ -83,27 +42,24 @@
 
 .btn-tiny {
   font-size: $txt-tiny;
-  padding: $unit-px $unit-px2;
-  min-width: 50px;
+  padding: $btn-pad-tiny;
 }
 
 .btn-small {
   font-size: $txt-small;
-  padding: $unit-px2 $unit-px3;
-  min-width: 50px;
+  padding: $btn-pad-small;
 }
 
 .btn-large {
   font-size: $txt-h3;
-  padding: $unit-px2 $unit-px*8;
-  min-width: 200px;
+  padding: $btn-pad-large;
 }
 
 .btn-xlarge {
   font-size: $txt-h2;
-  padding: $unit-px3 $unit-px*8;
-  min-width: 200px;
+  padding: $btn-pad-xlarge;
 }
+
 
 .btn-wide {
   display: block;
@@ -115,12 +71,12 @@
 //  Border Radius Styling
 // ----------------------------------------------------------------------------
 
-.btn-square {
-  @include border-radius(0);
+.btn-soft {
+  @include border-radius($unit-px2);
 }
 
 .btn-round {
-  @include border-radius($circle);
+  @extend %circle;
 }
 
 
@@ -176,8 +132,7 @@
   }
 
   .btn {
-    @extend .btn-square;
-    float:left;
+    float: left;
     margin-bottom: 0;
     min-width: 100px;
   }

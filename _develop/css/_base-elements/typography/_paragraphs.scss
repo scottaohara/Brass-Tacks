@@ -1,23 +1,12 @@
-@if $import-paragraph-element == true{
-
 // ----------------------------------------------------------------------------
 //  Paragraph Element
 // ----------------------------------------------------------------------------
 
-p {
-  @extend %margin-bottom-base;
-  margin-top: 0;
-}
+@if $import-paragraph == true {
 
-// Silent classes are used so elements can be easily
-// broken out into modular files.
+  p {
+    @extend %margin-bottom-base;
+    margin-top: 0;
+  }
 
-// If you would like to change the basic values of these
-// elements, simply either delete the silent class reference
-// and add your own styling, or edit the silent class
-// in the corresponding Brass Tacks silent class .scss file.
-
-
-// ----------------------------------------------------------------------------
 } // -- end @if --
-// ----------------------------------------------------------------------------

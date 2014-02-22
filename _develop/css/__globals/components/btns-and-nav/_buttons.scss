@@ -1,0 +1,66 @@
+// ----------------------------------------------------------------------------
+//  Buttons
+// ----------------------------------------------------------------------------
+
+// General button setup to extend into button classes
+%btn {
+  border: 1px solid;
+  cursor: pointer;
+  display: inline-block;
+  font: {
+    family: $f-btn-family;
+      size: $f-btn-size;
+    weight: $f-btn-weight;
+  }
+  line-height: 1;
+  min-width: 60px;
+  padding: $btn-pad $btn-pad*2;
+  text-align: center;
+  text-decoration: none !important; // never have an underline on button text
+  -webkit-appearance: none;
+
+  &:focus {
+    @include box-shadow($bs-btn-focus);
+    outline: 0;
+  }
+}
+
+
+// Include a single media query to easily customize buttons
+@mixin btn-style($btn__bg, $btn__border, $btn__text, $btn__bg-2, $btn__ts: false) {
+  @extend %btn;
+  background-color: $btn__bg;
+  border-color: $btn__border;
+  color: $btn__text;
+  text-shadow: $btn__ts;
+
+  &:hover {
+    background-color: $btn__bg-2;
+  }
+
+  &:active {
+    background-color: darken($btn__bg-2, 20%);
+  }
+}
+
+
+// Social Buttons
+%btn-social {
+  @extend %btn;
+  min-width: 162px;
+  padding-left: 56px;
+  position: relative;
+  text-align: left;
+}
+
+
+
+// Buttons with Icons
+%btn-icon {
+  @include position(top, 0, left, 0, absolute);
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 40px;
+}
+

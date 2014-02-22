@@ -1,0 +1,63 @@
+// ----------------------------------------------------------------------------
+//  Base Button Vars
+// ----------------------------------------------------------------------------
+
+// Button Font Styling Presets
+$f-btn-family:              $f-brand !default;
+$f-btn-size:                $txt-h5 !default;
+$f-btn-weight:              400 !default;
+
+
+
+// Coloring Basic
+$btn-bg:                    $c-grey !default;
+$btn-bg-2:                  $c-dark-grey !default; //(hover & active state)
+$btn-border:                $c-dark-grey !default;
+$btn-text:                  $c-white !default;
+
+
+
+// Shadowing
+$bs-btn-focus:              $bs-focus !default;
+$btn-ts:                    $ts-primary !default;
+
+
+
+// Coloring Prime
+$btn-bg-prime:              #4aceff !default;  // light cyan
+$btn-border-prime:          #0095cc !default;  // dark cyan
+$btn-text-prime:            $c-white !default;
+$btn-bg-2-prime:            #00aeef !default;  // cyan
+
+
+
+// Coloring Emphasis
+$btn-bg-emph:               #23d200 !default;  // green
+$btn-border-emph:           #178900 !default;  // dark green
+$btn-text-emph:             $c-white !default;
+$btn-bg-2-emph:             #178900 !default;  // dark green
+
+
+
+// Coloring Negative
+$btn-bg-neg:                #a00 !default;     // red
+$btn-border-neg:            #600 !default;     // dark red
+$btn-text-neg:              $c-white !default;
+$btn-bg-2-neg:              #600 !default;     // dark red
+
+
+
+// Coloring Disable
+$btn-bg-disable:            $c-off-white !default;
+$btn-border-disable:        $c-lighter !default;
+$btn-text-disable:          $c-off-black !default;
+
+
+
+// Padding
+$btn-pad:                   $unit-px2 !default;
+
+$btn-pad-tiny:              $unit-px $unit-px2 !default;
+$btn-pad-small:             $unit-px2 $unit-px3 !default;
+$btn-pad-large:             $unit-px2 $unit-px*8 !default;
+$btn-pad-xlarge:            $unit-px3 $unit-px*8 !default;

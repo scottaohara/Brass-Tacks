@@ -1,0 +1,25 @@
+// ----------------------------------------------------------------------------
+//  Text Truncation
+// ----------------------------------------------------------------------------
+
+// Set styling that could be used across multiple instances of the
+// truncate-text mixin, to reduce code redundancy
+
+%truncate-shared {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+
+// Set the max width of a text-truncating element
+@mixin truncate-text($truncation-boundary) {
+  @extend %truncate-shared;
+  max-width: $truncation-boundary;
+}
+
+// Example
+// ----------------------------------------------------------------------------
+// @include truncate-text(100%);

@@ -1,26 +1,23 @@
-@if $import-anchor-element == true{
-
 // ----------------------------------------------------------------------------
 //  Anchor Element
 // ----------------------------------------------------------------------------
 
-a, a:visited {
-  background: transparent; // *
-  color: $c-link;
+@if $import-anchor == true {
 
-  &:active, &:hover {
-    @extend %outline-none;
-    color: $c-link-h;
+  a, a:visited {
+    background: transparent; // *
+    color: $c-link;
+
+    &:hover, &:active {
+      @extend %outline-none;
+      color: $c-link-h;
+    }
+
+    &:focus {
+      outline: thin dotted;
+    }
   }
 
-  &:focus {
-    outline: thin dotted;
-  }
-}
+  // * Removes grey background color from active links in IE10
 
-// * Removes grey background color from active links in IE10
-
-
-// ----------------------------------------------------------------------------
 } // -- end @if --
-// ----------------------------------------------------------------------------

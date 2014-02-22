@@ -1,4 +1,4 @@
-@if $import-helper-btn-social == true{
+@if $import-helper-btn-social == true {
 
 // ----------------------------------------------------------------------------
 //  Social Buttons
@@ -13,15 +13,15 @@
 .btn-facebook {
   @extend %btn-social;
   background: $c-fb-1;
-  border-color: $c-fb-1;
+  border-color: $c-fb-2;
 
   .social-icon {
     //background-image: url();
-    border-color: $c-fb-1;
+    border-color: $c-fb-2;
   }
 
   &:hover {
-    background: $c-fb-1;
+    background: $c-fb-2;
 
     .social-icon {
       border-color: $c-fb-icon-border;
@@ -29,24 +29,26 @@
   }
 }
 
+
 .btn-twitter {
   @extend %btn-social;
   background-color: $c-tw-1;
-  border-color: $c-tw-1;
+  border-color: $c-tw-2;
 
   .social-icon {
     //background-image: url();
-    border-color: $c-tw-1;
+    border-color: $c-tw-2;
   }
 
   &:hover {
-    background: $c-tw-1;
+    background: $c-tw-2;
 
     .social-icon {
       border-color: $c-tw-icon-border;
     }
   }
 }
+
 
 .btn-google {
   @extend %btn-social;

@@ -1,0 +1,130 @@
+// ----------------------------------------------------------------------------
+//  Navigation
+// ----------------------------------------------------------------------------
+
+// shared rules between nav-h & nav-v
+%nav {
+
+  a {
+    display: block;
+    padding: $unit-px2;
+  }
+}
+
+// Basic styling for horizontal navigation styles
+%nav-h {
+  a {
+    border-right: 1px solid $c-dark-grey;
+  }
+
+  & > li {
+    margin-bottom: 0;
+  }
+
+  li:last-child a{
+    border-right: 0;
+  }
+}
+
+
+
+// 3-lined mobile nav 'icon'
+%burger {
+  @include box-shadow($bs-1);
+  background: $c-white;
+  border-radius: $circle;
+  display: block;
+  height: 2px;
+}
+
+
+
+// Drop down menu types
+%drop-v {
+  left: 100%;
+  top: 0;
+}
+
+%drop-h {
+  left: 0;
+  top: 100%;
+}
+
+
+
+// Fixed Navigation:
+// ----------------------------------------------------------------------------
+
+// Add padding to body tag
+@mixin nav-fixed-area($position: top, $padding-area: 40px) {
+  @if $position == bottom {
+    padding-bottom: $padding-area;
+  }
+
+  @else if $position == left {
+    padding-left: $padding-area;
+  }
+
+  @else if $position == right {
+    padding-right: $padding-area;
+  }
+
+  @else if $position == top {
+    padding-top: $padding-area;
+  }
+}
+
+
+
+// Positioning the nav element
+@mixin nav-fixed($f-height, $f-width, $t-or-b: top, $l-or-r: left, $overflow: false) {
+  height: $f-height;
+  position: fixed;
+  width: $f-width;
+  z-index: 1000;
+
+  // Declare top or bottom
+  @if $t-or-b == bottom {
+    bottom: 0;
+  }
+
+  @else if $t-or-b == top {
+    top: 0;
+  }
+
+  // Declare left or right
+  @if $l-or-r == left {
+    left: 0;
+  }
+
+  @else if $l-or-r == right {
+    right: 0;
+  }
+
+  @if $overflow == true {
+    overflow-y: auto;
+  }
+}
+
+
+
+// Mobile nav button placement
+@mixin nav-mobile-btn($y, $x, $t-or-b: top, $l-or-r: right) {
+  // Declare top or bottom
+  @if $t-or-b == bottom {
+    bottom: $y;
+  }
+
+  @else if $t-or-b == top {
+    top: $y;
+  }
+
+  // Declare left or right
+  @if $l-or-r == left {
+    left: $x;
+  }
+
+  @else if $l-or-r == right {
+    right: $x;
+  }
+}

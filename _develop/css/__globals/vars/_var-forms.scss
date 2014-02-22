@@ -1,0 +1,20 @@
+// ----------------------------------------------------------------------------
+//  Form Element Vars
+// ----------------------------------------------------------------------------
+
+$form-c-placeholder:      $c-dark-grey !default;
+$form-c-required:         $c-red !default;
+$form-c-disable-bg:       $c-light !default;
+
+
+$form-font-weight:        400 !default;
+
+
+
+// Text Inputs
+$input-c-bg:              $c-white !default;
+$input-c-bg-focus:        $c-off-white !default;
+$input-border-style:      1px solid $c-grey !default;
+$input-f-family:          $f-brand !default;
+$input-bs-focus:          $bs-4 !default;
+$input-padding:           $unit-px2 $unit-px !default;

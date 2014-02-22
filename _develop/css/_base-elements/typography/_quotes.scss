@@ -1,15 +1,84 @@
-@if $import-q-element == true{
-
 // ----------------------------------------------------------------------------
 //  Quote Element
 // ----------------------------------------------------------------------------
 
-// Set consistent quotes across browsers
-q {
-  quotes: "\201C" "\201D" "\2018" "\2019";
+@if $import-q == true {
+
+  // Set consistent quotes across browsers
+  q {
+    quotes: "\201C" "\201D" "\2018" "\2019";
+  }
+
+} // -- end @if --
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Blockquote
+// ----------------------------------------------------------------------------
+
+// Basic Blockquote Setup
+
+@if $import-blockquote-basic == true {
+
+  blockquote {
+    @extend %reset-spacing;
+    @extend %margin-bottom-base;
+    @extend %txt-h6;
+    @extend %italic;
+    color: $c-darker;
+  }
+
 }
 
 
-// ----------------------------------------------------------------------------
+// In-depth blockquote setup
+
+@if $import-blockquote == true {
+
+  blockquote {
+    @extend %reset-spacing;
+    @extend %margin-bottom-base;
+    @extend %txt-h6;
+    @extend %italic;
+    color: $c-darker;
+
+    p {
+      margin-bottom: 0;
+
+      &:after,
+      &:before {
+        font: 400 $f-georgia $txt-h4;
+        line-height: 0;
+        position: relative;
+        top: 2px;
+      }
+
+      &:after {
+        content: "\201D";
+        right: -1px;
+      }
+
+      &:before {
+        content: "\201C";
+        left: -1px;
+      }
+    }
+
+    small {
+      color: $c-dark-grey;
+      font-size: $txt-tiny;
+      font-style: normal;
+      margin-bottom: 0;
+      padding-left: $unit-px3;
+
+      &:before {
+        content: "– ";
+      }
+    }
+  }
+
 } // -- end @if --
-// ----------------------------------------------------------------------------

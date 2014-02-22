@@ -1,0 +1,108 @@
+// ----------------------------------------------------------------------------
+//  Address, Details & Summary Elements
+// ----------------------------------------------------------------------------
+
+%address-details-summary {
+  @extend %d-block;
+  @extend %margin-bottom-base;
+  @extend %last-child-0;
+}
+
+
+@if $import-address == true {
+
+  address {
+    @extend %address-details-summary;
+  }
+
+} // -- end @if --
+
+
+@if $import-details == true {
+
+  details {
+    @extend %address-details-summary;
+  }
+
+} // -- end @if --
+
+
+@if $import-summary == true {
+
+  summary {
+    @extend %address-details-summary;
+  }
+
+} // -- end @if --
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Code, kbd & samp Elements
+// ----------------------------------------------------------------------------
+
+%kbd-code-samp {
+  @extend %margin-bottom-base;
+  @include code-block($border-emph-width: 4px);
+  display: block;
+  font: $txt-base $f-monospace;
+  padding: $unit-px2;
+}
+
+// if a child of an element revise styling
+%child--kbd-code-samp {
+  display: inline-block;
+  margin: 0;
+  padding: $unit-px;
+}
+
+
+// Code
+@if $import-code == true {
+
+  code {
+    @extend %kbd-code-samp;
+  }
+
+  p, li {
+    code {
+      @extend %child--kbd-code-samp;
+    }
+  }
+
+} // -- end @if --
+
+
+// Kbd
+@if $import-kbd == true {
+
+  kbd {
+    @extend %kbd-code-samp;
+  }
+
+  p, li {
+    kbd {
+      @extend %child--kbd-code-samp;
+    }
+  }
+
+} // -- end @if --
+
+
+// Samp
+@if $import-samp == true {
+
+  samp {
+    @extend %kbd-code-samp;
+  }
+
+  p, li {
+    samp {
+      @extend %child--kbd-code-samp;
+    }
+  }
+
+} // -- end @if --

@@ -3,7 +3,7 @@
   *
   * Brass Tacks
   * by Scott O'Hara - @scottohara - github.com/scottaohara
-  * 0.9.0.7 - February 2, 2013
+  * 0.9.1 - February XX, 2014
   *
   *****************************************************************************
 */
@@ -35,6 +35,18 @@
   // Import Library
   @import '__globals/__import';               // Includes global libraries
 
+  // Revisions to base settings / styling
+  @import '_setup';
+
+
+
+// ----------------------------------------------------------------------------
+// Initial setup vars
+// ----------------------------------------------------------------------------
+
+$setup--border-box:                             true !default;
+$setup--html5__displays:                        true !default;
+
 
 
 // ----------------------------------------------------------------------------
@@ -42,38 +54,46 @@
 // ----------------------------------------------------------------------------
 
   // Typography Elements
-  $import-abbr-element:                         true!default;
-  $import-address-element:                      true!default;
-  $import-anchor-element:                       true!default;
-  $import-blockquote-element:                   true!default;
-  $import-bold-italic-elements:                 true!default;
-  $import-cite-element:                         true!default;
-  $import-code-elements:                        true!default;
-  $import-details-summary-elements:             true!default;
-  $import-dfn-element:                          true!default;
-  $import-headings-element:                     true!default;
-  $import-ins-element:                          true!default;
-  $import-mark-element:                         true!default;
-  $import-paragraph-element:                    true!default;
-  $import-pre-element:                          true!default;
-  $import-q-element:                            true!default;
-  $import-small-element:                        true!default;
-  $import-sub-sup-elements:                     true!default;
+  $import-abbr:                                 true!default;
+  $import-anchor:                               true!default;
+  $import-blockquote-basic:                     true!default;
+  $import-blockquote:                           true!default;
+  $import-bold-italic:                          true!default;
+  $import-cite:                                 true!default;
+  $import-dfn:                                  true!default;
+  $import-heading:                              true!default;
+  $import-ins:                                  true!default;
+  $import-mark:                                 true!default;
+  $import-paragraph:                            true!default;
+  $import-q:                                    true!default;
+  $import-small:                                true!default;
+  $import-sub-sup:                              true!default;
   $import-text-selection:                       true!default;
 
 
 
+  // Element Containers
+  $import-code:                                 true!default;
+  $import-kbd:                                  false!default;
+  $import-samp:                                 false!default;
+  $import-address:                              true!default;
+  $import-details:                              true!default;
+  $import-summary:                              true!default;
+  $import-pre:                                  true!default;
+
+
+
   // Progress / Meter Elements
-  $import-meter-element:                        false!default;
-  $import-progress-element:                     false!default;
+  $import-meter:                                false!default;
+  $import-progress:                             false!default;
 
 
 
   // Nav, Menu & List Elements
-  $import-def-list-elements:                    true!default;
-  $import-list-elements:                        true!default;
-  $import-menu-element:                         true!default;
-  $import-nav-element:                          true!default;
+  $import-def-list:                             true!default;
+  $import-ol-ul:                                true!default;
+  $import-menu:                                 true!default;
+  $import-nav:                                  true!default;
 
 
 
@@ -106,12 +126,12 @@
 
 
   // Template Element
-  $import-template-element:                     false!default;
+  $import-template:                             false!default;
 
 
 
   // HR Element
-  $import-hr-element:                           true!default;
+  $import-hr:                                   true!default;
 
 
 

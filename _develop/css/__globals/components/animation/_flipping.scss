@@ -1,0 +1,34 @@
+// ----------------------------------------------------------------------------
+//  Flipping Effect
+// ----------------------------------------------------------------------------
+
+%flip-back-front {
+  @extend %preserve-3d;
+  @include position(top, 0, left, 0, absolute);
+  @include transition(.6s);
+  backface-visibility: hidden;
+
+  img {
+    max-height: 100%;
+    max-width: 100%;
+  }
+}
+
+
+// Preserve 3D
+%preserve-3d {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+
+
+@mixin flip-units($flip-height, $flip-width: false) {
+    height: $flip-height;
+    width: $flip-width;
+}
+
+// This mixin sets the height and width of the .flip-container,
+// .flip-front and .flip-back elements.
+
+// Width is not required unless a set width is needed.

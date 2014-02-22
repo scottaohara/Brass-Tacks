@@ -11,93 +11,97 @@
 //  Variables
 // ----------------------------------------------------------------------------
 
-@import 'vars/var-break-points';
-@import 'vars/var-colors';
-@import 'vars/var-fonts';
-@import 'vars/var-measurement-units';
-@import 'vars/var-shadows';
+// General Vars
+@import 'vars/__var-library/var-break-points';
+@import 'vars/__var-library/var-colors';
+@import 'vars/__var-library/var-fonts';
+@import 'vars/__var-library/var-measurement-units';
+@import 'vars/__var-library/var-shadows';
 
+// Secondary Vars
+@import 'vars/var-body';
+@import 'vars/var-buttons';
+@import 'vars/var-gradients';
+@import 'vars/var-forms';
+@import 'vars/var-code';
 
 
 // ----------------------------------------------------------------
-//  Mixins
+//  Components (mixins & silent classes)
 // ----------------------------------------------------------------
 
-// Experimental Vendor Prefixing
-@import 'mixins/vendor';
+// Base component
+@import 'components/_partials/vendor';
+@import 'components/_partials/box-sizing';
+@import 'components/_partials/resets';
+@import 'components/_partials/position';
+@import 'components/_partials/margins';
+@import 'components/_partials/border-radius';
+@import 'components/_partials/box-shadow';
 
 
 // Animation
-@import 'mixins/animation';
-@import 'mixins/transition-transform';
+@import 'components/animation/animation';
+@import 'components/animation/transition-transform';
+@import 'components/animation/flipping';
+
+
+// Buttons & Navigation
+@import 'components/btns-and-nav/buttons';
+@import 'components/btns-and-nav/navigation';
+
+
+// Content Blocks
+@import 'components/content-blocks/code';
+@import 'components/content-blocks/content-elements';
+@import 'components/content-blocks/displays';
+@import 'components/content-blocks/multi-columns';
+
+
+// Decorations
+@import 'components/decoration/gradients';
+@import 'components/decoration/scrollbars';
+
+
+// Forms
+@import 'components/forms/labels';
+@import 'components/forms/placeholder-text';
+@import 'components/forms/txt-input';
+
+
+// Layout & Positioning
+@import 'components/layout-and-position/calc';
+@import 'components/layout-and-position/clearfix';
+@import 'components/layout-and-position/fixed-col';
+@import 'components/layout-and-position/flex';
+@import 'components/layout-and-position/layout';
+
+
+// Layout & Positioning
+@import 'components/media/retina';
+@import 'components/media/sprites';
+
+
+// Messaging
+@import 'components/messaging/messaging';
+@import 'components/messaging/tool-tips';
+
+
+// Shapes
+@import 'components/shapes/blocks';
+@import 'components/shapes/circle';
+@import 'components/shapes/triangles';
 
 
 // Typography
-@import 'mixins/typography';
-
-
-// Layout & Spacing
-@import 'mixins/box-sizing';
-@import 'mixins/flex';
-@import 'mixins/position';
-@import 'mixins/last-child-m0';
-@import 'mixins/layout';
-@import 'mixins/calc';
-
-
-// CSS Shapes
-@import 'mixins/border-radius';
-@import 'mixins/shapes-blocks';
-@import 'mixins/shapes-triangle';
-
-
-// Design
-@import 'mixins/box-shadow';
-@import 'mixins/gradients';
-@import 'mixins/flipping';
-
-
-// Media Elements
-@import 'mixins/retina';
-
-
-// Messaging Units
-@import 'mixins/messaging';
-
-
-// Navigation
-@import 'mixins/navigation';
+@import 'components/typography/misc';
+@import 'components/typography/rendering';
+@import 'components/typography/selection-styling';
+@import 'components/typography/sizing-weight-height';
+@import 'components/typography/text-truncate';
 
 
 
-// ----------------------------------------------------------------------------
-//  Silent Classes
-// ----------------------------------------------------------------------------
-
-// Resets
-@import 'silent-classes/resets';
-
-
-// Type & Images
-@import 'silent-classes/typogrpahy';
-@import 'silent-classes/sprites';
-
-
-// Multi-Purpose
-@import 'silent-classes/clearfixes';
-@import 'silent-classes/displays';
-
-
-// Content & Interactive Elements
-@import 'silent-classes/buttons';
-@import 'silent-classes/content-elements';
-@import 'silent-classes/forms';
-@import 'silent-classes/navigation';
-@import 'silent-classes/flipping';
-
-
-// Grid/layout, Positioning and spacing (margins)
-@import 'silent-classes/grids-positions-margins';
 
 
 // ----------------------------------------------------------------------------

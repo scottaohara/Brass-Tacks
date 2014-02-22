@@ -1,0 +1,13 @@
+// ----------------------------------------------------------------------------
+//  Label Element
+// ----------------------------------------------------------------------------
+
+// Base label styling for use with element & class to mimic element
+%label {
+  display: inline-block;
+  margin-bottom: $unit-px;
+
+  &[for] {
+    cursor: pointer;
+  }
+}

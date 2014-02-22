@@ -1,4 +1,4 @@
-@if $import-small-element == true{
+@if $import-small == true{
 
 // ----------------------------------------------------------------------------
 //  Small Element
@@ -14,7 +14,7 @@ small {
 // treated as a block level element.
 
 // If small exists as a parent of a typographical element, it should be
-// treated as an inline-block element, with it's margin removed for 
+// treated as an inline-block element, with it's margin removed for
 // line-height standardization.
 
 h1, h2, h3, h4, h5, h6, p, li {

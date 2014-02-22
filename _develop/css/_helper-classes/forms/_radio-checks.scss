@@ -4,6 +4,28 @@
 //  Radio Buttons & Checkboxes
 // ----------------------------------------------------------------------------
 
+// Custom Checkbox base code
+%custom-check {
+  display: inline-block;
+  height: 16px;
+  margin: 0 $unit-px 0 0;
+  position: relative;
+  vertical-align: sub;
+  width: 16px;
+
+  &:after {
+    content: '';
+    opacity: 0;
+  }
+
+  &:hover::after {
+    opacity: .3;
+  }
+}
+
+
+
+
 // Checkbox Holder + Element Styling
 .cr-area {
   position: relative;
