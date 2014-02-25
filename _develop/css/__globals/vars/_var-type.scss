@@ -1,0 +1,37 @@
+// ----------------------------------------------------------------------------
+//  Primary Type Elements
+// ----------------------------------------------------------------------------
+
+// Headings
+$c-headings:                  $c-darker !default;
+
+
+// Blockquotes
+$c-blockquote:                $c-darker !default;
+$f-blockquote-quotes:         $f-georgia !default;
+$s-blockquote-quotes:         $txt-h4 !default;
+
+$c-blockquote-small:          $c-dark-grey !default;
+$s-blockquote-small:          $txt-tiny !default;
+
+
+
+// ----------------------------------------------------------------------------
+//  Secondary Type Elements
+// ----------------------------------------------------------------------------
+
+$c-ins:                       $c-off-black !default;
+
+$c-mark-bg:                   $c-yellow !default;
+$c-mark-txt:                  $c-darker !default;
+$c-mark-boarder:              $c-grey !default;
+
+$hr-border:                   1px solid rgba(0,0,0,.2) !default;
+
+
+
+// ----------------------------------------------------------------------------
+//  Message Coloring
+// ----------------------------------------------------------------------------
+
+$c-message--error:            $c-red !default;

@@ -4,16 +4,16 @@
 
 // Custom inputs & textarea base code
 %input-text {
-  background-color:   $input-c-bg;
+  background-color:   $c-input--bg;
   border:             $input-border-style;
-  font-family:        $input-f-family;
-  margin-bottom:      $unit-px2;
-  padding:            $unit-px2 $unit-px;
+  font-family:        $f-input--family;
+  margin-bottom:      $input--margin;
+  padding:            $input--padding;
   width:              100%;
   -webkit-appearance: none;
 
   &:focus {
-    @include box-shadow($input-bs-focus);
-    background-color: $c-off-white;
+    @include box-shadow($bs-input--focus);
+    background-color: $c-input--bg-focus;
   }
 }

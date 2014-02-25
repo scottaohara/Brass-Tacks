@@ -2,7 +2,7 @@
 //  Template Element
 // ----------------------------------------------------------------------------
 
-@if $import-template == true {
+@if $base-template == true {
 
   template {
     @extend %d-none;

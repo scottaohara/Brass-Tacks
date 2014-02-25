@@ -44,17 +44,6 @@
 }
 
 
-// Social Buttons
-%btn-social {
-  @extend %btn;
-  min-width: 162px;
-  padding-left: 56px;
-  position: relative;
-  text-align: left;
-}
-
-
-
 // Buttons with Icons
 %btn-icon {
   @include position(top, 0, left, 0, absolute);
@@ -63,4 +52,3 @@
   height: 100%;
   width: 40px;
 }
-

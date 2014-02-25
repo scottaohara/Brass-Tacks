@@ -2,7 +2,7 @@
 //  General Form Elements Helper Classes
 // ----------------------------------------------------------------------------
 
-@if $import-helper-forms-general == true {
+@if $helper-forms--general == true {
 
   // Containers
   .form-row {
@@ -10,9 +10,9 @@
   }
 
   .fieldset {
-    border: 1px solid $c-border;
-    margin-bottom: $unit-px2;
-    padding: $unit-px2 $unit-px3;
+    border: $fieldset--border;
+    margin-bottom: $input--margin;
+    padding: $fieldset--padding;
   }
 
 

@@ -2,36 +2,25 @@
 //  Normalizing Style & Resetting Browser values for base HTML elements
 // ----------------------------------------------------------------------------
 
-// Rules Base HTML Elements
-@import 'base-elements';                    // HTML, Body & HTML5 blocks
+// HTML, Body, text-selection styling, anchor states & HTML5 blocks
+@import 'base-elements';
 
+@import 'type--primary';             // headings, paragraph, small
+@import 'type--secondary';           // abbr, b, i, cite, dfn, ins, mark, pre, sub/sup
 
-// Default Typographical Element Styling
-@import 'typography/headings';            // Heading Elements
-@import 'typography/paragraphs';          // Paragraph Element
-@import 'typography/small';               // Small Element
-@import 'typography/anchor';              // Anchor Element
-@import 'typography/abbr';                // Abbr Element
-@import 'typography/dfn';                 // Dfn Element
-@import 'typography/bold-italic';         // Bold & Italic Elements
-@import 'typography/mark';                // Mark Element
-@import 'typography/quotes';              // Quote Element
-@import 'typography/sub-super';           // Super and Subscript Elements
-@import 'typography/pre';                 // Pre Element
-@import 'typography/cite';                // Cite Element
-@import 'typography/ins';                 // Insert Element
-@import 'typography/combos';              // Address, details, summary, code, kbd, samp
+@import 'lists';                     // List elements
+@import 'nav-and-menu';              // Nav and menu elements
 
+@import 'forms';                     // Form elements
 
+@import 'element-combos';            // Address, details, summary, code, kbd, samp
 
+@import 'tables';                    // Table elements
 
+@import 'media';                     // Media elements
 
+@import 'hr';                        // HR element
 
-@import 'lists';                          // List elements
-@import 'nav-and-menu';                   // Nav and menu elements
-@import 'forms';                          // Form elements
-@import 'tables';                         // Table elements
-@import 'media';                          // Media elements
-@import 'hr';                             // HR Styling
-@import 'template';                       // HTML5 Template
-@import 'progress-meters';                // Porgress & meter elements
+@import 'template';                  // HTML5 Template
+
+@import 'progress-meters';           // Progress & meter elements

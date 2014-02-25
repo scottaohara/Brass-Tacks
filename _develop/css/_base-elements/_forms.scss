@@ -2,7 +2,7 @@
 //  Form & Fieldset
 // ----------------------------------------------------------------------------
 
-@if $import-form-parents == true {
+@if $base-form-parents == true {
 
   form, fieldset {
     @extend %reset-form-elements;  // resets.scss
@@ -30,11 +30,11 @@ $ph-vendor-list: "::-moz-", ":-ms-input-", "::webkit-input-";
 $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
 
 
-@if $import-form-placeholder-text == true {
+@if $base-form-placeholder-text == true {
 
   @each $ph in $ph-vendor-list {
     #{$ph}plaeholder {
-      @include placeholder-text($form-c-placeholder, italic);
+      @include placeholder-text($c-form-placeholder, italic);
     }
   }
 
@@ -59,7 +59,7 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
 //  Form Elements: Input Elements
 // ----------------------------------------------------------------------------
 
-@if $import-form-inputs == true {
+@if $base-form-inputs == true {
 
   // General Form Element Reset
   input {
@@ -70,7 +70,7 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
 
   // Disabled input styling
   input[disabled] {
-    background-color: $form-c-disable-bg;
+    background-color: $c-form-disable-bg;
     cursor: not-allowed;
   }
 
@@ -78,7 +78,7 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
   // Read Only input styling
   input[readonly],
   input[readonly]:focus {
-    background: $form-c-disable-bg;
+    background-color: $c-form-disable-bg;
   }
 
 
@@ -106,7 +106,7 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
 //  Textarea Element
 // ----------------------------------------------------------------------------
 
-@if $import-form-textarea == true {
+@if $base-form-textarea == true {
 
   // Make textareas look like input areas, only bigger
   textarea {
@@ -119,7 +119,7 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
     vertical-align: top;
 
     &:required {
-      color: $form-c-required;
+      color: $c-form-required;
     }
   }
 
@@ -136,7 +136,7 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
 //  Form Elements: Button Elements
 // ----------------------------------------------------------------------------
 
-@if $import-form-buttons == true {
+@if $base-form-buttons == true {
 
   // General Form Element Reset
   button {
@@ -180,7 +180,7 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
 //  Select Element
 // ----------------------------------------------------------------------------
 
-@if $import-form-select == true {
+@if $base-form-select == true {
 
   select {
     @extend %txt-base;
@@ -202,7 +202,7 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
 //  Label Element
 // ----------------------------------------------------------------------------
 
-@if $import-form-labels == true {
+@if $base-form-labels == true {
 
   label {
     @extend %label;
@@ -221,7 +221,7 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
 //  Legend Element
 // ----------------------------------------------------------------------------
 
-@if $import-form-labels == true {
+@if $base-form-labels == true {
 
   legend {
     @extend %txt-h5;

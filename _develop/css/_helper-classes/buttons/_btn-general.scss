@@ -1,69 +1,98 @@
-@if $import-helper-btn-general == true {
-
 // ----------------------------------------------------------------------------
 //  General Button Styling
 // ----------------------------------------------------------------------------
 
-.btn {
-  @extend %btn;
-  @include btn-style($btn-bg, $btn-border, $btn-text, $btn-bg-2);
-}
+@if $helper-btn--general == true {
 
-.btn-prime {
-  @extend %btn;
-  @include btn-style($btn-bg-prime, $btn-border-prime, $btn-text-prime, $btn-bg-2-prime);
-}
-
-.btn-emph {
-  @extend %btn;
-  @include btn-style($btn-bg-emph, $btn-border-emph, $btn-text-emph, $btn-bg-2-emph);
-}
-
-.btn-neg {
-  @extend %btn;
-  @include btn-style($btn-bg-neg, $btn-border-neg, $btn-text-neg, $btn-bg-2-neg);
-}
-
-.btn-disable {
-  @extend .btn;
-  @include btn-style($btn-bg-disable, $btn-border-disable, $btn-text-disable, $btn-bg-disable);
-  cursor: not-allowed;
-  opacity: .3;
-
-  &:visited {
-    background-color: $btn-bg-disable;
+  .btn {
+    @extend %btn;
+    @include btn-style($btn-bg, $btn-border, $btn-text, $btn-bg-2);
   }
+
+} // -- end @if --
+
+
+@if $helper-btn--prime == true {
+
+  .btn-prime {
+    @extend %btn;
+    @include btn-style($btn-bg-prime, $btn-border-prime, $btn-text-prime, $btn-bg-2-prime);
+  }
+
+} // -- end @if --
+
+
+@if $helper-btn--emph == true {
+
+  .btn-emph {
+    @extend %btn;
+    @include btn-style($btn-bg-emph, $btn-border-emph, $btn-text-emph, $btn-bg-2-emph);
+  }
+
 }
+
+
+@if $helper-btn--neg == true {
+
+  .btn-neg {
+    @extend %btn;
+    @include btn-style($btn-bg-neg, $btn-border-neg, $btn-text-neg, $btn-bg-2-neg);
+  }
+
+} // -- end @if --
+
+
+@if $helper-btn--disable == true {
+
+  .btn-disable {
+    @extend .btn;
+    @include btn-style($btn-bg-disable, $btn-border-disable, $btn-text-disable, $btn-bg-disable);
+    cursor: not-allowed;
+    opacity: .3;
+
+    &:visited {
+      background-color: $btn-bg-disable;
+    }
+  }
+
+} // -- end @if --
+
+
+
+
 
 
 // ----------------------------------------------------------------------------
 //  Sizing Variations
 // ----------------------------------------------------------------------------
 
-.btn-tiny {
-  font-size: $txt-tiny;
-  padding: $btn-pad-tiny;
-}
+@if $helper-btn--sizing == true {
 
-.btn-small {
-  font-size: $txt-small;
-  padding: $btn-pad-small;
-}
+  .btn-tiny {
+    font-size: $txt-tiny;
+    padding: $btn-pad-tiny;
+  }
 
-.btn-large {
-  font-size: $txt-h3;
-  padding: $btn-pad-large;
-}
+  .btn-small {
+    font-size: $txt-small;
+    padding: $btn-pad-small;
+  }
 
-.btn-xlarge {
-  font-size: $txt-h2;
-  padding: $btn-pad-xlarge;
-}
+  .btn-large {
+    font-size: $txt-h3;
+    padding: $btn-pad-large;
+  }
 
+  .btn-xlarge {
+    font-size: $txt-h2;
+    padding: $btn-pad-xlarge;
+  }
 
-.btn-wide {
-  display: block;
-  width: 100%;
+  .btn-wide {
+    display: block;
+    width: 100%;
+  }
+
 }
 
 
@@ -71,81 +100,100 @@
 //  Border Radius Styling
 // ----------------------------------------------------------------------------
 
-.btn-soft {
-  @include border-radius($unit-px2);
-}
+@if $helper-btn--rounding == true {
 
-.btn-round {
-  @extend %circle;
-}
-
-
-// ----------------------------------------------------------------------------
-//  Close Button
-// ----------------------------------------------------------------------------
-
-// Clear button for search inputs
-.btn-clear {
-  @extend %content-empty;
-  @extend %sprite;
-  @include position-vertical-center(right, 6px, absolute);
-  background-position: -165px -28px;
-  border: none;
-  height: 66%;
-  width: 24px;
-
-  &:hover {
-    background-position: -165px -1px;
+  .btn-soft {
+    @include border-radius($unit-px2);
   }
+
+  .btn-round {
+    @extend %circle;
+  }
+
 }
 
 
-// Close buttons for modal windows
-.btn-close {
-  @include border-radius($circle);
-  @include position(top, -6px, left, -6px, absolute);
-  min-width: 1px!important;
-  padding: 5px 7px;
-  text-transform: uppercase;
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Clear & Close Buttons
+// ----------------------------------------------------------------------------
+
+@if $helper-btn--clear == true {
+
+  // Clear button for search inputs
+  .btn-clear {
+    @extend %content-empty;
+    @extend %sprite;
+    @include position-vertical-center(right, 6px, absolute);
+    background-position: -165px -28px;
+    border: none;
+    height: 66%;
+    width: 24px;
+
+    &:hover {
+      background-position: -165px -1px;
+    }
+  }
+
 }
+
+
+@if $helper-btn--close == true {
+
+  // Close buttons for modal windows
+  .btn-close {
+    @include border-radius($circle);
+    @include position(top, -6px, left, -6px, absolute);
+    min-width: 1px!important;
+    padding: 5px 7px;
+    text-transform: uppercase;
+  }
+
+}
+
+
+
+
 
 
 // ----------------------------------------------------------------------------
 //  Button Pills
 // ----------------------------------------------------------------------------
 
-// Pill container
-.btn-pill {
-  @extend %clearfix;
-  @extend %margin-bottom-base;
+@if $helper-btn--pills == true {
 
-  &>:first-child {
-    @include border-radius($unit-px2 0 0 $unit-px2);
+  // Pill container
+  .btn-pill {
+    @extend %clearfix;
+    @extend %margin-bottom-base;
+
+    &>:first-child {
+      @include border-radius($unit-px2 0 0 $unit-px2);
+    }
+
+    &>:last-child {
+      @include border-radius(0 $unit-px2 $unit-px2 0);
+    }
+
+    &>:not(:first-child) {
+      border-left: none;
+    }
+
+    .btn {
+      float: left;
+      margin-bottom: 0;
+      min-width: 100px;
+    }
+
+    .btn-small {
+      min-width: 80px;
+      padding-bottom: 6px;
+      padding-top: 6px;
+    }
   }
 
-  &>:last-child {
-    @include border-radius(0 $unit-px2 $unit-px2 0);
-  }
-
-  &>:not(:first-child) {
-    border-left: none;
-  }
-
-  .btn {
-    float: left;
-    margin-bottom: 0;
-    min-width: 100px;
-  }
-
-  .btn-small {
-    min-width: 80px;
-    padding-bottom: 6px;
-    padding-top: 6px;
-  }
-}
-
-
-// ----------------------------------------------------------------------------
 } // -- end @if --
-// ----------------------------------------------------------------------------
 

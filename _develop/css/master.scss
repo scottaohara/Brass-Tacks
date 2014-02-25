@@ -19,7 +19,7 @@
 //  Import Font(s)
 // ----------------------------------------------------------------------------
 
-  @import url(//fonts.googleapis.com/css?family=Open+Sans:300,400,700,700italic,600,400italic,300italic,600italic);
+@import url(//fonts.googleapis.com/css?family=Open+Sans:300,400,700,700italic,600,400italic,300italic,600italic);
 
 
 
@@ -44,8 +44,8 @@
 // Initial setup vars
 // ----------------------------------------------------------------------------
 
-$setup--border-box:                             true !default;
-$setup--html5__displays:                        true !default;
+$setup--border-box:                           true !default;
+$setup--html5__displays:                      true !default;
 
 
 
@@ -53,90 +53,90 @@ $setup--html5__displays:                        true !default;
 // Base Element Import Controller
 // ----------------------------------------------------------------------------
 
-  // Typography Elements
-  $import-abbr:                                 true!default;
-  $import-anchor:                               true!default;
-  $import-blockquote-basic:                     true!default;
-  $import-blockquote:                           true!default;
-  $import-bold-italic:                          true!default;
-  $import-cite:                                 true!default;
-  $import-dfn:                                  true!default;
-  $import-heading:                              true!default;
-  $import-ins:                                  true!default;
-  $import-mark:                                 true!default;
-  $import-paragraph:                            true!default;
-  $import-q:                                    true!default;
-  $import-small:                                true!default;
-  $import-sub-sup:                              true!default;
-  $import-text-selection:                       true!default;
+// Typography Elements
+$base-abbr:                                   true!default;
+$base-anchor:                                 true!default;
+$base-blockquote-basic:                       true!default;
+$base-blockquote:                             true!default;
+$base-bold-italic:                            true!default;
+$base-cite:                                   true!default;
+$base-dfn:                                    true!default;
+$base-heading:                                true!default;
+$base-ins:                                    true!default;
+$base-mark:                                   true!default;
+$base-paragraph:                              true!default;
+$base-q:                                      true!default;
+$base-small:                                  true!default;
+$base-sub-sup:                                true!default;
+$base-text-selection:                         true!default;
 
 
 
-  // Element Containers
-  $import-code:                                 true!default;
-  $import-kbd:                                  false!default;
-  $import-samp:                                 false!default;
-  $import-address:                              true!default;
-  $import-details:                              true!default;
-  $import-summary:                              true!default;
-  $import-pre:                                  true!default;
+// Element Containers
+$base-code:                                   true!default;
+$base-kbd:                                    false!default;
+$base-samp:                                   false!default;
+$base-address:                                true!default;
+$base-details:                                true!default;
+$base-summary:                                true!default;
+$base-pre:                                    true!default;
 
 
 
-  // Progress / Meter Elements
-  $import-meter:                                false!default;
-  $import-progress:                             false!default;
+// Progress / Meter Elements
+$base-meter:                                  false!default;
+$base-progress:                               false!default;
 
 
 
-  // Nav, Menu & List Elements
-  $import-def-list:                             true!default;
-  $import-ol-ul:                                true!default;
-  $import-menu:                                 true!default;
-  $import-nav:                                  true!default;
+// Nav, Menu & List Elements
+$base-def-list:                               true!default;
+$base-ol-ul:                                  true!default;
+$base-menu:                                   true!default;
+$base-nav:                                    true!default;
 
 
 
-  // Table Elements
-  $import-table-captions:                       false!default;
-  $import-table-parents:                        true!default;
-  $import-table-rows-cols:                      true!default;
+// Table Elements
+$base-table-captions:                         false!default;
+$base-table-parents:                          true!default;
+$base-table-rows-cols:                        true!default;
 
 
 
-  // Form Elements
-  $import-form-parents:                         true!default;
-  $import-form-buttons:                         true!default;
-  $import-form-inputs:                          true!default;
-  $import-form-select:                          true!default;
-  $import-form-labels:                          true!default;
-  $import-form-legend:                          true!default;
-  $import-form-placeholder-text:                true!default;
-  $import-form-textarea:                        true!default;
+// Form Elements
+$base-form-parents:                           true!default;
+$base-form-buttons:                           true!default;
+$base-form-inputs:                            true!default;
+$base-form-select:                            true!default;
+$base-form-labels:                            true!default;
+$base-form-legend:                            true!default;
+$base-form-placeholder-text:                  true!default;
+$base-form-textarea:                          true!default;
 
 
 
-  // Media Elements
-  $import-media-audio:                          true!default;
-  $import-media-embed-object:                   true!default;
-  $import-media-fig-figcaption:                 true!default;
-  $import-media-img-svg:                        true!default;
-  $import-media-video:                          true!default;
+// Media Elements
+$base-media-audio:                            true!default;
+$base-media-embed-object:                     true!default;
+$base-media-fig-figcaption:                   true!default;
+$base-media-img-svg:                          true!default;
+$base-media-video:                            true!default;
 
 
 
-  // Template Element
-  $import-template:                             false!default;
+// Template Element
+$base-template:                               false!default;
 
 
 
-  // HR Element
-  $import-hr:                                   true!default;
+// HR Element
+$base-hr:                                     true!default;
 
 
 
-  // Import Library
-  @import '_base-elements/__import';            // Imports above set to True
+// Import Library
+@import '_base-elements/__import';            // Imports above set to true
 
 
 
@@ -144,85 +144,107 @@ $setup--html5__displays:                        true !default;
 //  Helper Classes Import Controller
 // ----------------------------------------------------------------------------
 
-  // Button Helpers
-  $import-helper-btn-general:                   true!default;
-  $import-helper-btn-social:                    true!default;
+// Button Helpers
+$helper-btn--general:                         true!default;
+$helper-btn--prime:                           true!default;
+$helper-btn--emph:                            true!default;
+$helper-btn--neg:                             true!default;
+$helper-btn--disable:                         true!default;
+
+$helper-btn--social:                          true!default;
+$helper-btn--social__fb:                      true!default;
+$helper-btn--social__tw:                      true!default;
+$helper-btn--social__gp:                      true!default;
+
+$helper-btn--pills:                           true!default;
+$helper-btn--sizing:                          true!default;
+$helper-btn--rounding:                        true!default;
+
+$helper-btn--clear:                           true!default;
+$helper-btn--close:                           true!default;
 
 
 
-  // Content Element Helpers
-  $import-helper-emphasis:                      true!default;
-  $import-helper-displays:                      true!default;
-  $import-helper-media-element:                 true!default;
-  $import-helper-flip-effect:                   true!default;
+// Content Element Helpers
+$helper-emphasis:                             true!default;
+$helper-displays:                             true!default;
+$helper-media-element:                        true!default;
+$helper-flip-effect:                          true!default;
 
 
 
-  // Form Helpers
-  $import-helper-forms-general:                 true!default;
-  $import-helper-checkbox-radio:                true!default;
-  $import-helper-input-color:                   false!default;
-  $import-helper-input-file:                    false!default;
-  $import-helper-search-combo:                  true!default;
-  $import-helper-search-combo2:                 true!default;
-  $import-helper-select:                        true!default;
-  $import-helper-select-multi:                  true!default;
-  $import-helper-sizing:                        true!default;
-  $import-helper-validation:                    true!default;
+// Form Helpers
+$helper-forms--general:                       true!default;
+
+$helper-forms--input-color:                   false!default;
+$helper-forms--input-file:                    false!default;
+$helper-forms--search-combo:                  true!default;
+$helper-forms--search-combo2:                 true!default;
+
+$helper-forms--custom-checkbox-radio:         true!default;
+$helper-forms--custom-checkbox-radio--slider: true!default;
+
+$helper-forms--select:                        true!default;
+$helper-forms--multi-select:                  true!default;
+
+$helper-forms--sizing:                        true!default;
+$helper-forms--validation:                    true!default;
 
 
 
-  // Layout & Table Helpers
-  $import-helper-table:                         true!default;
-  $import-helper-dividers:                      true!default;
-  $import-helper-floats-clears:                 true!default;
-  $import-helper-grids:                         true!default;
+// Layout & Table Helpers
+$helper-table:                                true!default;
+$helper-dividers:                             true!default;
+$helper-floats-clears:                        true!default;
+$helper-grids--standard:                      true!default;
+$helper-grids--equal-size:                    true!default;
 
 
 
-  // Messaging Helpers
-  $import-helper-loading:                       false!default;
-  $import-helper-messaging:                     true!default;
-  $import-helper-tooltip:                       true!default;
+// Messaging Helpers
+$helper-loading:                              false!default;
+$helper-messaging:                            true!default;
+$helper-tooltip:                              true!default;
 
 
 
-  // Nav Helpers
-  $import-helper-nav-breadcrumbs:               true!default;
-  $import-helper-nav-dropmenu:                  true!default;
-  $import-helper-nav-fixed:                     true!default;
-  $import-helper-nav-grid:                      true!default;
-  $import-helper-nav-horizontal:                true!default;
-  $import-helper-nav-mobile:                    true!default;
-  $import-helper-nav-vertical:                  true!default;
+// Nav Helpers
+$helper-nav--breadcrumbs:                     true!default;
+$helper-nav--dropmenu:                        true!default;
+$helper-nav--fixed:                           true!default;
+$helper-nav--grid:                            true!default;
+$helper-nav--horizontal:                      true!default;
+$helper-nav--horizontal-centered:             true!default;
+$helper-nav--mobile:                          true!default;
+$helper-nav--vertical:                        true!default;
 
 
 
-  // Typography Helpers
-  $import-helper-type-alignment:                true!default;
-  $import-helper-type-callouts--block:          true!default;
-  $import-helper-type-callouts--messaging:      true!default;
-  $import-helper-type-callouts--decoration:     true!default;
-  $import-helper-type-callouts--slant:          true!default;
-  $import-helper-type-lists:                    true!default;
+// Typography Helpers
+$import-helper-type-alignment:                true!default;
+$import-helper-type-callouts--block:          true!default;
+$import-helper-type-callouts--messaging:      true!default;
+$import-helper-type-callouts--decoration:     true!default;
+$import-helper-type-callouts--slant:          true!default;
+$import-helper-type-lists:                    true!default;
 
 
 
-  // Sizing
-  $import-helper-type-sizing--xlarge:           true!default;
-  $import-helper-type-sizing--headings:         true!default;
-  $import-helper-type-sizing--base:             true!default;
-  $import-helper-type-sizing--small:            true!default;
+// Sizing
+$import-helper-type-sizing--xlarge:           true!default;
+$import-helper-type-sizing--headings:         true!default;
+$import-helper-type-sizing--base:             true!default;
+$import-helper-type-sizing--small:            true!default;
 
-  // Readability Modifiers
-  $import-helper-type--line-height:             true!default;
-  $import-helper-type--indenting:               true!default;
-  $import-helper-type--smoothing:               true!default;
+// Readability Modifiers
+$import-helper-type--line-height:             true!default;
+$import-helper-type--indenting:               true!default;
+$import-helper-type--smoothing:               true!default;
 
 
 
-  // Import Library
-  @import '_helper-classes/__import';           // Imports above set to True
+// Import Library
+@import '_helper-classes/__import';           // Imports above set to true
 
 
 
@@ -230,19 +252,19 @@ $setup--html5__displays:                        true !default;
 //  Additional Global Styling
 // ----------------------------------------------------------------------------
 
-  // Default Print Style Resets
-  $import-global-print:                         true!default;
+// Default Print Style Resets
+$import-global-print:                         true!default;
 
 
 
-  // Quick-Fix Styling **
-  $import-global-quick-fix:                     false!default;
+// Quick-Fix Styling **
+$import-global-quick-fix:                     false!default;
 
 
 
-  // Import Library
-  @import '__globals/global-print';             // Print styles
-  @import '__globals/quick-fix';                // **
+// Import Library
+@import '__globals/global-print';             // Print styles
+@import '__globals/quick-fix';                // **
 
 
 

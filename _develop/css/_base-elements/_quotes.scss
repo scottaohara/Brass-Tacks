@@ -2,7 +2,7 @@
 //  Quote Element
 // ----------------------------------------------------------------------------
 
-@if $import-q == true {
+@if $base-q == true {
 
   // Set consistent quotes across browsers
   q {
@@ -22,14 +22,14 @@
 
 // Basic Blockquote Setup
 
-@if $import-blockquote-basic == true {
+@if $base-blockquote-basic == true {
 
   blockquote {
     @extend %reset-spacing;
     @extend %margin-bottom-base;
     @extend %txt-h6;
     @extend %italic;
-    color: $c-darker;
+    color: $c-blockquote;
   }
 
 }
@@ -37,21 +37,21 @@
 
 // In-depth blockquote setup
 
-@if $import-blockquote == true {
+@if $base-blockquote == true {
 
   blockquote {
     @extend %reset-spacing;
     @extend %margin-bottom-base;
     @extend %txt-h6;
     @extend %italic;
-    color: $c-darker;
+    color: $c-blockquote;
 
     p {
       margin-bottom: 0;
 
       &:after,
       &:before {
-        font: 400 $f-georgia $txt-h4;
+        font: 400 $f-blockquote-quotes $s-blockquote-quotes;
         line-height: 0;
         position: relative;
         top: 2px;
@@ -69,8 +69,8 @@
     }
 
     small {
-      color: $c-dark-grey;
-      font-size: $txt-tiny;
+      color: $c-blockquote-small;
+      font-size: $s-blockquote-small;
       font-style: normal;
       margin-bottom: 0;
       padding-left: $unit-px3;
@@ -80,5 +80,18 @@
       }
     }
   }
+
+  // Example mark-up:
+  // --------------------------------------------------------
+  // <blockquote>
+  //   <p>
+  //     copy goes here
+  //   </p>
+  //   <small>
+  //     <cite>
+  //       Citation goes here
+  //     </cite>
+  //   </small>
+  // </blockquote>
 
 } // -- end @if --

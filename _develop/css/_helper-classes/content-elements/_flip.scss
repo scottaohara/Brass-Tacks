@@ -1,56 +1,53 @@
-@if $import-helper-flip-effect == true{
-
 // ----------------------------------------------------------------------------
 //  Flip Effect
 // ----------------------------------------------------------------------------
 
-// Flip Container
-.flip-container {
-  @extend %preserve-3d;
-  perspective: 1000px;
+@if $helper-flip-effect == true {
 
-  &:hover {
-    .flip-back {
-      @include transform(rotateY(0deg));
-    }
+  // Flip Container
+  .flip-container {
+    @extend %preserve-3d;
+    perspective: 1000px;
 
-    .flip-front {
-      @include transform(rotateY(-180deg));
+    &:hover {
+      .flip-back {
+        @include transform(rotateY(0deg));
+      }
+
+      .flip-front {
+        @include transform(rotateY(-180deg));
+      }
     }
   }
-}
 
 
-// Container of Flipping Views
-.flipper {
-  @extend %preserve-3d;
-  @include transition(.6s);
-  position: relative;
-}
+  // Container of Flipping Views
+  .flipper {
+    @extend %preserve-3d;
+    @include transition(.6s);
+    position: relative;
+  }
 
 
-// Front View Styling
-.flip-front {
-  @extend %flip-back-front;
-  @include transform(rotateY(0deg));
-  z-index: 2;
-}
+  // Front View Styling
+  .flip-front {
+    @extend %flip-back-front;
+    @include transform(rotateY(0deg));
+    z-index: 2;
+  }
 
 
-// Back View Styling
-.flip-back {
-  @extend %flip-back-front;
-  @include transform(rotateY(-180deg));
-}
+  // Back View Styling
+  .flip-back {
+    @extend %flip-back-front;
+    @include transform(rotateY(-180deg));
+  }
 
 
-// Additional Styling for multiple flip units
-.flip-container, .flip-front, .flip-back {
-  @include flip-units($flip-height: 550px);
-  max-width: 100%;
-}
+  // Additional Styling for multiple flip units
+  .flip-container, .flip-front, .flip-back {
+    @include flip-units($flip-height: 550px);
+    max-width: 100%;
+  }
 
-
-// ----------------------------------------------------------------------------
 } // -- end @if --
-// ----------------------------------------------------------------------------

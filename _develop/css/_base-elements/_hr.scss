@@ -2,11 +2,11 @@
 //  HR Element
 // ----------------------------------------------------------------------------
 
-@if $import-hr == true {
+@if $base-hr == true {
 
   hr {
     border: 0;
-    border-bottom: 1px solid rgba(0,0,0,.2);
+    border-bottom: $hr-border;
     display: block;
     height: 1px;
     margin: $unit-px4 0;

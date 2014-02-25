@@ -2,7 +2,7 @@
 //  Table Parent Elements
 // ----------------------------------------------------------------------------
 
-@if $import-table-parents == true {
+@if $base-table-parents == true {
 
   table {
     @extend %reset-border;
@@ -31,7 +31,7 @@
 //  Row & Column Elements
 // ----------------------------------------------------------------------------
 
-@if $import-table-rows-cols == true {
+@if $base-table-rows-cols == true {
 
   // Table Row
   // tr {}
@@ -64,7 +64,7 @@
 //  Caption Element
 // ----------------------------------------------------------------------------
 
-@if $import-table-captions == true {
+@if $base-table-captions == true {
 
   caption {
     @extend %txt-h6;

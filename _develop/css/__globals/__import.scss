@@ -1,34 +1,37 @@
 // ----------------------------------------------------------------------------
 //  Global Imports
 // ----------------------------------------------------------------------------
-//
+
 // Import various mixins, silent classes and variables used throughout the
-// Brass Framework. Some of these may be used quite frequently, and others
-// not at all.
+// Brass Tacks Framework. Some of these may be used quite frequently, and
+// others not at all.
 
 
 // ----------------------------------------------------------------------------
 //  Variables
 // ----------------------------------------------------------------------------
 
-// General Vars
+// Brass Tacks Default Var library
 @import 'vars/__var-library/var-break-points';
 @import 'vars/__var-library/var-colors';
 @import 'vars/__var-library/var-fonts';
 @import 'vars/__var-library/var-measurement-units';
 @import 'vars/__var-library/var-shadows';
 
-// Secondary Vars
+
+// Brass Tacks Default Styling Variables
 @import 'vars/var-body';
+@import 'vars/var-type';
 @import 'vars/var-buttons';
 @import 'vars/var-gradients';
 @import 'vars/var-forms';
 @import 'vars/var-code';
+@import 'vars/var-progress';
 
 
-// ----------------------------------------------------------------
+// ----------------------------------------------------------------------------
 //  Components (mixins & silent classes)
-// ----------------------------------------------------------------
+// ----------------------------------------------------------------------------
 
 // Base component
 @import 'components/_partials/vendor';
@@ -99,8 +102,6 @@
 @import 'components/typography/selection-styling';
 @import 'components/typography/sizing-weight-height';
 @import 'components/typography/text-truncate';
-
-
 
 
 

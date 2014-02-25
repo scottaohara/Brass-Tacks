@@ -2,7 +2,7 @@
 //  Navigation Elements
 // ----------------------------------------------------------------------------
 
-@if $import-nav == true {
+@if $base-nav == true {
 
   nav {
     @extend %d-block;
@@ -35,11 +35,17 @@
   // </nav>
 
 } // -- end @if --
+
+
+
+
+
+
 // ----------------------------------------------------------------------------
 //  Menu Element
 // ----------------------------------------------------------------------------
 
-@if $import-menu == true{
+@if $base-menu == true {
 
   menu {
     @extend %list-unstyled;
@@ -51,5 +57,19 @@
       margin: 0 0 8px;
     }
   }
+
+  // Example mark-up:
+  // ----------------------------------------------------------------------------
+  // <menu class="">
+  //   <li>
+  //     <a href="#!" title="">Menu Item 1</a>
+  //   </li>
+  //   <li>
+  //     <a href="#!" title="">Menu Item 2</a>
+  //   </li>
+  //   <li>
+  //     <a href="#!" title="">Menu Item 3</a>
+  //   </li>
+  // </menu>
 
 } // -- end @if --

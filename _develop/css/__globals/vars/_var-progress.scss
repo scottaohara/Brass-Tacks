@@ -1,12 +1,5 @@
 // ----------------------------------------------------------------------------
-//  Paragraph Element
+//  Progress & Meter
 // ----------------------------------------------------------------------------
 
-@if $import-paragraph == true {
-
-  p {
-    @extend %margin-bottom-base;
-    margin-top: 0;
-  }
-
-} // -- end @if --
+$c-progress--bg:            $c-grey !default;

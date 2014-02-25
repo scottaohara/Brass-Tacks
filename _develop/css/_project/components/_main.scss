@@ -13,3 +13,15 @@
   color: $c-dark;
   padding: $unit-px;
 }
+
+
+
+// Add fixed width left or right column
+.fixed-width-left {
+  @include col-fixed-width(260px, left);
+}
+
+.fixed-width-right {
+  @include col-fixed-width(260px, right);
+}
+// use .col-fixed to add padding for the fixed column on the .row

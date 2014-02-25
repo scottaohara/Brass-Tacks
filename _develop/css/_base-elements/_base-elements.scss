@@ -21,10 +21,11 @@
 // ----------------------------------------------------------------------------
 html, body {
   @extend %reset-spacing;
-  background-color: $body-bg-color;
-  color: $body-txt-color;
-  font: $body-font-weight $body-font-size/$body-line-height $body-font-family;
+  background-color: $c-body--bg;
+  color: $c-body--text;
+  font: $f-body--weight $f-body--size $f-body--family;
   height: 100%;
+  line-height: $f-body--line-height;
   text-rendering: optimizeLegibility;
      -moz-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
@@ -37,9 +38,9 @@ html, body {
 
 // Highlight Text Selection
 // ----------------------------------------------------------------------------
-@if $import-text-selection == true {
+@if $base-text-selection == true {
 
-  @include select-text($c-brand-1, $c-white, none);
+  @include select-text($c-select-text--bg, $c-select-text--text, none);
 
 } // -- end @if --
 
@@ -62,5 +63,33 @@ html, body {
   [hidden] {
     @extend %d-none;
   }
+
+} // -- end @if --
+
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Anchor Element
+// ----------------------------------------------------------------------------
+
+@if $base-anchor == true {
+
+  a, a:visited {
+    background-color: transparent; // *
+    color: $c-link;
+
+    &:hover, &:active {
+      @extend %outline-none;
+      color: $c-link-h;
+    }
+
+    &:focus {
+      outline: thin dotted;
+    }
+  }
+
+  // * Removes grey background color from active links in IE10
 
 } // -- end @if --

@@ -1,54 +1,76 @@
-@if $import-helper-messaging == true{
-
 // ----------------------------------------------------------------------------
 //  Messaging
 // ----------------------------------------------------------------------------
 
-.message-position {
-  @include position(top, 0, left, $unit-per, fixed);
-  width: 80%;
-}
+@if $helper-messaging == true {
 
-.message-container {
-  @include transition(all .3s linear);
-  border: 1px solid;
-  margin-bottom: $unit-em;
-  padding: $unit-em*.35 $unit-em*.5;
-  position: relative;
-  text-shadow: 0 1px 1px rgba(255,255,255,.6);
-}
+  .message-position {
+    @include position(top, 0, left, $unit-per, fixed);
+    width: 80%;
+  }
 
-.message-title {}
+  .message-container {
+    @include transition(all .3s linear);
+    border: 1px solid;
+    margin-bottom: $unit-em;
+    padding: $unit-em*.35 $unit-em*.5;
+    position: relative;
+    text-shadow: 0 1px 1px rgba(255,255,255,.6);
+  }
 
-.message-text {
-  margin-bottom: 0;
-}
+  .message-title {}
 
-.message-warning {
-  @include messaging-unit($c-orange, $c-dark);
-}
+  .message-text {
+    margin-bottom: 0;
+  }
 
-.message-error {
-  @include messaging-unit($c-red, $c-off-white);
-}
+  .message-warning {
+    @include messaging-unit($c-orange, $c-dark);
+  }
 
-.message-success {
-  @include messaging-unit($c-green, $c-off-white);
-}
+  .message-error {
+    @include messaging-unit($c-red, $c-off-white);
+  }
 
-.message-info {
-  @include messaging-unit($c-blue, $c-off-white);
-}
+  .message-success {
+    @include messaging-unit($c-green, $c-off-white);
+  }
 
-.close-message {
-  @extend %circle;
-  @include position(top, -$unit-em*.5, right, -$unit-em*.5, absolute);
-  border: 1px solid;
-  padding: $unit-px $unit-px3;
-  text-decoration: none;
-}
+  .message-info {
+    @include messaging-unit($c-blue, $c-off-white);
+  }
 
+  .close-message {
+    @extend %circle;
+    @include position(top, -$unit-em*.5, right, -$unit-em*.5, absolute);
+    border: 1px solid;
+    padding: $unit-px $unit-px3;
+    text-decoration: none;
+  }
 
-// ----------------------------------------------------------------------------
 } // -- end @if --
+
+
+
+
+
+
 // ----------------------------------------------------------------------------
+//  Tooltips
+// ----------------------------------------------------------------------------
+
+@if $helper-tooltip == true {
+
+  // Tool tip example
+  [data-tooltip]{
+    @extend %tool-tip;
+
+    &:after {
+      @include border-radius($unit-px);
+      background: rgba(255,255,255,.95);
+      border: 1px solid $c-dark;
+      color: $c-dark;
+    }
+  }
+
+} // -- end @if --

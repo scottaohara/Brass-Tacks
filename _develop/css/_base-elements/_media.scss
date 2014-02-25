@@ -2,13 +2,13 @@
 //  Media Elements: Images & SVG
 // ----------------------------------------------------------------------------
 
-@if $import-media-img-svg == true {
+@if $base-media-img-svg == true {
 
   // If an image doesn't load, make the alt text noticeable
   img {
     @extend %reset-border;
     @extend %italic;
-    color: $c-red;
+    color: $c-message--error;
     max-width: 100%;
   }
 
@@ -28,7 +28,7 @@
 //  Media Elements: Figure & Figure Caption
 // ----------------------------------------------------------------------------
 
-@if $import-media-fig-figcaption == true {
+@if $base-media-fig-figcaption == true {
 
   figure, figcaption {
     @extend %d-block;
@@ -53,7 +53,7 @@
 //  Media Elements: Embed & Object
 // ----------------------------------------------------------------------------
 
-@if $import-media-embed-object == true {
+@if $base-media-embed-object == true {
 
   embed,
   object {
@@ -71,7 +71,7 @@
 //  Media Elements: Audio
 // ----------------------------------------------------------------------------
 
-@if $import-media-audio == true {
+@if $base-media-audio == true {
 
   audio {
     @extend %reset-media-elements;
@@ -93,7 +93,7 @@
 //  Media Elements: Video
 // ----------------------------------------------------------------------------
 
-@if $import-media-video == true {
+@if $base-media-video == true {
 
   video {
     @extend %reset-media-elements;

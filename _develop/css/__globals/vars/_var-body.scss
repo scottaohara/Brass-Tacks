@@ -2,11 +2,19 @@
 //  Body / HTML Vars
 // ----------------------------------------------------------------------------
 
-$body-bg-color:           $c-off-white !default;
-$body-txt-color:          $c-dark !default;
+// Colors
+$c-body--bg:                $c-off-white !default;
+$c-body--text:              $c-dark !default;
 
-$body-font-family:        $f-brand !default;
-$body-font-weight:        300;
-$body-font-size:          100%;
-$body-line-height:        1.5;
+$c-select-text--bg:         $c-brand-1 !default;
+$c-select-text--text:       $c-white !default;
 
+$c-link:                    $c-brand-2 !default;
+$c-link-h:                  $c-brand-3 !default;
+
+
+// Fonts
+$f-body--family:            $f-brand !default;
+$f-body--weight:            300 !default;
+$f-body--size:              100% !default;
+$f-body--line-height:       1.5 !default;

@@ -2,13 +2,13 @@
 //  Progress Element
 // ----------------------------------------------------------------------------
 
-@if $import-progress == true {
+@if $base-progress == true {
 
   progress {
     @include vendor(appearance, none, $o: false, $ms: false);
     @include border-radius($circle);
     @include box-shadow(0 1px 5px rgba(0,0,0,.25), 0 0 2px $c-white inset);
-    background: $c-grey;
+    background: $c-progress--bg;
     border: 1px solid #AFAFAF;
     height: 18px;
     max-width: 400px;
@@ -54,10 +54,10 @@
 //  Meter Element
 // ----------------------------------------------------------------------------
 
-@if $import-meter == true {
+@if $base-meter == true {
 
-  meter {
+  //meter {
     // put something here someday
-  }
+  //}
 
 } // -- end @if --

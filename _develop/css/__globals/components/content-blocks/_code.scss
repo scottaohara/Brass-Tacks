@@ -2,9 +2,9 @@
 //  Code Block Coloring
 // ----------------------------------------------------------------------------
 
-@mixin code-block($c-code-bg, $code-border, $code-text-c, $code-border-emph: false) {
-  background-color: $code-bg-c;
-  border: $code-border;
+@mixin code-block($cd-bg: $c-code--bg, $cd-border: $code-border, $cd-txt: $c-code--text, $code-border-emph: false) {
+  background-color: $cd-bg;
+  border: $cd-border;
   border-left-width: $code-border-emph;
-  color: $code-text-c;
+  color: $cd-txt;
 }
