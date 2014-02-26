@@ -2,7 +2,7 @@
 //  Text List Styles
 // ----------------------------------------------------------------------------
 
-@if $import-helper-type-lists == true {
+@if $helper-type--lists == true {
 
   // Kill list styling - removes list markings & padding
   .list-unstyled {
@@ -15,8 +15,6 @@
     list-style-type: decimal;
   }
 
-
   // Inline lists are located in the content-elements > inline.scss file
-
 
 } // -- end @if --

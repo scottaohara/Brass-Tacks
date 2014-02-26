@@ -13,29 +13,3 @@ $f-tahoma:          Tahoma, Geneva, sans-serif;
 $f-verdana:         Verdana, Geneva, sans-serif;
 $f-monospace:       monospace, serif;
 $f-times:           TimesNewRoman, "Times New Roman", Times, Georgia, serif;
-
-$f-brand:           "Open Sans", $f-arial !default;
-$f-brand-alt:       $f-georgia !default;
-
-
-
-// ----------------------------------------------------------------------------
-//  Font Size Declarations
-// ----------------------------------------------------------------------------
-
-$txt-base:          1em !default; // 1em = 16px
-
-$txt-xxlarge:       $txt-base * 4.375 !default;   // 70px
-$txt-xlarge:        $txt-base * 3.75 !default;    // 60px
-$txt-large:         $txt-base * 3.5 !default;     // 56px
-
-$txt-h1:            $txt-base * 3.125 !default;   // 50px
-$txt-h2:            $txt-base * 2.5 !default;     // 40px
-$txt-h3:            $txt-base * 2 !default;       // 32px
-$txt-h4:            $txt-base * 1.625 !default;   // 26px
-$txt-h5:            $txt-base * 1.25 !default;    // 20px
-$txt-h6:            $txt-base * 1.125 !default;   // 18px
-
-$txt-small:         $txt-base * .875 !default;    // 14px
-$txt-tiny:          $txt-base * .75 !default;     // 12px
-$txt-mini:          $txt-base * .625 !default;    // 10px

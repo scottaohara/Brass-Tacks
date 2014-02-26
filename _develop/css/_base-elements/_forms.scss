@@ -41,7 +41,7 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
   @each $ph in $ph-vendor-list2 {
     input[required] {
       #{$ph}plaeholder {
-        font-size: italic;
+        @include placeholder-text($c-form-required, italic);
       }
     }
   }
@@ -65,32 +65,30 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
   input {
     @extend %txt-base;
     @extend %reset-form-elements;
-  }
 
+    // Disabled input styling
+    &[disabled] {
+      background-color: $c-form-disable-bg;
+      cursor: not-allowed;
+    }
 
-  // Disabled input styling
-  input[disabled] {
-    background-color: $c-form-disable-bg;
-    cursor: not-allowed;
-  }
+    // Read Only input styling
+    &[readonly],
+    &[readonly]:focus {
+      background-color: $c-form-disable-bg;
+    }
 
-
-  // Read Only input styling
-  input[readonly],
-  input[readonly]:focus {
-    background-color: $c-form-disable-bg;
+    // Makes it look like a normal text input,
+    // only with a (x) when text has been entered
+    &[type='search'] {
+      -webkit-appearance: textfield;
+    }
   }
 
 
   // Removes extra inner padding for webkit
   input[type='search']::-webkit-search-decoration {
     -webkit-appearance: none;
-  }
-
-
-  // Makes it look like a normal text input, only with a (x) when text has been entered
-  input[type='search'] {
-    -webkit-appearance: textfield;
   }
 
 } // -- end @if --

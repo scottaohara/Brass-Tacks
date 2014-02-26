@@ -66,10 +66,9 @@
     @extend %tool-tip;
 
     &:after {
-      @include border-radius($unit-px);
-      background: rgba(255,255,255,.95);
-      border: 1px solid $c-dark;
-      color: $c-dark;
+      background-color: $c-message--bg;
+      border: $c-message--border;
+      color: $c-message--txt
     }
   }
 

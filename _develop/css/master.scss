@@ -19,7 +19,7 @@
 //  Import Font(s)
 // ----------------------------------------------------------------------------
 
-@import url(//fonts.googleapis.com/css?family=Open+Sans:300,400,700,700italic,600,400italic,300italic,600italic);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,700italic,600,400italic,300italic,600italic);
 
 
 
@@ -36,7 +36,7 @@
   @import '__globals/__import';               // Includes global libraries
 
   // Revisions to base settings / styling
-  @import '_setup';
+  @import '_project/setup';
 
 
 
@@ -221,62 +221,27 @@ $helper-nav--vertical:                        true!default;
 
 
 // Typography Helpers
-$import-helper-type-alignment:                true!default;
-$import-helper-type-callouts--block:          true!default;
-$import-helper-type-callouts--messaging:      true!default;
-$import-helper-type-callouts--decoration:     true!default;
-$import-helper-type-callouts--slant:          true!default;
-$import-helper-type-lists:                    true!default;
+$helper-type--alignment:                      true!default;
+$helper-type--callouts__block:                true!default;
+$helper-type--callouts__messaging:            true!default;
+$helper-type--callouts__decoration:           true!default;
+$helper-type--callouts__slant:                true!default;
+$helper-type--lists:                          true!default;
 
 
 
 // Sizing
-$import-helper-type-sizing--xlarge:           true!default;
-$import-helper-type-sizing--headings:         true!default;
-$import-helper-type-sizing--base:             true!default;
-$import-helper-type-sizing--small:            true!default;
+$helper-type--sizing__xlarge:                 true!default;
+$helper-type--sizing__headings:               true!default;
+$helper-type--sizing__base:                   true!default;
+$helper-type--sizing__small:                  true!default;
 
 // Readability Modifiers
-$import-helper-type--line-height:             true!default;
-$import-helper-type--indenting:               true!default;
-$import-helper-type--smoothing:               true!default;
+$helper-type--line-height:                    true!default;
+$helper-type--indenting:                      true!default;
+$helper-type--smoothing:                      true!default;
 
 
 
 // Import Library
 @import '_helper-classes/__import';           // Imports above set to true
-
-
-
-// ----------------------------------------------------------------------------
-//  Additional Global Styling
-// ----------------------------------------------------------------------------
-
-// Default Print Style Resets
-$import-global-print:                         true!default;
-
-
-
-// Quick-Fix Styling **
-$import-global-quick-fix:                     false!default;
-
-
-
-// Import Library
-@import '__globals/global-print';             // Print styles
-@import '__globals/quick-fix';                // **
-
-
-
-// ** Quick Fix
-// ----------------------------------------------------------------------------
-
-// The Quick Fix style sheet exists so that developers can add quick,
-// potentially hacky-by-necessity code to our CSS, without needing to worry
-// about making sure they aren't writing the most optimal of CSS, or
-// potentially adding bugs into approved code.
-
-// This is not a file that should have code in it for an extended period of
-// time. Quick Fix code should be merged back into the main code library
-// either by simply adding the new rules to the appropriate file, or by
-// refactoring existing code to negate the need for the Quick Fix.

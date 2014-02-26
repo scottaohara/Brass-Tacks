@@ -13,7 +13,7 @@
 // Inside the text area for the media element, make sure the final
 // element has a margin-bottom of zero so as not to add increase the
 // margin-bottom of the main media element.
-.media-text >:last-child {
+.media-text > :last-child {
   margin-bottom: 0;
 }
 
@@ -51,6 +51,7 @@
 // to long-form content areas. These are helper classes to make titles to
 // reduce the spacing between titles, subtitles and additional text / elements
 // inside of a media element.
+
 .media-title,
 .media-subtitle {
   line-height: 1.3;
@@ -133,6 +134,5 @@
     @include calc(max-width, '70% - 16px');
   }
 }
-
 
 } // -- end @if --

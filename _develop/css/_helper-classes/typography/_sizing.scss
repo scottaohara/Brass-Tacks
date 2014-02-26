@@ -14,7 +14,7 @@
 //  Super Large Fonts
 // ----------------------------------------------------------------------------
 
-@if $import-helper-type-sizing--xlarge == true {
+@if $helper-type--sizing__xlarge == true {
 
   // output classes based on variable list
   $large-list:  xxlarge xlarge large;
@@ -37,7 +37,7 @@
 //  Heading Sized Font Classes
 // ----------------------------------------------------------------------------
 
-@if $import-helper-type-sizing--headings == true {
+@if $helper-type--sizing__headings == true {
 
   // loop to output txt-h1 to 6
   @for $i from 1 through 6 {
@@ -57,9 +57,11 @@
 //  Normal Sized Font Class
 // ----------------------------------------------------------------------------
 
-@if $import-helper-type-sizing--base == true {
+@if $helper-type--sizing__base == true {
 
-.txt-base     { @extend %txt-base; } // 1em = 16px
+  .txt-base {
+    @extend %txt-base; // 1em = 16px
+  }
 
 } // -- end @if --
 
@@ -72,7 +74,7 @@
 //  Small Sized Font Classes
 // ----------------------------------------------------------------------------
 
-@if $import-helper-type-sizing--small == true {
+@if $helper-type--sizing__small == true {
 
   // output classes based on variable list
   $small-list:  small tiny mini;

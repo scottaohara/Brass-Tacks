@@ -145,9 +145,9 @@
 
   // Close buttons for modal windows
   .btn-close {
-    @include border-radius($circle);
     @include position(top, -6px, left, -6px, absolute);
-    min-width: 1px!important;
+    @extend %circle;
+    min-width: 1px !important;
     padding: 5px 7px;
     text-transform: uppercase;
   }

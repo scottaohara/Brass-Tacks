@@ -1,4 +1,4 @@
-@if $import-helper-type-callouts--block == true {
+@if $helper-type--callouts__block == true {
 
 // ----------------------------------------------------------------------------
 //  Callout Text
@@ -19,7 +19,6 @@
     }
   }
 
-
 } // -- end @if --
 
 
@@ -29,7 +28,7 @@
 //  Callout Text -- Messaging
 // ----------------------------------------------------------------------------
 
-@if $import-helper-type-callouts--messaging == true {
+@if $helper-type--callouts__messaging == true {
 
   // Text Coloring for Validation Messaging
   .txt-success {
@@ -44,7 +43,6 @@
     color: $c-red;
   }
 
-
 } // -- end @if --
 
 
@@ -54,7 +52,7 @@
 //  Callout Text -- decoration
 // ----------------------------------------------------------------------------
 
-@if $import-helper-type-callouts--decoration == true {
+@if $helper-type--callouts__decoration == true {
 
   // Apply bolding to text without need for semantics
   .bold {
@@ -71,7 +69,6 @@
     padding: $unit-px;
   }
 
-
 } // -- end @if --
 
 
@@ -81,7 +78,7 @@
 //  Callout Text -- Tilt Text
 // ----------------------------------------------------------------------------
 
-@if $import-helper-type-callouts--slant == true {
+@if $helper-type--callouts__slant == true {
 
   // Background Text Highlight - Skewed
   .txt-slant {
@@ -106,6 +103,5 @@
   // <span class="txt-slant">
   //   <span class="txt-correct">Text Goes here</span>
   // </span>
-
 
 } // -- end @if --

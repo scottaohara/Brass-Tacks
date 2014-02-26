@@ -1,15 +1,11 @@
 # Brass Tacks
-###(Last updated: 0.9.0 - January. 20, 2014)
+###(Last updated: 0.9.1 - February. XX, 2014)
 
-Brass Tacks is (will be) a professional front-end HTML5 and SCSS framework that incorporates and
-standardizes many widely used HTML and CSS elements.
+Brass Tacks is (will be) a professional front-end HTML5 and SCSS framework that incorporates and standardizes many widely used HTML and CSS elements.
 
-Once Brass Tacks reaches the 1.0 release, there will be a full listing of thank yous to the
-many people who's work has influenced this framework.
+Once Brass Tacks reaches the 1.0 release, there will be a full listing of thank yous to the many people who's work has influenced this framework.
 
-As of version 0.8.0, much of the code from previous releases has been significantly rewritten.
-Until a final 1.0 stamp can be put on the code, there won't be a 'live' version of the framework
-available for viewing.
+As of version 0.9.1, even more of the code from previous releases has been significantly rewritten. Until a final 1.0 stamp can be put on the code, there won't be a 'live' version of the framework available for viewing.
 
 
 
@@ -52,36 +48,33 @@ Enter <code>gulp watch</code> to fire of tasks on change to Sass, images or Java
 
 ### Sass Specifics
 
-Brass Tacks' Sass files are split up into four base folders to help
-keep the code organized and easy to find.
+Brass Tacks' Sass files are split up into four base folders to help keep the code organized and easy to find.
 
 * __globals
 * _base-elements
 * _helper-classes
-* _project-specific
+* _project
 
-Each folder contains an '__import.scss' file to compile and arrange
-all of the sub-files in each folder. This means there is only one file per
+Each folder contains an '__import.scss' file to compile and arrange all of the sub-files in each folder. This means there is only one file per
 folder type to import into master.scss.
 
-E.g. The __globals folder contains all mixins, placeholders and vars that are used
-across the entire framework.
+E.g. The __globals folder contains all mixins, placeholders and vars that are used across the entire framework.
 
 All the individual folders' import files collect into either:
 
 * master.scss
 * project.scss (or whatever you name this file.)
 
-Finally, by running gulp, these files are compiled to expanded and minified CSS
-files and exported to the build/assets/css folder.
+Finally, by running gulp, these files are compiled to expanded and minified CSS files and exported to the build/assets/css folder.
 
 
 #### Customizing Brass Tacks
 
 All the base and helper files in Brass Tacks are wrapped in conditional @if statements.
 
-Customizing the CSS output is as simple as setting variables to True or False in the
-master.scss file.
+Customizing the CSS output is as simple as setting variables to True or False in the master.scss file.
+
+You can also easily restyle base style declarations and helper classes, without needing to go into the framework default files. Use the <b>setup.scss</b> file in the <b>project</b> folder to override default Brass Tacks styling.
 
 
 <hr />
@@ -89,17 +82,11 @@ master.scss file.
 
 ### About
 
-Brass Tacks was officially started in mid-2013, but really is based on the evolution of my
-coding style over many years. I have learned a lot from other developers in my field, and
-continue to do so on a daily basis. Those developers, as well as my own experiences have
-significantly steered the path of Brass Tacks' development.
+Brass Tacks was officially started in mid-2013, but really is based on the evolution of my coding style over many years. I have learned a lot from other developers in my field, and continue to do so on a daily basis. Those developers, as well as my own experiences have significantly steered the path of Brass Tacks' development.
 
-Even though Brass Tacks isn't 'finished', it's pretty darn close to prime time.
-So go ahead and fork, download and use what's available in your project now.
-I'd love to get any feedback on the framework that you may have!
+Even though Brass Tacks isn't 'finished', it's pretty darn close to prime time. So go ahead and fork, download and use what's available in your project now. I'd love to get any feedback on the framework that you may have!
 
-And if you do end up using Brass Tacks, please let me know.
-I'd love to feature your work here.
+And if you do end up using Brass Tacks, please let me know. I'd love to feature your work here.
 
 
 #### In the Wild
@@ -107,16 +94,14 @@ I'd love to feature your work here.
 I've already used earlier versions of Brass Tacks on websites I've built
 for freelance clients, as well as in other open source collaborations.
 
-* November 11, 2013     - www.ghop.me - version 0.7.3.1
+##### 2014
+www.bedlampublishing.com - 0.9.0.7
+www.scottohara.me - 0.9.0.7
 
-* July 13, 2013         - www.neocities.org - Used in combination with
-                          Twitter Bootstraps - version 0.6.2
-
-* June 29, 2013         - ecommerce website w/ @xbuzz - version 0.5.4
-
-* June 23, 2013         - spin-off version of Brass Tacks (Ground Floor) created
-                          for basic styling of NeoCities websites
-
-* June 14, 2013         - ecommerce website w/ @xbuzz - version 0.4.2
-
-* June 8, 2013          - ecommerce website w/ @xbuzz - version 0.3.5
+##### 2013
+* www.ghop.me - 0.7.3.1
+* www.neocities.org - 0.6.2 - in combination w/Twitter Bootstraps
+* ecommerce website w/ @xbuzz - 0.5.4
+* spin-off (Ground Floor) created for all default NeoCities websites
+* ecommerce website w/ @xbuzz - 0.4.2
+* ecommerce website w/ @xbuzz - 0.3.5
