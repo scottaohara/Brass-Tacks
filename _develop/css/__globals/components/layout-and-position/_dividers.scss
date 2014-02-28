@@ -1,0 +1,66 @@
+// ----------------------------------------------------------------------------
+//  Dividers (hr styling)
+// ----------------------------------------------------------------------------
+
+// This mixin is so border-bottom and top don't need to be
+// written out for each different @if.
+//
+// However, this mixin can obviously be used for other purposes.
+
+@mixin hr-dual {
+  border-bottom: $divider--border__dark;
+  border-top:    $divider--border__light;
+}
+
+
+// Set what type of alternate HR style you would like in one simple class
+// auto defaults to dual
+
+@mixin hr-style($type: $divider--emph-style) {
+
+  // single line styling
+  @if $type == dashed {
+    border-style: dashed;
+  }
+
+  @if $type == dotted {
+    border-style: dotted;
+  }
+
+
+  // dual line styling
+  @if $type == dual {
+    @include hr-dual;
+  }
+
+  @if $type == dual-dashed {
+    @include hr-dual;
+    border-style: dashed;
+  }
+
+  @if $type == dual-dotted {
+    @include hr-dual;
+    border-style: dotted;
+  }
+
+
+  // dual line spaced apart styling
+  @if $type == dual-spaced {
+    @include hr-dual;
+    height: $divider--spaced__height;
+    position: relative;
+  }
+
+  @if $type == dual-spaced-dashed {
+    @include hr-dual;
+    border-style: dashed;
+    height: $divider--spaced__height;
+  }
+
+  @if $type == dual-spaced-dotted {
+    @include hr-dual;
+    border-style: dotted;
+    height: $divider--spaced__height;
+  }
+
+}

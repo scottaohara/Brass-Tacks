@@ -5,11 +5,11 @@
 @if $base-hr == true {
 
   hr {
+    @extend %d-block;
     border: 0;
-    border-bottom: $hr-border;
-    display: block;
+    border-bottom: $divider--border__dark;
     height: 1px;
-    margin: $unit-px4 0;
+    margin: $hr-margin;
   }
 
 } // -- end @if --

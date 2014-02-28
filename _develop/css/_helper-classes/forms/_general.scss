@@ -6,13 +6,23 @@
 
   // Containers
   .form-row {
-    padding: $unit-px 0;
+    padding: $form-row--padding;
   }
 
-  .fieldset {
-    border: $fieldset--border;
+  .form-block {
+    border: $form-block--border;
     margin-bottom: $input--margin;
-    padding: $fieldset--padding;
+    padding: $form-block--padding;
+
+    &[disabled] {
+      position: relative;
+
+      &:after {
+        @extend %position-center;
+        background: $form-disable-overlay;
+        content: '';
+      }
+    }
   }
 
 
@@ -24,7 +34,7 @@
 
 
   // Disabled label
-  .dis-label {
+  .label-disabled {
     cursor: not-allowed;
   }
 

@@ -4,24 +4,9 @@
 
 @if $helper-dividers == true {
 
-  .hr-dash {
-    border-style: dashed;
-  }
-
-  .hr-dot {
-    border-style: dotted;
-  }
-
-  .hr-dual {
-    border-bottom: 1px solid rgba(255,255,255,.2);
-    border-top:    1px solid rgba(0,0,0,.2);
-  }
-
-  .hr-dual-spaced {
-    border-bottom: 1px solid rgba(0,0,0,.2);
-    border-top:    1px solid rgba(0,0,0,.2);
-    height: 4px;
-    position: relative;
+  // preset to dual,
+  .hr-styled {
+    @include hr-style;
   }
 
 } // -- end @if --

@@ -8,7 +8,7 @@
     @extend %emph-shared;
     @include border-radius($unit-px);
     @include box-shadow($bs-4);
-    background-color: $c-off-white;
+    background: $c-off-white;
     border: 1px solid $c-light-grey;
   }
 

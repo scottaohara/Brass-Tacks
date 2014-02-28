@@ -5,7 +5,7 @@
 @if $helper-type--alignment == true {
 
   // output classes based on variable list
-  $align-list:  center, left, right;
+  $align-list: center, left, right;
 
   @each $align in $align-list {
     .txt-#{$align},

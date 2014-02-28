@@ -2,7 +2,7 @@
 //  Form & Fieldset
 // ----------------------------------------------------------------------------
 
-@if $base-form-parents == true {
+@if $base-form--parents == true {
 
   form, fieldset {
     @extend %reset-form-elements;  // resets.scss
@@ -30,17 +30,17 @@ $ph-vendor-list: "::-moz-", ":-ms-input-", "::webkit-input-";
 $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
 
 
-@if $base-form-placeholder-text == true {
+@if $base-form--placeholder-text == true {
 
   @each $ph in $ph-vendor-list {
-    #{$ph}plaeholder {
+    #{$ph}placeholder {
       @include placeholder-text($c-form-placeholder, italic);
     }
   }
 
   @each $ph in $ph-vendor-list2 {
     input[required] {
-      #{$ph}plaeholder {
+      #{$ph}placeholder {
         @include placeholder-text($c-form-required, italic);
       }
     }
@@ -59,7 +59,7 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
 //  Form Elements: Input Elements
 // ----------------------------------------------------------------------------
 
-@if $base-form-inputs == true {
+@if $base-form--inputs == true {
 
   // General Form Element Reset
   input {
@@ -104,7 +104,7 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
 //  Textarea Element
 // ----------------------------------------------------------------------------
 
-@if $base-form-textarea == true {
+@if $base-form--textarea == true {
 
   // Make textareas look like input areas, only bigger
   textarea {
@@ -134,7 +134,7 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
 //  Form Elements: Button Elements
 // ----------------------------------------------------------------------------
 
-@if $base-form-buttons == true {
+@if $base-form--buttons == true {
 
   // General Form Element Reset
   button {
@@ -178,7 +178,7 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
 //  Select Element
 // ----------------------------------------------------------------------------
 
-@if $base-form-select == true {
+@if $base-form--select == true {
 
   select {
     @extend %txt-base;
@@ -200,7 +200,7 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
 //  Label Element
 // ----------------------------------------------------------------------------
 
-@if $base-form-labels == true {
+@if $base-form--label == true {
 
   label {
     @extend %label;
@@ -219,7 +219,7 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
 //  Legend Element
 // ----------------------------------------------------------------------------
 
-@if $base-form-labels == true {
+@if $base-form--legend == true {
 
   legend {
     @extend %txt-h5;
@@ -228,5 +228,3 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
   }
 
 } // -- end @if --
-
-

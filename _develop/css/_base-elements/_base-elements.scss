@@ -5,7 +5,7 @@
 
 //  Apply border-box to all the things
 // ----------------------------------------------------------------------------
-@if $setup--border-box == true {
+@if $base-border-box == true {
 
   // Make a smarter Box Model
   *, *:after, *:before {
@@ -49,9 +49,9 @@ html, body {
 
 
 
-//  Play nice with IE 8 / 9
+//  Play nice with browsers that don't know these are block level elements
 // ----------------------------------------------------------------------------
-@if $setup--html5__displays == true {
+@if $base-html5-displays == true {
 
   // Give HTML5 elements block display, which is not defined in IE 8/9
   article, aside, canvas, footer, header, main, section {

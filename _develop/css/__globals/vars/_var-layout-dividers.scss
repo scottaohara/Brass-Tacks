@@ -1,0 +1,18 @@
+// ----------------------------------------------------------------------------
+//  Layout, Table, Divider Vars
+// ----------------------------------------------------------------------------
+
+$hr-border:                 1px solid !default;
+$hr-margin:                 $unit-px4 0 !default;
+
+
+$divider--emph-style:       dual !default;
+                        // Values for this variable:
+                        // dashed, dotted
+                        // dual, dual-dashed, dual-dotted,
+                        // dual-spaced, dual-spaced-dashed, dual-spaced-dotted
+
+$divider--border__light:    $hr-border rgba(255,255,255,.2) !default;
+$divider--border__dark:     $hr-border rgba(0,0,0,.2) !default;
+
+$divider--spaced__height:   4px !default;

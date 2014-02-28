@@ -2,7 +2,7 @@
 //  List Elements
 // ----------------------------------------------------------------------------
 
-@if $base-ol-ul == true {
+@if $base-lists == true {
 
   // Un/Ordered lists
   ol, ul {
@@ -38,7 +38,7 @@
 //  Definition List Elements
 // ----------------------------------------------------------------------------
 
-@if $base-def-list == true {
+@if $base-lists--def == true {
 
   dl {
     @extend %list-elements-margin;
@@ -54,4 +54,3 @@
   }
 
 } // -- end @if --
-

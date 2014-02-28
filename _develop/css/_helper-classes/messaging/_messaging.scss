@@ -61,15 +61,87 @@
 
 @if $helper-tooltip == true {
 
-  // Tool tip example
-  [data-tooltip]{
-    @extend %tool-tip;
+   // Tool tip example
+  [data-tooltip] {
+    @include tooltip();
 
     &:after {
-      background-color: $c-message--bg;
-      border: $c-message--border;
-      color: $c-message--txt
+      @include border-radius($unit-px);
+      content: attr(data-tooltip);
     }
+  }
+
+
+  // Tooltip Positioning Classes
+  .tooltip-bottom {
+    @include tooltip-position($location: bottom);
+  }
+
+  .tooltip-left {
+    @include tooltip-position($location: left);
+  }
+
+  .tooltip-right {
+    @include tooltip-position($location: right);
+  }
+
+  .tooltip-top {
+    @include tooltip-position($location: top);
+  }
+
+
+  // Placing a Tooltip on the container of an image
+  .tooltip-img-bottom {
+    @extend %tooltip-img;
+    @include tooltip-img-location($direction: bottom);
+  }
+
+  .tooltip-img-left {
+    @extend %tooltip-img;
+    @include tooltip-img-location($direction: left);
+  }
+
+  .tooltip-img-right {
+    @extend %tooltip-img;
+    @include tooltip-img-location($direction: right);
+  }
+
+  .tooltip-img-top {
+    @extend %tooltip-img;
+    @include tooltip-img-location($direction: top);
+  }
+
+
+  // Make fixed width Tooltips
+  .tooltip-fixed-width {
+    &:after {
+      width: 125px;
+    }
+  }
+
+  .tooltip-fixed-width-wide {
+    &:after {
+      max-width: 300px;
+      width: 300px;
+    }
+  }
+
+
+  // Tooltip Color Variations
+  .tooltip-prime {
+    @include tooltip-color;
+  }
+
+  .tooltip-success {
+    @include tooltip-color($tt-color: $c-green);
+  }
+
+  .tooltip-warning {
+    @include tooltip-color($tt-color: $c-orange);
+  }
+
+  .tooltip-error {
+    @include tooltip-color($tt-color: $c-red);
   }
 
 } // -- end @if --

@@ -3,17 +3,10 @@
   *
   * Brass Tacks
   * by Scott O'Hara - @scottohara - github.com/scottaohara
-  * 0.9.1 - February XX, 2014
+  * 0.9.1 - March XX, 2014
   *
   *****************************************************************************
 */
-
-// ----------------------------------------------------------------------------
-// To customize the CSS output, define import variables as true / false
-// in the Import Controllers below.
-// ----------------------------------------------------------------------------
-
-
 
 // ----------------------------------------------------------------------------
 //  Import Font(s)
@@ -39,99 +32,103 @@
   @import '_project/setup';
 
 
-
-// ----------------------------------------------------------------------------
-// Initial setup vars
-// ----------------------------------------------------------------------------
-
-$setup--border-box:                           true !default;
-$setup--html5__displays:                      true !default;
-
-
-
 // ----------------------------------------------------------------------------
 // Base Element Import Controller
 // ----------------------------------------------------------------------------
 
-// Typography Elements
-$base-abbr:                                   true!default;
-$base-anchor:                                 true!default;
-$base-blockquote-basic:                       true!default;
-$base-blockquote:                             true!default;
-$base-bold-italic:                            true!default;
-$base-cite:                                   true!default;
-$base-dfn:                                    true!default;
-$base-heading:                                true!default;
-$base-ins:                                    true!default;
-$base-mark:                                   true!default;
-$base-paragraph:                              true!default;
-$base-q:                                      true!default;
-$base-small:                                  true!default;
-$base-sub-sup:                                true!default;
-$base-text-selection:                         true!default;
+// Base Elements
+$base-border-box:                             true !default;
+$base-html5-displays:                         true !default;
+$base-anchor:                                 true !default;
+$base-text-selection:                         true !default;
+
+
+
+// Primary Typography Elements
+$base-heading:                                true !default;
+$base-paragraph:                              true !default;
+$base-small:                                  true !default;
+
+
+
+// Quotes
+$base-blockquote:                             true !default;
+$base-q:                                      true !default;
+
+
+
+// Secondary Typography Elements
+$base-abbr:                                   true !default;
+$base-blockquote-basic:                       true !default;
+$base-bold-italic:                            true !default;
+$base-cite:                                   true !default;
+$base-dfn:                                    true !default;
+$base-ins:                                    true !default;
+$base-mark:                                   true !default;
+$base-sub-sup:                                true !default;
 
 
 
 // Element Containers
-$base-code:                                   true!default;
-$base-kbd:                                    false!default;
-$base-samp:                                   false!default;
-$base-address:                                true!default;
-$base-details:                                true!default;
-$base-summary:                                true!default;
-$base-pre:                                    true!default;
+$base-code:                                   true !default;
+$base-kbd:                                    false !default;
+$base-samp:                                   false !default;
+$base-address:                                true !default;
+$base-details:                                true !default;
+$base-summary:                                true !default;
+$base-pre:                                    true !default;
+$base-fig-figcaption:                         true !default;
 
 
 
 // Progress / Meter Elements
-$base-meter:                                  false!default;
-$base-progress:                               false!default;
+$base-meter:                                  false !default;
+$base-progress:                               false !default;
 
 
 
 // Nav, Menu & List Elements
-$base-def-list:                               true!default;
-$base-ol-ul:                                  true!default;
-$base-menu:                                   true!default;
-$base-nav:                                    true!default;
+$base-lists:                                  true !default;
+$base-lists--def:                             true !default;
+$base-menu:                                   true !default;
+$base-nav:                                    true !default;
 
 
 
 // Table Elements
-$base-table-captions:                         false!default;
-$base-table-parents:                          true!default;
-$base-table-rows-cols:                        true!default;
+$base-table--captions:                        false !default;
+$base-table--parents:                         true !default;
+$base-table--rows-cols:                       true !default;
 
 
 
 // Form Elements
-$base-form-parents:                           true!default;
-$base-form-buttons:                           true!default;
-$base-form-inputs:                            true!default;
-$base-form-select:                            true!default;
-$base-form-labels:                            true!default;
-$base-form-legend:                            true!default;
-$base-form-placeholder-text:                  true!default;
-$base-form-textarea:                          true!default;
+$base-form--parents:                          true !default;
+$base-form--buttons:                          true !default;
+$base-form--inputs:                           true !default;
+$base-form--select:                           true !default;
+$base-form--label:                            true !default;
+$base-form--legend:                           true !default;
+$base-form--placeholder-text:                 true !default;
+$base-form--textarea:                         true !default;
 
 
 
 // Media Elements
-$base-media-audio:                            true!default;
-$base-media-embed-object:                     true!default;
-$base-media-fig-figcaption:                   true!default;
-$base-media-img-svg:                          true!default;
-$base-media-video:                            true!default;
+$base-media--audio:                           true !default;
+$base-media--embed-object:                    true !default;
+$base-media--img-svg:                         true !default;
+$base-media--video:                           true !default;
 
 
 
 // Template Element
-$base-template:                               false!default;
+$base-template:                               false !default;
 
 
 
 // HR Element
-$base-hr:                                     true!default;
+$base-hr:                                     true !default;
 
 
 
@@ -145,101 +142,101 @@ $base-hr:                                     true!default;
 // ----------------------------------------------------------------------------
 
 // Button Helpers
-$helper-btn--general:                         true!default;
-$helper-btn--prime:                           true!default;
-$helper-btn--emph:                            true!default;
-$helper-btn--neg:                             true!default;
-$helper-btn--disable:                         true!default;
+$helper-btn--general:                         true !default;
+$helper-btn--prime:                           true !default;
+$helper-btn--emph:                            true !default;
+$helper-btn--neg:                             true !default;
+$helper-btn--disable:                         true !default;
 
-$helper-btn--social:                          true!default;
-$helper-btn--social__fb:                      true!default;
-$helper-btn--social__tw:                      true!default;
-$helper-btn--social__gp:                      true!default;
+$helper-btn--social:                          true !default;
+$helper-btn--social__fb:                      true !default;
+$helper-btn--social__tw:                      true !default;
+$helper-btn--social__gp:                      true !default;
 
-$helper-btn--pills:                           true!default;
-$helper-btn--sizing:                          true!default;
-$helper-btn--rounding:                        true!default;
+$helper-btn--pills:                           true !default;
+$helper-btn--sizing:                          true !default;
+$helper-btn--rounding:                        true !default;
 
-$helper-btn--clear:                           true!default;
-$helper-btn--close:                           true!default;
+$helper-btn--clear:                           true !default;
+$helper-btn--close:                           true !default;
 
 
 
 // Content Element Helpers
-$helper-emphasis:                             true!default;
-$helper-displays:                             true!default;
-$helper-media-element:                        true!default;
-$helper-flip-effect:                          true!default;
+$helper-emphasis:                             true !default;
+$helper-displays:                             true !default;
+$helper-media-element:                        true !default;
+$helper-flip-effect:                          true !default;
 
 
 
 // Form Helpers
-$helper-forms--general:                       true!default;
+$helper-forms--general:                       true !default;
 
-$helper-forms--input-color:                   false!default;
-$helper-forms--input-file:                    false!default;
-$helper-forms--search-combo:                  true!default;
-$helper-forms--search-combo2:                 true!default;
+$helper-forms--input-color:                   false !default;
+$helper-forms--input-file:                    false !default;
+$helper-forms--search-combo:                  true !default;
+$helper-forms--search-combo2:                 true !default;
 
-$helper-forms--custom-checkbox-radio:         true!default;
-$helper-forms--custom-checkbox-radio--slider: true!default;
+$helper-forms--custom-checkbox-radio:         true !default;
+$helper-forms--custom-checkbox-radio--slider: true !default;
 
-$helper-forms--select:                        true!default;
-$helper-forms--multi-select:                  true!default;
+$helper-forms--select:                        true !default;
+$helper-forms--multi-select:                  true !default;
 
-$helper-forms--sizing:                        true!default;
-$helper-forms--validation:                    true!default;
+$helper-forms--sizing:                        true !default;
+$helper-forms--validation:                    true !default;
 
 
 
 // Layout & Table Helpers
-$helper-table:                                true!default;
-$helper-dividers:                             true!default;
-$helper-floats-clears:                        true!default;
-$helper-grids--standard:                      true!default;
-$helper-grids--equal-size:                    true!default;
+$helper-table:                                true !default;
+$helper-dividers:                             true !default;
+$helper-floats-clears:                        true !default;
+$helper-grids--standard:                      true !default;
+$helper-grids--equal-size:                    true !default;
 
 
 
 // Messaging Helpers
-$helper-loading:                              false!default;
-$helper-messaging:                            true!default;
-$helper-tooltip:                              true!default;
+$helper-loading:                              false !default;
+$helper-messaging:                            true !default;
+$helper-tooltip:                              true !default;
 
 
 
 // Nav Helpers
-$helper-nav--breadcrumbs:                     true!default;
-$helper-nav--dropmenu:                        true!default;
-$helper-nav--fixed:                           true!default;
-$helper-nav--grid:                            true!default;
-$helper-nav--horizontal:                      true!default;
-$helper-nav--horizontal-centered:             true!default;
-$helper-nav--mobile:                          true!default;
-$helper-nav--vertical:                        true!default;
+$helper-nav--breadcrumbs:                     true !default;
+$helper-nav--dropmenu:                        true !default;
+$helper-nav--fixed:                           true !default;
+$helper-nav--grid:                            true !default;
+$helper-nav--horizontal:                      true !default;
+$helper-nav--horizontal-centered:             true !default;
+$helper-nav--mobile:                          true !default;
+$helper-nav--vertical:                        true !default;
 
 
 
 // Typography Helpers
-$helper-type--alignment:                      true!default;
-$helper-type--callouts__block:                true!default;
-$helper-type--callouts__messaging:            true!default;
-$helper-type--callouts__decoration:           true!default;
-$helper-type--callouts__slant:                true!default;
-$helper-type--lists:                          true!default;
+$helper-type--alignment:                      true !default;
+$helper-type--callouts__block:                true !default;
+$helper-type--callouts__messaging:            true !default;
+$helper-type--callouts__decoration:           true !default;
+$helper-type--callouts__slant:                true !default;
+$helper-type--lists:                          true !default;
 
 
 
 // Sizing
-$helper-type--sizing__xlarge:                 true!default;
-$helper-type--sizing__headings:               true!default;
-$helper-type--sizing__base:                   true!default;
-$helper-type--sizing__small:                  true!default;
+$helper-type--sizing__xlarge:                 true !default;
+$helper-type--sizing__headings:               true !default;
+$helper-type--sizing__base:                   true !default;
+$helper-type--sizing__small:                  true !default;
 
 // Readability Modifiers
-$helper-type--line-height:                    true!default;
-$helper-type--indenting:                      true!default;
-$helper-type--smoothing:                      true!default;
+$helper-type--line-height:                    true !default;
+$helper-type--indenting:                      true !default;
+$helper-type--smoothing:                      true !default;
 
 
 

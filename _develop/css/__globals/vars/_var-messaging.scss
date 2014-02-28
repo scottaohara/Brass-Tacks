@@ -5,3 +5,19 @@
 $c-message--bg:               rgba(255,255,255,.95);
 $c-message--border:           1px solid $c-dark;
 $c-message--txt:              $c-dark;
+
+
+
+// ----------------------------------------------------------------------------
+//  Message Coloring
+// ----------------------------------------------------------------------------
+
+$c-message--error:            $c-red !default;
+
+
+
+
+$tt-transition-speed: .35s;
+
+// CSS Arrows
+$arrow-size: 8px;

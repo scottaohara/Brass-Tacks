@@ -19,7 +19,7 @@
 //  Bold & Italic Elements
 // ----------------------------------------------------------------------------
 
-@if $base-bold-italic == true{
+@if $base-bold-italic == true {
 
   // Consistent bolding
   b, strong {
@@ -103,7 +103,7 @@
   mark {
     background: $c-mark-bg;
     color: $c-mark-txt;
-    border-bottom: 1px solid $c-mark-boarder;
+    border-bottom: 1px solid $c-mark-border;
     padding: 0 2px;
   }
 

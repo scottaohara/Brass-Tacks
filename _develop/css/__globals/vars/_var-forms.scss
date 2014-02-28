@@ -2,16 +2,19 @@
 //  Form Element Vars
 // ----------------------------------------------------------------------------
 
+$form-row--padding:         $unit-px 0 !default;
+
 $c-form-placeholder:        $c-dark-grey !default;
 $c-form-required:           $c-red !default;
 $c-form-disable-bg:         $c-light !default;
 
 $form-font-weight:          400 !default;
+$form-disable-overlay:      rgba(40,40,40,.1) !default;
 
 
 // Fieldset
-$fieldset--border:          1px solid $c-border;
-$fieldset--padding:         $unit-px2 $unit-px3;
+$form-block--border:          1px solid $c-border !default;
+$form-block--padding:         $unit-px2 $unit-px3 !default;
 
 
 // Text Inputs
