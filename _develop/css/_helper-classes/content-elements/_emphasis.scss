@@ -1,4 +1,21 @@
 // ----------------------------------------------------------------------------
+//  Shared Emphasis Block Styling
+// ----------------------------------------------------------------------------
+
+%emph-shared {
+  @extend %last-child-0;
+  margin-bottom: $unit-px4;
+  min-height: 20px;
+  padding: $unit-px4;
+}
+
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
 //  Emphasis Block
 // ----------------------------------------------------------------------------
 
@@ -6,7 +23,6 @@
 
   .emph-block {
     @extend %emph-shared;
-    @include border-radius($unit-px);
     @include box-shadow($bs-4);
     background: $c-off-white;
     border: 1px solid $c-light-grey;
@@ -52,7 +68,6 @@
 
   //  Emphasis Image
   .emph-img {
-    @include border-radius($unit-px2);
     @include box-shadow($bs-4);
     border: 1px solid $c-dark-grey;
     display: inline-block;

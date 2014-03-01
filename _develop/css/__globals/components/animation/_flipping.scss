@@ -1,27 +1,6 @@
 // ----------------------------------------------------------------------------
-//  Flipping Effect
+//  Flipping Mixin
 // ----------------------------------------------------------------------------
-
-%flip-back-front {
-  @extend %preserve-3d;
-  @include position(top, 0, left, 0, absolute);
-  @include transition(.6s);
-  backface-visibility: hidden;
-
-  img {
-    max-height: 100%;
-    max-width: 100%;
-  }
-}
-
-
-// Preserve 3D
-%preserve-3d {
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-}
-
-
 
 @mixin flip-units($flip-height, $flip-width: false) {
     height: $flip-height;

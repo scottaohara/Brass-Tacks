@@ -1,4 +1,47 @@
 // ----------------------------------------------------------------------------
+//  Buttons
+// ----------------------------------------------------------------------------
+
+// General button setup to extend into button classes
+%btn {
+  border: 1px solid;
+  cursor: pointer;
+  display: inline-block;
+  font: {
+    family: $f-btn-family;
+      size: $f-btn-size;
+    weight: $f-btn-weight;
+  }
+  line-height: 1;
+  min-width: 60px;
+  padding: $btn-pad $btn-pad*2;
+  text-align: center;
+  text-decoration: none !important; // never have an underline on button text
+  -webkit-appearance: none;
+
+  &:focus {
+    @include box-shadow($bs-btn-focus);
+    outline: 0;
+  }
+}
+
+
+
+// Buttons with Icons
+%btn-icon {
+  @include position(top, 0, left, 0, absolute);
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 40px;
+}
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
 //  General Button Styling
 // ----------------------------------------------------------------------------
 

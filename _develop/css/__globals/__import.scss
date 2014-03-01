@@ -51,14 +51,8 @@
 @import 'components/animation/flipping';
 
 
-// Buttons & Navigation
-@import 'components/btns-and-nav/buttons';
-@import 'components/btns-and-nav/navigation';
-
-
 // Content Blocks
 @import 'components/content-blocks/code';
-@import 'components/content-blocks/content-elements';
 @import 'components/content-blocks/displays';
 @import 'components/content-blocks/multi-columns';
 
@@ -72,6 +66,11 @@
 @import 'components/forms/labels';
 @import 'components/forms/placeholder-text';
 @import 'components/forms/txt-input';
+
+
+//
+@import 'components/btns-and-nav/nav';
+@import 'components/btns-and-nav/btn';
 
 
 // Layout & Positioning
