@@ -1,50 +1,48 @@
-@if $import-helper-nav-mobile == true{
-
 // ----------------------------------------------------------------------------
 //  Mobile Menu Open Nav Button
 // ----------------------------------------------------------------------------
 
-.btn-mobile {
-  background: none;
-  border: 0;
-  display: none;
-  height: 30px;
-  margin: 0 12px;
-  padding: 12px 0;
-  width: 30px;
+@if $helper-nav--mobile == true {
 
-  @media only screen and (max-width: $break-medium) {
-    display: block;
+  .btn-mobile {
+    background: none;
+    border: 0;
+    display: none;
+    height: 30px;
+    margin: 0 12px;
+    padding: 12px 0;
+    width: 30px;
+
+    @media screen and (max-width: $break-medium) {
+      display: block;
+    }
   }
-}
 
-.btn-mobile-bar {
-  @extend %burger;
-  color: transparent;
-  font-size: 0;
-
-  &:after, &:before {
+  .btn-mobile-bar {
     @extend %burger;
-    @extend %content-empty;
-    position: relative;
+    color: transparent;
+    font-size: 0;
+
+    &:after,
+    &:before {
+      @extend %burger;
+      @extend %content-empty;
+      position: relative;
+    }
+
+    &:after {
+      top: 6px
+    }
+
+    &:before {
+      top: -8px;
+    }
   }
 
-  &:after {
-    top: 6px
-  }
+  //  Example mark-up:
+  // ----------------------------------------------------------
+  //  <a class="btn-mobile" id="btn-mobile-1" href="#show-nav">
+  //    <span class="hidden">Show Navigation</span>
+  //  </a>
 
-  &:before {
-    top: -8px;
-  }
-}
-
-//  Example mark-up:
-// ----------------------------------------------------------------------------
-//  <a class="btn-mobile" id="btn-mobile-1" href="#show-nav">
-//    <span class="hidden">Show Navigation</span>
-//  </a>
-
-
-// ----------------------------------------------------------------------------
 } // -- end @if --
-// ----------------------------------------------------------------------------

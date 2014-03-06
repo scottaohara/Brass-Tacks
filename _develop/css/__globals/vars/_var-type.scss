@@ -1,0 +1,81 @@
+// ----------------------------------------------------------------------------
+//  Brand Font Families
+// ----------------------------------------------------------------------------
+
+$f-brand:           "Open Sans", $f-arial !default;
+$f-brand-alt:       $f-georgia !default;
+
+
+
+// ----------------------------------------------------------------------------
+//  Font Size Declarations
+// ----------------------------------------------------------------------------
+
+$txt-base:          1em !default; // 1em = 16px based on body font-size: 100%;
+
+$txt-xxlarge:       $txt-base * 4.375 !default;   // 70px
+$txt-xlarge:        $txt-base * 3.75 !default;    // 60px
+$txt-large:         $txt-base * 3.5 !default;     // 56px
+
+$txt-h1:            $txt-base * 3.125 !default;   // 50px
+$txt-h2:            $txt-base * 2.5 !default;     // 40px
+$txt-h3:            $txt-base * 2 !default;       // 32px
+$txt-h4:            $txt-base * 1.625 !default;   // 26px
+$txt-h5:            $txt-base * 1.25 !default;    // 20px
+$txt-h6:            $txt-base * 1.125 !default;   // 18px
+
+$txt-small:         $txt-base * .875 !default;    // 14px
+$txt-tiny:          $txt-base * .75 !default;     // 12px
+$txt-mini:          $txt-base * .625 !default;    // 10px
+
+
+
+// Font Weights
+
+$txt-xxlarge-weight:       700;
+$txt-xlarge-weight:        600;
+$txt-large-weight:         300;
+
+$txt-h1-weight:            300;
+$txt-h2-weight:            300;
+$txt-h3-weight:            400;
+$txt-h4-weight:            400;
+$txt-h5-weight:            400;
+$txt-h6-weight:            400;
+
+$txt-base-weight:          300;
+
+$txt-small-weight:         300;
+$txt-tiny-weight:          300;
+$txt-mini-weight:          300;
+
+// ----------------------------------------------------------------------------
+//  Primary Type Elements
+// ----------------------------------------------------------------------------
+
+// Headings
+$c-headings:                  $c-darker !default;
+
+
+
+
+
+// Blockquotes
+$c-blockquote:                $c-darker !default;
+$f-blockquote-quotes:         $f-georgia !default;
+$s-blockquote-quotes:         $txt-h4 !default;
+
+$c-blockquote-small:          $c-dark-grey !default;
+$s-blockquote-small:          $txt-tiny !default;
+
+
+
+// ----------------------------------------------------------------------------
+//  Secondary Type Elements
+// ----------------------------------------------------------------------------
+
+$c-ins:                       $c-off-black !default;
+
+$c-mark-bg:                   $c-yellow !default;
+$c-mark-txt:                  $c-darker !default;
+$c-mark-border:               $c-grey !default;

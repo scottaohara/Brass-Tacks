@@ -1,22 +1,17 @@
-@if $import-helper-type-alignment == true{
-
 // ----------------------------------------------------------------------------
 //  Alignment
 // ----------------------------------------------------------------------------
 
-.txt-center {
-  text-align: center;
-}
+@if $helper-type--alignment == true {
 
-.txt-left {
-  text-align: left;
-}
+  // output classes based on variable list
+  $align-list: center, left, right;
 
-.txt-right {
-  text-align: right;
-}
+  @each $align in $align-list {
+    .txt-#{$align},
+    %txt-#{$align} {
+      text-align: $align;
+    }
+  }
 
-
-// ----------------------------------------------------------------------------
 } // -- end @if --
-// ----------------------------------------------------------------------------

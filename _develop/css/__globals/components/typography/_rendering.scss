@@ -1,0 +1,23 @@
+// ----------------------------------------------------------------------------
+//  Anti-aliasing Text
+// ----------------------------------------------------------------------------
+
+// Auto set font-smoothing to anti-aliased in webkit and w/out vendor prefix
+@mixin antialiased {
+  @include vendor(font-smoothing, antialiased, $o: false, $ms: false, $moz: false);
+}
+
+
+
+// ----------------------------------------------------------------------------
+//  Text Optimizations
+// ----------------------------------------------------------------------------
+
+%text-optimize-legibility {
+  text-rendering: optimizeLegibility;
+}
+
+
+%text-optmize-speed {
+  text-rendering: optimizeSpeed;
+}

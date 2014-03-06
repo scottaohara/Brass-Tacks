@@ -1,57 +1,54 @@
-@if $import-helper-table == true{
-
 // ----------------------------------------------------------------------------
 //  Tables Helper Classes
 // ----------------------------------------------------------------------------
 
-.table-header {
-	background: $c-table-head;
-  color: $c-white;
-}
+@if $helper-table == true {
 
-.table-footer {
-	background: $c-table-foot;
-}
+  .table-header {
+    background-color: $c-table-head;
+    color: $c-white;
+  }
 
-// Table Decorations
-.table-border {
-	border-bottom: $table-border;
-	border-right: $table-border;
-	
-	tr {
-	  border-top: $table-border;
-	}
-	
-	th, td {
-	  border-left: $table-border;
-	}
-}
+  .table-footer {
+    background-color: $c-table-foot;
+  }
 
-.table-stripe {
-	tr:nth-child(2n) {
-		background: $c-table-striped;
-	}
-}
+  // Table Decorations
+  .table-border {
+    border-bottom: $table-border;
+    border-right: $table-border;
 
-.table-row-stripe {
-	background: $c-table-striped;
-}
+    tr {
+      border-top: $table-border;
+    }
 
-// Mobile View Table
-.table-mobile {
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-  
-  @media (max-device-width:480px), screen and (max-width:800px) {
-    border: $table-border;
-    
-    table, th, td, tr {
-      white-space: nowrap;
+    th, td {
+      border-left: $table-border;
     }
   }
-}
 
+  .table-stripe {
+    tr:nth-child(2n) {
+      background-color: $c-table-striped;
+    }
+  }
 
-// ----------------------------------------------------------------------------
+  .table-row-stripe {
+    background-color: $c-table-striped;
+  }
+
+  // Mobile View Table
+  .table-mobile {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+
+    @media (max-device-width:480px), screen and (max-width:800px) {
+      border: $table-border;
+
+      table, th, td, tr {
+        white-space: nowrap;
+      }
+    }
+  }
+
 } // -- end @if --
-// ----------------------------------------------------------------------------

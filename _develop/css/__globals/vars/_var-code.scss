@@ -1,0 +1,19 @@
+// ----------------------------------------------------------------------------
+//  Code Element Variables
+// ----------------------------------------------------------------------------
+
+// background color
+$c-code--bg:           $c-dark !default;
+
+// text colors
+$c-css:               $c-magenta !default;
+$c-html:              $c-green !default;
+$c-code--text:         $c-off-white !default;
+
+// border styling
+$code-border:         1px solid $c-off-black !default;
+
+
+// Font sizing and family
+$f-code--family:      $f-monospace !default;
+$f-code--size:        $txt-base !default;

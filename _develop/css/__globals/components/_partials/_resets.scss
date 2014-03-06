@@ -1,0 +1,71 @@
+// ----------------------------------------------------------------------------
+//  Resets
+// ----------------------------------------------------------------------------
+
+// Super Reset
+%reset-all {
+  border: 0;
+  font-size: 100%;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+
+
+// Reset default spacing styling
+%reset-spacing {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+// Reset default border styling
+%reset-border {
+  border: 0;
+  outline: 0;
+}
+
+
+
+// Reset default outline styling
+%outline-none {
+  outline: 0;
+}
+
+
+
+// Reset default list styling
+%list-unstyled {
+  list-style: none;
+  padding: 0;
+}
+
+
+
+// Normalize margins on list elements
+%list-elements-margin {
+  @extend %last-child-0;
+  margin: 0 0 $unit-px4;
+}
+
+
+
+// Basic reset / normalizing for form elements
+%reset-form-elements {
+  font-size: 100%;
+  font-weight: $form-font-weight;
+  line-height: 1.25;
+  text-transform: none;
+}
+
+
+
+// Normalize Media Elements
+%reset-media-elements {
+  display: inline-block; // *
+  max-width: 100%;
+}
+// * Give HTML5 elements inline-block display, which is not defined in ie8/9

@@ -3,23 +3,16 @@
   *
   * Brass Tacks
   * by Scott O'Hara - @scottohara - github.com/scottaohara
-  * 0.9.0.7 - February 2, 2013
+  * 0.9.1 - March 05, 2014
   *
   *****************************************************************************
 */
 
 // ----------------------------------------------------------------------------
-// To customize the CSS output, define import variables as true / false
-// in the Import Controllers below.
-// ----------------------------------------------------------------------------
-
-
-
-// ----------------------------------------------------------------------------
 //  Import Font(s)
 // ----------------------------------------------------------------------------
 
-  @import url(//fonts.googleapis.com/css?family=Open+Sans:300,400,700,700italic,600,400italic,300italic,600italic);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,700italic,600,400italic,300italic,600italic);
 
 
 
@@ -35,88 +28,112 @@
   // Import Library
   @import '__globals/__import';               // Includes global libraries
 
+  // Revisions to base settings / styling
+  @import '_project/setup';
 
 
 // ----------------------------------------------------------------------------
 // Base Element Import Controller
 // ----------------------------------------------------------------------------
 
-  // Typography Elements
-  $import-abbr-element:                         true!default;
-  $import-address-element:                      true!default;
-  $import-anchor-element:                       true!default;
-  $import-blockquote-element:                   true!default;
-  $import-bold-italic-elements:                 true!default;
-  $import-cite-element:                         true!default;
-  $import-code-elements:                        true!default;
-  $import-details-summary-elements:             true!default;
-  $import-dfn-element:                          true!default;
-  $import-headings-element:                     true!default;
-  $import-ins-element:                          true!default;
-  $import-mark-element:                         true!default;
-  $import-paragraph-element:                    true!default;
-  $import-pre-element:                          true!default;
-  $import-q-element:                            true!default;
-  $import-small-element:                        true!default;
-  $import-sub-sup-elements:                     true!default;
-  $import-text-selection:                       true!default;
+// Base Elements
+$base-border-box:                             true !default;
+$base-html5-displays:                         true !default;
+$base-anchor:                                 true !default;
+$base-text-selection:                         true !default;
 
 
 
-  // Progress / Meter Elements
-  $import-meter-element:                        false!default;
-  $import-progress-element:                     false!default;
+// Primary Typography Elements
+$base-heading:                                true !default;
+$base-paragraph:                              true !default;
+$base-small:                                  true !default;
 
 
 
-  // Nav, Menu & List Elements
-  $import-def-list-elements:                    true!default;
-  $import-list-elements:                        true!default;
-  $import-menu-element:                         true!default;
-  $import-nav-element:                          true!default;
+// Quotes
+$base-blockquote:                             true !default;
+$base-q:                                      true !default;
 
 
 
-  // Table Elements
-  $import-table-captions:                       false!default;
-  $import-table-parents:                        true!default;
-  $import-table-rows-cols:                      true!default;
+// Secondary Typography Elements
+$base-abbr:                                   true !default;
+$base-blockquote-basic:                       true !default;
+$base-bold-italic:                            true !default;
+$base-cite:                                   true !default;
+$base-dfn:                                    true !default;
+$base-ins:                                    true !default;
+$base-mark:                                   true !default;
+$base-sub-sup:                                true !default;
 
 
 
-  // Form Elements
-  $import-form-parents:                         true!default;
-  $import-form-buttons:                         true!default;
-  $import-form-inputs:                          true!default;
-  $import-form-select:                          true!default;
-  $import-form-labels:                          true!default;
-  $import-form-legend:                          true!default;
-  $import-form-placeholder-text:                true!default;
-  $import-form-textarea:                        true!default;
+// Element Containers
+$base-code:                                   true !default;
+$base-kbd:                                    false !default;
+$base-samp:                                   false !default;
+$base-address:                                true !default;
+$base-details:                                true !default;
+$base-summary:                                true !default;
+$base-pre:                                    true !default;
+$base-fig-figcaption:                         true !default;
 
 
 
-  // Media Elements
-  $import-media-audio:                          true!default;
-  $import-media-embed-object:                   true!default;
-  $import-media-fig-figcaption:                 true!default;
-  $import-media-img-svg:                        true!default;
-  $import-media-video:                          true!default;
+// Progress / Meter Elements
+$base-meter:                                  false !default;
+$base-progress:                               false !default;
 
 
 
-  // Template Element
-  $import-template-element:                     false!default;
+// Nav, Menu & List Elements
+$base-lists:                                  true !default;
+$base-lists--def:                             true !default;
+$base-menu:                                   true !default;
+$base-nav:                                    true !default;
 
 
 
-  // HR Element
-  $import-hr-element:                           true!default;
+// Table Elements
+$base-table--captions:                        false !default;
+$base-table--parents:                         true !default;
+$base-table--rows-cols:                       true !default;
 
 
 
-  // Import Library
-  @import '_base-elements/__import';            // Imports above set to True
+// Form Elements
+$base-form--parents:                          true !default;
+$base-form--buttons:                          true !default;
+$base-form--inputs:                           true !default;
+$base-form--select:                           true !default;
+$base-form--label:                            true !default;
+$base-form--legend:                           true !default;
+$base-form--placeholder-text:                 true !default;
+$base-form--textarea:                         true !default;
+
+
+
+// Media Elements
+$base-media--audio:                           true !default;
+$base-media--embed-object:                    true !default;
+$base-media--img-svg:                         true !default;
+$base-media--video:                           true !default;
+
+
+
+// Template Element
+$base-template:                               false !default;
+
+
+
+// HR Element
+$base-hr:                                     true !default;
+
+
+
+// Import Library
+@import '_base-elements/__import';            // Imports above set to true
 
 
 
@@ -124,109 +141,113 @@
 //  Helper Classes Import Controller
 // ----------------------------------------------------------------------------
 
-  // Button Helpers
-  $import-helper-btn-general:                   true!default;
-  $import-helper-btn-social:                    true!default;
+// Button Helpers
+$helper-btn--general:                         true !default;
+$helper-btn--prime:                           true !default;
+$helper-btn--emph:                            true !default;
+$helper-btn--neg:                             true !default;
+$helper-btn--disable:                         true !default;
+
+$helper-btn--social:                          true !default;
+$helper-btn--social__fb:                      true !default;
+$helper-btn--social__tw:                      true !default;
+$helper-btn--social__gp:                      true !default;
+
+$helper-btn--pills:                           true !default;
+$helper-btn--sizing:                          true !default;
+$helper-btn--rounding:                        true !default;
+
+$helper-btn--clear:                           true !default;
+$helper-btn--close:                           true !default;
 
 
 
-  // Content Element Helpers
-  $import-helper-emphasis:                      true!default;
-  $import-helper-displays:                      true!default;
-  $import-helper-media-element:                 true!default;
-  $import-helper-flip-effect:                   true!default;
+// Content Element Helpers
+$helper-content-displays--inlines:            true !default;
+$helper-content-displays--show-hide:          true !default;
+$helper-content-displays--mute:               true !default;
+
+$helper-content-emphasis:                     true !default;
+$helper-content-emphasis--alt:                true !default;
+$helper-content-emphasis--img:                true !default;
+
+$helper-content-media-element:                true !default;
+$helper-content-media-element--reverse:       true !default;
+$helper-content-media-element--no-wrap:       true !default;
+
+$helper-content-flipper:                      true !default;
 
 
 
-  // Form Helpers
-  $import-helper-forms-general:                 true!default;
-  $import-helper-checkbox-radio:                true!default;
-  $import-helper-input-color:                   false!default;
-  $import-helper-input-file:                    false!default;
-  $import-helper-search-combo:                  true!default;
-  $import-helper-search-combo2:                 true!default;
-  $import-helper-select:                        true!default;
-  $import-helper-select-multi:                  true!default;
-  $import-helper-sizing:                        true!default;
-  $import-helper-validation:                    true!default;
+// Form Helpers
+$helper-forms--general:                       true !default;
+
+$helper-forms--input-color:                   false !default;
+$helper-forms--input-file:                    false !default;
+$helper-forms--search-combo:                  true !default;
+$helper-forms--search-combo2:                 true !default;
+
+$helper-forms--custom-checkbox-radio:         true !default;
+$helper-forms--custom-checkbox-radio--slider: true !default;
+
+$helper-forms--select:                        true !default;
+$helper-forms--multi-select:                  true !default;
+
+$helper-forms--sizing:                        true !default;
+$helper-forms--validation:                    true !default;
 
 
 
-  // Layout & Table Helpers
-  $import-helper-table:                         true!default;
-  $import-helper-dividers:                      true!default;
-  $import-helper-floats-clears:                 true!default;
-  $import-helper-grids:                         true!default;
+// Layout & Table Helpers
+$helper-table:                                true !default;
+$helper-dividers:                             true !default;
+$helper-floats-clears:                        true !default;
+$helper-grids--standard:                      true !default;
+$helper-grids--equal-size:                    true !default;
 
 
 
-  // Messaging Helpers
-  $import-helper-loading:                       false!default;
-  $import-helper-messaging:                     true!default;
-  $import-helper-tooltip:                       true!default;
+// Messaging Helpers
+$helper-loading:                              false !default;
+$helper-messaging:                            true !default;
+$helper-tooltip:                              true !default;
 
 
 
-  // Nav Helpers
-  $import-helper-nav-breadcrumbs:               true!default;
-  $import-helper-nav-dropmenu:                  true!default;
-  $import-helper-nav-fixed:                     true!default;
-  $import-helper-nav-grid:                      true!default;
-  $import-helper-nav-horizontal:                true!default;
-  $import-helper-nav-mobile:                    true!default;
-  $import-helper-nav-vertical:                  true!default;
+// Nav Helpers
+$helper-nav--breadcrumbs:                     true !default;
+$helper-nav--dropmenu:                        true !default;
+$helper-nav--fixed:                           true !default;
+$helper-nav--grid:                            true !default;
+$helper-nav--horizontal:                      true !default;
+$helper-nav--horizontal-centered:             true !default;
+$helper-nav--mobile:                          true !default;
+$helper-nav--vertical:                        true !default;
 
 
 
-  // Shapes
-  $import-helper-shapes:                        false!default;
+// Typography Helpers
+$helper-type--alignment:                      true !default;
+$helper-type--callouts__block:                true !default;
+$helper-type--callouts__messaging:            true !default;
+$helper-type--callouts__decoration:           true !default;
+$helper-type--callouts__slant:                true !default;
+$helper-type--lists:                          true !default;
 
 
 
-  // Typography Helpers
-  $import-helper-type-alignment:                true!default;
-  $import-helper-type-callouts:                 true!default;
-  $import-helper-type-lists:                    true!default;
-  $import-helper-type-positions:                true!default;
-  $import-helper-type-sizing:                   true!default;
-  $import-helper-type-smoothing:                true!default;
+// Sizing
+$helper-type--sizing__xlarge:                 true !default;
+$helper-type--sizing__headings:               true !default;
+$helper-type--sizing__base:                   true !default;
+$helper-type--sizing__small:                  true !default;
+
+// Readability Modifiers
+$helper-type--line-height:                    true !default;
+$helper-type--indenting:                      true !default;
+$helper-type--smoothing:                      true !default;
 
 
 
-  // Import Library
-  @import '_helper-classes/__import';           // Imports above set to True
-
-
-
-// ----------------------------------------------------------------------------
-//  Additional Global Styling
-// ----------------------------------------------------------------------------
-
-  // Default Print Style Resets
-  $import-global-print:                         true!default;
-
-
-
-  // Quick-Fix Styling **
-  $import-global-quick-fix:                     false!default;
-
-
-
-  // Import Library
-  @import '__globals/global-print';             // Print styles
-  @import '__globals/quick-fix';                // **
-
-
-
-// ** Quick Fix
-// ----------------------------------------------------------------------------
-
-// The Quick Fix style sheet exists so that developers can add quick,
-// potentially hacky-by-necessity code to our CSS, without needing to worry
-// about making sure they aren't writing the most optimal of CSS, or
-// potentially adding bugs into approved code.
-
-// This is not a file that should have code in it for an extended period of
-// time. Quick Fix code should be merged back into the main code library
-// either by simply adding the new rules to the appropriate file, or by
-// refactoring existing code to negate the need for the Quick Fix.
+// Import Library
+@import '_helper-classes/__import';           // Imports above set to true

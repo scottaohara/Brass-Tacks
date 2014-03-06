@@ -1,0 +1,44 @@
+// ----------------------------------------------------------------------------
+//  Form Input Sizing
+// ----------------------------------------------------------------------------
+
+$input-sizing: (
+  small    $txt-small    $unit-px,
+  large    $txt-h5       ($unit-px2 $unit-px3)
+);
+
+@if $helper-forms--sizing == true {
+
+  @each $s-value in $input-sizing {
+    .input-#{nth($s-value, 1)} {
+      font-size: nth($s-value, 2);
+      padding: nth($s-value, 3);
+    }
+  }
+
+} // -- end @if --
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Form Validation Indicators
+// ----------------------------------------------------------------------------
+
+$input-validation: (
+  success    $c-green,
+  warning    $c-orange,
+  error      $c-red
+);
+
+@if $helper-forms--validation == true {
+
+  @each $v-value in $input-validation {
+    .input-#{nth($v-value, 1)} {
+      border: 1px solid nth($v-value, 2);
+    }
+  }
+
+} // -- end @if --

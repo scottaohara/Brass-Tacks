@@ -1,0 +1,27 @@
+// ----------------------------------------------------------------------------
+//  Project Specific: Main Content Area
+// ----------------------------------------------------------------------------
+
+// The block class can be modified or deleted and replaced with other classes
+// (like .media or .callout). The main purpose of a class like this is to apply
+// to an inner HTML element of the column structure so we can apply styling to
+// the columns.
+
+.block {
+  @extend %last-child-0;
+  background: $c-grey;
+  color: $c-dark;
+  padding: $unit-px;
+}
+
+
+
+// Add fixed width left or right column
+.fixed-width-left {
+  @include col-fixed-width(260px, left);
+}
+
+.fixed-width-right {
+  @include col-fixed-width(260px, right);
+}
+// use .col-fixed to add padding for the fixed column on the .row

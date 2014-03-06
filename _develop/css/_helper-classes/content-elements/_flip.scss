@@ -1,56 +1,78 @@
-@if $import-helper-flip-effect == true{
-
 // ----------------------------------------------------------------------------
 //  Flip Effect
 // ----------------------------------------------------------------------------
 
-// Flip Container
-.flip-container {
+// Silent Classes
+%flip-back-front {
   @extend %preserve-3d;
-  perspective: 1000px;
+  @include position(top, 0, left, 0, absolute);
+  @include transition(.6s);
+  backface-visibility: hidden;
 
-  &:hover {
-    .flip-back {
-      @include transform(rotateY(0deg));
-    }
-
-    .flip-front {
-      @include transform(rotateY(-180deg));
-    }
+  img {
+    max-height: 100%;
+    max-width: 100%;
   }
 }
 
 
-// Container of Flipping Views
-.flipper {
-  @extend %preserve-3d;
-  @include transition(.6s);
-  position: relative;
+// Preserve 3D
+%preserve-3d {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
 
 
-// Front View Styling
-.flip-front {
-  @extend %flip-back-front;
-  @include transform(rotateY(0deg));
-  z-index: 2;
-}
 
 
-// Back View Styling
-.flip-back {
-  @extend %flip-back-front;
-  @include transform(rotateY(-180deg));
-}
 
 
-// Additional Styling for multiple flip units
-.flip-container, .flip-front, .flip-back {
-  @include flip-units($flip-height: 550px);
-  max-width: 100%;
-}
+@if $helper-content-flipper == true {
+
+  // Flip Container
+  .flip-container {
+    @extend %preserve-3d;
+    perspective: 1000px;
+
+    &:hover {
+      .flip-back {
+        @include transform(rotateY(0deg));
+      }
+
+      .flip-front {
+        @include transform(rotateY(-180deg));
+      }
+    }
+  }
 
 
-// ----------------------------------------------------------------------------
+  // Container of Flipping Views
+  .flipper {
+    @extend %preserve-3d;
+    @include transition(.6s);
+    position: relative;
+  }
+
+
+  // Front View Styling
+  .flip-front {
+    @extend %flip-back-front;
+    @include transform(rotateY(0deg));
+    z-index: 2;
+  }
+
+
+  // Back View Styling
+  .flip-back {
+    @extend %flip-back-front;
+    @include transform(rotateY(-180deg));
+  }
+
+
+  // Additional Styling for multiple flip units
+  .flip-container, .flip-front, .flip-back {
+    height: 500px;
+    max-width: 100%;
+  }
+
 } // -- end @if --
-// ----------------------------------------------------------------------------

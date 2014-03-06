@@ -1,34 +1,41 @@
-@if $import-helper-forms-general == true{
-
 // ----------------------------------------------------------------------------
 //  General Form Elements Helper Classes
 // ----------------------------------------------------------------------------
 
-// Containers
-.form-row {
-  padding: $unit-px 0;
-}
+@if $helper-forms--general == true {
 
-.fieldset {
-  border: 1px solid $c-border;
-  margin-bottom: $unit-px2;
-  padding: $unit-px2 $unit-px3;
-}
+  // Containers
+  .form-row {
+    padding: $form-row--padding;
+  }
+
+  .form-block {
+    border: $form-block--border;
+    margin-bottom: $input--margin;
+    padding: $form-block--padding;
+
+    &[disabled] {
+      position: relative;
+
+      &:after {
+        @extend %position-center;
+        background: $form-disable-overlay;
+        content: '';
+      }
+    }
+  }
 
 
-// General text input helper class
-.input-text {
-  @extend %input-text;
-  // see 'more-inputs' for additional styling for specific input elements
-}
+  // General text input helper class
+  .input-text {
+    @extend %input-text;
+    // see 'more-inputs' for additional styling for specific input elements
+  }
 
 
-// Disabled label
-.dis-label {
-  cursor: not-allowed;
-}
+  // Disabled label
+  .label-disabled {
+    cursor: not-allowed;
+  }
 
-
-// ----------------------------------------------------------------------------
 } // -- end @if --
-// ----------------------------------------------------------------------------

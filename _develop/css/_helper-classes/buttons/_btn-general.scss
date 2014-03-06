@@ -1,196 +1,245 @@
-@if $import-helper-btn-general == true{
+// ----------------------------------------------------------------------------
+//  Buttons
+// ----------------------------------------------------------------------------
+
+// General button setup to extend into button classes
+%btn {
+  border: 1px solid;
+  cursor: pointer;
+  display: inline-block;
+  font: {
+    family: $f-btn-family;
+      size: $f-btn-size;
+    weight: $f-btn-weight;
+  }
+  line-height: 1;
+  min-width: 60px;
+  padding: $btn-pad $btn-pad*2;
+  text-align: center;
+  text-decoration: none !important; // never have an underline on button text
+  -webkit-appearance: none;
+
+  &:focus {
+    @include box-shadow($bs-btn-focus);
+    outline: 0;
+  }
+}
+
+
+
+// Buttons with Icons
+%btn-icon {
+  @include position(top, 0, left, 0, absolute);
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 40px;
+}
+
+
+
+
+
 
 // ----------------------------------------------------------------------------
 //  General Button Styling
 // ----------------------------------------------------------------------------
 
-.btn {
-  @extend %btn;
-  background-color: $c-grey;
-  border-color: $c-dark-grey;
-  color: $c-brand-4 !important;
+@if $helper-btn--general == true {
 
-  &:active, &:hover {
-    background-color: $c-dark-grey;
+  .btn {
+    @extend %btn;
+    @include btn-style($btn-bg, $btn-border, $btn-text, $btn-bg-2);
   }
 
-  &:focus {
-    @include box-shadow($bs-4);
-    outline: 0;
+} // -- end @if --
+
+
+@if $helper-btn--prime == true {
+
+  .btn-prime {
+    @extend %btn;
+    @include btn-style($btn-bg-prime, $btn-border-prime, $btn-text-prime, $btn-bg-2-prime);
   }
+
+} // -- end @if --
+
+
+@if $helper-btn--emph == true {
+
+  .btn-emph {
+    @extend %btn;
+    @include btn-style($btn-bg-emph, $btn-border-emph, $btn-text-emph, $btn-bg-2-emph);
+  }
+
 }
 
-.btn-prime {
-  @extend %btn;
-  background-color: $c-brand-1;
-  border-color: $c-brand-2;
-  color: $c-white !important;
-  text-shadow: $ts-primary;
 
-  &:hover {
-    background-color: $c-brand-2;
+@if $helper-btn--neg == true {
+
+  .btn-neg {
+    @extend %btn;
+    @include btn-style($btn-bg-neg, $btn-border-neg, $btn-text-neg, $btn-bg-2-neg);
   }
-}
 
-.btn-emph {
-  @extend %btn;
-  background-color: $c-emph-1;
-  border-color: $c-emph-2;
-  color: $c-white !important;
-  text-shadow: $ts-primary;
+} // -- end @if --
 
-  &:hover {
-    background-color: $c-emph-2;
+
+@if $helper-btn--disable == true {
+
+  .btn-disable, .btn[disabled] {
+    @extend .btn;
+    @include btn-style($btn-bg-disable, $btn-border-disable, $btn-text-disable, $btn-bg-disable);
+    cursor: not-allowed;
+    opacity: .3;
+
+    &:visited {
+      background-color: $btn-bg-disable;
+    }
   }
-}
 
-.btn-neg {
-  @extend %btn;
-  background-color: $c-neg-1;
-  border-color: $c-neg-2;
-  color: $c-white !important;
+} // -- end @if --
 
-  &:hover {
-    background-color: $c-neg-2;
-  }
-}
 
-.btn-cancel {
-  @extend %btn;
-  background-color: $c-dark;
-  border-color: $c-hell;
-  color: $c-white !important;
 
-  &:hover{
-    background-color: $c-hell;
-  }
-}
 
-.btn-disable {
-  @extend .btn;
-  cursor: not-allowed;
-  opacity: .3;
-
-  &:hover, &:visited{
-    background-color: $c-grey;
-  }
-}
 
 
 // ----------------------------------------------------------------------------
 //  Sizing Variations
 // ----------------------------------------------------------------------------
 
-.btn-tiny {
-  font-size: $txt-tiny;
-  padding: $unit-px $unit-px2;
-  min-width: 50px;
-}
+$btn-sizes: (
+// size     font-size   padding
+   tiny     $txt-tiny   $btn-pad-tiny,
+   small    $txt-small  $btn-pad-small,
+   large    $txt-h3     $btn-pad-large,
+   xlarge   $txt-h2     $btn-pad-xlarge
+);
 
-.btn-small {
-  font-size: $txt-small;
-  padding: $unit-px2 $unit-px3;
-  min-width: 50px;
-}
+@if $helper-btn--sizing == true {
 
-.btn-large {
-  font-size: $txt-h3;
-  padding: $unit-px2 $unit-px*8;
-  min-width: 200px;
-}
+  @each $bsv in $btn-sizes {
+    .btn-#{nth($bsv, 1)} {
+      font-size: nth($bsv, 2);
+      padding: nth($bsv, 3)
+    }
+  }
 
-.btn-xlarge {
-  font-size: $txt-h2;
-  padding: $unit-px3 $unit-px*8;
-  min-width: 200px;
-}
+  .btn-wide {
+    display: block;
+    width: 100%;
+  }
 
-.btn-wide {
-  display: block;
-  width: 100%;
-}
+} // -- end @if --
+
+
+
+
 
 
 // ----------------------------------------------------------------------------
 //  Border Radius Styling
 // ----------------------------------------------------------------------------
 
-.btn-square {
-  @include border-radius(0);
-}
+@if $helper-btn--rounding == true {
 
-.btn-round {
-  @include border-radius($circle);
-}
-
-
-// ----------------------------------------------------------------------------
-//  Close Button
-// ----------------------------------------------------------------------------
-
-// Clear button for search inputs
-.btn-clear {
-  @extend %content-empty;
-  @extend %sprite;
-  @include position-vertical-center(right, 6px, absolute);
-  background-position: -165px -28px;
-  border: none;
-  height: 66%;
-  width: 24px;
-
-  &:hover {
-    background-position: -165px -1px;
+  .btn-soft {
+    @include border-radius($unit-px2);
   }
-}
+
+  .btn-round {
+    @extend %circle;
+  }
+
+} // -- end @if --
 
 
-// Close buttons for modal windows
-.btn-close {
-  @include border-radius($circle);
-  @include position(top, -6px, left, -6px, absolute);
-  min-width: 1px!important;
-  padding: 5px 7px;
-  text-transform: uppercase;
-}
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Clear & Close Buttons
+// ----------------------------------------------------------------------------
+
+@if $helper-btn--clear == true {
+
+  // Clear button for search inputs
+  .btn-clear {
+    @extend %content-empty;
+    //@extend %sprite;
+    @include position-vertical-center(right, 6px, absolute);
+    //background-position: -165px -28px;
+    //
+    //  TODO
+    //  create an X img for this button
+    //
+    border: none;
+    height: 66%;
+    width: 24px;
+
+    // &:hover {
+    //   background-position: -165px -1px;
+    // }
+  }
+
+} // -- end @if --
+
+
+@if $helper-btn--close == true {
+
+  // Close buttons for modal windows
+  .btn-close {
+    @include position(top, -6px, left, -6px, absolute);
+    @extend %circle;
+    min-width: 1px !important;
+    padding: 5px 7px;
+    text-transform: uppercase;
+  }
+
+} // -- end @if --
+
+
+
+
 
 
 // ----------------------------------------------------------------------------
 //  Button Pills
 // ----------------------------------------------------------------------------
 
-// Pill container
-.btn-pill {
-  @extend %clearfix;
-  @extend %margin-bottom-base;
+@if $helper-btn--pills == true {
 
-  &>:first-child {
-    @include border-radius($unit-px2 0 0 $unit-px2);
+  // Pill container
+  .btn-pill {
+    @extend %clearfix;
+    @extend %margin-bottom-base;
+
+    &>:first-child {
+      @include border-radius($unit-px2 0 0 $unit-px2);
+    }
+
+    &>:last-child {
+      @include border-radius(0 $unit-px2 $unit-px2 0);
+    }
+
+    &>:not(:first-child) {
+      border-left: none;
+    }
+
+    .btn {
+      float: left;
+      margin-bottom: 0;
+      min-width: 100px;
+    }
+
+    .btn-small {
+      min-width: 80px;
+      padding-bottom: 6px;
+      padding-top: 6px;
+    }
   }
 
-  &>:last-child {
-    @include border-radius(0 $unit-px2 $unit-px2 0);
-  }
-
-  &>:not(:first-child) {
-    border-left: none;
-  }
-
-  .btn {
-    @extend .btn-square;
-    float:left;
-    margin-bottom: 0;
-    min-width: 100px;
-  }
-
-  .btn-small {
-    min-width: 80px;
-    padding-bottom: 6px;
-    padding-top: 6px;
-  }
-}
-
-
-// ----------------------------------------------------------------------------
 } // -- end @if --
-// ----------------------------------------------------------------------------
 

@@ -1,39 +1,66 @@
-@if $import-helper-select == true{
-
 // ----------------------------------------------------------------------------
 //  Select Element
 // ----------------------------------------------------------------------------
 
-// Drop Down Selection
-.select-container {
-  @extend %input-text;
-  position: relative;
+@if $helper-forms--select == true {
 
-  &:after {
-    @extend %content-empty;
-    background: url(../img/drop-arrow.png) no-repeat;
-    bottom: 0;
-    height: 14px;
-    margin: auto;
-    position: absolute;
-    right: 8px;
-    top: 0;
-    width: 14px;
+  // Drop Down Selection
+  .select-container {
+    @extend %input-text;
+    position: relative;
+
+    &:after {
+      @extend %content-empty;
+      background: url(../img/drop-arrow.png) no-repeat;
+      bottom: 0;
+      height: 14px;
+      margin: auto;
+      position: absolute;
+      right: 8px;
+      top: 0;
+      width: 14px;
+    }
   }
-}
 
-.input-select {
-  -webkit-appearance: textarea;
-     -moz-appearance: window;
-  background: none;
-  border: 0;
-  font-family: $f-brand;
-  margin: 0;
-  padding: 0 $unit-px4 0 0;
-  z-index: 2;
-}
+  .input-select {
+    -webkit-appearance: textarea;
+       -moz-appearance: window;
+    background: none;
+    border: 0;
+    font-family: $f-brand;
+    margin: 0;
+    padding: 0 $unit-px4 0 0;
+    z-index: 2;
+  }
 
-
-// ----------------------------------------------------------------------------
 } // -- end @if --
+
+
+
+
+
+
+
 // ----------------------------------------------------------------------------
+//  Multi-select Element
+// ----------------------------------------------------------------------------
+
+@if $helper-forms--multi-select == true {
+
+  .multi-select {
+    @extend %input-text;
+
+    option {
+      padding: $unit-px 2px;
+    }
+  }
+
+  // Example mark-up:
+  // ----------------------------------------------------------------------------
+  // <select id="multi-select" multiple size="5" class="multi-select">
+  //    <option>...</option>
+  //    <option>...</option>
+  //    <option>...</option>
+  //  </select>
+
+} // -- end @if --

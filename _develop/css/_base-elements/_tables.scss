@@ -1,0 +1,83 @@
+// ----------------------------------------------------------------------------
+//  Table Parent Elements
+// ----------------------------------------------------------------------------
+
+@if $base-table--parents == true {
+
+  table {
+    @extend %reset-border;
+    @extend %reset-spacing;
+    @extend %margin-bottom-base;
+    @extend %txt-base;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+  }
+
+  // thead {}
+
+  // tfoot {}
+
+  // tbody {}
+
+} // -- end @if --
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Row & Column Elements
+// ----------------------------------------------------------------------------
+
+@if $base-table--rows-cols == true {
+
+  // Table Row
+  // tr {}
+
+
+  // Table Cells
+  th {
+    @extend %bold;
+  }
+
+  th, td {
+    padding: $unit-px $unit-px2;
+    text-align: left;
+    vertical-align: top;
+  }
+
+
+  // Non-content elements
+  // colgroup {}
+  // col {}
+
+} // -- end @if --
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Caption Element
+// ----------------------------------------------------------------------------
+
+@if $base-table--captions == true {
+
+  caption {
+    @extend %txt-h6;
+    caption-side: top;
+    text-align: left;
+  }
+
+  // The <caption> tag must be inserted immediately after the <table> tag.
+
+  // You can specify only one caption per table.
+
+  // Tip: By default, the table caption will be center-aligned above a table.
+  // However, the CSS properties "text-align" and "caption-side" can be used
+  // to align and place the caption.
+
+} // -- end @if --

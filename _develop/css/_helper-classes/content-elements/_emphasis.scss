@@ -1,53 +1,17 @@
-@if $import-helper-emphasis == true{
-
 // ----------------------------------------------------------------------------
-//  Emphasis Block
+//  Shared Emphasis Block Styling
 // ----------------------------------------------------------------------------
 
-.emph-block {
-  @extend %emph-shared;
-  @include border-radius($unit-px);
-  @include box-shadow($bs-4);
-  background-color: $c-off-white;
-  border: 1px solid $c-light-grey;
+%emph-shared {
+  @extend %last-child-0;
+  margin-bottom: $unit-px4;
+  min-height: 20px;
+  padding: $unit-px4;
 }
 
-// Example mark-up
-// ----------------------------------------------------------------------------
-// <div class="emph-block">
-//  ...
-// </div>
 
 
 
-// Transparent Emphasis Block
-// For use when needing to place an emphasis block in a columned layout,
-// & need to have consistent typography / content base without the background
-// or bordering of the block.
-
-.emph-transparent {
-  @extend %emph-shared;
-}
-
-// Example mark-up
-// ----------------------------------------------------------------------------
-// <div class="emph-transparent">
-//  ...
-// </div>
-
-
-
-// A smaller emphasis block
-
-.emph-small {
-  padding: $unit-px2
-}
-
-// Example mark-up
-// ----------------------------------------------------------------------------
-// <div class="emph-block emph-small">
-//  ...
-// </div>
 
 
 
@@ -55,28 +19,87 @@
 //  Emphasis Block
 // ----------------------------------------------------------------------------
 
-.emph-img {
-  @include border-radius($unit-px2);
-  @include box-shadow($bs-4);
-  border: 1px solid $c-dark-grey;
-  display: inline-block;
-  overflow: hidden;
+@if $helper-content-emphasis == true {
 
-  img {
-    border: 3px solid $c-off-white;
-    display: block;
-    width: 100%;
+  .emph-block {
+    @extend %emph-shared;
+    @include border-radius($unit-px);
+    @include box-shadow($bs-1);
+    background: $c-off-white;
+    border: 1px solid $c-light-grey;
+
   }
-}
 
-// Example mark-up
-// ----------------------------------------------------------------------------
-// <div class="frame">
-//   <img src="..." alt="..." />
-// </div>
+  // Example mark-up
+  // ----------------------------------------------------------------------
+  // <div class="emph-block">
+  //  ...
+  // </div>
 
-
-
-// ----------------------------------------------------------------------------
 } // -- end @if --
-// ----------------------------------------------------------------------------
+
+
+
+
+
+
+@if $helper-content-emphasis--alt == true {
+
+  // Transparent Emphasis Block
+  // For use when needing to place an emphasis block in a columned layout,
+  // & need to have consistent typography / content base without the background
+  // or bordering of the block.
+
+  .emph-transparent {
+    @extend %emph-shared;
+  }
+
+  // Example mark-up
+  // ----------------------------------------------------------------------------
+  // <div class="emph-transparent">
+  //  ...
+  // </div>
+
+
+
+  // A smaller emphasis block
+  .emph-small {
+    padding: $unit-px2
+  }
+
+  // Example mark-up
+  // ----------------------------------------------------------------------------
+  // <div class="emph-block emph-small">
+  //  ...
+  // </div>
+
+ } // -- end @if --
+
+
+
+
+
+@if $helper-content-emphasis--img == true {
+
+  //  Emphasis Image
+  .emph-img {
+    @include border-radius($unit-px2);
+    @include box-shadow($bs-4);
+    border: 1px solid $c-dark-grey;
+    display: inline-block;
+    overflow: hidden;
+
+    img {
+      border: 3px solid $c-off-white;
+      display: block;
+      width: 100%;
+    }
+  }
+
+  // Example mark-up
+  // ----------------------------------------------------------------------------
+  // <div class="emph-img">
+  //   <img src="..." alt="..." />
+  // </div>
+
+} // -- end @if --

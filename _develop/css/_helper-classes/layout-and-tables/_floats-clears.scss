@@ -1,37 +1,34 @@
-@if $import-helper-floats-clears == true{
-
 // ----------------------------------------------------------------------------
 //  Floats & Clears
 // ----------------------------------------------------------------------------
 
-// Floats
-.float-left {
-  float: left;
-}
+@if $helper-floats-clears == true {
 
-.float-right {
-  float: right;
-}
+  // Floats
+  .float-left {
+    float: left;
+  }
 
-.float-none {
-  float: none;
-}
+  .float-right {
+    float: right;
+  }
 
-
-// Clears
-.clear {
-  clear: both;
-}
-
-.clearfix {
-  @extend %clearfix;
-}
-
-.overflow {
-  overflow: hidden;
-}
+  .float-none {
+    float: none;
+  }
 
 
-// ----------------------------------------------------------------------------
+  // Clears
+  .clear {
+    clear: both;
+  }
+
+  .clearfix {
+    @extend %clearfix;
+  }
+
+  .overflow {
+    overflow: hidden;
+  }
+
 } // -- end @if --
-// ----------------------------------------------------------------------------

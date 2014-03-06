@@ -1,0 +1,79 @@
+%menu-nav-margin {
+  margin: 0 0 8px;
+}
+
+// ----------------------------------------------------------------------------
+//  Navigation Elements
+// ----------------------------------------------------------------------------
+
+@if $base-nav == true {
+
+  nav {
+    @extend %d-block;
+
+    ul, ol {
+      @extend %list-unstyled;
+      @extend %margin-bottom-base;
+      padding: 0;
+    }
+
+    li {
+      @extend %menu-nav-margin;
+    }
+  }
+
+  // Example mark-up:
+  // ----------------------------------------------------------------------------
+  // <nav role="navigation>
+  //   <ul class="">
+  //     <li>
+  //       <a href="#!" title="">Nav Item 1</a>
+  //     </li>
+  //     <li>
+  //       <a href="#!" title="">Nav Item 2</a>
+  //     </li>
+  //     <li>
+  //       <a href="#!" title="">Nav Item 3</a>
+  //     </li>
+  //   </ul>
+  // </nav>
+
+} // -- end @if --
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Menu Element
+// ----------------------------------------------------------------------------
+
+@if $base-menu == true {
+
+  menu {
+    @extend %list-unstyled;
+    @extend %margin-bottom-base;
+    @extend %last-child-0;
+    padding: 0;
+
+    li {
+      @extend %menu-nav-margin;
+    }
+  }
+
+  // Example mark-up:
+  // ----------------------------------------------------------------------------
+  // <menu class="">
+  //   <li>
+  //     <a href="#!" title="">Menu Item 1</a>
+  //   </li>
+  //   <li>
+  //     <a href="#!" title="">Menu Item 2</a>
+  //   </li>
+  //   <li>
+  //     <a href="#!" title="">Menu Item 3</a>
+  //   </li>
+  // </menu>
+
+} // -- end @if --

@@ -1,40 +1,88 @@
-@if $import-helper-type-sizing == true{
-
 // ----------------------------------------------------------------------------
 //  Font Sizing Classes
+//
+//  Disable any classes that are not needed via the master.scss file.
+//
+//  Since these classes all pull from their silent classes counterpart,
+//  we always have access to the set font sizes, even if a single class
+//  is not required.
+//
 // ----------------------------------------------------------------------------
-
-// Extra Large Font Classes
-.txt-xxlarge  { @extend %txt-xxlarge; }
-.txt-xlarge   { @extend %txt-xlarge;  }
-.txt-large    { @extend %txt-large;   }
-
-
-// Heading Sized Font Classes
-.txt-h1       { @extend %txt-h1; }
-.txt-h2       { @extend %txt-h2; }
-.txt-h3       { @extend %txt-h3; }
-.txt-h4       { @extend %txt-h4; }
-.txt-h5       { @extend %txt-h5; }
-.txt-h6       { @extend %txt-h6; }
-
-
-// Normal Sized Font
-.txt-base     { @extend %txt-base; } // 1em = 16px
-
-
-// Small Font Classes
-.txt-small    { @extend %txt-small; }
-.txt-tiny     { @extend %txt-tiny; }
-.txt-mini     { @extend %txt-mini; }
-
-
-// If some of these classes are not needed, just disable the class.
-// Since these classes all pull from silent classes, we still have access
-// to the pre-made font-sizes without need for the individual classes to
-// be compiled.
 
 
 // ----------------------------------------------------------------------------
+//  Super Large Fonts
+// ----------------------------------------------------------------------------
+
+@if $helper-type--sizing__xlarge == true {
+
+  // output classes based on variable list
+  $large-list:  xxlarge xlarge large;
+
+  @each $lrg-class in $large-list {
+    .txt-#{$lrg-class} {
+      @extend %txt-#{$lrg-class};
+    }
+  }
+
 } // -- end @if --
+
+
+
+
+
+
+
 // ----------------------------------------------------------------------------
+//  Heading Sized Font Classes
+// ----------------------------------------------------------------------------
+
+@if $helper-type--sizing__headings == true {
+
+  // loop to output txt-h1 to 6
+  @for $i from 1 through 6 {
+    .txt-h#{$i} {
+      @extend %txt-h#{$i};
+    }
+  }
+
+} // -- end @if --
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Normal Sized Font Class
+// ----------------------------------------------------------------------------
+
+@if $helper-type--sizing__base == true {
+
+  .txt-base {
+    @extend %txt-base; // 1em = 16px
+  }
+
+} // -- end @if --
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Small Sized Font Classes
+// ----------------------------------------------------------------------------
+
+@if $helper-type--sizing__small == true {
+
+  // output classes based on variable list
+  $small-list:  small tiny mini;
+
+  @each $sm-class in $small-list {
+    .txt-#{$sm-class} {
+      @extend %txt-#{$sm-class};
+    }
+  }
+
+} // -- end @if --

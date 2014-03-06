@@ -1,0 +1,133 @@
+// ----------------------------------------------------------------------------
+//  Address, Details & Summary Elements
+// ----------------------------------------------------------------------------
+
+%address-details-summary {
+  @extend %d-block;
+  @extend %margin-bottom-base;
+  @extend %last-child-0;
+}
+
+
+@if $base-address == true {
+
+  address {
+    @extend %address-details-summary;
+  }
+
+} // -- end @if --
+
+
+@if $base-details == true {
+
+  details {
+    @extend %address-details-summary;
+  }
+
+} // -- end @if --
+
+
+@if $base-summary == true {
+
+  summary {
+    @extend %address-details-summary;
+  }
+
+} // -- end @if --
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Figure & Figure Caption
+// ----------------------------------------------------------------------------
+
+@if $base-fig-figcaption == true {
+
+  figure, figcaption {
+    @extend %d-block;
+  }
+
+  figure {
+    @extend %margin-bottom-base;
+
+    img {
+      @extend %d-block;
+    }
+  }
+
+} // -- end @if --
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Code, kbd & samp Elements
+// ----------------------------------------------------------------------------
+
+%kbd-code-samp {
+  @extend %margin-bottom-base;
+  @include code-block($code-border-emph: 4px);
+  display: block;
+  font: $f-code--size $f-code--family;
+  padding: $unit-px2;
+}
+
+// if a child of an element revise styling
+%kbd-code-samp--child {
+  display: inline-block;
+  margin: 0;
+  padding: $unit-px;
+}
+
+
+// Code
+@if $base-code == true {
+
+  code {
+    @extend %kbd-code-samp;
+  }
+
+  p, li {
+    code {
+      @extend %kbd-code-samp--child;
+    }
+  }
+
+} // -- end @if --
+
+
+// Kbd
+@if $base-kbd == true {
+
+  kbd {
+    @extend %kbd-code-samp;
+  }
+
+  p, li {
+    kbd {
+      @extend %kbd-code-samp--child;
+    }
+  }
+
+} // -- end @if --
+
+
+// Samp
+@if $base-samp == true {
+
+  samp {
+    @extend %kbd-code-samp;
+  }
+
+  p, li {
+    samp {
+      @extend %kbd-code-samp--child;
+    }
+  }
+
+} // -- end @if --

@@ -1,0 +1,54 @@
+// ----------------------------------------------------------------------------
+//  Line Height Modifiers
+// ----------------------------------------------------------------------------
+
+@if $helper-type--line-height == true {
+
+  // Tighten line height for text headings
+  .line-tight {
+    line-height: 1.2 !important;
+  }
+
+
+  // Tighten line height for text headings more
+  .line-tighter {
+    line-height: 1 !important;
+  }
+
+} // -- end @if --
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Text Indenting
+// ----------------------------------------------------------------------------
+
+@if $helper-type--indenting == true {
+
+  // loop to output .txt-indent-1 to 3
+  @for $i from 1 through 3 {
+    .txt-indent-#{$i} {
+      text-indent: 1em * $i;
+    }
+  }
+
+} // -- end @if --
+
+
+
+// ----------------------------------------------------------------------------
+//  Text Smoothing
+// ----------------------------------------------------------------------------
+
+@if $helper-type--smoothing == true {
+
+  .antialiased {
+    @include vendor(font-smoothing, antialiased, $o: false, $ms: false, $moz: false);
+  }
+
+  // Anti-aliased font smoothing works best for light text on dark backgrounds.
+  // Only apply to single elements instead of globally to the body element.
+  // Only works on webkit browsers on Apple devices.
+
+} // -- end @if --

@@ -1,0 +1,76 @@
+// ----------------------------------------------------------------------------
+//  Media Elements: Images & SVG
+// ----------------------------------------------------------------------------
+
+@if $base-media--img-svg == true {
+
+  // If an image doesn't load, make the alt text noticeable
+  img {
+    @extend %reset-border;
+    @extend %italic;
+    color: $c-message--error;
+    max-width: 100%;
+  }
+
+  // Corrects overflow issue in IE9
+  svg:not(:root) {
+    overflow: hidden;
+  }
+
+} // -- end @if --
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Media Elements: Embed & Object
+// ----------------------------------------------------------------------------
+
+@if $base-media--embed-object == true {
+
+  embed, object {
+    @extend %reset-media-elements;
+  }
+
+} // -- end @if --
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Media Elements: Audio
+// ----------------------------------------------------------------------------
+
+@if $base-media--audio == true {
+
+  audio {
+    @extend %reset-media-elements;
+
+    &:not([controls]) {
+      display: none;
+      height: 0;
+    }
+  }
+
+} // -- end @if --
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Media Elements: Video
+// ----------------------------------------------------------------------------
+
+@if $base-media--video == true {
+
+  video {
+    @extend %reset-media-elements;
+  }
+
+} // -- end @if --

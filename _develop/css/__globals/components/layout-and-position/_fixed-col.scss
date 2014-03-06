@@ -1,0 +1,18 @@
+// ----------------------------------------------------------------------------
+//  Grids
+// ----------------------------------------------------------------------------
+
+%col-fixed-width {
+  @media screen and (max-width: $break-medium) {
+    padding: 0;
+  }
+
+  .col-fixed-width {
+    @media screen and (max-width: $break-medium) {
+      float: none;
+      margin: 0;
+      padding-left: 40px;
+      width: auto;
+    }
+  }
+}

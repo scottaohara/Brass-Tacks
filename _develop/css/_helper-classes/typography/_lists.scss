@@ -1,24 +1,20 @@
-@if $import-helper-type-lists == true{
-
 // ----------------------------------------------------------------------------
 //  Text List Styles
 // ----------------------------------------------------------------------------
 
-// Kill list styling - removes list markings & padding
-.list-unstyled {
-  @extend %list-unstyled;
-}
+@if $helper-type--lists == true {
+
+  // Kill list styling - removes list markings & padding
+  .list-unstyled {
+    @extend %list-unstyled;
+  }
 
 
-// For non-semantic list numbering
-.list-number {
-  list-style-type: decimal;
-}
+  // For non-semantic list numbering
+  .list-number {
+    list-style-type: decimal;
+  }
 
+  // Inline lists are located in the content-elements > inline.scss file
 
-// Inline lists are located in the content-elements > inline.scss file
-
-
-// ----------------------------------------------------------------------------
 } // -- end @if --
-// ----------------------------------------------------------------------------

@@ -6,7 +6,7 @@ organized and easy to find.
 * __globals
 * _base-elements
 * _helper-classes
-* _project-specific
+* _project
 
 Each folder contains an '__import.scss' file to index and arrange all of the
 sub-files in the folder and create one main import file to master.scss.

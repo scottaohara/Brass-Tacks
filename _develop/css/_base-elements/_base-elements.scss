@@ -2,44 +2,94 @@
 //  Basic HTML Element Normalize / Reset Styling
 // ----------------------------------------------------------------------------
 
-// Make a smarter Box Model
-*, *:after, *:before {
-  @include box-sizing(border-box);
-}
+
+//  Apply border-box to all the things
+// ----------------------------------------------------------------------------
+@if $base-border-box == true {
+
+  // Make a smarter Box Model
+  *, *:after, *:before {
+    @include box-sizing(border-box);
+  }
+
+} // -- end @if --
 
 
-// Basic HTML + Body styling
+
+
+//  Basic HTML + Body styling
+// ----------------------------------------------------------------------------
 html, body {
   @extend %reset-spacing;
-  @extend %font-size-lh;
-  @extend %text-size-adjust;
-  @extend %text-optimize-legibility;
-  background: $c-off-white;
-  color: $c-dark;
-  font-family: $f-brand;
-  font-weight: 300;
+  background-color: $c-body--bg;
+  color: $c-body--text;
+  font: $f-body--weight $f-body--size $f-body--family;
   height: 100%;
+  line-height: $f-body--line-height;
+  text-rendering: optimizeLegibility;
+     -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 
-// Give HTML5 elements block display, which is not defined in ie8/9
-article, aside, canvas, footer, header, main, section {
-  @extend %d-block;
-}
 
 
-// Makes hidden actually [hidden] in IE 8/9
-[hidden] {
-  @extend %d-none;
-}
+
+// Highlight Text Selection
+// ----------------------------------------------------------------------------
+@if $base-text-selection == true {
+
+  @include select-text($c-select-text--bg, $c-select-text--text, none);
+
+} // -- end @if --
+
+
+
+
+
+
+//  Play nice with browsers that don't know these are block level elements
+// ----------------------------------------------------------------------------
+@if $base-html5-displays == true {
+
+  // Give HTML5 elements block display, which is not defined in IE 8/9
+  article, aside, canvas, footer, header, main, section {
+    @extend %d-block;
+  }
+
+
+  // Makes hidden actually [hidden] in IE 8/9
+  [hidden] {
+    @extend %d-none;
+  }
+
+} // -- end @if --
+
+
+
 
 
 // ----------------------------------------------------------------------------
+//  Anchor Element
+// ----------------------------------------------------------------------------
 
-// Silent classes are used so elements can be easily
-// broken out into modular files.
+@if $base-anchor == true {
 
-// If you would like to change the basic values of these
-// elements, simply either delete the silent class reference
-// and add your own styling, or edit the silent class
-// in the corresponding Brass Tacks silent class .scss file.
+  a, a:visited {
+    background-color: transparent; // *
+    color: $c-link;
+
+    &:hover, &:active {
+      @extend %outline-none;
+      color: $c-link-h;
+    }
+
+    &:focus {
+      outline: thin dotted;
+    }
+  }
+
+  // * Removes grey background color from active links in IE10
+
+} // -- end @if --

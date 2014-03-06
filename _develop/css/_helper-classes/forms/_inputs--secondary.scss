@@ -1,0 +1,164 @@
+// ----------------------------------------------------------------------------
+//  Input Type: Search Box/Button Combo
+// ----------------------------------------------------------------------------
+
+@if $helper-forms--search-combo == true {
+
+  .search-area {
+    margin-bottom: $unit-px2;
+    position: relative;
+
+    .input-text {
+      @include truncate-text(100%);
+      margin-bottom: 0;
+      padding-right: $unit-px*30;
+    }
+
+    .btn-search {
+      @include position(top, 0, right, 0, absolute);
+      height: 100%;
+      padding-top: 6px;
+    }
+  }
+
+  .btn-small.btn-search {
+    padding-top: 4px;
+  }
+
+  // Put a search button inline with search input field via position:absolute
+
+  // Example mark-up:
+  // ----------------------------------------------------------------------------
+  // <div class="search-area">
+  //   <input type="search" placeholder="Search for..." class="input-text">
+  //   <input type="submit" value="Search" class="btn-prime btn-search">
+  // </div>
+
+} // -- end @if --
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Input Type: Search with clear button & search icon
+// ----------------------------------------------------------------------------
+
+@if $helper-forms--search-combo2 == true {
+
+  .search-clear {
+    position: relative;
+
+    .input-text {
+     // background-image: url();
+     // background-repeat: no-repeat;
+     // background-position: 6px center;
+      padding-left: 40px;
+    }
+  }
+
+
+  // Example mark-up:
+  // ----------------------------------------------------------------------------
+  // <div class="search-clear">
+  //   <input type="text" class="input-text" name="search_input" autocomplete="off" placeholder="Search for..." />
+  //   <button class="btn btn-clear" id="clearSearchField">x</button>
+  // </div>
+
+
+  // Note:
+  // Styling for .btn-clear is located in the _btn-general.scss file
+
+} // -- end @if --
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Input Type: Color
+// ----------------------------------------------------------------------------
+
+@if $helper-forms--input-color == true {
+
+  // Color is not supported in all browsers, and extending %input-text
+  // breaks the default look in webkit so instead we will carry over some
+  // of the input-text styling that doesn't break it in webkit & standardizes
+  // it in other browsers
+
+  .input-color {
+    background-image: none;
+    border: 1px solid $c-grey;
+    font-family: $f-brand;
+    height: 45px;
+    margin-bottom: $unit-px2;
+    padding: 0 $unit-px;
+    width: 100%;
+
+    &:focus {
+      @include box-shadow($bs-focus);
+      background: $c-lighter;
+      border: 1px solid #50B6D5;
+    }
+  }
+
+} // -- end @if --
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Input Type: File Upload
+// ----------------------------------------------------------------------------
+
+@if $helper-forms--input-file == true {
+
+  // The following classes are to be used with the markup at the end of
+  // this file.  This styling for file upload inputs currently requires
+  // JavaScript to fully make functional. It may not be worth it to
+  // implement this due to the JS dependency.
+
+  .input-file-container {
+    position: relative;
+
+    label {
+      cursor: default;
+    }
+  }
+
+  .input-file {
+    @include position(top, 0, left, 0, absolute);
+    cursor: pointer;
+    height: 100%;
+    opacity: 0;
+    width: 100%;
+    z-index: 9;
+  }
+
+  .input-file-area {
+    @extend %input-text;
+    cursor: pointer;
+    display: inline-block;
+    width: 75%;
+  }
+
+
+  // Example mark-up:
+  // ----------------------------------------------------------------------------
+  // <div class="input-file-container">
+  //   <input type="file" id="input-file" class="input-file" />
+
+  //   <label for="input-file">File Input</label>
+
+  //   <span class="input-file-area">
+  //     <span class="placeholder">Select a file...</span>
+  //   </span>
+
+  //   <span class="btn">Select</span>
+  // </div>
+
+} // -- end @if --

@@ -1,0 +1,209 @@
+// ----------------------------------------------------------------------------
+//  Navigation
+// ----------------------------------------------------------------------------
+
+// shared rules between nav-h & nav-v
+%nav {
+
+  a {
+    display: block;
+    padding: $unit-px;
+    position: relative;
+  }
+}
+
+// Basic styling for horizontal navigation styles
+%nav-h {
+
+  a {
+    border-right: 1px solid $c-dark-grey;
+  }
+
+  & > li {
+    margin-bottom: 0;
+
+    &:last-child a {
+      border-right: 0;
+    }
+  }
+}
+
+
+// 3-lined mobile nav 'icon'
+%burger {
+  @include box-shadow($bs-1);
+  background: $c-white;
+  border-radius: $circle;
+  display: block;
+  height: 2px;
+}
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Vertical Navigations
+// ----------------------------------------------------------------------------
+
+@if $helper-nav--vertical == true {
+
+  // to be placed on the <ul> or <ol>
+  .nav-v {
+    @extend %nav;
+
+    a {
+      border-bottom: 1px solid $c-dark-grey;
+      position: relative;
+      text-decoration: none;
+
+      &:hover, &.active {
+        border-bottom-color: $c-link-h;
+      }
+    }
+  }
+
+  // Example mark-up:
+  // ----------------------------------------------------------------------------
+  // <nav role="navigation">
+  //   <ol class="nav-v">
+  //     <li>
+  //       <a href="#!" title="#!">Link 1</a>
+  //     </li>
+  //     <li>
+  //       <a href="#!" title="#!">Link 2</a>
+  //     </li>
+  //    </ol>
+  // </nav>
+
+} // -- end @if --
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Horizontal Navigations
+// ----------------------------------------------------------------------------
+
+@if $helper-nav--horizontal == true {
+
+  // Place this class on the ul or ol inside the .nav.
+  // Edit this file, or extend it / overwrite it in your project
+  // scss files to change it's styling.
+
+  .nav-h {
+    @extend %clearfix;
+    @extend %nav;
+    @extend %nav-h;
+
+    & > li {
+      float: left;
+    }
+  }
+
+  // Example mark-up
+  // ----------------------------------------------------------------------------
+  // <nav class="nav" role="navigation">
+  //   <ol class="h-nav">
+  //     <li>
+  //       <a href="#!" title="#!">Link 1</a>
+  //     </li>
+  //     <li>
+  //       <a href="#!" title="#!">Link 2</a>
+  //     </li>
+  //    </ol>
+  // </nav>
+
+} // -- end @if --
+
+
+
+@if $helper-nav--horizontal-centered == true {
+
+  // To be placed on the <ul> or <ol> -- don't use floats,
+  // instead use display inline-block and center navigation links
+  .nav-c {
+    @extend %nav;
+    @extend %nav-h;
+    text-align: center;
+
+    & > li {
+      @extend %d-inline-block;
+    }
+  }
+
+  // Example mark-up
+  // ----------------------------------------------------------------------------
+  // <nav class="nav" role="navigation">
+  //   <ol class="c-nav">
+  //     <li>
+  //       <a href="#!" title="#!">Link 1</a>
+  //     </li><!--
+  //     --><li>
+  //       <a href="#!" title="#!">Link 2</a>
+  //     </li><!--
+  //     --><li>
+  //       <a href="#!" title="#!">Link 3</a>
+  //     </li>
+  //    </ol>
+  // </nav>
+
+  // The comments will negate the white space.
+
+} // -- end @if --
+
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Fixed Position Sidebar Nav
+// ----------------------------------------------------------------------------
+
+@if $helper-nav--fixed == true {
+
+  .nav-fixed-area {
+    @include nav-fixed-area();
+    // Default setting is top fixed nav, with a padding-top: 40px added to the
+    // body to place the nav into.
+    //
+    // edit this class, or create a new one if you want to change the value
+    // or location of the padding
+
+
+    // Place the burger nav icon/button to the right or left,
+    // only applies if within a .nav-fixed-area
+    .btn-mobile {
+      @include nav-mobile-btn($x: $unit-px2, $y: $unit-px2);
+      // Default setting is top / right
+    }
+  }
+
+
+
+  // Horizontal or Vertical fixed navigations
+  // default to top/left horizontal nav w/no overflow
+  .nav-fixed {
+    @include nav-fixed($f-height: $height-nav-fixed, $f-width: 100%);
+    background: $c-dark;
+    line-height: $height-nav-fixed;
+
+    a {
+      color: $c-white;
+      display: block;
+
+      &:hover,
+      &:visited {
+        background: rgba(0,0,0,.6);
+        color: $c-white;
+        text-decoration: none;
+      }
+    }
+  }
+
+} // -- end @if --

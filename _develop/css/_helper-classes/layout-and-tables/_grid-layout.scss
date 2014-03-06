@@ -1,147 +1,144 @@
-@if $import-helper-grids == true{
-
 // ----------------------------------------------------------------------------
-//  Layout - Responsive & Static Grid Elements
+//  Layout - Responsive Grid
 // ----------------------------------------------------------------------------
 
-// A container for each row of our layout.
-// Simply styled with only a base margin-bottom and extending the clearfix
-// class, a row can also have helper classes added onto it for other general
-// styling purposes.
-.row {
-  @extend %clearfix;
-  margin-bottom: $unit-px5;
-  margin-left: -$unit-px5*2;
+@if $helper-grids--standard == true {
 
-  // Don't need as wide gutters?  Use this class to cut them in half.
-  &.half-gutter {
-    margin-left: -$unit-px5;
-  }
-}
-
-
-// The grid columns within a row.
-// Do not apply styling to this class as its purpose is for layout only.
-.col {
-  @include last-child-0();
-  float: left;
-  margin-bottom: 0;
-  min-height: 1px;
-  padding-left: $unit-px5*2;
-  position: relative;
-  width: 100%; // default width is 100%
-
-  @media only screen and (max-width: $break-medium) {
+  // A container for each row of our layout.
+  // Simply styled with only a base margin-bottom and extending the clearfix
+  // class, a row can also have helper classes added onto it for other general
+  // styling purposes.
+  .row {
+    @extend %clearfix;
     margin-bottom: $unit-px5;
+    margin-left: -$unit-px5*2;
+
+    // Don't need as wide gutters?  Use this class to cut them in half.
+    &.half-gutter {
+      margin-left: -$unit-px5;
+    }
   }
-}
 
 
-// Adjust .col padding-left to account for half-gutter
-.half-gutter .col {
-  padding-left: $unit-px5;
-}
-
-
-// Base responsive grid column classes.
-// Do not apply styling to these as their purpose is for width only.
-.w-100 { width: 100%; }
-.w-90  { width: 90%; }
-.w-80  { width: 80%; }
-.w-75  { width: 75%; }
-.w-70  { width: 70%; }
-.w-66  { width: 66.6666%; }
-.w-60  { width: 60%; }
-.w-50  { width: 50%; }
-.w-40  { width: 40%; }
-.w-33  { width: 33.3333%; }
-.w-30  { width: 30%; }
-.w-25  { width: 25%; }
-.w-20  { width: 20%; }
-.w-10  { width: 10%; }
-
-@media only screen and (max-width: $break-medium) {
-  .w-90, .w-80, .w-75, .w-70, .w-66,
-  .w-60, .w-50, .w-40, .w-33, .w-30,
-  .w-25, .w-20, .w-10 {
-    width: 100%;
-  }
-}
-
-.fixed-width-left {
-  @include col-fixed-width(260px, left);
-}
-
-.fixed-width-right {
-  @include col-fixed-width(260px, right);
-}
-// use .col-fixed to add padding for the fixed column on the .row
-
-
-// Equal Grids
-// These grids are meant for layout purposes only. If you require styling
-// and spacing to these grids, then you should style the child elements
-// of the grids accordingly
-
-.equal-grid {
-  @extend %clearfix;
-  margin-bottom: $unit-px5;
-
-  & > * {
+  // The grid columns within a row.
+  // Do not apply styling to this class as its purpose is for layout only.
+  .col {
+    @extend %last-child-0;
     float: left;
-  }
-}
+    margin-bottom: 0;
+    min-height: 1px;
+    padding-left: $unit-px5*2;
+    position: relative;
+    width: 100%; // default width is 100%
 
-.equal-grid-4 {
-  @include equal-grid-col(25%);
-
-  @media only screen and (max-width: $break-normal) {
-    @include equal-grid-col(33.33333%);
-  }
-
-  @media only screen and (max-width: $break-small) {
-    @include equal-grid-col(50%);
+    @media screen and (max-width: $break-medium) {
+      margin-bottom: $unit-px5;
+    }
   }
 
-  @media only screen and (max-width: $break-mini) {
-    @include equal-grid-col(100%);
-  }
-}
 
-.equal-grid-3 {
-  @include equal-grid-col(33.33333%);
-
-  @media only screen and (max-width: $break-small) {
-    @include equal-grid-col(50%);
+  // Adjust .col padding-left to account for half-gutter
+  .half-gutter .col {
+    padding-left: $unit-px5;
   }
 
-  @media only screen and (max-width: $break-mini) {
-    @include equal-grid-col(100%);
+
+  // Base responsive grid column classes.
+  // Do not apply styling to these as their purpose is for width only.
+
+  $width-list: 10, 20, 25, 30, 40, 50, 60, 70, 75, 80, 90, 100;
+  $decimal-list: 33, 66;
+
+  // spit out whole number classes
+  @each $widths in $width-list {
+    .w-#{$widths} {
+      width: $widths * 1%;
+    }
   }
-}
 
-.equal-grid-2 {
-  @include equal-grid-col(50%);
-
-  @media only screen and (max-width: $break-mini) {
-    @include equal-grid-col(100%);
+  // decimal numbers need special maths
+  @each $widths in $decimal-list {
+    .w-#{$widths} {
+      width: $widths * 1.010101%;
+    }
   }
-}
 
-// Example mark-up:
-// ----------------------------------------------------------------------------
-// <div class="equal-grid-#">
-//   <div>
-//     content block
-//   </div>
-//   <div>
-//     paragraph
-//   </div>
-//   ...
-//  </div>
+  @media screen and (max-width: $break-medium) {
+    .w-90, .w-80, .w-75, .w-70, .w-66,
+    .w-60, .w-50, .w-40, .w-33, .w-30,
+    .w-25, .w-20, .w-10 {
+      width: 100%;
+    }
+  }
 
-
-// ----------------------------------------------------------------------------
 } // -- end @if --
+
+
+// ----------------------------------------------------------------------------
+//  Layout - Equal Sized Responsive Grid
+//
+//  These grids are meant for layout purposes only. If you require styling
+//  and spacing to these grids, then you should style the child elements
+//  of the grids accordingly
 // ----------------------------------------------------------------------------
 
+@if $helper-grids--equal-size == true {
+
+  .equal-grid {
+    @extend %clearfix;
+    margin-bottom: $unit-px5;
+
+    & > * {
+      float: left;
+    }
+  }
+
+  .equal-grid-4 {
+    @include equal-grid-col(25%);
+
+    @media screen and (max-width: $break-normal) {
+      @include equal-grid-col(33.33333%);
+    }
+
+    @media screen and (max-width: $break-small) {
+      @include equal-grid-col(50%);
+    }
+
+    @media screen and (max-width: $break-mini) {
+      @include equal-grid-col(100%);
+    }
+  }
+
+  .equal-grid-3 {
+    @include equal-grid-col(33.33333%);
+
+    @media screen and (max-width: $break-small) {
+      @include equal-grid-col(50%);
+    }
+
+    @media screen and (max-width: $break-mini) {
+      @include equal-grid-col(100%);
+    }
+  }
+
+  .equal-grid-2 {
+    @include equal-grid-col(50%);
+
+    @media screen and (max-width: $break-mini) {
+      @include equal-grid-col(100%);
+    }
+  }
+
+  // Example mark-up:
+  // ----------------------------------------------------------------------------
+  // <div class="equal-grid-#">
+  //   <div>
+  //     content block
+  //   </div>
+  //   <div>
+  //     paragraph
+  //   </div>
+  //   ...
+  //  </div>
+
+} // -- end @if --

@@ -1,0 +1,10 @@
+// ----------------------------------------------------------------------------
+//  Multi-Column Text Blocks
+// ----------------------------------------------------------------------------
+
+// Set # of columns, gap, and rule width / location
+@mixin multi-col($cols, $gap, $rule-width, $rule-location, $rule-color) {
+  @include vendor(column-count, $cols, $o: false, $ms: false);
+  @include vendor(column-gap, $gap, $o: false, $ms: false);
+  @include vendor(column-rule, $rule-width $rule-location $rule-color, $o: false, $ms: false);
+}
