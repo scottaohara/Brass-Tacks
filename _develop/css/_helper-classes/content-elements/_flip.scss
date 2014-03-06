@@ -1,3 +1,7 @@
+// ----------------------------------------------------------------------------
+//  Flip Effect
+// ----------------------------------------------------------------------------
+
 // Silent Classes
 %flip-back-front {
   @extend %preserve-3d;
@@ -23,11 +27,7 @@
 
 
 
-// ----------------------------------------------------------------------------
-//  Flip Effect
-// ----------------------------------------------------------------------------
-
-@if $helper-flip-effect == true {
+@if $helper-content-flipper == true {
 
   // Flip Container
   .flip-container {
@@ -71,7 +71,7 @@
 
   // Additional Styling for multiple flip units
   .flip-container, .flip-front, .flip-back {
-    @include flip-units($flip-height: 550px);
+    height: 500px;
     max-width: 100%;
   }
 

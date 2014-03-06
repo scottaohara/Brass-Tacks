@@ -16,7 +16,7 @@
 //  Media Element
 // ----------------------------------------------------------------------------
 
-@if $helper-media-element == true {
+@if $helper-content-media-element == true {
 
   // Standard Media Element
   .media {
@@ -84,7 +84,7 @@
 //  Media Element Reversed
 // ----------------------------------------------------------------------------
 
-@if $helper-media-element--reverse == true {
+@if $helper-content-media-element--reverse == true {
 
   // Have media object appear on the right side w/ text on the left
   .media-reverse {
@@ -107,7 +107,7 @@
 //  Media Element No Wrap
 // ----------------------------------------------------------------------------
 
-@if $helper-media-element--no-wrap == true {
+@if $helper-content-media-element--no-wrap == true {
 
   // Media Element that prevents text-wrapping around the media object
   // ** Helper class, use in addition to .media or .media-reverse **

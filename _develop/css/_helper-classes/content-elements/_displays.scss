@@ -2,7 +2,7 @@
 //  Display Element Classes
 // ----------------------------------------------------------------------------
 
-@if $helper-displays == true {
+@if $helper-content-displays--inlines == true {
 
   // Convert to inline
   .inline-element {
@@ -43,6 +43,14 @@
     }
   }
 
+} // -- end @if --
+
+
+
+
+
+
+@if $helper-content-displays--show-hide == true {
 
   // Show Elements with display:block
   .d-block {
@@ -69,17 +77,6 @@
     }
   }
 
-
-  // Mute an element by changing Opacity
-  .mute {
-    opacity: .75;
-  }
-
-  .mute-half {
-    opacity: .5;
-  }
-
-
   // Hides from screenreaders and browsers
   .hidden {
     @extend %hidden;
@@ -89,6 +86,24 @@
   // Hide from browsers but not from screen readers
   .invis {
     @extend %invis;
+  }
+
+} // -- end @if --
+
+
+
+
+
+
+@if $helper-content-displays--mute == true {
+
+  // Mute an element by changing Opacity
+  .mute {
+    opacity: .75;
+  }
+
+  .mute-half {
+    opacity: .5;
   }
 
 } // -- end @if --

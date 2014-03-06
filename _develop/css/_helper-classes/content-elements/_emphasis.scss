@@ -19,22 +19,31 @@
 //  Emphasis Block
 // ----------------------------------------------------------------------------
 
-@if $helper-emphasis == true {
+@if $helper-content-emphasis == true {
 
   .emph-block {
     @extend %emph-shared;
-    @include box-shadow($bs-4);
+    @include border-radius($unit-px);
+    @include box-shadow($bs-1);
     background: $c-off-white;
     border: 1px solid $c-light-grey;
+
   }
 
   // Example mark-up
-  // ----------------------------------------------------------------------------
+  // ----------------------------------------------------------------------
   // <div class="emph-block">
   //  ...
   // </div>
 
+} // -- end @if --
 
+
+
+
+
+
+@if $helper-content-emphasis--alt == true {
 
   // Transparent Emphasis Block
   // For use when needing to place an emphasis block in a columned layout,
@@ -64,10 +73,17 @@
   //  ...
   // </div>
 
+ } // -- end @if --
 
+
+
+
+
+@if $helper-content-emphasis--img == true {
 
   //  Emphasis Image
   .emph-img {
+    @include border-radius($unit-px2);
     @include box-shadow($bs-4);
     border: 1px solid $c-dark-grey;
     display: inline-block;

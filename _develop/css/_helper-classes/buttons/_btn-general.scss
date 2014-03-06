@@ -87,7 +87,7 @@
 
 @if $helper-btn--disable == true {
 
-  .btn-disable {
+  .btn-disable, .btn[disabled] {
     @extend .btn;
     @include btn-style($btn-bg-disable, $btn-border-disable, $btn-text-disable, $btn-bg-disable);
     cursor: not-allowed;
@@ -109,26 +109,21 @@
 //  Sizing Variations
 // ----------------------------------------------------------------------------
 
+$btn-sizes: (
+// size     font-size   padding
+   tiny     $txt-tiny   $btn-pad-tiny,
+   small    $txt-small  $btn-pad-small,
+   large    $txt-h3     $btn-pad-large,
+   xlarge   $txt-h2     $btn-pad-xlarge
+);
+
 @if $helper-btn--sizing == true {
 
-  .btn-tiny {
-    font-size: $txt-tiny;
-    padding: $btn-pad-tiny;
-  }
-
-  .btn-small {
-    font-size: $txt-small;
-    padding: $btn-pad-small;
-  }
-
-  .btn-large {
-    font-size: $txt-h3;
-    padding: $btn-pad-large;
-  }
-
-  .btn-xlarge {
-    font-size: $txt-h2;
-    padding: $btn-pad-xlarge;
+  @each $bsv in $btn-sizes {
+    .btn-#{nth($bsv, 1)} {
+      font-size: nth($bsv, 2);
+      padding: nth($bsv, 3)
+    }
   }
 
   .btn-wide {
@@ -136,7 +131,11 @@
     width: 100%;
   }
 
-}
+} // -- end @if --
+
+
+
+
 
 
 // ----------------------------------------------------------------------------
@@ -153,7 +152,7 @@
     @extend %circle;
   }
 
-}
+} // -- end @if --
 
 
 
@@ -169,19 +168,23 @@
   // Clear button for search inputs
   .btn-clear {
     @extend %content-empty;
-    @extend %sprite;
+    //@extend %sprite;
     @include position-vertical-center(right, 6px, absolute);
-    background-position: -165px -28px;
+    //background-position: -165px -28px;
+    //
+    //  TODO
+    //  create an X img for this button
+    //
     border: none;
     height: 66%;
     width: 24px;
 
-    &:hover {
-      background-position: -165px -1px;
-    }
+    // &:hover {
+    //   background-position: -165px -1px;
+    // }
   }
 
-}
+} // -- end @if --
 
 
 @if $helper-btn--close == true {
@@ -195,7 +198,7 @@
     text-transform: uppercase;
   }
 
-}
+} // -- end @if --
 
 
 
