@@ -1,9 +1,9 @@
 # Brass Tacks
-###(Last updated: 0.9.1 - March. 05, 2014)
+###(Last updated: 0.9.1.1 - March. 09, 2014)
 
-Brass Tacks is (will be) a professional front-end HTML5 and SCSS framework that incorporates and standardizes many widely used HTML and CSS elements.
+Brass Tacks is a professional front-end HTML5 and SCSS framework that incorporates and standardizes many widely used HTML and CSS elements.
 
-Once Brass Tacks reaches the 1.0 release, there will be a full listing of thank yous to the many people who's work has influenced this framework.
+Once Brass Tacks reaches the 1.0 release, there will be a full listing of "thank you"s to the many people who's work has influenced this framework.
 
 As of version 0.9.1, even more of the code from previous releases has been significantly rewritten. Until a final 1.0 stamp can be put on the code, there won't be a 'live' version of the framework available for viewing.
 
@@ -11,7 +11,12 @@ As of version 0.9.1, even more of the code from previous releases has been signi
 
 ## Setting up your dev environment
 
+The only thing you <b>need</b> to use Brass Tacks is <b>Sass v 3.3+</b>.
+
 Install SASS: http://sass-lang.com/install
+
+
+However, I've also setup a Gulp task file to help minify and compile files.
 
 Install Node.js: http://nodejs.org
 
@@ -38,12 +43,12 @@ Enter <code>gulp watch</code> to fire of tasks on change to Sass, images or Java
 ## Brass Tacks Specifics
 
 * HTML5 ready
-* Built for modern browsers & IE9+ with some legacy browser fall backs
+* Built for modern browsers & IE9+
 * JavaScript light: only comes with a Google Analytics placeholder & HTML5shiv via CDN
-* Various HTML Demos & snippets
+* Markup demos & code snippets within the scss files
 * CSS base, helper and project files
 * Sass Mixin, Silent Class and Variable libraries
-* Extensive inline and accompanying documentation (this WILL exist by v 1.0)
+* Extensive demos and documentation (this WILL exist by v 1.0)
 
 
 ### Sass Specifics
@@ -55,27 +60,7 @@ Brass Tacks' Sass files are split up into four base folders to help keep the cod
 * _helper-classes
 * _project
 
-Each folder contains an '__import.scss' file to compile and arrange all of the sub-files in each folder. This means there is only one file per
-folder type to import into master.scss.
-
-E.g. The __globals folder contains all mixins, placeholders and vars that are used across the entire framework.
-
-All the individual folders' import files collect into either:
-
-* master.scss
-* project.scss (or whatever you name this file.)
-
-Finally, by running gulp, these files are compiled to expanded and minified CSS files and exported to the build/assets/css folder.
-
-
-#### Customizing Brass Tacks
-
-All the base and helper files in Brass Tacks are wrapped in conditional @if statements.
-
-Customizing the CSS output is as simple as setting variables to True or False in the master.scss file.
-
-You can also easily restyle base style declarations and helper classes, without needing to go into the framework default files. Use the <b>setup.scss</b> file in the <b>project</b> folder to override default Brass Tacks styling.
-
+Read more about the Sass file architecture and how to customize Brass Tacks in the <a href="https://github.com/scottaohara/Brass-Tacks/blob/master/_develop/css/README.md">Sass ReadMe.md</a>.
 
 <hr />
 
@@ -91,17 +76,16 @@ And if you do end up using Brass Tacks, please let me know. I'd love to feature 
 
 #### In the Wild
 
-I've already used earlier versions of Brass Tacks on websites I've built
-for freelance clients, as well as in other open source collaborations.
+I've already used earlier versions of Brass Tacks on websites I've built for freelance clients, as well as in other open source collaborations.
 
 ##### 2014
 * bedlampublishing.com - 0.9.0.7
 * scottohara.me - 0.9.0.7
 
 ##### 2013
-* www.ghop.me - 0.7.3.1
-* www.neocities.org - 0.6.2 - in combination w/Twitter Bootstraps
-* ecommerce website w/ @xbuzz - 0.5.4
+* ghop.me - 0.7.3.1
+* neocities.org - 0.6.2 - in combination w/Twitter Bootstraps
 * spin-off (Ground Floor) created for all default NeoCities websites
+* ecommerce website w/ @xbuzz - 0.5.4
 * ecommerce website w/ @xbuzz - 0.4.2
 * ecommerce website w/ @xbuzz - 0.3.5

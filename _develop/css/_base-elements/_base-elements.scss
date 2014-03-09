@@ -77,7 +77,8 @@ html, body {
 @if $base-anchor == true {
 
   a, a:visited {
-    background-color: transparent; // *
+    background-color: transparent;
+    // Removes grey background color from active links in IE10
     color: $c-link;
 
     &:hover, &:active {
@@ -89,7 +90,5 @@ html, body {
       outline: thin dotted;
     }
   }
-
-  // * Removes grey background color from active links in IE10
 
 } // -- end @if --

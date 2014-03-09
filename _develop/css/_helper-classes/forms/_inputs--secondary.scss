@@ -122,14 +122,6 @@
   // JavaScript to fully make functional. It may not be worth it to
   // implement this due to the JS dependency.
 
-  .input-file-container {
-    position: relative;
-
-    label {
-      cursor: default;
-    }
-  }
-
   .input-file {
     @include position(top, 0, left, 0, absolute);
     cursor: pointer;
@@ -137,13 +129,21 @@
     opacity: 0;
     width: 100%;
     z-index: 9;
-  }
 
-  .input-file-area {
-    @extend %input-text;
-    cursor: pointer;
-    display: inline-block;
-    width: 75%;
+    &-container {
+      position: relative;
+
+      label {
+        cursor: default;
+      }
+    }
+
+    &-area {
+      @extend %input-text;
+      cursor: pointer;
+      display: inline-block;
+      width: 75%;
+    }
   }
 
 

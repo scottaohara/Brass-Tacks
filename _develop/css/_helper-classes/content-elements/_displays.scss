@@ -4,44 +4,44 @@
 
 @if $helper-content-displays--inlines == true {
 
-  // Convert to inline
-  .inline-element {
-    @extend %d-inline;
-    margin: 0 !important;
-    width: auto !important;
-  }
 
-  // Inline-block Individual Elements
-  .inline-block-element {
-    @extend %d-inline-block;
-    margin-right: $unit-px;
-    width: auto !important;
-  }
+  .inline- {
+
+    // Convert to inline
+    &element {
+      display: inline;
+      margin: 0 !important;
+      width: auto !important;
+    }
 
 
-  // Inline items with a list element
-  .inline-list {
-    margin-bottom: $unit-px4;
-
-    > li {
-      display: inline-block;
-      margin-bottom: 0;
+    // Inline-block Individual Elements
+    // OR
+    // ALL elements within a parent element
+    &block-element,
+    &all > * {
+      @extend %d-inline-block;
       margin-right: $unit-px;
-      vertical-align: middle;
+      width: auto !important;
+    }
 
-      &:last-child{
-        margin-right: 0;
+
+    // Inline items with a list element
+    &list {
+      margin-bottom: $unit-px4;
+
+      > li {
+        display: inline-block;
+        margin-bottom: 0;
+        margin-right: $unit-px;
+        vertical-align: middle;
+
+        &:last-child {
+          margin-right: 0;
+        }
       }
     }
-  }
-
-
-  // inline all elements within a parent
-  .inline-all{
-    > * {
-      @extend .inline-block-element;
-    }
-  }
+  } // end .inline-
 
 } // -- end @if --
 
@@ -52,16 +52,21 @@
 
 @if $helper-content-displays--show-hide == true {
 
-  // Show Elements with display:block
-  .d-block {
-    @extend %d-block;
-  }
+  .d- {
+
+    // Show Elements with display:block
+    &block {
+      @extend %d-block;
+    }
 
 
-  // Hide Elements with display:none
-  .d-none {
-    @extend %d-none;
+    // Hide Elements with display:none
+    &none {
+      @extend %d-none;
+    }
+
   }
+
 
   @media only screen and (max-width: $break-medium) {
     .mobile-hide {

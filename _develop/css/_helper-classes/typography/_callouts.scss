@@ -31,16 +31,20 @@
 @if $helper-type--callouts__messaging == true {
 
   // Text Coloring for Validation Messaging
-  .txt-success {
-    color: $c-green;
-  }
+  .txt- {
 
-  .txt-warning {
-    color: $c-orange;
-  }
+    &success {
+      color: $c-green;
+    }
 
-  .txt-error {
-    color: $c-red;
+    &warning {
+      color: $c-orange;
+    }
+
+    &error {
+      color: $c-red;
+    }
+
   }
 
 } // -- end @if --

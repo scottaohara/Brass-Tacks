@@ -5,22 +5,27 @@
 @if $helper-forms--general == true {
 
   // Containers
-  .form-row {
-    padding: $form-row--padding;
-  }
+  .form- {
 
-  .form-block {
-    border: $form-block--border;
-    margin-bottom: $input--margin;
-    padding: $form-block--padding;
+    // add top/bottom padding
+    &row {
+      padding: $form-row--padding;
+    }
 
-    &[disabled] {
-      position: relative;
+    // add emphasis styling to a row or entire form
+    &block {
+      border: $form-block--border;
+      margin-bottom: $input--margin;
+      padding: $form-block--padding;
 
-      &:after {
-        @extend %position-center;
-        background: $form-disable-overlay;
-        content: '';
+      &[disabled] {
+        position: relative;
+
+        &:after {
+          @extend %position-center;
+          background: $form-disable-overlay;
+          content: '';
+        }
       }
     }
   }

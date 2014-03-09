@@ -16,28 +16,29 @@
     @media screen and (max-width: $break-medium) {
       display: block;
     }
-  }
 
-  .btn-mobile-bar {
-    @extend %burger;
-    color: transparent;
-    font-size: 0;
-
-    &:after,
-    &:before {
+    &-bar {
       @extend %burger;
-      @extend %content-empty;
-      position: relative;
-    }
+      color: transparent;
+      font-size: 0;
 
-    &:after {
-      top: 6px
-    }
+      &:after,
+      &:before {
+        @extend %burger;
+        content: '';
+        position: relative;
+      }
 
-    &:before {
-      top: -8px;
+      &:after {
+        top: 6px
+      }
+
+      &:before {
+        top: -8px;
+      }
     }
   }
+
 
   //  Example mark-up:
   // ----------------------------------------------------------

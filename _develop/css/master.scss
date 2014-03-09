@@ -3,7 +3,7 @@
   *
   * Brass Tacks
   * by Scott O'Hara - @scottohara - github.com/scottaohara
-  * 0.9.1 - March 05, 2014
+  * 0.9.1.1 - March 09, 2014
   *
   *****************************************************************************
 */
@@ -183,7 +183,7 @@ $helper-content-flipper:                      true !default;
 $helper-forms--general:                       true !default;
 
 $helper-forms--input-color:                   false !default;
-$helper-forms--input-file:                    false !default;
+$helper-forms--input-file:                    true !default;
 $helper-forms--search-combo:                  true !default;
 $helper-forms--search-combo2:                 true !default;
 

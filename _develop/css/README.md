@@ -3,35 +3,64 @@
 The framework is split up into four base folders to help with keeping code
 organized and easy to find.
 
+
 * __globals
 * _base-elements
 * _helper-classes
 * _project
 
-Each folder contains an '__import.scss' file to index and arrange all of the
-sub-files in the folder and create one main import file to master.scss.
 
-Each folder also contains sub-folders to group code of a similar nature.
+All but the '_project' folder contain an '__import.scss' file to collect and
+arrange all of the children sub-files so as to reduce the number of imports
+into the master.scss file down to a single instance.
 
-For instance, in the __globals folder, all mixins, silent classes and vars are
-collected in their designated folders.
 
-In the _base-elements folder, basic HTML elements are grouped by family into
-folders. All of these files are then collected via their main __import.scss
-and pulled into:
+Some folders also contains sub-folders to group familes of code.
+e.g. typography, buttons, mixins or vars.
 
-* master.scss
-* project.scss (or whatever you name this file.)
 
 ---
 
+
 ## Customization
 
-Each file that has code that has compilable CSS, meaning non globals, imports
-or control files, is surrounded by a basic variable @if statement. Those
-variables can then be set to true or false via the master.scss or project.scss
-files, to determine whether or not the CSS compiles.
+
+###Compiling CSS
+Various files contain <code>@if</code> control directives that surround code
+partials or components. These directives are mapped to variables within the
+master.scss file. By setting a variable to <b>true</b> the matching
+<code>@if</code> directive will compile it's contained CSS. If a variable is
+set to <b>false</b>, the matching <code>@if</code> directive will not compile
+it's CSS.
+
 
 This customization setup is quite handy for including only the files you need,
 while still keeping all code in case previously unused components become
 required.
+
+
+###Updating Values
+To update the default styling to Brass Tacks, you do not need to venture into
+the source files (though you should still study the files to familiarize
+yourself with the code).
+
+
+Instead, use the <b>_setup.scss</b> file, contained in the <b>_project</b>
+folder to redefine the default variable values of Brass Tacks.
+
+
+For instance, if you wanted to update the default base font-size of the
+framework, you would add the following to the <b>_setup.scss</b> file:
+
+<code>
+  $txt-base: (your new value here);
+</code>
+
+That's it. Anywhere where <code>$txt-base</code> is used within Brass Tacks
+would then be updated to reflect your new custom value.
+
+
+It's best to redefine the variables in the <b>_setup.scss</b> file, rather than
+in the master variables files, because if you ever need to pull a new version
+of Brass Tacks, there will be less chance for you to receive merge conflicts
+or for you to lose any of your custom work.
