@@ -251,3 +251,6 @@ $helper-type--smoothing:                      true !default;
 
 // Import Library
 @import '_helper-classes/__import';           // Imports above set to true
+
+// Import Project
+@import '_project/__project';                 // Imports Project files
