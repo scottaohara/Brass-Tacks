@@ -12,22 +12,38 @@
 //  Font Sizes & Weights
 // ----------------------------------------------------------------------------
 
-%txt-xxlarge  { font-size: $txt-xxlarge; font-weight: $txt-xxlarge-weight; }
-%txt-xlarge   { font-size: $txt-xlarge;  font-weight: $txt-xlarge-weight; }
-%txt-large    { font-size: $txt-large;   font-weight: $txt-large-weight; }
+$f-sizing-map:
+  //f-name  //f-size      //f-weight
+  (xxlarge, $txt-xxlarge, $txt-xxlarge-weight),
+  (xlarge,  $txt-xlarge,  $txt-xlarge-weight),
+  (large,   $txt-large,   $txt-large-weight),
 
-%txt-h1       { font-size: $txt-h1;      font-weight: $txt-h1-weight; }
-%txt-h2       { font-size: $txt-h2;      font-weight: $txt-h2-weight; }
-%txt-h3       { font-size: $txt-h3;      font-weight: $txt-h3-weight; }
-%txt-h4       { font-size: $txt-h4;      font-weight: $txt-h4-weight; }
-%txt-h5       { font-size: $txt-h5;      font-weight: $txt-h5-weight; }
-%txt-h6       { font-size: $txt-h6;      font-weight: $txt-h6-weight; }
+  (h1,      $txt-h1,      $txt-h1-weight),
+  (h2,      $txt-h2,      $txt-h2-weight),
+  (h3,      $txt-h3,      $txt-h3-weight),
+  (h4,      $txt-h4,      $txt-h4-weight),
+  (h5,      $txt-h5,      $txt-h5-weight),
+  (h6,      $txt-h6,      $txt-h6-weight),
 
-%txt-base     { font-size: $txt-base;    font-weight: $txt-base-weight; }
+  (base,    $txt-base,    $txt-base-weight),
 
-%txt-small    { font-size: $txt-small;   font-weight: $txt-small-weight; }
-%txt-tiny     { font-size: $txt-tiny;    font-weight: $txt-tiny-weight; }
-%txt-mini     { font-size: $txt-mini;    font-weight: $txt-mini-weight; }
+  (small,   $txt-small,   $txt-small-weight),
+  (tiny,    $txt-tiny,    $txt-tiny-weight),
+  (mini,    $txt-mini,    $txt-mini-weight);
+
+
+
+%txt- {
+  @each $f-name, $f-size, $f-weight in $f-sizing-map {
+    &#{$f-name} {
+      font: {
+          size: $f-size;
+        weight: $f-weight;
+      }
+    }
+  }
+}
+
 
 
 
@@ -43,4 +59,4 @@ $txt-dec-list: bold, bolder, normal;
   }
 }
 
-%italic { font-style: italic;  }
+%italic { font-style: italic; }

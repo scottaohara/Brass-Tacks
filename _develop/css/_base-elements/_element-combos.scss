@@ -80,8 +80,9 @@
 // if a child of an element revise styling
 %kbd-code-samp--child {
   display: inline-block;
+  font-size: $txt-tiny;
   margin: 0;
-  padding: $unit-px;
+  padding: $unit-px/2 $unit-px;
 }
 
 
