@@ -3,7 +3,7 @@
   *
   * Brass Tacks
   * by Scott O'Hara - @scottohara - github.com/scottaohara
-  * 0.9.1.1 - March 09, 2014
+  * 0.9.2 - March 15, 2014
   *
   *****************************************************************************
 */
@@ -13,8 +13,6 @@
 // ----------------------------------------------------------------------------
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,700italic,600,400italic,300italic,600italic);
-
-
 
 // ----------------------------------------------------------------------------
 //  Globals
@@ -204,6 +202,8 @@ $helper-dividers:                             true !default;
 $helper-floats-clears:                        true !default;
 $helper-grids--standard:                      true !default;
 $helper-grids--equal-size:                    true !default;
+$helper-grids--flexbox:                       true !default;
+$helper-grids--display-table:                 true !default;
 
 
 

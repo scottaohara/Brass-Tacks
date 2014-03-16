@@ -12,7 +12,8 @@
   display: flex;
 }
 
-@mixin flex($values) {
+
+@mixin flex($values, $fallback-width: 20%) {
   // old prefixes
   -webkit-box-flex: $values;
      -moz-box-flex: $values;
@@ -20,7 +21,10 @@
       -webkit-flex: $values;
           -ms-flex: $values;
               flex: $values;
+  // need this for old syntax
+             width: $fallback-width;
 }
+
 
 @mixin order($val) {
   // old prefixes
