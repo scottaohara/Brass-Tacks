@@ -31,17 +31,14 @@ gulp.task('sass', function() {
 
   // Compiles Master Brass Tacks scss to CSS
   return es.concat(
-  // Using node's event-stream we can allow two sources.
-  // See: https://github.com/gulpjs/gulp/blob/master/docs/recipes/using-multiple-sources-in-one-task.md
-    gulp.src('./_develop/css/*.scss')
-      .pipe(sass({unixNewlines: true, style: 'expanded', lineNumbers: false, trace: true}))
-      .pipe(gulp.dest('./build/assets/css')),
-
-  // Compiles Project scss to CSS
-  // Remove this if you pull project files into the master.
-    gulp.src('./_develop/css/_project-specific/*.scss')
+    gulp.src('./_develop/sass/*.scss')
       .pipe(sass({unixNewlines: true, style: 'expanded', lineNumbers: false, trace: true}))
       .pipe(gulp.dest('./build/assets/css'))
+
+
+    // If you would like to have multiple CSS files compiled, you can
+    // using node's event-stream.
+    // See: https://github.com/gulpjs/gulp/blob/master/docs/recipes/using-multiple-sources-in-one-task.md
   );
 });
 
@@ -100,7 +97,7 @@ gulp.task('default', ['clean'], function () {
 gulp.task('watch', function() {
 
   // Watch .scss files
-  gulp.watch('./_develop/css/**/*.scss', function(event) {
+  gulp.watch('./_develop/sass/**/*.scss', function(event) {
     console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
     gulp.run('styles');
   });
