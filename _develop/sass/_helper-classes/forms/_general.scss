@@ -9,11 +9,14 @@
 
     // add top/bottom padding
     &row {
+      @extend %last-child-0;
       padding: $form-row--padding;
+      position: relative;
     }
 
     // add emphasis styling to a row or entire form
     &block {
+      @extend %last-child-0;
       border: $form-block--border;
       margin-bottom: $input--margin;
       padding: $form-block--padding;
@@ -21,7 +24,7 @@
       &[disabled] {
         position: relative;
 
-        &:after {
+        &::after {
           @extend %position-center;
           background: $form-disable-overlay;
           content: '';
@@ -35,6 +38,8 @@
   .input-text {
     @extend %input-text;
     // see 'more-inputs' for additional styling for specific input elements
+    position: relative;
+    z-index: 2;
   }
 
 
