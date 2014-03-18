@@ -3,28 +3,19 @@
 //  Source: https://gist.github.com/Integralist/3931680
 // ----------------------------------------------------------------------------
 
+
+$browsers: -moz-, -ms-, -webkit-, "";
+
+
 // Setup for animation w/out keyframes
-@mixin animation ($delay, $duration, $animation) {
-  -moz-animation-delay: $delay;
-  -moz-animation-duration: $duration;
-  -moz-animation-name: $animation;
-  -moz-animation-fill-mode: forwards; // prevents the animation from restarting
+@mixin animation ($animation-values... ) {
 
-  -ms-animation-delay: $delay;
-  -ms-animation-duration: $duration;
-  -ms-animation-name: $animation;
-  -ms-animation-fill-mode: forwards; // prevents the animation from restarting
-
-  -webkit-animation-delay: $delay;
-  -webkit-animation-duration: $duration;
-  -webkit-animation-name: $animation;
-  -webkit-animation-fill-mode: forwards; // prevents the animation from restarting
-
-  animation-delay: $delay;
-  animation-duration: $duration;
-  animation-name: $animation;
-  animation-fill-mode: forwards; // prevents the animation from restarting
+  @each $b in $browsers {
+    #{$b}animation: $animation-values;
+  }
 }
+
+
 
 // Setup for keyframes
 @mixin keyframe($animation-name) {
@@ -48,15 +39,15 @@
 // Create CSS keyframe animations for all vendors in one go, e.g.:
 // ----------------------------------------------------------------------------
 //  .foo{
-//    @include animation(10s, 5s, name);
+//    @include animation(10s 5s name);
 //  }
 
 // @include keyframe(name){
-//   from{
-//     font-size:1em;
+//   from {
+//     font-size: 1em;
 //   }
 //
-//    to{
-//      font-size:5em;
+//    to {
+//      font-size: 5em;
 //    }
 // }
