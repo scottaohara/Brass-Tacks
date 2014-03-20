@@ -88,31 +88,12 @@
         @include tooltip-position($location: $v)
       }
 
-<<<<<<< HEAD
-  .tooltip-img-top {
-    @extend %tooltip-img;
-    @include tooltip-img-location($direction: top);
-  }
-
-
-  // Make fixed width Tooltips
-  .tooltip-fixed-width {
-    &::after {
-      width: 125px;
-=======
       &-img-#{$v} {
         @extend %tooltip-img;
         @include tooltip-img-location($direction: $v);
       }
->>>>>>> drop menus, .nav-bread, messaging, gradients
     }
 
-<<<<<<< HEAD
-  .tooltip-fixed-width-wide {
-    &::after {
-      max-width: 300px;
-      width: 300px;
-=======
     // Make fixed width Tooltips
     &-fixed-width {
       &::after {
@@ -125,7 +106,6 @@
           width: 300px;
         }
       }
->>>>>>> drop menus, .nav-bread, messaging, gradients
     }
 
     // Tooltip Color Variations

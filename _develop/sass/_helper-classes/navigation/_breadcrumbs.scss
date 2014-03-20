@@ -4,23 +4,14 @@
 
 @if $helper-nav-breadcrumbs == true {
 
-  .nav-bread {
+  .bread {
     a, li {
       display: inline-block;
     }
 
-<<<<<<< HEAD
-      &:last-child::after {
-        @extend %content-empty;
-      }
-
-      &::after {
-        content: ">";
-=======
     li {
 
       &::after {
->>>>>>> drop menus, .nav-bread, messaging, gradients
         @extend %d-inline-block;
         content: ">";
       }
@@ -36,11 +27,10 @@
     }
   }
 
-
   // Example mark-up
   // ----------------------------------------------------------------------------
   // <nav role="navigation">
-  //   <ol class="nav-bread">
+  //   <ol class="bread">
   //     <li>
   //       <a href="#!" title="back to #">Index</a>
   //     </li>
