@@ -1,5 +1,5 @@
 # Brass Tacks
-###(Last updated: 0.9.1.1 - March. 09, 2014)
+###(Last updated: 0.9.3 - March. 20, 2014)
 
 Brass Tacks is a professional front-end HTML5 and SCSS framework that incorporates and standardizes many widely used HTML and CSS elements.
 
@@ -42,13 +42,12 @@ Enter <code>gulp watch</code> to fire of tasks on change to Sass, images or Java
 
 ## Brass Tacks Specifics
 
-* HTML5 ready
-* Built for modern browsers & IE9+
+* Built for HTML5 enabled modern browsers & IE9+
 * JavaScript light: only comes with a Google Analytics placeholder & HTML5shiv via CDN
 * Markup demos & code snippets within the scss files
-* CSS base, helper and project files
 * Sass Mixin, Silent Class and Variable libraries
-* Extensive demos and documentation (this WILL exist by v 1.0)
+* CSS base, helper and skeleton setup for project files
+* Extensive demos, code patterns and documentation (this WILL exist by v 1.0)
 
 
 ### Sass Specifics
@@ -62,6 +61,7 @@ Brass Tacks' Sass files are split up into four base folders to help keep the cod
 
 Read more about the Sass file architecture and how to customize Brass Tacks in the <a href="https://github.com/scottaohara/Brass-Tacks/blob/master/_develop/css/README.md">Sass ReadMe.md</a>.
 
+
 <hr />
 
 
@@ -71,7 +71,12 @@ Brass Tacks was officially started in mid-2013, but really is based on the evolu
 
 Even though Brass Tacks isn't 'finished', it's pretty darn close to prime time. So go ahead and fork, download and use what's available in your project now. I'd love to get any feedback on the framework that you may have!
 
-And if you do end up using Brass Tacks, please let me know. I'd love to feature your work here.
+And if you do end up using Brass Tacks, please let me know.
+
+I'd love to feature your work here.
+
+
+<hr  />
 
 
 #### In the Wild
@@ -86,6 +91,6 @@ I've already used earlier versions of Brass Tacks on websites I've built for fre
 * ghop.me - 0.7.3.1
 * neocities.org - 0.6.2 - in combination w/Twitter Bootstraps
 * spin-off (Ground Floor) created for all default NeoCities websites
-* ecommerce website w/ @xbuzz - 0.5.4
-* ecommerce website w/ @xbuzz - 0.4.2
-* ecommerce website w/ @xbuzz - 0.3.5
+* ecommerce website partnered w/ @xbuzz - 0.5.4
+* ecommerce website partnered w/ @xbuzz - 0.4.2
+* ecommerce website partnered w/ @xbuzz - 0.3.5
