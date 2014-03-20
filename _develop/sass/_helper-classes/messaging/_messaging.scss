@@ -1,0 +1,130 @@
+// ----------------------------------------------------------------------------
+//  Messaging
+// ----------------------------------------------------------------------------
+
+@if $helper-messaging == true {
+
+  .message {
+
+    // positioning the message
+    &-position {
+      @include position(top, 0, left, $unit-per, fixed);
+      width: 80%;
+    }
+
+    // container for the message
+    &-container {
+      @include transition(all .3s linear);
+      border: 1px solid;
+      margin-bottom: $unit-em;
+      padding: $unit-em*.35 $unit-em*.5;
+      position: relative;
+      text-shadow: 0 1px 1px rgba(255,255,255,.6);
+    }
+
+    //&-title {}
+
+    &-text {
+      margin-bottom: 0;
+    }
+
+    &-warning {
+      @include messaging-unit($c-orange, $c-dark);
+    }
+
+    &-error {
+      @include messaging-unit($c-red, $c-off-white);
+    }
+
+    &-success {
+      @include messaging-unit($c-green, $c-off-white);
+    }
+
+    &-info {
+      @include messaging-unit($c-blue, $c-off-white);
+    }
+  }
+
+  // close the message link/button
+  .close-message {
+    @extend %circle;
+    @include position(top, -$unit-em*.5, right, -$unit-em*.5, absolute);
+    border: 1px solid;
+    padding: $unit-px $unit-px3;
+    text-decoration: none;
+  }
+
+} // -- end @if --
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Tooltips
+// ----------------------------------------------------------------------------
+
+@if $helper-tooltip == true {
+
+   // Tool tip example
+  [data-tooltip] {
+    @include tooltip();
+
+    &::after {
+      @include border-radius($unit-px);
+      content: attr(data-tooltip);
+    }
+  }
+
+
+  // print out as selector partials & values
+  $pos: bottom, left, right, top;
+
+  .tooltip {
+
+    @each $v in $pos {
+      &-#{$v} {
+        @include tooltip-position($location: $v)
+      }
+
+      &-img-#{$v} {
+        @extend %tooltip-img;
+        @include tooltip-img-location($direction: $v);
+      }
+    }
+
+    // Make fixed width Tooltips
+    &-fixed-width {
+      &::after {
+        width: 125px;
+      }
+
+      &-wide {
+        &::after {
+          max-width: 300px;
+          width: 300px;
+        }
+      }
+    }
+
+    // Tooltip Color Variations
+    &-prime {
+      @include tooltip-color;
+    }
+
+    &-success {
+      @include tooltip-color($tt-color: $c-green);
+    }
+
+    &-warning {
+      @include tooltip-color($tt-color: $c-orange);
+    }
+
+    &-error {
+      @include tooltip-color($tt-color: $c-red);
+    }
+
+  } // end .tooltip
+
+} // -- end @if --

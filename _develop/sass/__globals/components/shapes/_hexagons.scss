@@ -1,0 +1,87 @@
+// ----------------------------------------------------------------------------
+//  CSS Hexagon
+// ----------------------------------------------------------------------------
+
+$scaleFactor: tan(30deg); /*this smushes a square into a 60deg/120deg rhombus*/
+$inverseScale: 1/$scaleFactor;
+$sideLength: $size/sqrt(3);
+$totalHeight: $sideLength + $size;
+$boxShadow: $shadow;
+$scaledBorderWidth: $borderWidth/$scaleFactor;
+$border: solid #{$borderWidth} #fff;
+$scaledBorder: solid #{$scaledBorderWidth} #fff;
+
+
+//http://codepen.io/brenna/pen/hbDqL
+@mixin hexagon($size: 300px, $background: url(http://placekitten.com/g/650), $shadow: 0 0 20px rgba(0,0,0,.8), $borderWidth: 3px) {
+
+  @include box-shadow($boxShadow);
+  background: $background center center no-repeat;
+  background-size: $totalHeight auto;
+  border-left: $border;
+  border-right: $border;
+  height: $sideLength;
+  margin-bottom: $size/3;
+  margin-top: $size/3;
+  position: relative;
+  width: $size;
+
+  .hex1,
+  .hex2 {
+    @include box-shadow($boxShadow);
+    @include transform(scaleY(#{$scaleFactor}) rotate(-45deg));
+    background: inherit;
+    height: $size/sqrt(2);
+    left: $sideLength/4 - $borderWidth + 1px; /*for some reason this 1px correction is needed */
+    overflow: hidden;
+    position: absolute;
+    width: $size/sqrt(2);
+
+
+    &::after {
+      @include transform(rotate(45deg) scaleY(#{$inverseScale}));
+      /*counter rotate and un-scale the bg image*/
+      content: "";
+      position: absolute;
+      left: -($sideLength/4 + 1px); /*same correction as up above */
+      width: $size;
+      height: $size/sqrt(2);
+      top: 0;
+      background: inherit;
+    }
+  }
+
+  .hex1 {
+    top: - $size/sqrt(2)/2;
+    border-top: $scaledBorder;
+    border-right: $scaledBorder;
+
+    &::after {
+      background-position: center 17%;
+      margin-top: -$scaledBorderWidth;
+    }
+  }
+
+  .hex2 {
+    border-bottom: $scaledBorder;
+    border-left: $scaledBorder;
+    bottom: -$size/sqrt(2)/2;
+
+    &::after {
+      background-position: center 83%;
+      margin-left: - $scaledBorderWidth + 1px; /*that pesky single pixel correction again*/
+    }
+  }
+
+  /*cover up the box shadows */
+  &::after {
+    background: inherit;
+    bottom: 0;
+    content: "";
+    height: $sideLength - 2*$borderWidth/sqrt(2);
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: $borderWidth/sqrt(2);
+  }
+}

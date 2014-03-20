@@ -1,0 +1,28 @@
+// ----------------------------------------------------------------------------
+//  Progress Bars/Spinners
+// ----------------------------------------------------------------------------
+
+@if $helper-loading == true {
+
+
+  @include keyframe (spin) {
+    to {
+      @include transform(rotate(1turn));
+    }
+  }
+
+  .progress {
+    @include radial-gradient(transparent, circle at top right, rgba(0,0,0,.4), rgba(0,0,0,0));
+    @include animation(spin 1s infinite steps(12));
+    border-radius: $circle;
+    display: inline-block;
+    height: 5em;
+    margin: 0 .5em;
+    overflow: hidden;
+    position: relative;
+    text-indent: 999em;
+    width: 5em;
+
+  }
+
+} // -- end @if --

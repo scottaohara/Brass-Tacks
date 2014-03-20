@@ -1,0 +1,36 @@
+// ----------------------------------------------------------------------------
+//  Label Reveal on Focus
+// ----------------------------------------------------------------------------
+
+@if $helper-forms--label-reveal == true {
+
+.label-helper {
+  @include position(bottom, 0, left, 0, absolute);
+  @include transition(.2s all);
+  font-size: $txt-tiny;
+  margin: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+.input-text {
+  &:focus + .label-helper,
+  &:invalid + .label-helper {
+    bottom: 95%;
+    line-height: 1;
+    opacity: 1;
+    padding: $unit-px;
+  }
+
+  &:invalid{
+    & + .label-helper {
+      background: $c-message--error;
+      border-radius: $unit-px $unit-px 0 0;
+      color: $c-white;
+      left: -1px;
+      padding: $unit-px $unit-px2;
+    }
+  }
+}
+
+} // -- end @if --

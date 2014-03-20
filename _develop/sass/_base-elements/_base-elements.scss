@@ -1,0 +1,94 @@
+// ----------------------------------------------------------------------------
+//  Basic HTML Element Normalize / Reset Styling
+// ----------------------------------------------------------------------------
+
+
+//  Apply border-box to all the things
+// ----------------------------------------------------------------------------
+@if $base-border-box == true {
+
+  // Make a smarter Box Model
+  *, *::after, *::before {
+    @include box-sizing(border-box);
+  }
+
+} // -- end @if --
+
+
+
+
+//  Basic HTML + Body styling
+// ----------------------------------------------------------------------------
+html, body {
+  @extend %reset-spacing;
+  background-color: $c-body--bg;
+  color: $c-body--text;
+  font: $f-body--weight $f-body--size $f-body--family;
+  height: 100%;
+  line-height: $f-body--line-height;
+  text-rendering: optimizeLegibility;
+     -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+
+
+
+// Highlight Text Selection
+// ----------------------------------------------------------------------------
+@if $base-text-selection == true {
+
+  @include select-text($c-select-text--bg, $c-select-text--text, none);
+
+} // -- end @if --
+
+
+
+
+
+
+//  Play nice with browsers that don't know these are block level elements
+// ----------------------------------------------------------------------------
+@if $base-html5-displays == true {
+
+  // Give HTML5 elements block display, which is not defined in IE 8/9
+  article, aside, canvas, footer, header, main, section {
+    @extend %d-block;
+  }
+
+
+  // Makes hidden actually [hidden] in IE 8/9
+  [hidden] {
+    @extend %d-none;
+  }
+
+} // -- end @if --
+
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Anchor Element
+// ----------------------------------------------------------------------------
+
+@if $base-anchor == true {
+
+  a, a:visited {
+    background-color: transparent;
+    // Removes grey background color from active links in IE10
+    color: $c-link;
+
+    &:hover, &:active {
+      @extend %outline-none;
+      color: $c-link-h;
+    }
+
+    &:focus {
+      outline: thin dotted;
+    }
+  }
+
+} // -- end @if --

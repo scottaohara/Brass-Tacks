@@ -1,0 +1,55 @@
+// ----------------------------------------------------------------------------
+//  Linear Gradient
+// ----------------------------------------------------------------------------
+
+$browser-list:    -moz-,  // moz 3.6 - 15
+                    -o-,  // opera 11.1 - 12
+               -webkit-;  // Safari 4, Chrome 1-9, iOS 3.2-4.3, Android 2.1-3.0
+
+@mixin linear-gradient($fallback, $g-direct-old, $g-direct-new, $g-colors...) {
+  background-color: $fallback;
+
+  @each $browser in $browser-list {
+    background-image: #{$browser}linear-gradient($g-direct-old, $g-colors);
+  }
+
+  background-image: linear-gradient($g-direct-new, $g-colors);
+  // UNPREFIXED: Opera 15+, Chrome 25+, IE 10+, FF 16+, Safari 6.1+, iOS 7+, Android 4.4+
+}
+
+//  Example:
+//  @include linear-gradient(#fcc, 80deg, 80deg #fcc, #f23);
+//  @include linear-gradient(#fcc, top, to top, #fcc, #f23);
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Radial Gradient
+// ----------------------------------------------------------------------------
+
+@mixin radial-gradient($fallback, $radial...) {
+  background-color: $fallback;
+  background-image: radial-gradient($radial);
+}
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Repeating Gradients
+// ----------------------------------------------------------------------------
+
+@mixin repeating-gradient($type, $repeating...) {
+  background-image: repeating-#{$type}-gradient($repeating);
+}
+
+// Set type to either radial or linear.
+// Pass in all values to the $repeating variable
+//
+// Example:
+// @include repeating-gradient(linear, 60deg, #000, #000 15px, #eee 10px, #eee 15px);

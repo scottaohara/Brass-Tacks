@@ -1,0 +1,111 @@
+@if $helper-type--callouts__block == true {
+
+// ----------------------------------------------------------------------------
+//  Callout Text
+// ----------------------------------------------------------------------------
+
+  // Shout Out - blockquote / blockquote like styling for emphasizing text
+  .txt-callout {
+    @include box-shadow($bs-callout);
+    background: $c-lighter;
+    border-left: $unit-px solid $c-brand-2;
+    color: $c-brand-2;
+    font-size: $txt-h5;
+    padding: $unit-px4;
+
+    &::after,
+    &::before {
+      display: none;
+    }
+  }
+
+} // -- end @if --
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Callout Text -- Messaging
+// ----------------------------------------------------------------------------
+
+@if $helper-type--callouts__messaging == true {
+
+  // Text Coloring for Validation Messaging
+  .txt- {
+
+    &success {
+      color: $c-green;
+    }
+
+    &warning {
+      color: $c-orange;
+    }
+
+    &error {
+      color: $c-red;
+    }
+
+  }
+
+} // -- end @if --
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Callout Text -- decoration
+// ----------------------------------------------------------------------------
+
+@if $helper-type--callouts__decoration == true {
+
+  // Apply bolding to text without need for semantics
+  .bold {
+    @extend %bold;
+  }
+
+
+  // Background Text Highlight
+  .txt-highlight {
+    @include border-radius($unit-px);
+    background: $c-red;
+    color: $c-white;
+    display: inline-block;
+    padding: $unit-px;
+  }
+
+} // -- end @if --
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Callout Text -- Tilt Text
+// ----------------------------------------------------------------------------
+
+@if $helper-type--callouts__slant == true {
+
+  // Background Text Highlight - Skewed
+  .txt-slant {
+    @include transform(skewX(-16deg));
+  }
+
+  // Example mark-up:
+  // ----------------------------------------------------------------------------
+  // <span class="txt-highlight txt-slant">
+  //   Text Goes here
+  // </span>
+
+
+  .txt-correct {
+    @include transform(skewX(16deg));
+    display: inline-block;
+    padding: 0 $unit-px;
+  }
+
+  // Example mark-up:
+  // ----------------------------------------------------------------------------
+  // <span class="txt-slant">
+  //   <span class="txt-correct">Text Goes here</span>
+  // </span>
+
+} // -- end @if --

@@ -1,0 +1,257 @@
+/*
+  *****************************************************************************
+  *
+  * Brass Tacks
+  * by Scott O'Hara - @scottohara - github.com/scottaohara
+  * 0.9.3 - March 20, 2014
+  *
+  *****************************************************************************
+*/
+
+// ----------------------------------------------------------------------------
+//  Import Font(s)
+// ----------------------------------------------------------------------------
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,700italic,600,400italic,300italic,600italic);
+
+// ----------------------------------------------------------------------------
+//  Globals
+//
+//  The global files consist of variables, mixins and silent classes that
+//  are necessary for the base styling of the framework. These files don't
+//  compile if they are not used, so there is no benefit in setting global
+//  file imports to true or false.
+// ----------------------------------------------------------------------------
+
+  // Import Library
+  @import '__globals/__import';               // Includes global libraries
+
+  // Revisions to base settings / styling
+  @import '_project/setup';
+
+
+// ----------------------------------------------------------------------------
+// Base Element Import Controller
+// ----------------------------------------------------------------------------
+
+// Base Elements
+$base-border-box:                             true !default;
+$base-html5-displays:                         true !default;
+$base-anchor:                                 true !default;
+$base-text-selection:                         true !default;
+
+
+
+// Primary Typography Elements
+$base-heading:                                true !default;
+$base-paragraph:                              true !default;
+$base-small:                                  true !default;
+
+
+
+// Quotes
+$base-blockquote:                             true !default;
+$base-q:                                      true !default;
+
+
+
+// Secondary Typography Elements
+$base-abbr:                                   true !default;
+$base-blockquote-basic:                       true !default;
+$base-bold-italic:                            true !default;
+$base-cite:                                   true !default;
+$base-dfn:                                    true !default;
+$base-ins:                                    true !default;
+$base-mark:                                   true !default;
+$base-sub-sup:                                true !default;
+
+
+
+// Element Containers
+$base-code:                                   true !default;
+$base-kbd:                                    false !default;
+$base-samp:                                   false !default;
+$base-address:                                true !default;
+$base-details:                                true !default;
+$base-summary:                                true !default;
+$base-pre:                                    true !default;
+$base-fig-figcaption:                         true !default;
+
+
+
+// Progress / Meter Elements
+$base-meter:                                  false !default;
+$base-progress:                               false !default;
+
+
+
+// Nav, Menu & List Elements
+$base-lists:                                  true !default;
+$base-lists--def:                             true !default;
+$base-menu:                                   true !default;
+$base-nav:                                    true !default;
+
+
+
+// Table Elements
+$base-table--captions:                        false !default;
+$base-table--parents:                         true !default;
+$base-table--rows-cols:                       true !default;
+
+
+
+// Form Elements
+$base-form--parents:                          true !default;
+$base-form--buttons:                          true !default;
+$base-form--inputs:                           true !default;
+$base-form--select:                           true !default;
+$base-form--label:                            true !default;
+$base-form--legend:                           true !default;
+$base-form--placeholder-text:                 true !default;
+$base-form--textarea:                         true !default;
+
+
+
+// Media Elements
+$base-media--audio:                           true !default;
+$base-media--embed-object:                    true !default;
+$base-media--img-svg:                         true !default;
+$base-media--video:                           true !default;
+
+
+
+// Template Element
+$base-template:                               false !default;
+
+
+
+// HR Element
+$base-hr:                                     true !default;
+
+
+
+// Import Library
+@import '_base-elements/__import';            // Imports above set to true
+
+
+
+// ----------------------------------------------------------------------------
+//  Helper Classes Import Controller
+// ----------------------------------------------------------------------------
+
+// Button Helpers
+$helper-btn--general:                         true !default;
+$helper-btn--prime:                           true !default;
+$helper-btn--emph:                            true !default;
+$helper-btn--neg:                             true !default;
+$helper-btn--disable:                         true !default;
+
+$helper-btn--social:                          true !default;
+$helper-btn--social__fb:                      true !default;
+$helper-btn--social__tw:                      true !default;
+$helper-btn--social__gp:                      true !default;
+
+$helper-btn--pills:                           true !default;
+$helper-btn--sizing:                          true !default;
+$helper-btn--rounding:                        true !default;
+
+$helper-btn--clear:                           true !default;
+$helper-btn--close:                           true !default;
+
+
+
+// Content Element Helpers
+$helper-content-displays--inlines:            true !default;
+$helper-content-displays--show-hide:          true !default;
+$helper-content-displays--mute:               true !default;
+
+$helper-content-emphasis:                     true !default;
+$helper-content-emphasis--alt:                true !default;
+$helper-content-emphasis--img:                true !default;
+
+$helper-content-media-element:                true !default;
+$helper-content-media-element--reverse:       true !default;
+$helper-content-media-element--no-wrap:       true !default;
+
+$helper-content-flipper:                      true !default;
+
+
+
+// Form Helpers
+$helper-forms--general:                       true !default;
+$helper-forms--label-reveal:                  true !default;
+
+$helper-forms--input-color:                   false !default;
+$helper-forms--input-file:                    true !default;
+$helper-forms--search-combo:                  true !default;
+$helper-forms--search-combo2:                 true !default;
+
+$helper-forms--custom-checkbox-radio:         true !default;
+$helper-forms--custom-checkbox-radio--slider: true !default;
+
+$helper-forms--select:                        true !default;
+$helper-forms--multi-select:                  true !default;
+
+$helper-forms--sizing:                        true !default;
+$helper-forms--validation:                    true !default;
+
+
+
+// Layout & Table Helpers
+$helper-table:                                true !default;
+$helper-dividers:                             true !default;
+$helper-floats-clears:                        true !default;
+$helper-grids--standard:                      true !default;
+$helper-grids--equal-size:                    true !default;
+$helper-grids--flexbox:                       true !default;
+$helper-grids--display-table:                 true !default;
+
+
+
+// Messaging Helpers
+$helper-loading:                              true !default;
+$helper-messaging:                            true !default;
+$helper-tooltip:                              true !default;
+
+
+
+// Nav Helpers
+$helper-nav--breadcrumbs:                     true !default;
+$helper-nav--dropmenu:                        true !default;
+$helper-nav--fixed:                           true !default;
+$helper-nav--grid:                            true !default;
+$helper-nav--horizontal:                      true !default;
+$helper-nav--horizontal-centered:             true !default;
+$helper-nav--mobile:                          true !default;
+$helper-nav--vertical:                        true !default;
+
+
+
+// Typography Helpers
+$helper-type--alignment:                      true !default;
+$helper-type--callouts__block:                true !default;
+$helper-type--callouts__messaging:            true !default;
+$helper-type--callouts__decoration:           true !default;
+$helper-type--callouts__slant:                true !default;
+$helper-type--lists:                          true !default;
+
+
+
+// Sizing
+$helper-type--sizing__xlarge:                 true !default;
+$helper-type--sizing__headings:               true !default;
+$helper-type--sizing__base:                   true !default;
+$helper-type--sizing__small:                  true !default;
+
+// Readability Modifiers
+$helper-type--line-height:                    true !default;
+$helper-type--indenting:                      true !default;
+$helper-type--smoothing:                      true !default;
+
+
+
+// Import Library
+@import '_helper-classes/__import';           // Imports above set to true
+
+// Import Project
+@import '_project/__project';                 // Imports Project files

@@ -1,0 +1,53 @@
+// ----------------------------------------------------------------------------
+//  CSS Animation
+//  Source: https://gist.github.com/Integralist/3931680
+// ----------------------------------------------------------------------------
+
+
+$browsers: -moz-, -ms-, -webkit-, "";
+
+
+// Setup for animation w/out keyframes
+@mixin animation ($animation-values... ) {
+
+  @each $b in $browsers {
+    #{$b}animation: $animation-values;
+  }
+}
+
+
+
+// Setup for keyframes
+@mixin keyframe($animation-name) {
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+// Create CSS keyframe animations for all vendors in one go, e.g.:
+// ----------------------------------------------------------------------------
+//  .foo{
+//    @include animation(10s 5s name);
+//  }
+
+// @include keyframe(name){
+//   from {
+//     font-size: 1em;
+//   }
+//
+//    to {
+//      font-size: 5em;
+//    }
+// }
