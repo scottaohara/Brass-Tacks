@@ -22,18 +22,18 @@
       color: transparent;
       font-size: 0;
 
-      &:after,
-      &:before {
+      &::after,
+      &::before {
         @extend %burger;
         content: '';
         position: relative;
       }
 
-      &:after {
+      &::after {
         top: 6px
       }
 
-      &:before {
+      &::before {
         top: -8px;
       }
     }

@@ -38,7 +38,7 @@ $scaledBorder: solid #{$scaledBorderWidth} #fff;
     width: $size/sqrt(2);
 
 
-    &:after {
+    &::after {
       @include transform(rotate(45deg) scaleY(#{$inverseScale}));
       /*counter rotate and un-scale the bg image*/
       content: "";
@@ -56,7 +56,7 @@ $scaledBorder: solid #{$scaledBorderWidth} #fff;
     border-top: $scaledBorder;
     border-right: $scaledBorder;
 
-    &:after {
+    &::after {
       background-position: center 17%;
       margin-top: -$scaledBorderWidth;
     }
@@ -67,14 +67,14 @@ $scaledBorder: solid #{$scaledBorderWidth} #fff;
     border-left: $scaledBorder;
     bottom: -$size/sqrt(2)/2;
 
-    &:after {
+    &::after {
       background-position: center 83%;
       margin-left: - $scaledBorderWidth + 1px; /*that pesky single pixel correction again*/
     }
   }
 
   /*cover up the box shadows */
-  &:after {
+  &::after {
     background: inherit;
     bottom: 0;
     content: "";

@@ -7,27 +7,27 @@
   display: inline-block;
   position: relative;
 
-  &:after,
-  &:before {
+  &::after,
+  &::before {
     opacity: 0;
     position: absolute;
     visibility: hidden;
     z-index: 9999;
   }
 
-  &:before {
+  &::before {
     border: $arrow-size solid transparent;
     content: '';
   }
 
-  &:after {
+  &::after {
     font-size: $txt-small;
     padding: $unit-px2;
     text-align: center;
   }
 
   &:hover, &:focus, &.tooltip-active {
-    &:after, &:before {
+    &::after, &::before {
       opacity: 1;
       visibility: visible;
     }
@@ -40,11 +40,11 @@
   border-bottom: 0;
   overflow: hidden !important;
 
-  &:before {
+  &::before {
     display: none;
   }
 
-  &:after {
+  &::after {
     border-radius: 0!important;
     max-width: 100%!important;
     margin: 0;
@@ -69,12 +69,12 @@
   border-bottom-color: $tt-border-bottom;
 
   @if $tt-transition == true {
-    &:after, &:before {
+    &::after, &::before {
       @include transition(all $tt-transition-speed);
     }
   }
 
-  &:after {
+  &::after {
     max-width: $tt-max-width;
     min-width: $tt-min-width;
   }
@@ -85,12 +85,12 @@
 @mixin tooltip-color($tt-text-color: $c-white, $tt-color: $c-brand-1) {
   @each $tt-position in top, bottom, left, right {
     &.tooltip-#{$tt-position} {
-      &:before {
+      &::before {
         border-#{$tt-position}-color: $tt-color;
       }
     }
   }
-  &:after {
+  &::after {
     background-color: $tt-color;
     color: $tt-text-color;
   }
@@ -100,88 +100,88 @@
 // Tooltip Positioning
 @mixin tooltip-position($location: bottom) {
   @if $location == left {
-     &:after, &:before {
+     &::after, &::before {
       right: 100%;
     }
 
-    &:before {
+    &::before {
       bottom: 15%;
       margin-right: $arrow-size * -2 + 3;
     }
 
-    &:after {
+    &::after {
       right: 105%;
       top: -30%;
     }
 
     &:hover {
-      &:after, &:before {
+      &::after, &::before {
         @include transform(translateX(-8px));
       }
     }
   }
 
   @else if $location == right {
-    &:after, &:before {
+    &::after, &::before {
       left: 100%;
     }
 
-    &:before {
+    &::before {
       bottom: 15%;
       margin-left: $arrow-size * -2 + 3;
     }
 
-    &:after {
+    &::after {
       left: 105%;
       top: -30%;
     }
 
     &:hover {
-      &:after, &:before {
+      &::after, &::before {
         @include transform(translateX(8px));
       }
     }
   }
 
   @else if $location == bottom {
-    &:after, &:before {
+    &::after, &::before {
       top: 100%;
     }
 
-    &:before {
+    &::before {
       left: 50%;
       margin-top: $arrow-size * -1 + 1;
     }
 
-    &:after {
+    &::after {
       left: 0;
       margin-top: 7px;
     }
 
     &:hover {
-      &:after, &:before {
+      &::after, &::before {
         @include transform(translateY(8px));
       }
     }
   }
 
   @else if $location == top {
-    &:after, &:before {
+    &::after, &::before {
       bottom: 100%;
     }
 
-    &:before {
+    &::before {
       left: 50%;
       margin-bottom: $arrow-size * -1 + 1;
     }
 
-    &:after {
+    &::after {
       left: 0;
       margin-bottom: 7px;
     }
 
     &:hover {
-      &:after, &:before {
+      &::after, &::before {
         @include transform(translateY(-8px));
       }
     }
@@ -192,7 +192,7 @@
 // Position Tooltips for Images
 @mixin tooltip-img-location($direction: bottom) {
   @if $direction == left {
-    &:after {
+    &::after {
       bottom: 0;
       left: 50%;
       top: 0;
@@ -200,7 +200,7 @@
     }
 
     &:hover {
-      &:after {
+      &::after {
         left: 0;
         width: 50%;
       }
@@ -208,7 +208,7 @@
   }
 
   @else if $direction == right {
-    &:after {
+    &::after {
       bottom: 0;
       left: auto;
       right: 50%;
@@ -217,7 +217,7 @@
     }
 
     &:hover {
-      &:after {
+      &::after {
         left: auto;
         right: 0;
         width: 50%;
@@ -226,28 +226,28 @@
   }
 
   @else if $direction == top {
-    &:after {
+    &::after {
       bottom: auto;
       left: 0;
       top: -30%;
     }
 
     &:hover {
-      &:after {
+      &::after {
         top: 0%;
       }
     }
   }
 
   @else if $direction == bottom {
-    &:after {
+    &::after {
       bottom: -30%;
       left: 0;
       top: auto;
     }
 
     &:hover {
-      &:after {
+      &::after {
         bottom: 0%;
         top: auto;
       }
@@ -273,12 +273,12 @@
   border-bottom-color: $tt-border-bottom;
 
   @if $tt-transition == true {
-    &:after, &:before {
+    &::after, &::before {
       @include transition(all $tt-transition-speed);
     }
   }
 
-  &:after {
+  &::after {
     max-width: $tt-max-width;
     min-width: $tt-min-width;
   }
@@ -289,12 +289,12 @@
 @mixin tooltip-color($tt-text-color: $c-white, $tt-color: $c-brand-1) {
   @each $tt-position in top, bottom, left, right {
     &.tooltip-#{$tt-position} {
-      &:before {
+      &::before {
         border-#{$tt-position}-color: $tt-color;
       }
     }
   }
-  &:after {
+  &::after {
     background-color: $tt-color;
     color: $tt-text-color;
   }
@@ -304,88 +304,88 @@
 // Tooltip Positioning
 @mixin tooltip-position($location: bottom) {
   @if $location == left {
-     &:after, &:before {
+     &::after, &::before {
       right: 100%;
     }
 
-    &:before {
+    &::before {
       bottom: 15%;
       margin-right: $arrow-size * -2 + 3;
     }
 
-    &:after {
+    &::after {
       right: 105%;
       top: -30%;
     }
 
     &:hover {
-      &:after, &:before {
+      &::after, &::before {
         @include transform(translateX(-8px));
       }
     }
   }
 
   @else if $location == right {
-    &:after, &:before {
+    &::after, &::before {
       left: 100%;
     }
 
-    &:before {
+    &::before {
       bottom: 15%;
       margin-left: $arrow-size * -2 + 3;
     }
 
-    &:after {
+    &::after {
       left: 105%;
       top: -30%;
     }
 
     &:hover {
-      &:after, &:before {
+      &::after, &::before {
         @include transform(translateX(8px));
       }
     }
   }
 
   @else if $location == bottom {
-    &:after, &:before {
+    &::after, &::before {
       top: 100%;
     }
 
-    &:before {
+    &::before {
       left: 50%;
       margin-top: $arrow-size * -1 + 1;
     }
 
-    &:after {
+    &::after {
       left: 0;
       margin-top: 7px;
     }
 
     &:hover {
-      &:after, &:before {
+      &::after, &::before {
         @include transform(translateY(8px));
       }
     }
   }
 
   @else if $location == top {
-    &:after, &:before {
+    &::after, &::before {
       bottom: 100%;
     }
 
-    &:before {
+    &::before {
       left: 50%;
       margin-bottom: $arrow-size * -1 + 1;
     }
 
-    &:after {
+    &::after {
       left: 0;
       margin-bottom: 7px;
     }
 
     &:hover {
-      &:after, &:before {
+      &::after, &::before {
         @include transform(translateY(-8px));
       }
     }
@@ -396,7 +396,7 @@
 // Position Tooltips for Images
 @mixin tooltip-img-location($direction: bottom) {
   @if $direction == left {
-    &:after {
+    &::after {
       bottom: 0;
       left: 50%;
       top: 0;
@@ -404,7 +404,7 @@
     }
 
     &:hover {
-      &:after {
+      &::after {
         left: 0;
         width: 50%;
       }
@@ -412,7 +412,7 @@
   }
 
   @else if $direction == right {
-    &:after {
+    &::after {
       bottom: 0;
       left: auto;
       right: 50%;
@@ -421,7 +421,7 @@
     }
 
     &:hover {
-      &:after {
+      &::after {
         left: auto;
         right: 0;
         width: 50%;
@@ -430,28 +430,28 @@
   }
 
   @else if $direction == top {
-    &:after {
+    &::after {
       bottom: auto;
       left: 0;
       top: -30%;
     }
 
     &:hover {
-      &:after {
+      &::after {
         top: 0%;
       }
     }
   }
 
   @else if $direction == bottom {
-    &:after {
+    &::after {
       bottom: -30%;
       left: 0;
       top: auto;
     }
 
     &:hover {
-      &:after {
+      &::after {
         bottom: 0%;
         top: auto;
       }

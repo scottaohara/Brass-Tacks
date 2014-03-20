@@ -49,20 +49,20 @@
     p {
       margin-bottom: 0;
 
-      &:after,
-      &:before {
+      &::after,
+      &::before {
         font: 400 $f-blockquote-quotes $s-blockquote-quotes;
         line-height: 0;
         position: relative;
         top: 2px;
       }
 
-      &:after {
+      &::after {
         content: "\201D";
         right: -1px;
       }
 
-      &:before {
+      &::before {
         content: "\201C";
         left: -1px;
       }
@@ -75,7 +75,7 @@
       margin-bottom: 0;
       padding-left: $unit-px3;
 
-      &:before {
+      &::before {
         content: "– ";
       }
     }

@@ -8,11 +8,11 @@
     li {
       @extend %d-inline-block;
 
-      &:last-child:after {
+      &:last-child::after {
         @extend %content-empty;
       }
 
-      &:after {
+      &::after {
         content: ">";
         @extend %d-inline-block;
       }

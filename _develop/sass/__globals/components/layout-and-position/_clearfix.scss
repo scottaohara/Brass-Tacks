@@ -5,7 +5,7 @@
 // For IE8+ & modern browsers
 // http: //www.css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
 %clearfix {
-  &:after {
+  &::after {
     clear: both;
     content: "";
     display: table;

@@ -65,7 +65,7 @@
   [data-tooltip] {
     @include tooltip();
 
-    &:after {
+    &::after {
       @include border-radius($unit-px);
       content: attr(data-tooltip);
     }
@@ -114,13 +114,13 @@
 
   // Make fixed width Tooltips
   .tooltip-fixed-width {
-    &:after {
+    &::after {
       width: 125px;
     }
   }
 
   .tooltip-fixed-width-wide {
-    &:after {
+    &::after {
       max-width: 300px;
       width: 300px;
     }
