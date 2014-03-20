@@ -51,12 +51,12 @@
 
 
   // Horizontal and Vertical Navigation drop menu setups
-  .h-nav .drop-menu {
+  .nav-h .drop-menu {
     @extend %drop-h;
     // Set drop menu location to the bottom of the hovered link
   }
 
-  .v-nav .drop-menu {
+  .nav-v .drop-menu {
     @extend %drop-v;
     // Set location to the right of hovered link
   }
@@ -65,7 +65,7 @@
   // Example mark-up
   // ---------------------------------------------------
   // <nav class="nav" role="navigation">
-  //   <ol class="#-nav">
+  //   <ol class="nav-X">
   //     <li class="drop-container">
   //       <a href="#!" title="#!">DC Link</a>
   //       <ol class="drop-menu">
