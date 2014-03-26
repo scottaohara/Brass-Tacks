@@ -56,10 +56,10 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
 
 
 // ----------------------------------------------------------------------------
-//  Form Elements: Input Elements
+//  Text Input Elements
 // ----------------------------------------------------------------------------
 
-@if $base-form--inputs == true {
+@if $base-form--txt-inputs == true {
 
   // General Form Element Reset
   input {
@@ -77,21 +77,94 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
     &[readonly]:focus {
       background-color: $c-form-disable-bg;
     }
-
-    // Makes it look like a normal text input,
-    // only with a (x) when text has been entered
-    &[type='search'] {
-      -webkit-appearance: textfield;
-    }
-  }
-
-
-  // Removes extra inner padding for webkit
-  input[type='search']::-webkit-search-decoration {
-    -webkit-appearance: none;
   }
 
 } // -- end @if --
+
+
+
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Search Input Element
+// ----------------------------------------------------------------------------
+
+@if $base-form--search == true {
+
+  [type="search"] {
+
+    // Makes it look like a normal text input,
+    // only with a (x) when text has been entered
+    -webkit-appearance: textfield;
+
+
+    // Remove inner padding and search cancel button in Safari and Chrome on OS X.
+    // Safari (but not Chrome) clips the cancel button when the search input has
+    // padding (and `textfield` appearance).
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button {
+      -webkit-appearance: none;
+    }
+  }
+
+} // -- end @if --
+
+
+
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Checkbox / Radio Button Elements
+// ----------------------------------------------------------------------------
+
+@if $base-form--cr == true {
+
+  [type="checkbox"],
+     [type="radio"] {
+    padding: 0; // IE 8-10 give these excess padding. so reset.
+
+    @if $base-border-box == false {
+      box-sizing: border-box;
+      // IE 8 - 10 set these to content-box by default.
+      // if the 'all selector' box sizing has been turned off,
+      // turn this on for IE.
+    }
+  }
+
+} // -- end @if --
+
+
+
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Number Input Element
+// ----------------------------------------------------------------------------
+
+@if $base-form--number == true {
+
+  // Fix the cursor style for Chrome's increment / decrement buttons. For certain
+  // `font-size` values of the `input`, it causes the cursor style of the
+  // decrement button to change from `default` to `text`.
+  [type="number"]::-webkit-inner-spin-button,
+  [type="number"]::-webkit-outer-spin-button {
+    height: auto;
+  }
+
+} // -- end @if --
+
 
 
 
@@ -144,9 +217,9 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
 
   // Makes buttons look like buttons with appropriate cursors
   button,
-  input[type='reset'],
-  input[type='submit'],
-  html input[type='button'] {
+  [type="reset"],
+  [type="submit"],
+  html [type="button"] {
     cursor: pointer;
     -webkit-appearance: button;
   }
@@ -174,6 +247,7 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
 
 
 
+
 // ----------------------------------------------------------------------------
 //  Select Element
 // ----------------------------------------------------------------------------
@@ -185,6 +259,10 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
     @extend %reset-form-elements;
     margin-bottom: $unit-px2;
     width: 100%;
+  }
+
+  optgroup {
+    font-weight: bold;
   }
 
 } // -- end @if --
