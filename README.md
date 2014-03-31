@@ -88,6 +88,7 @@ I've already used earlier versions of Brass Tacks on websites I've built for fre
 * scottohara.me - 0.9.0.7
 
 ##### 2013
+* droid-break.info
 * ghop.me - 0.7.3.1
 * neocities.org - 0.6.2 - in combination w/Twitter Bootstraps
 * spin-off (Ground Floor) created for all default NeoCities websites
