@@ -29,25 +29,35 @@ $txt-tiny:          $txt-base * .75 !default;     // 12px
 $txt-mini:          $txt-base * .625 !default;    // 10px
 
 
+// Line Heights
+
+$txt-h1--line-height:       1;
+$txt-h2--line-height:       1.33333;
+$txt-h3--line-height:       1.6;
+$txt-h4--line-height:       1;
+$txt-h5--line-height:       1.2;
+$txt-h6--line-height:       1.33333;
+
+
 
 // Font Weights
 
-$txt-xxlarge-weight:       700;
-$txt-xlarge-weight:        600;
-$txt-large-weight:         300;
+$txt-xxlarge--weight:       700;
+$txt-xlarge--weight:        600;
+$txt-large--weight:         300;
 
-$txt-h1-weight:            300;
-$txt-h2-weight:            300;
-$txt-h3-weight:            400;
-$txt-h4-weight:            400;
-$txt-h5-weight:            600;
-$txt-h6-weight:            600;
+$txt-h1--weight:            300;
+$txt-h2--weight:            300;
+$txt-h3--weight:            400;
+$txt-h4--weight:            400;
+$txt-h5--weight:            600;
+$txt-h6--weight:            600;
 
-$txt-base-weight:          300;
+$txt-base--weight:          300;
 
-$txt-small-weight:         300;
-$txt-tiny-weight:          400;
-$txt-mini-weight:          400;
+$txt-small--weight:         300;
+$txt-tiny--weight:          400;
+$txt-mini--weight:          400;
 
 // ----------------------------------------------------------------------------
 //  Primary Type Elements
@@ -55,9 +65,6 @@ $txt-mini-weight:          400;
 
 // Headings
 $c-headings:                  $c-darker !default;
-
-
-
 
 
 // Blockquotes
