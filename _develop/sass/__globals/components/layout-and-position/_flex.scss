@@ -2,36 +2,130 @@
 //  Flex Box
 // ----------------------------------------------------------------------------
 
-@mixin flexbox() {
-  // old prefixes
-  display: -webkit-box;   // safari 3.1+, chrome 20-, Android 2.1+, iOS 3.2+
-  display: -moz-box;      // 2-21
-  // new prefixes
-  display: -ms-flexbox;   // 10+
-  display: -webkit-flex;  // 21+
-  display: flex;
+// Full Flex or Inline Flex
+$flexbox:
+      -webkit-flex,    // chrome 21 - 28, safari 6.1+
+              flex;   // moz 22+, IE 11+, chrome 29+, Opera 17+
+
+
+
+$inline-flexbox:
+    -webkit-inline-flex,    // chrome 21 - 28, safari 6.1+
+            inline-flex;   // moz 22+, IE 11+, chrome 29+, Opera 17+
+
+
+
+@mixin flexbox($display: flex) {
+
+  @if $display == flex {
+    @each $v in $flexbox {
+      display: $v;
+    }
+  }
+
+  @else {
+    @each $v in $inline-flexbox {
+      display: $v;
+    }
+  }
+
+}
+
+// ------------------------------------------
+//  Applies to parent flex container
+// ------------------------------------------
+
+// Wrapping
+@mixin flex-wrap($value) { // nowrap | wrap | wrap-reverse
+  // 2012 Prefixes
+   -webkit-flex-wrap: $value;
+           flex-wrap: $value;
 }
 
 
+// Direction
+@mixin flex-direction($value) { // row | row-reverse | column | column-reverse
+  -webkit-flex-direction: $value;
+          flex-direction: $value;
+}
+
+
+// Shorthand for flex-direction and flex-wrap
+// flex-flow: <‘flex-direction’> || <‘flex-wrap’>
+@mixin flex-flow($value) {
+  -webkit-flex-flow: $value;
+          flex-flow: $value;
+}
+
+
+
+// Justify Content
+@mixin justify-content($value) { // defaults to start
+  -webkit-justify-content: $value;
+          justify-content: $value;
+}
+// flex-start | flex-end | center | space-between | space-around
+
+
+
+// Align Items
+@mixin align-items($value) { // defaults to start
+  -webkit-align-items: $value;
+          align-items: $value;
+}
+// lex-start | flex-end | center | baseline | stretch
+
+
+// Align Content
+@mixin align-content($value) { // defaults to start
+  -webkit-align-content: $value;
+          align-content: $value;
+}
+// flex-start | flex-end | center | space-between | space-around | stretch
+
+
+
+
+// ------------------------------------------
+//  Applies to parent flex container
+// ------------------------------------------
+
+// Ordering
+@mixin order($value) { // default value is zero
+   -webkit-order: $value;
+           order: $value;
+}
+
+
+// Defines the ability for a flex item to grow if
+// necessary. It accepts a unitless value that
+// serves as a proportion
+@mixin flex-grow($value) { // default value is zero
+  -webkit-flex-grow: $value;
+          flex-grow: $value;
+}
+
+
+// Determines how much the flex item will shrink
+// relative to the rest of the flex items in the flex
+// container when there isn't enough space on the row.
+@mixin flex-shrink($value) { // default value is one
+  -webkit-flex-shrink: $value;
+          flex-shrink: $value;
+}
+
+
+// Defines the default size of an element before the
+// remaining space is distributed.
+@mixin flex-basis($value) { // default value is auto
+  -webkit-flex-basis: $value;
+          flex-basis: $value;
+}
+
+
+// Shorthand for flex-grow, flex-shrink, flex-basis
+// Shrink and basis are optional properties
 @mixin flex($values, $fallback-width: 20%) {
-  // old prefixes
-  -webkit-box-flex: $values;
-     -moz-box-flex: $values;
-  // new prefixes
-      -webkit-flex: $values;
-          -ms-flex: $values;
-              flex: $values;
-  // need this for old syntax
-             width: $fallback-width;
-}
-
-
-@mixin order($val) {
-  // old prefixes
-  -webkit-box-ordinal-group: $val;
-     -moz-box-ordinal-group: $val;
-  // new prefixes
-             -ms-flex-order: $val;
-              -webkit-order: $val;
-                      order: $val;
+  -webkit-flex: $values;
+          flex: $values;
 }
