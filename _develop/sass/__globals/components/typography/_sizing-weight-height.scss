@@ -1,45 +1,36 @@
 // ----------------------------------------------------------------------------
-//  Font Sizing, Weight and Line Height
-// ----------------------------------------------------------------------------
-
-%txt-xxlarge, %txt-xlarge, %txt-large, %txt-h1 {
-  line-height: 1;
-}
-
-
-
-// ----------------------------------------------------------------------------
-//  Font Sizes & Weights
+//  Font Sizes, Line Heights & Weights
 // ----------------------------------------------------------------------------
 
 $f-sizing-map:
   //f-name  //f-size      //f-weight
-  (xxlarge, $txt-xxlarge, $txt-xxlarge-weight),
-  (xlarge,  $txt-xlarge,  $txt-xlarge-weight),
-  (large,   $txt-large,   $txt-large-weight),
+  (xxlarge, $txt-xxlarge, $txt-xxlarge--weight,   $txt-h1--line-height),
+  (xlarge,  $txt-xlarge,  $txt-xlarge--weight,    $txt-h1--line-height),
+  (large,   $txt-large,   $txt-large--weight,     $txt-h1--line-height),
 
-  (h1,      $txt-h1,      $txt-h1-weight),
-  (h2,      $txt-h2,      $txt-h2-weight),
-  (h3,      $txt-h3,      $txt-h3-weight),
-  (h4,      $txt-h4,      $txt-h4-weight),
-  (h5,      $txt-h5,      $txt-h5-weight),
-  (h6,      $txt-h6,      $txt-h6-weight),
+  (h1,      $txt-h1,      $txt-h1--weight,        $txt-h1--line-height),
+  (h2,      $txt-h2,      $txt-h2--weight,        $txt-h2--line-height),
+  (h3,      $txt-h3,      $txt-h3--weight,        $txt-h3--line-height),
+  (h4,      $txt-h4,      $txt-h4--weight,        $txt-h4--line-height),
+  (h5,      $txt-h5,      $txt-h5--weight,        $txt-h5--line-height),
+  (h6,      $txt-h6,      $txt-h6--weight,        $txt-h6--line-height),
 
-  (base,    $txt-base,    $txt-base-weight),
+  (base,    $txt-base,    $txt-base--weight,      $txt-h6--line-height),
 
-  (small,   $txt-small,   $txt-small-weight),
-  (tiny,    $txt-tiny,    $txt-tiny-weight),
-  (mini,    $txt-mini,    $txt-mini-weight);
+  (small,   $txt-small,   $txt-small--weight,     $txt-h6--line-height),
+  (tiny,    $txt-tiny,    $txt-tiny--weight,      $txt-h6--line-height),
+  (mini,    $txt-mini,    $txt-mini--weight,      $txt-h6--line-height);
 
 
 
 %txt- {
-  @each $f-name, $f-size, $f-weight in $f-sizing-map {
+  @each $f-name, $f-size, $f-weight, $f-lh in $f-sizing-map {
     &#{$f-name} {
       font: {
           size: $f-size;
         weight: $f-weight;
       }
+      line-height: $f-lh;
     }
   }
 }

@@ -15,9 +15,10 @@
     }
 
     .btn-search {
-      @include position(top, 0, right, 0, absolute);
+      @include position(top, 0, right, -1px, absolute);
       height: 100%;
       padding-top: 6px;
+      z-index: 2;
     }
   }
 

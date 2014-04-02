@@ -156,3 +156,64 @@
   }
 
 } // -- end @if --
+
+
+
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Checkbox/Radio Button Pills
+// ----------------------------------------------------------------------------
+
+@if $helper-forms--cr-pills == true {
+
+  // Pill container
+  .cr-pill {
+    @extend %margin-bottom-base;
+    @include border-radius($unit-px);
+    background: $c-white;
+    border: 1px solid $c-grey;
+    display: inline-block;
+    overflow: hidden;
+    text-align: center;
+
+    .pill-option {
+      border-right: 1px solid $c-grey;
+      float: left;
+      margin-bottom: 0;
+      min-width: 60px;
+      overflow: hidden;
+      position: relative;
+
+      &:last-child {
+        border-right: 0;
+      }
+
+      &::before {
+        @include transition(all .2s);
+        background: $c-light-grey;
+        content: '';
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 0%;
+      }
+    }
+  }
+
+  :checked + .pill-option::before {
+    width: 100%;
+  }
+
+  .pill-label {
+    display: block;
+    padding: $unit-px;
+    position: relative;
+  }
+
+} // -- end @if --

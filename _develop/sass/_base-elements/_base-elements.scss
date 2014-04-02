@@ -8,7 +8,9 @@
 @if $base-border-box == true {
 
   // Make a smarter Box Model
-  *, *::after, *::before {
+  *,
+  *::after,
+  *::before {
     @include box-sizing(border-box);
   }
 
@@ -27,7 +29,6 @@ html, body {
   height: 100%;
   line-height: $f-body--line-height;
   text-rendering: optimizeLegibility;
-     -moz-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
