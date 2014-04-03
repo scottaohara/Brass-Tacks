@@ -31,6 +31,14 @@
 
 
 // ----------------------------------------------------------------------------
+//  Functions
+// ----------------------------------------------------------------------------
+
+@import 'components/_functions/colors';
+@import 'components/_functions/strip-unit';
+
+
+// ----------------------------------------------------------------------------
 //  Components (mixins & silent classes)
 // ----------------------------------------------------------------------------
 
@@ -66,7 +74,7 @@
 @import 'components/forms/txt-input';
 
 
-//
+// Buttons and Navigation
 @import 'components/btns-and-nav/nav';
 @import 'components/btns-and-nav/btn';
 
@@ -76,7 +84,7 @@
 @import 'components/layout-and-position/clearfix';
 @import 'components/layout-and-position/fixed-col';
 @import 'components/layout-and-position/flex';
-@import 'components/layout-and-position/layout';
+@import 'components/layout-and-position/equal-cols';
 @import 'components/layout-and-position/dividers';
 
 

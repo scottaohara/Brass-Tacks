@@ -1,0 +1,23 @@
+// ----------------------------------------------------------------------------
+//  Color Function
+//
+//  Set a color as either a hex color or convert it to RGBA value by adding
+//  an opacity value
+// ----------------------------------------------------------------------------
+
+@function c($hex, $rgba: false) {
+
+  @if $rgba == false {
+    @return ($hex);
+  }
+
+  @else {
+    @return (rgba($hex, $rgba));
+  }
+}
+
+
+// .exapmle {
+//   background: c(#fafafa);
+//   color: c(#ddd, .9);
+// }

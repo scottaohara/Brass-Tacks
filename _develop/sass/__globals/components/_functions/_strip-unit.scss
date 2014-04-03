@@ -1,0 +1,15 @@
+// ----------------------------------------------------------------------------
+//  Strip Unit
+//
+//  Use this function to strip units from number values
+// ----------------------------------------------------------------------------
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+
+// Example:
+//
+// $value:       26px;
+// $unitless:    strip-unit($value); // this will be 26

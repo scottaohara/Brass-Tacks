@@ -16,7 +16,6 @@ $inline-flexbox:
 
 
 @mixin flexbox($display: flex) {
-
   @if $display == flex {
     @each $v in $flexbox {
       display: $v;
@@ -28,7 +27,6 @@ $inline-flexbox:
       display: $v;
     }
   }
-
 }
 
 // ------------------------------------------
