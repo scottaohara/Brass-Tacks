@@ -3,26 +3,26 @@
 // ----------------------------------------------------------------------------
 
 // HTML, Body, text-selection styling, anchor states & HTML5 blocks
-@import 'base-elements';
+@import 'base-elements',
 
-@import 'type--primary';             // headings, paragraph, small
-@import 'type--secondary';           // abbr, b, i, cite, dfn, ins, mark, pre, sub/sup
+        'type--primary',        // headings, paragraph, small
+        'type--secondary',      // abbr, b, i, cite, dfn, ins, mark, pre, sub/sup
 
-@import 'type--quotes';              // blockquote & quote elements
+        'type--quotes',         // blockquote & quote elements
 
-@import 'lists';                     // List elements
-@import 'nav-and-menu';              // Nav and menu elements
+        'lists',                // List elements
+        'nav-and-menu',         // Nav and menu elements
 
-@import 'forms';                     // Form elements
+        'forms',                // Form elements
 
-@import 'element-combos';            // Address, details, summary, code, kbd, samp
+        'element-combos',       // Address, details, summary, code, kbd, samp
 
-@import 'tables';                    // Table elements
+        'tables',               // Table elements
 
-@import 'media';                     // Media elements
+        'media',                // Media elements
 
-@import 'hr';                        // HR element
+        'hr',                   // HR element
 
-@import 'template';                  // HTML5 Template
+        'template',             // HTML5 Template
 
-@import 'progress-meters';           // Progress & meter elements
+        'progress-meters';      // Progress & meter elements

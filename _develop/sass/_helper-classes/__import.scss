@@ -2,52 +2,54 @@
 //  Helper Import List
 // ----------------------------------------------------------------------------
 
+@import
+
 // Content Element
-  @import 'content-elements/emphasis';                // Give visual emphasis to elements
-  @import 'content-elements/displays';                // Display stylings for elements
-  @import 'content-elements/media-element';           // Media/text combo elements
-  @import 'content-elements/flip';                    // add flip hover effect to content
+'content-elements/emphasis',                // Give visual emphasis to elements
+'content-elements/displays',                // Display stylings for elements
+'content-elements/media-element',           // Media/text combo elements
+'content-elements/flip',                    // add flip hover effect to content
 
 
 // Layout & Tables
-  @import 'layout-and-tables/dividers';               // Divider lines
-  @import 'layout-and-tables/floats-clears';          // Floating/clearing
-  @import 'layout-and-tables/grid-layout';            // Grid layout
-  @import 'layout-and-tables/tables';                 // Table styling
-  @import 'layout-and-tables/flex-layout';            // Flexbox grid layout
-  @import 'layout-and-tables/display-table-layout';   // display table grid layout
+'layout-and-tables/dividers',               // Divider lines
+'layout-and-tables/floats-clears',          // Floating/clearing
+'layout-and-tables/grid-layout',            // Grid layout
+'layout-and-tables/tables',                 // Table styling
+'layout-and-tables/flex-layout',            // Flexbox grid layout
+'layout-and-tables/display-table-layout',   // display table grid layout
 
 
 // Forms
-  @import 'forms/general';                            // General form helper classes
-  @import 'forms/radio-checks';                       // Radio & checkboxes
-  @import 'forms/select';                             // Select & multi select
-  @import 'forms/inputs--secondary';                  // searches, file upload & color
-  @import 'forms/styling';                            // Validation & sizing classes
-  @import 'forms/label-reveal';                       // show hidden labels on focus
+'forms/general',                            // General form helper classes
+'forms/radio-checks',                       // Radio & checkboxes
+'forms/select',                             // Select & multi select
+'forms/inputs--secondary',                  // searches, file upload & color
+'forms/styling',                            // Validation & sizing classes
+'forms/label-reveal',                       // show hidden labels on focus
 
 
 // Messaging
-  @import 'messaging/messaging';                      // Messaging & tooltips
-  @import 'messaging/loading';                        // Progress bars / spinners
+'messaging/messaging',                      // Messaging & tooltips
+'messaging/loading',                        // Progress bars / spinners
 
 
 // Button
-  @import 'buttons/btn-general';                      // General buttons
-  @import 'buttons/btn-social';                       // Social buttons
+'buttons/btn-general',                      // General buttons
+'buttons/btn-social',                       // Social buttons
 
 
 // Typography
-  @import 'typography/align';                         // Alignment classes
-  @import 'typography/callouts';                      // Callout text styling
-  @import 'typography/lists';                         // Styling for lists
-  @import 'typography/sizing';                        // Font sizing classes
-  @import 'typography/readability';                   // Readability modifiers
+'typography/align',                         // Alignment classes
+'typography/callouts',                      // Callout text styling
+'typography/lists',                         // Styling for lists
+'typography/sizing',                        // Font sizing classes
+'typography/readability',                   // Readability modifiers
 
 
 // Navigation
-  @import 'navigation/breadcrumbs';                   // Breadcrumb classes
-  @import 'navigation/drop-menu';                     // Drop menu classes
-  @import 'navigation/nav-base';                      // Horizontal & vertical navs
-  @import 'navigation/mobile';
-  @import 'navigation/grid';                          // Nav Grid
+'navigation/breadcrumbs',                   // Breadcrumb classes
+'navigation/drop-menu',                     // Drop menu classes
+'navigation/nav-base',                      // Horizontal & vertical navs
+'navigation/mobile',
+'navigation/grid';                          // Nav Grid
