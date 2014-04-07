@@ -1,9 +1,9 @@
 # Brass Tacks
-###(Last updated: 0.9.3 - March. 20, 2014)
+###(Last updated: 0.9.5 - April. 7, 2014)
 
-Brass Tacks is a professional front-end HTML5 and SCSS framework that incorporates and standardizes many widely used HTML and CSS elements.
+Brass Tacks is a professional Sass (.scss) framework that incorporates and standardizes many widely used HTML and CSS elements.
 
-Once Brass Tacks reaches the 1.0 release, there will be a full listing of "thank you"s to the many people who's work has influenced this framework.
+Once Brass Tacks reaches the 1.0 release, there will be a full listing of thank yous to the many people who's work has influenced this framework.
 
 As of version 0.9.1, even more of the code from previous releases has been significantly rewritten. Until a final 1.0 stamp can be put on the code, there won't be a 'live' version of the framework available for viewing.
 
@@ -15,8 +15,9 @@ The only thing you <b>need</b> to use Brass Tacks is <b>Sass v 3.3+</b>.
 
 Install SASS: http://sass-lang.com/install
 
+__however__
 
-However, I've also setup a Gulp task file to help minify and compile files.
+I have also setup a Gulp task file to help minify and compile files.
 
 Install Node.js: http://nodejs.org
 
@@ -89,6 +90,7 @@ I've already used earlier versions of Brass Tacks on websites I've built for fre
 
 ##### 2013
 * ghop.me - 0.7.3.1
+* droid-break.info - built by @repat using Brass Tacks/Ground Floor
 * neocities.org - 0.6.2 - in combination w/Twitter Bootstraps
 * spin-off (Ground Floor) created for all default NeoCities websites
 * ecommerce website partnered w/ @xbuzz - 0.5.4

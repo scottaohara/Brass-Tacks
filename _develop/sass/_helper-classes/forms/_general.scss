@@ -5,17 +5,17 @@
 @if $helper-forms--general == true {
 
   // Containers
-  .form- {
+  .form {
 
     // add top/bottom padding
-    &row {
+    &-row {
       @extend %last-child-0;
       padding: $form-row--padding;
       position: relative;
     }
 
     // add emphasis styling to a row or entire form
-    &block {
+    &-block {
       @extend %last-child-0;
       border: $form-block--border;
       margin-bottom: $input--margin;

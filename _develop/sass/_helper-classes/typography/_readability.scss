@@ -4,15 +4,15 @@
 
 @if $helper-type--line-height == true {
 
-  .line- {
+  .line {
 
     // Tighten line height for text headings
-    &tight {
+    &-tight {
       line-height: 1.2 !important;
     }
 
     // Tighten line height for text headings more
-    &tighter {
+    &-tighter {
       line-height: 1 !important;
     }
 
@@ -29,10 +29,10 @@
 
 @if $helper-type--indenting == true {
 
-  .txt-indent- {
+  .txt-indent {
     // loop to output .txt-indent-1 to 3
     @for $i from 1 through 3 {
-      &#{$i} {
+      &-#{$i} {
         text-indent: 1em * $i;
       }
     }
@@ -48,8 +48,8 @@
 
 @if $helper-type--smoothing == true {
 
-  .antialiased {
-    @include vendor(font-smoothing, antialiased, $o: false, $ms: false, $moz: false);
+  .txt-smooth {
+    @include antialiased;
   }
 
   // Anti-aliased font smoothing works best for light text on dark backgrounds.

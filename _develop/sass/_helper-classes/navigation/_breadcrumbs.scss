@@ -4,7 +4,7 @@
 
 @if $helper-nav--breadcrumbs == true {
 
-  .bread {
+  .nav-crumbs {
     a, li {
       display: inline-block;
     }
@@ -30,7 +30,7 @@
   // Example mark-up
   // ----------------------------------------------------------------------------
   // <nav role="navigation">
-  //   <ol class="bread">
+  //   <ol class="nav-crumbs">
   //     <li>
   //       <a href="#!" title="back to #">Index</a>
   //     </li>

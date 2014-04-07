@@ -5,10 +5,10 @@
 @if $helper-content-displays--inlines == true {
 
 
-  .inline- {
+  .inline {
 
     // Convert to inline
-    &element {
+    &-element {
       display: inline;
       margin: 0 !important;
       width: auto !important;
@@ -18,8 +18,8 @@
     // Inline-block Individual Elements
     // OR
     // ALL elements within a parent element
-    &block-element,
-    &all > * {
+    &-block-element,
+    &-all > * {
       @extend %d-inline-block;
       margin-right: $unit-px;
       width: auto !important;
@@ -27,7 +27,7 @@
 
 
     // Inline items with a list element
-    &list {
+    &-list {
       margin-bottom: $unit-px4;
 
       > li {
@@ -52,16 +52,16 @@
 
 @if $helper-content-displays--show-hide == true {
 
-  .d- {
+  .d {
 
     // Show Elements with display:block
-    &block {
+    &-block {
       @extend %d-block;
     }
 
 
     // Hide Elements with display:none
-    &none {
+    &-none {
       @extend %d-none;
     }
 
@@ -105,10 +105,10 @@
   // Mute an element by changing Opacity
   .mute {
     opacity: .75;
-  }
 
-  .mute-half {
-    opacity: .5;
+    &-half {
+      opacity: .5;
+    }
   }
 
 } // -- end @if --

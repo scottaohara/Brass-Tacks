@@ -7,7 +7,7 @@
   // Un/Ordered lists
   ol, ul {
     @extend %list-elements-margin;
-    padding-left: $unit-px*6;
+    padding-left: $unit-px * 6;
 
     ol, ul {
       // keep equal spacing li content followed by lists within lists
