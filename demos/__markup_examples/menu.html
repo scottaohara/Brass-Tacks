@@ -1,0 +1,77 @@
+<!--
+
+    Menu Element
+
+    An unordered list of menu choices and or commands that can be
+    either displayed as part of the layout, or as a context menu
+    where the <menuitem>s within get appended to the pop-up menu
+    that is displayed when a user right-clicks on a particular area
+    of the layout.
+
+
+    Menus accept the following attributes:
+
+    type:
+
+      list:
+          (default value if no type is assigned)
+          A list menu indicates a set of commands that users
+          may carry out. (navigation like commands)
+
+      toolbar:
+          A toolbar menu contains command elements (buttons) that
+          are immediately ready to interact with the current screen's
+          content. (toggles, show/hide)
+
+      context:
+            A context menu is only visible upon being activated by a
+            specific hit area that maps to the context menu.
+
+
+    label:
+        Assigns a label to the menu element for identification
+-->
+
+
+<menu type="list" label="standard-menu-list">
+  <li><a href="#">item 1</a></li>
+  <li><a href="#">item 2</a></li>
+  <li><a href="#">item 3</a></li>
+</menu>
+
+
+<menu type="toolbar" label="toolbar w/out list items">
+  <button>Option 1</button>
+  <button>Option 2</button>
+</menu>
+
+
+<menu type="toolbar" label="toolbar with list items">
+  <li><button>Option 1</button></li>
+  <li><button>Option 2</button></li>
+</menu>
+
+
+<!--
+
+    Example: 4
+
+    Context Menu
+
+    The context menu will appear when right clicking on "target" div
+    area and will append the menuitems to the top of the menu that pops up.
+
+    The first menuitem for Twitter also makes use of the icon attribute.
+    If there actually was a twitter.png, it would be placed next to the
+    menu label.
+
+-->
+
+<menu type="context" id="menu" label="a context menu">
+  <menuitem label="Tweet This Page" onclick="window.location='https://twitter.com/intent/tweet?text=' + document.title + ' ' + window.location.href;" icon="twitter.png"></menuitem>
+  <menuitem label="Email This Page" onclick="window.location='mailto:?body='+window.location;"></menuitem>
+</menu>
+
+<div id="target" contextmenu="menu">
+  Right-click here to see the menu.
+</div>

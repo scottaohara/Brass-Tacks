@@ -1,0 +1,30 @@
+// ----------------------------------------------------------------------------
+//  CSS Shapes
+//
+//  Experimental
+// ----------------------------------------------------------------------------
+
+@mixin shape($type, $values ...) {
+  -webkit-shape-#{$type}: $values;
+          shape-#{$type}: $values;
+}
+
+// Shape functions:
+// inset, circle, ellipse, polygon
+
+// Shapes defined using the shape-outside property define the
+// exclusion area on an element, while those defined using the
+// shape-inside property define the float area of an element.
+
+
+// Example:
+// ----------------------------------------------------------------------------
+// @include shape(outside, polygon(0, 100% 0, 40% 100%, 0 100%));
+
+// @include shape(margin, 20px);
+
+
+
+// TODO:
+
+// add in clip-path support to replicate CSS shape coordinates
