@@ -1,5 +1,5 @@
 # Brass Tacks
-###(Last updated: 0.9.5 - April. 7, 2014)
+###(Last updated: 0.9.5 - April. 14, 2014)
 
 Brass Tacks is a professional Sass (.scss) framework that incorporates and standardizes many widely used HTML and CSS elements.
 
