@@ -89,10 +89,10 @@
       }
 
       &-img-#{$v} {
-        @extend %tooltip-img;
         @include tooltip-img-location($direction: $v);
       }
     }
+
 
     // Make fixed width Tooltips
     &-fixed-width {
@@ -107,6 +107,7 @@
         }
       }
     }
+
 
     // Tooltip Color Variations
     &-prime {
@@ -125,6 +126,26 @@
       @include tooltip-color($tt-color: $c-red);
     }
 
-  } // end .tooltip
+  }
+
+
+
+
+  // Tooltip Image shared
+  [class*="tooltip-img-"] {
+    border-bottom: 0;
+    overflow: hidden !important;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      border-radius: 0!important;
+      max-width: 100%!important;
+      margin: 0;
+      width: 100%;
+    }
+  }
 
 } // -- end @if --

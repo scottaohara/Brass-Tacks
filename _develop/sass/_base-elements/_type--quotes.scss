@@ -40,11 +40,6 @@
 @if $base-blockquote == true {
 
   blockquote {
-    @extend %reset-spacing;
-    @extend %margin-bottom-base;
-    @extend %txt-h6;
-    @extend %italic;
-    color: $c-blockquote;
 
     p {
       margin-bottom: 0;

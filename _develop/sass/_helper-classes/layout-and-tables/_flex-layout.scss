@@ -4,12 +4,17 @@
 
 @if $helper-grids--flexbox == true {
 
-  //
+  // Box or inline
   .flex-row {
     @include flexbox;
   }
 
+  .flex-inline-row {
+    @include flexbox(inline-flex)
+  }
 
+
+  // Give all flex columns a margin right and bottom of 1em
   [class*="flex-col-"] {
     margin-bottom: 1em;
     margin-right: 1em;
@@ -20,9 +25,9 @@
   }
 
 
-
+  // Create our flex col #s
   @for $i from 1 through 10 {
-    .flex-col-#{$i}{
+    .flex-col-#{$i} {
        @include flex($i, (100% / $i));
     }
   }

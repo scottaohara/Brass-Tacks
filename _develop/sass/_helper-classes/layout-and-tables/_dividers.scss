@@ -4,9 +4,14 @@
 
 @if $helper-dividers == true {
 
-  // preset to dual,
   .hr-styled {
     @include hr-style;
   }
+
+  // preset to dual
+
+  // accepts values of:
+  // dual, dashed, dotted, dual-dashed, dual-dotted,
+  // dual-spaced, dual-spaced-dashed, dual-spaced-dotted
 
 } // -- end @if --

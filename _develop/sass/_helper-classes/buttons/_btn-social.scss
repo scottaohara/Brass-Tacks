@@ -12,19 +12,30 @@
 }
 
 
+
 @if $helper-btn--social == true {
+
+  // Social Buttons Shared Styling
+  [class*="btn-social"] {
+    color: $c-white !important;
+    min-width: 162px;
+    padding-left: 50px;
+    position: relative;
+    text-align: left;
+    text-shadow: $ts-primary;
+  }
 
   .social-icon {
     @extend %btn-icon;
-    border-right: 1px solid;
   }
 
 } // -- end @if --
 
 
+
 @if $helper-btn--social__fb == true {
 
-  .btn-facebook {
+  .btn-social-fb {
     @extend %btn-social;
     background: $c-fb-1;
     border-color: $c-fb-2;
@@ -46,9 +57,10 @@
 } // -- end @if --
 
 
+
 @if $helper-btn--social__tw == true {
 
-  .btn-twitter {
+  .btn-social-tw {
     @extend %btn-social;
     background-color: $c-tw-1;
     border-color: $c-tw-2;
@@ -70,9 +82,10 @@
 } // -- end @if --
 
 
+
 @if $helper-btn--social__gp == true {
 
-  .btn-google {
+  .btn-social-g {
     @extend %btn-social;
     background-color: $c-gp-1;
     border-color: $c-gp-3;

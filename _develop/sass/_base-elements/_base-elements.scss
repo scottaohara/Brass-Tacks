@@ -23,7 +23,7 @@
 // ----------------------------------------------------------------------------
 html, body {
   @extend %reset-spacing;
-  background-color: $c-body--bg;
+  background: $c-body--bg;
   color: $c-body--text;
   font: $f-body--weight $f-body--size $f-body--family;
   height: 100%;

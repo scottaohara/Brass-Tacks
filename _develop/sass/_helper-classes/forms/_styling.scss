@@ -10,11 +10,12 @@ $input-sizing: (
 
 @if $helper-forms--sizing == true {
 
-  .input- {
+  .input {
+
     // run through $input-sizing list to create
     // classes / assign styling values
     @each $s-value in $input-sizing {
-      &#{nth($s-value, 1)} {
+      &-#{nth($s-value, 1)} {
         font-size: nth($s-value, 2);
         padding: nth($s-value, 3);
       }
@@ -41,11 +42,12 @@ $input-validation: (
 
 @if $helper-forms--validation == true {
 
-  .input- {
+  .input {
+
     // run through $input-validation list to create
     // classes / assign styling values
     @each $v-value in $input-validation {
-      &#{nth($v-value, 1)} {
+      &-#{nth($v-value, 1)} {
         border: 1px solid nth($v-value, 2);
       }
     }

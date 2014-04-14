@@ -1,0 +1,44 @@
+<!--
+
+    Floating Elements
+
+    Floated elements should always come first in the
+    mark-up order. As floating elements need something
+    to 'wrap around' and content may not visually lay out
+    in the 'correct' way if located after the content it is
+    supposed to wrap.
+
+    Floating elements are also considered block level elements,
+    so a separate declaration of display: block, is redundant.
+
+    If a parent element only contains floated elements, then the
+    parent element will have a computed height of zero.
+
+    If a parent element has unfloated content, and floated content
+    that is taller than the unfloated content, then the parent
+    element will only have a height equal to the unfloated content.
+
+    Give the parent element a class of .clearfix to force the
+    height to be computed based on the tallest child
+    element it contains.
+
+-->
+
+
+<!--
+
+    Example:
+
+    Floated content setup
+
+-->
+
+
+<div class="container">
+  <div class="float-direction">
+    Floating Content
+  </div>
+  <div class="content">
+    Non-floating content
+  </div>
+</div>

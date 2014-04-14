@@ -3,16 +3,10 @@
   *
   * Brass Tacks
   * by Scott O'Hara - @scottohara - github.com/scottaohara
-  * 0.9.4 - March XX, 2014
+  * 0.9.5 - April 14, 2014
   *
   *****************************************************************************
 */
-
-// ----------------------------------------------------------------------------
-//  Import Font(s)
-// ----------------------------------------------------------------------------
-
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,700italic,600,400italic,300italic,600italic);
 
 // ----------------------------------------------------------------------------
 //  Globals
@@ -23,11 +17,11 @@
 //  file imports to true or false.
 // ----------------------------------------------------------------------------
 
-  // Import Library
-  @import '__globals/__import';               // Includes global libraries
+// Import Library
+@import '__globals/__import',               // Includes global libraries
 
-  // Revisions to base settings / styling
-  @import '_project/setup';
+// Revisions to base settings / styling
+        '_project/setup';
 
 
 // ----------------------------------------------------------------------------
@@ -255,7 +249,7 @@ $helper-type--smoothing:                      true !default;
 
 
 // Import Library
-@import '_helper-classes/__import';           // Imports above set to true
+@import '_helper-classes/__import',           // Imports above set to true
 
-// Import Project
-@import '_project/__project';                 // Imports Project files
+// Import Project Sass
+        '_project/__project';

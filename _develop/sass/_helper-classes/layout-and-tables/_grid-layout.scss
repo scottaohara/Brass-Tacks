@@ -11,7 +11,7 @@
   .row {
     @extend %clearfix;
     margin-bottom: $unit-px5;
-    margin-left: -$unit-px5*2;
+    margin-left: -$unit-px5 * 2;
 
     // Don't need as wide gutters?  Use this class to cut them in half.
     &.half-gutter {
@@ -27,7 +27,7 @@
     float: left;
     margin-bottom: 0;
     min-height: 1px;
-    padding-left: $unit-px5*2;
+    padding-left: $unit-px5 * 2;
     position: relative;
     width: 100%; // default width is 100%
 
@@ -64,9 +64,7 @@
   }
 
   @media screen and (max-width: $break-medium) {
-    .w-90, .w-80, .w-75, .w-70, .w-66,
-    .w-60, .w-50, .w-40, .w-33, .w-30,
-    .w-25, .w-20, .w-10 {
+    [class*="w-"] {
       width: 100%;
     }
   }
@@ -91,43 +89,44 @@
     & > * {
       float: left;
     }
-  }
 
-  .equal-grid-4 {
-    @include equal-grid-col(25%);
+    &-4 {
+      @include equal-grid-col(25%);
 
-    @media screen and (max-width: $break-normal) {
+      @media screen and (max-width: $break-normal) {
+        @include equal-grid-col(33.33333%);
+      }
+
+      @extend %equal-media-small;
+      @extend %equal-media-mini;
+    }  // end -4
+
+    &-3 {
       @include equal-grid-col(33.33333%);
-    }
 
+      @extend %equal-media-small;
+      @extend %equal-media-mini;
+    }  // end -3
+
+    &-2 {
+      @include equal-grid-col(50%);
+
+      @extend %equal-media-mini;
+    }  // end -2
+  }
+
+  %equal-media-small {
     @media screen and (max-width: $break-small) {
       @include equal-grid-col(50%);
     }
+  }
 
+  %equal-media-mini {
     @media screen and (max-width: $break-mini) {
       @include equal-grid-col(100%);
     }
   }
 
-  .equal-grid-3 {
-    @include equal-grid-col(33.33333%);
-
-    @media screen and (max-width: $break-small) {
-      @include equal-grid-col(50%);
-    }
-
-    @media screen and (max-width: $break-mini) {
-      @include equal-grid-col(100%);
-    }
-  }
-
-  .equal-grid-2 {
-    @include equal-grid-col(50%);
-
-    @media screen and (max-width: $break-mini) {
-      @include equal-grid-col(100%);
-    }
-  }
 
   // Example mark-up:
   // ----------------------------------------------------------------------------

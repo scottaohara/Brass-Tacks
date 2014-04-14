@@ -1,18 +1,46 @@
 // ----------------------------------------------------------------------------
-//  Grids
+//  Fixed Width Columns
 // ----------------------------------------------------------------------------
 
-%col-fixed-width {
+%fixed-width-col {
   @media screen and (max-width: $break-medium) {
     padding: 0;
   }
+}
+
+
+// Fixed Width Column
+@mixin fixed-width-col($col-size, $col-side) {
+  @extend %fixed-width-col;
+  padding-#{$col-side}: $col-size;
+
+  @media screen and (max-width: $break-medium) {
+    padding: 0;
+
+  }
 
   .col-fixed-width {
+    float: $col-side;
+
+    @if $col-side == left {
+      margin-left: -$col-size + 40px;
+    }
+
+    @else if $col-side == right {
+      margin-right: -$col-size;
+    }
+
+    width: $col-size - 40px;
+
     @media screen and (max-width: $break-medium) {
       float: none;
-      margin: 0;
+      margin: 0 0 20px;
       padding-left: 40px;
       width: auto;
     }
   }
 }
+
+// Include this into a class that will live on the
+// same element as a .row and have a child of
+// .col-fixed-width
