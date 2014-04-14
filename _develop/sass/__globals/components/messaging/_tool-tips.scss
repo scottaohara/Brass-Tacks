@@ -1,5 +1,5 @@
 // ----------------------------------------------------------------------------
-//  Tool Tips
+//  Tooltips Silent Class
 // ----------------------------------------------------------------------------
 
 %tooltip {
@@ -35,26 +35,12 @@
 }
 
 
-// Tooltip Containing Image
-%tooltip-img {
-  border-bottom: 0;
-  overflow: hidden !important;
 
-  &::before {
-    display: none;
-  }
 
-  &::after {
-    border-radius: 0!important;
-    max-width: 100%!important;
-    margin: 0;
-    width: 100%;
-  }
-}
 
 
 // ----------------------------------------------------------------------------
-//  Tooltips
+//  Tooltips Mixin
 // ----------------------------------------------------------------------------
 
 // General Tooltip Styling

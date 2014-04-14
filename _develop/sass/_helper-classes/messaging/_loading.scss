@@ -4,24 +4,26 @@
 
 @if $helper-loading == true {
 
-
   @include keyframe (spin) {
     to {
       @include transform(rotate(1turn));
     }
   }
 
-  .progress {
-    @include radial-gradient(transparent, circle at top right, rgba(0,0,0,.4), rgba(0,0,0,0));
-    @include animation(spin 1s infinite steps(12));
-    border-radius: $circle;
-    display: inline-block;
-    height: 5em;
-    margin: 0 .5em;
-    overflow: hidden;
-    position: relative;
-    text-indent: 999em;
-    width: 5em;
+  .spinner {
+
+    &::before {
+      @extend %position-center;
+      @include animation(spin 1s infinite steps(24));
+      border-bottom: 2px solid transparent;
+      border-right: 2px solid $c-brand-2;
+      border-top: 2px solid transparent;
+      border-radius: $circle;
+      content: '';
+      height: 100%;
+      overflow: hidden;
+      width: 100%;
+    }
 
   }
 
