@@ -60,7 +60,7 @@ Brass Tacks' Sass files are split up into four base folders to help keep the cod
 * _helper-classes
 * _project
 
-Read more about the Sass file architecture and how to customize Brass Tacks in the <a href="https://github.com/scottaohara/Brass-Tacks/blob/master/_develop/css/README.md">Sass ReadMe.md</a>.
+Read more about the Sass file architecture and how to customize Brass Tacks in the <a href="https://github.com/scottaohara/Brass-Tacks/blob/master/_develop/sass/README.md">Sass ReadMe.md</a>.
 
 
 <hr />
