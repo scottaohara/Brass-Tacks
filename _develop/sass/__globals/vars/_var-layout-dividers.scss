@@ -16,3 +16,16 @@ $divider--border__light:    $hr-border rgba(255,255,255,.2) !default;
 $divider--border__dark:     $hr-border rgba(0,0,0,.2) !default;
 
 $divider--spaced__height:   4px !default;
+
+
+
+
+// table stuff
+$c-table:                 #fafafa !default;
+$c-table-head:            #444 !default;
+$c-table-foot:            $c-off-white !default;
+$c-table-striped:         $c-light !default;
+$c-table-border:          $c-border !default;
+
+// sets consistent boarder styling for table elements
+$table-border:            1px solid $c-border !default;
