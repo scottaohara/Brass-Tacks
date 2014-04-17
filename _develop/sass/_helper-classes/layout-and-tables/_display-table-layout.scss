@@ -4,27 +4,30 @@
 
 @if $helper-grids--display-table == true {
 
-  // fuck
-  .table-row {
-    display: table;
-    height: 100%;
-    table-layout: fixed;
-    width: 100%;
+  .table {
+
+    &-row {
+      display: table;
+      height: 100%;
+      table-layout: fixed;
+      width: 100%;
+    }
+
+    &-col {
+      display: table-cell;
+      height: 100%;
+      padding: .75em;
+    }
+
+    &-col-content {
+      @include box-sizing(content-box);
+      height: 100%;
+      padding: 1em;
+    }
+
   }
 
-  .table-col {
-    display: table-cell;
-    height: 100%;
-    padding: 0.75em;
-  }
-
-  .table-col-content {
-    @include box-sizing(content-box);
-    height: 100%;
-    padding: 1em;
-  }
-
-  @media (max-width: 700px) {
+  @media screen and (max-width: 700px) {
     [class*="table-col"] {
       display: block;
     }

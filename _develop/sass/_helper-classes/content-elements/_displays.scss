@@ -52,6 +52,7 @@
 
 @if $helper-content-displays--show-hide == true {
 
+  // display block or none
   .d {
 
     // Show Elements with display:block
@@ -68,21 +69,26 @@
   }
 
 
-  @media only screen and (max-width: $break-medium) {
+  // Set elements to hide on smaller screens
+  @media screen and (max-width: $break-medium) {
     .mobile-hide {
       display: none !important;
     }
   }
 
+
+  // Set elements to show on smaller screens
+  // and hide on larger screens
   .mobile-show {
     display: none !important;
 
-    @media only screen and (max-width: $break-medium) {
+    @media screen and (max-width: $break-medium) {
       display: block !important;
     }
   }
 
-  // Hides from screenreaders and browsers
+
+  // Hides from screen readers and browsers
   .hidden {
     @extend %hidden;
   }
@@ -108,6 +114,10 @@
 
     &-half {
       opacity: .5;
+    }
+
+    &-quarter {
+      opacity: .25;
     }
   }
 

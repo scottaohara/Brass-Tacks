@@ -35,9 +35,10 @@
 
 
   // General text input helper class
+  // see 'inputs--secondary' for additional
+  // styling for specific input elements
   .input-text {
     @extend %input-text;
-    // see 'more-inputs' for additional styling for specific input elements
     position: relative;
     z-index: 2;
   }

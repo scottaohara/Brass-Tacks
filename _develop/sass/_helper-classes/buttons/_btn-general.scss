@@ -72,7 +72,7 @@
     @include btn-style($btn-bg-emph, $btn-border-emph, $btn-text-emph, $btn-bg-2-emph);
   }
 
-}
+} // -- end @if --
 
 
 @if $helper-btn--neg == true {
@@ -120,16 +120,19 @@ $btn-sizes: (
 
 @if $helper-btn--sizing == true {
 
-  @each $bsv in $btn-sizes {
-    .btn-#{nth($bsv, 1)} {
-      font-size: nth($bsv, 2);
-      padding: nth($bsv, 3)
-    }
-  }
+  .btn {
 
-  .btn-wide {
-    display: block;
-    width: 100%;
+    @each $bsv in $btn-sizes {
+      &-#{nth($bsv, 1)} {
+        font-size: nth($bsv, 2);
+        padding: nth($bsv, 3)
+      }
+    }
+
+    &-wide {
+      display: block;
+      width: 100%;
+    }
   }
 
 } // -- end @if --
@@ -246,4 +249,3 @@ $btn-sizes: (
   }
 
 } // -- end @if --
-

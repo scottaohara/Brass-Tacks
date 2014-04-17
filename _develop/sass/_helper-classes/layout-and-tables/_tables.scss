@@ -4,49 +4,54 @@
 
 @if $helper-table == true {
 
-  .table-header {
-    background-color: $c-table-head;
-    color: $c-white;
-  }
+  .table {
 
-  .table-footer {
-    background-color: $c-table-foot;
-  }
-
-  // Table Decorations
-  .table-border {
-    border-bottom: $table-border;
-    border-right: $table-border;
-
-    tr {
-      border-top: $table-border;
+    &-header {
+      background: $c-table-head-bg;
+      color: $c-table-head-font;
     }
 
-    th, td {
-      border-left: $table-border;
+    &-footer {
+      background: $c-table-foot-bg;
     }
-  }
 
-  .table-stripe {
-    tr:nth-child(2n) {
-      background-color: $c-table-striped;
+
+    // Table Decorations
+    &-border {
+      border-bottom: $table-border;
+      border-right: $table-border;
+
+      tr {
+        border-top: $table-border;
+      }
+
+      th, td {
+        border-left: $table-border;
+      }
     }
-  }
 
-  .table-row-stripe {
-    background-color: $c-table-striped;
-  }
+    &-stripe {
+      tr:nth-child(2n) {
+        background: $c-table-striped-bg;
+      }
+    }
 
-  // Mobile View Table
-  .table-mobile {
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
+    &-row-stripe {
+      background: $c-table-striped-bg;
+    }
 
-    @media (max-device-width:480px), screen and (max-width:800px) {
-      border: $table-border;
 
-      table, th, td, tr {
-        white-space: nowrap;
+    // Mobile View Table
+    &-mobile {
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+
+      @media screen and (max-width:800px) {
+        border: $table-border;
+
+        table, th, td, tr {
+          white-space: nowrap;
+        }
       }
     }
   }

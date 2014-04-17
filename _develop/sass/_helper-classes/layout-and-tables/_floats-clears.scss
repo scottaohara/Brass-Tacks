@@ -5,16 +5,19 @@
 @if $helper-floats-clears == true {
 
   // Floats
-  .float-left {
-    float: left;
-  }
+  .float {
 
-  .float-right {
-    float: right;
-  }
+    &-left {
+      float: left;
+    }
 
-  .float-none {
-    float: none;
+    &-right {
+      float: right;
+    }
+
+    &-none {
+      float: none;
+    }
   }
 
 

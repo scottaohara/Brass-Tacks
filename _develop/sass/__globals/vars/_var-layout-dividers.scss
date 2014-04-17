@@ -1,7 +1,9 @@
 // ----------------------------------------------------------------------------
-//  Layout, Table, Divider Vars
+//  Layout, Table, Divider (hr) Vars
 // ----------------------------------------------------------------------------
 
+
+// Divider (hr) Vars
 $hr-border:                 1px solid !default;
 $hr-margin:                 $unit-px4 0 !default;
 
@@ -20,12 +22,17 @@ $divider--spaced__height:   4px !default;
 
 
 
-// table stuff
+// Table Vars
 $c-table:                 #fafafa !default;
-$c-table-head:            #444 !default;
-$c-table-foot:            $c-off-white !default;
-$c-table-striped:         $c-light !default;
+
+$c-table-head-bg:         #525252 !default;
+$c-table-head-font:       $c-white !default;
+
+$c-table-foot-bg:         $c-off-white !default;
+
+$c-table-striped-bg:      $c-light !default;
+
 $c-table-border:          $c-border !default;
 
-// sets consistent boarder styling for table elements
+// sets consistent border styling for table elements
 $table-border:            1px solid $c-border !default;
