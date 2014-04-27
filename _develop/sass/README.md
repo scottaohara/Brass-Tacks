@@ -15,8 +15,8 @@ arrange all of the children sub-files so as to reduce the number of imports
 into the master.scss file down to a single instance.
 
 
-Some folders also contains sub-folders to group familes of code.
-e.g. typography, buttons, mixins or vars.
+Some folders also contains sub-folders to group families of code.
+e.g. typography, buttons, layout, etc.
 
 
 ---
@@ -52,9 +52,9 @@ folder to redefine the default variable values of Brass Tacks.
 For instance, if you wanted to update the default base font-size of the
 framework, you would add the following to the <b>_setup.scss</b> file:
 
-<code>
+```css
   $txt-base: (your new value here);
-</code>
+```
 
 That's it. Anywhere where <code>$txt-base</code> is used within Brass Tacks
 would then be updated to reflect your new custom value.
