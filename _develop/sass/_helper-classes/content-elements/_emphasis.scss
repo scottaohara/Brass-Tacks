@@ -83,7 +83,7 @@
 
   //  Emphasis Image
   .emph-img {
-    @include border-radius($unit-px2);
+    @include border-radius($unit-px);
     @include box-shadow($bs-4);
     border: 1px solid $c-dark-grey;
     display: inline-block;
