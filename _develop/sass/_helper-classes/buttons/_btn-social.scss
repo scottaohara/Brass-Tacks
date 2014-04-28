@@ -2,17 +2,6 @@
 //  Social Buttons
 // ----------------------------------------------------------------------------
 
-// Social button shared styling
-%btn-social {
-  @extend %btn;
-  min-width: 162px;
-  padding-left: 56px;
-  position: relative;
-  text-align: left;
-}
-
-
-
 @if $helper-btn--social == true {
 
   // Social Buttons Shared Styling
@@ -36,7 +25,6 @@
 @if $helper-btn--social__fb == true {
 
   .btn-social-fb {
-    @extend %btn-social;
     background: $c-fb-1;
     border-color: $c-fb-2;
 
@@ -61,7 +49,6 @@
 @if $helper-btn--social__tw == true {
 
   .btn-social-tw {
-    @extend %btn-social;
     background-color: $c-tw-1;
     border-color: $c-tw-2;
 
@@ -86,12 +73,11 @@
 @if $helper-btn--social__gp == true {
 
   .btn-social-g {
-    @extend %btn-social;
     background-color: $c-gp-1;
     border-color: $c-gp-3;
 
     .social-icon {
-      //background-image: url(../../assets/img/gp.png);
+      //background-image: url();
       border-color: $c-gp-3;
     }
 
