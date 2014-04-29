@@ -1,0 +1,27 @@
+// ----------------------------------------------------------------
+//  Rems w/ Pixel fall-backs
+// ----------------------------------------------------------------
+
+// Relies on the @function rem to convert a value to rems
+
+@mixin rem($property, $val ...) {
+  #{$property}: $val;
+  #{$property}: rem($val);
+}
+
+// Use the rem mixin vs the rem function if we need
+// to support pixel fall-backs for rem values.
+
+
+
+// Example usage:
+
+// .test {
+//   @include rem(padding, 12px, 20px);
+// }
+
+// Outputs:
+// .test {
+//   padding: 12px, 20px;
+//   padding: 0.75rem 1.25rem;
+// }
