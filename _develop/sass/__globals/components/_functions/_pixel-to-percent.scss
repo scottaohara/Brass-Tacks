@@ -1,0 +1,20 @@
+// ----------------------------------------------------------------------------
+//  Convert Pixels to Percentages
+// ----------------------------------------------------------------------------
+
+@function percent($target-unit, $max-unit) {
+  @return ($target-unit / $max-unit) * 100%;
+}
+
+// Example:
+
+// .test {
+//   width: percent(300px, 1024px);
+// }
+
+
+// Outputs
+
+// .test {
+//   width: 29.29688%;
+// }

@@ -21,25 +21,27 @@
   // Standard Media Element
   .media {
     @extend %media;
-  }
-
-
-  // Inside the text area for the media element, make sure the final
-  // element has a margin-bottom of zero so as not to add increase the
-  // margin-bottom of the main media element.
-  .media-text > :last-child {
-    margin-bottom: 0;
-  }
 
 
 
-  // the .media-object contains the photo, illustration, video,
-  // icon / avatar or other like media item.
-  .media-object {
-    float: left;
-    margin: 0 $unit-px4 $unit-px2 0;
-    max-width: $media-object-area;  // default 30% max-width
-  }
+    // Inside the text area for the media element, make sure the final
+    // element has a margin-bottom of zero so as not to add increase the
+    // margin-bottom of the main media element.
+    &-text > :last-child {
+      margin-bottom: 0;
+    }
+
+
+
+    // the .media-object contains the photo, illustration, video,
+    // icon / avatar or other like media item.
+    &-object {
+      float: left;
+      margin: 0 $unit-px4 $unit-px2 0;
+      max-width: $media-object-area;  // default 30% max-width
+    }
+
+  } // end .media
 
 
   // Example mark-up:

@@ -1,0 +1,19 @@
+// ----------------------------------------------------------------------------
+//  Convert Pixels to REMs
+//
+//  Requires the strip-unit function
+// ----------------------------------------------------------------------------
+
+$rem-base: 16 !default;
+
+@function rem($px) {
+  $rem-vals: ();
+
+  @each $v in $px {
+    $val-in-rems: strip-unit($v) / $rem-base * 1rem;
+    $rem-vals: append($rem-vals, $val-in-rems);
+  }
+
+  @return $rem-vals;
+
+}
