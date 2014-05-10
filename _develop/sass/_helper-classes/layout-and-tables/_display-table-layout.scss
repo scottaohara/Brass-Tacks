@@ -9,6 +9,7 @@
     &-row {
       display: table;
       height: 100%;
+      margin-bottom: 20px;
       table-layout: fixed;
       width: 100%;
     }
@@ -17,6 +18,7 @@
       display: table-cell;
       height: 100%;
       padding: .75em;
+      vertical-align: top;
     }
 
     &-col-content {

@@ -1,5 +1,5 @@
 # Brass Tacks
-###(Last updated: 0.9.5 - April. 14, 2014)
+###(Last updated: 0.9.6.1 - May 10, 2014)
 
 Brass Tacks is a professional Sass (.scss) framework that incorporates and standardizes many widely used HTML and CSS elements.
 
@@ -9,7 +9,7 @@ As of version 0.9.1, even more of the code from previous releases has been signi
 
 
 
-## Setting up your dev environment
+## Setting up your development environment
 
 The only thing you <b>need</b> to use Brass Tacks is <b>Sass v 3.3+</b>.
 
@@ -25,7 +25,7 @@ Install Gulp Globally: <code>$ npm install gulp -g</code>(may require sudo)
 
 Install Gulp for your project: <code>$ npm install gulp --save-dev</code>
 
-Install Gulp plugins for Brass Tacks:
+Install Gulp plug-ins for Brass Tacks:
 
 <code>$ npm install gulp-ruby-sass gulp-minify-css gulp-imagemin gulp-clean gulp-rename event-stream --save-dev</code>
 
@@ -70,7 +70,7 @@ Read more about the Sass file architecture and how to customize Brass Tacks in t
 
 Brass Tacks was officially started in mid-2013, but really is based on the evolution of my coding style over many years. I have learned a lot from other developers in my field, and continue to do so on a daily basis. Those developers, as well as my own experiences have significantly steered the path of Brass Tacks' development.
 
-Even though Brass Tacks isn't 'finished', it's pretty darn close to prime time. So go ahead and fork, download and use what's available in your project now. I'd love to get any feedback on the framework that you may have!
+Even though Brass Tacks isn't 'finished', it's pretty close to prime time. So go ahead and fork, download and use what's available in your project now. I'd love to get any feedback on the framework that you may have!
 
 And if you do end up using Brass Tacks, please let me know.
 
