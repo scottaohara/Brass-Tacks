@@ -90,7 +90,6 @@ I've already used earlier versions of Brass Tacks on websites I've built for fre
 
 ##### 2013
 * ghop.me - 0.7.3.1
-* droid-break.info - built by @repat using Brass Tacks/Ground Floor
 * neocities.org - 0.6.2 - in combination w/Twitter Bootstraps
 * spin-off (Ground Floor) created for all default NeoCities websites
 * ecommerce website partnered w/ @xbuzz - 0.5.4
