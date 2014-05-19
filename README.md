@@ -76,6 +76,19 @@ And if you do end up using Brass Tacks, please let me know.
 
 I'd love to feature your work here.
 
+<hr />
+
+A couple of shouts outs to people that have inspired this project of mine by either their own open-source projects or by critical feedback:
+
+@csswizardry
+@stubbornella
+@kevincennis
+@spmurrayzzz
+@nicoleglynn
+
+And many more really... thank you all.
+
+
 
 <hr  />
 
