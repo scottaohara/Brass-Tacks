@@ -64,7 +64,7 @@
   }
 
   @media screen and (max-width: $break-medium) {
-    [class*="w-"] {
+    [class*="w-"]:not(.w-default) {
       width: 100%;
     }
   }
