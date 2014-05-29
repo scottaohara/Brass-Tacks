@@ -1,5 +1,5 @@
 # Brass Tacks
-###(Last updated: 0.9.6.1 - May 10, 2014)
+###(Last updated: 0.9.6.2 - May 28, 2014)
 
 Brass Tacks is a professional Sass (.scss) framework that incorporates and standardizes many widely used HTML and CSS elements.
 
@@ -44,11 +44,11 @@ Enter <code>gulp watch</code> to fire of tasks on change to Sass, images or Java
 ## Brass Tacks Specifics
 
 * Built for HTML5 enabled modern browsers & IE9+
-* JavaScript light: only comes with a Google Analytics placeholder & HTML5shiv via CDN
+* JavaScript light: only comes with a Google Analytics placeholder & link to HTML5shiv via CDN
 * Markup demos & code snippets within the scss files
-* Sass Mixin, Silent Class and Variable libraries
-* CSS base, helper and skeleton setup for project files
-* Extensive demos, code patterns and documentation (this WILL exist by v 1.0)
+* Mixin, Silent Class and Variable libraries
+* scss base, helper and skeleton setup for project files
+* Extensive demos, code patterns and documentation (this WILL exist in v 1.0)
 
 
 ### Sass Specifics
@@ -85,6 +85,12 @@ A couple of shouts outs to people that have inspired this project of mine by eit
 @kevincennis
 @spmurrayzzz
 @nicoleglynn
+
+Also
+
+normalize.css - incredibly important for browser consistency
+min.css - for making me think of ways to cut down my own file size
+inuit.css - for inspiring various structural aspects of this framework
 
 And many more really... thank you all.
 
