@@ -90,8 +90,8 @@
   .btn-disable, .btn[disabled] {
     @extend .btn;
     @include btn-style($btn-bg-disable, $btn-border-disable, $btn-text-disable, $btn-bg-disable);
-    cursor: not-allowed;
     opacity: .3;
+    pointer-events: none;
 
     &:visited {
       background-color: $btn-bg-disable;
