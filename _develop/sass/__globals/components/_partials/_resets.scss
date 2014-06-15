@@ -47,7 +47,6 @@
 
 // Normalize margins on list elements
 %list-elements-margin {
-  @extend %last-child-0;
   margin: 0 0 $unit-px4;
 }
 

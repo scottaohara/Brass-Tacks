@@ -10,9 +10,9 @@
     position: relative;
 
     &::after {
-      @extend %content-empty;
       background: url(../img/drop-arrow.png) no-repeat;
       bottom: 0;
+      content: '';
       height: 14px;
       margin: auto;
       position: absolute;

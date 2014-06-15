@@ -9,14 +9,12 @@
 
     // add top/bottom padding
     &-row {
-      @extend %last-child-0;
       padding: $form-row--padding;
       position: relative;
     }
 
     // add emphasis styling to a row or entire form
     &-block {
-      @extend %last-child-0;
       border: $form-block--border;
       margin-bottom: $input--margin;
       padding: $form-block--padding;

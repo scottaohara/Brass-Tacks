@@ -31,6 +31,33 @@
 
 
 
+// Common rule-set of position fixed or absolute set to top left and
+// with or without a height.
+@mixin position-top-left($val, $height: false) {
+  @if $height == false {
+
+  }
+
+  @else {
+    height: $height;
+  }
+
+  left: 0;
+  position: $val;
+  top: 0;
+  width: 100%;
+}
+
+// Example:
+// ----------------------------------------------------------------------------
+// @include position-top-left(absolute, 40px);
+//
+// or
+//
+// @include position-top-left(fixed, 100%);
+
+
+
 @mixin position-vertical-center($l-or-r, $lr-unit, $position) {
   bottom: 0;
   margin: auto 0;
@@ -61,11 +88,4 @@
   position: absolute;
   right: 0;
   top: 0;
-}
-
-
-
-// Empty content rule when positioning ::before & ::after
-%content-empty {
-  content: "";
 }

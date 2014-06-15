@@ -174,7 +174,6 @@ $btn-sizes: (
 
   // Clear button for search inputs
   .btn-clear {
-    @extend %content-empty;
     //@extend %sprite;
     @include position-vertical-center(right, 6px, absolute);
     //background-position: -165px -28px;
@@ -183,6 +182,7 @@ $btn-sizes: (
     //  create an X img for this button
     //
     border: none;
+    content: '';
     height: 66%;
     width: 24px;
 
