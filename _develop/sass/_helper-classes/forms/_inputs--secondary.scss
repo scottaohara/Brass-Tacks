@@ -124,11 +124,9 @@
   // implement this due to the JS dependency.
 
   .input-file {
-    @include position(top, 0, left, 0, absolute);
+    @include position-top-left(absolute, 100%);
     cursor: pointer;
-    height: 100%;
     opacity: 0;
-    width: 100%;
     z-index: 9;
 
     &-container {

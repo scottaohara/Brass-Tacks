@@ -3,6 +3,6 @@
 // ----------------------------------------------------------------------------
 
 @mixin border-radius($br-value ...) {
-  border-radius: $br-value;
   background-clip: padding-box;
+  border-radius: $br-value;
 }

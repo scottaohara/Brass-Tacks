@@ -3,7 +3,7 @@
 // ----------------------------------------------------------------------------
 
 $f-sizing-map:
-  //f-name  //f-size      //f-weight
+  //f-name  //f-size      //f-weight              // line height
   (xxlarge, $txt-xxlarge, $txt-xxlarge--weight,   $txt-h1--line-height),
   (xlarge,  $txt-xlarge,  $txt-xlarge--weight,    $txt-h1--line-height),
   (large,   $txt-large,   $txt-large--weight,     $txt-h1--line-height),
@@ -25,13 +25,13 @@ $f-sizing-map:
 
 %txt- {
   @each $f-name, $f-size, $f-weight, $f-lh in $f-sizing-map {
+
     &#{$f-name} {
-      font: {
-          size: $f-size;
-        weight: $f-weight;
-      }
+      font-size: $f-size;
+      font-weight: $f-weight;
       line-height: $f-lh;
     }
+
   }
 }
 
@@ -50,4 +50,6 @@ $txt-dec-list: bold, bolder, normal;
   }
 }
 
-%italic { font-style: italic; }
+%italic {
+  font-style: italic;
+}

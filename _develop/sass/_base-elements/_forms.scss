@@ -1,11 +1,30 @@
 // ----------------------------------------------------------------------------
+//  Form Resets
+// ----------------------------------------------------------------------------
+
+// Basic reset / normalizing for form elements
+%reset-form-elements {
+  font-size: 100%;
+  font-weight: $form-font-weight;
+  line-height: 1.25;
+  margin-top: 0;
+  text-transform: none;
+}
+
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
 //  Form & Fieldset
 // ----------------------------------------------------------------------------
 
 @if $base-form--parents == true {
 
   form, fieldset {
-    @extend %reset-form-elements;  // resets.scss
+    @extend %reset-form-elements;
   }
 
   fieldset {
@@ -21,10 +40,14 @@
 
 
 
-
 // ----------------------------------------------------------------------------
 //  Form Elements: Input Element Placeholder Text Styling
 // ----------------------------------------------------------------------------
+
+@mixin placeholder-text($c-text: $c-form-placeholder, $f-style: italic) {
+  color: $c-text;
+  font-style: $f-style;
+}
 
 $ph-vendor-list: "::-moz-", ":-ms-input-", "::webkit-input-";
 $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
@@ -87,8 +110,6 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
 
 
 
-
-
 // ----------------------------------------------------------------------------
 //  Search Input Element
 // ----------------------------------------------------------------------------
@@ -112,8 +133,6 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
   }
 
 } // -- end @if --
-
-
 
 
 
@@ -147,8 +166,6 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
 
 
 
-
-
 // ----------------------------------------------------------------------------
 //  Number Input Element
 // ----------------------------------------------------------------------------
@@ -164,8 +181,6 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
   }
 
 } // -- end @if --
-
-
 
 
 
@@ -195,7 +210,6 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
   }
 
 } // -- end @if --
-
 
 
 
@@ -246,8 +260,6 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
 
 
 
-
-
 // ----------------------------------------------------------------------------
 //  Select Element
 // ----------------------------------------------------------------------------
@@ -273,19 +285,23 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
 
 
 
-
 // ----------------------------------------------------------------------------
 //  Label Element
 // ----------------------------------------------------------------------------
 
 @if $base-form--label == true {
 
-  label {
-    @extend %label;
+  label,
+  %label {
+    display: inline-block;
+    margin-bottom: $unit-px;
+
+    &[for] {
+      cursor: pointer;
+    }
   }
 
 } // -- end @if --
-
 
 
 

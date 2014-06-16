@@ -1,8 +1,0 @@
-// ----------------------------------------------------------------------------
-//  Input Placeholder Text
-// ----------------------------------------------------------------------------
-
-@mixin placeholder-text($c-text: $c-form-placeholder, $f-style: italic) {
-  color: $c-text;
-  font-style: $f-style;
-}

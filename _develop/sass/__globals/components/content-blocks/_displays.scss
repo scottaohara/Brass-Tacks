@@ -29,6 +29,7 @@
 //  Hides from screen readers and browsers
 %hidden {
   display: none !important;
+  height: 0;
   visibility: hidden;
 }
 
@@ -53,7 +54,7 @@
 
 
 // Hide text that you don't want visible
-// like on submit buttons that use an icon instead of text
+// like on buttons that use an icon instead of text
 %hide-text {
   color: transparent;
   font: 0/0 a;
