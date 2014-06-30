@@ -48,7 +48,6 @@
 @if $helper-btn--general == true {
 
   .btn {
-    @extend %btn;
     @include btn-style($btn-bg, $btn-border, $btn-text, $btn-bg-2);
   }
 
@@ -58,7 +57,6 @@
 @if $helper-btn--prime == true {
 
   .btn-prime {
-    @extend %btn;
     @include btn-style($btn-bg-prime, $btn-border-prime, $btn-text-prime, $btn-bg-2-prime);
   }
 
@@ -68,7 +66,6 @@
 @if $helper-btn--emph == true {
 
   .btn-emph {
-    @extend %btn;
     @include btn-style($btn-bg-emph, $btn-border-emph, $btn-text-emph, $btn-bg-2-emph);
   }
 
@@ -78,7 +75,6 @@
 @if $helper-btn--neg == true {
 
   .btn-neg {
-    @extend %btn;
     @include btn-style($btn-bg-neg, $btn-border-neg, $btn-text-neg, $btn-bg-2-neg);
   }
 
@@ -88,7 +84,6 @@
 @if $helper-btn--disable == true {
 
   .btn-disable, .btn[disabled] {
-    @extend .btn;
     @include btn-style($btn-bg-disable, $btn-border-disable, $btn-text-disable, $btn-bg-disable);
     opacity: .3;
     pointer-events: none;
