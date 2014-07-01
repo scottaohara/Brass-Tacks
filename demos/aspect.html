@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en" itemscope itemtype="http://schema.org/Person">
+<head>
+  <meta charset="utf-8" />
+  <title>Maintainable Aspect Ratio Demo | Brass Tacks</title>
+  <link href="../build/assets/css/master.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <div class="page" style="padding: 40px;">
+    <div style="max-width: 800px; background: #ddd; margin: auto; padding: 12px;">
+      <div class="aspect" style="background: #aaa; color:#fff; overflow: auto;">
+        <p>
+          To view this demo, add the following to your project file:
+        </p>
+        <pre><code>
+  .aspect {
+    @include maintain-ratio(16 9);
+  }
+        </code></pre>
+        <p>
+          Soruce: https://gist.github.com/brianmcallister/2932463
+        </p>
+      </div>
+    </div>
+  </div> <!-- end .page -->
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+// ----------------------------------------------------------------------------
+//  Responsive Box that maintains aspect ratio
+//
+//  source: https://gist.github.com/brianmcallister/2932463
+// ----------------------------------------------------------------------------
+
+@mixin maintain-ratio($ratio: 1 1) {
+
+  // vars
+  $height: percentage(nth($ratio, 2) / nth($ratio, 1));
+  $width: 100%;
+
+  @if length($ratio) < 2 or length($ratio) > 2 {
+    @warn "$ratio must be a list with two values.";
+  }
+
+  height: 0;
+  padding-bottom: $height;
+  width: $width;
+}
