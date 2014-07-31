@@ -5,8 +5,8 @@
 
   // Make a smarter Box Model
   *,
-  *::after,
-  *::before {
+  *:after,
+  *:before {
     @include box-sizing(border-box);
   }
 

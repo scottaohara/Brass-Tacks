@@ -9,7 +9,7 @@
     @extend %input-text;
     position: relative;
 
-    &::after {
+    &:after {
       background: url(../img/drop-arrow.png) no-repeat;
       bottom: 0;
       content: '';

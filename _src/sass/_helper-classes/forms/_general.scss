@@ -22,7 +22,7 @@
       &[disabled] {
         position: relative;
 
-        &::after {
+        &:after {
           @extend %position-center;
           background: $form-disable-overlay;
           content: '';

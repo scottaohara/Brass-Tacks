@@ -13,8 +13,8 @@
     font-size: $txt-h5;
     padding: $unit-px4;
 
-    &::after,
-    &::before {
+    &:after,
+    &:before {
       display: none;
     }
   }

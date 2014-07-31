@@ -12,7 +12,7 @@
 
   .spinner {
 
-    &::before {
+    &:before {
       @extend %position-center;
       @include animation(spin 1s infinite steps(24));
       border-bottom: 2px solid transparent;

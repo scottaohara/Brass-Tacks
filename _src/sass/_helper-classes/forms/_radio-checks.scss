@@ -11,12 +11,12 @@
   vertical-align: sub;
   width: 16px;
 
-  &::after {
+  &:after {
     content: '';
     opacity: 0;
   }
 
-  &:hover::after {
+  &:hover:after {
     opacity: .3;
   }
 }
@@ -28,7 +28,7 @@
   .cr-area {
     position: relative;
 
-    :checked + .cr::after {
+    :checked + .cr:after {
       opacity: 1;
     }
 
@@ -45,7 +45,7 @@
     @include linear-gradient($c-light-grey, top, $c-white, $c-grey);
     border: 1px solid $c-dark-grey;
 
-    &::after {
+    &:after {
       @include position(top, -2px, left, 1px, absolute);
       @include transform(rotate(-49deg));
       border: 5px solid $c-brand-2;
@@ -62,7 +62,7 @@
     @include linear-gradient($c-light-grey, top, $c-white, $c-grey);
     border: 1px solid $c-dark-grey;
 
-    &::after {
+    &:after {
       @extend %position-center;
       @include border-radius($circle);
       background: $c-brand-1;
@@ -99,7 +99,7 @@
     position: relative;
     vertical-align: middle;
 
-    &::after {
+    &:after {
       @include position(top, 0, right, 50%, absolute);
       @include transition(.2s all);
       background: $c-red;
@@ -111,7 +111,7 @@
     &.knob {
       overflow: visible;
 
-      &::after {
+      &:after {
         @include box-shadow($bs-1);
         background: $c-white;
         border: 1px solid #aaa;
@@ -121,7 +121,7 @@
       }
     }
 
-    &.labels::before {
+    &.labels:before {
       @include position(top, 12%, left, 5%, absolute);
       content: "Off";
       text-indent: 60%;
@@ -138,17 +138,17 @@
         background: $c-green !important;
         color: $c-white;
 
-        &::after {
+        &:after {
           background: $c-white;
         }
       }
 
-      &::after {
+      &:after {
         background: $c-green;
         right: -1px;
       }
 
-      &.labels::before {
+      &.labels:before {
         content: "On";
         text-indent: 5%;
       }
@@ -193,7 +193,7 @@
         border-right: 0;
       }
 
-      &::before {
+      &:before {
         @include transition(all .2s);
         background: $c-light-grey;
         content: '';
@@ -206,7 +206,7 @@
     }
   }
 
-  :checked + .pill-option::before {
+  :checked + .pill-option:before {
     width: 100%;
   }
 

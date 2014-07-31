@@ -11,7 +11,7 @@
 
     li {
 
-      &::after {
+      &:after {
         @extend %d-inline-block;
         content: ">";
       }
@@ -20,7 +20,7 @@
         font-weight: 600;
         padding: $unit-px;
 
-        &::after {
+        &:after {
           content: '';
         }
       }

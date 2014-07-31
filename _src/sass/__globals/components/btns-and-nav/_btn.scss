@@ -1,5 +1,5 @@
 // Include a single media query to easily customize buttons
-@mixin btn-style($btn__bg, $btn__border, $btn__text, $btn__bg-2, $btn__ts: false) {
+@mixin btn-style($btn__bg, $btn__border, $btn__text, $btn__bg-2, $btn__text-2, $btn__ts: false) {
   @extend %btn;
   background-color: $btn__bg;
   border-color: $btn__border;
@@ -8,9 +8,11 @@
 
   &:hover {
     background-color: $btn__bg-2;
+    color: $btn__text-2;
   }
 
   &:active {
     background-color: darken($btn__bg-2, 20%);
+    color: $btn__text-2;
   }
 }
