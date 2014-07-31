@@ -31,9 +31,9 @@ gulp.task('sass', function() {
 
   // Compiles Master Brass Tacks scss to CSS
   return es.concat(
-    gulp.src('./_develop/sass/*.scss')
+    gulp.src('./_src/sass/*.scss')
       .pipe(sass({unixNewlines: true, style: 'expanded', lineNumbers: false, trace: true}))
-      .pipe(gulp.dest('./build/assets/css'))
+      .pipe(gulp.dest('./dist/css'))
 
 
     // If you would like to have multiple CSS files compiled, you can
@@ -49,10 +49,10 @@ gulp.task('sass', function() {
 gulp.task('mini', function() {
 
   // look in the css folder and minify all the files
-  return gulp.src('./build/assets/css/**.css') // Make sure this is returned before moving on
+  return gulp.src('./dist/css/**.css') // Make sure this is returned before moving on
     .pipe(mini())
     .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest('./build/assets/css/'));
+    .pipe(gulp.dest('./dist/css/'));
 });
 
 
@@ -68,9 +68,9 @@ gulp.task('styles', ['sass'], function(){
 // Run image compression
 // ----------------------------------------------------------------------------
 gulp.task('images', function() {
-  return gulp.src('./_develop/img/**/*')
+  return gulp.src('./_src/img/**/*')
     .pipe((imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
-    .pipe(gulp.dest('./build/assets/img'))
+    .pipe(gulp.dest('./dist/img'))
 });
 
 
@@ -97,13 +97,13 @@ gulp.task('default', ['clean'], function () {
 gulp.task('watch', function() {
 
   // Watch .scss files
-  gulp.watch('./_develop/sass/**/*.scss', function(event) {
+  gulp.watch('./_src/sass/**/*.scss', function(event) {
     console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
     gulp.run('styles');
   });
 
   // Watch image files
-  gulp.watch('./_develop/img/**/*', function(event) {
+  gulp.watch('./_src/img/**/*', function(event) {
     console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
     gulp.run('images');
   });
