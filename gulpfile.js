@@ -31,7 +31,7 @@ gulp.task('sass', function() {
 
   // Compiles Master Brass Tacks scss to CSS
   return es.concat(
-    gulp.src('./_src/sass/project-master.scss')
+    gulp.src('./_src/sass/master-project.scss')
       .pipe(sass({unixNewlines: true, style: 'expanded', lineNumbers: false, trace: true}))
       .pipe(gulp.dest('./dist/css'))
 
@@ -49,7 +49,7 @@ gulp.task('sass', function() {
 gulp.task('mini', function() {
 
   // look in the css folder and minify all the files
-  return gulp.src('./dist/css/project-master.css') // Make sure this is returned before moving on
+  return gulp.src('./dist/css/master-project.css') // Make sure this is returned before moving on
     .pipe(mini())
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('./dist/css/'));
