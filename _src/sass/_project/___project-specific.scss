@@ -1,0 +1,33 @@
+// ----------------------------------------------------------------------------
+//  Project Specific Components
+// ----------------------------------------------------------------------------
+
+@import '__project-vars',        // Redefine BT variables on a project level
+        '__project-shell',       // Shell/project global styling
+        'header',                // Header Styling
+        'nav',                   // Nav Styling
+        'main',                  // Main Content Area Styling
+        'footer',                // Footer Styling
+        'quick-fix';             // **
+
+
+// @import '__globals/global-print';             // Print styles
+
+
+
+// ** Quick Fix
+// ----------------------------------------------------------------------------
+
+// The Quick Fix style sheet exists so that developers can add quick,
+// potentially hacky-by-necessity code on the project level, or Brass Tacks
+// Framework level without needing to muck around with any of the source code.
+
+// This is not a file that should have code in it for an extended period of
+// time. Quick Fix code should be merged back into the main project library
+// either by simply adding the new rules to the appropriate file, or by
+// refactoring existing code to negate the need for the Quick Fix.
+
+// If the rules in Quick Fix are being used to update / fix code in the main
+// Brass Tacks code base, please consider opening an issue or Pull Request to
+// explain what it is you're having an issue with, and helping make Brass Tacks
+// better overall.

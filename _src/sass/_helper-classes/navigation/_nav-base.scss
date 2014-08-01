@@ -32,9 +32,9 @@
 
 // 3-lined mobile nav 'icon'
 %burger {
-  @include box-shadow($bs-1);
   background: $c-white;
   border-radius: $circle;
+  box-shadow: $bs-1;
   display: block;
   height: 2px;
 }

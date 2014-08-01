@@ -1,8 +1,3 @@
 // ----------------------------------------------------------------------------
-//  Border Radius
+//  Project Specific: Main Content Area
 // ----------------------------------------------------------------------------
-
-@mixin border-radius($br-value ...) {
-  background-clip: padding-box;
-  border-radius: $br-value;
-}

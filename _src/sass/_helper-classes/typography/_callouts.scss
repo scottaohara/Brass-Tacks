@@ -6,9 +6,9 @@
 
   // Shout Out - blockquote / blockquote like styling for emphasizing text
   .txt-callout {
-    @include box-shadow($bs-callout);
     background: $c-lighter;
     border-left: $unit-px solid $c-brand-2;
+    box-shadow: $bs-callout;
     color: $c-brand-2;
     font-size: $txt-h5;
     padding: $unit-px4;
@@ -66,8 +66,8 @@
 
   // Background Text Highlight
   .txt-highlight {
-    @include border-radius($unit-px);
     background: $c-red;
+    border-radius: $unit-px;
     color: $c-white;
     display: inline-block;
     padding: $unit-px;

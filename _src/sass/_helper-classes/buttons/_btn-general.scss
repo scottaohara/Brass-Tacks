@@ -14,13 +14,12 @@
     weight: $f-btn-weight;
   }
   line-height: normal;
-  min-width: 60px;
   padding: $btn-pad $btn-pad*2;
   text-align: center;
   text-decoration: none !important; // never have an underline on button text
 
   &:focus {
-    @include box-shadow($bs-btn-focus);
+    box-shadow: $bs-btn-focus;
     outline: 0;
   }
 }
@@ -146,11 +145,11 @@ $btn-sizes: (
   .btn {
 
     &-soft {
-      @include border-radius($unit-px2);
+      border-radius: $unit-px2;
     }
 
     &-round {
-      @extend %circle;
+      border-radius: $circle;
     }
   }
 
@@ -169,21 +168,12 @@ $btn-sizes: (
 
   // Clear button for search inputs
   .btn-clear {
-    //@extend %sprite;
     @include position-vertical-center(right, 6px, absolute);
-    //background-position: -165px -28px;
-    //
-    //  TODO
-    //  create an X img for this button
-    //
     border: none;
-    content: '';
+    content: 'X';
+    font-family: arial;
     height: 66%;
     width: 24px;
-
-    // &:hover {
-    //   background-position: -165px -1px;
-    // }
   }
 
 } // -- end @if --
@@ -193,8 +183,8 @@ $btn-sizes: (
 
   // Close buttons for modal windows
   .btn-close {
-    @extend %circle;
     @include position(top, -6px, left, -6px, absolute);
+    border-radius: $circle;
     min-width: 1px !important;
     padding: 5px 7px;
     text-transform: uppercase;
@@ -219,11 +209,11 @@ $btn-sizes: (
     @extend %margin-bottom-base;
 
     &>:first-child {
-      @include border-radius($unit-px2 0 0 $unit-px2);
+      border-radius: $unit-px2 0 0 $unit-px2;
     }
 
     &>:last-child {
-      @include border-radius(0 $unit-px2 $unit-px2 0);
+      border-radius: 0 $unit-px2 $unit-px2 0;
     }
 
     &>:not(:first-child) {

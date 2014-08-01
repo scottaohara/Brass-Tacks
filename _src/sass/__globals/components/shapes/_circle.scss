@@ -1,9 +1,0 @@
-// ----------------------------------------------------------------------------
-//  CSS Circle
-// ----------------------------------------------------------------------------
-
-// make a content element into a circle w/ no overflow.
-%circle {
-  @include border-radius($circle);
-  overflow: hidden;
-}

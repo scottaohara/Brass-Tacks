@@ -36,9 +36,9 @@
 
   // Drop Menu styling
   .drop-menu {
-    @include box-shadow($bs-1);
     background: rgba(255,255,255,.95);
     border: 1px solid $c-light-grey;
+    box-shadow: $bs-1;
     margin: 0;
     position: absolute;
     visibility: hidden;

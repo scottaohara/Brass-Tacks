@@ -22,10 +22,10 @@
 
   .emph-block {
     @extend %emph-shared;
-    @include border-radius($unit-px);
-    @include box-shadow($bs-1);
     background: $c-off-white;
+    border-radius: $unit-px;
     border: 1px solid $c-light-grey;
+    box-shadow: $bs-1;
 
   }
 
@@ -82,9 +82,9 @@
 
   //  Emphasis Image
   .emph-img {
-    @include border-radius($unit-px);
-    @include box-shadow($bs-4);
+    border-radius: $unit-px;
     border: 1px solid $c-dark-grey;
+    box-shadow: $bs-4;
     display: inline-block;
     overflow: hidden;
 

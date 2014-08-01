@@ -46,8 +46,8 @@
     -webkit-appearance: none;
 
     &:focus {
-      @include box-shadow($bs-input--focus);
       background-color: $c-input--bg-focus;
+      box-shadow: $bs-input--focus;
     }
   }
 

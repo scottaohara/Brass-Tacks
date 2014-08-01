@@ -70,8 +70,8 @@
 
 %kbd-code-samp {
   @extend %margin-bottom-base;
-  background: $c-code-bg;
-  color: $c-code-text;
+  background: $c-code--bg;
+  color: $c-code--text;
   border: $code-border;
   border-left-width: 4px;
   display: block;

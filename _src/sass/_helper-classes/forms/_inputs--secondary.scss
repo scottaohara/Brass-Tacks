@@ -99,9 +99,9 @@
     width: 100%;
 
     &:focus {
-      @include box-shadow($bs-focus);
       background: $c-lighter;
       border: 1px solid #50B6D5;
+      box-shadow: $bs-focus;
     }
   }
 

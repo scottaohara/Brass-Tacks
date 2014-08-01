@@ -33,7 +33,7 @@
     }
 
     :focus + .cr {
-      @include box-shadow($bs-input-focus);
+      box-shadow: $bs-input-focus;
     }
   }
 
@@ -41,9 +41,9 @@
   // Checkbox (CSS only) Styling
   .cb-active {
     @extend %custom-check;
-    @include border-radius(2px);
     @include linear-gradient($c-light-grey, top, $c-white, $c-grey);
     border: 1px solid $c-dark-grey;
+    border-radius: 2px;
 
     &:after {
       @include position(top, -2px, left, 1px, absolute);
@@ -58,14 +58,14 @@
 
   .radio-active {
     @extend %custom-check;
-    @include border-radius($circle);
     @include linear-gradient($c-light-grey, top, $c-white, $c-grey);
+    border-radius: $circle;
     border: 1px solid $c-dark-grey;
 
     &:after {
       @extend %position-center;
-      @include border-radius($circle);
       background: $c-brand-1;
+      border-radius: $circle;
       height: 6px;
       width: 6px;
     }
@@ -90,7 +90,7 @@
 
   .crs {
     @extend %input-text;
-    @include border-radius(12px);
+    border-radius: 12px;
     display: inline-block;
     height: 28px;
     margin: 0 $unit-px 0 0;
@@ -112,10 +112,10 @@
       overflow: visible;
 
       &:after {
-        @include box-shadow($bs-1);
         background: $c-white;
         border: 1px solid #aaa;
         border-radius: $circle;
+        box-shadow: $bs-1;
         height: 150%;
         top: -25%;
       }
@@ -130,7 +130,7 @@
 
   .input-slide {
     &:focus + .crs {
-      @include box-shadow($bs-4);
+      box-shadow: $bs-4;
     }
 
     &:checked + .crs {
@@ -174,8 +174,8 @@
   // Pill container
   .cr-pill {
     @extend %margin-bottom-base;
-    @include border-radius($unit-px);
     background: $c-white;
+    border-radius: $unit-px;
     border: 1px solid $c-grey;
     display: inline-block;
     overflow: hidden;

@@ -47,9 +47,9 @@
 
   // close the message link/button
   .close-message {
-    @extend %circle;
     @include position(top, -$unit-em*.5, right, -$unit-em*.5, absolute);
     border: 1px solid;
+    border-radius: $circle;
     padding: $unit-px $unit-px3;
     text-decoration: none;
   }
@@ -72,7 +72,7 @@
     @include tooltip();
 
     &:after {
-      @include border-radius($unit-px);
+      border-radius: 2px;
       content: attr(data-tooltip);
     }
   }
@@ -141,9 +141,9 @@
     }
 
     &:after {
-      border-radius: 0!important;
-      max-width: 100%!important;
+      border-radius: 0 !important;
       margin: 0;
+      max-width: 100% !important;
       width: 100%;
     }
   }

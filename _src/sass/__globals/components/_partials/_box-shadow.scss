@@ -1,9 +1,0 @@
-// ----------------------------------------------------------------------------
-//  Box Shadow
-//  Keeping webkit prefix for early android/iOS devices that may still need it
-// ----------------------------------------------------------------------------
-
-@mixin box-shadow($bs-value ...) {
-  -webkit-box-shadow: $bs-value;
-          box-shadow: $bs-value;
-}
