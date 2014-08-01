@@ -5,7 +5,7 @@
 // General button setup to extend into button classes
 %btn {
   -webkit-appearance: none;
-  border: 1px solid;
+  border: $btn-border-width solid;
   cursor: pointer;
   display: inline-block;
   font: {
