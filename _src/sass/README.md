@@ -10,9 +10,10 @@ organized and easy to find.
 * _project
 
 
-All but the '_project' folder contain an '__import.scss' file to collect and
+All folders contain a '__import.scss' file to collect and
 arrange all of the children sub-files so as to reduce the number of imports
-into the master.scss file down to a single instance.
+into the master-brass-tacks.scss and master-project.scss files down to
+single instances per category.
 
 
 Some folders also contains sub-folders to group families of code.
@@ -45,12 +46,12 @@ the source files (though you should still study the files to familiarize
 yourself with the code).
 
 
-Instead, use the <b>_setup.scss</b> file, contained in the <b>_project</b>
+Instead, use the <b>__project-vars.scss</b> file, contained in the <b>_project</b>
 folder to redefine the default variable values of Brass Tacks.
 
 
 For instance, if you wanted to update the default base font-size of the
-framework, you would add the following to the <b>_setup.scss</b> file:
+framework, you would add the following to the <b>__project-vars.scss</b> file:
 
 ```css
   $txt-base: (your new value here);
@@ -60,7 +61,7 @@ That's it. Anywhere where <code>$txt-base</code> is used within Brass Tacks
 would then be updated to reflect your new custom value.
 
 
-It's best to redefine the variables in the <b>_setup.scss</b> file, rather than
-in the master variables files, because if you ever need to pull a new version
-of Brass Tacks, there will be less chance for you to receive merge conflicts
-or for you to lose any of your custom work.
+It's best to redefine the variables in the <b>__project-vars.scss</b> file,
+rather than in the master variables files, because if you ever need to pull
+a new version of Brass Tacks, there will be less chance for you to receive
+merge conflicts or for you to lose any of your custom work.
