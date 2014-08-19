@@ -4,17 +4,17 @@
 
 @if $helper-forms--search-combo == true {
 
-  .search-area {
+  .search--area {
     margin-bottom: $unit-px2;
     position: relative;
 
-    .input-text {
+    .input--text {
       @include truncate-text(100%);
       margin-bottom: 0;
       padding-right: $unit-px*30;
     }
 
-    .btn-search {
+    .btn--search {
       @include position(top, 0, right, -1px, absolute);
       height: 100%;
       padding-top: 6px;
@@ -22,7 +22,7 @@
     }
   }
 
-  .btn-small.btn-search {
+  .btn--small.btn--search {
     padding-top: 4px;
   }
 
@@ -31,8 +31,8 @@
   // Example mark-up:
   // ----------------------------------------------------------------------------
   // <div class="search-area">
-  //   <input type="search" placeholder="Search for..." class="input-text">
-  //   <input type="submit" value="Search" class="btn-prime btn-search">
+  //   <input type="search" placeholder="Search for..." class="input--text">
+  //   <input type="submit" value="Search" class="btn--prime btn--search">
   // </div>
 
 } // -- end @if --
@@ -48,10 +48,10 @@
 
 @if $helper-forms--search-combo2 == true {
 
-  .search-clear {
+  .search--clear {
     position: relative;
 
-    .input-text {
+    .input--text {
      // background-image: url();
      // background-repeat: no-repeat;
      // background-position: 6px center;
@@ -89,7 +89,7 @@
   // of the input-text styling that doesn't break it in webkit & standardizes
   // it in other browsers
 
-  .input-color {
+  .input--color {
     background-image: none;
     border: 1px solid $c-grey;
     font-family: $f-brand;
@@ -123,13 +123,13 @@
   // JavaScript to fully make functional. It may not be worth it to
   // implement this due to the JS dependency.
 
-  .input-file {
+  .input--file {
     @include position-top-left(absolute, 100%);
     cursor: pointer;
     opacity: 0;
     z-index: 9;
 
-    &-container {
+    &--container {
       position: relative;
 
       label {
@@ -137,8 +137,8 @@
       }
     }
 
-    &-area {
-      @extend %input-text;
+    &__area {
+      @extend %input--text;
       cursor: pointer;
       display: inline-block;
       width: 75%;
@@ -148,12 +148,12 @@
 
   // Example mark-up:
   // ----------------------------------------------------------------------------
-  // <div class="input-file-container">
-  //   <input type="file" id="input-file" class="input-file" />
+  // <div class="input--file--container">
+  //   <input type="file" id="input_file" class="input--file" />
 
-  //   <label for="input-file">File Input</label>
+  //   <label for="input_file">File Input</label>
 
-  //   <span class="input-file-area">
+  //   <span class="input--file__area">
   //     <span class="placeholder">Select a file...</span>
   //   </span>
 

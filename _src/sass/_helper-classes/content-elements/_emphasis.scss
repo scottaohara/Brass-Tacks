@@ -2,7 +2,7 @@
 //  Shared Emphasis Block Styling
 // ----------------------------------------------------------------------------
 
-%emph-shared {
+%emph--shared {
   margin-bottom: $unit-px4;
   min-height: 20px;
   padding: $unit-px4;
@@ -20,8 +20,8 @@
 
 @if $helper-content-emphasis == true {
 
-  .emph-block {
-    @extend %emph-shared;
+  .emph--block {
+    @extend %emph--shared;
     background: $c-off-white;
     border-radius: $unit-px;
     border: 1px solid $c-light-grey;
@@ -31,7 +31,7 @@
 
   // Example mark-up
   // ----------------------------------------------------------------------
-  // <div class="emph-block">
+  // <div class="emph--block">
   //  ...
   // </div>
 
@@ -49,26 +49,26 @@
   // & need to have consistent typography / content base without the background
   // or bordering of the block.
 
-  .emph-transparent {
-    @extend %emph-shared;
+  .emph--transparent {
+    @extend %emph--shared;
   }
 
   // Example mark-up
   // ----------------------------------------------------------------------------
-  // <div class="emph-transparent">
+  // <div class="emph--transparent">
   //  ...
   // </div>
 
 
 
   // A smaller emphasis block
-  .emph-small {
+  .emph--small {
     padding: $unit-px2
   }
 
   // Example mark-up
   // ----------------------------------------------------------------------------
-  // <div class="emph-block emph-small">
+  // <div class="emph--block emph--small">
   //  ...
   // </div>
 
@@ -81,7 +81,7 @@
 @if $helper-content-emphasis--img == true {
 
   //  Emphasis Image
-  .emph-img {
+  .emph--img {
     border-radius: $unit-px;
     border: 1px solid $c-dark-grey;
     box-shadow: $bs-4;
@@ -97,7 +97,7 @@
 
   // Example mark-up
   // ----------------------------------------------------------------------------
-  // <div class="emph-img">
+  // <div class="emph--img">
   //   <img src="..." alt="..." />
   // </div>
 

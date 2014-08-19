@@ -6,7 +6,7 @@
 
   .table {
 
-    &-row {
+    &--row {
       display: table;
       height: 100%;
       margin-bottom: 20px;
@@ -14,14 +14,18 @@
       width: 100%;
     }
 
-    &-col {
+    &--col {
       display: table-cell;
       height: 100%;
       padding: .75em;
       vertical-align: top;
+
+      @media screen and (max-width: 700px) {
+        display: block;
+      }
     }
 
-    &-col-content {
+    &--col__content {
       @include box-sizing(content-box);
       height: 100%;
       padding: 1em;
@@ -29,10 +33,20 @@
 
   }
 
-  @media screen and (max-width: 700px) {
-    [class*="table-col"] {
-      display: block;
-    }
-  }
+  // Example mark-up:
+  // ----------------------------------------------------------------------------
+  //  <div class="table--row">
+  //    <div class="table--col w-60">
+  //      <div class="table--col__content">
+  //        ...
+  //      </div>
+  //    </div>
+  //
+  //     <div class="table--col w-40">
+  //      <div class="table--col__content">
+  //        ...
+  //      </div>
+  //    </div>
+  //  </div>
 
 } // -- end @if --

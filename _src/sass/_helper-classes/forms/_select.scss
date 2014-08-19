@@ -5,33 +5,43 @@
 @if $helper-forms--select == true {
 
   // Drop Down Selection
-  .select-container {
-    @extend %input-text;
+  .select--container {
+    @extend %input--text;
     position: relative;
 
     &:after {
-      background: url(../img/drop-arrow.png) no-repeat;
       bottom: 0;
-      content: '';
-      height: 14px;
+      content: '\25BC';
+      height: 16px;
+      line-height: 1;
       margin: auto;
+      pointer-events: none;
       position: absolute;
       right: 8px;
       top: 0;
-      width: 14px;
     }
   }
 
-  .input-select {
+  .input--select {
     -webkit-appearance: textarea;
        -moz-appearance: window;
     background: none;
     border: 0;
     font-family: $f-brand;
     margin: 0;
-    padding: 0 $unit-px4 0 0;
+    padding: 0;
     z-index: 2;
   }
+
+  // Example mark-up:
+  // ----------------------------------------------------------------------------
+  // <div class="select--container">
+  //    <select class="input--select">
+  //      <option>...</option>
+  //      <option>...</option>
+  //      <option>...</option>
+  //    </select>
+  //  </div>
 
 } // -- end @if --
 
@@ -47,8 +57,8 @@
 
 @if $helper-forms--multi-select == true {
 
-  .multi-select {
-    @extend %input-text;
+  .input--select--multi {
+    @extend %input--text;
 
     option {
       padding: $unit-px 2px;
@@ -57,7 +67,7 @@
 
   // Example mark-up:
   // ----------------------------------------------------------------------------
-  // <select id="multi-select" multiple size="5" class="multi-select">
+  //  <select id="multi_select" multiple size="5" class="input--select--multi">
   //    <option>...</option>
   //    <option>...</option>
   //    <option>...</option>

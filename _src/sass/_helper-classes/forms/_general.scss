@@ -8,13 +8,13 @@
   .form {
 
     // add top/bottom padding
-    &-row {
+    &--row {
       padding: $form-row--padding;
       position: relative;
     }
 
     // add emphasis styling to a row or entire form
-    &-block {
+    &--block {
       border: $form-block--border;
       margin-bottom: $input--margin;
       padding: $form-block--padding;
@@ -36,7 +36,7 @@
   // see 'inputs--secondary' for additional
   // styling for specific input elements
 
-  %input-text {
+  %input--text {
     background-color:   $c-input--bg;
     border:             $input-border-style;
     font-family:        $f-input--family;
@@ -51,8 +51,8 @@
     }
   }
 
-  .input-text {
-    @extend %input-text;
+  .input--text {
+    @extend %input--text;
     position: relative;
     z-index: 2;
   }

@@ -132,7 +132,7 @@
     text-align: center;
 
     & > li {
-      @extend %d-inline-block;
+      @extend %display--inline-block;
     }
   }
 

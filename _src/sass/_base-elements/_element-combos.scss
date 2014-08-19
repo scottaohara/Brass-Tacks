@@ -3,7 +3,7 @@
 // ----------------------------------------------------------------------------
 
 %address-details-summary {
-  @extend %d-block;
+  @extend %display--block;
   @extend %margin-bottom-base;
 }
 
@@ -46,14 +46,14 @@
 @if $base-fig-figcaption == true {
 
   figure, figcaption {
-    @extend %d-block;
+    @extend %display--block;
   }
 
   figure {
     @extend %margin-bottom-base;
 
     img {
-      @extend %d-block;
+      display: block;
     }
   }
 
@@ -80,7 +80,7 @@
 }
 
 // if a child of an element revise styling
-%kbd-code-samp--child {
+%kbd-code-samp__child {
   display: inline-block;
   font-size: $txt-tiny;
   margin: 0;
@@ -97,7 +97,7 @@
 
   p, li {
     code {
-      @extend %kbd-code-samp--child;
+      @extend %kbd-code-samp__child;
     }
   }
 
@@ -113,7 +113,7 @@
 
   p, li {
     kbd {
-      @extend %kbd-code-samp--child;
+      @extend %kbd-code-samp__child;
     }
   }
 
@@ -129,7 +129,7 @@
 
   p, li {
     samp {
-      @extend %kbd-code-samp--child;
+      @extend %kbd-code-samp__child;
     }
   }
 

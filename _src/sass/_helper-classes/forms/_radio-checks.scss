@@ -28,7 +28,7 @@
   .cr-area {
     position: relative;
 
-    :checked + .cr:after {
+    input:checked + .cr:after {
       opacity: 1;
     }
 
@@ -89,7 +89,7 @@
   }
 
   .crs {
-    @extend %input-text;
+    @extend %input--text;
     border-radius: 12px;
     display: inline-block;
     height: 28px;
@@ -103,7 +103,7 @@
       @include position(top, 0, right, 50%, absolute);
       @include transition(.2s all);
       background: $c-red;
-      content: "";
+      content: '';
       height: 100%;
       width: 51%;
     }
@@ -123,7 +123,7 @@
 
     &.labels:before {
       @include position(top, 12%, left, 5%, absolute);
-      content: "Off";
+      content: 'Off';
       text-indent: 60%;
     }
   }
@@ -149,7 +149,7 @@
       }
 
       &.labels:before {
-        content: "On";
+        content: 'On';
         text-indent: 5%;
       }
     }
@@ -181,7 +181,12 @@
     overflow: hidden;
     text-align: center;
 
-    .pill-option {
+    input {
+      @extend .invis;
+    }
+
+
+    &__option {
       border-right: 1px solid $c-grey;
       float: left;
       margin-bottom: 0;
@@ -194,8 +199,8 @@
       }
 
       &:before {
-        @include transition(all .2s);
-        background: $c-light-grey;
+        @include transition(width .2s, background .2s);
+        background: rgba(0,0,0,.5);
         content: '';
         height: 100%;
         left: 0;
@@ -206,11 +211,15 @@
     }
   }
 
-  :checked + .pill-option:before {
+  input:checked + .cr-pill__option:before {
     width: 100%;
   }
 
-  .pill-label {
+  input:focus + .cr-pill__option {
+    box-shadow: inset $bs-focus;
+  }
+
+  .cr-pill__label {
     display: block;
     padding: $unit-px;
     position: relative;

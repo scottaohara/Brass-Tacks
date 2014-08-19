@@ -99,13 +99,13 @@ html, body {
 
   // Give HTML5 elements block display, which is not defined in IE 8/9
   article, aside, canvas, footer, header, main, section {
-    @extend %d-block;
+    @extend %display--block;
   }
 
 
   // Makes hidden actually [hidden] in IE 8/9
   [hidden] {
-    @extend %d-none;
+    @extend %display--none;
   }
 
 } // -- end @if --
@@ -123,8 +123,8 @@ html, body {
 @if $base-anchor == true {
 
   a {
-    background-color: transparent;
     // Removes grey background color from active links in IE10
+    background-color: transparent;
     color: $c-link;
 
     &:hover, &:active {

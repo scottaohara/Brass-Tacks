@@ -5,7 +5,7 @@
 @if $base-hr == true {
 
   hr {
-    @extend %d-block;
+    @extend %display--block;
     border: 0;
     border-bottom: $divider--border__dark;
     height: 1px;

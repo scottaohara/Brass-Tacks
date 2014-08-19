@@ -3,7 +3,7 @@
   *
   * Brass Tacks
   * by Scott O'Hara - @scottohara - github.com/scottaohara
-  * 0.9.7.0 - August 1, 2014
+  * 0.9.8.beta - August 19, 2014
   *
   *****************************************************************************
 */
@@ -63,8 +63,8 @@ $base-sub-sup:                                true !default;
 
 // Element Containers
 $base-code:                                   true !default;
-$base-kbd:                                    false !default;
-$base-samp:                                   false !default;
+$base-kbd:                                    true !default;
+$base-samp:                                   true !default;
 $base-address:                                true !default;
 $base-details:                                true !default;
 $base-summary:                                true !default;
@@ -74,8 +74,8 @@ $base-fig-figcaption:                         true !default;
 
 
 // Progress / Meter Elements
-$base-meter:                                  false !default;
-$base-progress:                               false !default;
+$base-meter:                                  true !default;
+$base-progress:                               true !default;
 
 
 
@@ -88,7 +88,7 @@ $base-nav:                                    true !default;
 
 
 // Table Elements
-$base-table--captions:                        false !default;
+$base-table--captions:                        true !default;
 $base-table--parents:                         true !default;
 $base-table--rows-cols:                       true !default;
 
@@ -99,7 +99,7 @@ $base-form--parents:                          true !default;
 $base-form--buttons:                          true !default;
 $base-form--txt-inputs:                       true !default;
 $base-form--search:                           true !default;
-$base-form--number:                           false !default;
+$base-form--number:                           true !default;
 $base-form--cr:                               true !default;
 $base-form--select:                           true !default;
 $base-form--label:                            true !default;
@@ -118,7 +118,7 @@ $base-media--video:                           true !default;
 
 
 // Template Element
-$base-template:                               false !default;
+$base-template:                               true !default;
 
 
 
@@ -140,6 +140,7 @@ $base-hr:                                     true !default;
 $helper-btn--general:                         true !default;
 $helper-btn--prime:                           true !default;
 $helper-btn--emph:                            true !default;
+$helper-btn--cta:                             true !default;
 $helper-btn--neg:                             true !default;
 $helper-btn--disable:                         true !default;
 
@@ -178,7 +179,7 @@ $helper-content-flipper:                      true !default;
 $helper-forms--general:                       true !default;
 $helper-forms--label-reveal:                  true !default;
 
-$helper-forms--input-color:                   false !default;
+$helper-forms--input-color:                   true !default;
 $helper-forms--input-file:                    true !default;
 $helper-forms--search-combo:                  true !default;
 $helper-forms--search-combo2:                 true !default;

@@ -5,7 +5,7 @@
 @if $base-template == true {
 
   template {
-    @extend %d-none;
+    @extend %display--none;
   }
 
 } // -- end @if --

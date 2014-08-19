@@ -5,7 +5,7 @@
 @if $helper-btn--social == true {
 
   // Social Buttons Shared Styling
-  [class*="btn-social"] {
+  [class*="btn--social"] {
     color: $c-white !important;
     min-width: 162px;
     padding-left: 50px;
@@ -15,7 +15,7 @@
   }
 
   .social-icon {
-    @extend %btn-icon;
+    @extend %btn--icon;
   }
 
 } // -- end @if --
@@ -24,11 +24,11 @@
 
 @if $helper-btn--social__fb == true {
 
-  .btn-social-fb {
+  .btn--social--fb {
     background: $c-fb-1;
     border-color: $c-fb-2;
 
-    .social-icon {
+    .social--icon {
       //background-image: url();
       border-color: $c-fb-2;
     }
@@ -36,7 +36,7 @@
     &:hover {
       background: $c-fb-2;
 
-      .social-icon {
+      .social--icon {
         border-color: $c-fb-icon-border;
       }
     }
@@ -48,11 +48,11 @@
 
 @if $helper-btn--social__tw == true {
 
-  .btn-social-tw {
+  .btn--social--tw {
     background-color: $c-tw-1;
     border-color: $c-tw-2;
 
-    .social-icon {
+    .social--icon {
       //background-image: url();
       border-color: $c-tw-2;
     }
@@ -60,7 +60,7 @@
     &:hover {
       background: $c-tw-2;
 
-      .social-icon {
+      .social--icon {
         border-color: $c-tw-icon-border;
       }
     }
@@ -72,11 +72,11 @@
 
 @if $helper-btn--social__gp == true {
 
-  .btn-social-g {
+  .btn--social--g {
     background-color: $c-gp-1;
     border-color: $c-gp-3;
 
-    .social-icon {
+    .social--icon {
       //background-image: url();
       border-color: $c-gp-3;
     }
@@ -84,7 +84,7 @@
     &:hover {
       background: $c-gp-3;
 
-      .social-icon {
+      .social--icon {
         border-color: $c-gp-icon-border;
       }
     }

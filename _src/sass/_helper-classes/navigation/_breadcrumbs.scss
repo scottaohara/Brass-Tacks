@@ -12,7 +12,7 @@
     li {
 
       &:after {
-        @extend %d-inline-block;
+        @extend %display--inline-block;
         content: ">";
       }
 

@@ -4,33 +4,42 @@
 
 @if $helper-forms--label-reveal == true {
 
-.label-helper {
-  @include position(bottom, 0, left, 0, absolute);
-  @include transition(.2s all);
-  font-size: $txt-tiny;
-  margin: 0;
-  opacity: 0;
-  z-index: 1;
-}
-
-.input-text {
-  &:focus + .label-helper,
-  &:invalid + .label-helper {
-    bottom: 95%;
-    line-height: 1;
-    opacity: 1;
-    padding: $unit-px;
+  .label--reveal {
+    @include transition(bottom .2s, opacity .2s);
+    bottom: 0;
+    font-size: $txt-tiny;
+    left: 0;
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+    z-index: 1;
   }
 
-  &:invalid{
-    & + .label-helper {
-      background: $c-message--error;
-      border-radius: $unit-px $unit-px 0 0;
-      color: $c-white;
-      left: -1px;
-      padding: $unit-px $unit-px2;
+  .input--text {
+    &:focus + .label--reveal,
+    &:invalid + .label--reveal {
+      bottom: 95%;
+      line-height: 1;
+      opacity: 1;
+      padding: $unit-px;
+    }
+
+    &:invalid{
+      & + .label--reveal {
+        background: $c-message--error;
+        border-radius: $unit-px $unit-px 0 0;
+        color: $c-white;
+        left: -1px;
+        padding: $unit-px $unit-px2;
+      }
     }
   }
-}
+
+  // Example mark-up:
+  // ----------------------------------------------------------------------------
+  // <div class="form--row">
+  //   <input type="text" class="input--text" id="example" />
+  //   <label for="example" class="label--reveal">Label</label>
+  // </div>
 
 } // -- end @if --

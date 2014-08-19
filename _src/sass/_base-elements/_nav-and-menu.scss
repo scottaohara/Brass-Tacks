@@ -9,7 +9,7 @@
 @if $base-nav == true {
 
   nav {
-    @extend %d-block;
+    @extend %display--block;
 
     ul, ol {
       @extend %list-unstyled;

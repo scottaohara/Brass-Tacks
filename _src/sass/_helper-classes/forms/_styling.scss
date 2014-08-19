@@ -10,15 +10,12 @@ $input-sizing: (
 
 @if $helper-forms--sizing == true {
 
-  .input {
-
-    // run through $input-sizing list to create
-    // classes / assign styling values
-    @each $s-value in $input-sizing {
-      &-#{nth($s-value, 1)} {
-        font-size: nth($s-value, 2);
-        padding: nth($s-value, 3);
-      }
+  // run through $input-sizing list to create
+  // classes / assign styling values
+  @each $s-value in $input-sizing {
+    .input--#{nth($s-value, 1)} {
+      font-size: nth($s-value, 2);
+      padding: nth($s-value, 3);
     }
   }
 
@@ -33,24 +30,18 @@ $input-sizing: (
 //  Form Validation Indicators
 // ----------------------------------------------------------------------------
 
-$input-validation: (
-  // 1       2
-  success    $c-green,
-  warning    $c-orange,
-  error      $c-red
-);
-
 @if $helper-forms--validation == true {
 
-  .input {
+  .input--error {
+    border: 1px solid $c-red;
+  }
 
-    // run through $input-validation list to create
-    // classes / assign styling values
-    @each $v-value in $input-validation {
-      &-#{nth($v-value, 1)} {
-        border: 1px solid nth($v-value, 2);
-      }
-    }
+  .input--success {
+    border: 1px solid $c-green;
+  }
+
+  .input--warning {
+    border: 1px solid $c-orange;
   }
 
 } // -- end @if --

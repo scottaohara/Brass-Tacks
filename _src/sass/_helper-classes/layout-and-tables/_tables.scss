@@ -4,20 +4,21 @@
 
 @if $helper-table == true {
 
+// Tables Header and Footer
   .table {
 
-    &-header {
+    &__header {
       background: $c-table-head-bg;
       color: $c-table-head-font;
     }
 
-    &-footer {
+    &__footer {
       background: $c-table-foot-bg;
     }
 
 
     // Table Decorations
-    &-border {
+    &--border {
       border-bottom: $table-border;
       border-right: $table-border;
 
@@ -30,30 +31,41 @@
       }
     }
 
-    &-stripe {
+    &--stripe {
       tr:nth-child(2n) {
         background: $c-table-striped-bg;
       }
     }
 
-    &-row-stripe {
+    &--row-stripe {
       background: $c-table-striped-bg;
     }
 
+  }
 
-    // Mobile View Table
-    &-mobile {
-      overflow: auto;
-      -webkit-overflow-scrolling: touch;
 
-      @media screen and (max-width:800px) {
-        border: $table-border;
 
-        table, th, td, tr {
-          white-space: nowrap;
-        }
+
+  // Mobile View Table
+  .table--mobile {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+
+    @media screen and (max-width: 800px) {
+      border: $table-border;
+
+      table, th, td, tr {
+        white-space: nowrap;
       }
     }
   }
+
+  // Example mark-up:
+  // ----------------------------------------------------------------------------
+  //  <div class="table--mobile">
+  //    <table>
+  //      ...
+  //    </table>
+  //  </div>
 
 } // -- end @if --
