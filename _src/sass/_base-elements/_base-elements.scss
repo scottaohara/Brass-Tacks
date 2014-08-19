@@ -22,7 +22,7 @@
 //  Basic HTML + Body styling
 // ----------------------------------------------------------------------------
 html, body {
-  @extend %reset-spacing;
+  @extend %reset--spacing;
   background: $c-body--bg;
   color: $c-body--text;
   font: $f-body--weight $f-body--size $f-body--family;
@@ -128,7 +128,7 @@ html, body {
     color: $c-link;
 
     &:hover, &:active {
-      @extend %outline-none;
+      @extend %outline--none;
       color: $c-link-h;
     }
 
@@ -153,7 +153,7 @@ html, body {
 
   // Removes the bottom margin from all last-children
   :last-child {
-    @extend %margin-bottom-0;
+    @extend %margin-bottom--0;
   }
 
 

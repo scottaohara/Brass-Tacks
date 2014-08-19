@@ -274,7 +274,7 @@ $btn-sizes: (
   // Pill container
   .btn--pill {
     @extend %clearfix;
-    @extend %margin-bottom-base;
+    @extend %margin-bottom--base;
 
     &>:first-child {
       border-radius: $unit-px2 0 0 $unit-px2;

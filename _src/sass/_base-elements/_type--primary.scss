@@ -10,8 +10,8 @@
 
   @for $i from 1 through 6 {
     h#{$i} {
-      @extend %reset-spacing;
-      @extend %margin-bottom-base;
+      @extend %reset--spacing;
+      @extend %margin-bottom--base;
       @extend %txt-h#{$i};
     }
   }
@@ -30,7 +30,7 @@
 @if $base-paragraph == true {
 
   p {
-    @extend %margin-bottom-base;
+    @extend %margin-bottom--base;
     margin-top: 0;
   }
 
@@ -49,7 +49,7 @@
   small {
     @extend %txt-small;
     @extend %display--block;
-    @extend %margin-bottom-base;
+    @extend %margin-bottom--base;
   }
 
   // When used outside of a typographical parent element, <small> should be

@@ -25,8 +25,8 @@
 @if $base-blockquote-basic == true {
 
   blockquote {
-    @extend %reset-spacing;
-    @extend %margin-bottom-base;
+    @extend %reset--spacing;
+    @extend %margin-bottom--base;
     @extend %txt-h6;
     @extend %txt-italic;
     color: $c-blockquote;

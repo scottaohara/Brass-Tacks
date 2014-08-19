@@ -3,7 +3,7 @@
 // ----------------------------------------------------------------------------
 
 // Normalize Media Elements
-%reset-media-elements {
+%reset--media-elements {
   display: inline-block; // *
   max-width: 100%;
 }
@@ -23,7 +23,7 @@
 
   // If an image doesn't load, make the alt text noticeable
   img {
-    @extend %reset-border;
+    @extend %reset--border;
     @extend %txt-italic;
     color: $c-message--error;
     max-width: 100%;
@@ -48,7 +48,7 @@
 @if $base-media--embed-object == true {
 
   embed, object {
-    @extend %reset-media-elements;
+    @extend %reset--media-elements;
   }
 
 } // -- end @if --
@@ -65,7 +65,7 @@
 @if $base-media--audio == true {
 
   audio {
-    @extend %reset-media-elements;
+    @extend %reset--media-elements;
 
     &:not([controls]) {
       display: none;
@@ -87,7 +87,7 @@
 @if $base-media--video == true {
 
   video {
-    @extend %reset-media-elements;
+    @extend %reset--media-elements;
   }
 
 } // -- end @if --

@@ -80,16 +80,12 @@
 
 
 
-// Position elements in the center of all the things
-@mixin position-center {
+
+%position-center {
   bottom: 0;
   left: 0;
   margin: auto;
   position: absolute;
   right: 0;
   top: 0;
-}
-
-%position-center {
-  @include position-center;
 }

@@ -173,7 +173,7 @@
 
   // Pill container
   .cr-pill {
-    @extend %margin-bottom-base;
+    @extend %margin-bottom--base;
     background: $c-white;
     border-radius: $unit-px;
     border: 1px solid $c-grey;

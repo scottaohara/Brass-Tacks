@@ -13,7 +13,7 @@
 
     ul, ol {
       @extend %list-unstyled;
-      @extend %margin-bottom-base;
+      @extend %margin-bottom--base;
       padding: 0;
     }
 
@@ -53,7 +53,7 @@
 
   menu {
     @extend %list-unstyled;
-    @extend %margin-bottom-base;
+    @extend %margin-bottom--base;
     padding: 0;
 
     li {

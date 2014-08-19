@@ -48,22 +48,29 @@
 //  Components (mixins & silent classes)
 // ----------------------------------------------------------------------------
 
-// Base component
-'components/_partials/vendor',
-'components/_partials/box-sizing',
-'components/_partials/resets',
-'components/_partials/position',
-'components/_partials/margins',
+// Defaults component
+'components/_defaults/vendor',
+'components/_defaults/resets',
+'components/_defaults/box-sizing',
+'components/_defaults/calc',
+'components/_defaults/clearfix',
+
+
+// Layout & Positioning
+'components/layout-and-position/aspect-box',
+'components/layout-and-position/fixed-col',
+'components/layout-and-position/flex',
+'components/layout-and-position/equal-cols',
+'components/layout-and-position/dividers',
+'components/layout-and-position/position',
+'components/layout-and-position/margins',
+'components/layout-and-position/displays',
+'components/layout-and-position/multi-columns',
 
 
 // Animation
 'components/animation/animation',
 'components/animation/transition-transform',
-
-
-// Content Blocks
-'components/content-blocks/displays',
-'components/content-blocks/multi-columns',
 
 
 // Decorations
@@ -73,16 +80,6 @@
 
 // Navigation
 'components/btns-and-nav/nav',
-
-
-// Layout & Positioning
-'components/layout-and-position/aspect-box',
-'components/layout-and-position/calc',
-'components/layout-and-position/clearfix',
-'components/layout-and-position/fixed-col',
-'components/layout-and-position/flex',
-'components/layout-and-position/equal-cols',
-'components/layout-and-position/dividers',
 
 
 // Media

@@ -13,3 +13,6 @@
 @mixin box-sizing($box-value) {
   @include vendor(box-sizing, $box-value, $o: false, $ms: false);
 }
+
+// Example:
+// @include box-sizing(border-box);

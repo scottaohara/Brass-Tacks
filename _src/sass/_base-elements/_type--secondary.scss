@@ -1,11 +1,27 @@
-// ----------------------------------------------------------------------------
+//----------------------------------------------------------------------------
+//  Shared 'help' Styling
+// ---------------------------------------------------------------------------
+
+%help {
+  border-bottom: 1px dotted $c-help-underline;
+  cursor: help;
+}
+
+// the %help silent class is extended into <abbr> and <dfn> elements that
+// have [title] attributes set.
+
+
+
+
+
+//----------------------------------------------------------------------------
 //  Abbr Element
-// ----------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
 
 @if $base-abbr == true {
 
   abbr[title] {
-    @extend %title-attribute;
+    @extend %help;
   }
 
 } // -- end @if --
@@ -65,7 +81,7 @@
     @extend %txt-italic;
 
     &[title] {
-      @extend %title-attribute;
+      @extend %help;
     }
   }
 
@@ -101,9 +117,9 @@
 
   // IE 8/9 doesn't highlight background by default
   mark {
-    background: $c-mark-bg;
-    color: $c-mark-txt;
-    border-bottom: 1px solid $c-mark-border;
+    background: $c-mark--bg;
+    color: $c-mark--txt;
+    border-bottom: 1px solid $c-mark--border;
     padding: 0 2px;
   }
 
@@ -121,7 +137,7 @@
 @if $base-pre == true {
 
   pre {
-    @extend %reset-spacing;
+    @extend %reset--spacing;
     line-height: 1;
     overflow: auto;
     white-space: pre-wrap;

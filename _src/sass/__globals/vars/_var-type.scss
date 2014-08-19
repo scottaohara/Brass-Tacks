@@ -81,9 +81,9 @@ $s-blockquote-small:          $txt-tiny !default;
 
 $c-ins:                       $c-off-black !default;
 
-$c-mark-bg:                   $c-yellow !default;
-$c-mark-txt:                  $c-darker !default;
-$c-mark-border:               $c-grey !default;
+$c-mark--bg:                  $c-yellow !default;
+$c-mark--txt:                 $c-darker !default;
+$c-mark--border:              $c-grey !default;
 
 
 
@@ -92,3 +92,6 @@ $c-mark-border:               $c-grey !default;
 // Decoration
 $c-txt-highlight--bg:         $c-brand-1 !default;
 $c-txt-highlight--color:      $c-white !default;
+
+
+$c-help-underline:            $c-grey !default; // border bottom color
