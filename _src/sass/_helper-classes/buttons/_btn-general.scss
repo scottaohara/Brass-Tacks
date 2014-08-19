@@ -47,7 +47,19 @@
 @if $helper-btn--general == true {
 
   .btn {
-    @include btn-style($btn-bg, $btn-border, $btn-text, $btn-bg-2, $btn-text-2);
+    background-color: $btn-bg;
+    border-color: $btn-border;
+    color: $btn-text;
+
+    &:hover {
+      background-color: $btn-bg-2;
+      color: $btn-text-2;
+    }
+
+    &:active {
+      background-color: darken($btn-bg-2, 20%);
+      color: $btn-text-2;
+    }
   }
 
 } // -- end @if --
@@ -56,7 +68,19 @@
 @if $helper-btn--prime == true {
 
   .btn--prime {
-    @include btn-style($btn-bg-prime, $btn-border-prime, $btn-text-prime, $btn-bg-2-prime, $btn-text-2);
+    background-color: $btn-bg-prime;
+    border-color: $btn-border-prime;
+    color: $btn-text-prime;
+
+    &:hover {
+      background-color: $btn-bg-2-prime;
+      color: $btn-text-2;
+    }
+
+    &:active {
+      background-color: darken($btn-bg-2-prime, 20%);
+      color: $btn-text-2;
+    }
   }
 
 } // -- end @if --
@@ -65,7 +89,19 @@
 @if $helper-btn--cta == true {
 
   .btn--cta {
-    @include btn-style($btn-bg-emph, $btn-border-emph, $btn-text-emph, $btn-bg-2-emph, $btn-text-2);
+    background-color: $btn-bg-emph;
+    border-color: $btn-border-emph;
+    color: $btn-text-emph;
+
+    &:hover {
+      background-color: $btn-bg-2-emph;
+      color: $btn-text-2;
+    }
+
+    &:active {
+      background-color: darken($btn-bg-2-emph, 20%);
+      color: $btn-text-2;
+    }
   }
 
 } // -- end @if --
@@ -73,8 +109,20 @@
 
 @if $helper-btn--emph == true {
 
-  .btn--emph {
-    @include btn-style($btn-bg-emph, $btn-border-emph, $btn-text-emph, $btn-bg-2-emph, $btn-text-2);
+  .btn--cta {
+    background-color: $btn-bg-emph;
+    border-color: $btn-border-emph;
+    color: $btn-text-emph;
+
+    &:hover {
+      background-color: $btn-bg-2-emph;
+      color: $btn-text-2;
+    }
+
+    &:active {
+      background-color: darken($btn-bg-2-emph, 20%);
+      color: $btn-text-2;
+    }
   }
 
 } // -- end @if --
@@ -83,7 +131,19 @@
 @if $helper-btn--neg == true {
 
   .btn--neg {
-    @include btn-style($btn-bg-neg, $btn-border-neg, $btn-text-neg, $btn-bg-2-neg, $btn-text-2);
+    background-color: $btn-bg-neg;
+    border-color: $btn-border-neg;
+    color: $btn-text-neg;
+
+    &:hover {
+      background-color: $btn-bg-2-neg;
+      color: $btn-text-2;
+    }
+
+    &:active {
+      background-color: darken($btn-bg-2-neg, 20%);
+      color: $btn-text-2;
+    }
   }
 
 } // -- end @if --
@@ -91,10 +151,23 @@
 
 @if $helper-btn--disable == true {
 
-  .btn--disable, .btn[disabled] {
-    @include btn-style($btn-bg-disable, $btn-border-disable, $btn-text-disable, $btn-bg-disable, $btn-text-2);
+  .btn[disabled],
+  .btn--disable {
+    background-color: $btn-bg-disable;
+    border-color: $btn-border-disable;
+    color: $btn-text-disable;
     opacity: .3;
     pointer-events: none;
+
+    &:hover {
+      background-color: $btn-bg-2-disable;
+      color: $btn-text-2;
+    }
+
+    &:active {
+      background-color: darken($btn-bg-2-disable, 20%);
+      color: $btn-text-2;
+    }
 
     &:visited {
       background-color: $btn-bg-disable;
