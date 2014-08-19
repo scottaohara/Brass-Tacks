@@ -4,14 +4,20 @@
 
 @if $helper-type--alignment == true {
 
-  // output classes based on variable list
-  $align-list: center, left, right;
-
-  @each $align in $align-list {
-    .txt-#{$align},
-    %txt-#{$align} {
-      text-align: $align;
-    }
+  %txt-center,
+  .txt-center {
+    text-align: center;
   }
+
+  %txt-left,
+  .txt-left {
+    text-align: left;
+  }
+
+  %txt-right,
+  .txt-right {
+    text-align: right;
+  }
+
 
 } // -- end @if --

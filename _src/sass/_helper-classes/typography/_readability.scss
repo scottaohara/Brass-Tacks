@@ -4,18 +4,12 @@
 
 @if $helper-type--line-height == true {
 
-  .line {
+  .line-tight {
+    line-height: 1.2 !important;
+  }
 
-    // Tighten line height for text headings
-    &-tight {
-      line-height: 1.2 !important;
-    }
-
-    // Tighten line height for text headings more
-    &-tighter {
+  .line-tighter {
       line-height: 1 !important;
-    }
-
   }
 
 } // -- end @if --
@@ -29,12 +23,9 @@
 
 @if $helper-type--indenting == true {
 
-  .txt-indent {
-    // loop to output .txt-indent-1 to 3
-    @for $i from 1 through 3 {
-      &-#{$i} {
-        text-indent: 1em * $i;
-      }
+  @for $i from 1 through 3 {
+    .txt-indent-#{$i} {
+      text-indent: 1em * $i;
     }
   }
 

@@ -63,8 +63,8 @@ $base-sub-sup:                                true !default;
 
 // Element Containers
 $base-code:                                   true !default;
-$base-kbd:                                    false !default;
-$base-samp:                                   false !default;
+$base-kbd:                                    true !default;
+$base-samp:                                   true !default;
 $base-address:                                true !default;
 $base-details:                                true !default;
 $base-summary:                                true !default;
@@ -74,8 +74,8 @@ $base-fig-figcaption:                         true !default;
 
 
 // Progress / Meter Elements
-$base-meter:                                  false !default;
-$base-progress:                               false !default;
+$base-meter:                                  true !default;
+$base-progress:                               true !default;
 
 
 
@@ -88,7 +88,7 @@ $base-nav:                                    true !default;
 
 
 // Table Elements
-$base-table--captions:                        false !default;
+$base-table--captions:                        true !default;
 $base-table--parents:                         true !default;
 $base-table--rows-cols:                       true !default;
 
@@ -99,7 +99,7 @@ $base-form--parents:                          true !default;
 $base-form--buttons:                          true !default;
 $base-form--txt-inputs:                       true !default;
 $base-form--search:                           true !default;
-$base-form--number:                           false !default;
+$base-form--number:                           true !default;
 $base-form--cr:                               true !default;
 $base-form--select:                           true !default;
 $base-form--label:                            true !default;
@@ -171,18 +171,14 @@ $helper-content-media-element:                true !default;
 $helper-content-media-element--reverse:       true !default;
 $helper-content-media-element--no-wrap:       true !default;
 
-$helper-content-flipper:                      true !default;
-
 
 
 // Form Helpers
 $helper-forms--general:                       true !default;
 $helper-forms--label-reveal:                  true !default;
 
-$helper-forms--input-color:                   false !default;
+$helper-forms--input-color:                   true !default;
 $helper-forms--input-file:                    true !default;
-$helper-forms--search-combo:                  true !default;
-$helper-forms--search-combo2:                 true !default;
 
 $helper-forms--custom-checkbox-radio:         true !default;
 $helper-forms--custom-checkbox-radio--slider: true !default;

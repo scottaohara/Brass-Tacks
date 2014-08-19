@@ -23,33 +23,12 @@ $f-sizing-map:
 
 
 
-%txt- {
-  @each $f-name, $f-size, $f-weight, $f-lh in $f-sizing-map {
+@each $f-name, $f-size, $f-weight, $f-lh in $f-sizing-map {
 
-    &#{$f-name} {
-      font-size: $f-size;
-      font-weight: $f-weight;
-      line-height: $f-lh;
-    }
-
+  %txt-#{$f-name} {
+    font-size: $f-size;
+    font-weight: $f-weight;
+    line-height: $f-lh;
   }
-}
 
-
-
-
-// ----------------------------------------------------------------------------
-//  Bold & Italic
-// ----------------------------------------------------------------------------
-
-$txt-dec-list: bold, bolder, normal;
-
-@each $dec in $txt-dec-list {
-  %#{$dec} {
-    font-weight: $dec;
-  }
-}
-
-%italic {
-  font-style: italic;
 }

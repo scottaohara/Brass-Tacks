@@ -2,6 +2,13 @@
 //  Flip Effect
 // ----------------------------------------------------------------------------
 
+// Preserve 3D
+%preserve-3d {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+
 // Silent Classes
 %flip-back-front {
   @extend %preserve-3d;
@@ -16,18 +23,8 @@
 }
 
 
-// Preserve 3D
-%preserve-3d {
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-}
 
-
-
-
-
-
-@if $helper-content-flipper == true {
+@if $addons--flipper == true {
 
   // Flip Container
   .flip-container {

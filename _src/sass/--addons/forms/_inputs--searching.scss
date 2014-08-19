@@ -1,0 +1,74 @@
+// ----------------------------------------------------------------------------
+//  Input Type: Search Box/Button Combo
+// ----------------------------------------------------------------------------
+
+@if $addons--search-combo == true {
+
+  .search-area {
+    margin-bottom: $unit-px2;
+    position: relative;
+
+    .input-text {
+      @include truncate-text(100%);
+      margin-bottom: 0;
+      padding-right: $unit-px*30;
+    }
+
+    .btn-search {
+      @include position(top, 0, right, -1px, absolute);
+      height: 100%;
+      padding-top: 6px;
+      z-index: 2;
+    }
+  }
+
+  .btn-small.btn-search {
+    padding-top: 4px;
+  }
+
+  // Put a search button inline with search input field via position:absolute
+
+  // Example mark-up:
+  // ----------------------------------------------------------------------------
+  // <div class="search-area">
+  //   <input type="search" placeholder="Search for..." class="input-text">
+  //   <input type="submit" value="Search" class="btn-prime btn-search">
+  // </div>
+
+} // -- end @if --
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Input Type: Search with clear button & search icon
+// ----------------------------------------------------------------------------
+
+@if $addons--search-combo2 == true {
+
+  .search-clear {
+    position: relative;
+
+    .input-text {
+     // background-image: url();
+     // background-repeat: no-repeat;
+     // background-position: 6px center;
+      padding-left: 40px;
+    }
+  }
+
+
+  // Example mark-up:
+  // ----------------------------------------------------------------------------
+  // <div class="search-clear">
+  //   <input type="search" class="input-text" name="search_input" placeholder="Search for..." />
+  //   <button class="btn btn-clear" id="clearSearchField">x</button>
+  // </div>
+
+
+  // Note:
+  // Styling for .btn-clear is located in the _btn-general.scss file
+
+} // -- end @if --

@@ -2,7 +2,7 @@
 //  Social Buttons
 // ----------------------------------------------------------------------------
 
-@if $helper-btn--social == true {
+@if $addons--social-btn == true {
 
   // Social Buttons Shared Styling
   [class*="btn--social"] {
@@ -22,7 +22,7 @@
 
 
 
-@if $helper-btn--social__fb == true {
+@if $addons--social-btn__fb == true {
 
   .btn--social--fb {
     background: $c-fb-1;
@@ -46,7 +46,7 @@
 
 
 
-@if $helper-btn--social__tw == true {
+@if $addons--social-btn__tw == true {
 
   .btn--social--tw {
     background-color: $c-tw-1;
@@ -70,7 +70,7 @@
 
 
 
-@if $helper-btn--social__gp == true {
+@if $addons--social-btn__gp == true {
 
   .btn--social--g {
     background-color: $c-gp-1;

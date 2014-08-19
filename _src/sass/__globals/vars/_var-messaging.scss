@@ -13,10 +13,14 @@ $c-message--txt:              $c-dark;
 // ----------------------------------------------------------------------------
 
 $c-message--error:            $c-red !default;
+$c-message--success:          $c-green !default;
+$c-message--warning:          $c-orange !default;
 
 
 
 
+
+// Other things....
 $tt-transition-speed: .35s;
 
 // CSS Arrows

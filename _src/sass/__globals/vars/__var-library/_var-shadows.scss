@@ -10,10 +10,7 @@ $bs-5:                    0 0 3px rgba(0,0,0,.15) inset !default;
 
 $bs-focus:                0 0 6px rgba(66,166,166,.65) !default;
 
-$bs-callout:              0 0 3px rgba(0,0,0,.15) inset !default;
-
 $bs-input-txt:            0 1px 4px rgba(0,0,0,.15) inset !default;
-
 $bs-input-focus:          0 0 6px rgba(64,181,187,.65) !default;
 $bs-input-focus-success:  0 0 6px rgba(39,174,96,.65) !default;
 $bs-input-focus-warning:  0 0 6px rgba(253,111,41,.65) !default;
@@ -25,6 +22,5 @@ $bs-input-focus-error:    0 0 6px rgba(163,40,40,.65) !default;
 //  Text Shadow Variations
 // ----------------------------------------------------------------------------
 
-$ts-primary:          0 0 3px rgba(0,0,0,.5) !default;
-$ts-secondary:        0 !default;
-$ts-dark-bg:          0 !default;
+$ts-prime:            0 0 3px rgba(0,0,0,.5) !default;
+$ts-dark-bg:          0 0 2px rgba(255,255,255,.5) !default;

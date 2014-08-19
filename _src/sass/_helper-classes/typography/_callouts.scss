@@ -8,7 +8,6 @@
   .txt-callout {
     background: $c-lighter;
     border-left: $unit-px solid $c-brand-2;
-    box-shadow: $bs-callout;
     color: $c-brand-2;
     font-size: $txt-h5;
     padding: $unit-px4;
@@ -18,6 +17,12 @@
       display: none;
     }
   }
+
+  // Example mark-up:
+  // ----------------------------------------------------------------------------
+  // <p class="txt-callout">
+  //   Callout text goes here. Like a blockquote, but semantically not.
+  // </p>
 
 } // -- end @if --
 
@@ -30,21 +35,17 @@
 
 @if $helper-type--callouts__messaging == true {
 
-  // Text Coloring for Validation Messaging
-  .txt {
+  // Text Coloring for validation/invalid/error messaging
+  .txt-success {
+    color: $c-message--success;
+  }
 
-    &-success {
-      color: $c-green;
-    }
+  .txt-warning {
+    color: $c-message--warning;
+  }
 
-    &-warning {
-      color: $c-orange;
-    }
-
-    &-error {
-      color: $c-red;
-    }
-
+  .txt-error {
+    color: $c-message--error;
   }
 
 } // -- end @if --
@@ -53,25 +54,76 @@
 
 
 // ----------------------------------------------------------------------------
-//  Callout Text -- decoration
+//  Callout Text -- Weight, Style & Decoration
 // ----------------------------------------------------------------------------
 
 @if $helper-type--callouts__decoration == true {
 
-  // Apply bolding to text without need for semantics
-  .bold {
-    @extend %bold;
+  $txt-weight-list: bold, bolder, normal;
+
+  @each $weight in $txt-weight-list {
+    %txt-#{$weight},
+    .txt-#{$weight} {
+      font-weight: $weight;
+    }
   }
+
+  // Example mark-up:
+  // ----------------------------------------------------------------------------
+  // <p>
+  //   I want to have <span class="txt-bolder">bolder text here</span>.
+  // </p>
+
+
+  %txt-italic,
+  .txt-italic {
+    font-style: italic;
+  }
+
+  // Example mark-up:
+  // ----------------------------------------------------------------------------
+  // <p>
+  //   I want to have <span class="txt-italic">italic text here</span>.
+  // </p>
 
 
   // Background Text Highlight
+  %txt-highlight,
   .txt-highlight {
-    background: $c-red;
-    border-radius: $unit-px;
-    color: $c-white;
+    background: $c-txt-highlight--bg;
+    border-radius: 2px;
+    color: $c-txt-highlight--color;
     display: inline-block;
     padding: $unit-px;
   }
+
+  // Example mark-up:
+  // ----------------------------------------------------------------------------
+  // <p>
+  //   I want to have <span class="txt-highlight">highlighted text here</span>.
+  // </p>
+
+
+  %txt-underline,
+  .txt-underline {
+    text-decoration: underline;
+  }
+
+  // Example mark-up:
+  // ----------------------------------------------------------------------------
+  // <p>
+  //   I want to have <span class="txt-underline">underlined text here</span>.
+  // </p>
+
+
+  %txt-underline--none,
+  .txt-underline--none {
+    text-decoration: none;
+  }
+
+  // Example mark-up:
+  // ----------------------------------------------------------------------------
+  // <a class="txt-underline--none">Link Label</a>
 
 } // -- end @if --
 
