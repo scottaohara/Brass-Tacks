@@ -7,6 +7,11 @@
   @include vendor(font-smoothing, antialiased, $o: false, $ms: false, $moz: false);
 }
 
+// Example
+// ----------------------------------------------------------------------------
+// @include antialiased;
+
+
 
 
 // ----------------------------------------------------------------------------
@@ -27,7 +32,7 @@
 // ----------------------------------------------------------------------------
 //  Declaring Fonts w/ Font-Face
 // ----------------------------------------------------------------------------
-@mixin font-face ( $family, $file-path, $weight, $style ) {
+@mixin font-face ($family, $file-path, $weight: normal, $style: normal) {
   @font-face {
     font-family: $family;
       src: url('#{$file-path}.eot');
@@ -39,3 +44,7 @@
     font-weight: $weight;
   }
 }
+
+// Example
+// ----------------------------------------------------------------------------
+// @include font-face(Open Sans, assets/fonts/file-name);

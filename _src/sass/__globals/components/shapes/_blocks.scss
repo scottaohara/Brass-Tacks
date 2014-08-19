@@ -8,18 +8,32 @@
   width:  $measurement;
 }
 
+// Example
+// ----------------------------------------------------------------------------
+// @include square(100px);
+
+
 
 
 // Wide Rectangle
 @mixin rectangle-wide($measurement, $number) {
   height: $measurement;
-  width:  $measurement*$number;
+  width:  $measurement * $number;
 }
+
+// Example
+// ----------------------------------------------------------------------------
+// @include rectangle-wide(8em, 3);
+
 
 
 
 // Tall Rectangle
 @mixin rectangle-tall($measurement, $number) {
-  height: $measurement*$number;
+  height: $measurement * $number;
   width:  $measurement;
 }
+
+// Example
+// ----------------------------------------------------------------------------
+// @include rectangle-tall(10vh, 10)

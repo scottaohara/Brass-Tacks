@@ -23,12 +23,12 @@
 
   // Consistent bolding
   b, strong {
-    @extend %bold;
+    @extend %txt-bold;
   }
 
   // Consistent italics
   i, em {
-    @extend %italic;
+    @extend %txt-italic;
   }
 
 } // -- end @if --
@@ -45,7 +45,7 @@
 @if $base-cite == true {
 
   cite {
-    @extend %bold;
+    @extend %txt-bold;
   }
 
 } // -- end @if --
@@ -62,7 +62,7 @@
 @if $base-dfn == true {
 
   dfn {
-    @extend %italic;
+    @extend %txt-italic;
 
     &[title] {
       @extend %title-attribute;

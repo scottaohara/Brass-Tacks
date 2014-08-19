@@ -5,14 +5,14 @@
 //  an opacity value
 // ----------------------------------------------------------------------------
 
-@function c($hex, $rgba: false) {
+@function c($hex, $alpha: false) {
 
-  @if $rgba == false {
+  @if $alpha == false {
     @return ($hex);
   }
 
   @else {
-    @return (rgba($hex, $rgba));
+    @return (rgba($hex, $alpha));
   }
 }
 

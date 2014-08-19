@@ -40,7 +40,6 @@
 'components/_functions/colors',
 'components/_functions/strip-unit',
 'components/_functions/rems',
-'components/_functions/dividers-multipliers',
 'components/_functions/pixel-to-percent',
 
 
@@ -103,7 +102,6 @@
 
 
 // Typography
-'components/typography/misc',
 'components/typography/rendering',
 'components/typography/selection-styling',
 'components/typography/sizing-weight-height',
@@ -113,4 +111,4 @@
 
 // ----------------------------------------------------------------------------
 // The global-print and quick-fix files are imported at the bottom of the
-// master scss file, as they need to be inserted at the bottom of the cascade.
+// master scss files, as they need to be inserted at the bottom of the cascade.

@@ -158,20 +158,6 @@
     color: $btn-text-disable;
     opacity: .3;
     pointer-events: none;
-
-    &:hover {
-      background-color: $btn-bg-2-disable;
-      color: $btn-text-2;
-    }
-
-    &:active {
-      background-color: darken($btn-bg-2-disable, 20%);
-      color: $btn-text-2;
-    }
-
-    &:visited {
-      background-color: $btn-bg-disable;
-    }
   }
 
 } // -- end @if --

@@ -24,7 +24,7 @@
   // If an image doesn't load, make the alt text noticeable
   img {
     @extend %reset-border;
-    @extend %italic;
+    @extend %txt-italic;
     color: $c-message--error;
     max-width: 100%;
   }
