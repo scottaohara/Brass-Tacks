@@ -15,40 +15,43 @@ $btn-border-width:          2px;
 
 
 // Coloring Basic
-$btn-bg:                    $c-grey !default;
-$btn-bg-2:                  $c-dark-grey !default; //(hover & active state)
-$btn-border:                $c-dark-grey !default;
-$btn-text:                  $c-white !default;
+$btn-bg:                    none !default;
+$btn-bg-2:                  $c-prime-action !default; //(hover & active state)
+$btn-border:                darken($btn-bg-2, 5%) !default;
+$btn-text:                  $c-prime-action !default;
 $btn-text-2:                $c-white !default; //(hover & active state)
 
 
 
-// Shadowing
-$bs-btn-focus:              $bs-focus !default;
+// Shadow focus state
+$bs-btn-focus:              0 0 0 2px rgba(0,0,0,.1) !default;
 
-
-
-// Coloring Prime
-$btn-bg-prime:              #4aceff !default;  // light cyan
-$btn-border-prime:          #0095cc !default;  // dark cyan
-$btn-text-prime:            $c-white !default;
-$btn-bg-2-prime:            #00aeef !default;  // cyan
 
 
 
 // Coloring Emphasis
-$btn-bg-emph:               #23d200 !default;  // green
-$btn-border-emph:           #178900 !default;  // dark green
-$btn-text-emph:             $c-white !default;
-$btn-bg-2-emph:             #178900 !default;  // dark green
+$btn-bg-emph:               none !default;
+$btn-bg-2-emph:             #3dab3b !default;  // green
+$btn-border-emph:           darken(#3dab3b, 5%) !default;  // darker green
+$btn-text-emph:             #3dab3b !default;
+
+
+
+
+// Coloring Call To Action
+$btn-bg-cta:               none !default;  // green
+$btn-bg-2-cta:             #ffd50a !default;  // dark green
+$btn-border-cta:           darken(#ffd50a, 5%) !default;  // dark green
+$btn-text-cta:             #ffd50a !default;
+
 
 
 
 // Coloring Negative
-$btn-bg-neg:                #a00 !default;     // red
-$btn-border-neg:            #600 !default;     // dark red
-$btn-text-neg:              $c-white !default;
-$btn-bg-2-neg:              #600 !default;     // dark red
+$btn-bg-neg:                none !default;     // red
+$btn-border-neg:            darken(#e6413a, 5%) !default;     // darker red
+$btn-text-neg:              #e6413a !default;
+$btn-bg-2-neg:              #e6413a !default;
 
 
 
@@ -66,3 +69,26 @@ $btn-pad-tiny:              $unit-px $unit-px2 !default;
 $btn-pad-small:             $unit-px2 $unit-px3 !default;
 $btn-pad-large:             $unit-px2 $unit-px*8 !default;
 $btn-pad-xlarge:            $unit-px3 $unit-px*8 !default;
+
+
+
+
+
+
+
+// Social Button Colors
+// ----------------------------------------------------------------------------
+
+// Facebook Button Colors
+$c-fb-1:                    #3a5b98 !default;
+$c-fb-2:                    #9baaca !default;
+
+
+// Twitter Button Colors
+$c-tw-1:                    #3096d0 !default;
+$c-tw-2:                    #96c9e7 !default;
+
+
+// Google+ Button Colors
+$c-gp-1:                    #dd4b39 !default;
+$c-gp-2:                    #c93e35 !default;

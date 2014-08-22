@@ -1,0 +1,48 @@
+// ----------------------------------------------------------------------------
+//  Colors: Generic
+//  Generic color choices inspired by - github.com/mrmrs/colors
+// ----------------------------------------------------------------------------
+
+// Grey Scale (Dark) Colors
+// ----------------------------------------------------------------------------
+$c-black:                 #000 !default;
+$c-off-black:             #111 !default;
+$c-darker:                #222 !default;
+$c-dark:                  #333 !default;
+$c-hell:                  #666 !default;
+
+
+
+// Grey Scale (Medium) Colors
+// ----------------------------------------------------------------------------
+$c-grey:                  #ccc !default;
+$c-dark-grey:             #999 !default;
+$c-light-grey:            #ddd !default;
+
+
+
+// Grey Scale (Lighter) Colors
+// ----------------------------------------------------------------------------
+$c-white:                 #fff !default;
+$c-off-white:             #f0f0f0 !default;
+$c-light:                 #e0e0e0 !default;
+$c-lighter:               #eee !default;
+
+
+
+// Generic Colors
+// ----------------------------------------------------------------------------
+$c-red:                   #ff4136 !default;
+$c-green:                 #2ecc40 !default;
+$c-blue:                  #0074d9 !default;
+
+$c-magenta:               #f012be !default;
+$c-yellow:                #ffdc00 !default;
+$c-orange:                #ff851b !default;
+$c-purple:                #b10dc9 !default;
+$c-maroon:                #85144b !default;
+$c-aqua:                  #7fdbff !default;
+$c-navy:                  #001f3f !default;
+$c-teal:                  #39cccc !default;
+$c-olive:                 #3d9970 !default;
+$c-lime:                  #01ff70 !default;

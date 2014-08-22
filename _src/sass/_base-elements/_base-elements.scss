@@ -125,11 +125,11 @@ html, body {
   a {
     // Removes grey background color from active links in IE10
     background-color: transparent;
-    color: $c-link;
+    color: $c-prime-action;
 
     &:hover, &:active {
       @extend %outline--none;
-      color: $c-link-h;
+      color: $c-prime-action--hover;
     }
 
     &:focus {
@@ -155,6 +155,5 @@ html, body {
   :last-child {
     @extend %margin-bottom--0;
   }
-
 
 } // -- end @if --

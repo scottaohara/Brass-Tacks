@@ -2,29 +2,29 @@
 //  Form Element Vars
 // ----------------------------------------------------------------------------
 
-$form-row--padding:         $unit-px 0 !default;
+$form-row--padding:           $unit-px 0 !default;
 
-$c-form-placeholder:        $c-dark-grey !default;
-$c-form-required:           $c-red !default;
-$c-form-disable-bg:         $c-light !default;
+$c-form-placeholder:          $c-dark-grey !default;
+$c-form-required:             $c-red !default;
+$c-form-disable-bg:           $c-light !default;
 
-$form-font-weight:          400 !default;
-$form-disable-overlay:      rgba(40,40,40,.1) !default;
+$form-font-weight:            400 !default;
+$form-disable-overlay:        rgba(40,40,40,.1) !default;
 
 
 // Fieldset
-$form-block--border:          1px solid $c-border !default;
+$form-block--border:          1px solid $c-grey !default;
 $form-block--padding:         $unit-px2 $unit-px3 !default;
 
 
 // Text Inputs
-$c-input--bg:               $c-white !default;
-$c-input--bg-focus:         $c-off-white !default;
+$c-input--bg:                 $c-white !default;
+$c-input--bg-focus:           $c-off-white !default;
 
-$input-border-style:        1px solid $c-grey !default;
-$f-input--family:           $f-brand !default;
-$bs-input--focus:           $bs-4 !default;
-$input-padding:             $unit-px2 $unit-px !default;
+$input-border-style:          1px solid $c-grey !default;
+$f-input--family:             $f-brand !default;
+$bs-input--focus:             $bs-4 !default;
+$input-padding:               $unit-px2 $unit-px !default;
 
-$input--padding:            $unit-px2 $unit-px !default;
-$input--margin:             $unit-px2 !default;
+$input--padding:              $unit-px2 $unit-px !default;
+$input--margin:               $unit-px2 !default;

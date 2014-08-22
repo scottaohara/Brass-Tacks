@@ -68,7 +68,7 @@
 
 
 // Tooltip Coloring
-@mixin tooltip-color($tt-text-color: $c-white, $tt-color: $c-brand-1) {
+@mixin tooltip-color($tt-text-color: $c-white, $tt-color: $c-brand--1) {
   @each $tt-position in top, bottom, left, right {
     &.tooltip-#{$tt-position} {
       &:before {
@@ -272,7 +272,7 @@
 
 
 // Tooltip Coloring
-@mixin tooltip-color($tt-text-color: $c-white, $tt-color: $c-brand-1) {
+@mixin tooltip-color($tt-text-color: $c-white, $tt-color: $c-brand--1) {
   @each $tt-position in top, bottom, left, right {
     &.tooltip-#{$tt-position} {
       &:before {

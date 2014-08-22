@@ -22,13 +22,13 @@
 
     // Style <progress> value
     &::-moz-progress-bar {
-      background: $c-brand-1;
+      background: $c-brand--1;
       border-radius: 100%;
       box-shadow: 1px 1px 2px $c-hell inset;
     }
 
     &::-webkit-progress-bar {
-      background: $c-brand-1;
+      background: $c-brand--1;
       border-radius: 100%;
       box-shadow: 1px 1px 2px $c-hell inset;
     }

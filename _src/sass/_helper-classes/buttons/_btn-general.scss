@@ -46,20 +46,15 @@
 
 @if $helper-btn--general == true {
 
+  // The base button class to be be paired with
+  // a helper button styling type:
+  // prime
+  // emph
+  // cta
+  // neg
+  // disabled
   .btn {
-    background-color: $btn-bg;
-    border-color: $btn-border;
-    color: $btn-text;
-
-    &:hover {
-      background-color: $btn-bg-2;
-      color: $btn-text-2;
-    }
-
-    &:active {
-      background-color: darken($btn-bg-2, 20%);
-      color: $btn-text-2;
-    }
+    @extend %btn;
   }
 
 } // -- end @if --
@@ -68,17 +63,17 @@
 @if $helper-btn--prime == true {
 
   .btn--prime {
-    background-color: $btn-bg-prime;
-    border-color: $btn-border-prime;
-    color: $btn-text-prime;
+    background: $btn-bg;
+    border-color: $btn-border;
+    color: $btn-text;
 
     &:hover {
-      background-color: $btn-bg-2-prime;
+      background: $btn-bg-2;
       color: $btn-text-2;
     }
 
     &:active {
-      background-color: darken($btn-bg-2-prime, 20%);
+      background: darken($btn-bg-2, 20%);
       color: $btn-text-2;
     }
   }
@@ -89,17 +84,17 @@
 @if $helper-btn--cta == true {
 
   .btn--cta {
-    background-color: $btn-bg-emph;
-    border-color: $btn-border-emph;
-    color: $btn-text-emph;
+    background: $btn-bg-cta;
+    border-color: $btn-border-cta;
+    color: $btn-text-cta;
 
     &:hover {
-      background-color: $btn-bg-2-emph;
+      background: $btn-bg-2-cta;
       color: $btn-text-2;
     }
 
     &:active {
-      background-color: darken($btn-bg-2-emph, 20%);
+      background: darken($btn-bg-2-cta, 20%);
       color: $btn-text-2;
     }
   }
@@ -109,18 +104,18 @@
 
 @if $helper-btn--emph == true {
 
-  .btn--cta {
-    background-color: $btn-bg-emph;
+  .btn--emph {
+    background: $btn-bg-emph;
     border-color: $btn-border-emph;
     color: $btn-text-emph;
 
     &:hover {
-      background-color: $btn-bg-2-emph;
+      background: $btn-bg-2-emph;
       color: $btn-text-2;
     }
 
     &:active {
-      background-color: darken($btn-bg-2-emph, 20%);
+      background: darken($btn-bg-2-emph, 20%);
       color: $btn-text-2;
     }
   }
@@ -131,17 +126,17 @@
 @if $helper-btn--neg == true {
 
   .btn--neg {
-    background-color: $btn-bg-neg;
+    background: $btn-bg-neg;
     border-color: $btn-border-neg;
     color: $btn-text-neg;
 
     &:hover {
-      background-color: $btn-bg-2-neg;
+      background: $btn-bg-2-neg;
       color: $btn-text-2;
     }
 
     &:active {
-      background-color: darken($btn-bg-2-neg, 20%);
+      background: darken($btn-bg-2-neg, 20%);
       color: $btn-text-2;
     }
   }
@@ -149,11 +144,11 @@
 } // -- end @if --
 
 
-@if $helper-btn--disable == true {
+@if $helper-btn--disabled == true {
 
   .btn[disabled],
-  .btn--disable {
-    background-color: $btn-bg-disable;
+  .btn--disabled {
+    background: $btn-bg-disable;
     border-color: $btn-border-disable;
     color: $btn-text-disable;
     opacity: .3;

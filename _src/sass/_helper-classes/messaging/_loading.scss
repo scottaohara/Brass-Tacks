@@ -16,7 +16,7 @@
       @extend %position-center;
       @include animation(spin 1s infinite steps(24));
       border-bottom: 2px solid transparent;
-      border-right: 2px solid $c-brand-2;
+      border-right: 2px solid $c-brand--2;
       border-top: 2px solid transparent;
       border-radius: $circle;
       content: '';

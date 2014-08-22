@@ -6,11 +6,11 @@
 $c-body--bg:                $c-off-white !default;
 $c-body--text:              $c-dark !default;
 
-$c-select-text--bg:         $c-brand-1 !default;
-$c-select-text--text:       $c-white !default;
+$c-prime-action:            #377ae8 !default;
+$c-prime-action--hover:     darken($c-prime-action, 5%) !default;
 
-$c-link:                    $c-brand-2 !default;
-$c-link-h:                  $c-brand-3 !default;
+$c-select-text--bg:         $c-prime-action !default;
+$c-select-text--text:       $c-white !default;
 
 
 // Fonts

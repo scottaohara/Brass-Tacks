@@ -15,22 +15,24 @@
 // ----------------------------------------------------------------------------
 
 // Brass Tacks Default Var library
-'vars/__var-library/var-break-points',
-'vars/__var-library/var-colors',
-'vars/__var-library/var-fonts',
-'vars/__var-library/var-measurement-units',
-'vars/__var-library/var-shadows',
+'vars/default__breaks',
+'vars/default__colors',
+'vars/default__fonts',
+'vars/default__units',
+'vars/default__shadows',
 
 
 // Brass Tacks Default Styling Variables
+'vars/var-brand-colors',
 'vars/var-type',
+'vars/var-body',
 'vars/var-buttons',
 'vars/var-forms',
 'vars/var-code',
 'vars/var-progress',
-'vars/var-body',
 'vars/var-messaging',
-'vars/var-layout-dividers',
+'vars/var-hr',
+'vars/var-tables',
 
 
 // ----------------------------------------------------------------------------
@@ -107,5 +109,5 @@
 
 
 // ----------------------------------------------------------------------------
-// The global-print and quick-fix files are imported at the bottom of the
-// master scss files, as they need to be inserted at the bottom of the cascade.
+// The global-print is imported at the bottom of the x-master.scss files as it
+// needs to be imported last to make sure to have styling specificity

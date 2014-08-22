@@ -1,0 +1,17 @@
+// ----------------------------------------------------------------------------
+//  Tables
+// ----------------------------------------------------------------------------
+
+$c-table:                 $c-off-white !default;
+
+$c-table-head-bg:         $c-brand--2 !default;
+$c-table-head-font:       $c-white !default;
+
+$c-table-foot-bg:         $c-off-white !default;
+
+$c-table-striped-bg:      $c-light !default;
+
+$c-table-border:          $c-grey !default;
+
+// sets consistent border styling for table elements
+$table-border:            1px solid $c-grey !default;

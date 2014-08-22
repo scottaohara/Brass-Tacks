@@ -48,7 +48,7 @@
     &:after {
       @include position(top, -2px, left, 1px, absolute);
       @include transform(rotate(-49deg));
-      border: 5px solid $c-brand-2;
+      border: 5px solid $c-brand--2;
       border-top: none;
       border-right: none;
       height: 10px;
@@ -64,7 +64,7 @@
 
     &:after {
       @extend %position-center;
-      background: $c-brand-1;
+      background: $c-brand--1;
       border-radius: $circle;
       height: 6px;
       width: 6px;

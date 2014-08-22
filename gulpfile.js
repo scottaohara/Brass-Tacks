@@ -8,6 +8,7 @@ var gulp = require('gulp'),
   // Scss/CSS plug ins
   sass = require('gulp-ruby-sass'),
   mini = require('gulp-minify-css'),
+  prefix = require('gulp-autoprefixer'),
 
   // image minification
   imagemin = require('gulp-imagemin'),
@@ -56,11 +57,21 @@ gulp.task('mini', function() {
 });
 
 
+// AutoPrefix the compiled CSS files
+// ----------------------------------------------------------------------------
+gulp.task('prefix', function() {
+
+  // look in the css folder and auto-prefix the files within
+  return gulp.src('./dist/css/*.css')
+  .pipe(prefix("last 3 versions", { cascade: true} ))
+  .pipe(gulp.dest('./dist/css'));
+});
+
 
 // Run sass/mini but require sass to finish before mini runs - 'gulp styles'
 // ----------------------------------------------------------------------------
 gulp.task('styles', ['sass'], function(){
-  gulp.run('mini')
+  gulp.run('mini');
 });
 
 
@@ -88,6 +99,7 @@ gulp.task('clean', function() {
 // ----------------------------------------------------------------------------
 gulp.task('default', ['clean'], function () {
   gulp.run('styles', 'images');
+  gulp.run('prefix');
 });
 
 

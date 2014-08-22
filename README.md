@@ -1,5 +1,5 @@
 # Brass Tacks
-###(Last updated: 0.9.7.0 - August 1, 2014)
+###(Last updated: 0.9.8.X - August 22, 2014)
 
 Brass Tacks is a professional Sass (.scss) framework that incorporates and standardizes many widely used HTML and CSS elements.
 
@@ -27,7 +27,7 @@ Install Gulp for your project: <code>$ npm install gulp --save-dev</code>
 
 Install Gulp plug-ins for Brass Tacks:
 
-<code>$ npm install gulp-ruby-sass gulp-minify-css gulp-imagemin gulp-clean gulp-rename event-stream --save-dev</code>
+<code>$ npm install gulp-ruby-sass gulp-minify-css gulp-autoprefixer gulp-imagemin gulp-clean gulp-rename event-stream --save-dev</code>
 
 
 
@@ -43,22 +43,23 @@ Enter <code>gulp watch</code> to fire of tasks on change to Sass, images or Java
 
 ## Brass Tacks Specifics
 
-* Built for HTML5 enabled modern browsers & IE9+
+* Built for HTML5 enabled modern browsers (autoprefixer targets last 3 browsers)
 * JavaScript light: only comes with a Google Analytics placeholder & link to HTML5shiv via CDN
-* Markup demos & code snippets within the scss files
+* Mark-up demos & code snippets within the scss files
 * Mixin, Silent Class and Variable libraries
 * scss base, helper and skeleton setup for project files
-* Extensive demos, code patterns and documentation (this WILL exist in v 1.0)
 
 
 ### Sass Specifics
 
-Brass Tacks' Sass files are split up into four base folders to help keep the code organized and easy to find.
+Brass Tacks' Sass files are split up into four base folders, and two optional folders, to help keep the code organized and easy to find.
 
 * __globals
 * _base-elements
 * _helper-classes
 * _project
+* --addons
+* --starter
 
 Read more about the Sass file architecture and how to customize Brass Tacks in the <a href="https://github.com/scottaohara/Brass-Tacks/blob/master/_develop/sass/README.md">Sass ReadMe.md</a>.
 
@@ -104,6 +105,7 @@ And many more really... thank you all.
 I've already used earlier versions of Brass Tacks on websites I've built for freelance clients, as well as in other open source collaborations.
 
 ##### 2014
+* nikkisnow.com - 0.9.6.5
 * bedlampublishing.com - 0.9.0.7
 * scottohara.me - 0.9.0.7
 
