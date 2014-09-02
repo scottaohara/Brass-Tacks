@@ -1,25 +1,15 @@
 <!doctype html>
-<!--[if IE 9 ]><html lang="en" class="ieAll ie9"><![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--><html lang="en" itemscope itemtype="http://schema.org/Person"><!--<![endif]-->
+<html lang="en" dir="ltr">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
 
   <title>Example Website Title</title>
-  <meta itemprop="name"         content="Microdata of your name" />
-  <meta itemprop="description"  content="Enter microdata description of your website" />
+  <meta name="apple-mobile-web-app-title" content="iOS Home Screen Title" />
+  <meta name="application-name" content="Windows Home Screen Title" />
+
   <meta name="description"      content="" />
 
   <link rel="canonical" href="YORUWEBSITEHERE" />
-
-  <!-- Open Graph  __ Delete if not needed.
-  <meta property="og:title"       content=""/>
-  <meta property="og:site_name"   content=""/>
-  <meta property="og:type"        content=""/>
-  <meta property="og:image"       content=""/>
-  <meta property="og:url"         content=""/>
-  <meta property="og:description" content=""/>
-  <meta property="fb:app_id"      content=""/>
-  -->
 
   <!-- Styles -->
   <link rel="stylesheet" href="dist/css/master-project.css" />
@@ -57,9 +47,9 @@
   <![endif]-->
 </head>
 
-<body>
+<body id="body">
 
-  <div class="page">
+  <div class="page" id="page">
 
     <header class="header-base" role="banner">
       <div class="content">
@@ -77,20 +67,22 @@
       </div>
     </header>
 
-    <section class="content-base">
+    <div class="content-base">
       <main class="content" role="main">
         <article> <!-- or <section -->
+          <h2>Article Heading</h2>
           <p>
             Content goes here
           </p>
         </article>
       </main>
+
       <aside class="content">
         <p>
           Content goes here
         </p>
       </aside>
-    </section>
+    </div>
 
     <footer class="footer-base" role="contentinfo">
       <div class="content">
@@ -102,17 +94,24 @@
 
   </div> <!-- end .page -->
 
-<!-- scripts ** if you need jquery or other javascript files for your site, uncomment out to use
-<script src="assets/js/app.min.js"></script> -->
+<!--
+  scripts ** if you need jQuery or other JavaScript
+  files for your site, uncomment out to use
+
+  <script src="assets/js/app.min.js"></script>
+-->
 
 
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID.
-<script>
-  var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-  g.src='//www.google-analytics.com/ga.js';
-  s.parentNode.insertBefore(g,s)}(document,'script'));
-</script>-->
+<!--
+  Google Analytics: change UA-XXXXX-X to be your site's ID.
+
+  <script>
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src='//www.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+-->
 
 </body>
 </html>
