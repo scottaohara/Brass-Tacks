@@ -47,7 +47,7 @@
 
 
   // Mobile View Table
-  .table--mobile {
+  .table-container-mobile {
     overflow: auto;
     -webkit-overflow-scrolling: touch;
 
@@ -62,7 +62,7 @@
 
   // Example mark-up:
   // ----------------------------------------------------------------------------
-  //  <div class="table--mobile">
+  //  <div class="table-container-mobile">
   //    <table>
   //      ...
   //    </table>

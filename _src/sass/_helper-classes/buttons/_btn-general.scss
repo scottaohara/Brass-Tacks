@@ -177,19 +177,17 @@ $btn-sizes: (
 
 @if $helper-btn--sizing == true {
 
-  .btn {
-
-    @each $bsv in $btn-sizes {
-      &--#{nth($bsv, 1)} {
-        font-size: nth($bsv, 2);
-        padding: nth($bsv, 3)
-      }
+  // btn sizes
+  @each $bsv in $btn-sizes {
+    .btn--#{nth($bsv, 1)} {
+      font-size: nth($bsv, 2);
+      padding: nth($bsv, 3)
     }
+  }
 
-    &--wide {
-      display: block;
-      width: 100%;
-    }
+  .btn--wide {
+    display: block;
+    width: 100%;
   }
 
 } // -- end @if --
@@ -205,15 +203,12 @@ $btn-sizes: (
 
 @if $helper-btn--rounding == true {
 
-  .btn {
+  .btn--soft {
+    border-radius: $unit-px2;
+  }
 
-    &--soft {
-      border-radius: $unit-px2;
-    }
-
-    &--round {
-      border-radius: $circle;
-    }
+  .btn--round {
+    border-radius: $circle;
   }
 
 } // -- end @if --

@@ -7,7 +7,7 @@
   *,
   *:after,
   *:before {
-    @include box-sizing(border-box);
+    box-sizing: border-box;
   }
 
 } // -- end @if --
@@ -99,13 +99,13 @@ html, body {
 
   // Give HTML5 elements block display, which is not defined in IE 8/9
   article, aside, canvas, footer, header, main, section {
-    @extend %display--block;
+    @extend %display-block;
   }
 
 
   // Makes hidden actually [hidden] in IE 8/9
   [hidden] {
-    @extend %display--none;
+    @extend %display-none;
   }
 
 } // -- end @if --

@@ -15,7 +15,7 @@
     z-index: 1;
   }
 
-  .input--text {
+  .input-text {
     &:focus + .label--reveal,
     &:invalid + .label--reveal {
       bottom: 95%;
@@ -38,7 +38,7 @@
   // Example mark-up:
   // ----------------------------------------------------------------------------
   // <div class="form--row">
-  //   <input type="text" class="input--text" id="example" />
+  //   <input type="text" class="input-text" id="example" />
   //   <label for="example" class="label--reveal">Label</label>
   // </div>
 

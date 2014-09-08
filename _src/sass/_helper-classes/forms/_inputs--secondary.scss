@@ -4,7 +4,7 @@
 
 @if $helper-forms--input-color == true {
 
-  // Color is not supported in all browsers, and extending %input--text
+  // Color is not supported in all browsers, and extending %input-text
   // breaks the default look in webkit so instead we will carry over some
   // of the input-text styling that doesn't break it in webkit & standardizes
   // it in other browsers
@@ -62,7 +62,7 @@
     }
 
     &__area {
-      @extend %input--text;
+      @extend %input-text;
       cursor: pointer;
       display: inline-block;
       width: 75%;

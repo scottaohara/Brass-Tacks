@@ -4,11 +4,10 @@
 
 @if $helper-content-displays--inlines == true {
 
-
   .inline {
 
     // Convert to inline
-    &--element {
+    &-element {
       display: inline;
       margin: 0 !important;
       width: auto !important;
@@ -18,16 +17,16 @@
     // Inline-block Individual Elements
     // OR
     // ALL elements within a parent element
-    &--block-element,
-    &--all > * {
-      @extend %display--inline-block;
+    &-block-element,
+    &-all > * {
+      @extend %display-inline-block;
       margin-right: $unit-px;
       width: auto !important;
     }
 
 
     // Inline items with a list element
-    &--list {
+    &-list {
       margin-bottom: $unit-px4;
 
       > li {
@@ -53,20 +52,20 @@
 @if $helper-content-displays--show-hide == true {
 
   // display block or none
-  .display--block {
-    @extend %display--block;
+  .display-block {
+    @extend %display-block;
   }
 
 
     // Hide Elements with display:none
-  .display--none {
-    @extend %display--none;
+  .display-none {
+    @extend %display-none;
   }
 
 
   // Set elements to hide on smaller screens
   @media screen and (max-width: $break-medium) {
-    .mobile--hide {
+    .mobile-hide {
       display: none !important;
     }
   }
@@ -74,7 +73,7 @@
 
   // Set elements to show on smaller screens
   // and hide on larger screens
-  .mobile--show {
+  .mobile-show {
     display: none !important;
 
     @media screen and (max-width: $break-medium) {

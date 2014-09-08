@@ -3,7 +3,7 @@
 // ----------------------------------------------------------------------------
 
 %address-details-summary {
-  @extend %display--block;
+  @extend %display-block;
   @extend %margin-bottom--base;
 }
 
@@ -46,7 +46,7 @@
 @if $base-fig-figcaption == true {
 
   figure, figcaption {
-    @extend %display--block;
+    @extend %display-block;
   }
 
   figure {

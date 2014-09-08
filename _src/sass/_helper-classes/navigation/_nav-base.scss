@@ -124,7 +124,7 @@
     text-align: center;
 
     & > li {
-      @extend %display--inline-block;
+      @extend %display-inline-block;
     }
   }
 
