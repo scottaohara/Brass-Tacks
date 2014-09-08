@@ -1,0 +1,100 @@
+// ----------------------------------------------------------------------------
+//  Menu Button
+// ----------------------------------------------------------------------------
+
+%make-an-x {
+  bottom: 0;
+  top: 0;
+}
+
+// The actual button element is the menu for
+// the icon, so the hit areas is larger.
+.btn-menu {
+  background: $c-white;
+  border-radius: 4px;
+  border: 1px solid rgba(0,0,0,1);
+  color: rgba(0,0,0,.9);
+  cursor: pointer;
+  left: 8px;
+  max-width: 300px;
+  overflow: hidden;
+  padding: 0 8px 0 42px;
+  position: relative;
+  text-transform: uppercase;
+  top: 8px;
+  transition: padding .2s .4s, text-indent .2s .4s, color .2s .4s, max-width .2s .4s;
+  z-index: 11;
+
+
+  &[data-state="on"] {
+    color: rgba(0,0,0,0);
+    min-width: 1px;
+    padding-left: 38px;
+    max-width: 30px;
+    padding-right: 0;
+    text-indent: -999px;
+
+    .btn-icon {
+      background: rgba(0,0,0,0);
+
+      &:before,
+      &:after {
+        transition: all .2s .4s;
+      }
+
+      &:after {
+        @extend %make-an-x;
+        transform: rotate(45deg);
+      }
+
+      &:before {
+        @extend %make-an-x;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+
+.btn-icon {
+  background: rgba(0,0,0,1);
+  bottom: 0;
+  height: 4px;
+  left: 0;
+  margin: auto 0 auto 4px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .2s all;
+  width: 30px;
+
+  &:before,
+  &:after {
+    background: $c-darker;
+    border-radius: 4px;
+    content: '';
+    height: 4px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    transition: all .2s 0s;
+    width: 100%;
+  }
+
+  &:before {
+    top: -8px;
+  }
+
+  &:after {
+    bottom: -8px;
+  }
+}
+
+
+//  Example mark-up:
+// ----------------------------------------------------------
+//  <button class="btn btn-menu" data-state="off" type="button" id="nav_open" accesskey="m">
+//    <span class="btn-icon"> </span>  Menu
+//  </button>
+
+

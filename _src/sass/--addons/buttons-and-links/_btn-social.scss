@@ -2,92 +2,62 @@
 //  Social Buttons
 // ----------------------------------------------------------------------------
 
-@if $addons--social-btn == true {
+// Social Buttons Shared Styling
+[class*="btn--social"] {
+  color: $c-white !important;
+  min-width: 162px;
+  padding-left: 50px;
+  position: relative;
+  text-align: left;
+}
 
-  // Social Buttons Shared Styling
-  [class*="btn--social"] {
-    color: $c-white !important;
-    min-width: 162px;
-    padding-left: 50px;
-    position: relative;
-    text-align: left;
-    text-shadow: $ts-primary;
-  }
-
-  .social-icon {
-    @extend %btn--icon;
-  }
-
-} // -- end @if --
+.social-icon {
+  @extend %btn--icon;
+}
 
 
+.btn--social--fb {
+  background: $c-fb-1;
+  border-color: $c-fb-2;
 
-@if $addons--social-btn__fb == true {
-
-  .btn--social--fb {
-    background: $c-fb-1;
+  .social--icon {
+    //background-image: url();
     border-color: $c-fb-2;
-
-    .social--icon {
-      //background-image: url();
-      border-color: $c-fb-2;
-    }
-
-    &:hover {
-      background: $c-fb-2;
-
-      .social--icon {
-        border-color: $c-fb-icon-border;
-      }
-    }
   }
 
-} // -- end @if --
+  &:hover {
+    background: $c-fb-2;
+  }
+}
 
 
 
-@if $addons--social-btn__tw == true {
+.btn--social--tw {
+  background-color: $c-tw-1;
+  border-color: $c-tw-2;
 
-  .btn--social--tw {
-    background-color: $c-tw-1;
+  .social--icon {
+    //background-image: url();
     border-color: $c-tw-2;
-
-    .social--icon {
-      //background-image: url();
-      border-color: $c-tw-2;
-    }
-
-    &:hover {
-      background: $c-tw-2;
-
-      .social--icon {
-        border-color: $c-tw-icon-border;
-      }
-    }
   }
 
-} // -- end @if --
+  &:hover {
+    background: $c-tw-2;
+  }
+}
 
 
 
-@if $addons--social-btn__gp == true {
+.btn--social--g {
+  background-color: $c-gp-1;
+  border-color: $c-gp-2;
 
-  .btn--social--g {
-    background-color: $c-gp-1;
-    border-color: $c-gp-3;
-
-    .social--icon {
-      //background-image: url();
-      border-color: $c-gp-3;
-    }
-
-    &:hover {
-      background: $c-gp-3;
-
-      .social--icon {
-        border-color: $c-gp-icon-border;
-      }
-    }
+  .social--icon {
+    //background-image: url();
+    border-color: $c-gp-2;
   }
 
-} // -- end @if --
+  &:hover {
+    background: $c-gp-2;
+  }
+}

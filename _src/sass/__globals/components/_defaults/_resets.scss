@@ -3,7 +3,7 @@
 // ----------------------------------------------------------------------------
 
 // Super Reset
-%reset--all {
+%reset {
   border: 0;
   font-size: 100%;
   margin: 0;
@@ -31,6 +31,6 @@
 
 
 // Reset default outline styling
-%outline--none {
+%reset--outline {
   outline: 0;
 }

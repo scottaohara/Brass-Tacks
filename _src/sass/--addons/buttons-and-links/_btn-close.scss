@@ -1,0 +1,40 @@
+// ----------------------------------------------------------------------------
+//  Close Button
+// ----------------------------------------------------------------------------
+
+.btn--close {
+  font-size: $txt-h4;
+  height: 44px;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 44px;
+
+  &--rounded {
+    background: $c-white;
+    border-radius: $circle;
+    border: 1px solid;
+    right: -8px;
+    top: -8px;
+  }
+
+  // &--small {
+
+  // }
+}
+
+//  Example mark-up:
+// ----------------------------------------------------------
+//  <button type='button' class="btn btn--close" aria-label="Close">
+//    &times;
+//  </button>
+
+
+// Add btn helper classes to change the style of the close button.
+
+//  Example mark-up:
+// ----------------------------------------------------------
+//  <button type='button' class="btn btn--close btn--prime" aria-label="Close">
+//    &times;
+//  </button>

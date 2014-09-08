@@ -1,74 +1,92 @@
+%btn--full-height {
+  height: 100%;
+  padding: 0 8px;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+
 // ----------------------------------------------------------------------------
-//  Input Type: Search Box/Button Combo
+//  Input Type: Search w/ button combo
 // ----------------------------------------------------------------------------
 
-@if $addons--search-combo == true {
+.form-search {
+  padding: 0;
+  position: relative;
 
-  .search-area {
-    margin-bottom: $unit-px2;
-    position: relative;
+  .input-text {
+    @include truncate-text(100%);
+    margin-bottom: 0;
+    padding-right: $unit-px*30;
+  }
+}
 
-    .input-text {
-      @include truncate-text(100%);
-      margin-bottom: 0;
-      padding-right: $unit-px*30;
-    }
+.btn--search {
+  @extend %btn--full-height;
+  padding: 0 12px;
+  right: -1px;
+}
 
-    .btn--search {
-      @include position(top, 0, right, -1px, absolute);
-      height: 100%;
-      padding-top: 6px;
-      z-index: 2;
-    }
+// Put a search button inline with search input field via position:absolute
+
+// Example mark-up:
+// ----------------------------------------------------------------------------
+// <div class="form-row form-row--search">
+//   <input type="search" placeholder="Search for..." class="input-text" />
+//   <input type="submit" value="Search" class="btn btn--prime btn--search" />
+// </div>
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Input Type: Search with clear button
+//  ** requires clear-search.js **
+// ----------------------------------------------------------------------------
+
+// Clear button for search inputs
+.btn--clear {
+  @extend %btn--full-height;
+  font-family: 1.4em;
+  margin: auto;
+  opacity: 0;
+  padding: 0;
+  right: 0;
+  transition: opacity .2s;
+  width: 30px;
+  visibility: hidden;
+
+  &[data-show-btn='true'] {
+    opacity: 1;
+    visibility: visible;
   }
 
-  .btn--small.btn--search {
-    padding-top: 4px;
+  &:hover,
+  &:focus {
+    background: $c-off-white;
+    border-color: darken($c-brand--1, 20%);
+    color: darken($c-brand--1, 20%);
   }
 
-  // Put a search button inline with search input field via position:absolute
-
-  // Example mark-up:
-  // ----------------------------------------------------------------------------
-  // <div class="search-area">
-  //   <input type="search" placeholder="Search for..." class="input-text">
-  //   <input type="submit" value="Search" class="btn--prime btn--search">
-  // </div>
-
-} // -- end @if --
-
-
-
-
-
-
-// ----------------------------------------------------------------------------
-//  Input Type: Search with clear button & search icon
-// ----------------------------------------------------------------------------
-
-@if $addons--search-combo2 == true {
-
-  .search--clear {
-    position: relative;
-
-    .input-text {
-     // background-image: url();
-     // background-repeat: no-repeat;
-     // background-position: 6px center;
-      padding-left: 40px;
-    }
+  &:active {
+    background: $c-light-grey;
   }
+}
 
 
-  // Example mark-up:
-  // ----------------------------------------------------------------------------
-  // <div class="search-clear">
-  //   <input type="search" class="input-text" name="search_input" placeholder="Search for..." />
-  //   <button class="btn btn--clear" id="clearSearchField">x</button>
-  // </div>
+// Example mark-up:
+// ----------------------------------------------------------------------------
+//  <div class="form-search search-area--clear">
+//    <input type="search" id="search_input_clear" class="input-text js-clear" name="search_input" placeholder="Search for..." aria-label="Search for..." />
+//    <label for="search_input_clear" class="label-reveal">
+//      Search for...
+//    </label>
+//  </div>
 
 
-  // Note:
-  // Styling for .btn-clear is located in the _btn-general.scss file
-
-} // -- end @if --
+// Note:
+// The btn--clear component requres javascript to function properly.
+// Please see the Brass Tacks search component demo & search-clear.js
+// companion file.

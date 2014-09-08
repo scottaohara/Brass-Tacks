@@ -26,7 +26,7 @@
 
   blockquote {
     @extend %reset--spacing;
-    @extend %margin-bottom--base;
+    @extend %margin-bottom;
     @extend %txt-h6;
     @extend %txt-italic;
     color: $c-blockquote;

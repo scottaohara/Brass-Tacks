@@ -2,16 +2,11 @@
 //  Address, Details & Summary Elements
 // ----------------------------------------------------------------------------
 
-%address-details-summary {
-  @extend %display-block;
-  @extend %margin-bottom--base;
-}
-
-
 @if $base-address == true {
 
   address {
-    @extend %address-details-summary;
+    @extend %display-block;
+    @extend %margin-bottom;
   }
 
 } // -- end @if --
@@ -20,7 +15,8 @@
 @if $base-details == true {
 
   details {
-    @extend %address-details-summary;
+    @extend %display-block;
+    @extend %margin-bottom;
   }
 
 } // -- end @if --
@@ -29,7 +25,8 @@
 @if $base-summary == true {
 
   summary {
-    @extend %address-details-summary;
+    @extend %display-block;
+    @extend %margin-bottom;
   }
 
 } // -- end @if --
@@ -50,10 +47,10 @@
   }
 
   figure {
-    @extend %margin-bottom--base;
+    @extend %margin-bottom;
 
     img {
-      display: block;
+      @extend %display-block;
     }
   }
 
@@ -69,7 +66,7 @@
 // ----------------------------------------------------------------------------
 
 %kbd-code-samp {
-  @extend %margin-bottom--base;
+  @extend %margin-bottom;
   background: $c-code--bg;
   color: $c-code--text;
   border: $code-border;

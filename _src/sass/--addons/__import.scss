@@ -1,5 +1,8 @@
 // ----------------------------------------------------------------------------
 //  Add-ons Import List
+//
+//  This file is to import all add-ons into your project.
+//  It is advised you instead import the individual files as you need them.
 // ----------------------------------------------------------------------------
 
 @import
@@ -13,5 +16,7 @@
 
 
 // Buttons
-'buttons-and-links/btn-social',
-'buttons-and-links/read-more';
+'buttons-and-links/btn-social',   // social buttons (g+, fb, twitter)
+'buttons-and-links/read-more',
+'buttons-and-links/btn-menu',     // burger menu -- requires JS
+'buttons-and-links/btn-close';        // clear and close

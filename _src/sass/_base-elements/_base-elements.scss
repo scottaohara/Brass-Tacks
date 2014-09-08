@@ -26,7 +26,9 @@ html, body {
   background: $c-body--bg;
   color: $c-body--text;
   font: $f-body--weight $f-body--size $f-body--family;
-  height: 100%;
+  @if $height100 == true {
+    height: 100%;
+  }
   line-height: $f-body--line-height;
   text-rendering: optimizeLegibility;
      -moz-text-size-adjust: 100%;
@@ -128,7 +130,7 @@ html, body {
     color: $c-prime-action;
 
     &:hover, &:active {
-      @extend %outline--none;
+      @extend %reset--outline;
       color: $c-prime-action--hover;
     }
 

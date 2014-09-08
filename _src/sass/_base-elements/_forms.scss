@@ -4,13 +4,12 @@
 
 // Basic reset / normalizing for form elements
 %reset--form-elements {
-  font-size: 100%;
+  font-size: $txt-base;
   font-weight: $form-font-weight;
-  line-height: 1.25;
+  line-height: normal;
   margin-top: 0;
   text-transform: none;
 }
-
 
 
 
@@ -33,7 +32,6 @@
   }
 
 } // -- end @if --
-
 
 
 
@@ -76,8 +74,6 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
 
 
 
-
-
 // ----------------------------------------------------------------------------
 //  Text Input Elements
 // ----------------------------------------------------------------------------
@@ -86,7 +82,6 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
 
   // General Form Element Reset
   input {
-    @extend %txt-base;
     @extend %reset--form-elements;
 
     // Disabled input styling
@@ -109,19 +104,16 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
 
 
 
-
 // ----------------------------------------------------------------------------
 //  Search Input Element
 // ----------------------------------------------------------------------------
 
 @if $base-form--search == true {
 
-  [type="search"] {
-
+  input[type="search"] {
     // Makes it look like a normal text input,
     // only with a (x) when text has been entered
     -webkit-appearance: textfield;
-
 
     // Remove inner padding and search cancel button in Safari and Chrome on OS X.
     // Safari (but not Chrome) clips the cancel button when the search input has
@@ -139,15 +131,14 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
 
 
 
-
 // ----------------------------------------------------------------------------
 //  Checkbox / Radio Button Elements
 // ----------------------------------------------------------------------------
 
 @if $base-form--cr == true {
 
-  [type="checkbox"],
-     [type="radio"] {
+  input[type="radio"],
+  input[type="checkbox"] {
     padding: 0; // IE 8-10 give these excess padding. so reset.
 
     @if $base-border-box == false {
@@ -165,7 +156,6 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
 
 
 
-
 // ----------------------------------------------------------------------------
 //  Number Input Element
 // ----------------------------------------------------------------------------
@@ -175,13 +165,12 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
   // Fix the cursor style for Chrome's increment / decrement buttons. For certain
   // `font-size` values of the `input`, it causes the cursor style of the
   // decrement button to change from `default` to `text`.
-  [type="number"]::-webkit-inner-spin-button,
-  [type="number"]::-webkit-outer-spin-button {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
     height: auto;
   }
 
 } // -- end @if --
-
 
 
 
@@ -197,7 +186,6 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
   // Make textareas look like input areas, only bigger
   textarea {
     @extend %reset--form-elements;
-    @extend %txt-base;
     display: block;
     min-width: 60px;
     overflow: auto;
@@ -210,7 +198,6 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
   }
 
 } // -- end @if --
-
 
 
 
@@ -241,7 +228,7 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
 
   // Removes outline from submit buttons in Firefox
   input[type="submit"]::-moz-focus-inner {
-    @extend %outline--none;
+    @extend %reset--outline;
   }
 
 
@@ -259,7 +246,6 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
 
 
 
-
 // ----------------------------------------------------------------------------
 //  Select Element
 // ----------------------------------------------------------------------------
@@ -267,7 +253,6 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
 @if $base-form--select == true {
 
   select {
-    @extend %txt-base;
     @extend %reset--form-elements;
     margin-bottom: $unit-px2;
     width: 100%;
@@ -278,7 +263,6 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
   }
 
 } // -- end @if --
-
 
 
 
@@ -308,7 +292,6 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
 
 
 
-
 // ----------------------------------------------------------------------------
 //  Legend Element
 // ----------------------------------------------------------------------------
@@ -317,6 +300,7 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
 
   legend {
     @extend %txt-h5;
+    display: inline-block;
     margin-left: -$unit-px;
     padding: 0 $unit-px;
   }

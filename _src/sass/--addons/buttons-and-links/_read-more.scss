@@ -4,37 +4,35 @@
 //  Original: http://jsfiddle.net/csswizardry/rxsna/
 // ----------------------------------------------------------------------------
 
-@if $helper-nav--link-block == true {
+.link-block {
+  position: relative;
 
-  .link-block {
+  a {
     position: relative;
-
-    a {
-      position: relative;
-      z-index: 1;
-    }
+    z-index: 1;
   }
+}
 
-  // needs to be specific to override the specificity
-  // of .link-block a {}
-  a.link-block__read-more {
-    bottom: 0;
-    color: transparent;
-    font-size: 1px;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 0;
-  }
+// needs to be specific to override the specificity
+// of .link-block a {}
+a.link-block__read-more {
+  bottom: 0;
+  color: transparent;
+  font-size: 1px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 0;
+}
 
 
-  //  Example mark-up:
-  // ----------------------------------------------------------
-  //  <p class="link-block">
-  //    Paragraph goes here <a href="#!">normal link</a>
-  //    paragraph continues...
-  //    <a href="#!!!" class="link-block__read-more">Read More</a>
-  //  </p>
+//  Example mark-up:
+// ----------------------------------------------------------
+//  <p class="link-block">
+//    Paragraph goes here <a href="#!">normal link</a>
+//    paragraph continues...
+//    <a href="#!!!" class="link-block__read-more">Read More</a>
+//  </p>
 
-} // -- end @if --
+

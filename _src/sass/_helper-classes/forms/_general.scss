@@ -8,13 +8,13 @@
   .form {
 
     // add top/bottom padding
-    &--row {
+    &-row {
       padding: $form-row--padding;
       position: relative;
     }
 
     // add emphasis styling to a row or entire form
-    &--block {
+    &-block {
       border: $form-block--border;
       margin-bottom: $input--margin;
       padding: $form-block--padding;
@@ -41,6 +41,7 @@
     border:             $input-border-style;
     font-family:        $f-input--family;
     margin-bottom:      $input--margin;
+    outline:            0;
     padding:            $input--padding;
     width:              100%;
     -webkit-appearance: none;

@@ -2,13 +2,14 @@
 //  Silent Margins
 // ----------------------------------------------------------------
 
-%margin-bottom--0 {
-  margin-bottom: 0;
+// Consistent margin bottom
+%margin-bottom {
+  margin-bottom: $unit-px4;
 }
 
-// Consistent margin bottom
-%margin-bottom--base {
-  margin-bottom: $unit-px4;
+// Alternatives
+%margin-bottom--0 {
+  margin-bottom: 0;
 }
 
 %margin-bottom--2x {

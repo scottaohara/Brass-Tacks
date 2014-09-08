@@ -18,8 +18,7 @@
   text-align: center;
   text-decoration: none !important; // never have an underline on button text
 
-  &:focus {
-    box-shadow: $bs-btn-focus;
+  &:hover, &:focus {
     outline: 0;
   }
 }
@@ -28,10 +27,12 @@
 
 // Buttons with Icons
 %btn--icon {
-  @include position(top, 0, left, 0, absolute);
   background-position: center center;
   background-repeat: no-repeat;
   height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
   width: 40px;
 }
 
@@ -55,6 +56,17 @@
   // disabled
   .btn {
     @extend %btn;
+    background: $btn-bg;
+
+    &:hover,
+    &:focus {
+      background: $c-hell;
+      color: $c-white;
+    }
+
+    &:active {
+      background: $c-off-black;
+    }
   }
 
 } // -- end @if --
@@ -67,7 +79,8 @@
     border-color: $btn-border;
     color: $btn-text;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background: $btn-bg-2;
       color: $btn-text-2;
     }
@@ -88,7 +101,8 @@
     border-color: $btn-border-cta;
     color: $btn-text-cta;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background: $btn-bg-2-cta;
       color: $btn-text-2;
     }
@@ -109,7 +123,8 @@
     border-color: $btn-border-emph;
     color: $btn-text-emph;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background: $btn-bg-2-emph;
       color: $btn-text-2;
     }
@@ -130,7 +145,8 @@
     border-color: $btn-border-neg;
     color: $btn-text-neg;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background: $btn-bg-2-neg;
       color: $btn-text-2;
     }
@@ -207,45 +223,8 @@ $btn-sizes: (
     border-radius: $unit-px2;
   }
 
-  .btn--round {
+  .btn--rounded {
     border-radius: $circle;
-  }
-
-} // -- end @if --
-
-
-
-
-
-
-// ----------------------------------------------------------------------------
-//  Clear & Close Buttons
-// ----------------------------------------------------------------------------
-
-@if $helper-btn--clear == true {
-
-  // Clear button for search inputs
-  .btn--clear {
-    @include position-vertical-center(right, 6px, absolute);
-    border: none;
-    content: 'X';
-    font-family: arial;
-    height: 66%;
-    width: 24px;
-  }
-
-} // -- end @if --
-
-
-@if $helper-btn--close == true {
-
-  // Close buttons for modal windows
-  .btn--close {
-    @include position(top, -6px, left, -6px, absolute);
-    border-radius: $circle;
-    min-width: 1px !important;
-    padding: 5px 7px;
-    text-transform: uppercase;
   }
 
 } // -- end @if --
@@ -264,7 +243,7 @@ $btn-sizes: (
   // Pill container
   .btn--pill {
     @extend %clearfix;
-    @extend %margin-bottom--base;
+    @extend %margin-bottom;
 
     &>:first-child {
       border-radius: $unit-px2 0 0 $unit-px2;
