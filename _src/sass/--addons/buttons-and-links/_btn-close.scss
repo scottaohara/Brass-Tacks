@@ -3,6 +3,7 @@
 // ----------------------------------------------------------------------------
 
 .btn--close {
+  border: 0;
   font-size: $txt-h4;
   height: 44px;
   padding: 0;
@@ -11,17 +12,11 @@
   right: 0;
   width: 44px;
 
-  &--rounded {
-    background: $c-white;
-    border-radius: $circle;
+  &.btn--rounded {
     border: 1px solid;
     right: -8px;
     top: -8px;
   }
-
-  // &--small {
-
-  // }
 }
 
 //  Example mark-up:
@@ -35,6 +30,6 @@
 
 //  Example mark-up:
 // ----------------------------------------------------------
-//  <button type='button' class="btn btn--close btn--prime" aria-label="Close">
+//  <button type='button' class="btn btn--close btn--fill btn--prime" aria-label="Close">
 //    &times;
 //  </button>

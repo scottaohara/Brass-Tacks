@@ -3,7 +3,7 @@
   *
   * Brass Tacks
   * by Scott O'Hara - @scottohara - github.com/scottaohara
-  * 0.9.8.beta - September 8, 2014
+  * 0.9.8.beta - September 9, 2014
   *
   *****************************************************************************
 */
@@ -144,17 +144,11 @@ $helper-btn--cta:                             true !default;
 $helper-btn--neg:                             true !default;
 $helper-btn--disabled:                        true !default;
 
-$helper-btn--social:                          true !default;
-$helper-btn--social__fb:                      true !default;
-$helper-btn--social__tw:                      true !default;
-$helper-btn--social__gp:                      true !default;
-
 $helper-btn--pills:                           true !default;
 $helper-btn--sizing:                          true !default;
 $helper-btn--rounding:                        true !default;
 
-$helper-btn--clear:                           true !default;
-$helper-btn--close:                           true !default;
+$helper-btn--fill:                            true !default;
 
 
 
@@ -227,7 +221,6 @@ $helper-type--alignment:                      true !default;
 $helper-type--callouts__block:                true !default;
 $helper-type--callouts__messaging:            true !default;
 $helper-type--callouts__decoration:           true !default;
-$helper-type--callouts__slant:                true !default;
 $helper-type--lists:                          true !default;
 
 
