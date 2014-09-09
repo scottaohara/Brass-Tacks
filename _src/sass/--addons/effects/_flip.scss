@@ -2,19 +2,14 @@
 //  Flip Effect
 // ----------------------------------------------------------------------------
 
-// Preserve 3D
-%preserve-3d {
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-}
-
-
 // Silent Classes
 %flip-back-front {
   @extend %preserve-3d;
-  @include position(top, 0, left, 0, absolute);
-  @include transition(.6s);
   backface-visibility: hidden;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: .6s;
 
   img {
     max-height: 100%;
@@ -23,53 +18,49 @@
 }
 
 
+// Flip Container
+.flip-container {
+  @extend %preserve-3d;
+  perspective: 1000px;
 
+  &:hover {
+    .flip-back {
+      transform: rotateY(0deg);
+    }
 
-
-  // Flip Container
-  .flip-container {
-    @extend %preserve-3d;
-    perspective: 1000px;
-
-    &:hover {
-      .flip-back {
-        @include transform(rotateY(0deg));
-      }
-
-      .flip-front {
-        @include transform(rotateY(-180deg));
-      }
+    .flip-front {
+      transform: rotateY(-180deg);
     }
   }
+}
 
 
-  // Container of Flipping Views
-  .flipper {
-    @extend %preserve-3d;
-    @include transition(.6s);
-    position: relative;
-  }
+// Container of Flipping Views
+.flipper {
+  @extend %preserve-3d;
+  transition: .6s;
+  position: relative;
+}
 
 
-  // Front View Styling
-  .flip-front {
-    @extend %flip-back-front;
-    @include transform(rotateY(0deg));
-    z-index: 2;
-  }
+// Front View Styling
+.flip-front {
+  @extend %flip-back-front;
+  transform: rotateY(0deg);
+  z-index: 2;
+}
 
 
-  // Back View Styling
-  .flip-back {
-    @extend %flip-back-front;
-    @include transform(rotateY(-180deg));
-  }
+// Back View Styling
+.flip-back {
+  @extend %flip-back-front;
+  transform: rotateY(-180deg);
+}
 
 
-  // Additional Styling for multiple flip units
-  .flip-container, .flip-front, .flip-back {
-    height: 500px;
-    max-width: 100%;
-  }
-
+// Additional Styling for multiple flip units
+.flip-container, .flip-front, .flip-back {
+  height: 500px;
+  max-width: 100%;
+}
 

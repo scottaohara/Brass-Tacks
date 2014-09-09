@@ -56,7 +56,7 @@
 
   @if $tt-transition == true {
     &:after, &:before {
-      @include transition(all $tt-transition-speed);
+      transition: all $tt-transition-speed;
     }
   }
 
@@ -102,7 +102,7 @@
 
     &:hover {
       &:after, &:before {
-        @include transform(translateX(-8px));
+        transform: translateX(-8px);
       }
     }
   }
@@ -124,7 +124,7 @@
 
     &:hover {
       &:after, &:before {
-        @include transform(translateX(8px));
+        transform: translateX(8px);
       }
     }
   }
@@ -146,7 +146,7 @@
 
     &:hover {
       &:after, &:before {
-        @include transform(translateY(8px));
+        transform: translateY(8px);
       }
     }
   }
@@ -168,7 +168,7 @@
 
     &:hover {
       &:after, &:before {
-        @include transform(translateY(-8px));
+        transform: translateY(-8px);
       }
     }
   }
@@ -260,7 +260,7 @@
 
   @if $tt-transition == true {
     &:after, &:before {
-      @include transition(all $tt-transition-speed);
+      transition: all $tt-transition-speed;
     }
   }
 
@@ -306,7 +306,7 @@
 
     &:hover {
       &:after, &:before {
-        @include transform(translateX(-8px));
+        transform: translateX(-8px);
       }
     }
   }
@@ -328,7 +328,7 @@
 
     &:hover {
       &:after, &:before {
-        @include transform(translateX(8px));
+        transform: translateX(8px);
       }
     }
   }
@@ -350,7 +350,7 @@
 
     &:hover {
       &:after, &:before {
-        @include transform(translateY(8px));
+        transform: translateY(8px);
       }
     }
   }
@@ -372,7 +372,7 @@
 
     &:hover {
       &:after, &:before {
-        @include transform(translateY(-8px));
+        transform: translateY(-8px);
       }
     }
   }

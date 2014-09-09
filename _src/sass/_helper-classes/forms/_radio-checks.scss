@@ -46,12 +46,14 @@
     border-radius: 2px;
 
     &:after {
-      @include position(top, -2px, left, 1px, absolute);
-      @include transform(rotate(-49deg));
-      border: 5px solid $c-brand--2;
-      border-top: none;
       border-right: none;
+      border-top: none;
+      border: 5px solid $c-brand--2;
       height: 10px;
+      left: 1px;
+      position: absolute;
+      top: -2px;
+      transform: rotate(-49deg);
       width: 20px;
     }
   }
@@ -100,11 +102,13 @@
     vertical-align: middle;
 
     &:after {
-      @include position(top, 0, right, 50%, absolute);
-      @include transition(.2s all);
       background: $c-red;
       content: '';
       height: 100%;
+      position: absolute;
+      right: 50%;
+      top: 0;
+      transition: .2s all;
       width: 51%;
     }
 
@@ -122,9 +126,11 @@
     }
 
     &.labels:before {
-      @include position(top, 12%, left, 5%, absolute);
       content: 'Off';
+      left: 5%;
+      position: absolute;
       text-indent: 60%;
+      top: 12%;
     }
   }
 
@@ -199,13 +205,13 @@
       }
 
       &:before {
-        @include transition(width .2s, background .2s);
         background: rgba(0,0,0,.5);
         content: '';
         height: 100%;
         left: 0;
         position: absolute;
         top: 0;
+        transition: width .2s, background .2s;
         width: 0%;
       }
     }

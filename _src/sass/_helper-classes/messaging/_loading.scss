@@ -6,7 +6,7 @@
 
   @include keyframe (spin) {
     to {
-      @include transform(rotate(1turn));
+      transform: rotate(1turn);
     }
   }
 

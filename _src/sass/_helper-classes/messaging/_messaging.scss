@@ -8,18 +8,20 @@
 
     // positioning the message
     &-position {
-      @include position(top, 0, left, $unit-per, fixed);
+      left: $unit-per;
+      position: fixed;
+      top: 0;
       width: 80%;
     }
 
     // container for the message
     &-container {
-      @include transition(all .3s linear);
       border: 1px solid;
       margin-bottom: $unit-em;
       padding: $unit-em*.35 $unit-em*.5;
       position: relative;
       text-shadow: 0 1px 1px rgba(255,255,255,.6);
+      transition: all .3s;
     }
 
     //&-title {}
@@ -46,12 +48,17 @@
   }
 
   // close the message link/button
+  //
+  // TODO - revise / kill this
+  //
   .close-message {
-    @include position(top, -$unit-em*.5, right, -$unit-em*.5, absolute);
-    border: 1px solid;
     border-radius: $circle;
+    border: 1px solid;
     padding: $unit-px $unit-px3;
+    position: absolute;
+    right: -$unit-em*.5;
     text-decoration: none;
+    top: -$unit-em*.5;
   }
 
 } // -- end @if --
@@ -127,8 +134,6 @@
     }
 
   }
-
-
 
 
   // Tooltip Image shared
