@@ -1,36 +1,5 @@
-@if $helper-type--callouts__block == true {
-
 // ----------------------------------------------------------------------------
-//  Callout Text
-// ----------------------------------------------------------------------------
-
-  // Shout Out - blockquote / blockquote like styling for emphasizing text
-  .txt-callout {
-    background: $c-lighter;
-    border-left: $unit-px solid $c-brand--2;
-    color: $c-brand--2;
-    font-size: $txt-h5;
-    padding: $unit-px4;
-
-    &:after,
-    &:before {
-      display: none;
-    }
-  }
-
-  // Example mark-up:
-  // ----------------------------------------------------------------------------
-  // <p class="txt-callout">
-  //   Callout text goes here. Like a blockquote, but semantically not.
-  // </p>
-
-} // -- end @if --
-
-
-
-
-// ----------------------------------------------------------------------------
-//  Callout Text -- Messaging
+//  Text Decoration -- Messaging
 // ----------------------------------------------------------------------------
 
 @if $helper-type--callouts__messaging == true {
@@ -54,7 +23,7 @@
 
 
 // ----------------------------------------------------------------------------
-//  Callout Text -- Weight, Style & Decoration
+//  Text Decoration -- Weight, Style & Decoration
 // ----------------------------------------------------------------------------
 
 @if $helper-type--callouts__decoration == true {
@@ -80,6 +49,18 @@
   %txt-italic,
   .txt-italic {
     font-style: italic;
+  }
+
+  // Example mark-up:
+  // ----------------------------------------------------------------------------
+  // <p>
+  //   I want to have <span class="txt-italic">italic text here</span>.
+  // </p>
+
+
+  %txt-no-italic,
+  .txt-no-italic {
+    font-style: normal;
   }
 
   // Example mark-up:

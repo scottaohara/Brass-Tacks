@@ -10,10 +10,6 @@
 }
 
 
-
-
-
-
 // ----------------------------------------------------------------------------
 //  Emphasis Block
 // ----------------------------------------------------------------------------
@@ -22,8 +18,22 @@
 
   .emph-block {
     @extend %emph-shared;
-    background: $c-white;
+    background: $c-off-white;
     border-radius: $unit-px;
+    display: block;
+    // force a display block so the class can be applied
+    // to any element & get consistent styling
+  }
+
+  @if $base-q == true {
+    q.emph-block  {
+      &:before,
+      &:after {
+        display: none;
+        // remove before/after quotations if paired with
+        // that element
+      }
+    }
   }
 
   // Example mark-up
@@ -34,6 +44,33 @@
 
 } // -- end @if --
 
+
+// ----------------------------------------------------------------------------
+//  Emphasis Block -- Callout
+//
+//  A stronger emphasis block
+// ----------------------------------------------------------------------------
+
+@if $helper-content-emphasis--callout == true {
+
+  .emph-block--callout {
+    border-color: $c-brand--2;
+    border-left-width: $unit-px;
+    font-size: $txt-h5;
+    padding: $unit-px4;
+
+    & > * {
+      color: $c-brand--2;
+    }
+  }
+
+  // Example mark-up
+  // ----------------------------------------------------------------------
+  // <div class="emph-block emph-block--callout">
+  //  ...
+  // </div>
+
+} // -- end @if --
 
 
 
@@ -60,6 +97,7 @@
 
   // A smaller emphasis block
   .emph-block--small {
+    font-size: 90%;
     padding: $unit-px2
   }
 
@@ -69,7 +107,7 @@
   //  ...
   // </div>
 
- } // -- end @if --
+} // -- end @if --
 
 
 

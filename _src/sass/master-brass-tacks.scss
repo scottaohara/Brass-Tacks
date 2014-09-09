@@ -158,6 +158,7 @@ $helper-content-displays--show-hide:          true !default;
 $helper-content-displays--mute:               true !default;
 
 $helper-content-emphasis:                     true !default;
+$helper-content-emphasis--callout:            true !default;
 $helper-content-emphasis--alt:                true !default;
 $helper-content-emphasis--img:                true !default;
 
@@ -218,7 +219,6 @@ $helper-nav--vertical:                        true !default;
 
 // Typography Helpers
 $helper-type--alignment:                      true !default;
-$helper-type--callouts__block:                true !default;
 $helper-type--callouts__messaging:            true !default;
 $helper-type--callouts__decoration:           true !default;
 $helper-type--lists:                          true !default;

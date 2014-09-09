@@ -89,7 +89,7 @@
     @extend %kbd-code-samp;
   }
 
-  p, li, blockquote {
+  p, li, blockquote, q {
     #{$el} {
       @extend %kbd-code-samp__child;
     }
