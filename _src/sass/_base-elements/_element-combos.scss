@@ -84,19 +84,23 @@
   padding: $unit-px/2 $unit-px;
 }
 
+@mixin kbd-code-samp-child( $el ) {
+  #{$el} {
+    @extend %kbd-code-samp;
+  }
+
+  p, li, blockquote {
+    #{$el} {
+      @extend %kbd-code-samp__child;
+    }
+  }
+}
+
 
 // Code
 @if $base-code == true {
 
-  code {
-    @extend %kbd-code-samp;
-  }
-
-  p, li {
-    code {
-      @extend %kbd-code-samp__child;
-    }
-  }
+  @include kbd-code-samp-child( code );
 
 } // -- end @if --
 
@@ -104,15 +108,7 @@
 // Kbd
 @if $base-kbd == true {
 
-  kbd {
-    @extend %kbd-code-samp;
-  }
-
-  p, li {
-    kbd {
-      @extend %kbd-code-samp__child;
-    }
-  }
+  @include kbd-code-samp-child( kbd );
 
 } // -- end @if --
 
@@ -120,14 +116,6 @@
 // Samp
 @if $base-samp == true {
 
-  samp {
-    @extend %kbd-code-samp;
-  }
-
-  p, li {
-    samp {
-      @extend %kbd-code-samp__child;
-    }
-  }
+  @include kbd-code-samp-child( samp );
 
 } // -- end @if --
