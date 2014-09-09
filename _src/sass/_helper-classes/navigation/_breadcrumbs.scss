@@ -12,8 +12,8 @@
     li {
 
       &:after {
-        @extend %display-inline-block;
         content: ">";
+        display: inline-block;
       }
 
       &:last-child { // "active crumb"
