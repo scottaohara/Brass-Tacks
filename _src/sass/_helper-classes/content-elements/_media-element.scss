@@ -1,14 +1,4 @@
 // ----------------------------------------------------------------------------
-//  Shared Media Styling
-// ----------------------------------------------------------------------------
-
-%media-block {
-  @extend %clearfix;
-  margin-bottom: $unit-em * 2;
-}
-
-
-// ----------------------------------------------------------------------------
 //  Media Element
 // ----------------------------------------------------------------------------
 
@@ -16,7 +6,7 @@
 
   // Standard Media Element
   .media-block {
-    @extend %media-block;
+    margin-bottom: $unit-em * 2;
 
     // Inside the text area for the media element, make sure the final
     // element has a margin-bottom of zero so as not to add increase the
