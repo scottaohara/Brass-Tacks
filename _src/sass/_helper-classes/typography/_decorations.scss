@@ -108,4 +108,14 @@
   // ----------------------------------------------------------------------------
   // <a class="txt-no-underline">Link Label</a>
 
+
+  %txt-upper,
+  .txt-upper {
+    text-transform: uppercase;
+  }
+
+  // Example mark-up:
+  // ----------------------------------------------------------------------------
+  // <a class="txt-upper">Uppercase Link Label</a>
+
 } // -- end @if --

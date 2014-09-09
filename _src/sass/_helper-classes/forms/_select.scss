@@ -4,9 +4,13 @@
 
 @if $helper-forms--select == true {
 
+  // \9 IE hacks in place to work around the fact that IE easily
+  // let you hide the default browser select down arrow.
+
   // Drop Down Selection
   .select-container {
     @extend %input-text;
+    overflow: hidden \9;
     position: relative;
 
     &:after {
@@ -30,7 +34,13 @@
     font-family: $f-brand;
     margin: 0;
     padding: 0;
+    width: 115% \9;
     z-index: 2;
+
+    // Remove the default select down arrow in IE10+
+    &::-ms-expand {
+      display: none;
+    }
   }
 
   // Example mark-up:
@@ -57,17 +67,30 @@
 
 @if $helper-forms--multi-select == true {
 
-  .input-select-multi {
+  .input-multi-select {
     @extend %input-text;
 
     option {
-      padding: $unit-px 2px;
+      padding: $unit-px;
     }
+  }
+
+  .input-multi-select--resize {
+    min-height: 75px;
+    resize: vertical;
   }
 
   // Example mark-up:
   // ----------------------------------------------------------------------------
-  //  <select id="multi_select" multiple size="5" class="input-select-multi">
+  //  <select id="multi_select" multiple size="5" class="input-multi-select">
+  //    <option>...</option>
+  //    <option>...</option>
+  //    <option>...</option>
+  //  </select>
+
+  // Example mark-up:
+  // ----------------------------------------------------------------------------
+  //  <select id="multi_select2" multiple size="5" class="input-multi-select input-multi-select--resize">
   //    <option>...</option>
   //    <option>...</option>
   //    <option>...</option>

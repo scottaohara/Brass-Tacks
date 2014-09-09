@@ -3,12 +3,15 @@
 // ----------------------------------------------------------------------------
 
 // Full container for the entire page.
-.page {}
+.page {
+
+}
 
 
 // Generic tag to wrap around content within sections to apply a max width
 // to the interior content while allowing for larger sections to expand
 // the whole page for BG styling purposes
+%content,
 .content {
   margin: 0 auto;
   max-width: 1000px;
