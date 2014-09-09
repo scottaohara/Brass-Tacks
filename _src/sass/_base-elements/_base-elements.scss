@@ -47,12 +47,34 @@ html, body {
 // ----------------------------------------------------------------------------
 @if $base-focus == true {
 
-  [tabindex]:focus {
+  :focus {
     box-shadow: inset 0 0 2px rgba(0,0,0,.4);
   }
 
 } // -- end @if --
 
+
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Silent Display Classes
+//
+//  Extended classes will populate here on compile
+// ----------------------------------------------------------------------------
+
+%display-block {
+  display: block;
+}
+
+%display-inline-block {
+  display: inline-block;
+}
+
+%display-none {
+  display: none;
+}
 
 
 
@@ -111,7 +133,6 @@ html, body {
   }
 
 } // -- end @if --
-
 
 
 

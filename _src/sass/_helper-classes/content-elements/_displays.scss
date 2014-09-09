@@ -1,4 +1,40 @@
 // ----------------------------------------------------------------------------
+//  Display Element Silent Classes
+//
+//  These silent classes may be useful regardless if you need the default
+//  Brass Tacks class names they are associated with.
+// ----------------------------------------------------------------------------
+
+
+// Hide text that you don't want visible
+// like on buttons that use an icon instead of text
+%txt-hide {
+  color: transparent;
+  font: 0/0 a;
+  text-shadow: none;
+}
+
+// Hides from screen readers and browsers
+%hidden {
+  display: none !important;
+  height: 0;
+  visibility: hidden;
+}
+
+// Hides only from browser rendering, but still
+// accessible by screen readers & keyboard controls
+%invis {
+  border: 0 !important;
+  color: transparent;
+  height: 1px !important;
+  left: -999999px !important;
+  position: absolute !important;
+  width: 1px !important;
+}
+
+
+
+// ----------------------------------------------------------------------------
 //  Display Element Classes
 // ----------------------------------------------------------------------------
 
@@ -62,12 +98,6 @@
 
 
   // Hides from screen readers and browsers
-  .hidden {
-    @extend %hidden;
-  }
-
-
-  // Hide from browsers but not from screen readers
   .invis {
     @extend %invis;
   }
@@ -85,11 +115,11 @@
   .mute {
     opacity: .75;
 
-    &--half {
+    &-half {
       opacity: .5;
     }
 
-    &--quarter {
+    &-quarter {
       opacity: .25;
     }
   }
