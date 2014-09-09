@@ -17,16 +17,8 @@
   .display-inline-all > * {
     display: inline-block;
     margin-right: $unit-px;
-    width: auto !important;
-  }
-
-
-  // Inline items with a list element
-  .display-inline-list > li {
-    display: inline-block;
-    margin-bottom: 0;
-    margin-right: $unit-px;
     vertical-align: middle;
+    width: auto !important;
   }
 
 } // -- end @if --

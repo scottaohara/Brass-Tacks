@@ -1,6 +1,10 @@
-// ----------------------------------------------------------------
+// ----------------------------------------------------------------------------
 //  Vendor Prefix
-// ----------------------------------------------------------------
+//
+//  This mixin is here in case you want to easily add vendor prefixes
+//  to properties, but aren't using autoprefixer or need to specifically
+//  add more prefixes than what your autoprefixer is set up to do by default.
+// ----------------------------------------------------------------------------
 
 @mixin vendor($property, $value, $moz: true, $ms: true, $o: true, $webkit: true) {
   @if $moz    == true  {    -moz-#{$property}: $value; }
