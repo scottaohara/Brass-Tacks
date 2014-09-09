@@ -4,43 +4,30 @@
 
 @if $helper-content-displays--inlines == true {
 
-  .inline {
+  .display-inline {
+    display: inline;
+    margin: 0 !important;
+    width: auto !important;
+  }
 
-    // Convert to inline
-    &-element {
-      display: inline;
-      margin: 0 !important;
-      width: auto !important;
-    }
+  // Inline-block Individual Elements
+  // OR
+  // ALL elements within a parent element
+  .display-inline-block,
+  .display-inline-all > * {
+    display: inline-block;
+    margin-right: $unit-px;
+    width: auto !important;
+  }
 
 
-    // Inline-block Individual Elements
-    // OR
-    // ALL elements within a parent element
-    &-block-element,
-    &-all > * {
-      @extend %display-inline-block;
+  // Inline items with a list element
+  .display-inline-list > li {
+      display: inline-block;
+      margin-bottom: 0;
       margin-right: $unit-px;
-      width: auto !important;
-    }
-
-
-    // Inline items with a list element
-    &-list {
-      margin-bottom: $unit-px4;
-
-      > li {
-        display: inline-block;
-        margin-bottom: 0;
-        margin-right: $unit-px;
-        vertical-align: middle;
-
-        &:last-child {
-          margin-right: 0;
-        }
-      }
-    }
-  } // end .inline-
+      vertical-align: middle;
+  }
 
 } // -- end @if --
 
