@@ -2,14 +2,10 @@
 //  Shared Media Styling
 // ----------------------------------------------------------------------------
 
-%media {
+%media-block {
   @extend %clearfix;
   margin-bottom: $unit-em * 2;
 }
-
-
-
-
 
 
 // ----------------------------------------------------------------------------
@@ -19,26 +15,37 @@
 @if $helper-content-media-element == true {
 
   // Standard Media Element
-  .media {
-    @extend %media;
-
-
+  .media-block {
+    @extend %media-block;
 
     // Inside the text area for the media element, make sure the final
     // element has a margin-bottom of zero so as not to add increase the
     // margin-bottom of the main media element.
-    &-text > :last-child {
-      margin-bottom: 0;
+    &__text {
+      overflow: hidden;
+
+      > :last-child {
+        margin-bottom: 0;
+      }
     }
 
+    &__title {
+      font-size: $txt-h3;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
 
 
     // the .media-object contains the photo, illustration, video,
     // icon / avatar or other like media item.
-    &-object {
+    &__object {
       float: left;
       margin: 0 $unit-px4 $unit-px2 0;
-      //max-width: $media-object-area;  // default 30% max-width
+      max-width: 100%;
+
+      > {
+        display: block;
+      }
     }
 
   } // end .media
@@ -46,13 +53,13 @@
 
   // Example mark-up:
   // ----------------------------------------------------------------------------
-  //  <div class="media">
-  //    <div class="media-object">
-  //      <img src="img.jpg" alt="" />
+  //  <div class="media-block">
+  //    <div class="media-block__object w-40 w-default">
+  //      <img src="http://placekitten.com/400/400" alt="" />
   //    </div>
-  //    <div class="media-text">
-  //      <h1 class="media-title">Title for Media Element</h1>
-  //      <p class="media-subtitle">sub title</p>
+  //    <div class="media-block__text">
+  //      <h2 class="media-block__title">Title for Media Element</h2>
+  //      <p class="txt-h5">sub title</p>
   //      <p>Paragraph text to go along with media element.</p>
   //    </div>
   //  </div>
@@ -60,19 +67,6 @@
   // Divs were used in this example, but the media element could be applied to
   // various situations. e.g. It could be used for a header or footer area where
   // a logo is placed on the right or left w/text to the side.
-
-
-
-  // Titles in media elements may require slightly different typography styling
-  // to long-form content areas. These are helper classes to make titles to
-  // reduce the spacing between titles, subtitles and additional text / elements
-  // inside of a media element.
-
-  .media-title,
-  .media-subtitle {
-    line-height: 1.3;
-    margin-bottom: $unit-px;
-  }
 
 } // -- end @if --
 
@@ -89,81 +83,11 @@
 @if $helper-content-media-element--reverse == true {
 
   // Have media object appear on the right side w/ text on the left
-  .media-reverse {
-    @extend %media;
+  .media-block--reverse {
 
-    .media-object {
+    .media-block__object {
       float: right;
       margin: 0 0 $unit-px2 $unit-px4;
-    }
-  }
-
-} // -- end @if --
-
-
-
-
-
-
-// ----------------------------------------------------------------------------
-//  Media Element No Wrap
-// ----------------------------------------------------------------------------
-
-@if $helper-content-media-element--no-wrap == true {
-
-  // Media Element that prevents text-wrapping around the media object
-  // ** Helper class, use in addition to .media or .media-reverse **
-  .media-no-wrap {
-
-    .media-text {
-      float: left;
-      width: 70%;
-    }
-
-    .media-object {
-      @include calc(max-width, '30% - 16px');
-    }
-  }
-
-
-
-  .media-no-wrap-split {
-
-    .media-text {
-      float: left;
-      width: 50%;
-    }
-
-    .media-object {
-      @include calc(max-width, '50% - 16px');
-    }
-  }
-
-
-
-  .media-no-wrap-fourth {
-
-    .media-text {
-      float: left;
-      width: 75%;
-    }
-
-    .media-object {
-      @include calc(max-width, '25% - 16px');
-    }
-  }
-
-
-
-  .media-no-wrap-opposite {
-
-    .media-text {
-      float: left;
-      width: 30%;
-    }
-
-    .media-object {
-      @include calc(max-width, '70% - 16px');
     }
   }
 
