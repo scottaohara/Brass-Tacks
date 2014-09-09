@@ -23,10 +23,10 @@
 
   // Inline items with a list element
   .display-inline-list > li {
-      display: inline-block;
-      margin-bottom: 0;
-      margin-right: $unit-px;
-      vertical-align: middle;
+    display: inline-block;
+    margin-bottom: 0;
+    margin-right: $unit-px;
+    vertical-align: middle;
   }
 
 } // -- end @if --

@@ -138,9 +138,14 @@
 
   pre {
     @extend %reset--spacing;
-    line-height: 1;
     overflow: auto;
     white-space: pre-wrap;
+
+    @if $base-code == true {
+      code {
+        line-height: 1.5;
+      }
+    }
   }
 
 } // -- end @if --
@@ -164,7 +169,12 @@
     vertical-align: baseline;
   }
 
-  sub { bottom: -.25em; }
-  sup { top: -.5em; }
+  sub {
+    bottom: -.25em;
+  }
+
+  sup {
+    top: -.5em;
+  }
 
 } // -- end @if --
