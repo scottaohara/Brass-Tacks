@@ -1,0 +1,29 @@
+// ----------------------------------------------------------------------------
+//  Slant Text
+// ----------------------------------------------------------------------------
+
+// Slants text, use this paired with .txt-highlight to slant the text
+// as well as the entire element. (if you semantically want to just 'slant'
+// the text, use the <i> or <em>)
+.txt-slant {
+  transform: skewX(-16deg);
+}
+
+// Example mark-up:
+// ----------------------------------------------------------------------------
+// <span class="txt-highlight txt-slant">
+//   Text Goes here
+// </span>
+
+
+.txt-slant__correct {
+  display: inline-block;
+  padding: 0 $unit-px;
+  transform: skewX(16deg);
+}
+
+// Example mark-up:
+// ----------------------------------------------------------------------------
+// <span class="txt-slant">
+//   <span class="txt-slant__correct">Text Goes here</span>
+// </span>

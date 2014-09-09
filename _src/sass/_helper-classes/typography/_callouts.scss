@@ -59,19 +59,21 @@
 
 @if $helper-type--callouts__decoration == true {
 
-  $txt-weight-list: bold, bolder, normal;
-
-  @each $weight in $txt-weight-list {
-    %txt-#{$weight},
-    .txt-#{$weight} {
-      font-weight: $weight;
-    }
+  %txt-bold,
+  .txt-bold {
+    font-weight: bold;
   }
+
+  %txt-normal,
+  .txt-normal {
+    font-weight: normal;
+  }
+
 
   // Example mark-up:
   // ----------------------------------------------------------------------------
   // <p>
-  //   I want to have <span class="txt-bolder">bolder text here</span>.
+  //   I want to have <span class="txt-bold">bold text here</span>.
   // </p>
 
 
@@ -116,48 +118,13 @@
   // </p>
 
 
-  %txt-underline--none,
-  .txt-underline--none {
+  %txt-no-underline,
+  .txt-no-underline {
     text-decoration: none;
   }
 
   // Example mark-up:
   // ----------------------------------------------------------------------------
-  // <a class="txt-underline--none">Link Label</a>
-
-} // -- end @if --
-
-
-
-
-// ----------------------------------------------------------------------------
-//  Callout Text -- Tilt Text
-// ----------------------------------------------------------------------------
-
-@if $helper-type--callouts__slant == true {
-
-  // Background Text Highlight - Skewed
-  .txt-slant {
-    @include transform(skewX(-16deg));
-  }
-
-  // Example mark-up:
-  // ----------------------------------------------------------------------------
-  // <span class="txt-highlight txt-slant">
-  //   Text Goes here
-  // </span>
-
-
-  .txt-correct {
-    @include transform(skewX(16deg));
-    display: inline-block;
-    padding: 0 $unit-px;
-  }
-
-  // Example mark-up:
-  // ----------------------------------------------------------------------------
-  // <span class="txt-slant">
-  //   <span class="txt-correct">Text Goes here</span>
-  // </span>
+  // <a class="txt-no-underline">Link Label</a>
 
 } // -- end @if --
