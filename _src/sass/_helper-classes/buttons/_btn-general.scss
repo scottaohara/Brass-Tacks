@@ -57,6 +57,7 @@
   .btn {
     @extend %btn;
     background: $btn-bg;
+    color: $c-hell;
 
     &:hover,
     &:focus {
@@ -207,6 +208,14 @@ $btn-sizes: (
       font-size: nth($bsv, 2);
       padding: nth($bsv, 3)
     }
+  }
+
+  .btn--fat {
+    padding: $btn-pad*2 $btn-pad*4;
+  }
+
+  .btn--thin {
+    padding: $btn-pad /2 $btn-pad;
   }
 
   .btn--wide {
