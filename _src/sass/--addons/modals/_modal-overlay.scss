@@ -1,0 +1,65 @@
+// ----------------------------------------------------------------------------
+//  Modal Overlay
+// ----------------------------------------------------------------------------
+
+// Modal overlay / container
+.modal-overlay {
+  background: rgba(0, 0, 0, .8);
+  display: flex;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  overflow: auto;
+  padding: 1.5em;
+  position: fixed;
+  top: 0;
+  transition: opacity .2s;
+  visibility: hidden;
+  width: 100%;
+  z-index: -1;
+
+  &[aria-hidden="false"] {
+    opacity: 1;
+    visibility: visible;
+    z-index: 5;
+
+    .modal-overlay__content {
+      transform: scale(1);
+    }
+  }
+}
+
+
+// Content area of modal
+.modal-overlay__content {
+  background: $c-white;
+  margin: auto;
+  max-width: 800px;
+  overflow: auto;
+  overflow-x: hidden;
+  padding: 1.5em;
+  position: relative;
+  transform: scale(0.8);
+  transition: transform .3s;
+  width: 100%;
+
+  &__title {
+    margin-top: 0;
+    padding-right: 1.25em;
+  }
+}
+
+// Example mark-up:
+//
+// <div class="modal-overlay" id="modal_window"
+//      aria-hidden="true" role="dialog"
+//      aria-labelledby="modal_title">
+//   <div class="modal-overlay__content" id="modal_holder" role="document">
+//     <h1 class="modal-overlay__content__title" id="modal_title">
+//        Modal Title
+//     </h1>
+//     <p>
+//       ...
+//     </p>
+//   </div>
+// </div>
