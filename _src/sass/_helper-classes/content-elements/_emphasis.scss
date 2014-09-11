@@ -9,6 +9,15 @@
   padding: $unit-px4;
 }
 
+%emph-content-shared {
+  &:before,
+  &:after {
+    display: none;
+    // remove before/after quotations if paired with
+    // that element
+  }
+}
+
 
 // ----------------------------------------------------------------------------
 //  Emphasis Block
@@ -20,19 +29,11 @@
     @extend %emph-shared;
     background: $c-off-white;
     border-radius: $unit-px;
-    display: block;
-    // force a display block so the class can be applied
-    // to any element & get consistent styling
   }
 
   @if $base-q == true {
     q.emph-block  {
-      &:before,
-      &:after {
-        display: none;
-        // remove before/after quotations if paired with
-        // that element
-      }
+      @extend %emph-content-shared;
     }
   }
 
@@ -48,7 +49,7 @@
 // ----------------------------------------------------------------------------
 //  Emphasis Block -- Callout
 //
-//  A stronger emphasis block
+//  Make a stronger emphasis block
 // ----------------------------------------------------------------------------
 
 @if $helper-content-emphasis--callout == true {
@@ -87,6 +88,12 @@
     @extend %emph-shared;
   }
 
+  @if $base-q == true {
+    q.emph-transparent  {
+      @extend %emph-content-shared;
+    }
+  }
+
   // Example mark-up
   // ----------------------------------------------------------------------------
   // <div class="emph-transparent">
@@ -103,7 +110,7 @@
 
   // Example mark-up
   // ----------------------------------------------------------------------------
-  // <div class="emph-block emph-small">
+  // <div class="emph-block emph--small">
   //  ...
   // </div>
 
