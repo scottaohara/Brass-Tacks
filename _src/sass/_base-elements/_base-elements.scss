@@ -4,10 +4,12 @@
 @if $base-border-box == true {
 
   // Make a smarter Box Model
-  *,
-  *:after,
-  *:before {
+  html {
     box-sizing: border-box;
+  }
+
+  *, *:before, *:after {
+    box-sizing: inherit;
   }
 
 } // -- end @if --
