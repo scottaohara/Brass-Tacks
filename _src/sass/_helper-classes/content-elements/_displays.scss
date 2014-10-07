@@ -98,7 +98,8 @@
 
 
   // Hides from screen readers and browsers
-  .invis {
+  .invis,
+  .is-hidden {
     @extend %invis;
   }
 
