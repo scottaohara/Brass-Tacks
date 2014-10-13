@@ -26,6 +26,7 @@ $flip-height:     500px;
   perspective: 1000px;
 
   &:hover {
+
     .flip-back {
       transform: rotateY(0deg);
     }
@@ -33,6 +34,7 @@ $flip-height:     500px;
     .flip-front {
       transform: rotateY(-180deg);
     }
+
   }
 }
 

@@ -5,12 +5,12 @@
 @if $helper-type--lists == true {
 
   // Kill list styling - removes list markings & padding
-  .txt-indent-unstyled {
+  .list-clean {
     @extend %list-unstyled;
   }
 
   // For non-semantic list numbering
-  .txt-indent-number {
+  .list-number {
     list-style-type: decimal;
   }
 
