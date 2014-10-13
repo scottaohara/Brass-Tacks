@@ -9,7 +9,7 @@
   // of the input-text styling that doesn't break it in webkit & standardizes
   // it in other browsers
 
-  .input--color {
+  .input-color {
     background-image: none;
     border: 1px solid $c-grey;
     font-family: $f-brand;
@@ -24,6 +24,13 @@
       box-shadow: $bs-focus;
     }
   }
+
+  // Example mark-up:
+  // ----------------------------------------------------------------------------
+
+  // <div class="form-row">
+  //   <input type="color" class="input-color" placeholder="Choose a color..." />
+  // </div>
 
 } // -- end @if --
 
@@ -43,22 +50,31 @@
   // JavaScript to fully make functional. It may not be worth it to
   // implement this due to the JS dependency.
 
-  .input--file {
+  .input-file {
     bottom: 0;
     cursor: pointer;
     left: 0;
-    opacity: 0;
+    opacity: .001;
     position: absolute;
     right: 0;
     top: 0;
     z-index: 3;
 
-    &--container {
+    &:focus ~ .input-file-select {
+      outline: 2px solid blue;
+    }
+
+    // container to the input-file
+    &-block {
       position: relative;
 
       label {
         cursor: default;
       }
+    }
+
+    &-select {
+
     }
 
     &__area {
@@ -67,21 +83,26 @@
       display: inline-block;
       width: 75%;
     }
+
+    &-placeholder {
+      color: $c-grey;
+      font-style: italic;
+    }
   }
 
 
   // Example mark-up:
   // ----------------------------------------------------------------------------
-  // <div class="input--file--container">
-  //   <input type="file" id="input_file" class="input--file" />
+  // <div class="input-file-block">
+  //   <input type="file" id="input_file" class="input-file" />
 
   //   <label for="input_file">File Input</label>
 
-  //   <span class="input--file__area">
-  //     <span class="placeholder">Select a file...</span>
+  //   <span class="input-file-select">
+  //     <span class="input-file-placeholder" id="input_file_text">Select a file...</span>
   //   </span>
 
-  //   <span class="btn">Select</span>
+  //   <span class="btn btn--prime">Select</span>
   // </div>
 
 } // -- end @if --

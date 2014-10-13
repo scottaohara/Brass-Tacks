@@ -8,11 +8,9 @@
   border: $btn-border-width solid;
   cursor: pointer;
   display: inline-block;
-  font: {
-    family: $f-btn-family;
-      size: $f-btn-size;
-    weight: $f-btn-weight;
-  }
+  font-family: $f-btn-family;
+  font-size: $f-btn-size;
+  font-weight: $f-btn-weight;
   line-height: normal;
   padding: $btn-pad $btn-pad*2;
   text-align: center;

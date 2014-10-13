@@ -13,7 +13,7 @@ $input-sizing: (
   // run through $input-sizing list to create
   // classes / assign styling values
   @each $s-value in $input-sizing {
-    .input--#{nth($s-value, 1)} {
+    .input-#{nth($s-value, 1)} {
       font-size: nth($s-value, 2);
       padding: nth($s-value, 3);
     }
@@ -32,15 +32,15 @@ $input-sizing: (
 
 @if $helper-forms--validation == true {
 
-  .input--error {
+  .input-error {
     border: 1px solid $c-red;
   }
 
-  .input--success {
+  .input-success {
     border: 1px solid $c-green;
   }
 
-  .input--warning {
+  .input-warning {
     border: 1px solid $c-orange;
   }
 

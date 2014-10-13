@@ -2,6 +2,8 @@
 //  Flip Effect
 // ----------------------------------------------------------------------------
 
+$flip-height:     500px;
+
 // Silent Classes
 %flip-back-front {
   @extend %preserve-3d;
@@ -38,8 +40,8 @@
 // Container of Flipping Views
 .flipper {
   @extend %preserve-3d;
-  transition: .6s;
   position: relative;
+  transition: .6s;
 }
 
 
@@ -59,8 +61,10 @@
 
 
 // Additional Styling for multiple flip units
-.flip-container, .flip-front, .flip-back {
-  height: 500px;
+.flip-container,
+.flip-front,
+.flip-back {
+  height: $flip-height;
   max-width: 100%;
 }
 
