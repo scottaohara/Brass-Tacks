@@ -6,14 +6,30 @@
 
 $rem-base: 16 !default;
 
-@function rem($px) {
+@function rem( $px ) {
   $rem-vals: ();
 
   @each $v in $px {
-    $val-in-rems: strip-unit($v) / $rem-base * 1rem;
-    $rem-vals: append($rem-vals, $val-in-rems);
+    $val-in-rems: strip-unit( $v ) / $rem-base * 1rem;
+    $rem-vals: append( $rem-vals, $val-in-rems );
   }
 
   @return $rem-vals;
 
 }
+
+// Example:
+// ------------------------------------------------
+//
+// Input:
+//
+// .class {
+//   width: rem( 600px );
+// }
+//
+//
+// Output:
+//
+// .class {
+//   width: 37.5rem
+// }

@@ -4,12 +4,13 @@
 //  Use this function to strip units from number values
 // ----------------------------------------------------------------------------
 
-@function strip-unit($value) {
-  @return $value / ($value * 0 + 1);
+@function strip-unit( $value ) {
+  @return $value / ( $value * 0 + 1 );
 }
 
 
 // Example:
+// ------------------------------------------------
 //
-// $value:       26px;
-// $unitless:    strip-unit($value); // this will be 26
+// $val:          26px;
+// $unitless:     strip-unit( $val ); // this will be 26
