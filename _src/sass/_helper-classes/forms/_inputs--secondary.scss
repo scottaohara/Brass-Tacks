@@ -50,59 +50,64 @@
   // JavaScript to fully make functional. It may not be worth it to
   // implement this due to the JS dependency.
 
+  .input-file-block {
+    @extend %input-text;
+    padding: 0;
+    position: relative;
+
+    &:hover {
+      .input-file-btn {
+        @extend %btn:hover;
+      }
+    }
+  }
+
   .input-file {
+    height: 1px;
+    left: -99999px;
+    position: absolute;
+    width: 1px;
+
+    &:focus ~ .input-file-placeholder {
+      background: #fff;
+      border-color: #333;
+      box-shadow: 0 0 0 1px #39CCCC;
+    }
+  }
+
+  .input-file-placeholder {
+    display: block;
+    margin: 0;
+    padding: 8px;
+    position: relative;
+  }
+
+  .input-file-btn {
+    @extend %btn;
     bottom: 0;
-    cursor: pointer;
-    left: 0;
-    opacity: .001;
+    pointer-events: none;
     position: absolute;
     right: 0;
     top: 0;
-    z-index: 3;
-
-    &:focus ~ .input-file-select {
-      outline: 2px solid blue;
-    }
-
-    // container to the input-file
-    &-block {
-      position: relative;
-
-      label {
-        cursor: default;
-      }
-    }
-
-    &-select {
-
-    }
-
-    &__area {
-      @extend %input-text;
-      cursor: pointer;
-      display: inline-block;
-      width: 75%;
-    }
-
-    &-placeholder {
-      color: $c-grey;
-      font-style: italic;
-    }
+    z-index: 2;
   }
 
 
   // Example mark-up:
   // ----------------------------------------------------------------------------
+  // <label for="input_file">File Input</label>
+  //
   // <div class="input-file-block">
   //   <input type="file" id="input_file" class="input-file" />
-
-  //   <label for="input_file">File Input</label>
-
-  //   <span class="input-file-select">
-  //     <span class="input-file-placeholder" id="input_file_text">Select a file...</span>
+  //
+  //   <span class="input-file-placeholder">
+  //     Select a file...
   //   </span>
-
-  //   <span class="btn btn--prime">Select</span>
+  //
+  //   <span class="input-file-btn">
+  //     Browse
+  //   </span>
+  //
   // </div>
 
 } // -- end @if --
