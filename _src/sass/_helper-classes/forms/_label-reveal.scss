@@ -24,7 +24,7 @@
       padding: $unit-px;
     }
 
-    &:invalid{
+    &:invalid {
       & ~ .label-reveal {
         background: $c-message--error;
         border-radius: $unit-px $unit-px 0 0;
