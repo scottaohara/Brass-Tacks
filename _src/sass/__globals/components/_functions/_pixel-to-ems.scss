@@ -1,0 +1,29 @@
+$em-base: 16 !default;
+
+@function ems( $px ) {
+
+  $em-vals: ();
+
+  @each $v in $px {
+    $val-in-ems: strip-unit( $v ) / $em-base * 1em;
+    $em-vals: append( $em-vals, $val-in-ems );
+  }
+
+  @return $em-vals;
+}
+
+// Example:
+// ------------------------------------------------
+//
+// Input:
+//
+// .class {
+//   padding: ems(20px 30px);
+// }
+//
+//
+// Output:
+//
+// .class {
+//   padding: 1.25em 1.875em;
+// }

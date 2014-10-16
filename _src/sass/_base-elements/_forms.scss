@@ -184,6 +184,7 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
 @if $base-form--textarea == true {
 
   // Make textareas look like input areas, only bigger
+  %textarea,
   textarea {
     @extend %reset--form-elements;
     display: block;
@@ -252,12 +253,14 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
 
 @if $base-form--select == true {
 
+  %select,
   select {
     @extend %reset--form-elements;
     margin-bottom: $unit-px2;
     width: 100%;
   }
 
+  %optgroup,
   optgroup {
     font-weight: bold;
   }
@@ -275,8 +278,8 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
 
 @if $base-form--label == true {
 
-  label,
-  %label {
+  %label,
+  label {
     display: inline-block;
     margin-bottom: $unit-px;
 
@@ -298,6 +301,7 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
 
 @if $base-form--legend == true {
 
+  %legend,
   legend {
     @extend %txt-h5;
     display: inline-block;
