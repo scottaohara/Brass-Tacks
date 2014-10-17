@@ -8,6 +8,8 @@ organized and easy to find.
 * _base-elements
 * _helper-classes
 * _project
+* --addons
+* --starter
 
 
 All folders contain a '__import.scss' file to collect and

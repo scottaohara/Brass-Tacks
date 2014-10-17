@@ -1,0 +1,58 @@
+// ----------------------------------------------------------------------------
+//  Button Sizing Variations
+// ----------------------------------------------------------------------------
+
+$btn-sizes: (
+// size     font-size   padding
+   tiny     $txt-tiny   $btn-pad-tiny,
+   small    $txt-small  $btn-pad-small,
+   large    $txt-h3     $btn-pad-large,
+   xlarge   $txt-h2     $btn-pad-xlarge
+);
+
+
+@if $helper-btn--sizing == true {
+
+  // btn sizes
+  @each $bsv in $btn-sizes {
+    .btn--#{nth($bsv, 1)} {
+      font-size: nth($bsv, 2);
+      padding: nth($bsv, 3)
+    }
+  }
+
+  .btn--fat {
+    padding: $btn-pad*2 $btn-pad*4;
+  }
+
+  .btn--thin {
+    padding: $btn-pad /2 $btn-pad;
+  }
+
+  .btn--wide {
+    display: block;
+    width: 100%;
+  }
+
+} // -- end @if --
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+//  Button Corner Variations
+// ----------------------------------------------------------------------------
+
+@if $helper-btn--rounding == true {
+
+  .btn--soft {
+    border-radius: $unit-px2;
+  }
+
+  .btn--rounded {
+    border-radius: $circle;
+  }
+
+} // -- end @if --

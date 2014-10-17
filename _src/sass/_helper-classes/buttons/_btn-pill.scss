@@ -1,0 +1,38 @@
+// ----------------------------------------------------------------------------
+//  Button Pills
+// ----------------------------------------------------------------------------
+
+@if $helper-btn--pills == true {
+
+  // Pill container
+  .btn--pill {
+    @extend %clearfix;
+    @extend %margin-bottom;
+
+    &>:first-child {
+      border-radius: $unit-px2 0 0 $unit-px2;
+    }
+
+    &>:last-child {
+      border-radius: 0 $unit-px2 $unit-px2 0;
+    }
+
+    &>:not(:first-child) {
+      border-left: none;
+    }
+
+    .btn {
+      float: left;
+      margin-bottom: 0;
+      min-width: 100px;
+
+      &--small {
+        min-width: 80px;
+        padding-bottom: 6px;
+        padding-top: 6px;
+      }
+    }
+
+  }
+
+} // -- end @if --
