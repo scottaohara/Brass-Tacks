@@ -15,6 +15,12 @@
       &.row {
         margin-bottom: 0;
       }
+
+      .col {
+        @media screen and (max-width: $break-medium) {
+          margin-bottom: 0;
+        }
+      }
     }
 
     // add emphasis styling to a row or entire form

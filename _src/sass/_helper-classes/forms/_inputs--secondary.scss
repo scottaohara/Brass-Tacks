@@ -54,12 +54,6 @@
     @extend %input-text;
     padding: 0;
     position: relative;
-
-    &:hover {
-      .input-file-btn {
-        @extend %btn:hover;
-      }
-    }
   }
 
   .input-file {
@@ -69,9 +63,14 @@
     width: 1px;
 
     &:focus ~ .input-file-placeholder {
-      background: #fff;
+      background: $c-white;
       border-color: #333;
       box-shadow: 0 0 0 1px #39CCCC;
+    }
+
+    &[disabled] ~ .input-file-placeholder,
+    &[disabled] ~ .btn--file-input {
+      color: $c-grey;
     }
   }
 
@@ -82,9 +81,9 @@
     position: relative;
   }
 
-  .input-file-btn {
-    @extend %btn;
+  .btn.btn--file-input {
     bottom: 0;
+    line-height: 1;
     pointer-events: none;
     position: absolute;
     right: 0;
@@ -95,19 +94,17 @@
 
   // Example mark-up:
   // ----------------------------------------------------------------------------
-  // <label for="input_file">File Input</label>
-  //
   // <div class="input-file-block">
-  //   <input type="file" id="input_file" class="input-file" />
-  //
-  //   <span class="input-file-placeholder">
+  //   <input type="file" id="input_file" class="input-file" disabled />
+
+  //   <label for="input_file" class="input-file-placeholder" id="input_file_placeholder">
   //     Select a file...
-  //   </span>
-  //
-  //   <span class="input-file-btn">
+  //   </label>
+
+  //   <span class="btn btn--file-input">
   //     Browse
   //   </span>
-  //
+
   // </div>
 
 } // -- end @if --
