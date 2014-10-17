@@ -11,6 +11,10 @@
     &-row {
       padding: $form-row--padding;
       position: relative;
+
+      &.row {
+        margin-bottom: 0;
+      }
     }
 
     // add emphasis styling to a row or entire form
