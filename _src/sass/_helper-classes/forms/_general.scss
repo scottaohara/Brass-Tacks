@@ -2,6 +2,23 @@
 //  General Form Elements Helper Classes
 // ----------------------------------------------------------------------------
 
+%input-text {
+  background-color:   $c-input--bg;
+  border:             $input-border-style;
+  font-family:        $f-input--family;
+  margin-bottom:      $input--margin;
+  outline:            0;
+  padding:            $input--padding;
+  width:              100%;
+  -webkit-appearance: none;
+
+  &:focus {
+    background-color: $c-input--bg-focus;
+    box-shadow: $bs-input--focus;
+  }
+}
+
+
 @if $helper-forms--general == true {
 
   // Containers
@@ -46,21 +63,7 @@
   // see 'inputs--secondary' for additional
   // styling for specific input elements
 
-  %input-text {
-    background-color:   $c-input--bg;
-    border:             $input-border-style;
-    font-family:        $f-input--family;
-    margin-bottom:      $input--margin;
-    outline:            0;
-    padding:            $input--padding;
-    width:              100%;
-    -webkit-appearance: none;
 
-    &:focus {
-      background-color: $c-input--bg-focus;
-      box-shadow: $bs-input--focus;
-    }
-  }
 
   .input-text {
     @extend %input-text;
