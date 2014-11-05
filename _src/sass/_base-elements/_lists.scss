@@ -11,7 +11,7 @@
 
 // Normalize margins on list elements
 %list-elements-margin {
-  margin: 0 0 $unit-px4;
+  margin: 0 0 1em;
 }
 
 
@@ -29,11 +29,11 @@
   // Un/Ordered lists
   ol, ul {
     @extend %list-elements-margin;
-    padding-left: $unit-px * 6;
+    padding-left: 1.5em;
 
     ol, ul {
       // keep equal spacing li content followed by lists within lists
-      margin-top: $unit-px2;
+      margin-top: .5em;
     }
   }
 
@@ -73,7 +73,7 @@
 
   dd {
     @extend %list-elements-margin;
-    padding-left: $unit-px4;
+    padding-left: 1em;
   }
 
 } // -- end @if --

@@ -22,7 +22,7 @@
 
   &:after {
     font-size: $txt-small;
-    padding: $unit-px2;
+    padding: .5em;
     text-align: center;
   }
 
@@ -141,7 +141,7 @@
 
     &:after {
       left: 0;
-      margin-top: 7px;
+      margin-top: .5em;
     }
 
     &:hover {
@@ -163,12 +163,12 @@
 
     &:after {
       left: 0;
-      margin-bottom: 7px;
+      margin-bottom: .5em;
     }
 
     &:hover {
       &:after, &:before {
-        transform: translateY(-8px);
+        transform: translateY(-.5em);
       }
     }
   }
@@ -345,7 +345,7 @@
 
     &:after {
       left: 0;
-      margin-top: 7px;
+      margin-top: .5em;
     }
 
     &:hover {
@@ -367,12 +367,12 @@
 
     &:after {
       left: 0;
-      margin-bottom: 7px;
+      margin-bottom: .5em;
     }
 
     &:hover {
       &:after, &:before {
-        transform: translateY(-8px);
+        transform: translateY(-.5em);
       }
     }
   }

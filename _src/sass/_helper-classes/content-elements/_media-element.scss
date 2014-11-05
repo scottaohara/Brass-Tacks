@@ -22,7 +22,7 @@
     &__title {
       font-size: $txt-h3;
       line-height: 1.2;
-      margin-bottom: 8px;
+      margin-bottom: .5em;
     }
 
 
@@ -30,7 +30,7 @@
     // icon / avatar or other like media item.
     &__object {
       float: left;
-      margin: 0 $unit-px4 $unit-px2 0;
+      margin: 0 1em .5em 0;
       max-width: 100%;
 
       > {
@@ -76,7 +76,7 @@
 
     .media-block__object {
       float: right;
-      margin: 0 0 $unit-px2 $unit-px4;
+      margin: 0 0 .5em 1em;
     }
   }
 

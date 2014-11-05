@@ -188,7 +188,7 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
   textarea {
     @extend %reset--form-elements;
     display: block;
-    min-width: 60px;
+    min-width: 3.75em;
     overflow: auto;
     resize: vertical;
     vertical-align: top;
@@ -305,8 +305,8 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
   legend {
     @extend %txt-h5;
     display: inline-block;
-    margin-left: -$unit-px;
-    padding: 0 $unit-px;
+    margin-left: -.25em;
+    padding: 0 .25em;
   }
 
 } // -- end @if --

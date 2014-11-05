@@ -49,7 +49,7 @@
         font: 400 $f-blockquote-quotes $s-blockquote-quotes;
         line-height: 0;
         position: relative;
-        top: 2px;
+        top: .125em;
       }
 
       &:after {
@@ -68,7 +68,7 @@
       font-size: $s-blockquote-small;
       font-style: normal;
       margin-bottom: 0;
-      padding-left: $unit-px3;
+      padding-left: .75em;
 
       &:before {
         content: "– ";

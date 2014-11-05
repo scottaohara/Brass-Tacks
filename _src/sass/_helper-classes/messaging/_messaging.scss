@@ -54,7 +54,7 @@
   .close-message {
     border-radius: $circle;
     border: 1px solid;
-    padding: $unit-px $unit-px3;
+    padding: .25em .75em;
     position: absolute;
     right: -$unit-em*.5;
     text-decoration: none;
@@ -79,7 +79,7 @@
     @include tooltip();
 
     &:after {
-      border-radius: 2px;
+      border-radius: .125em;
       content: attr(data-tooltip);
     }
   }
@@ -104,13 +104,13 @@
     // Make fixed width Tooltips
     &-fixed-width {
       &:after {
-        width: 125px;
+        width: 7.875em;
       }
 
       &-wide {
         &:after {
-          max-width: 300px;
-          width: 300px;
+          max-width: 18.75em;
+          width: 18.75em;
         }
       }
     }

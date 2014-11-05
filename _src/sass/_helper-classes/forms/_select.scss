@@ -16,12 +16,12 @@
     &:after {
       bottom: 0;
       content: '\25BC';
-      height: 16px;
+      height: 1em;
       line-height: 1;
       margin: auto;
       pointer-events: none;
       position: absolute;
-      right: 8px;
+      right: .5em;
       top: 0;
     }
   }
@@ -71,12 +71,12 @@
     @extend %input-text;
 
     option {
-      padding: $unit-px;
+      padding: .25em;
     }
   }
 
   .input-multi-select--resize {
-    min-height: 75px;
+    min-height: 4.75em;
     resize: vertical;
   }
 

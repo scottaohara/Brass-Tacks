@@ -10,11 +10,11 @@
     @extend %margin-bottom;
 
     &>:first-child {
-      border-radius: $unit-px2 0 0 $unit-px2;
+      border-radius: .5em 0 0 .5em;
     }
 
     &>:last-child {
-      border-radius: 0 $unit-px2 $unit-px2 0;
+      border-radius: 0 .5em .5em 0;
     }
 
     &>:not(:first-child) {
@@ -27,9 +27,9 @@
       min-width: 100px;
 
       &--small {
-        min-width: 80px;
-        padding-bottom: 6px;
-        padding-top: 6px;
+        min-width: 5em;
+        padding-bottom: .375em;
+        padding-top: .375em;
       }
     }
 

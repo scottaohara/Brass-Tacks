@@ -10,12 +10,12 @@
   // styling purposes.
   .row {
     @extend %clearfix;
-    margin-bottom: $unit-px5;
-    margin-left: -$unit-px5 * 2;
+    margin-bottom: 1.25em;
+    margin-left: -2.5em;
 
     // Don't need as wide gutters?  Use this class to cut them in half.
     &.half-gutter {
-      margin-left: -$unit-px5;
+      margin-left: -2.5em;
     }
   }
 
@@ -26,19 +26,19 @@
     float: left;
     margin-bottom: 0;
     min-height: 1px;
-    padding-left: $unit-px5 * 2;
+    padding-left: 2.5em;
     position: relative;
     width: 100%; // default width is 100%
 
     @media screen and (max-width: $break-medium) {
-      margin-bottom: $unit-px5;
+      margin-bottom: 1.25em;
     }
   }
 
 
   // Adjust .col padding-left to account for half-gutter
   .half-gutter .col {
-    padding-left: $unit-px5;
+    padding-left: 1.25em;
   }
 
 
@@ -83,7 +83,7 @@
 
   .equal-grid {
     @extend %clearfix;
-    margin-bottom: $unit-px5;
+    margin-bottom: 1.25em;
 
     & > * {
       float: left;

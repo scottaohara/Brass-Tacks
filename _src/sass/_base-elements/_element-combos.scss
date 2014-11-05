@@ -70,20 +70,23 @@
   background: $c-code--bg;
   color: $c-code--text;
   border: $code-border;
-  border-left-width: 4px;
+  border-left-width: .25em;
   display: block;
   font: $f-code--size $f-code--family;
-  padding: $unit-px2;
+  padding: .5em;
 }
+
 
 // if a child of an element revise styling
 %kbd-code-samp__child {
   display: inline-block;
   font-size: $txt-tiny;
   margin: 0;
-  padding: $unit-px/2 $unit-px;
+  padding: .125em .25em;
 }
 
+
+// Write the code once, include into appropriate selectors
 @mixin kbd-code-samp-child( $el ) {
   #{$el} {
     @extend %kbd-code-samp;
