@@ -4,9 +4,9 @@
 
 %emph-shared {
   border: 1px solid $c-light-grey;
-  margin-bottom: $unit-px4;
-  min-height: 20px;
-  padding: $unit-px4;
+  margin-bottom: 1em;
+  min-height: 1.25em;
+  padding: 1em;
 }
 
 %emph-content-shared {
@@ -27,7 +27,7 @@
   .emph-block {
     @extend %emph-shared;
     background: $c-off-white;
-    border-radius: $unit-px;
+    border-radius: .25em;
   }
 
   @if $base-q == true {
@@ -55,9 +55,9 @@
 
   .emph-block--callout {
     border-color: $c-brand--2;
-    border-left-width: $unit-px;
+    border-#{$dir}-width: .25em;
     font-size: $txt-h5;
-    padding: $unit-px4;
+    padding: 1em;
 
     & > * {
       color: $c-brand--2;
@@ -104,7 +104,7 @@
   // A smaller emphasis block
   .emph-block--small {
     font-size: 90%;
-    padding: $unit-px2
+    padding: .5em
   }
 
   // Example mark-up
@@ -123,7 +123,7 @@
 
   //  Emphasis Image
   .emph-img {
-    border-radius: $unit-px;
+    border-radius: .25em;
     border: 1px solid $c-dark-grey;
     display: inline-block;
     overflow: hidden;
@@ -136,7 +136,7 @@
 
     &__caption {
       background: $c-white;
-      padding: 4px 12px;
+      padding: .25em .75em;
     }
   }
 

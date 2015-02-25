@@ -9,7 +9,7 @@
     &--row {
       display: table;
       height: 100%;
-      margin-bottom: 20px;
+      margin-bottom: 1.25em;
       table-layout: fixed;
       width: 100%;
     }
@@ -20,7 +20,7 @@
       padding: .75em;
       vertical-align: top;
 
-      @media screen and (max-width: 700px) {
+      @media screen and (max-width: 43.75em) {
         display: block;
       }
     }

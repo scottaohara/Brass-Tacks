@@ -23,19 +23,19 @@
     float: $col-side;
 
     @if $col-side == left {
-      margin-left: -$col-size + 40px;
+      margin-left: -$col-size + 2.5em;
     }
 
     @else if $col-side == right {
       margin-right: -$col-size;
     }
 
-    width: $col-size - 40px;
+    width: $col-size - 1.25em;
 
     @media screen and (max-width: $break-medium) {
       float: none;
-      margin: 0 0 20px;
-      padding-left: 40px;
+      margin: 0 0 1.25em;
+      padding-left: 2.5em;
       width: auto;
     }
   }

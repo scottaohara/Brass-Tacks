@@ -8,7 +8,7 @@
   a {
     display: block;
     line-height: 1;
-    padding: $unit-px;
+    padding: .25em;
     position: relative;
   }
 }
@@ -93,7 +93,7 @@
     @extend %nav-h;
 
     & > li {
-      float: left;
+      float: $dir;
     }
   }
 
@@ -159,7 +159,7 @@
 // ----------------------------------------------------------------------------
 
 @if $helper-nav--fixed == true {
-  $height-nav-fixed: 40px;
+  $height-nav-fixed: 2.5em;
 
   .nav-fixed-area {
     @include nav-fixed-area();
@@ -173,7 +173,7 @@
     // Place the burger nav icon/button to the right or left,
     // only applies if within a .nav-fixed-area
     .btn-mobile {
-      @include nav-mobile-btn($x: $unit-px2, $y: $unit-px2);
+      @include nav-mobile-btn($x: .5em, $y: .5em);
       // Default setting is top / right
     }
   }

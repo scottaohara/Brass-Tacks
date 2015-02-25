@@ -18,7 +18,7 @@
 
       &:last-child { // "active crumb"
         font-weight: 600;
-        padding: $unit-px;
+        padding: .25em;
 
         &:after {
           content: '';

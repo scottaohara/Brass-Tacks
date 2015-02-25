@@ -2,7 +2,7 @@
 //  Form Element Vars
 // ----------------------------------------------------------------------------
 
-$form-row--padding:           $unit-px 0 !default;
+$form-row--padding:           .25em 0 !default;
 
 $c-form-placeholder:          $c-dark-grey !default;
 $c-form-required:             $c-red !default;
@@ -14,7 +14,7 @@ $form-disable-overlay:        rgba(40,40,40,.1) !default;
 
 // Fieldset
 $form-block--border:          1px solid $c-grey !default;
-$form-block--padding:         $unit-px2 $unit-px3 !default;
+$form-block--padding:         .5em .75em !default;
 
 
 // Text Inputs
@@ -24,7 +24,7 @@ $c-input--bg-focus:           $c-off-white !default;
 $input-border-style:          1px solid $c-grey !default;
 $f-input--family:             $f-brand !default;
 $bs-input--focus:             $bs-4 !default;
-$input-padding:               $unit-px2 $unit-px !default;
+$input-padding:               .5em .25em !default;
 
-$input--padding:              $unit-px2 $unit-px !default;
-$input--margin:               $unit-px2 !default;
+$input--padding:              .5em .25em !default;
+$input--margin:               .5em !default;

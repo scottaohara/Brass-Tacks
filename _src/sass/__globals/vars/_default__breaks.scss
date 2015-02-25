@@ -2,11 +2,11 @@
 //  Media Query Break Points
 // ----------------------------------------------------------------------------
 
-$break-mini:           380px!default;
-$break-tiny:           500px!default;
-$break-small:          600px!default;
-$break-medium:         770px!default;
-$break-normal:         900px!default;
-$break-large:         1023px!default;
-$break-xlarge:        1200px!default;
-$break-xxlarge:       1600px!default;
+$break-mini:          23.75em !default;     // 380px
+$break-tiny:          31.25em !default;     // 500px
+$break-small:         37.5em !default;      // 600px
+$break-medium:        48.125em !default;    // 770px
+$break-normal:        56.25em !default;     // 900px
+$break-large:         64em !default;        // 1024px
+$break-xlarge:        75em !default;        // 1200px
+$break-xxlarge:       100em !default;       // 1600px

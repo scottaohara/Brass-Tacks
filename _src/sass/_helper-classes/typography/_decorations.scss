@@ -74,10 +74,10 @@
   %txt-highlight,
   .txt-highlight {
     background: $c-txt-highlight--bg;
-    border-radius: 2px;
+    border-radius: .125em;
     color: $c-txt-highlight--color;
     display: inline-block;
-    padding: $unit-px;
+    padding: .25em;
   }
 
   // Example mark-up:

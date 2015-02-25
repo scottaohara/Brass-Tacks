@@ -63,12 +63,12 @@ $btn-text-disable:          $c-off-black !default;
 
 
 // Padding
-$btn-pad:                   $unit-px2 !default;
+$btn-pad:                   .5em !default;
 
-$btn-pad-tiny:              $unit-px $unit-px2 !default;
-$btn-pad-small:             $unit-px2 $unit-px3 !default;
-$btn-pad-large:             $unit-px2 $unit-px*8 !default;
-$btn-pad-xlarge:            $unit-px3 $unit-px*8 !default;
+$btn-pad-tiny:              .25em .5em !default;
+$btn-pad-small:             .5em .75em !default;
+$btn-pad-large:             .5em 2em !default;
+$btn-pad-xlarge:            .75em 2em !default;
 
 
 

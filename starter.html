@@ -7,23 +7,23 @@
   <meta name="apple-mobile-web-app-title" content="iOS Home Screen Title" />
   <meta name="application-name" content="Windows Home Screen Title" />
 
-  <meta name="description"      content="" />
+  <meta name="description" content="" />
 
   <link rel="canonical" href="YORUWEBSITEHERE" />
 
   <!-- Styles -->
   <link rel="stylesheet" href="dist/css/master-project.css" />
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,700,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,700,700italic" />
 
   <!-- Favicon -->
   <link rel="shortcut icon" type="image/ico"  href="favicon.ico" />
 
-  <!-- Apple Touch Icon / Startup Screen  __ uncomment / update href to use.
+  <!-- Apple Touch Icon / Startup Screen  __ uncomment & update href to use.
   <link rel="apple-touch-icon-precomposed"    href="#apple-icon-144.png" />
   <link rel="apple-touch-startup-image"       href="#startup.png" />
   -->
 
-  <!-- Tile icon for Win8 (144x144 + tile color) __doesn't validate__
+  <!-- Tile icon for Win8 (144x144 + tile color) __creates 'invalid' HTML__
   <meta name="msapplication-TileImage" content="#apple-icon-144.png" />
   <meta name="msapplication-TileColor" content="#222222" />
   -->
@@ -69,7 +69,7 @@
 
     <div class="content-base">
       <main class="content" role="main">
-        <article> <!-- or <section -->
+        <article role="article"> <!-- or <section -->
           <h2>Article Heading</h2>
           <p>
             Content goes here
@@ -77,7 +77,7 @@
         </article>
       </main>
 
-      <aside class="content">
+      <aside class="content" role="complementary">
         <p>
           Content goes here
         </p>
@@ -95,8 +95,8 @@
   </div> <!-- end .page -->
 
 <!--
-  scripts ** if you need jQuery or other JavaScript
-  files for your site, uncomment out to use
+  scripts ** if you need JavaScript files for your site,
+  uncomment / place them here.
 
   <script src="assets/js/app.min.js"></script>
 -->
