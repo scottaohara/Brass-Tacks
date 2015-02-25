@@ -3,7 +3,7 @@
   *
   * Brass Tacks
   * by Scott O'Hara - @scottohara - github.com/scottaohara
-  * 0.9.8.3 - October 17, 2014
+  * 0.9.8.4 - February 25, 2015
   *
   *****************************************************************************
 */
@@ -17,6 +17,7 @@
 //  file imports to true or false.
 // ----------------------------------------------------------------------------
 
+
 // Import Library
 @import '__globals/__import';               // Includes global libraries
 
@@ -24,6 +25,12 @@
 // ----------------------------------------------------------------------------
 // Base Element Import Controller
 // ----------------------------------------------------------------------------
+
+// Left to Right Reading Direction
+$dir:                                         left !default;
+// valid values -- "left" or "right"                      false !default;
+
+
 
 // Base Elements
 $base-border-box:                             true !default;

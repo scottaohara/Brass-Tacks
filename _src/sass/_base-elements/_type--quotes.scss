@@ -59,7 +59,7 @@
 
       &:before {
         content: "\201C";
-        left: -1px;
+        #{$dir}: -1px;
       }
     }
 
@@ -68,7 +68,7 @@
       font-size: $s-blockquote-small;
       font-style: normal;
       margin-bottom: 0;
-      padding-left: .75em;
+      padding-#{$dir}: .75em;
 
       &:before {
         content: "– ";

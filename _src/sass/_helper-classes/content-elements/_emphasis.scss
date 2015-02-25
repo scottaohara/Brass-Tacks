@@ -55,7 +55,7 @@
 
   .emph-block--callout {
     border-color: $c-brand--2;
-    border-left-width: .25em;
+    border-#{$dir}-width: .25em;
     font-size: $txt-h5;
     padding: 1em;
 

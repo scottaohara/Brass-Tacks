@@ -86,7 +86,8 @@
 // Tooltip Positioning
 @mixin tooltip-position($location: bottom) {
   @if $location == left {
-     &:after, &:before {
+     &:after,
+     &:before {
       right: 100%;
     }
 
@@ -101,14 +102,16 @@
     }
 
     &:hover {
-      &:after, &:before {
+      &:after,
+      &:before {
         transform: translateX(-8px);
       }
     }
   }
 
   @else if $location == right {
-    &:after, &:before {
+    &:after,
+    &:before {
       left: 100%;
     }
 
@@ -123,14 +126,16 @@
     }
 
     &:hover {
-      &:after, &:before {
+      &:after,
+      &:before {
         transform: translateX(8px);
       }
     }
   }
 
   @else if $location == bottom {
-    &:after, &:before {
+    &:after,
+    &:before {
       top: 100%;
     }
 
@@ -145,14 +150,16 @@
     }
 
     &:hover {
-      &:after, &:before {
+      &:after,
+      &:before {
         transform: translateY(8px);
       }
     }
   }
 
   @else if $location == top {
-    &:after, &:before {
+    &:after,
+    &:before {
       bottom: 100%;
     }
 
@@ -167,7 +174,8 @@
     }
 
     &:hover {
-      &:after, &:before {
+      &:after,
+      &:before {
         transform: translateY(-.5em);
       }
     }
@@ -259,7 +267,8 @@
   border-bottom-color: $tt-border-bottom;
 
   @if $tt-transition == true {
-    &:after, &:before {
+    &:after,
+    &:before {
       transition: all $tt-transition-speed;
     }
   }
@@ -290,7 +299,8 @@
 // Tooltip Positioning
 @mixin tooltip-position($location: bottom) {
   @if $location == left {
-     &:after, &:before {
+     &:after,
+     &:before {
       right: 100%;
     }
 
@@ -305,14 +315,16 @@
     }
 
     &:hover {
-      &:after, &:before {
+      &:after,
+      &:before {
         transform: translateX(-8px);
       }
     }
   }
 
   @else if $location == right {
-    &:after, &:before {
+    &:after,
+    &:before {
       left: 100%;
     }
 
@@ -327,14 +339,16 @@
     }
 
     &:hover {
-      &:after, &:before {
+      &:after,
+      &:before {
         transform: translateX(8px);
       }
     }
   }
 
   @else if $location == bottom {
-    &:after, &:before {
+    &:after,
+    &:before {
       top: 100%;
     }
 
@@ -349,14 +363,16 @@
     }
 
     &:hover {
-      &:after, &:before {
+      &:after,
+      &:before {
         transform: translateY(8px);
       }
     }
   }
 
   @else if $location == top {
-    &:after, &:before {
+    &:after,
+    &:before {
       bottom: 100%;
     }
 
@@ -371,7 +387,8 @@
     }
 
     &:hover {
-      &:after, &:before {
+      &:after,
+      &:before {
         transform: translateY(-.5em);
       }
     }

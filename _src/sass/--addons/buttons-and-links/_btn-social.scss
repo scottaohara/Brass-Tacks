@@ -6,9 +6,9 @@
 [class*="btn--social"] {
   color: $c-white !important;
   min-width: 10.125em;
-  padding-left: 3.125em;
+  padding-#{$dir}: 3.125em;
   position: relative;
-  text-align: left;
+  text-align: $dir;
 }
 
 .social-icon {

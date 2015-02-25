@@ -8,8 +8,14 @@
     box-sizing: border-box;
   }
 
-  *, *:before, *:after {
+  *,
+  *:before,
+  *:after {
     box-sizing: inherit;
+
+    @if $dir == right {
+      direction: rtl;
+    }
   }
 
 } // -- end @if --
@@ -23,7 +29,8 @@
 // ----------------------------------------------------------------------------
 //  Basic HTML + Body styling
 // ----------------------------------------------------------------------------
-html, body {
+html,
+body {
   @extend %reset--spacing;
   background: $c-body--bg;
   color: $c-body--text;
@@ -152,7 +159,8 @@ html, body {
     background-color: transparent;
     color: $c-prime-action;
 
-    &:hover, &:active {
+    &:hover,
+    &:active {
       @extend %reset--outline;
       color: $c-prime-action--hover;
     }

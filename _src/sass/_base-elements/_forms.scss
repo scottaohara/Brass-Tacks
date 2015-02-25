@@ -305,7 +305,7 @@ $ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
   legend {
     @extend %txt-h5;
     display: inline-block;
-    margin-left: -.25em;
+    margin-#{$dir}: -.25em;
     padding: 0 .25em;
   }
 

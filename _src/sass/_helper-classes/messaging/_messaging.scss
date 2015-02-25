@@ -8,7 +8,7 @@
 
     // positioning the message
     &-position {
-      left: $unit-per;
+      #{$dir}: $unit-per;
       position: fixed;
       top: 0;
       width: 80%;
@@ -45,20 +45,6 @@
     &-info {
       @include messaging-unit($c-blue, $c-off-white);
     }
-  }
-
-  // close the message link/button
-  //
-  // TODO - revise / kill this
-  //
-  .close-message {
-    border-radius: $circle;
-    border: 1px solid;
-    padding: .25em .75em;
-    position: absolute;
-    right: -$unit-em*.5;
-    text-decoration: none;
-    top: -$unit-em*.5;
   }
 
 } // -- end @if --

@@ -70,7 +70,7 @@
   background: $c-code--bg;
   color: $c-code--text;
   border: $code-border;
-  border-left-width: .25em;
+  border-#{$dir}-width: .25em;
   display: block;
   font: $f-code--size $f-code--family;
   padding: .5em;

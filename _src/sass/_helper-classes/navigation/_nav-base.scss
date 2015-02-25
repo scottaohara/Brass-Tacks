@@ -93,7 +93,7 @@
     @extend %nav-h;
 
     & > li {
-      float: left;
+      float: $dir;
     }
   }
 

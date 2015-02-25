@@ -50,7 +50,7 @@
       border-top: none;
       border: 5px solid $c-brand--2;
       height: .625em;
-      left: 1px;
+      #{$dir}: 1px;
       position: absolute;
       top: -2px;
       transform: rotate(-49deg);
@@ -127,7 +127,7 @@
 
     &.labels:before {
       content: 'Off';
-      left: 5%;
+      #{$dir}: 5%;
       position: absolute;
       text-indent: 60%;
       top: 12%;
@@ -194,7 +194,7 @@
 
     &__option {
       border-right: 1px solid $c-grey;
-      float: left;
+      float: $dir;
       margin-bottom: 0;
       min-width: 3.75em;
       overflow: hidden;
@@ -208,7 +208,7 @@
         background: rgba(0,0,0,.5);
         content: '';
         height: 100%;
-        left: 0;
+        #{$dir}: 0;
         position: absolute;
         top: 0;
         transition: width .2s, background .2s;

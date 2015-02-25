@@ -29,7 +29,7 @@
   // Un/Ordered lists
   ol, ul {
     @extend %list-elements-margin;
-    padding-left: 1.5em;
+    padding-#{$dir}: 1.5em;
 
     ol, ul {
       // keep equal spacing li content followed by lists within lists
@@ -73,7 +73,7 @@
 
   dd {
     @extend %list-elements-margin;
-    padding-left: 1em;
+    padding-#{$dir}: 1em;
   }
 
 } // -- end @if --
