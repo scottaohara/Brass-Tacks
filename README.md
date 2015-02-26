@@ -17,26 +17,36 @@ Install SASS: http://sass-lang.com/install
 
 __however__
 
-I have also setup a Gulp task file to help minify and compile files.
+You may use the included Grunt build.
 
-Install Node.js: http://nodejs.org
+This build process requires Grunt `>=0.4.0`
 
-Install Gulp Globally: <code>$ npm install gulp -g</code>(may require sudo)
+If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install dependencies with this command:
 
-Install Gulp for your project: <code>$ npm install gulp --save-dev</code>
-
-Install Gulp plug-ins for Brass Tacks:
-
-<code>$ npm install gulp-ruby-sass gulp-minify-css gulp-autoprefixer gulp-imagemin gulp-clean gulp-rename event-stream --save-dev</code>
+```shell
+npm install
+```
 
 
+## Building your project
 
-## Building your dev environment
+Watch for changes
 
-Enter <code>gulp</code> in the terminal to run all gulp tasks.
+```shell
+grunt
+```
 
-Enter <code>gulp watch</code> to fire of tasks on change to Sass, images or JavaScript.
+Watch for changes with server at port `8000`
 
+```shell
+grunt server
+```
+
+or
+
+```shell
+grunt s
+```
 
 <hr />
 
