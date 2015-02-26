@@ -10,7 +10,7 @@
   // Drop Down Selection
   .select-container {
     @extend %input-text;
-    overflow: hidden \9;
+    overflow: hidden \9; // ie fix
     position: relative;
 
     &:after {

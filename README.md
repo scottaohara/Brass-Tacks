@@ -1,11 +1,11 @@
 # Brass Tacks -- Beta
-###(Last updated: 0.9.8.1 - October 13, 2014)
+###(Last updated: 0.9.8.4 - February 25, 2014)
 
-Brass Tacks is a professional Sass (.scss) framework that incorporates and standardizes many widely used HTML and CSS elements.
-
-Once Brass Tacks reaches the 1.0 release, there will be a full listing of thank yous to the many people who's work has influenced this framework.
+Brass Tacks is a professional Sass framework (written in the .scss syntax) that incorporates and standardizes many widely used HTML and CSS elements.
 
 Note: Until a final 1.0 stamp can be put on the code, there won't be a 'live' version of the framework available for viewing as there are still decisions being made on class names and some final thoughts to the structure of the files and base styling.
+
+However, the master branch is perfectly fine to use on projects right now. Version branches are where code updating and testing occurs, and while 'broken' code is never meant to be submitted, the version branches may contain 'in-progress' code that has bugs.
 
 
 
@@ -96,15 +96,15 @@ inuit.css - for inspiring various structural aspects of this framework.
 And many more really... thank you all.
 
 
-
 <hr  />
 
 
 #### In the Wild
 
-Pre-1.0 versions of Brass Tacks have been used on the sites listed below.
+Versions of Brass Tacks have been used on the sites listed below:
 
 ##### 2014
+* painease.med.yale.edu/PainEASE = 0.9.6.6
 * nikkisnow.com - 0.9.6.5
 * painease.med.yale.edu/PainEASE - 0.9.5
 * bedlampublishing.com - 0.9.0.7
