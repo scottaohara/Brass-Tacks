@@ -48,22 +48,12 @@
 }
 
 $ph-vendor-list: "::-moz-", ":-ms-input-", "::webkit-input-";
-$ph-vendor-list2: "&::-moz-", "&:-ms-input-", "&::webkit-input-";
-
 
 @if $base-form--placeholder-text == true {
 
   @each $ph in $ph-vendor-list {
     #{$ph}placeholder {
       @include placeholder-text($c-form-placeholder, italic);
-    }
-  }
-
-  @each $ph in $ph-vendor-list2 {
-    input[required] {
-      #{$ph}placeholder {
-        @include placeholder-text($c-form-required, italic);
-      }
     }
   }
 

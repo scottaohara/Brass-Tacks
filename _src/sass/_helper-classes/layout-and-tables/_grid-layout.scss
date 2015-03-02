@@ -1,6 +1,42 @@
 // ----------------------------------------------------------------------------
-//  Layout - Responsive Grid
+//  Layout - Responsive Widths & Basic Grid
 // ----------------------------------------------------------------------------
+
+@if $helper-widths == true {
+  // Base responsive width classes.
+  // Do not apply styling to these as their purpose is for width only.
+
+  $width-list: 10, 20, 25, 30, 40, 50, 60, 70, 75, 80, 90, 100;
+  $decimal-list: 33, 66;
+
+  // spit out whole number classes
+  @each $widths in $width-list {
+    .w-#{$widths} {
+      width: $widths * 1%;
+    }
+  }
+
+  // decimal numbers need special maths
+  @each $widths in $decimal-list {
+    .w-#{$widths} {
+      width: $widths * 1.010101%;
+    }
+  }
+
+
+  // add .w-force to any w- class that you want to have it's width
+  // maintained in small screen sizes.
+  // e.g. .w-30 has a width of 100% on small screen sizes
+  // but .w-30.w-force maintains a width of 30% on small screens.
+  @media screen and (max-width: $break-medium) {
+    [class*="w-"]:not(.w-force) {
+      width: 100%;
+    }
+  }
+}
+
+
+
 
 @if $helper-grids--standard == true {
 
@@ -22,121 +58,26 @@
 
   // The grid columns within a row.
   // Do not apply styling to this class as its purpose is for layout only.
-  .col {
+  .row > [class*="w-"] {
     float: left;
     margin-bottom: 0;
     min-height: 1px;
     padding-left: 2.5em;
     position: relative;
-    width: 100%; // default width is 100%
 
     @media screen and (max-width: $break-medium) {
       margin-bottom: 1.25em;
+    }
+
+    &.float-right {
+      float: right;
     }
   }
 
 
   // Adjust .col padding-left to account for half-gutter
-  .half-gutter .col {
+  .half-gutter > [class*="w-"] {
     padding-left: 1.25em;
   }
-
-
-  // Base responsive grid column classes.
-  // Do not apply styling to these as their purpose is for width only.
-
-  $width-list: 10, 20, 25, 30, 40, 50, 60, 70, 75, 80, 90, 100;
-  $decimal-list: 33, 66;
-
-  // spit out whole number classes
-  @each $widths in $width-list {
-    .w-#{$widths} {
-      width: $widths * 1%;
-    }
-  }
-
-  // decimal numbers need special maths
-  @each $widths in $decimal-list {
-    .w-#{$widths} {
-      width: $widths * 1.010101%;
-    }
-  }
-
-  @media screen and (max-width: $break-medium) {
-    [class*="w-"]:not(.w-default) {
-      width: 100%;
-    }
-  }
-
-} // -- end @if --
-
-
-// ----------------------------------------------------------------------------
-//  Layout - Equal Sized Responsive Grid
-//
-//  These grids are meant for layout purposes only. If you require styling
-//  and spacing to these grids, then you should style the child elements
-//  of the grids accordingly
-// ----------------------------------------------------------------------------
-
-@if $helper-grids--equal-size == true {
-
-  .equal-grid {
-    @extend %clearfix;
-    margin-bottom: 1.25em;
-
-    & > * {
-      float: left;
-    }
-
-    &-4 {
-      @include equal-grid-col(25%);
-
-      @media screen and (max-width: $break-normal) {
-        @include equal-grid-col(33.33333%);
-      }
-
-      @extend %equal-media-small;
-      @extend %equal-media-mini;
-    }  // end -4
-
-    &-3 {
-      @include equal-grid-col(33.33333%);
-
-      @extend %equal-media-small;
-      @extend %equal-media-mini;
-    }  // end -3
-
-    &-2 {
-      @include equal-grid-col(50%);
-
-      @extend %equal-media-mini;
-    }  // end -2
-  }
-
-  %equal-media-small {
-    @media screen and (max-width: $break-small) {
-      @include equal-grid-col(50%);
-    }
-  }
-
-  %equal-media-mini {
-    @media screen and (max-width: $break-mini) {
-      @include equal-grid-col(100%);
-    }
-  }
-
-
-  // Example mark-up:
-  // ----------------------------------------------------------------------------
-  // <div class="equal-grid-#">
-  //   <div>
-  //     content block
-  //   </div>
-  //   <div>
-  //     paragraph
-  //   </div>
-  //   ...
-  //  </div>
 
 } // -- end @if --

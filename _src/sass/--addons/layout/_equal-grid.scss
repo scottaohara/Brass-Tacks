@@ -1,0 +1,65 @@
+// ----------------------------------------------------------------------------
+//  Layout - Equal Sized Responsive Grid
+//
+//  These grids are meant for layout purposes only. If you require styling
+//  and spacing to these grids, then you should style the child elements
+//  of the grids accordingly
+// ----------------------------------------------------------------------------
+
+.equal-grid {
+  @extend %clearfix;
+  margin-bottom: 1.25em;
+
+  & > * {
+    float: left;
+  }
+
+  &-4 {
+    @include equal-grid-col(25%);
+
+    @media screen and (max-width: $break-normal) {
+      @include equal-grid-col(33.33333%);
+    }
+
+    @extend %equal-media-small;
+    @extend %equal-media-mini;
+  }  // end -4
+
+  &-3 {
+    @include equal-grid-col(33.33333%);
+
+    @extend %equal-media-small;
+    @extend %equal-media-mini;
+  }  // end -3
+
+  &-2 {
+    @include equal-grid-col(50%);
+
+    @extend %equal-media-mini;
+  }  // end -2
+}
+
+%equal-media-small {
+  @media screen and (max-width: $break-small) {
+    @include equal-grid-col(50%);
+  }
+}
+
+%equal-media-mini {
+  @media screen and (max-width: $break-mini) {
+    @include equal-grid-col(100%);
+  }
+}
+
+
+// Example mark-up:
+// ----------------------------------------------------------------------------
+// <div class="equal-grid-#">
+//   <div>
+//     content block
+//   </div>
+//   <div>
+//     paragraph
+//   </div>
+//   ...
+//  </div>

@@ -3,7 +3,7 @@
   *
   * Brass Tacks
   * by Scott O'Hara - @scottohara - github.com/scottaohara
-  * 0.9.9.0 - February 26, 2015
+  * 0.9.9.1 - March 02, 2015
   *
   *****************************************************************************
 */
@@ -195,11 +195,11 @@ $helper-forms--validation:                    true !default;
 
 
 // Layout & Table Helpers
+$helper-widths:                               true !default;
 $helper-table:                                true !default;
 $helper-dividers:                             true !default;
 $helper-floats-clears:                        true !default;
 $helper-grids--standard:                      true !default;
-$helper-grids--equal-size:                    true !default;
 $helper-grids--flexbox:                       true !default;
 $helper-grids--display-table:                 true !default;
 

@@ -188,7 +188,7 @@
     text-align: center;
 
     input {
-      @extend .invis;
+      @extend %is-a11y-hidden;
     }
 
 
@@ -205,7 +205,7 @@
       }
 
       &:before {
-        background: rgba(0,0,0,.5);
+        background: $c-brand--1;
         content: '';
         height: 100%;
         #{$dir}: 0;

@@ -14,39 +14,47 @@
     position: relative;
 
     &:after {
+      border-bottom: 3px solid $c-grey;
+      border-right: 3px solid $c-grey;
       bottom: 0;
-      content: '\25BC';
-      height: 1em;
-      line-height: 1;
+      content: '';
+      height: 10px;
       margin: auto;
       pointer-events: none;
       position: absolute;
-      right: .5em;
+      right: .25em;
       top: 0;
+      transform-origin: top center;
+      transform: rotate(45deg);
+      width: 10px;
+    }
+
+    select {
+      -webkit-appearance: textarea;
+         -moz-appearance: window;
+      background: none;
+      border: 0;
+      font-family: inherit;
+      font-size: inherit;
+      margin: 0;
+      padding: 0 34px 0 0;
+      width: 115% \9;
+      z-index: 2;
+
+      // Remove the default select down arrow in IE10+
+      &::-ms-expand {
+        display: none;
+      }
     }
   }
 
-  .input-select {
-    -webkit-appearance: textarea;
-       -moz-appearance: window;
-    background: none;
-    border: 0;
-    font-family: $f-brand;
-    margin: 0;
-    padding: 0;
-    width: 115% \9;
-    z-index: 2;
 
-    // Remove the default select down arrow in IE10+
-    &::-ms-expand {
-      display: none;
-    }
-  }
 
   // Example mark-up:
   // ----------------------------------------------------------------------------
-  // <div class="select-container">
-  //    <select class="input-select">
+  //  <label for="select-id-here">Select Something</label>
+  //  <div class="select-container">
+  //    <select id="select-id-here">
   //      <option>...</option>
   //      <option>...</option>
   //      <option>...</option>
