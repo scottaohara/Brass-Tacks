@@ -1,7 +1,70 @@
+# Sass / CSS
+.sass-cache/
+.sass-cache/*
+*.map
+
+# NPM
+node_modules/
+
+# Jekyll
+_site/
+
+# Editors
+*.esproj
+*.sublime-workspace
+*.swp
+*.tmproj
+*.tmproject
+*.un~
+.*.sw[a-z]
+Session.vim
+tmtags
+
+# Mac OSX
 .DS_Store
-.sass-cache
-/dist/
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 
-/node_modules/
+# Windows
+Thumbs.db
+Desktop.ini
 
-/build/
+# SVN
+.svn/
+
+# FTP
+.htaccess
+.htpasswd
+
+# Wordpress
+.htaccess
+wp-*.php
+xmlrpc.php
+wp-admin/
+wp-includes/
+wp-content/uploads/
+wp-content/blogs.dir/
+wp-content/upgrade/*
+wp-content/backup-db/*
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
+wp-content/cache/*
+wp-content/cache/supercache/*
+sitemap.xml
+sitemap.xml.gz
+readme.html
+license.txt
+
+
+# Compiled Project Files
+dist/
+dist/*
+/src/assets/js/vendor.concat.js
+app.css
+app.min.css
+app.min.js
+vendor.concat.js
+vendor.min.js
