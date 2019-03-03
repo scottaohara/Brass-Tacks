@@ -51,7 +51,7 @@
       position: relative;
       text-decoration: none;
 
-      &:hover, &.active {
+      &:hover, &:focus, &.active {
         border-bottom-color: $c-prime-action--hover;
       }
     }
@@ -59,15 +59,15 @@
 
   // Example mark-up:
   // ----------------------------------------------------------------------------
-  // <nav role="navigation">
-  //   <ol class="nav-v">
+  // <nav>
+  //   <ul class="nav-v">
   //     <li>
-  //       <a href="#!" title="#!">Link 1</a>
+  //       <a href="#!">Link 1</a>
   //     </li>
   //     <li>
-  //       <a href="#!" title="#!">Link 2</a>
+  //       <a href="#!">Link 2</a>
   //     </li>
-  //    </ol>
+  //   </ul>
   // </nav>
 
 } // -- end @if --
@@ -99,15 +99,15 @@
 
   // Example mark-up
   // ----------------------------------------------------------------------------
-  // <nav class="nav" role="navigation">
-  //   <ol class="h-nav">
+  // <nav class="nav">
+  //   <ul class="h-nav">
   //     <li>
-  //       <a href="#!" title="#!">Link 1</a>
+  //       <a href="#!">Link 1</a>
   //     </li>
   //     <li>
-  //       <a href="#!" title="#!">Link 2</a>
+  //       <a href="#!">Link 2</a>
   //     </li>
-  //    </ol>
+  //   </ul>
   // </nav>
 
 } // -- end @if --
@@ -130,8 +130,8 @@
 
   // Example mark-up
   // ----------------------------------------------------------------------------
-  // <nav class="nav" role="navigation">
-  //   <ol class="c-nav">
+  // <nav class="nav">
+  //   <ul class="c-nav">
   //     <li>
   //       <a href="#!" title="#!">Link 1</a>
   //     </li><!--
@@ -141,7 +141,7 @@
   //     --><li>
   //       <a href="#!" title="#!">Link 3</a>
   //     </li>
-  //    </ol>
+  //   </ul>
   // </nav>
 
   // The comments will negate the white space.
@@ -192,6 +192,7 @@
       display: block;
 
       &:hover,
+      &:focus,
       &:visited {
         background: c(#000, .6);
         color: $c-white;
