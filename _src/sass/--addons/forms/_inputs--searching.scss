@@ -31,10 +31,10 @@
 
 // Example mark-up:
 // ----------------------------------------------------------------------------
-// <div class="form-row form-row--search">
-//   <input type="search" placeholder="Search for..." class="input-text" />
-//   <input type="submit" value="Search" class="btn btn--prime btn--search" />
-// </div>
+// <form role="search" class="form-row form-row--search">
+//   <input type="search" class="input-text" aria-labelledby="s" />
+//   <input type="submit" value="Search" id="s" class="btn btn--prime btn--search" />
+// </form>
 
 
 
@@ -79,7 +79,7 @@
 // Example mark-up:
 // ----------------------------------------------------------------------------
 //  <div class="form-search search-area--clear">
-//    <input type="search" id="search_input_clear" class="input-text js-clear" name="search_input" placeholder="Search for..." aria-label="Search for..." />
+//    <input type="search" id="search_input_clear" class="input-text js-clear" name="search_input" />
 //    <label for="search_input_clear" class="label-reveal">
 //      Search for...
 //    </label>
