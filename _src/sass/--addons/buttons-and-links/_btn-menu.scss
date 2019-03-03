@@ -96,6 +96,6 @@
 
 //  Example mark-up:
 // ----------------------------------------------------------
-//  <button type="button" class="btn btn--menu" data-state="off" id="nav_open">
-//    <span class="btn--menu__icon"> </span>  Menu
+//  <button type="button" class="btn btn--menu" data-state="off" id="nav_open" aria-expanded="true/false">
+//    <span class="btn--menu__icon" aria-hidden="true"> </span>  Menu
 //  </button>
