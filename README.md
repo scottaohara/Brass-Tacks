@@ -1,11 +1,5 @@
 # Brass Tacks -- Beta
-###(Last updated: 0.9.9.0 - May 14, 2016)
-
-Brass Tacks is currently undergoing a huge rewrite as part of a larger project I am working on.
-
-More to come on that soon...
-
-
+(Last updated: 0.9.9 - May 14, 2016)
 
 ## Setting up your development environment
 
