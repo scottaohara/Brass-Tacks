@@ -29,82 +29,8 @@
   // ----------------------------------------------------------------------------
 
   // <div class="form-row">
-  //   <input type="color" class="input-color" placeholder="Choose a color..." />
-  // </div>
-
-} // -- end @if --
-
-
-
-
-
-
-// ----------------------------------------------------------------------------
-//  Input Type: File Upload
-// ----------------------------------------------------------------------------
-
-@if $helper-forms--input-file == true {
-
-  // The following classes are to be used with the markup at the end of
-  // this file.  This styling for file upload inputs currently requires
-  // JavaScript to fully make functional. It may not be worth it to
-  // implement this due to the JS dependency.
-
-  .input-file-block {
-    @extend %input-text;
-    padding: 0;
-    position: relative;
-  }
-
-  .input-file {
-    height: 1px;
-    left: -99999px;
-    position: absolute;
-    width: 1px;
-
-    &:focus ~ .input-file-placeholder {
-      background: $c-white;
-      border-color: #333;
-      box-shadow: 0 0 0 1px #39CCCC;
-    }
-
-    &[disabled] ~ .input-file-placeholder,
-    &[disabled] ~ .btn--file-input {
-      color: $c-grey;
-    }
-  }
-
-  .input-file-placeholder {
-    display: block;
-    margin: 0;
-    padding: 8px;
-    position: relative;
-  }
-
-  .btn.btn--file-input {
-    bottom: 0;
-    line-height: 1;
-    pointer-events: none;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 2;
-  }
-
-
-  // Example mark-up:
-  // ----------------------------------------------------------------------------
-  // <div class="input-file-block">
-  //   <input type="file" id="input_file" class="input-file" disabled />
-
-  //   <label for="input_file" class="input-file-placeholder" id="input_file_placeholder">
-  //     Select a file...
-  //   </label>
-
-  //   <span class="btn btn--file-input">
-  //     Browse
-  //   </span>
-
+  //   <label for="c">Choose a color</label>
+  //   <input type="color" id="c" class="input-color" />
   // </div>
 
 } // -- end @if --
