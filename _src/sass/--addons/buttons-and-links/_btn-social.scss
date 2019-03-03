@@ -25,7 +25,8 @@
     border-color: $c-fb-2;
   }
 
-  &:hover {
+  &:hover,
+  &:focus{
     background: $c-fb-2;
   }
 }
@@ -41,7 +42,8 @@
     border-color: $c-tw-2;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background: $c-tw-2;
   }
 }
@@ -57,7 +59,8 @@
     border-color: $c-gp-2;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background: $c-gp-2;
   }
 }
